@@ -1,0 +1,12 @@
+[
+  {
+    "cuda": "cudaMalloc",
+    "hip": "hipMalloc",
+    "category": "memory",
+    "status": "supported",
+    "source": "AMD HIP API documentation",
+    "source_url": "",
+    "rocm_version": "",
+    "notes": ""
+  }
+]

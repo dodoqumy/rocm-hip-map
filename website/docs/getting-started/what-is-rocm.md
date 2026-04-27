@@ -1,0 +1,61 @@
+---
+title: What is ROCm?
+source_url: https://rocm.docs.amd.com/en/latest/what-is-rocm.html
+version: "7.2.2"
+tags: [intro, getting-started, linux, windows]
+category: getting-started
+environment: [Linux, Windows]
+application: [AI, HPC, General]
+difficulty: beginner
+last_synced: 2026-04-17
+---
+
+# What is ROCm?
+
+> 📎 **原文链接：** [https://rocm.docs.amd.com/en/latest/what-is-rocm.html](https://rocm.docs.amd.com/en/latest/what-is-rocm.html)
+
+ROCm is an open-source software platform optimized to extract HPC and AI workload performance from AMD Instinct GPUs and AMD Radeon GPUs while maintaining compatibility with industry software frameworks.
+
+ROCm supports multiple programming languages and programming interfaces such as HIP, OpenCL, and OpenMP.
+
+If you're using AMD Radeon GPUs or Ryzen APUs for graphics workloads, see the [ROCm on Radeon and Ryzen](https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/index.html) documentation.
+
+:::note
+The [AMD ROCm Programming Guide](https://rocm-handbook.amd.com/projects/amd-rocm-programming-guide/en/latest/) presents key ROCm concepts in a structured, book-style format — a helpful starting point for those new to GPU programming.
+:::
+
+## ROCm Documentation Categories
+
+ROCm documentation is organized into the following categories:
+
+### Install
+- [ROCm on Linux](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html)
+- [HIP SDK on Windows](https://rocm.docs.amd.com/projects/install-on-windows/en/latest/reference/system-requirements.html)
+- [ROCm on Radeon and Ryzen](https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/index.html)
+- [Deep learning frameworks](https://rocm.docs.amd.com/en/latest/how-to/deep-learning-rocm.html)
+- [Build ROCm from source](https://rocm.docs.amd.com/en/latest/how-to/build-rocm.html)
+
+### How to
+- [Use ROCm for AI](https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/index.html)
+- [Use ROCm for HPC](https://rocm.docs.amd.com/en/latest/how-to/rocm-for-hpc/index.html)
+- [System optimization](https://rocm.docs.amd.com/en/latest/how-to/system-optimization/index.html)
+- [MI300X performance guides](https://rocm.docs.amd.com/en/latest/how-to/gpu-performance/mi300x.html)
+- [System debugging](https://rocm.docs.amd.com/en/latest/how-to/system-debugging.html)
+- [Advanced compiler features](https://rocm.docs.amd.com/en/latest/conceptual/compiler-topics.html)
+- [Set the number of CUs](https://rocm.docs.amd.com/en/latest/how-to/setting-cus.html)
+- [Troubleshoot BAR access](https://rocm.docs.amd.com/en/latest/how-to/Bar-Memory.html)
+
+### Conceptual
+- [GPU architecture overview](https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch.html)
+- [File structure (Linux FHS)](https://rocm.docs.amd.com/en/latest/conceptual/file-reorg.html)
+- [GPU isolation techniques](https://rocm.docs.amd.com/en/latest/conceptual/gpu-isolation.html)
+- [Using CMake](https://rocm.docs.amd.com/en/latest/conceptual/cmake-packages.html)
+- [Inception v3 with PyTorch](https://rocm.docs.amd.com/en/latest/conceptual/ai-pytorch-inception.html)
+
+### Reference
+- [ROCm libraries](https://rocm.docs.amd.com/en/latest/reference/api-libraries.html)
+- [ROCm tools, compilers, and runtime API](https://rocm.docs.amd.com/en/latest/reference/rocm-tools.html)
+- [GPU hardware specifications](https://rocm.docs.amd.com/en/latest/reference/gpu-arch-specs.html)
+- [Environment variables](https://rocm.docs.amd.com/en/latest/reference/env-variables.html)
+- [Data types and precision support](https://rocm.docs.amd.com/en/latest/reference/precision-support.html)
+- [ROCm glossary](https://rocm.docs.amd.com/en/latest/reference/glossary.html)

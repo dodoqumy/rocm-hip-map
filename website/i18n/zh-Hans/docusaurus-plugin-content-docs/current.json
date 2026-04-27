@@ -1,0 +1,26 @@
+{
+  "version.label": {
+    "message": "7.2.2 (最新)",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Tutorial - Basics": {
+    "message": "Tutorial - Basics",
+    "description": "The label for category 'Tutorial - Basics' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Tutorial - Basics.link.generated-index.description": {
+    "message": "5 minutes to learn the most important Docusaurus concepts.",
+    "description": "The generated-index page description for category 'Tutorial - Basics' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Tutorial - Extras": {
+    "message": "Tutorial - Extras",
+    "description": "The label for category 'Tutorial - Extras' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.superpowers": {
+    "message": "superpowers",
+    "description": "The label for category 'superpowers' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.plans": {
+    "message": "plans",
+    "description": "The label for category 'plans' in sidebar 'tutorialSidebar'"
+  }
+}
