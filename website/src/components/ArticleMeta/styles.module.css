@@ -1,0 +1,50 @@
+.container {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.leftGroup {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.sourceLink {
+  font-size: 0.8rem;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.sourceLink:hover {
+  text-decoration: underline;
+}
+
+.tagsRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px;
+  margin-top: 0.5rem;
+}
+
+.dateRow {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  color: var(--ifm-color-emphasis-600);
+}

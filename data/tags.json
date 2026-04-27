@@ -1,0 +1,172 @@
+{
+  "$schema": "https://rocm-hip-map.dev/schemas/tags.json",
+  "description": "rocm-hip-map 合法标签值定义，用于 frontmatter 校验和 UI 筛选器",
+
+  "source_type": {
+    "description": "内容来源类型",
+    "values": ["official", "github-issue", "github-pr", "blog", "paper", "community"],
+    "labels": {
+      "official": "官方文档",
+      "github-issue": "GitHub Issue",
+      "github-pr": "GitHub PR",
+      "blog": "官方博客",
+      "paper": "学术论文",
+      "community": "社区讨论"
+    }
+  },
+
+  "source_org": {
+    "description": "来源组织",
+    "values": ["amd", "rocm", "pytorch", "tensorflow", "paddle", "llvm", "mesa", "linux"],
+    "labels": {
+      "amd": "AMD",
+      "rocm": "ROCm",
+      "pytorch": "PyTorch",
+      "tensorflow": "TensorFlow",
+      "paddle": "PaddlePaddle",
+      "llvm": "LLVM",
+      "mesa": "Mesa",
+      "linux": "Linux Kernel"
+    }
+  },
+
+  "credibility": {
+    "description": "可信度评级（1-5★）",
+    "values": [1, 2, 3, 4, 5],
+    "labels": {
+      "5": "★★★★★ 官方权威",
+      "4": "★★★★ 官方渠道",
+      "3": "★★★ 社区权威",
+      "2": "★★ 实验性质",
+      "1": "★ 仅供参考"
+    }
+  },
+
+  "lifecycle": {
+    "description": "内容生命周期状态",
+    "values": ["latest", "outdated", "deprecating", "deprecated"],
+    "labels": {
+      "latest": "最新推荐",
+      "outdated": "已过时",
+      "deprecating": "即将废弃",
+      "deprecated": "已弃用"
+    },
+    "colors": {
+      "latest": "#22c55e",
+      "outdated": "#eab308",
+      "deprecating": "#f97316",
+      "deprecated": "#ef4444"
+    }
+  },
+
+  "os": {
+    "description": "适用操作系统",
+    "values": ["ubuntu-20.04", "ubuntu-22.04", "ubuntu-24.04", "rhel", "arch", "wsl2", "docker", "kubernetes", "linux", "windows"],
+    "labels": {
+      "ubuntu-20.04": "Ubuntu 20.04",
+      "ubuntu-22.04": "Ubuntu 22.04",
+      "ubuntu-24.04": "Ubuntu 24.04",
+      "rhel": "RHEL",
+      "arch": "Arch Linux",
+      "wsl2": "WSL2",
+      "docker": "Docker",
+      "kubernetes": "Kubernetes",
+      "linux": "Linux",
+      "windows": "Windows"
+    }
+  },
+
+  "gpu": {
+    "description": "适用 GPU 型号",
+    "values": ["mi50", "mi100", "mi210", "mi250", "mi250x", "mi300x", "rx6800", "rx6900", "rx7900", "rx7900xtx", "apu"],
+    "labels": {
+      "mi50": "Instinct MI50",
+      "mi100": "Instinct MI100",
+      "mi210": "Instinct MI210",
+      "mi250": "Instinct MI250",
+      "mi250x": "Instinct MI250X",
+      "mi300x": "Instinct MI300X",
+      "rx6800": "Radeon RX 6800",
+      "rx6900": "Radeon RX 6900",
+      "rx7900": "Radeon RX 7900",
+      "rx7900xtx": "Radeon RX 7900 XTX",
+      "apu": "Ryzen APU"
+    }
+  },
+
+  "gpu_arch": {
+    "description": "GPU 架构",
+    "values": ["cdna1", "cdna2", "cdna3", "rdna2", "rdna3"],
+    "labels": {
+      "cdna1": "CDNA 1",
+      "cdna2": "CDNA 2",
+      "cdna3": "CDNA 3",
+      "rdna2": "RDNA 2",
+      "rdna3": "RDNA 3"
+    }
+  },
+
+  "driver": {
+    "description": "驱动版本",
+    "values": ["amdgpu-5.x", "amdgpu-6.x", "amdgpu-7.x"],
+    "labels": {
+      "amdgpu-5.x": "amdgpu 5.x",
+      "amdgpu-6.x": "amdgpu 6.x",
+      "amdgpu-7.x": "amdgpu 7.x"
+    }
+  },
+
+  "frameworks": {
+    "description": "深度学习框架",
+    "values": ["pytorch", "tensorflow", "jax", "paddle", "onnx"],
+    "labels": {
+      "pytorch": "PyTorch",
+      "tensorflow": "TensorFlow",
+      "jax": "JAX",
+      "paddle": "PaddlePaddle",
+      "onnx": "ONNX"
+    }
+  },
+
+  "difficulty": {
+    "description": "难度等级",
+    "values": ["beginner", "intermediate", "advanced", "reference"],
+    "labels": {
+      "beginner": "入门",
+      "intermediate": "进阶",
+      "advanced": "高级",
+      "reference": "参考手册"
+    }
+  },
+
+  "tags": {
+    "description": "主题标签",
+    "values": [
+      "intro", "getting-started", "install", "programming", "hip",
+      "performance", "debugging", "compatibility", "release-notes",
+      "api-reference", "architecture", "driver", "container",
+      "mi300x", "mi200", "radeon", "linux", "windows", "wsl2"
+    ],
+    "labels": {
+      "intro": "概述",
+      "getting-started": "入门",
+      "install": "安装",
+      "programming": "编程",
+      "hip": "HIP",
+      "performance": "性能优化",
+      "debugging": "调试",
+      "compatibility": "兼容性",
+      "release-notes": "发布说明",
+      "api-reference": "API 参考",
+      "architecture": "架构",
+      "driver": "驱动",
+      "container": "容器",
+      "mi300x": "MI300X",
+      "mi200": "MI200",
+      "radeon": "Radeon",
+      "linux": "Linux",
+      "windows": "Windows",
+      "wsl2": "WSL2"
+    }
+  }
+}
