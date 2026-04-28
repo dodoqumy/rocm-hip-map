@@ -1,0 +1,423 @@
+---
+title: "東京工業大学 — TSUBAME 4.0 超算 — en"
+source_url: "https://www.t4.gsic.titech.ac.jp/en/"
+source_type: "multilingual"
+source_org: "titech-tsubame"
+source_name: "東京工業大学 — TSUBAME 4.0 超算"
+original_lang: "ja"
+credibility: 5
+lifecycle: "latest"
+synced_date: 2026-04-28
+region: "asia"
+country: "jp"
+---
+
+トップページ | TSUBAME4 Computing Services 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Skip to main content
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ TSUBAME4 Computing Services 
+ 
+ TSUBAME4.0 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ You must have JavaScript enabled to use this form. 
+ 
+ 
+ Search 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ Japanese English 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 現在のTSUBAME4の運用状況 / Current TSUBAME4 Operational Status 2026-04-27 8:30　通常運用中 / Normal Operation 
+ 
+ 
+ 
+ 
+ 
+ Important Notices 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 2026-04-06 
+ Procedures Are Required to Continue Using Your Account 
+ 2026-04-03 
+ Grace period for purchase of group disks until Wednesday, April 15 (Extended until April 22) 
+ 2026-04-03 
+ TSUBAME operations for FY2026 have been started (list of changes) 
+ 2026-03-09 
+ Update on pricing of commercial applications (FY2026) 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Announcements 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 2026-04-28 
+ Version Update for Applications on Compute Nodes (May 11–May 15) 
+ 2026-04-27 
+ Special Measures Regarding TSUBAME Points Purchases Affected by Delays in University Budget Registration (Until 2026-06-30) 
+ 2026-04-14 
+ Emergency Maintenance for Open OnDemand (Scheduled for April 15) and What to Do If You Can’t Log In 
+ 2026-04-07 
+ TSUBAME Application Maintenance for License Port Change (April 20, 2026, through April 24, 2026) 
+ 2026-04-07 
+ Workshops held in the Spring 2026 
+ 2026-04-06 
+ Issue causing GPUs to become unavailable during specific workloads 
+ 2026-02-20 
+ TSUBAME4.0 computing services will be unavailable due to end-of-year maintenance (Spring 2026) 
+ 2026-02-16 
+ Release announcement of COMSOL 6.4 update1 
+ 2026-02-12 
+ Request for acknowledgement and reporting of results using TSUBAME 
+ 2026-01-23 
+ We will reduce the maximum run time for trial runs from 10 minutes to 3 minutes. (performed on 2026-01-28) 
+
+ 
+ 
+ これより古いお知らせ / Older Entries 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ログインノード 2026-04-27 8:30　利用できます / Available 過去の情報は こちら バッチキュー(Batch Queue) 2026-04-27 8:30　利用できます / Available 過去の情報は こちら ストレージ　 HPCI共用ストレージは こちら 2026-04-27 8:30　利用できます / Available new 2026-04-24 12:00 　猶予期間が終了したため、未購入グループディスク133件にアクセス制限を行いました。引き続き利用するにはグループディスクの購入をお願いします。/ As the grace period has ended, access to 133 unpaid group disks has been restricted. Please purchase a group disk to continue using it. 過去の情報は こちら アプリケーション 2026-04-27 8:30　利用できます / Available new 2026-04-20 14:30 　Schrödinger Small-Molecule Drug Discovery Suite のライセンスポートが2026年度用に変更になりました。お知らせは こちら 。 過去の情報は こちら TSUBAMEポータル 2026-04-27 8:30　利用できます / Available 過去の情報は こちら ネットワーク キャンパスネットワーク（Titanet）の障害/メンテナンス情報は こちら をチェックしてください。TSUBAME4はキャンパスネットワークを介して通信しています。 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Menu 
+ 
+
+ 
+ 
+ 
+ Show &mdash; Menu 
+ Hide &mdash; Menu 
+ 
+ 
+ 
+ Top Page 
+ 
+ 
+ Manuals and FAQs 
+ 
+ 
+ Quick Start Guide 
+ 
+ 
+ 
+ 
+ 
+ Contact Us 
+ 
+ 
+ Visit Request 
+ 
+ 
+ 
+ 
+ 
+ TSUBAME4 Portal 
+ 
+ 
+ Open OnDemand 
+ 
+ 
+ Getting Accounts 
+ 
+ 
+ Access Card Holders 
+ 
+ 
+ Using External Funds 
+ 
+ 
+ Non-degree / Special Auditing Students 
+ 
+ 
+ Account Application for Members of the Medical and Dental Fields 
+ 
+ 
+ 
+ 
+ 
+ Currently Open Application Programs 
+ 
+ 
+ Users outside of Science Tokyo (Partnership Research Allocations) 
+ 
+ 
+ TSUBAME Grand Challenge Large-Scale Computing Program 
+ 
+ 
+ TSUBAME Encouragement Program for Young/Female/Younger Users 
+ 
+ 
+ HPCI 
+ 
+ 
+ JHPCN 
+ 
+ 
+ 
+ 
+ 
+ Terms and Fare 
+ 
+ 
+ Regulations 
+ 
+ 
+ Fare Overview 
+ 
+ 
+ Subscription 
+ 
+ 
+ Charge Schedule (Campus Users) 
+ 
+ 
+ TSUBAME point for Lectures 
+ 
+ 
+ TSUBAME point discount for JST FOREST (Ja only) 
+ 
+ 
+ Preferencial Fee for TMDU Users 
+ 
+ 
+ About Acknowledgement 
+ 
+ 
+ 
+ 
+ 
+ Operation Info 
+ 
+ 
+ Announcements 
+ 
+ 
+ Resource Limit Values 
+ 
+ 
+ Monitoring 
+ 
+ 
+ Annual Schedule 
+ 
+ 
+ Failure Report 
+ 
+ 
+ Failure History 
+ 
+ 
+ Collection of system log 
+ 
+ 
+ (学内向け)支払コード申請の承認状況 
+ 
+ 
+ 
+ 
+ 
+ Architecture and Software 
+ 
+ 
+ Hardware Architecture 
+ 
+ 
+ System Software 
+ 
+ 
+ Supported Applications 
+ 
+ 
+ Applications Supported by HPCI 
+ 
+ 
+ Limitation of Licenses 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Commercial Application Dirstribution 
+ 
+ 
+ Mathematica 
+ 
+ 
+ For faculties and staff 
+ 
+ 
+ For students 
+ 
+ 
+ 
+ 
+ 
+ MATLAB 
+ 
+ 
+ Signals (ChemDraw) 
+ 
+ 
+ 
+ 
+ 
+ Lectures 
+ 
+ 
+ Publications and Brochures 
+ 
+ 
+ Special Pages 
+ 
+ 
+ Science Tokyo in SC25 
+ 
+ 
+ Rack Design Contest 
+ 
+ 
+ TSUBAME4.0 Press Release 
+ 
+ 
+ TSUBAME4.0運用開始Q＆A(更新終了) 
+ 
+ 
+ 
+ 
+ 
+ Links 
+ 
+ 
+ Education Computer Systems 
+ 
+ 
+ Portal for Science & Engineering Field 
+ 
+ 
+ X @TSUBAME_sc 
+ 
+ 
+ ex-GSIC  <!-- 截断至 50K 字符 -->

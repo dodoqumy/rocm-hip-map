@@ -18,7 +18,7 @@ sidebar_label: "🌐 多语言情报"
 | 🇩🇪 德国 | Jülich / LRZ | de | JUWELS/SuperMUC-NG 文档 |
 | 🇮🇹 意大利 | CINECA | it | Leonardo 超算文档 |
 | 🇪🇸 西班牙 | BSC | es | MareNostrum 文档 |
-| 🇯🇵 日本 | AMD Japan / RIKEN | ja | 技术博客、论文 |
-| 🇰🇷 韩国 | KISTI | ko | 论文 |
+| 🇯🇵 日本 | AMD Japan / RIKEN / 東工大 TSUBAME 4.0 / 東大 / 阪大 | ja | 技术博客、论文、超算文档 |
+| 🇰🇷 韩国 | KISTI / KAIST / 서울대학교 | ko | 论文、HPC 材料 |
 
 > 💡 内容由 `fetch-eu.py` 和 `fetch-asia.py` 自动抓取，每周更新。

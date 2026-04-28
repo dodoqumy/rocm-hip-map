@@ -105,10 +105,28 @@ sources:
     country: "jp"
     language: "ja"
     credibility: 5
+    urls:
+      - "https://www.amd.com/ja.html"
+      - "https://community.amd.com/t5/ai/ct-p/ai"
     search_terms:
       - "AMD ROCm HIP プログラミング"
       - "AMD GPU 高速化 機械学習"
     notes: "AMD 日本法人发布的技术文档和活动材料"
+
+  - id: titech-tsubame
+    name: "東京工業大学 — TSUBAME 4.0 超算"
+    region: "asia"
+    country: "jp"
+    language: "ja"
+    credibility: 5
+    urls:
+      - "https://www.t4.gsic.titech.ac.jp/en/"
+      - "https://www.t4.gsic.titech.ac.jp/docs/"
+    search_terms:
+      - "TSUBAME AMD MI300A ROCm HIP"
+      - "東工大 GPU プログラミング AMD"
+      - "TSUBAME 4.0 ROCm マニュアル"
+    notes: "TSUBAME 4.0 使用 AMD Instinct MI300A APU — 全球首批 MI300A 超算之一"
 
   - id: riken
     name: "RIKEN — 日本理化学研究所"
@@ -118,22 +136,109 @@ sources:
     credibility: 5
     urls:
       - "https://www.r-ccs.riken.jp/en/"
+      - "https://www.r-ccs.riken.jp/library/"
     search_terms:
       - "RIKEN Fugaku AMD GPU ROCm"
       - "理研 GPU 計算 プログラミング"
-    notes: "RIKEN 运营 Fugaku 超算，涉及 AMD GPU 研究"
+      - "Fugaku Next AMD Instinct"
+    notes: "RIKEN 运营 Fugaku 超算，Fugaku Next 可能采用 AMD Instinct GPU"
+
+  - id: u-tokyo-hpc
+    name: "東京大学 — 情報基盤センター"
+    region: "asia"
+    country: "jp"
+    language: "ja"
+    credibility: 4
+    urls:
+      - "https://www.cc.u-tokyo.ac.jp/"
+      - "https://www.cc.u-tokyo.ac.jp/guide/"
+    search_terms:
+      - "東京大学 GPU 計算 ROCm AMD"
+      - "東大 HPC プログラミング GPU"
+    notes: "東大情報基盤センター运营 Wisteria/BDEC 超算"
+
+  - id: osaka-u-cybermedia
+    name: "大阪大学 — サイバーメディアセンター"
+    region: "asia"
+    country: "jp"
+    language: "ja"
+    credibility: 4
+    urls:
+      - "https://www.cmc.osaka-u.ac.jp/"
+    search_terms:
+      - "大阪大学 GPU 計算 AMD ROCm"
+      - "SQUID スパコン GPU プログラミング"
+    notes: "大阪大学 SQUID 超算使用 GPU 加速"
+
+  - id: cinii
+    name: "CiNii — 日本学術論文データベース"
+    region: "asia"
+    country: "jp"
+    language: "ja"
+    credibility: 4
+    urls:
+      - "https://cir.nii.ac.jp/"
+    search_terms:
+      - "ROCm GPU 計算 高速化"
+      - "AMD GPU HIP プログラミング 論文"
+      - "機械学習 AMD GPU 最適化"
+    notes: "国立情報学研究所(NII)運営の学術論文DB"
 
   # ── 韩国 (ko) ──
   - id: kisti
-    name: "KISTI — 韩国科学技术信息研究院"
+    name: "KISTI — 韓国科学技術情報研究院"
+    region: "asia"
+    country: "kr"
+    language: "ko"
+    credibility: 5
+    urls:
+      - "https://www.kisti.re.kr/"
+      - "https://www.ksc.re.kr/"
+    search_terms:
+      - "KISTI AMD GPU ROCm"
+      - "한국 GPU 프로그래밍 ROCm"
+      - "누리온 GPU 계산 AMD"
+    notes: "KISTI 运营 Nurion/Neuron 国家超算（含 AMD Instinct GPU）"
+
+  - id: kaist
+    name: "KAIST — 韓国科学技術院"
     region: "asia"
     country: "kr"
     language: "ko"
     credibility: 4
+    urls:
+      - "https://www.kaist.ac.kr/"
+      - "https://cs.kaist.ac.kr/"
     search_terms:
-      - "KISTI AMD GPU ROCm"
-      - "한국 GPU 프로그래밍 ROCm"
-    notes: "KISTI 运营韩国国家超算"
+      - "KAIST AMD GPU ROCm 연구"
+      - "KAIST HPC GPU 프로그래밍"
+    notes: "KAIST 计算机系是韩国顶级GPU计算研究机构"
+
+  - id: snu-hpc
+    name: "서울대학교 — HPC 센터"
+    region: "asia"
+    country: "kr"
+    language: "ko"
+    credibility: 4
+    urls:
+      - "https://cse.snu.ac.kr/"
+    search_terms:
+      - "서울대 GPU 계산 ROCm AMD"
+      - "SNU HPC GPU 프로그래밍"
+    notes: "首尔大学高性能计算研究中心"
+
+  - id: riss
+    name: "RISS — 韓国学術研究情報サービス"
+    region: "asia"
+    country: "kr"
+    language: "ko"
+    credibility: 4
+    urls:
+      - "http://www.riss.kr/"
+    search_terms:
+      - "ROCm GPU AMD 프로그래밍"
+      - "HIP GPU 계산 최적화"
+    notes: "韩国学术研究信息服务 — 学位论文+学术期刊"
 
   # ── 西班牙 (es) ──
   - id: bsc
