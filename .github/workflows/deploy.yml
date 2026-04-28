@@ -48,3 +48,31 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      # ── 部署后烟雾测试 ──
+      - name: Smoke test
+        run: |
+          echo "🔍 Verifying deployed site..."
+          sleep 15  # 等 CDN 生效
+          STATUS=$(curl -sL -o /dev/null -w "%{http_code}" "${{ steps.deployment.outputs.page_url }}")
+          if [ "$STATUS" != "200" ]; then
+            echo "❌ Site returned HTTP $STATUS"
+            exit 1
+          fi
+          echo "✅ Site reachable (HTTP 200)"
+          # 检查是否有文章：侧边栏应该包含 "ROCm 核心文档"
+          BODY=$(curl -sL "${{ steps.deployment.outputs.page_url }}")
+          if echo "$BODY" | grep -q "ROCm 核心文档"; then
+            echo "✅ Articles found in sidebar"
+          else
+            echo "❌ No articles found in deployed site!"
+            exit 1
+          fi
+          # 检查至少有几个文档链接
+          DOC_COUNT=$(echo "$BODY" | grep -o 'href="/rocm-hip-map/docs/' | wc -l)
+          echo "📊 Found ~$DOC_COUNT document links"
+          if [ "$DOC_COUNT" -lt 10 ]; then
+            echo "❌ Too few document links (< 10), sidebar may be broken!"
+            exit 1
+          fi
+          echo "✅ Smoke test passed"
