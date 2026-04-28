@@ -360,6 +360,8 @@ difficulty: beginner            # beginner | intermediate | advanced | reference
 - [ ] Phase 7.4：收录 PyTorch/TensorFlow ROCm 官方文档
 - [ ] Phase 7.5：中文学术论文 + AMD 中国官方资料
 - [ ] Phase 7.6：启用 Algolia DocSearch 双语搜索
+- [ ] Phase 7.7：图片文字翻译 — OCR 提取原文图片中文字 → 翻译 → 重生成对照图片（README §三）
+- [ ] Phase 7.8：网站分析（GA/Umami）用户行为统计
 
 ---
 
@@ -392,4 +394,5 @@ difficulty: beginner            # beginner | intermediate | advanced | reference
 | 生命周期状态 | Phase 2.2 | ✅ |
 | CUDA→HIP 对照 | Phase 5.2 | ✅ |
 | 常见错误码库 | Phase 5.3 | ✅ |
+| 图片文字翻译 | Phase 7.7 (OCR + 翻译 + 重生成) | ⏳ |
 | 收藏/阅读历史 | Phase 7+ (需数据库 ECS) | ⏳ |
