@@ -10,10 +10,10 @@
 
 | # | 操作 | Phase | 状态 | 优先级 |
 |---|------|-------|------|--------|
-| OP-1 | 获取 opencode-go API Key | Phase 4 | 🔴 待操作 | P0 |
-| OP-2 | 创建 GitHub Actions `sync.yml` 定时工作流 | Phase 6 | 🟡 代码待写 | P1 |
-| OP-3 | 创建 GitHub Actions `validate.yml` 校验工作流 | Phase 6 | 🟡 代码待写 | P1 |
-| OP-4 | 配置 GitHub Secrets（翻译 API Key） | Phase 4+6 | 🔴 依赖 OP-1 | P0 |
+| OP-1 | 获取 opencode-go API Key | Phase 4 | ✅ 完成 | P0 |
+| OP-2 | 创建 GitHub Actions `sync.yml` 定时工作流 | Phase 6 | ✅ 完成 | P1 |
+| OP-3 | 创建 GitHub Actions `validate.yml` 校验工作流 | Phase 6 | ✅ 完成 | P1 |
+| OP-4 | 配置 GitHub Secrets（翻译 API Key） | Phase 4+6 | ✅ 完成 | P0 |
 | OP-5 | Algolia DocSearch 申请（搜索功能） | Phase 7.6 | ⏳ 远期 | P3 |
 | OP-6 | 网站分析接入（Umami/GA） | Phase 7.8 | ⏳ 远期 | P3 |
 
