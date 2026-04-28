@@ -512,6 +512,33 @@ def main():
             paper_generated += 1
         print(f"\n📜 {paper_generated} paper pages generated in website/docs/papers/")
 
+    # ── 多语言情报页生成 ──
+    ml_dir = PROJECT_ROOT / "content" / "raw" / "multilingual"
+    if ml_dir.exists():
+        ml_generated = 0
+        for lang_dir in sorted(ml_dir.iterdir()):
+            if not lang_dir.is_dir():
+                continue
+            lang = lang_dir.name
+            for pf in sorted(lang_dir.glob("*.md")):
+                with open(pf) as f:
+                    raw = f.read()
+                article = article_index.get(pf.stem, {})
+                article["source_type"] = "multilingual"
+                article["source_org"] = raw_frontmatter_field(raw, "source_org", "unknown")
+                article["source_url"] = raw_frontmatter_field(raw, "source_url", "")
+                article["original_lang"] = raw_frontmatter_field(raw, "original_lang", lang)
+                if not article.get("title"):
+                    article["title"] = raw_frontmatter_field(raw, "title", pf.stem)
+                out_path = WEBSITE_DOCS / "multilingual" / lang / f"{pf.stem}.mdx"
+                mdx = generate_mdx(article, raw, str(out_path.relative_to(WEBSITE_DOCS)).replace(".mdx", ""))
+                if not args.dry_run:
+                    out_path.parent.mkdir(parents=True, exist_ok=True)
+                    with open(out_path, "w") as f:
+                        f.write(mdx)
+                ml_generated += 1
+        print(f"\n🌐 {ml_generated} multilingual pages generated in website/docs/multilingual/")
+
 
 if __name__ == "__main__":
     main()

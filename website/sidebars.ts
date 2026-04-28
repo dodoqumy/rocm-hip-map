@@ -291,6 +291,14 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: '🌐 多语言情报',
+      collapsible: true,
+      collapsed: true,
+      link: { type: 'doc', id: 'multilingual/index' },
+      items: [],  // auto-generated
+    },
+    {
+      type: 'category',
       label: '📋 兼容性矩阵',
       collapsible: true,
       collapsed: true,
