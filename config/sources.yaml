@@ -1,0 +1,162 @@
+# 多语言情报源配置
+# 每个源包含：名称、地区、语言、URL 列表、可信度
+
+sources:
+  # ── 芬兰 (fi) ──
+  - id: csc-lumi
+    name: "CSC — LUMI 超算中心"
+    region: "eu"
+    country: "fi"
+    language: "fi"
+    credibility: 5
+    urls:
+      - "https://docs.lumi-supercomputer.eu/"
+      - "https://docs.lumi-supercomputer.eu/runjobs/lumi_env/rocm/"
+      - "https://csc.fi/en/training"
+    search_terms:
+      - "ROCm HIP GPU ohjelmointi CSC"
+      - "LUMI ROCm koulutus"
+    notes: "LUMI 是欧洲最大 AMD GPU 超算（11912×MI250X），CSC 定期举办 ROCm 培训"
+
+  - id: csc-en
+    name: "CSC — 英文材料"
+    region: "eu"
+    country: "fi"
+    language: "en"
+    credibility: 5
+    urls:
+      - "https://docs.lumi-supercomputer.eu/runjobs/lumi_env/rocm/"
+      - "https://csc.fi/en/webinars"
+    search_terms:
+      - "LUMI ROCm HIP programming guide"
+      - "CSC AMD GPU training"
+
+  # ── 法国 (fr) ──
+  - id: hal-fr
+    name: "HAL — 法国开放科学存档"
+    region: "eu"
+    country: "fr"
+    language: "fr"
+    credibility: 4
+    search_terms:
+      - "ROCm AMD GPU calcul scientifique"
+      - "HIP programmation GPU AMD"
+    notes: "HAL 是法国国家开放存档，收录 INRIA/CEA/CNRS 论文"
+
+  - id: genci
+    name: "GENCI — 法国国家超算中心"
+    region: "eu"
+    country: "fr"
+    language: "fr"
+    credibility: 5
+    urls:
+      - "https://www.genci.fr/en"
+    search_terms:
+      - "GENCI AMD GPU ROCm"
+      - "Adastra supercomputer ROCm"
+    notes: "GENCI 管理 Adastra 超算（AMD MI250X）"
+
+  # ── 德国 (de) ──
+  - id: julich
+    name: "Forschungszentrum Jülich — 德国超算中心"
+    region: "eu"
+    country: "de"
+    language: "de"
+    credibility: 5
+    urls:
+      - "https://www.fz-juelich.de/en/ias/jsc"
+    search_terms:
+      - "Jülich JUWELS ROCm AMD GPU"
+      - "JSC GPU Programmierung ROCm"
+    notes: "JSC 运营 JUWELS 超算，大量 AMD GPU 文档"
+
+  - id: lrz
+    name: "LRZ — 莱布尼茨超算中心"
+    region: "eu"
+    country: "de"
+    language: "de"
+    credibility: 5
+    urls:
+      - "https://doku.lrz.de/"
+    search_terms:
+      - "LRZ SuperMUC-NG ROCm"
+      - "LRZ AMD GPU documentation"
+    notes: "SuperMUC-NG Phase 2 使用 AMD MI300A APU"
+
+  # ── 意大利 (it) ──
+  - id: cineca
+    name: "CINECA — 意大利超算中心"
+    region: "eu"
+    country: "it"
+    language: "it"
+    credibility: 5
+    urls:
+      - "https://www.cineca.it/en"
+      - "https://wiki.u-gov.it/confluence/display/SCAIUS/"
+    search_terms:
+      - "CINECA Leonardo AMD GPU ROCm"
+      - "Leonardo supercomputer HIP programming"
+    notes: "Leonardo 超算使用 AMD MI250X GPU"
+
+  # ── 日本 (ja) ──
+  - id: amd-japan
+    name: "AMD Japan — 官方日语材料"
+    region: "asia"
+    country: "jp"
+    language: "ja"
+    credibility: 5
+    search_terms:
+      - "AMD ROCm HIP プログラミング"
+      - "AMD GPU 高速化 機械学習"
+    notes: "AMD 日本法人发布的技术文档和活动材料"
+
+  - id: riken
+    name: "RIKEN — 日本理化学研究所"
+    region: "asia"
+    country: "jp"
+    language: "ja"
+    credibility: 5
+    urls:
+      - "https://www.r-ccs.riken.jp/en/"
+    search_terms:
+      - "RIKEN Fugaku AMD GPU ROCm"
+      - "理研 GPU 計算 プログラミング"
+    notes: "RIKEN 运营 Fugaku 超算，涉及 AMD GPU 研究"
+
+  # ── 韩国 (ko) ──
+  - id: kisti
+    name: "KISTI — 韩国科学技术信息研究院"
+    region: "asia"
+    country: "kr"
+    language: "ko"
+    credibility: 4
+    search_terms:
+      - "KISTI AMD GPU ROCm"
+      - "한국 GPU 프로그래밍 ROCm"
+    notes: "KISTI 运营韩国国家超算"
+
+  # ── 西班牙 (es) ──
+  - id: bsc
+    name: "BSC — 巴塞罗那超算中心"
+    region: "eu"
+    country: "es"
+    language: "es"
+    credibility: 5
+    urls:
+      - "https://www.bsc.es/"
+    search_terms:
+      - "BSC MareNostrum AMD GPU ROCm"
+      - "BSC GPU programación AMD"
+    notes: "MareNostrum 5 使用 AMD GPU"
+
+  # ── 荷兰 (nl) ──
+  - id: surf
+    name: "SURF — 荷兰国家 HPC"
+    region: "eu"
+    country: "nl"
+    language: "nl"
+    credibility: 4
+    search_terms:
+      - "SURF AMD GPU ROCm HPC"
+      - "Dutch HPC ROCm training"
+    notes: "SURF 运营荷兰国家超算基础设施"

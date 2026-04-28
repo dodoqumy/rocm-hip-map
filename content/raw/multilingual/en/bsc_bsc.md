@@ -1,0 +1,1054 @@
+---
+title: "BSC — 巴塞罗那超算中心 — "
+source_url: "https://www.bsc.es/"
+source_type: "multilingual"
+source_org: "bsc"
+source_name: "BSC — 巴塞罗那超算中心"
+original_lang: "en"
+credibility: 5
+lifecycle: "latest"
+synced_date: 2026-04-28
+region: "eu"
+country: "es"
+---
+
+BSC-CNS | Barcelona Supercomputing Center - Centro Nacional de Supercomputacion 
+ 
+
+ 
+
+ 
+ 
+ 
+ Skip to main content 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ Research Excellence 
+ 
+ 
+ 
+ Staff 
+ FAQs 
+ Contact Us 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ English Català Castellano 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Web Content Staff 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Filter by Department AI Institute AI Institute - AI Tools AI Institute - Annotators AI Institute - Applied Intelligence AI Institute - Computer Vision AI Institute - Data Innovation AI Institute - Data Management AI Institute - Data Tools AI Institute - Language Modelling AI Institute - Language Technologies Laboratory AI Institute - Machine Translation AI Institute - Responsibility and Ethics AI Institute - Single and Multi Agent Research Team AI Institute - Speech AI Institute - Technical and Administrative Support AI Institute - Trustworthiness and Evaluation AI Institute - XplainLing AIInstitute - XplainLing CASE CASE - Data Pre&Post Processing CASE - Dual Technologies CASE - Fusion CASE - Geometry and Meshing for simulations CASE - High Performance Computational Mechanics CASE - Large-scale Computational Fluid Dynamics CASE - Materials Science CASE - Natural Hazards and Risk Analysis CASE - Physical and Numerical Modelling CASE - Propulsion Technologies Group CASE - Quantic CASE - Smart Cities CASE - Wave Phenomena Group Computational Computational Social Sciences and Humanities Laboratory Computational Social Sciences and Humanities Laboratory - Computational Humanities Computational Social Sciences and Humanities Laboratory - Computational Social Sciences Computational Social Sciences and Humanities Laboratory - Data infrastructure Models and Methods Computer Sciences Computer Sciences - Accelerators and Communications for High Performance Computing Computer Sciences - Accelerators and Communications for HighPerformance Computing Computer Sciences - Artificial Intelligence Research Computer Sciences - Best Practices for Performance and Programmability Computer Sciences - Compilers and Toolchains for HPC Computer Sciences - Computer Architecture for Parallel Paradigms Computer Sciences - Computer Sciences Operational Support Group Computer Sciences - CORE Computer Sciences - Data Centric Computing Computer Sciences - Data-driven Scientific Computing Computer Sciences - Edge to Cloud Computing Paradigms Computer Sciences - FPGA Technologies Computer Sciences - Hardware Dependability for Embedded Systems HPES Lab Computer Sciences - High Performance Artificial Intelligence Computer Sciences - High Performance Domain-Specific Architectures Computer Sciences - High Performance Embedded Systems Laboratory Computer Sciences - High-Performance Algorithms and Hardware Accelerators for Bioinformatics Computer Sciences - Integration Computer Sciences - Memory technologies Computer Sciences - Microarchitecture Design and Implementation Computer Sciences - Microserver architectures and system software Computer Sciences - Mobile and embedded-based HPC Computer Sciences - Operating System / Computer Architecture Interface Computer Sciences - Performance Tools Computer Sciences - Predictable Parallel Computing Computer Sciences - Programming ecosystem for task-based distributed computing Computer Sciences - Programming Models and OS for FPGA based Architectures Computer Sciences - Programming Models and OS for FPGA basedArchitectures Computer Sciences - Programming models for novel distributed infrastructures Computer Sciences - SIM: Simulation Infrastructure and Methodologies Computer Sciences - Single and Multi Agent Research Team Computer Sciences - Software Dependability for Embedded Systems HPES Lab Computer Sciences - SOftware research and development vehicles for New ARchitectures SONAR Computer Sciences - Synthesis and Physical design of ICs Computer Sciences - System software for energy management in HPC Computer Sciences - System Tools and Advanced Runtimes Computer Sciences - Technical Management HW Engineering Computer Sciences - Toolchains for CyberPhysical Systems Computer Sciences - UNCORE Cache hierarchy and interconnects Computer Sciences - Validation Computer Sciences - VPU Computer Sciences - Workflows and Distributed Computing CSSocialSciences CSSocialSciences - Computational Humanities CSSocialSciences - Computational Social Sciences Directors Directors Office Directors Office - Education And Training Directors Office - European Relations Directors Office - Research Fellow Earth Sciences Earth Sciences - Aerosols, Dust and Climate Earth Sciences - Air Quality Services ES group Earth Sciences - Atmospheric Chemistry and Air Quality Earth Sciences - Atmospheric Composition Group Earth Sciences - Climate Services ES group Earth Sciences - Climate Variability and Change Earth Sciences - Computational Earth Sciences Group Earth Sciences - Data, Assimilation, Forecasting and Applications Earth Sciences - Earth Artificial Intelligence Earth Sciences - Earth Data and Diagnostics Earth Sciences - Earth Models and Workflows Earth Sciences - Earth System Services Group Earth Sciences - Emissions Earth Sciences - Global Health Resilience Earth Sciences - High Performance Computing for Earth Sciences Earth Sciences - Knowledge Integration ES group Extern - Extern people by Special Petition Innovation and Business Development Innovation and Business Development - Technology Transfer Office InnovationBD Institutional - European Relations Institutional - Latinamerican Relations Life Sciences Life Sciences - Bioinformatics Coordination Unit Life Sciences - Community Engagement TBR Laboratory Life Sciences - Comparative Genomics Life Sciences - Computational Biology Life Sciences Group Life Sciences - Computational Genomics Life Sciences - Digital Health Unit Life Sciences - Electronic and Atomic Protein Modelling Life Sciences - Evolutionary Systems Biophysics Group Life Sciences - Federated Analysis and Learning Infrastructures TBR Laboratory Life Sciences - Genome Informatics Life Sciences - INB Computational Unit Life Sciences - Integrative Computational Network Biology Life Sciences - Life Sciences Scientific Coordination unit Life Sciences - Machine Learning for Biomedical Research Life Sciences - NLP for Biomedical Information Analysis Life Sciences - Research Digital Assets Management TBR Laboratory Life Sciences - Social Link Analytics Life Sciences Group Life Sciences - Technologies for Biomedical Research Laboratory Life Sciences - Transcriptomics and Functional Genomics Lab Life Sciences - Trusted Research Environments and Cloud Computing TBR Laboratory Management Management - Communication Management - Finance and Accounting Management - Finance Projects Management - Human Resources Area Management - Information System and Services Management - Legal Management - Purchasing Management - Quality & Digitalization Operations Operations - Facility Management Operations - Facility Management - Facility Management Operations - Infrastructure Access Policy Unit Operations - System Administration Operations - User Support Project Management, Innovation & Dissemination Project Management, Innovation & Dissemination - Dissemination Project Management, Innovation & Dissemination - Project Innovation Management Unit Project Management, Innovation & Dissemination - Project Management Office ResearchSupport - Dissemination ResearchSupport - Project Management Office Research 
+ 
+ 
+ 
+ 
+ 
+ 
+ Research Group / Area Ab-Initio Electronic Structure Methods Advanced docking strategies Aerosol data assimilation Aerosol-radiation-cloud interactions Agriculture and water management services AI Experts AI Models, Computational Methods, and Workflows for CSSH AI Psychometrics and Complexity Science AI-based methods for the prediction and design of proteins Air quality Algorithms for genomics data compression Alya - High Performance Computational Mechanics Application optimization for GPU acceleration Applied Learning Methods Artificial Intelligence Team Atlantic Variability and Predictability Atmospheric Impact Services Bias development mechanisms Big Data Frameworks Biological data integration and management Blockchain Scalability and Sustainability BSIT: Barcelona Subsurface Imaging Tools Cancer genomics Cardiovascular system simulations Chiplet and Systems Design Climate Change Impacts on Public Health, Agricultural, Energy, and the Environment Climate Model Initialization and Data Assimilation Combustion Computational Archaeology Computational Archival History Computational Fluid Mechanics - Compressible Flows Computational fluid mechanics - Incompressible flows Computational infrastructures for biomolecular research Computational Modeling for Fusion Computational solid mechanics COTS multicore real-time systems Creative Intelligence Cultural Heritage and Museums Curricula Development and Quality Assurance in Higher Education and Professional Training Cyber-Physical Computing Systems Data and Diagnostics Team Data Placement for Heterogeneous Memory Systems Data-Center Optimization Data-Centric Architectures Data-Driven Scientific Computing Deep-Learning and HPC Dependable and power-efficient real-time systems Digital Social Ecology Distributed computing libraries and environments for quantum algorithms and hybrid classical-quantum workflows Distributed Computing Library Distributed Object Management DLB: Dynamic Load Balancing Domain Specific Languages Dynamic resource management in HPC Earthquake Simulation eDrug: interactive drug design Electromagnetic Modeling and Inversion Electronic transport Emission modelling Energy efficiency management for Data Centers Energy-aware and Virtualisation Technologies Enzymatic Catalysis and Protein Engineering Epidemiological and genomic approaches to the study of comorbidities EUDAT Fair Data Stewardship, Metadata Standards, Semantics, Sensitive Data Forecast quality assessment of seasonal-to-decadal predictions Functional consequences of genetics variants Generic Lightweight Threads Genetics of Complex Diseases Hardware Support for Big Data Hazard and Compound Hazard-Risk Modelling under Current and Future Climate Scenarios High Performance Computing for Earth Sciences Team High performance storage for interactive Big Data analysis High Programming Productivity for Accelerators High-performance IO and storage Homomorphically Encrypted Deep Learning HPC Frameworks HPC Geophysical Applications HPC Software Optimization HPC Workflows Improving Virtual Memory Industrial artificial intelligence and digital twins Innovation Insurance Services Integration of Programming Models and Persistent Storage Systems Integration of Risk Models with Community-Based Early Warning Systems Interactive data visualization Internet of Things and Stream Processing Inverse Modelling Land-atmosphere coupling and predictability Language Modeling Learning Analytics Linear Algebra and Math Libraries Machine Learning Operations Machine Translation MareNostrum Memory hierarchy for GPU acceleration Memory systems for HPC and AI Mesh generation and adaptivity Message Passing Interface (MPI) Microscale wind simulations and wind resource assessment Microserver architectures and system software Mineral dust - AXA Chair on Sand and Dust Storms Mobile and embedded-based HPC Modelization of Climatic Events with Statistical and AI Approaches Models and Workflows Team Multiphysics Natural & Social Hazards (NaSH) Natural Language Processing for the Humanities Neural networks for data-streams NoSQL technologies applied to Life Sciences Numerical Methods Ocean Biogeochemistry and Climate Feedbacks Ocean forecasting OpenMP Extensions PELE: Monte Carlo methods for protein/DNA-ligand interactions Performance Analytics Policy analysis PRACE Predictable Parallel Computing Preemptive multiprogramming on GPUs Probabilistic Real Time Systems Protein Computational Biophysics Provenance, Metadata and Reproducibility Quantum Algorithms Reduced Order Methods in HPC RES Resilient architecture and runtimes Respiratory system Runtime aware architectures Science and Technology Studies Scientific and Social impact Scientific Visualization and storytelling Sea Ice Variability, Prediction and Impacts Seasonal prediction and attribution of extreme events Seismic hazard, seismic vulnerability and seismic risk Smart and resilient cities Social Media, Politics and Behavior SOftware research and development vehicles for New ARchitectures (SONAR) Solar energy services Speech Technologies Supercomputing for Artificial Intelligence Teaching Methodologies for Technology Rich Environments Tensor Networks The OmpSs Programming Model Time-predictable parallel programming models Towards complex and intelligent workflow programming for Distributed Computing Tropical Cyclones Troposphere-stratosphere coupling Urban air quality modelling Urban Data Science Urban-scale Atmospheric Dispersal Modeling Volcanic ash Welfare and Equity Wind energy services Workflow environments for Scientific Applications 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ Close Menu 
+ 
+ 
+ 
+ Discover BSC 
+ 
+ 
+ Research & Development 
+ 
+ 
+ MareNostrum 
+ 
+ 
+ Tech Transfer 
+ 
+ 
+ Join Us 
+ 
+ 
+ Education 
+ 
+ 
+ News 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ Discover BSC 
+ 
+ 
+ 
+ 
+ 
+ The Centre 
+ 
+ What we do 
+ BSC-CNS in Numbers 
+ History 
+ Mission and Values 
+ Annual Summaries 
+ MareNostrum 
+ 
+ 
+ Organisation 
+ 
+ Governance Boards 
+ Research Structure 
+ Support Structure 
+ 
+ 
+ Equity, Diversity & Inclusion 
+ 
+ Gender Equity 
+ Gender Equity Initiatives at BSC 
+ Measures against gender-based violence and sexual harassment 
+ LGTBIAQ+ Diversity 
+ Intersectional perspective 
+ Reconciling Work and Life 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Research Excellence 
+ 
+ Severo Ochoa 
+ 
+ Severo Ochoa Research Seminars 
+ 
+ 
+ ERC and ICREA 
+ Shaping the Future of HPC 
+ 
+ 
+ Computing with you 
+ 
+ Visit our supercomputer 
+ Female-focused tours for primary schools 
+ Science & Culture 
+ SuperGeek 
+ Courses and materials for schools 
+ We are young women researchers 
+ Bojos per la supercomputaci&oacute; 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Multimedia Gallery 
+ 
+ Pictures 
+ 
+ 
+ Brand & Logo 
+ Public Tenders 
+ 
+ Open to apply 
+ Awarding in process 
+ Formalized 
+ Announcements 
+ 
+ 
+ Transparency 
+ BSC Folks 
+ 
+ 
+ 
+ 
+ 
+ 
+ face-to-face visit virtual visit 
+ 
+ 
+ 
+ 
+ 
+ Research & Development 
+ 
+ 
+ 
+ 
+ 
+ Research Areas 
+ 
+
+ 
+ 
+ 
+ Atmospheric Composition 
+ 
+ Big Data 
+ 
+ Bioinformatics 
+ 
+ Biomechanics 
+ 
+ Climate Prediction 
+ 
+ Cloud Computing 
+ 
+ Cognitive Computing 
+ 
+ Computational Earth Sciences 
+ 
+ Computer Architecture and Codesign 
+ 
+ Distributed Computing 
+ 
+ Education 
+ 
+ Engineering Simulations 
+ 
+ Fusion 
+ 
+ Genomics 
+ 
+ Geophysics 
+ 
+ HPC Software Engineering 
+ 
+ Materials Science 
+ 
+ Molecular Modeling 
+ 
+ Operations Infrastructure 
+ 
+ Performance Analysis 
+ 
+ Programming Models 
+ 
+ Quantum Information 
+ 
+ Social Simulation 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ People 
+ Research Structure 
+ 
+ 
+ Computer Sciences 
+ Life Sciences 
+ Earth Sciences 
+ Computer Applications in Science & Engineering 
+ 
+ --> 
+ 
+ Projects 
+ Publications 
+ 
+ Annual Summaries 
+ Technical Reports 
+ 
+ 
+ 
+ 
+ 
+ 
+ Portfolio 
+ 
+ Patent Portfolio 
+ Software & Hardware 
+ 
+ 
+ Research Seminars 
+ 
+ Past Research Seminars 
+ 
+ 
+ Conferences 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Software & Hardware 
+ 
+ 
+ Publications 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ MareNostrum 
+ 
+ 
+ 
+ 
+ 
+ MareNostrum 
+ 
+ Technical Information 
+ User Documentation 
+ Visits 
+ 
+ 
+ Active Archive 
+ StarLife 
+ 
+ 
+ 
+ 
+ 
+ Access to Supercomputing Resources 
+ 
+ Access to RES 
+ 
+ 
+ Available HPC Software 
+ Access to Eduroam 
+ Available HPC Software 
+ 
+ 
+ -->
+ 
+ 
+ RES Courses 
+ 
+ 
+ 
+ 
+ 
+ Tech Transfer 
+ 
+ 
+ 
+ 
+ 
+ BSC AI Factory 
+ 
+ 
+ Discover Supercomputing 
+ 
+ Application Areas 
+ How to collaborate with us 
+ 
+ 
+ 
+ 
+ Portfolio 
+ 
+ Patent Portfolio 
+ Software & Hardware 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Services 
+ 
+ Air Quality 
+ Climate 
+ Mineral Dust 
+ Computational Genomics 
+ HPC Performance Analysis and Optimization 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Collaboration with Companies 
+ 
+ 
+ Spin-Offs and Entrepreneurship 
+ 
+ Spin-Offs 
+ Entrepreneurship at BSC 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Spin-Offs 
+ 
+ 
+ 
+ 
+ 
+ Join Us 
+ 
+ 
+ 
+ 
+ 
+ Fellowships 
+ 
+ Undergraduate 
+ Master 
+ Predoctoral (PhD) 
+ Postdoctoral 
+ Other 
+ 
+ 
+ Scholarships 
+ 
+ 
+ 
+ 
+ 
+ Job Opportunities 
+ Excellence Career Opportunities 
+ HR Initiatives & Badges 
+ 
+ 
+ 
+ 
+ 
+ Why work at BSC 
+ 
+ Recruitment Process 
+ Mobility Programmes 
+ Life in Barcelona 
+ FAQ's 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Join the community! 
+ 
+ 
+ 
+ 
+ 
+ Education 
+ 
+ 
+ 
+ 
+ 
+ Training 
+ 
+ BSC Training 
+ 
+ Past BSC Training 
+ 
+ 
+ RES Courses 
+ 
+ Past RES Courses 
+ 
+ 
+ CUDA Training 
+ 
+ Past CUDA Training 
+ 
+ 
+ Other Training 
+ 
+ Past Other Training 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Predoctoral (PhD) 
+ 
+ PhD Programmes 
+ Professional Training 
+ Mobility Programmes 
+ Doctoral Symposium 
+ 
+ 
+ Bioinfo4Women 
+ Women in Computer Sciences 
+ Equity4CASE 
+ Equity4ES 
+ 
+ 
+ 
+ 
+ 
+ Graduate 
+ 
+ Master's Programme 
+ Internships 
+ Testimonials & Awards 
+ 
+ 
+ Seasonal Schools 
+ Workshops 
+ 
+ Past Workshops 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Life in Barcelona 
+ 
+ 
+ 
+ 
+ 
+ News 
+ 
+ 
+ 
+ 
+ 
+ BSC News 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ News content 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Events 
+ BSC in the Media 
+ 
+ 
+ 
+ 
+ 
+ Newsletter 
+ Annual Summaries 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Multimedia Gallery 
+ 
+ 
+ 
+ 
+ 
+ Branding, Identity & Logo 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ The 2025 Summary is available 
+ 
+ 
+ Find out what BSC has been getting up over last year 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ Join the BSC Doctoral Symposium! 
+ 
+ 
+ Are you a PhD student or an early-career researcher willing to showcase your work? 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ Don&#039;t miss the trailer for our documentary 
+ 
+ 
+ This film shows how supercomputing makes it possible to tackle major global challenges 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ BSC quantum computer 
+ 
+ 
+ 
+ BSC presents the first quantum computer in Spain developed with 100% European technology 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ How MareNostrum 5 works 
+ 
+ 
+ Discover its components and how it works through this interactive 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ Discover MareNostrum 
+ Primary 
+Schools Face-to-face visit 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 19 Apr 
+ The presidents of Brazil, Uruguay and Mexico visit BSC to consolidate the technological alliance between the center and Latin America 
+ The visits of Luiz In&aacute;cio Lula da Silva, Yamand&uacute; Orsi and Claudia Sheinbaum reinforce a long trajectory of scientific collaboration and project new strategic axes in AI and technological sovereignty for the region 
+ 
+ 
+ 10 Apr 
+ New BSC study reveals, for the first time, that the female immune system changes much more than that of men with age 
+ As they age, women have a greater tendency to suffer from autoimmune diseases, while in men, changes are more discreet but related to the risk of suffering from certain blood cancers 
+ 
+ 
+ 27 Mar 
+ Rosa M. Badia awarded Honor Prize at 31st Night of Telecommunications and Informatics 
+ 
+ The award recognizes the career of the Director of the HPC Software research area at BSC and her contribution to supercomputing and distributed systems 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ EVENTS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 27 Apr 
+ BSC Training Course: Research Data Management for Beginners 
+ 
+ 29 Apr 
+ Destination Earth: Aplicaciones, Retos y Oportunidades para España 
+ 
+ 05 May 
+ 13th International BSC Severo Ochoa Doctoral Symposium 2026 
+ 
+ 
+ 
+ 
+ 
+ 
+ See All Events 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ Research Structure 
+ 
+ 
+ 
+ 
+ Collaboration with companies 
+ 
+ 
+ 
+ 
+ Computing with you 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ Projects 
+ BSC has a portfolio of over 150 research projects financed by public and private sources both national and international. 
+ + 
+
+ 
+ Tech Transfer 
+ Many organizations are now using HPC as an essential part of their business strategy. 
+ + 
+
+ 
+ Education 
+ 
+ Graduate 
+ Predoctoral (PhD) 
+ Training 
+ Seasonal Schools 
+ Workshops 
+ 
+ + 
+
+ 
+ Join Us 
+ Find out how BSC could be the next step in your career. 
+ + 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ Find Us 
+ Barcelona Supercomputing Center 
+ Pla&ccedil;a Eusebi G&uuml;ell, 1-3 
+ 08034 Barcelona (Spain) 
+ Contact Us 
+ Tel. (+34) 93 413 77 16 
+ Fax (+34) 93 413 77 21 
+ mail: info [at] bsc [dot] es 
+ View Map 
+ Connect With Us 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ View Map 
+
+ 
+
+ 
+ 
+
+ Subscribe to Newsletter 
+ 
+ 
+ E-mail * 
+ 
+ 
+ 
+ I accept the data policy * 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ BSC is a public consortium made up of: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Barcelona Supercomputing Center, 2018 Transparency - Legal Notice  <!-- 截断至 50K 字符 -->

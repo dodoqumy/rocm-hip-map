@@ -19,14 +19,17 @@ tags: ["container", "performance"]
 published_date: ""
 synced_date: "2026-04-28"
 generated_at: "2026-04-28"
+arxiv_id: ""
 ---
 
 import ArticleHeader from "@site/src/components/ArticleHeader";
+import PaperArticleHeader from "@site/src/components/PaperArticleHeader";
 
 
 <ArticleHeader />
+<PaperArticleHeader />
 
-> 📄 **原文链接：** [https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi250.html](https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi250.html)
+> 📄 **原文链接：** [https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi250.html](https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi250.html)  
 > 🏷 **来源：** AMD 官方文档 · 可信度：⭐⭐⭐⭐⭐
 
 ---
@@ -59,7 +62,7 @@ To the left and the right are memory controllers that attach the High Bandwidth 
 
 The execution units of the GPU are depicted in the following image as Compute Units (CU). The MI250 GCD has 104 active CUs. Each compute unit is further subdivided into four SIMD units that process SIMD instructions of 16 data elements per instruction (for the FP64 data type). This enables the CU to process 64 work items (a so-called "wavefront") at a peak clock frequency of 1.7 GHz. Therefore, the theoretical maximum FP64 peak performance per GCD is 22.6 TFLOPS for vector instructions. This equates to 45.3 TFLOPS for vector instructions for both GCDs together. The MI250 compute units also provide specialized execution units (also called matrix cores), which are geared toward executing matrix operations like matrix-matrix multiplications. For FP64, the peak performance of these units amounts to 90.5 TFLOPS.
 
-![Structure of a single GCD in the AMD Instinct MI250 GPU.](../../_images/image001.png)
+![Structure of a single GCD in the AMD Instinct MI250 GPU.](https://rocm.docs.amd.com/en/latest/_images/image001.png)
 
   Computation and Data Type   FLOPS/CLOCK/CU   Peak TFLOPS
   --------------------------- ---------------- -------------
@@ -74,7 +77,7 @@ The execution units of the GPU are depicted in the following image as Compute Un
 
 The above table summarizes the aggregated peak performance of the AMD Instinct MI250 Open Compute Platform (OCP) Open Accelerator Modules (OAMs) and its two GCDs for different data types and execution units. The middle column lists the peak performance (number of data elements processed in a single instruction) of a single compute unit if a SIMD (or matrix) instruction is being retired in each clock cycle. The third column lists the theoretical peak performance of the OAM module. The theoretical aggregated peak memory bandwidth of the GPU is 3.2 TB/sec (1.6 TB/sec per GCD).
 
-![Dual-GCD architecture of the AMD Instinct MI250 GPUs](../../_images/image002.png)
+![Dual-GCD architecture of the AMD Instinct MI250 GPUs](https://rocm.docs.amd.com/en/latest/_images/image002.png)
 
 The following image shows the block diagram of an OAM package that consists of two GCDs, each of which constitutes one GPU device in the system. The two GCDs in the package are connected via four AMD Infinity Fabric links running at a theoretical peak rate of 25 GT/sec, giving 200 GB/sec peak transfer bandwidth between the two GCDs of an OAM, or a bidirectional peak transfer bandwidth of 400 GB/sec for the same.
 
@@ -82,7 +85,7 @@ The following image shows the block diagram of an OAM package that consists of t
 
 The following image shows the node-level architecture of a system that is based on the AMD Instinct MI250 GPU. The MI250 OAMs attach to the host system via PCIe Gen 4 x16 links (yellow lines). Each GCD maintains its own PCIe x16 link to the host part of the system. Depending on the server platform, the GCD can attach to the AMD EPYC processor directly or via an optional PCIe switch . Note that some platforms may offer an x8 interface to the GCDs, which reduces the available host-to-GPU bandwidth.
 
-![Block diagram of AMD Instinct MI250 GPUs with 3rd Generation AMD EPYC processor](../../_images/image003.png)
+![Block diagram of AMD Instinct MI250 GPUs with 3rd Generation AMD EPYC processor](https://rocm.docs.amd.com/en/latest/_images/image003.png)
 
 The preceding image shows the node-level architecture of a system with AMD EPYC processors in a dual-socket configuration and four AMD Instinct MI250 GPUs. The MI250 OAMs attach to the host processors system via PCIe Gen 4 x16 links (yellow lines). Depending on the system design, a PCIe switch may exist to make more PCIe lanes available for additional components like network interfaces and/or storage devices. Each GCD maintains its own PCIe x16 link to the host part of the system or to the PCIe switch. Please note, some platforms may offer an x8 interface to the GCDs, which will reduce the available host-to-GPU bandwidth.
 

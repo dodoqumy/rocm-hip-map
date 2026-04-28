@@ -1,0 +1,64 @@
+name: Sync Papers
+
+on:
+  schedule:
+    # 每周六 UTC 06:00（北京时间 14:00）
+    - cron: "0 6 * * 6"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-papers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          pip install requests pyyaml
+          pip install PyMuPDF  # for extract-pdf.py
+
+      # ──────────────────────────────────────────────
+      # 1. 抓取新论文元数据
+      # ──────────────────────────────────────────────
+      - name: Fetch new papers from arXiv
+        run: python3 scripts/fetch-papers.py
+
+      # ──────────────────────────────────────────────
+      # 2. 提取新论文 PDF → Markdown
+      # ──────────────────────────────────────────────
+      - name: Extract new paper PDFs
+        run: python3 scripts/extract-pdf.py
+
+      # ──────────────────────────────────────────────
+      # 3. 复制静态数据到网站
+      # ──────────────────────────────────────────────
+      - name: Copy papers data to website
+        run: |
+          mkdir -p website/static/data
+          cp data/papers.json website/static/data/papers.json
+
+      # ──────────────────────────────────────────────
+      # 4. 自动提交
+      # ──────────────────────────────────────────────
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add content/raw/papers/ data/papers.json website/static/data/papers.json || true
+
+          if git diff --cached --quiet; then
+            echo "No new papers"
+          else
+            git commit -m "auto: weekly paper sync $(date +%Y-%m-%d)"
+            git push
+            echo "Pushed new papers"
+          fi

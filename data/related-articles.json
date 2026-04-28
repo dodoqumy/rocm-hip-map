@@ -1,0 +1,1849 @@
+{
+  "version": 1,
+  "updated": "2026-04-28T08:27:14Z",
+  "top_n": 5,
+  "total_articles": 73,
+  "related": {
+    "compatibility/overview": [],
+    "cuda-to-hip/api-map": [],
+    "errors/index": [],
+    "getting-started/what-is-rocm": [],
+    "hip/参考/hip_projects_HIP_en_latest_reference_index": [
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_debugging",
+        "title": "Hip Projects Hip En Latest How To Hip Debugging",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_install",
+        "title": "Hip Projects Hip En Latest How To Hip Install",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-perl",
+        "title": "Using hipify-perl",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_supported_apis",
+        "title": "Supported CUDA APIs",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/兼容性/rocm_en_latest_compatibility_ml-compatibility_dgl",
+        "title": "Rocm En Latest Compatibility Ml Compatibility Dgl",
+        "keywords_overlap_score": 1.0
+      }
+    ],
+    "hip/总览/hip_projects_HIP_en_latest_index": [
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_porting_guide",
+        "title": "Porting CUDA code to HIP",
+        "keywords_overlap_score": 0.8306
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_index",
+        "title": "Use ROCm for AI",
+        "keywords_overlap_score": 0.8306
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_fine-tuning_index",
+        "title": "Use ROCm for fine-tuning LLMs",
+        "keywords_overlap_score": 0.7581
+      },
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_license",
+        "title": "ROCm license",
+        "keywords_overlap_score": 0.7083
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_system-setup_index",
+        "title": "System setup for AI workloads on ROCm",
+        "keywords_overlap_score": 0.7083
+      }
+    ],
+    "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_debugging": [
+      {
+        "slug": "hip/参考/hip_projects_HIP_en_latest_reference_index",
+        "title": "Hip Projects Hip En Latest Reference Index",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_install",
+        "title": "Hip Projects Hip En Latest How To Hip Install",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-perl",
+        "title": "Using hipify-perl",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_supported_apis",
+        "title": "Supported CUDA APIs",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/兼容性/rocm_en_latest_compatibility_ml-compatibility_dgl",
+        "title": "Rocm En Latest Compatibility Ml Compatibility Dgl",
+        "keywords_overlap_score": 1.0
+      }
+    ],
+    "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_install": [
+      {
+        "slug": "hip/参考/hip_projects_HIP_en_latest_reference_index",
+        "title": "Hip Projects Hip En Latest Reference Index",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_debugging",
+        "title": "Hip Projects Hip En Latest How To Hip Debugging",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-perl",
+        "title": "Using hipify-perl",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_supported_apis",
+        "title": "Supported CUDA APIs",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/兼容性/rocm_en_latest_compatibility_ml-compatibility_dgl",
+        "title": "Rocm En Latest Compatibility Ml Compatibility Dgl",
+        "keywords_overlap_score": 1.0
+      }
+    ],
+    "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_porting_guide": [
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_index",
+        "title": "Use ROCm for AI",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_fine-tuning_index",
+        "title": "Use ROCm for fine-tuning LLMs",
+        "keywords_overlap_score": 0.9113
+      },
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_license",
+        "title": "ROCm license",
+        "keywords_overlap_score": 0.8531
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_system-setup_index",
+        "title": "System setup for AI workloads on ROCm",
+        "keywords_overlap_score": 0.8531
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_env-variables",
+        "title": "ROCm environment variables",
+        "keywords_overlap_score": 0.8531
+      }
+    ],
+    "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-clang": [
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-isolation",
+        "title": "GPU isolation techniques",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_setting-cus",
+        "title": "Setting the number of compute units",
+        "keywords_overlap_score": 0.8387
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_build-rocm",
+        "title": "Build ROCm from source",
+        "keywords_overlap_score": 0.8246
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_compiler-topics",
+        "title": "Using compiler features",
+        "keywords_overlap_score": 0.8246
+      },
+      {
+        "slug": "rocm-core/版本发布/rocm_en_latest_release_versions",
+        "title": "ROCm release history",
+        "keywords_overlap_score": 0.8246
+      }
+    ],
+    "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-perl": [
+      {
+        "slug": "hip/参考/hip_projects_HIP_en_latest_reference_index",
+        "title": "Hip Projects Hip En Latest Reference Index",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_debugging",
+        "title": "Hip Projects Hip En Latest How To Hip Debugging",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_install",
+        "title": "Hip Projects Hip En Latest How To Hip Install",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_supported_apis",
+        "title": "Supported CUDA APIs",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/兼容性/rocm_en_latest_compatibility_ml-compatibility_dgl",
+        "title": "Rocm En Latest Compatibility Ml Compatibility Dgl",
+        "keywords_overlap_score": 1.0
+      }
+    ],
+    "hipify/总览/hipify_projects_HIPIFY_en_latest_index": [
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_api-libraries",
+        "title": "ROCm libraries",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference-optimization_index",
+        "title": "Use ROCm for AI inference optimization",
+        "keywords_overlap_score": 0.8627
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_graph-safe-support",
+        "title": "Graph-safe support for ROCm libraries",
+        "keywords_overlap_score": 0.8627
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_programming_guide",
+        "title": "Programming guide",
+        "keywords_overlap_score": 0.8256
+      },
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_license",
+        "title": "ROCm license",
+        "keywords_overlap_score": 0.8148
+      }
+    ],
+    "hipify/总览/hipify_projects_HIPIFY_en_latest_supported_apis": [
+      {
+        "slug": "hip/参考/hip_projects_HIP_en_latest_reference_index",
+        "title": "Hip Projects Hip En Latest Reference Index",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_debugging",
+        "title": "Hip Projects Hip En Latest How To Hip Debugging",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_install",
+        "title": "Hip Projects Hip En Latest How To Hip Install",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-perl",
+        "title": "Using hipify-perl",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/兼容性/rocm_en_latest_compatibility_ml-compatibility_dgl",
+        "title": "Rocm En Latest Compatibility Ml Compatibility Dgl",
+        "keywords_overlap_score": 1.0
+      }
+    ],
+    "install/参考/rocm-install-linux_projects_install-on-linux_en_latest_reference_system-requirements": [
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_gpu-arch-specs",
+        "title": "GPU hardware specifications",
+        "keywords_overlap_score": 0.8745
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_precision-support",
+        "title": "Data types and precision support",
+        "keywords_overlap_score": 0.8054
+      },
+      {
+        "slug": "rocm-core/版本发布/rocm_en_latest_release_changelog",
+        "title": "ROCm consolidated changelog",
+        "keywords_overlap_score": 0.6059
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-arch",
+        "title": "GPU architecture documentation",
+        "keywords_overlap_score": 0.5623
+      },
+      {
+        "slug": "rocm-core/系统优化/rocm_en_latest_how-to_system-optimization_index",
+        "title": "System optimization",
+        "keywords_overlap_score": 0.4034
+      }
+    ],
+    "install/安装步骤/rocm-install-linux_projects_install-on-linux_en_latest_install_install-amdgpu": [
+      {
+        "slug": "install/安装步骤/rocm-install-linux_projects_install-on-linux_en_latest_install_install-post",
+        "title": "Rocm Install Linux Projects Install On Linux En Latest Install Install Post",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "install/安装步骤/rocm-install-linux_projects_install-on-linux_en_latest_install_install-quick",
+        "title": "Rocm Install Linux Projects Install On Linux En Latest Install Install Quick",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-clang",
+        "title": "Using hipify-clang",
+        "keywords_overlap_score": 0.7581
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-isolation",
+        "title": "GPU isolation techniques",
+        "keywords_overlap_score": 0.7581
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_setting-cus",
+        "title": "Setting the number of compute units",
+        "keywords_overlap_score": 0.6269
+      }
+    ],
+    "install/安装步骤/rocm-install-linux_projects_install-on-linux_en_latest_install_install-post": [
+      {
+        "slug": "install/安装步骤/rocm-install-linux_projects_install-on-linux_en_latest_install_install-amdgpu",
+        "title": "Rocm Install Linux Projects Install On Linux En Latest Install Install Amdgpu",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "install/安装步骤/rocm-install-linux_projects_install-on-linux_en_latest_install_install-quick",
+        "title": "Rocm Install Linux Projects Install On Linux En Latest Install Install Quick",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-clang",
+        "title": "Using hipify-clang",
+        "keywords_overlap_score": 0.7581
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-isolation",
+        "title": "GPU isolation techniques",
+        "keywords_overlap_score": 0.7581
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_setting-cus",
+        "title": "Setting the number of compute units",
+        "keywords_overlap_score": 0.6269
+      }
+    ],
+    "install/安装步骤/rocm-install-linux_projects_install-on-linux_en_latest_install_install-quick": [
+      {
+        "slug": "install/安装步骤/rocm-install-linux_projects_install-on-linux_en_latest_install_install-amdgpu",
+        "title": "Rocm Install Linux Projects Install On Linux En Latest Install Install Amdgpu",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "install/安装步骤/rocm-install-linux_projects_install-on-linux_en_latest_install_install-post",
+        "title": "Rocm Install Linux Projects Install On Linux En Latest Install Install Post",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-clang",
+        "title": "Using hipify-clang",
+        "keywords_overlap_score": 0.7581
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-isolation",
+        "title": "GPU isolation techniques",
+        "keywords_overlap_score": 0.7581
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_setting-cus",
+        "title": "Setting the number of compute units",
+        "keywords_overlap_score": 0.6269
+      }
+    ],
+    "install/总览/rocm-install-linux_projects_install-on-linux_en_latest_index": [
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_deep-learning-rocm",
+        "title": "Deep learning frameworks for ROCm",
+        "keywords_overlap_score": 0.8242
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_install",
+        "title": "Installing ROCm and deep learning frameworks",
+        "keywords_overlap_score": 0.7747
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_training_index",
+        "title": "Use ROCm for training",
+        "keywords_overlap_score": 0.6703
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_ai-pytorch-inception",
+        "title": "Deep learning: Inception V3 with PyTorch",
+        "keywords_overlap_score": 0.599
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_training_scale-model-training",
+        "title": "Scaling model training",
+        "keywords_overlap_score": 0.5833
+      }
+    ],
+    "issues/index": [],
+    "rocm-core/about/rocm_en_latest_about_license": [
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_env-variables",
+        "title": "ROCm environment variables",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_Bar-Memory",
+        "title": "Troubleshoot BAR access limitation",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/贡献/rocm_en_latest_contribute_contributing",
+        "title": "Contributing to the ROCm documentation",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_graph-safe-support",
+        "title": "Graph-safe support for ROCm libraries",
+        "keywords_overlap_score": 0.9231
+      },
+      {
+        "slug": "rocm-core/rocm-for-hpc/rocm_en_latest_how-to_rocm-for-hpc_index",
+        "title": "Using ROCm for HPC",
+        "keywords_overlap_score": 0.8684
+      }
+    ],
+    "rocm-core/about/rocm_en_latest_about_release-notes": [
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_system-setup_index",
+        "title": "System setup for AI workloads on ROCm",
+        "keywords_overlap_score": 0.8148
+      },
+      {
+        "slug": "rocm-core/性能调优/rocm_en_latest_how-to_tuning-guides_mi300x_index",
+        "title": "AMD MI300X tuning guides",
+        "keywords_overlap_score": 0.8148
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_system-debugging",
+        "title": "System debugging",
+        "keywords_overlap_score": 0.8148
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_training_scale-model-training",
+        "title": "Scaling model training",
+        "keywords_overlap_score": 0.7674
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_fine-tuning_index",
+        "title": "Use ROCm for fine-tuning LLMs",
+        "keywords_overlap_score": 0.7273
+      }
+    ],
+    "rocm-core/gpu-性能/rocm_en_latest_how-to_gpu-performance_mi300x": [
+      {
+        "slug": "rocm-core/总览/rocm_en_latest_index",
+        "title": "AMD ROCm documentation",
+        "keywords_overlap_score": 0.8779
+      },
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_license",
+        "title": "ROCm license",
+        "keywords_overlap_score": 0.8148
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_system-setup_index",
+        "title": "System setup for AI workloads on ROCm",
+        "keywords_overlap_score": 0.8148
+      },
+      {
+        "slug": "rocm-core/rocm-for-hpc/rocm_en_latest_how-to_rocm-for-hpc_index",
+        "title": "Using ROCm for HPC",
+        "keywords_overlap_score": 0.8148
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_env-variables",
+        "title": "ROCm environment variables",
+        "keywords_overlap_score": 0.8148
+      }
+    ],
+    "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_fine-tuning_index": [
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_porting_guide",
+        "title": "Porting CUDA code to HIP",
+        "keywords_overlap_score": 0.9113
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_index",
+        "title": "Use ROCm for AI",
+        "keywords_overlap_score": 0.9113
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_rocm-tools",
+        "title": "ROCm tools, compilers, and runtime API",
+        "keywords_overlap_score": 0.9113
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference-optimization_index",
+        "title": "Use ROCm for AI inference optimization",
+        "keywords_overlap_score": 0.8433
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_graph-safe-support",
+        "title": "Graph-safe support for ROCm libraries",
+        "keywords_overlap_score": 0.8433
+      }
+    ],
+    "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_index": [
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_porting_guide",
+        "title": "Porting CUDA code to HIP",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_fine-tuning_index",
+        "title": "Use ROCm for fine-tuning LLMs",
+        "keywords_overlap_score": 0.9113
+      },
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_license",
+        "title": "ROCm license",
+        "keywords_overlap_score": 0.8531
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_system-setup_index",
+        "title": "System setup for AI workloads on ROCm",
+        "keywords_overlap_score": 0.8531
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_env-variables",
+        "title": "ROCm environment variables",
+        "keywords_overlap_score": 0.8531
+      }
+    ],
+    "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference-optimization_index": [
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_index",
+        "title": "HIPIFY documentation",
+        "keywords_overlap_score": 0.8627
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_training_scale-model-training",
+        "title": "Scaling model training",
+        "keywords_overlap_score": 0.8627
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_api-libraries",
+        "title": "ROCm libraries",
+        "keywords_overlap_score": 0.8627
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_fine-tuning_index",
+        "title": "Use ROCm for fine-tuning LLMs",
+        "keywords_overlap_score": 0.8433
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference-optimization_model-quantization",
+        "title": "Model quantization techniques",
+        "keywords_overlap_score": 0.7974
+      }
+    ],
+    "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference-optimization_model-quantization": [
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_deploy-your-model",
+        "title": "Deploying your model",
+        "keywords_overlap_score": 0.8148
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_hugging-face-models",
+        "title": "Running models from Hugging Face",
+        "keywords_overlap_score": 0.8148
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_index",
+        "title": "Use ROCm for AI inference",
+        "keywords_overlap_score": 0.8148
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_llm-inference-frameworks",
+        "title": "LLM inference frameworks",
+        "keywords_overlap_score": 0.8148
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_training_index",
+        "title": "Use ROCm for training",
+        "keywords_overlap_score": 0.8148
+      }
+    ],
+    "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_deploy-your-model": [
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_index",
+        "title": "Use ROCm for AI inference",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_llm-inference-frameworks",
+        "title": "LLM inference frameworks",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/总览/rocm_en_latest_index",
+        "title": "AMD ROCm documentation",
+        "keywords_overlap_score": 0.8779
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference-optimization_model-quantization",
+        "title": "Model quantization techniques",
+        "keywords_overlap_score": 0.8148
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_system-setup_index",
+        "title": "System setup for AI workloads on ROCm",
+        "keywords_overlap_score": 0.8148
+      }
+    ],
+    "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_hugging-face-models": [
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference-optimization_model-quantization",
+        "title": "Model quantization techniques",
+        "keywords_overlap_score": 0.8148
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_deploy-your-model",
+        "title": "Deploying your model",
+        "keywords_overlap_score": 0.7674
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_index",
+        "title": "Use ROCm for AI inference",
+        "keywords_overlap_score": 0.7674
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_llm-inference-frameworks",
+        "title": "LLM inference frameworks",
+        "keywords_overlap_score": 0.7674
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_training_index",
+        "title": "Use ROCm for training",
+        "keywords_overlap_score": 0.7674
+      }
+    ],
+    "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_index": [
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_deploy-your-model",
+        "title": "Deploying your model",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_llm-inference-frameworks",
+        "title": "LLM inference frameworks",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/总览/rocm_en_latest_index",
+        "title": "AMD ROCm documentation",
+        "keywords_overlap_score": 0.8779
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference-optimization_model-quantization",
+        "title": "Model quantization techniques",
+        "keywords_overlap_score": 0.8148
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_system-setup_index",
+        "title": "System setup for AI workloads on ROCm",
+        "keywords_overlap_score": 0.8148
+      }
+    ],
+    "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_llm-inference-frameworks": [
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_deploy-your-model",
+        "title": "Deploying your model",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_index",
+        "title": "Use ROCm for AI inference",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/总览/rocm_en_latest_index",
+        "title": "AMD ROCm documentation",
+        "keywords_overlap_score": 0.8779
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference-optimization_model-quantization",
+        "title": "Model quantization techniques",
+        "keywords_overlap_score": 0.8148
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_system-setup_index",
+        "title": "System setup for AI workloads on ROCm",
+        "keywords_overlap_score": 0.8148
+      }
+    ],
+    "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_install": [
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_deep-learning-rocm",
+        "title": "Deep learning frameworks for ROCm",
+        "keywords_overlap_score": 0.9392
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_training_index",
+        "title": "Use ROCm for training",
+        "keywords_overlap_score": 0.8779
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_ai-pytorch-inception",
+        "title": "Deep learning: Inception V3 with PyTorch",
+        "keywords_overlap_score": 0.7906
+      },
+      {
+        "slug": "install/总览/rocm-install-linux_projects_install-on-linux_en_latest_index",
+        "title": "ROCm installation for Linux",
+        "keywords_overlap_score": 0.7747
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_training_scale-model-training",
+        "title": "Scaling model training",
+        "keywords_overlap_score": 0.7747
+      }
+    ],
+    "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_system-setup_index": [
+      {
+        "slug": "rocm-core/性能调优/rocm_en_latest_how-to_tuning-guides_mi300x_index",
+        "title": "AMD MI300X tuning guides",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_system-debugging",
+        "title": "System debugging",
+        "keywords_overlap_score": 0.8684
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_porting_guide",
+        "title": "Porting CUDA code to HIP",
+        "keywords_overlap_score": 0.8531
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_index",
+        "title": "Use ROCm for AI",
+        "keywords_overlap_score": 0.8531
+      },
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_release-notes",
+        "title": "ROCm 7.2.2 release notes",
+        "keywords_overlap_score": 0.8148
+      }
+    ],
+    "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_training_index": [
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_install",
+        "title": "Installing ROCm and deep learning frameworks",
+        "keywords_overlap_score": 0.8779
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_training_scale-model-training",
+        "title": "Scaling model training",
+        "keywords_overlap_score": 0.8765
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_deep-learning-rocm",
+        "title": "Deep learning frameworks for ROCm",
+        "keywords_overlap_score": 0.8242
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference-optimization_model-quantization",
+        "title": "Model quantization techniques",
+        "keywords_overlap_score": 0.8148
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_deploy-your-model",
+        "title": "Deploying your model",
+        "keywords_overlap_score": 0.7674
+      }
+    ],
+    "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_training_scale-model-training": [
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_training_index",
+        "title": "Use ROCm for training",
+        "keywords_overlap_score": 0.8765
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference-optimization_index",
+        "title": "Use ROCm for AI inference optimization",
+        "keywords_overlap_score": 0.8627
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_install",
+        "title": "Installing ROCm and deep learning frameworks",
+        "keywords_overlap_score": 0.7747
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_index",
+        "title": "HIPIFY documentation",
+        "keywords_overlap_score": 0.7674
+      },
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_release-notes",
+        "title": "ROCm 7.2.2 release notes",
+        "keywords_overlap_score": 0.7674
+      }
+    ],
+    "rocm-core/rocm-for-hpc/rocm_en_latest_how-to_rocm-for-hpc_index": [
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_license",
+        "title": "ROCm license",
+        "keywords_overlap_score": 0.8684
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_env-variables",
+        "title": "ROCm environment variables",
+        "keywords_overlap_score": 0.8684
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_Bar-Memory",
+        "title": "Troubleshoot BAR access limitation",
+        "keywords_overlap_score": 0.8684
+      },
+      {
+        "slug": "rocm-core/贡献/rocm_en_latest_contribute_contributing",
+        "title": "Contributing to the ROCm documentation",
+        "keywords_overlap_score": 0.8684
+      },
+      {
+        "slug": "rocm-core/gpu-性能/rocm_en_latest_how-to_gpu-performance_mi300x",
+        "title": "AMD Instinct MI300X performance guides",
+        "keywords_overlap_score": 0.8148
+      }
+    ],
+    "rocm-core/兼容性/rocm_en_latest_compatibility_compatibility-matrix": [
+      {
+        "slug": "install/总览/rocm-install-linux_projects_install-on-linux_en_latest_index",
+        "title": "ROCm installation for Linux",
+        "keywords_overlap_score": 0.5437
+      },
+      {
+        "slug": "rocm-core/版本发布/rocm_en_latest_release_changelog",
+        "title": "ROCm consolidated changelog",
+        "keywords_overlap_score": 0.5382
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_deep-learning-rocm",
+        "title": "Deep learning frameworks for ROCm",
+        "keywords_overlap_score": 0.4893
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_install",
+        "title": "Installing ROCm and deep learning frameworks",
+        "keywords_overlap_score": 0.452
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-arch",
+        "title": "GPU architecture documentation",
+        "keywords_overlap_score": 0.4065
+      }
+    ],
+    "rocm-core/兼容性/rocm_en_latest_compatibility_ml-compatibility_dgl": [
+      {
+        "slug": "hip/参考/hip_projects_HIP_en_latest_reference_index",
+        "title": "Hip Projects Hip En Latest Reference Index",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_debugging",
+        "title": "Hip Projects Hip En Latest How To Hip Debugging",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_install",
+        "title": "Hip Projects Hip En Latest How To Hip Install",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-perl",
+        "title": "Using hipify-perl",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_supported_apis",
+        "title": "Supported CUDA APIs",
+        "keywords_overlap_score": 1.0
+      }
+    ],
+    "rocm-core/兼容性/rocm_en_latest_compatibility_ml-compatibility_jax": [
+      {
+        "slug": "hip/参考/hip_projects_HIP_en_latest_reference_index",
+        "title": "Hip Projects Hip En Latest Reference Index",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_debugging",
+        "title": "Hip Projects Hip En Latest How To Hip Debugging",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_install",
+        "title": "Hip Projects Hip En Latest How To Hip Install",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-perl",
+        "title": "Using hipify-perl",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_supported_apis",
+        "title": "Supported CUDA APIs",
+        "keywords_overlap_score": 1.0
+      }
+    ],
+    "rocm-core/兼容性/rocm_en_latest_compatibility_ml-compatibility_pytorch": [
+      {
+        "slug": "hip/参考/hip_projects_HIP_en_latest_reference_index",
+        "title": "Hip Projects Hip En Latest Reference Index",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_debugging",
+        "title": "Hip Projects Hip En Latest How To Hip Debugging",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_install",
+        "title": "Hip Projects Hip En Latest How To Hip Install",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-perl",
+        "title": "Using hipify-perl",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_supported_apis",
+        "title": "Supported CUDA APIs",
+        "keywords_overlap_score": 1.0
+      }
+    ],
+    "rocm-core/兼容性/rocm_en_latest_compatibility_ml-compatibility_tensorflow": [
+      {
+        "slug": "hip/参考/hip_projects_HIP_en_latest_reference_index",
+        "title": "Hip Projects Hip En Latest Reference Index",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_debugging",
+        "title": "Hip Projects Hip En Latest How To Hip Debugging",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_install",
+        "title": "Hip Projects Hip En Latest How To Hip Install",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-perl",
+        "title": "Using hipify-perl",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_supported_apis",
+        "title": "Supported CUDA APIs",
+        "keywords_overlap_score": 1.0
+      }
+    ],
+    "rocm-core/参考/rocm_en_latest_reference_api-libraries": [
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_index",
+        "title": "HIPIFY documentation",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference-optimization_index",
+        "title": "Use ROCm for AI inference optimization",
+        "keywords_overlap_score": 0.8627
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_graph-safe-support",
+        "title": "Graph-safe support for ROCm libraries",
+        "keywords_overlap_score": 0.8627
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_programming_guide",
+        "title": "Programming guide",
+        "keywords_overlap_score": 0.8256
+      },
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_license",
+        "title": "ROCm license",
+        "keywords_overlap_score": 0.8148
+      }
+    ],
+    "rocm-core/参考/rocm_en_latest_reference_env-variables": [
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_license",
+        "title": "ROCm license",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_Bar-Memory",
+        "title": "Troubleshoot BAR access limitation",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/贡献/rocm_en_latest_contribute_contributing",
+        "title": "Contributing to the ROCm documentation",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_graph-safe-support",
+        "title": "Graph-safe support for ROCm libraries",
+        "keywords_overlap_score": 0.9231
+      },
+      {
+        "slug": "rocm-core/rocm-for-hpc/rocm_en_latest_how-to_rocm-for-hpc_index",
+        "title": "Using ROCm for HPC",
+        "keywords_overlap_score": 0.8684
+      }
+    ],
+    "rocm-core/参考/rocm_en_latest_reference_gpu-arch-specs": [
+      {
+        "slug": "install/参考/rocm-install-linux_projects_install-on-linux_en_latest_reference_system-requirements",
+        "title": "System requirements (Linux)",
+        "keywords_overlap_score": 0.8745
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_precision-support",
+        "title": "Data types and precision support",
+        "keywords_overlap_score": 0.7715
+      },
+      {
+        "slug": "rocm-core/版本发布/rocm_en_latest_release_changelog",
+        "title": "ROCm consolidated changelog",
+        "keywords_overlap_score": 0.5886
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-arch",
+        "title": "GPU architecture documentation",
+        "keywords_overlap_score": 0.5407
+      },
+      {
+        "slug": "rocm-core/系统优化/rocm_en_latest_how-to_system-optimization_index",
+        "title": "System optimization",
+        "keywords_overlap_score": 0.3867
+      }
+    ],
+    "rocm-core/参考/rocm_en_latest_reference_gpu-atomics-operation": [
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_file-reorg",
+        "title": "ROCm Linux Filesystem Hierarchy Standard reorganization",
+        "keywords_overlap_score": 0.7338
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_build-rocm",
+        "title": "Build ROCm from source",
+        "keywords_overlap_score": 0.7015
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_compiler-topics",
+        "title": "Using compiler features",
+        "keywords_overlap_score": 0.7015
+      },
+      {
+        "slug": "rocm-core/版本发布/rocm_en_latest_release_versions",
+        "title": "ROCm release history",
+        "keywords_overlap_score": 0.7015
+      },
+      {
+        "slug": "rocm-core/贡献/rocm_en_latest_contribute_toolchain",
+        "title": "ROCm documentation toolchain",
+        "keywords_overlap_score": 0.7015
+      }
+    ],
+    "rocm-core/参考/rocm_en_latest_reference_graph-safe-support": [
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_license",
+        "title": "ROCm license",
+        "keywords_overlap_score": 0.9231
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_env-variables",
+        "title": "ROCm environment variables",
+        "keywords_overlap_score": 0.9231
+      },
+      {
+        "slug": "rocm-core/总览/rocm_en_latest_what-is-rocm",
+        "title": "What is ROCm?",
+        "keywords_overlap_score": 0.9231
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_Bar-Memory",
+        "title": "Troubleshoot BAR access limitation",
+        "keywords_overlap_score": 0.9231
+      },
+      {
+        "slug": "rocm-core/贡献/rocm_en_latest_contribute_contributing",
+        "title": "Contributing to the ROCm documentation",
+        "keywords_overlap_score": 0.9231
+      }
+    ],
+    "rocm-core/参考/rocm_en_latest_reference_precision-support": [
+      {
+        "slug": "install/参考/rocm-install-linux_projects_install-on-linux_en_latest_reference_system-requirements",
+        "title": "System requirements (Linux)",
+        "keywords_overlap_score": 0.8054
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_gpu-arch-specs",
+        "title": "GPU hardware specifications",
+        "keywords_overlap_score": 0.7715
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-arch",
+        "title": "GPU architecture documentation",
+        "keywords_overlap_score": 0.6516
+      },
+      {
+        "slug": "rocm-core/版本发布/rocm_en_latest_release_changelog",
+        "title": "ROCm consolidated changelog",
+        "keywords_overlap_score": 0.5382
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-arch_mi300",
+        "title": "AMD Instinct™ MI300 Series microarchitecture",
+        "keywords_overlap_score": 0.4582
+      }
+    ],
+    "rocm-core/参考/rocm_en_latest_reference_rocm-tools": [
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_fine-tuning_index",
+        "title": "Use ROCm for fine-tuning LLMs",
+        "keywords_overlap_score": 0.9113
+      },
+      {
+        "slug": "rocm-core/总览/rocm_en_latest_what-is-rocm",
+        "title": "What is ROCm?",
+        "keywords_overlap_score": 0.8531
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_system-debugging",
+        "title": "System debugging",
+        "keywords_overlap_score": 0.8531
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_porting_guide",
+        "title": "Porting CUDA code to HIP",
+        "keywords_overlap_score": 0.8496
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_index",
+        "title": "Use ROCm for AI",
+        "keywords_overlap_score": 0.8496
+      }
+    ],
+    "rocm-core/性能调优/rocm_en_latest_how-to_tuning-guides_mi300x_index": [
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_system-setup_index",
+        "title": "System setup for AI workloads on ROCm",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_system-debugging",
+        "title": "System debugging",
+        "keywords_overlap_score": 0.8684
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_porting_guide",
+        "title": "Porting CUDA code to HIP",
+        "keywords_overlap_score": 0.8531
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_index",
+        "title": "Use ROCm for AI",
+        "keywords_overlap_score": 0.8531
+      },
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_release-notes",
+        "title": "ROCm 7.2.2 release notes",
+        "keywords_overlap_score": 0.8148
+      }
+    ],
+    "rocm-core/总览/rocm_en_latest_index": [
+      {
+        "slug": "rocm-core/gpu-性能/rocm_en_latest_how-to_gpu-performance_mi300x",
+        "title": "AMD Instinct MI300X performance guides",
+        "keywords_overlap_score": 0.8779
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_deploy-your-model",
+        "title": "Deploying your model",
+        "keywords_overlap_score": 0.8779
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_index",
+        "title": "Use ROCm for AI inference",
+        "keywords_overlap_score": 0.8779
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_llm-inference-frameworks",
+        "title": "LLM inference frameworks",
+        "keywords_overlap_score": 0.8779
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_ai-pytorch-inception",
+        "title": "Deep learning: Inception V3 with PyTorch",
+        "keywords_overlap_score": 0.7906
+      }
+    ],
+    "rocm-core/总览/rocm_en_latest_what-is-rocm": [
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_graph-safe-support",
+        "title": "Graph-safe support for ROCm libraries",
+        "keywords_overlap_score": 0.9231
+      },
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_license",
+        "title": "ROCm license",
+        "keywords_overlap_score": 0.8684
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_env-variables",
+        "title": "ROCm environment variables",
+        "keywords_overlap_score": 0.8684
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_Bar-Memory",
+        "title": "Troubleshoot BAR access limitation",
+        "keywords_overlap_score": 0.8684
+      },
+      {
+        "slug": "rocm-core/贡献/rocm_en_latest_contribute_contributing",
+        "title": "Contributing to the ROCm documentation",
+        "keywords_overlap_score": 0.8684
+      }
+    ],
+    "rocm-core/操作指南/rocm_en_latest_how-to_Bar-Memory": [
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_license",
+        "title": "ROCm license",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_env-variables",
+        "title": "ROCm environment variables",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/贡献/rocm_en_latest_contribute_contributing",
+        "title": "Contributing to the ROCm documentation",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_graph-safe-support",
+        "title": "Graph-safe support for ROCm libraries",
+        "keywords_overlap_score": 0.9231
+      },
+      {
+        "slug": "rocm-core/rocm-for-hpc/rocm_en_latest_how-to_rocm-for-hpc_index",
+        "title": "Using ROCm for HPC",
+        "keywords_overlap_score": 0.8684
+      }
+    ],
+    "rocm-core/操作指南/rocm_en_latest_how-to_build-rocm": [
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_compiler-topics",
+        "title": "Using compiler features",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/版本发布/rocm_en_latest_release_versions",
+        "title": "ROCm release history",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/贡献/rocm_en_latest_contribute_toolchain",
+        "title": "ROCm documentation toolchain",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-clang",
+        "title": "Using hipify-clang",
+        "keywords_overlap_score": 0.8246
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_setting-cus",
+        "title": "Setting the number of compute units",
+        "keywords_overlap_score": 0.8246
+      }
+    ],
+    "rocm-core/操作指南/rocm_en_latest_how-to_deep-learning-rocm": [
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_install",
+        "title": "Installing ROCm and deep learning frameworks",
+        "keywords_overlap_score": 0.9392
+      },
+      {
+        "slug": "install/总览/rocm-install-linux_projects_install-on-linux_en_latest_index",
+        "title": "ROCm installation for Linux",
+        "keywords_overlap_score": 0.8242
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_training_index",
+        "title": "Use ROCm for training",
+        "keywords_overlap_score": 0.8242
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_ai-pytorch-inception",
+        "title": "Deep learning: Inception V3 with PyTorch",
+        "keywords_overlap_score": 0.7463
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_training_scale-model-training",
+        "title": "Scaling model training",
+        "keywords_overlap_score": 0.7292
+      }
+    ],
+    "rocm-core/操作指南/rocm_en_latest_how-to_programming_guide": [
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_ai-pytorch-inception",
+        "title": "Deep learning: Inception V3 with PyTorch",
+        "keywords_overlap_score": 0.936
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_index",
+        "title": "HIPIFY documentation",
+        "keywords_overlap_score": 0.8256
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_api-libraries",
+        "title": "ROCm libraries",
+        "keywords_overlap_score": 0.8256
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_install",
+        "title": "Installing ROCm and deep learning frameworks",
+        "keywords_overlap_score": 0.7344
+      },
+      {
+        "slug": "rocm-core/总览/rocm_en_latest_index",
+        "title": "AMD ROCm documentation",
+        "keywords_overlap_score": 0.7344
+      }
+    ],
+    "rocm-core/操作指南/rocm_en_latest_how-to_setting-cus": [
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_cmake-packages",
+        "title": "Using CMake",
+        "keywords_overlap_score": 0.8433
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-clang",
+        "title": "Using hipify-clang",
+        "keywords_overlap_score": 0.8387
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-isolation",
+        "title": "GPU isolation techniques",
+        "keywords_overlap_score": 0.8387
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_build-rocm",
+        "title": "Build ROCm from source",
+        "keywords_overlap_score": 0.8246
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_compiler-topics",
+        "title": "Using compiler features",
+        "keywords_overlap_score": 0.8246
+      }
+    ],
+    "rocm-core/操作指南/rocm_en_latest_how-to_system-debugging": [
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_system-setup_index",
+        "title": "System setup for AI workloads on ROCm",
+        "keywords_overlap_score": 0.8684
+      },
+      {
+        "slug": "rocm-core/性能调优/rocm_en_latest_how-to_tuning-guides_mi300x_index",
+        "title": "AMD MI300X tuning guides",
+        "keywords_overlap_score": 0.8684
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_rocm-tools",
+        "title": "ROCm tools, compilers, and runtime API",
+        "keywords_overlap_score": 0.8531
+      },
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_release-notes",
+        "title": "ROCm 7.2.2 release notes",
+        "keywords_overlap_score": 0.8148
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_fine-tuning_index",
+        "title": "Use ROCm for fine-tuning LLMs",
+        "keywords_overlap_score": 0.7778
+      }
+    ],
+    "rocm-core/术语表/rocm_en_latest_reference_glossary_index": [
+      {
+        "slug": "hip/参考/hip_projects_HIP_en_latest_reference_index",
+        "title": "Hip Projects Hip En Latest Reference Index",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_debugging",
+        "title": "Hip Projects Hip En Latest How To Hip Debugging",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_install",
+        "title": "Hip Projects Hip En Latest How To Hip Install",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-perl",
+        "title": "Using hipify-perl",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_supported_apis",
+        "title": "Supported CUDA APIs",
+        "keywords_overlap_score": 1.0
+      }
+    ],
+    "rocm-core/概念/rocm_en_latest_conceptual_ai-pytorch-inception": [
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_programming_guide",
+        "title": "Programming guide",
+        "keywords_overlap_score": 0.936
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_install",
+        "title": "Installing ROCm and deep learning frameworks",
+        "keywords_overlap_score": 0.7906
+      },
+      {
+        "slug": "rocm-core/总览/rocm_en_latest_index",
+        "title": "AMD ROCm documentation",
+        "keywords_overlap_score": 0.7906
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_index",
+        "title": "HIPIFY documentation",
+        "keywords_overlap_score": 0.7747
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_api-libraries",
+        "title": "ROCm libraries",
+        "keywords_overlap_score": 0.7747
+      }
+    ],
+    "rocm-core/概念/rocm_en_latest_conceptual_cmake-packages": [
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_setting-cus",
+        "title": "Setting the number of compute units",
+        "keywords_overlap_score": 0.8433
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-clang",
+        "title": "Using hipify-clang",
+        "keywords_overlap_score": 0.7153
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-isolation",
+        "title": "GPU isolation techniques",
+        "keywords_overlap_score": 0.7153
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_build-rocm",
+        "title": "Build ROCm from source",
+        "keywords_overlap_score": 0.694
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_compiler-topics",
+        "title": "Using compiler features",
+        "keywords_overlap_score": 0.694
+      }
+    ],
+    "rocm-core/概念/rocm_en_latest_conceptual_compiler-topics": [
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_build-rocm",
+        "title": "Build ROCm from source",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/版本发布/rocm_en_latest_release_versions",
+        "title": "ROCm release history",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/贡献/rocm_en_latest_contribute_toolchain",
+        "title": "ROCm documentation toolchain",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-clang",
+        "title": "Using hipify-clang",
+        "keywords_overlap_score": 0.8246
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_setting-cus",
+        "title": "Setting the number of compute units",
+        "keywords_overlap_score": 0.8246
+      }
+    ],
+    "rocm-core/概念/rocm_en_latest_conceptual_file-reorg": [
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_gpu-atomics-operation",
+        "title": "Hardware atomics operation support",
+        "keywords_overlap_score": 0.7338
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_build-rocm",
+        "title": "Build ROCm from source",
+        "keywords_overlap_score": 0.694
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_compiler-topics",
+        "title": "Using compiler features",
+        "keywords_overlap_score": 0.694
+      },
+      {
+        "slug": "rocm-core/版本发布/rocm_en_latest_release_versions",
+        "title": "ROCm release history",
+        "keywords_overlap_score": 0.694
+      },
+      {
+        "slug": "rocm-core/贡献/rocm_en_latest_contribute_toolchain",
+        "title": "ROCm documentation toolchain",
+        "keywords_overlap_score": 0.694
+      }
+    ],
+    "rocm-core/概念/rocm_en_latest_conceptual_gpu-arch": [
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-arch_mi250",
+        "title": "AMD Instinct™ MI250 microarchitecture",
+        "keywords_overlap_score": 0.6653
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_precision-support",
+        "title": "Data types and precision support",
+        "keywords_overlap_score": 0.6516
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-arch_mi100",
+        "title": "AMD Instinct™ MI100 microarchitecture",
+        "keywords_overlap_score": 0.5833
+      },
+      {
+        "slug": "install/参考/rocm-install-linux_projects_install-on-linux_en_latest_reference_system-requirements",
+        "title": "System requirements (Linux)",
+        "keywords_overlap_score": 0.5623
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_gpu-arch-specs",
+        "title": "GPU hardware specifications",
+        "keywords_overlap_score": 0.5407
+      }
+    ],
+    "rocm-core/概念/rocm_en_latest_conceptual_gpu-arch_mi100": [
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-arch_mi250",
+        "title": "AMD Instinct™ MI250 microarchitecture",
+        "keywords_overlap_score": 0.8846
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_graph-safe-support",
+        "title": "Graph-safe support for ROCm libraries",
+        "keywords_overlap_score": 0.7052
+      },
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_license",
+        "title": "ROCm license",
+        "keywords_overlap_score": 0.6703
+      },
+      {
+        "slug": "rocm-core/rocm-for-hpc/rocm_en_latest_how-to_rocm-for-hpc_index",
+        "title": "Using ROCm for HPC",
+        "keywords_overlap_score": 0.6703
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_env-variables",
+        "title": "ROCm environment variables",
+        "keywords_overlap_score": 0.6703
+      }
+    ],
+    "rocm-core/概念/rocm_en_latest_conceptual_gpu-arch_mi250": [
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-arch_mi100",
+        "title": "AMD Instinct™ MI100 microarchitecture",
+        "keywords_overlap_score": 0.8846
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-arch",
+        "title": "GPU architecture documentation",
+        "keywords_overlap_score": 0.6653
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_graph-safe-support",
+        "title": "Graph-safe support for ROCm libraries",
+        "keywords_overlap_score": 0.6269
+      },
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_license",
+        "title": "ROCm license",
+        "keywords_overlap_score": 0.599
+      },
+      {
+        "slug": "rocm-core/rocm-for-hpc/rocm_en_latest_how-to_rocm-for-hpc_index",
+        "title": "Using ROCm for HPC",
+        "keywords_overlap_score": 0.599
+      }
+    ],
+    "rocm-core/概念/rocm_en_latest_conceptual_gpu-arch_mi300": [
+      {
+        "slug": "rocm-core/gpu-性能/rocm_en_latest_how-to_gpu-performance_mi300x",
+        "title": "AMD Instinct MI300X performance guides",
+        "keywords_overlap_score": 0.6557
+      },
+      {
+        "slug": "rocm-core/总览/rocm_en_latest_index",
+        "title": "AMD ROCm documentation",
+        "keywords_overlap_score": 0.6017
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-arch_mi250",
+        "title": "AMD Instinct™ MI250 microarchitecture",
+        "keywords_overlap_score": 0.5768
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_graph-safe-support",
+        "title": "Graph-safe support for ROCm libraries",
+        "keywords_overlap_score": 0.5587
+      },
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_license",
+        "title": "ROCm license",
+        "keywords_overlap_score": 0.536
+      }
+    ],
+    "rocm-core/概念/rocm_en_latest_conceptual_gpu-isolation": [
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-clang",
+        "title": "Using hipify-clang",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_setting-cus",
+        "title": "Setting the number of compute units",
+        "keywords_overlap_score": 0.8387
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_build-rocm",
+        "title": "Build ROCm from source",
+        "keywords_overlap_score": 0.8246
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_compiler-topics",
+        "title": "Using compiler features",
+        "keywords_overlap_score": 0.8246
+      },
+      {
+        "slug": "rocm-core/版本发布/rocm_en_latest_release_versions",
+        "title": "ROCm release history",
+        "keywords_overlap_score": 0.8246
+      }
+    ],
+    "rocm-core/版本发布/rocm_en_latest_release_changelog": [
+      {
+        "slug": "install/参考/rocm-install-linux_projects_install-on-linux_en_latest_reference_system-requirements",
+        "title": "System requirements (Linux)",
+        "keywords_overlap_score": 0.6059
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_gpu-arch-specs",
+        "title": "GPU hardware specifications",
+        "keywords_overlap_score": 0.5886
+      },
+      {
+        "slug": "rocm-core/兼容性/rocm_en_latest_compatibility_compatibility-matrix",
+        "title": "Compatibility matrix",
+        "keywords_overlap_score": 0.5382
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_precision-support",
+        "title": "Data types and precision support",
+        "keywords_overlap_score": 0.5382
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-arch",
+        "title": "GPU architecture documentation",
+        "keywords_overlap_score": 0.409
+      }
+    ],
+    "rocm-core/版本发布/rocm_en_latest_release_versions": [
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_build-rocm",
+        "title": "Build ROCm from source",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_compiler-topics",
+        "title": "Using compiler features",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/贡献/rocm_en_latest_contribute_toolchain",
+        "title": "ROCm documentation toolchain",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-clang",
+        "title": "Using hipify-clang",
+        "keywords_overlap_score": 0.8246
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_setting-cus",
+        "title": "Setting the number of compute units",
+        "keywords_overlap_score": 0.8246
+      }
+    ],
+    "rocm-core/系统优化/rocm_en_latest_how-to_system-optimization_index": [
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_system-setup_index",
+        "title": "System setup for AI workloads on ROCm",
+        "keywords_overlap_score": 0.6771
+      },
+      {
+        "slug": "rocm-core/性能调优/rocm_en_latest_how-to_tuning-guides_mi300x_index",
+        "title": "AMD MI300X tuning guides",
+        "keywords_overlap_score": 0.6771
+      },
+      {
+        "slug": "rocm-core/gpu-性能/rocm_en_latest_how-to_gpu-performance_mi300x",
+        "title": "AMD Instinct MI300X performance guides",
+        "keywords_overlap_score": 0.6436
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_deploy-your-model",
+        "title": "Deploying your model",
+        "keywords_overlap_score": 0.6436
+      },
+      {
+        "slug": "rocm-core/rocm-for-ai/rocm_en_latest_how-to_rocm-for-ai_inference_index",
+        "title": "Use ROCm for AI inference",
+        "keywords_overlap_score": 0.6436
+      }
+    ],
+    "rocm-core/系统优化/rocm_en_latest_how-to_system-optimization_rdna3_5": [
+      {
+        "slug": "hip/参考/hip_projects_HIP_en_latest_reference_index",
+        "title": "Hip Projects Hip En Latest Reference Index",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_debugging",
+        "title": "Hip Projects Hip En Latest How To Hip Debugging",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hip/操作指南/hip_projects_HIP_en_latest_how-to_hip_install",
+        "title": "Hip Projects Hip En Latest How To Hip Install",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-perl",
+        "title": "Using hipify-perl",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_supported_apis",
+        "title": "Supported CUDA APIs",
+        "keywords_overlap_score": 1.0
+      }
+    ],
+    "rocm-core/贡献/rocm_en_latest_contribute_building": [
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-clang",
+        "title": "Using hipify-clang",
+        "keywords_overlap_score": 0.7761
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_setting-cus",
+        "title": "Setting the number of compute units",
+        "keywords_overlap_score": 0.7761
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_gpu-isolation",
+        "title": "GPU isolation techniques",
+        "keywords_overlap_score": 0.7761
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_build-rocm",
+        "title": "Build ROCm from source",
+        "keywords_overlap_score": 0.7581
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_compiler-topics",
+        "title": "Using compiler features",
+        "keywords_overlap_score": 0.7581
+      }
+    ],
+    "rocm-core/贡献/rocm_en_latest_contribute_contributing": [
+      {
+        "slug": "rocm-core/about/rocm_en_latest_about_license",
+        "title": "ROCm license",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_env-variables",
+        "title": "ROCm environment variables",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_Bar-Memory",
+        "title": "Troubleshoot BAR access limitation",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/参考/rocm_en_latest_reference_graph-safe-support",
+        "title": "Graph-safe support for ROCm libraries",
+        "keywords_overlap_score": 0.9231
+      },
+      {
+        "slug": "rocm-core/rocm-for-hpc/rocm_en_latest_how-to_rocm-for-hpc_index",
+        "title": "Using ROCm for HPC",
+        "keywords_overlap_score": 0.8684
+      }
+    ],
+    "rocm-core/贡献/rocm_en_latest_contribute_toolchain": [
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_build-rocm",
+        "title": "Build ROCm from source",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/概念/rocm_en_latest_conceptual_compiler-topics",
+        "title": "Using compiler features",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "rocm-core/版本发布/rocm_en_latest_release_versions",
+        "title": "ROCm release history",
+        "keywords_overlap_score": 1.0
+      },
+      {
+        "slug": "hipify/总览/hipify_projects_HIPIFY_en_latest_hipify-clang",
+        "title": "Using hipify-clang",
+        "keywords_overlap_score": 0.8246
+      },
+      {
+        "slug": "rocm-core/操作指南/rocm_en_latest_how-to_setting-cus",
+        "title": "Setting the number of compute units",
+        "keywords_overlap_score": 0.8246
+      }
+    ]
+  }
+}
