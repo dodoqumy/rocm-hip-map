@@ -380,6 +380,9 @@ arxiv_id: "{_opt_str(article.get("arxiv_id", ""))}"
     # 恢复常见的 HTML 实体
     for ent in ['lt', 'gt', 'amp', 'quot', 'apos', '#123', '#125']:
         body = body.replace(f'&amp;{ent};', f'&{ent};')
+    # 11. 转义尖括号为 HTML 实体
+    #    所有内容（论文 + 官方文档）均为 RST/PDF 转换产物，不含合法 HTML
+    body = body.replace('<', '&lt;').replace('>', '&gt;')
     
     # ── 来源行（文档 vs 论文）──
     stars = "\u2b50" * credibility
@@ -440,6 +443,16 @@ def main():
     by_dir = {}
 
     for md_file in sorted(CONTENT_RAW_EN.glob("*.md")):
+        # 跳过大文件和非阅读文档
+        fname_lower = md_file.name.lower()
+        SKIP_PATTERNS = ['changelog', 'release-notes', 'versions', 'compatibility-matrix']
+        SKIP_SIZE_KB = 500
+        if any(p in fname_lower for p in SKIP_PATTERNS):
+            print(f"  skip: {md_file.name} (non-reading doc)")
+            continue
+        if md_file.stat().st_size > SKIP_SIZE_KB * 1024:
+            print(f"  skip: {md_file.name} ({md_file.stat().st_size // 1024}KB)")
+            continue
         with open(md_file) as f:
             raw_content = f.read()
         
@@ -484,6 +497,23 @@ def main():
     print(f"\n📊 {generated} pages generated in {len(by_dir)} directories:")
     for d, c in sorted(by_dir.items()):
         print(f"   {d}: {c} pages")
+    
+    # 清理被跳过文件对应的旧 MDX
+    if not args.dry_run:
+        cleaned = 0
+        SKIP_PATTERNS = ['changelog', 'release-notes', 'versions', 'compatibility-matrix']
+        SKIP_SIZE_KB = 500
+        for mdx_file in sorted(WEBSITE_DOCS.rglob("*.mdx")):
+            mdx_name = mdx_file.stem
+            raw_file = CONTENT_RAW_EN / f"{mdx_name}.md"
+            if raw_file.exists():
+                fname_lower = raw_file.name.lower()
+                if any(p in fname_lower for p in SKIP_PATTERNS) or \
+                   raw_file.stat().st_size > SKIP_SIZE_KB * 1024:
+                    mdx_file.unlink()
+                    cleaned += 1
+        if cleaned:
+            print(f"   🧹 cleaned {cleaned} stale MDX from skipped docs")
 
     # ── 论文页生成 ──
     papers_dir = PROJECT_ROOT / "content" / "raw" / "papers"

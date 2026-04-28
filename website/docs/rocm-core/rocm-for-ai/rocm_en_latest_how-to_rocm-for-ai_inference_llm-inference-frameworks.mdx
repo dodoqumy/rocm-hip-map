@@ -88,7 +88,7 @@ vLLM on a single-accelerator system
            --security-opt seccomp=unconfined \
            --device /dev/kfd \
            --device /dev/dri \
-           -v <path/to/model>:/app/model \
+           -v &lt;path/to/model&gt;:/app/model \
            vllm-rocm \
            bash
 
@@ -124,7 +124,7 @@ vLLM on a multi-accelerator system
            --security-opt seccomp=unconfined \
            --device /dev/kfd \
            --device /dev/dri \
-           -v <path/to/model>:/app/model \
+           -v &lt;path/to/model&gt;:/app/model \
            vllm-rocm \
            bash
 

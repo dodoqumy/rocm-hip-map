@@ -71,11 +71,11 @@ For a complete reference on how to deal with dependencies in CMake, refer to the
 
 In short, CMake supports finding dependencies in two ways:
 
-- In Module mode, it consults a file [`Find<PackageName>.cmake`] which tries to find the component in typical install locations and layouts. CMake ships a few dozen such scripts, but users and projects may ship them as well.
+- In Module mode, it consults a file [`Find&lt;PackageName&gt;.cmake`] which tries to find the component in typical install locations and layouts. CMake ships a few dozen such scripts, but users and projects may ship them as well.
 
-- In Config mode, it locates a file named [`<packagename>-config.cmake`] or [`<PackageName>Config.cmake`] which describes the installed component in all regards needed to consume it.
+- In Config mode, it locates a file named [`&lt;packagename&gt;-config.cmake`] or [`&lt;PackageName&gt;Config.cmake`] which describes the installed component in all regards needed to consume it.
 
-ROCm predominantly relies on Config mode, one notable exception being the Module driving the compilation of HIP programs on NVIDIA runtimes. As such, when dependencies are not found in standard system locations, one either has to instruct CMake to search for package config files in additional folders using the [`CMAKE_PREFIX_PATH`] variable (a semi-colon separated list of file system paths), or using [`<PackageName>_ROOT`] variable on a project-specific basis.
+ROCm predominantly relies on Config mode, one notable exception being the Module driving the compilation of HIP programs on NVIDIA runtimes. As such, when dependencies are not found in standard system locations, one either has to instruct CMake to search for package config files in additional folders using the [`CMAKE_PREFIX_PATH`] variable (a semi-colon separated list of file system paths), or using [`&lt;PackageName&gt;_ROOT`] variable on a project-specific basis.
 
 There are nearly a dozen ways to set these variables. One may be more convenient over the other depending on your workflow. Conceptually the simplest is adding it to your CMake configuration command on the command line via [`-D`]` `[`CMAKE_PREFIX_PATH=....`] . AMD packaged ROCm installs can typically be added to the config file search paths such as:
 
@@ -139,7 +139,7 @@ Consuming the HIP API without compiling single-source GPU device code can be don
     add_executable(MyApp ...)
     target_link_libraries(MyApp PRIVATE hip::host)
 
-When mixing such [`CXX`] sources with [`HIP`] sources holding device-code, link only to hip::host. If HIP sources don't have .hip as their extension, use set_source_files_properties(\<hip_sources\>... PROPERTIES LANGUAGE HIP) on them. Linking to hip::host will set all the necessary flags for the [`CXX`] sources while [`HIP`] sources inherit all flags from the built-in language support. Having HIP sources in a target will turn the [[`LINKER_LANGUAGE`]](https://cmake.org/cmake/help/latest/prop_tgt/LINKER_LANGUAGE.html) into [`HIP`].
+When mixing such [`CXX`] sources with [`HIP`] sources holding device-code, link only to hip::host. If HIP sources don't have .hip as their extension, use set_source_files_properties(\&lt;hip_sources\&gt;... PROPERTIES LANGUAGE HIP) on them. Linking to hip::host will set all the necessary flags for the [`CXX`] sources while [`HIP`] sources inherit all flags from the built-in language support. Having HIP sources in a target will turn the [[`LINKER_LANGUAGE`]](https://cmake.org/cmake/help/latest/prop_tgt/LINKER_LANGUAGE.html) into [`HIP`].
 
 ### Compiling device code in C++ language mode[\#](#compiling-device-code-in-c-language-mode "Link to this heading")
 

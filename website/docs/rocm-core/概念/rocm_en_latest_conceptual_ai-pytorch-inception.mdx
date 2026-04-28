@@ -1012,7 +1012,7 @@ To prepare the data for training, follow these steps:
     ::: highlight
         def custom_standardization(input_data):
         lowercase = tf.strings.lower(input_data)
-        stripped_html = tf.strings.regex_replace(lowercase, '<br/>', ' ')
+        stripped_html = tf.strings.regex_replace(lowercase, '&lt;br/&gt;', ' ')
         return tf.strings.regex_replace(stripped_html,                                 '[%s]' % re.escape(string.punctuation),'')
 
 2.  Create a [`TextVectorization`] layer. Use this layer to standardize, tokenize, and vectorize our data. Set the output_mode to int to create unique integer indices for each token. Note that we are using the default split function and the custom standardization function you defined above. You will also define some constants for the model, like an explicit maximum sequence_length, which will cause the layer to pad or truncate sequences to exactly sequence_length values.
@@ -1051,8 +1051,8 @@ To prepare the data for training, follow these steps:
 5.  As you can see above, each token has been replaced by an integer. Look up the token (string) that each integer corresponds to by calling get_vocabulary() on the layer.
 
     ::: highlight
-        print("1287 ---> ",vectorize_layer.get_vocabulary()[1287])
-        print(" 313 ---> ",vectorize_layer.get_vocabulary()[313])
+        print("1287 ---&gt; ",vectorize_layer.get_vocabulary()[1287])
+        print(" 313 ---&gt; ",vectorize_layer.get_vocabulary()[313])
         print('Vocabulary size: &#123;&#125;'.format(len(vectorize_layer.get_vocabulary())))
 
 6.  You are nearly ready to train your model. As a final preprocessing step, apply the [`TextVectorization`] layer we created earlier to train, validate, and test the dataset.

@@ -68,7 +68,7 @@ x, y = 0, 0 Work Group Work Group x, y = m, 0 Work Group x, y = m, n x, y = 0, n
 
 ## The body extraction
 
-Extracting the body of the program is a small, but quite important task, serving as a preparatory stage for further decompilation. In addition, here we parse config section with work group size, num- ber of index range dimensions, and other kernel properties. An example of the structure of the pro- gram body is shown in Listing 1. Listing 1. An example of the structure of the program body .kernel [kernel name] .config dims xyz .cws 8, 8, 2 [other kernel configuration] .text [program body] s_endpgm <- end of program
+Extracting the body of the program is a small, but quite important task, serving as a preparatory stage for further decompilation. In addition, here we parse config section with work group size, num- ber of index range dimensions, and other kernel properties. An example of the structure of the pro- gram body is shown in Listing 1. Listing 1. An example of the structure of the program body .kernel [kernel name] .config dims xyz .cws 8, 8, 2 [other kernel configuration] .text [program body] s_endpgm &lt;- end of program
 
 ## Statement of the problem
 

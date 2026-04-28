@@ -143,9 +143,9 @@ For more information, refer to the [Clang manual for compiling CUDA](https://llv
 
 For some hipification automation (starting from Clang 8.0.0), you can provide a [Compilation Database in JSON format](https://clang.llvm.org/docs/JSONCompilationDatabase.html) in the [`compile_commands.json`] file:
 
-    -p <folder containing compile_commands.json>
+    -p &lt;folder containing compile_commands.json&gt;
     - or -
-    -p=<folder containing compile_commands.json>
+    -p=&lt;folder containing compile_commands.json&gt;
 
 You can provide the compilation database in the [`compile_commands.json`] file or generate using Clang based on CMake. You can specify multiple source files as well.
 
@@ -159,8 +159,8 @@ Here's an [example](https://github.com/ROCm/HIPIFY/blob/amd-staging/tests/unit_t
 
     [
       &#123;
-        "directory": "<test dir>",
-        "command": "hipify-clang \"<CUDA dir>\" -I./include -v",
+        "directory": "&lt;test dir&gt;",
+        "command": "hipify-clang \"&lt;CUDA dir&gt;\" -I./include -v",
         "file": "cd_intro.cu"
       &#125;
     ]

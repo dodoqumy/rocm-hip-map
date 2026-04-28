@@ -120,7 +120,6 @@ const sidebars: SidebarsConfig = {
           collapsed: true,
           items: [
             'rocm-core/about/rocm_en_latest_about_license',
-            'rocm-core/about/rocm_en_latest_about_release-notes',
           ],
         },
         {
@@ -167,7 +166,6 @@ const sidebars: SidebarsConfig = {
           collapsible: true,
           collapsed: true,
           items: [
-            'rocm-core/兼容性/rocm_en_latest_compatibility_compatibility-matrix',
             'rocm-core/兼容性/rocm_en_latest_compatibility_ml-compatibility_dgl',
             'rocm-core/兼容性/rocm_en_latest_compatibility_ml-compatibility_jax',
             'rocm-core/兼容性/rocm_en_latest_compatibility_ml-compatibility_pytorch',
@@ -183,7 +181,6 @@ const sidebars: SidebarsConfig = {
             'rocm-core/参考/rocm_en_latest_reference_api-libraries',
             'rocm-core/参考/rocm_en_latest_reference_env-variables',
             'rocm-core/参考/rocm_en_latest_reference_gpu-arch-specs',
-            'rocm-core/参考/rocm_en_latest_reference_gpu-atomics-operation',
             'rocm-core/参考/rocm_en_latest_reference_graph-safe-support',
             'rocm-core/参考/rocm_en_latest_reference_precision-support',
             'rocm-core/参考/rocm_en_latest_reference_rocm-tools',
@@ -246,16 +243,6 @@ const sidebars: SidebarsConfig = {
             'rocm-core/概念/rocm_en_latest_conceptual_gpu-arch_mi250',
             'rocm-core/概念/rocm_en_latest_conceptual_gpu-arch_mi300',
             'rocm-core/概念/rocm_en_latest_conceptual_gpu-isolation',
-          ],
-        },
-        {
-          type: 'category',
-          label: '版本发布',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'rocm-core/版本发布/rocm_en_latest_release_changelog',
-            'rocm-core/版本发布/rocm_en_latest_release_versions',
           ],
         },
         {

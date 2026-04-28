@@ -63,6 +63,23 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
+      ({
+        hashed: true,
+        language: ['en', 'zh'],
+        indexDocs: true,
+        indexPages: false,
+        indexBlog: false,
+        highlightSearchTermsOnTargetPage: true,
+        searchResultLimits: 8,
+        searchResultContextMaxLength: 80,
+      }),
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
