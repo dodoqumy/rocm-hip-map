@@ -1,0 +1,55 @@
+name: Verify Content
+
+on:
+  schedule:
+    # 每天 UTC 02:00（北京时间 10:00），在 sync 之后
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install deps
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq pandoc
+          pip install requests
+
+      # ──────────────────────────────────────────────
+      # 1. 一致性 + 翻译质量校验
+      # ──────────────────────────────────────────────
+      - name: Verify all articles
+        env:
+          TRANSLATE_API_KEY: ${{ secrets.TRANSLATE_API_KEY }}
+          TRANSLATE_PROVIDER: opencode
+          TRANSLATE_MODEL: deepseek-v4-pro
+          TRANSLATE_BASE_URL: https://opencode.ai/zen/go/v1
+        run: python3 scripts/verify.py --stamp
+
+      # ──────────────────────────────────────────────
+      # 2. 提交校验报告
+      # ──────────────────────────────────────────────
+      - name: Commit verification results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/verification/ data/articles.json || true
+
+          if git diff --cached --quiet; then
+            echo "No verification changes"
+          else
+            echo "Committing verification results..."
+            git commit -m "auto: daily verification $(date +%Y-%m-%d)"
+            git push
+          fi
