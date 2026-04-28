@@ -1,0 +1,217 @@
+# ROCm/HIP 专业术语中英对照表
+# 用于：AI 翻译管道术语一致性 + 前端 GlossaryTooltip 悬浮提示
+
+terms:
+  # ── 平台 & 架构 ──
+  - en: "ROCm"
+    zh: "ROCm（Radeon 开放计算平台）"
+    context: "AMD 的开源 GPU 计算软件栈，对标 NVIDIA CUDA 生态"
+    keep_original: true
+
+  - en: "HIP"
+    zh: "HIP（异构接口可移植性）"
+    context: "AMD 的 CUDA 兼容编程接口，允许同一份代码在 AMD 和 NVIDIA GPU 上运行"
+    keep_original: true
+
+  - en: "CUDA"
+    zh: "CUDA（统一计算设备架构）"
+    context: "NVIDIA 的并行计算平台和编程模型"
+    keep_original: true
+
+  - en: "CDNA"
+    zh: "CDNA（计算 DNA 架构）"
+    context: "AMD 数据中心 GPU 架构系列（CDNA1/MI100, CDNA2/MI200, CDNA3/MI300）"
+    keep_original: true
+
+  - en: "RDNA"
+    zh: "RDNA（Radeon DNA 架构）"
+    context: "AMD 消费级/游戏 GPU 架构系列（RDNA2/RX6000, RDNA3/RX7000）"
+    keep_original: true
+
+  - en: "Infinity Fabric"
+    zh: "Infinity Fabric（AMD 高速互联总线）"
+    context: "AMD 芯片互联技术，用于多 GPU 间高带宽通信"
+    keep_original: true
+
+  # ── GPU 硬件 ──
+  - en: "Instinct"
+    zh: "Instinct（AMD 数据中心 GPU 系列）"
+    context: "AMD 面向 HPC/AI 的 GPU 产品线"
+    keep_original: true
+
+  - en: "Radeon"
+    zh: "Radeon（AMD 消费级 GPU 系列）"
+    context: "AMD 面向消费级和图形工作负载的 GPU 产品线"
+    keep_original: true
+
+  - en: "Ryzen"
+    zh: "Ryzen（锐龙）"
+    context: "AMD 消费级 CPU，部分型号集成 RDNA GPU（APU）"
+    keep_original: true
+
+  # ── GPU 编程概念 ──
+  - en: "Kernel"
+    zh: "内核函数 (Kernel)"
+    context: "在 GPU 上并行执行的函数，对应 CUDA 中的 __global__ 函数"
+
+  - en: "Wavefront"
+    zh: "波前 (Wavefront)"
+    context: "AMD GPU 调度基本单元（通常 64 个线程），等同于 NVIDIA 的 Warp"
+
+  - en: "Warp"
+    zh: "线程束 (Warp)"
+    context: "NVIDIA GPU 调度基本单元（通常 32 个线程），等同于 AMD 的 Wavefront"
+
+  - en: "Workgroup"
+    zh: "工作组 (Workgroup)"
+    context: "一组 Wavefront 的集合，等同于 CUDA 中的 Thread Block"
+
+  - en: "Thread Block"
+    zh: "线程块 (Thread Block)"
+    context: "CUDA 编程模型中一组线程的集合"
+
+  - en: "Compute Unit"
+    zh: "计算单元 (CU)"
+    context: "GPU 的基本计算核心组，包含多个 SIMD 单元"
+
+  - en: "Shared Memory"
+    zh: "共享内存 (Shared Memory / LDS)"
+    context: "GPU 上 Workgroup 内线程共享的高速缓存"
+
+  - en: "Global Memory"
+    zh: "全局内存 (Global Memory)"
+    context: "GPU 上所有线程可访问的主内存（通常是 HBM/GDDR）"
+
+  - en: "Register"
+    zh: "寄存器 (Register)"
+    context: "GPU 上最快的存储空间，每个线程私有"
+
+  - en: "Occupancy"
+    zh: "占用率 (Occupancy)"
+    context: "GPU 上活跃 Wavefront 与理论最大值的比率，影响隐藏延迟的能力"
+
+  # ── ROCm 库 ──
+  - en: "MIOpen"
+    zh: "MIOpen（AMD 深度学习基元库）"
+    context: "AMD 的深度学习算子库，对标 NVIDIA cuDNN"
+    keep_original: true
+
+  - en: "rocBLAS"
+    zh: "rocBLAS（ROCm 基础线性代数子程序库）"
+    context: "BLAS 接口的 ROCm 实现，对标 NVIDIA cuBLAS"
+    keep_original: true
+
+  - en: "rocSOLVER"
+    zh: "rocSOLVER（ROCm 求解器库）"
+    context: "基于 rocBLAS 的 LAPACK 子集实现"
+    keep_original: true
+
+  - en: "rocFFT"
+    zh: "rocFFT（ROCm 快速傅里叶变换库）"
+    context: "FFT 的 ROCm 实现，对标 NVIDIA cuFFT"
+    keep_original: true
+
+  - en: "rocRAND"
+    zh: "rocRAND（ROCm 随机数生成库）"
+    context: "ROCm 随机数生成器，对标 NVIDIA cuRAND"
+    keep_original: true
+
+  - en: "rocThrust"
+    zh: "rocThrust（ROCm 并行算法库）"
+    context: "C++ 模板化并行算法库，对标 NVIDIA Thrust"
+    keep_original: true
+
+  - en: "RCCL"
+    zh: "RCCL（ROCm 集合通信库）"
+    context: "多 GPU 集合通信库，对标 NVIDIA NCCL"
+    keep_original: true
+
+  - en: "hipBLAS"
+    zh: "hipBLAS（HIP 基础线性代数库）"
+    context: "rocBLAS 的 HIP 封装"
+    keep_original: true
+
+  - en: "HIPIFY"
+    zh: "HIPIFY（CUDA→HIP 自动转换工具）"
+    context: "将 CUDA 代码自动转换为 HIP 代码的工具"
+    keep_original: true
+
+  # ── 运行时 & 驱动 ──
+  - en: "ROCclr"
+    zh: "ROCclr（ROCm 计算语言运行时）"
+    context: "ROCm 通用计算运行时，HIP/OpenCL 的后端"
+    keep_original: true
+
+  - en: "HSA"
+    zh: "HSA（异构系统架构）"
+    context: "AMD 主导的异构计算标准，ROCm 的底层运行时"
+    keep_original: true
+
+  - en: "amdgpu"
+    zh: "amdgpu（AMD GPU 内核驱动）"
+    context: "Linux 内核中 AMD GPU 的开源驱动模块"
+    keep_original: true
+
+  - en: "HCC"
+    zh: "HCC（异构计算编译器）"
+    context: "ROCm 旧版编译器，已被 hip-clang 取代"
+    keep_original: true
+
+  - en: "hip-clang"
+    zh: "hip-clang（HIP Clang 编译器）"
+    context: "基于 LLVM/Clang 的 HIP 编译器"
+    keep_original: true
+
+  # ── 概念 & 功能 ──
+  - en: "Compatibility Matrix"
+    zh: "兼容性矩阵"
+    context: "OS / GPU / ROCm / 框架之间的版本兼容对照表"
+
+  - en: "Environment Variables"
+    zh: "环境变量"
+    context: "运行时可配置的系统级和库级参数"
+
+  - en: "Bar Access"
+    zh: "BAR 访问"
+    context: "PCIe Base Address Register，CPU 直接访问 GPU 内存的前提"
+    keep_original: true
+
+  - en: "WMMA"
+    zh: "WMMA（波前矩阵乘加）"
+    context: "AMD GPU 的矩阵运算硬件指令，对标 NVIDIA Tensor Core"
+    keep_original: true
+
+  - en: "Tensor Core"
+    zh: "Tensor Core（张量核心）"
+    context: "NVIDIA GPU 上专门加速矩阵运算的硬件单元"
+    keep_original: true
+
+  - en: "Matrix Core"
+    zh: "Matrix Core（矩阵核心）"
+    context: "AMD CDNA 架构上专门加速矩阵运算的硬件单元"
+    keep_original: true
+
+  - en: "GRBM"
+    zh: "GRBM（图形寄存器总线管理器）"
+    context: "AMD GPU 硬件管理器"
+
+  - en: "SDMA"
+    zh: "SDMA（系统 DMA 引擎）"
+    context: "GPU 上的异步数据搬运引擎"
+
+  - en: "GDS"
+    zh: "GDS（GPU Direct Storage）"
+    context: "GPU 直接访问 NVMe 存储的技术"
+
+  # ── 错误码 ──
+  - en: "hipErrorNoBinaryForGpu"
+    zh: "hipErrorNoBinaryForGpu（无匹配 GPU 二进制）"
+    context: "当前 GPU 架构未在编译目标中，需重新编译"
+
+  - en: "HSA_STATUS_ERROR"
+    zh: "HSA_STATUS_ERROR（HSA 状态错误）"
+    context: "HSA 运行时状态出错，常见于驱动版本不匹配"
+
+  - en: "hipErrorOutOfMemory"
+    zh: "hipErrorOutOfMemory（内存不足）"
+    context: "GPU 显存分配失败"

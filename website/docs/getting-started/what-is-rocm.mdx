@@ -20,24 +20,27 @@ difficulty: beginner
 ---
 
 import ArticleHeader from '@site/src/components/ArticleHeader';
+import BilingualViewer from '@site/src/components/BilingualViewer';
 
 <ArticleHeader />
 
-# What is ROCm?
+<BilingualViewer
+  sourceUrl="https://rocm.docs.amd.com/en/latest/what-is-rocm.html"
+  enContent={`<div>
+<p>ROCm is an open-source software platform optimized to extract HPC and AI workload performance from AMD Instinct GPUs and AMD Radeon GPUs while maintaining compatibility with industry software frameworks.</p>
+<p>ROCm supports multiple programming languages and programming interfaces such as <strong>HIP</strong>, <strong>OpenCL</strong>, and <strong>OpenMP</strong>.</p>
+<p>If you&#39;re using AMD Radeon GPUs or Ryzen APUs for graphics workloads, see the <a href="https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/index.html">ROCm on Radeon and Ryzen</a> documentation.</p>
+</div>`}
+  zhContent={`<div>
+<p>ROCm 是一个开源软件平台，针对 AMD Instinct GPU 和 AMD Radeon GPU 进行了优化，可在保持与行业软件框架兼容性的同时，充分发挥 HPC 和 AI 工作负载的性能。</p>
+<p>ROCm 支持多种编程语言和编程接口，如 <strong>HIP</strong>（异构接口可移植性）、<strong>OpenCL</strong>、<strong>OpenMP</strong>。</p>
+<p>如果您使用 AMD Radeon GPU 或 Ryzen APU 进行图形工作负载，请参阅 <a href="https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/index.html">ROCm on Radeon and Ryzen</a> 文档。</p>
+</div>`}
+/>
 
-> 📎 **原文链接：** [https://rocm.docs.amd.com/en/latest/what-is-rocm.html](https://rocm.docs.amd.com/en/latest/what-is-rocm.html)
+---
 
-ROCm is an open-source software platform optimized to extract HPC and AI workload performance from AMD Instinct GPUs and AMD Radeon GPUs while maintaining compatibility with industry software frameworks.
-
-ROCm supports multiple programming languages and programming interfaces such as HIP, OpenCL, and OpenMP.
-
-If you're using AMD Radeon GPUs or Ryzen APUs for graphics workloads, see the [ROCm on Radeon and Ryzen](https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/index.html) documentation.
-
-:::note
-The [AMD ROCm Programming Guide](https://rocm-handbook.amd.com/projects/amd-rocm-programming-guide/en/latest/) presents key ROCm concepts in a structured, book-style format — a helpful starting point for those new to GPU programming.
-:::
-
-## ROCm Documentation Categories
+## 📚 ROCm Documentation Categories
 
 ROCm documentation is organized into the following categories:
 
