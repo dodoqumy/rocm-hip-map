@@ -9,8 +9,12 @@
   - 多后端支持（通过 TRANSLATE_PROVIDER 环境变量切换）
 
 配置（环境变量）：
-  TRANSLATE_PROVIDER  deepseek | openai | deepl
+  TRANSLATE_PROVIDER  deepseek | opencode | openai | deepl
   TRANSLATE_API_KEY   API 密钥
+  TRANSLATE_MODEL     模型名（可选，deepseek 默认 deepseek-chat，
+                      opencode 默认 deepseek-v4-pro）
+  TRANSLATE_BASE_URL  自定义 API 端点（可选，opencode 需设置
+                      为 https://opencode.ai/zen/go/v1）
 
 用法：
   python3 scripts/translate.py                     # 翻译所有
@@ -116,9 +120,58 @@ def translate_openai(text: str, api_key: str, model: str = "gpt-4o-mini") -> Opt
         return None
 
 
+def translate_deepseek(text: str, api_key: str, model: str = "deepseek-chat",
+                      base_url: str = "https://api.deepseek.com/v1") -> Optional[str]:
+    """DeepSeek / OpenAI-compatible 翻译（支持自定义 base_url）。"""
+    try:
+        payload = json.dumps({
+            "model": model,
+            "messages": [
+                {"role": "system", "content": (
+                    "You are a technical translator specialized in GPU/ROCm/HIP documentation. "
+                    "Translate the following English text to Simplified Chinese (zh-CN). "
+                    "Rules:\n"
+                    "1. Preserve ALL markdown formatting, code blocks, inline code, and links unchanged.\n"
+                    "2. Keep technical terms like ROCm, HIP, GPU, CUDA, AMD, PyTorch, TensorFlow in their original English form.\n"
+                    "3. Keep API names, function names, file paths, commands unchanged.\n"
+                    "4. Output ONLY the translation — no explanations, no notes, no preamble.\n"
+                    "5. Use technical Chinese that a GPU developer would expect."
+                )},
+                {"role": "user", "content": text},
+            ],
+            "temperature": 0.1,
+            "max_tokens": 4096,
+        })
+        result = subprocess.run(
+            ["curl", "-s", "--max-time", "60",
+             f"{base_url}/chat/completions",
+             "-H", f"Authorization: Bearer {api_key}",
+             "-H", "Content-Type: application/json",
+             "-d", payload],
+            capture_output=True, text=True, timeout=65,
+        )
+        data = json.loads(result.stdout)
+        content = data.get("choices", [{}])[0].get("message", {}).get("content")
+        if not content and "error" in data:
+            print(f"  ⚠ DeepSeek API error: {data['error']}")
+        return content
+    except Exception as e:
+        print(f"  ⚠ DeepSeek: {e}")
+        return None
+
+
 def translate(text: str, glossary: dict) -> Optional[str]:
-    """统一翻译入口，自动选择后端。"""
-    provider = os.environ.get("TRANSLATE_PROVIDER", "openai")
+    """统一翻译入口，自动选择后端。
+
+    环境变量：
+      TRANSLATE_PROVIDER   deepseek | openai | opencode | deepl
+      TRANSLATE_API_KEY    API 密钥
+      TRANSLATE_MODEL      模型名（deepseek 默认 deepseek-chat，
+                           opencode 默认 deepseek-v4-pro）
+      TRANSLATE_BASE_URL   自定义端点（opencode 需要设置为
+                           https://opencode.ai/zen/go/v1）
+    """
+    provider = os.environ.get("TRANSLATE_PROVIDER", "deepseek")
     api_key = os.environ.get("TRANSLATE_API_KEY", "")
 
     if not api_key:
@@ -131,7 +184,15 @@ def translate(text: str, glossary: dict) -> Optional[str]:
     if provider == "deepl":
         return translate_deepl(text, api_key)
     elif provider == "openai":
-        return translate_openai(text, api_key)
+        model = os.environ.get("TRANSLATE_MODEL", "gpt-4o-mini")
+        return translate_openai(text, api_key, model)
+    elif provider in ("deepseek", "opencode"):
+        model = os.environ.get("TRANSLATE_MODEL",
+            "deepseek-chat" if provider == "deepseek" else "deepseek-v4-pro")
+        base_url = os.environ.get("TRANSLATE_BASE_URL",
+            "https://api.deepseek.com/v1" if provider == "deepseek"
+            else "https://opencode.ai/zen/go/v1")
+        return translate_deepseek(text, api_key, model=model, base_url=base_url)
     else:
         print(f"  ⚠ Unknown provider: {provider}")
         return None
