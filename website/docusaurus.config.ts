@@ -25,7 +25,7 @@ const config: Config = {
   // i18n 中英双语配置
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'zh-Hans'],
+    locales: ['en'],
     localeConfigs: {
       en: {
         htmlLang: 'en-US',
