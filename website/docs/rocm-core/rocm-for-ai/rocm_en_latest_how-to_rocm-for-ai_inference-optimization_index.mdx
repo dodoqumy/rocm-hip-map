@@ -30,6 +30,58 @@ import ArticleHeader from "@site/src/components/ArticleHeader";
 
 ---
 
-{/* BilingualViewer 待修复后重新启用 */}
-{/* import BilingualViewer from "@site/src/components/BilingualViewer"; */}
-{/* <BilingualViewer enPath="/data/raw/english/" zhPath="/data/translated/zh/" /> */}
+
+
+- (../../../index.html)&#123;.nav-link aria-label="Home"&#125;
+- [Use ROCm for AI](../index.html)
+- Use ROCm\...
+
+# Use ROCm for AI inference optimization
+
+# Use ROCm for AI inference optimization[\#](#use-rocm-for-ai-inference-optimization "Link to this heading")
+
+[ !(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==) ] 2026-01-23
+
+[ !(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=) ] 3 min read time
+
+Applies to Linux
+
+AI inference optimization is the process of improving the performance of machine learning models and speeding up the inference process. It includes:
+
+- **Quantization**: This involves reducing the precision of model weights and activations while maintaining acceptable accuracy levels. Reduced precision improves inference efficiency because lower precision data requires less storage and better utilizes the hardware's computation power.
+
+- **Kernel optimization**: This technique involves optimizing computation kernels to exploit the underlying hardware capabilities. For example, the kernels can be optimized to use multiple GPU cores or utilize specialized hardware like tensor cores to accelerate the computations.
+
+- **Libraries**: Libraries such as Flash Attention, xFormers, and PyTorch TunableOp are used to accelerate deep learning models and improve the performance of inference workloads.
+
+- **Hardware acceleration**: Hardware acceleration techniques, like GPUs for AI inference, can significantly improve performance due to their parallel processing capabilities.
+
+- **Pruning**: This involves removing unnecessary connections, layers, or weights from a pre-trained model while maintaining acceptable accuracy levels, resulting in a smaller model that requires fewer computational resources to run inference.
+
+Utilizing these optimization techniques with the ROCm™ software platform can significantly reduce inference time, improve performance, and reduce the cost of your AI applications.
+
+Throughout the following topics, this guide discusses optimization techniques for inference workloads.
+
+- [[Model quantization]](model-quantization.html)
+
+- [[Model acceleration libraries]](model-acceleration-libraries.html)
+
+- [[Optimizing with Composable Kernel]](optimizing-with-composable-kernel.html)
+
+- [[Optimizing Triton kernels]](optimizing-triton-kernel.html)
+
+- [[Profiling and debugging]](profiling-and-debugging.html)
+
+- [[Workload tuning]](workload.html)
+
+(../inference/deploy-your-model.html "previous page")
+
+previous
+
+Deploying your model
+
+(model-quantization.html "next page")
+
+next
+
+Model quantization techniques

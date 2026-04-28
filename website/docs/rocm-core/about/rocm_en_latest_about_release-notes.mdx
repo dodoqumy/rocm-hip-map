@@ -30,6 +30,88 @@ import ArticleHeader from "@site/src/components/ArticleHeader";
 
 ---
 
-{/* BilingualViewer 待修复后重新启用 */}
-{/* import BilingualViewer from "@site/src/components/BilingualViewer"; */}
-{/* <BilingualViewer enPath="/data/raw/english/" zhPath="/data/translated/zh/" /> */}
+
+
+- (../index.html)&#123;.nav-link aria-label="Home"&#125;
+- ROCm 7.2.2\...
+
+# ROCm 7.2.2 release notes
+
+## Contents
+
+- [Release highlights](#release-highlights)
+  - [ROCTracer failure to report kernel operations is fixed](#roctracer-failure-to-report-kernel-operations-is-fixed)
+  - [User space, driver, and firmware dependent changes](#user-space-driver-and-firmware-dependent-changes)
+  - [ROCm documentation updates](#rocm-documentation-updates)
+- [ROCm 7.2.1 release notes](#rocm-7-2-1-release-notes)
+  - [Release highlights](#id1)
+    - [Supported hardware, operating system, and virtualization changes](#supported-hardware-operating-system-and-virtualization-changes)
+      - [Virtualization support](#virtualization-support)
+    - [User space, driver, and firmware dependent changes](#id2)
+    - [hipBLASLt updates](#hipblaslt-updates)
+    - [Deep learning and AI framework updates](#deep-learning-and-ai-framework-updates)
+      - [JAX](#jax)
+  - [ROCm Offline Installer Creator discontinuation](#rocm-offline-installer-creator-discontinuation)
+    - [ROCm documentation updates](#id3)
+  - [ROCm components](#rocm-components)
+  - [Detailed component changes](#detailed-component-changes)
+    - [**AMD SMI** (26.2.2)](#amd-smi-26-2-2)
+      - [Added](#added)
+      - [Resolved issues](#resolved-issues)
+    - [**HIP** (7.2.1)](#hip-7-2-1)
+      - [Resolved issues](#id4)
+      - [Changed](#changed)
+    - [**hipBLASLt** (1.2.2)](#hipblaslt-1-2-2)
+      - [Changed](#id5)
+    - [**rocDecode** (1.7.0)](#rocdecode-1-7-0)
+      - [Upcoming changes](#upcoming-changes)
+    - [**rocJPEG** (1.4.0)](#rocjpeg-1-4-0)
+      - [Changed](#id6)
+      - [Upcoming changes](#id7)
+    - [**rocSHMEM** (3.2.0)](#rocshmem-3-2-0)
+      - [Added](#id8)
+      - [Resolved issues](#id9)
+      - [Known issues](#known-issues)
+    - [**RPP** (2.2.1)](#rpp-2-2-1)
+      - [Added](#id10)
+      - [Optimized](#optimized)
+  - [ROCm known issues](#rocm-known-issues)
+    - [hipBLASLt performance regression for specific GEMM configurations](#hipblaslt-performance-regression-for-specific-gemm-configurations)
+      - [AMD Instinct MI300X and MI325X GPUs](#amd-instinct-mi300x-and-mi325x-gpus)
+      - [AMD Instinct MI350 Series GPUs](#amd-instinct-mi350-series-gpus)
+  - [Longer runtime for hipBLASLt GEMM operations on Instinct MI300X GPUs in partitioned mode](#longer-runtime-for-hipblaslt-gemm-operations-on-instinct-mi300x-gpus-in-partitioned-mode)
+  - [ROCTracer might fail to report kernel operations](#roctracer-might-fail-to-report-kernel-operations)
+    - [Longer runtime for hipBLASLt GEMM operations on Instinct MI300X GPUs in partitioned mode](#id11)
+    - [ROCTracer might fail to report kernel operations](#id12)
+  - [ROCm resolved issues](#rocm-resolved-issues)
+    - [Increased runtime latency of the HIP hipStreamCreate API](#increased-runtime-latency-of-the-hip-hipstreamcreate-api)
+  - [ROCm upcoming changes](#rocm-upcoming-changes)
+    - [ROCTracer, ROCProfiler, rocprof, and rocprofv2 deprecation](#roctracer-rocprofiler-rocprof-and-rocprofv2-deprecation)
+    - [ROCm SMI deprecation](#rocm-smi-deprecation)
+    - [Changes to ROCm Object Tooling](#changes-to-rocm-object-tooling)
+
+# ROCm 7.2.2 release notes[\#](#rocm-7-2-2-release-notes "Link to this heading")
+
+[ !(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==) ] 2026-04-14
+
+[ !(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=) ] 19 min read time
+
+Applies to Linux
+
+ROCm 7.2.2 is a quality release that resolves the issue listed in the Release highlights.
+
+## Release highlights[\#](#release-highlights "Link to this heading")
+
+The following are the notable changes in ROCm 7.2.2.
+
+### ROCTracer failure to report kernel operations is fixed[\#](#roctracer-failure-to-report-kernel-operations-is-fixed "Link to this heading")
+
+In ROCm 7.2.1, applications using [ROCTracer](https://rocm.docs.amd.com/projects/roctracer/en/latest/index.html) failed to receive some or all kernel operation events due to a ROCTracer reporting failure. This issue has been resolved, and the fix has been applied to ROCTracer.
+
+### User space, driver, and firmware dependent changes[\#](#user-space-driver-and-firmware-dependent-changes "Link to this heading")
+
+The software for AMD Data Center GPU products requires maintaining a hardware and software stack with interdependencies among the GPU and baseboard firmware, AMD GPU drivers, and the ROCm user space software. While AMD publishes drivers and ROCm user space components, your server or infrastructure provider publishes the GPU and baseboard firmware by bundling AMD firmware releases via an AMD Platform Level Data Model (PLDM) bundle, which includes the Integrated Firmware Image (IFWI).
+
+GPU and baseboard firmware versioning might differ across GPU families.
+
+ROCm Version

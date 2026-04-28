@@ -30,6 +30,71 @@ import ArticleHeader from "@site/src/components/ArticleHeader";
 
 ---
 
-{/* BilingualViewer 待修复后重新启用 */}
-{/* import BilingualViewer from "@site/src/components/BilingualViewer"; */}
-{/* <BilingualViewer enPath="/data/raw/english/" zhPath="/data/translated/zh/" /> */}
+
+
+- (../index.html)&#123;.nav-link aria-label="Home"&#125;
+- [Using hipify-perl]
+
+# Using hipify-perl
+
+## Contents
+
+- [Example](#example)
+
+# Using hipify-perl[\#](#using-hipify-perl "Link to this heading")
+
+[`hipify-perl`] is perl-based script that heavily uses regular expressions, that is automatically generated from [`hipify-clang`].
+
+**Advantages:**
+
+- Ease of use
+
+- No checks for input source NVIDIA CUDA code for correctness required
+
+- No dependency on third party tools, including CUDA
+
+**Disadvantages:**
+
+- Inability or difficulty in implementing the following constructs:
+
+  - Macros expansion
+
+  - Namespaces:
+
+    - Redefinition of CUDA entities in user namespaces
+
+    - Using directive
+
+  - Templates (some cases)
+
+  - Device or host function calls differentiation
+
+  - Correct injection of header files
+
+  - Parsing complicated argument lists
+
+## Example[\#](#example "Link to this heading")
+
+For additional details on the following [`hipify-perl`] command options, see [[hipify-perl commands]](../reference/hipify-perl-cmd.html#hipify-perl-cmd). For more advanced translation needs use [`hipify-clang`] as it is more comprehensive and accurate.
+
+Convert a simple CUDA file ([`square.cu`]) to HIP using [`hipify-perl`]:
+
+    hipify-perl square.cu -o square.cu.hip
+
+This command translates the input file and writes the result to [`square.cu.hip`].
+
+(hipify-clang.html "previous page")
+
+previous
+
+Using hipify-clang
+
+(../reference/hipify-clang-cmd.html "next page")
+
+next
+
+hipify-clang commands
+
+Contents
+
+- [Example](#example)

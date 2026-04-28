@@ -30,6 +30,69 @@ import ArticleHeader from "@site/src/components/ArticleHeader";
 
 ---
 
-{/* BilingualViewer 待修复后重新启用 */}
-{/* import BilingualViewer from "@site/src/components/BilingualViewer"; */}
-{/* <BilingualViewer enPath="/data/raw/english/" zhPath="/data/translated/zh/" /> */}
+
+
+- (../index.html)&#123;.nav-link aria-label="Home"&#125;
+- Deep\...
+
+# Deep learning frameworks for ROCm
+
+# Deep learning frameworks for ROCm[\#](#deep-learning-frameworks-for-rocm "Link to this heading")
+
+[ !(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==) ] 2026-03-31
+
+[ !(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=) ] 3 min read time
+
+Applies to Linux
+
+Deep learning frameworks provide environments for machine learning, training, fine-tuning, inference, and performance optimization.
+
+ROCm offers a complete ecosystem for developing and running deep learning applications efficiently. It also provides ROCm-compatible versions of popular frameworks and libraries, such as PyTorch, TensorFlow, JAX, and others.
+
+The AMD ROCm organization actively contributes to open-source development and collaborates closely with framework organizations. This collaboration ensures that framework-specific optimizations effectively leverage AMD GPUs.
+
+The table below summarizes information about ROCm-enabled deep learning frameworks. It includes details on ROCm compatibility and third-party tool support, installation steps and options, and links to GitHub resources. For a complete list of supported framework versions on ROCm, see the [[Compatibility matrix]](../compatibility/compatibility-matrix.html) topic.
+
++-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+-------------------------------------------------+
+| Framework                                                                                                   | Installation guide                                                                                                                                                                                    | Installation options     | GitHub                                          |
++=============================================================================================================+=======================================================================================================================================================================================================+==========================+=================================================+
+| [[PyTorch]](../compatibility/ml-compatibility/pytorch-compatibility.html)       | [[link]](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html "(in ROCm installation on Linux v7.2.2)")    | - Docker image           | (https://github.com/ROCm/pytorch)             |
+|                                                                                                             |                                                                                                                                                                                                       |                          |                                                 |
+|                                                                                                             |                                                                                                                                                                                                       | - Wheels package         |                                                 |
+|                                                                                                             |                                                                                                                                                                                                       |                          |                                                 |
+|                                                                                                             |                                                                                                                                                                                                       | - ROCm Base Docker image |                                                 |
+|                                                                                                             |                                                                                                                                                                                                       |                          |                                                 |
+|                                                                                                             |                                                                                                                                                                                                       | - Upstream Docker file   |                                                 |
++-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+-------------------------------------------------+
+| [[TensorFlow]](../compatibility/ml-compatibility/tensorflow-compatibility.html) | [[link]](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/tensorflow-install.html "(in ROCm installation on Linux v7.2.2)") | - Docker image           | (https://github.com/ROCm/tensorflow-upstream) |
+|                                                                                                             |                                                                                                                                                                                                       |                          |                                                 |
+|                                                                                                             |                                                                                                                                                                                                       | - Wheels package         |                                                 |
++-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+-------------------------------------------------+
+| [[JAX]](../compatibility/ml-compatibility/jax-compatibility.html)               | [[link]](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/jax-install.html "(in ROCm installation on Linux v7.2.2)")        | - Docker image           | (https://github.com/ROCm/jax)                 |
++-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+-------------------------------------------------+
+| [[DGL]](../compatibility/ml-compatibility/dgl-compatibility.html)               | [[link]](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/dgl-install.html "(in ROCm installation on Linux v7.2.2)")        | - Docker image           | (https://github.com/ROCm/dgl)                 |
++-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+-------------------------------------------------+
+
+Learn how to use your ROCm deep learning environment for training, fine-tuning, inference, and performance optimization through the following guides.
+
+- [[Use ROCm for AI]](rocm-for-ai/index.html)
+
+- [[Use ROCm for training]](rocm-for-ai/training/index.html)
+
+- [[Use ROCm for fine-tuning LLMs]](rocm-for-ai/fine-tuning/index.html)
+
+- [[Use ROCm for AI inference]](rocm-for-ai/inference/index.html)
+
+- [[Use ROCm for AI inference optimization]](rocm-for-ai/inference-optimization/index.html)
+
+(../compatibility/compatibility-matrix.html "previous page")
+
+previous
+
+Compatibility matrix
+
+(../compatibility/ml-compatibility/pytorch-compatibility.html "next page")
+
+next
+
+PyTorch compatibility

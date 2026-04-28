@@ -30,6 +30,180 @@ import ArticleHeader from "@site/src/components/ArticleHeader";
 
 ---
 
-{/* BilingualViewer 待修复后重新启用 */}
-{/* import BilingualViewer from "@site/src/components/BilingualViewer"; */}
-{/* <BilingualViewer enPath="/data/raw/english/" zhPath="/data/translated/zh/" /> */}
+
+
+- (../index.html)&#123;.nav-link aria-label="Home"&#125;
+- [Contributing to the ROCm documentation](contributing.html)
+- Building\...
+
+# Building documentation
+
+## Contents
+
+- [GitHub](#github)
+- [Command line](#command-line)
+- [Visual Studio Code](#visual-studio-code)
+
+# Building documentation[\#](#building-documentation "Link to this heading")
+
+[ !(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==) ] 2026-01-23
+
+[ !(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=) ] 5 min read time
+
+Applies to Linux and Windows
+
+## GitHub[\#](#github "Link to this heading")
+
+If you open a pull request and scroll down to the summary panel, there is a commit status section. Next to the line [`docs/readthedocs.com:advanced-micro-devices-demo`], there is a [`Details`] link. If you click this, it takes you to the Read the Docs build for your pull request.
+
+![GitHub PR commit status](../_images/commit-status.png)
+
+If you don't see this line, click [`Show`]` `[`all`]` `[`checks`] to get an itemized view.
+
+## Command line[\#](#command-line "Link to this heading")
+
+You can build our documentation via the command line using Python.
+
+See the [`build.tools.python`] setting in the [Read the Docs configuration file](https://github.com/ROCm/ROCm/blob/develop/.readthedocs.yaml) for the Python version used by Read the Docs to build documentation.
+
+See the [Python requirements file](https://github.com/ROCm/ROCm/blob/develop/docs/sphinx/requirements.txt) for Python packages needed to build the documentation.
+
+Use the Python Virtual Environment ([`venv`]) and run the following commands from the project root:
+
+Linux and WSL
+
+    python3 -mvenv .venv
+
+    .venv/bin/python -m pip install -r docs/sphinx/requirements.txt
+    .venv/bin/python -m sphinx -T -E -b html -d _build/doctrees -D language=en docs _build/html
+
+Windows
+
+    python -mvenv .venv
+
+    .venv\Scripts\python.exe -m pip install -r docs/sphinx/requirements.txt
+    .venv\Scripts\python.exe -m sphinx -T -E -b html -d _build/doctrees -D language=en docs _build/html
+
+Navigate to [`_build/html/index.html`] and open this file in a web browser.
+
+## Visual Studio Code[\#](#visual-studio-code "Link to this heading")
+
+With the help of a few extensions, you can create a productive environment to author and test documentation locally using Visual Studio (VS) Code. Follow these steps to configure VS Code:
+
+1.  Install the required extensions:
+
+    - Python: [`(ms-python.python)`]
+
+    - Live Server: [`(ritwickdey.LiveServer)`]
+
+2.  Add the following entries to [`.vscode/settings.json`].
+
+    ::: highlight
+          &#123;
+            "liveServer.settings.root": "/.vscode/build/html",
+            "liveServer.settings.wait": 1000,
+            "python.terminal.activateEnvInCurrentTerminal": true
+          &#125;
+
+    - [`liveServer.settings.root`]: Sets the root of the output website for live previews. Must be changed alongside the [`tasks.json`] command.
+
+    - [`liveServer.settings.wait`]: Tells the live server to wait with the update in order to give Sphinx time to regenerate the site contents and not refresh before the build is complete.
+
+    - [`python.terminal.activateEnvInCurrentTerminal`]: Activates the automatic virtual environment, so you can build the site from the integrated terminal.
+
+3.  Add the following tasks to [`.vscode/tasks.json`].
+
+    ::: highlight
+          &#123;
+            "version": "2.0.0",
+            "tasks": [
+              &#123;
+                "label": "Build Docs",
+                "type": "process",
+                "windows": &#123;
+                  "command": "$&#123;workspaceFolder&#125;/.venv/Scripts/python.exe"
+                &#125;,
+                "command": "$&#123;workspaceFolder&#125;/.venv/bin/python3",
+                "args": [
+                  "-m",
+                  "sphinx",
+                  "-j",
+                  "auto",
+                  "-T",
+                  "-b",
+                  "html",
+                  "-d",
+                  "$&#123;workspaceFolder&#125;/.vscode/build/doctrees",
+                  "-D",
+                  "language=en",
+                  "$&#123;workspaceFolder&#125;/docs",
+                  "$&#123;workspaceFolder&#125;/.vscode/build/html"
+                ],
+                "problemMatcher": [
+                  &#123;
+                    "owner": "sphinx",
+                    "fileLocation": "absolute",
+                    "pattern": &#123;
+                      "regexp": "^(?:.*\\.&#123;3&#125;\\s+)?(\\/[^:]*|[a-zA-Z]:\\\\[^:]*):(\\d+):\\s+(WARNING|ERROR):\\s+(.*)$",
+                      "file": 1,
+                      "line": 2,
+                      "severity": 3,
+                      "message": 4
+                    &#125;
+                  &#125;,
+                  &#123;
+                  "owner": "sphinx",
+                    "fileLocation": "absolute",
+                    "pattern": &#123;
+                      "regexp": "^(?:.*\\.&#123;3&#125;\\s+)?(\\/[^:]*|[a-zA-Z]:\\\\[^:]*):&#123;1,2&#125;\\s+(WARNING|ERROR):\\s+(.*)$",
+                      "file": 1,
+                      "severity": 2,
+                      "message": 3
+                    &#125;
+                  &#125;
+                ],
+                "group": &#123;
+                  "kind": "build",
+                  "isDefault": true
+                &#125;
+              &#125;
+            ]
+          &#125;
+
+    > ::: &#123;&#125;
+    > Implementation detail: two problem matchers were needed to be defined, because VS Code doesn't tolerate some problem information being potentially absent. While a single regex could match all types of errors, if a capture group remains empty (the line number doesn't show up in all warning/error messages) but the [`pattern`] references said empty capture group, VS Code discards the message completely.
+    > :::
+
+4.  Configure the Python virtual environment ([`venv`]).
+
+    From the Command Palette, run [`Python:`]` `[`Create`]` `[`Environment`]. Select [`venv`] environment and [`docs/sphinx/requirements.txt`].
+
+5.  Build the docs.
+
+    Launch the default build task using one of the following options:
+
+    - A hotkey (the default is [`Ctrl+Shift+B`])
+
+    - Issuing the [`Tasks:`]` `[`Run`]` `[`Build`]` `[`Task`] from the Command Palette
+
+6.  Open the live preview.
+
+    Navigate to the site output within VS Code: right-click on [`.vscode/build/html/index.html`] and select [`Open`]` `[`with`]` `[`Live`]` `[`Server`]. The contents should update on every rebuild without having to refresh the browser.
+
+(toolchain.html "previous page")
+
+previous
+
+ROCm documentation toolchain
+
+(feedback.html "next page")
+
+next
+
+Providing feedback about the ROCm documentation
+
+Contents
+
+- [GitHub](#github)
+- [Command line](#command-line)
+- [Visual Studio Code](#visual-studio-code)

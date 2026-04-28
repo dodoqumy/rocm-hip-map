@@ -30,6 +30,62 @@ import ArticleHeader from "@site/src/components/ArticleHeader";
 
 ---
 
-{/* BilingualViewer 待修复后重新启用 */}
-{/* import BilingualViewer from "@site/src/components/BilingualViewer"; */}
-{/* <BilingualViewer enPath="/data/raw/english/" zhPath="/data/translated/zh/" /> */}
+
+
+- (../../../index.html)&#123;.nav-link aria-label="Home"&#125;
+- [Use ROCm for AI](../index.html)
+- Use ROCm\...
+
+# Use ROCm for AI inference
+
+# Use ROCm for AI inference[\#](#use-rocm-for-ai-inference "Link to this heading")
+
+[ !(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==) ] 2026-04-08
+
+[ !(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=) ] 3 min read time
+
+Applies to Linux
+
+AI inference is a process of deploying a trained machine learning model to make predictions or classifications on new data. This commonly involves using the model with real-time data and making quick decisions based on the predictions made by the model.
+
+Understanding the ROCm™ software platform's architecture and capabilities is vital for running AI inference. By leveraging the ROCm platform's capabilities, you can harness the power of high-performance computing and efficient resource management to run inference workloads, leading to faster predictions and classifications on real-time data.
+
+Throughout the following topics, this section provides a comprehensive guide to setting up and deploying AI inference on AMD GPUs. This includes instructions on how to install ROCm, how to use Hugging Face Transformers to manage pre-trained models for natural language processing (NLP) tasks, how to validate vLLM on AMD Instinct™ MI300X GPUs and illustrate how to deploy trained models in production environments.
+
+The AI Developer Hub contains [AMD ROCm tutorials](https://rocm.docs.amd.com/projects/ai-developer-hub/en/latest/) for training, fine-tuning, and inference. It leverages popular machine learning frameworks on AMD GPUs.
+
+- [[Installing ROCm and machine learning frameworks]](../install.html)
+
+- [[Running models from Hugging Face]](hugging-face-models.html)
+
+- [[LLM inference frameworks]](llm-inference-frameworks.html)
+
+- [[vLLM inference]](benchmark-docker/vllm.html)
+
+- [[PyTorch inference performance testing]](benchmark-docker/pytorch-inference.html)
+
+- [[SGLang inference performance testing]](benchmark-docker/sglang.html)
+
+- [[vLLM distributed inference with MoRI]](benchmark-docker/vllm-mori-distributed.html)
+
+- [[SGLang distributed inference with MoRI]](benchmark-docker/sglang-mori-distributed.html)
+
+- [[SGLang distributed inference with Mooncake]](benchmark-docker/sglang-distributed.html)
+
+- [[xDiT diffusion inference]](xdit-diffusion-inference.html)
+
+- [[Deploying your model]](deploy-your-model.html)
+
+- [[xDiT diffusion inference]](xdit-diffusion-inference.html)
+
+(../fine-tuning/multi-gpu-fine-tuning-and-inference.html "previous page")
+
+previous
+
+Fine-tuning and inference using multiple GPUs
+
+(hugging-face-models.html "next page")
+
+next
+
+Running models from Hugging Face

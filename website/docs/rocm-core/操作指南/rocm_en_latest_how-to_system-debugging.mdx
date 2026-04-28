@@ -30,6 +30,119 @@ import ArticleHeader from "@site/src/components/ArticleHeader";
 
 ---
 
-{/* BilingualViewer 待修复后重新启用 */}
-{/* import BilingualViewer from "@site/src/components/BilingualViewer"; */}
-{/* <BilingualViewer enPath="/data/raw/english/" zhPath="/data/translated/zh/" /> */}
+
+
+- (../index.html)&#123;.nav-link aria-label="Home"&#125;
+- System debugging
+
+# System debugging
+
+## Contents
+
+- [ROCm language and system-level debug, flags, and environment variables](#rocm-language-and-system-level-debug-flags-and-environment-variables)
+- [ROCr error code](#rocr-error-code)
+- [Command to dump firmware version and get Linux kernel version](#command-to-dump-firmware-version-and-get-linux-kernel-version)
+- [Debug flags](#debug-flags)
+- [ROCr level environment variables for debug](#rocr-level-environment-variables-for-debug)
+- [Turn off page retry on GFX9/Vega devices](#turn-off-page-retry-on-gfx9-vega-devices)
+- [HIP environment variables 3.x](#hip-environment-variables-3-x)
+  - [OpenCL debug flags](#opencl-debug-flags)
+- [PCIe-debug](#pcie-debug)
+
+# System debugging[\#](#system-debugging "Link to this heading")
+
+[ !(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==) ] 2026-01-23
+
+[ !(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=) ] 4 min read time
+
+Applies to Linux
+
+## ROCm language and system-level debug, flags, and environment variables[\#](#rocm-language-and-system-level-debug-flags-and-environment-variables "Link to this heading")
+
+Kernel options to avoid: the Ethernet port getting renamed every time you change graphics cards, [`net.ifnames=0`]` `[`biosdevname=0`]
+
+## ROCr error code[\#](#rocr-error-code "Link to this heading")
+
+- 2 Invalid Dimension
+
+- 4 Invalid Group Memory
+
+- 8 Invalid (or Null) Code
+
+- 32 Invalid Format
+
+- 64 Group is too large
+
+- 128 Out of VGPRs
+
+- 0x80000000 Debug Options
+
+## Command to dump firmware version and get Linux kernel version[\#](#command-to-dump-firmware-version-and-get-linux-kernel-version "Link to this heading")
+
+[`sudo`]` `[`cat`]` `[`/sys/kernel/debug/dri/1/amdgpu_firmware_info`]
+
+[`uname`]` `[`-a`]
+
+## Debug flags[\#](#debug-flags "Link to this heading")
+
+Debug messages when developing/debugging base ROCm driver. You could enable the printing from [`libhsakmt.so`] by setting an environment variable, [`HSAKMT_DEBUG_LEVEL`]. Available debug levels are 3-7. The higher level you set, the more messages will print.
+
+- [`export`]` `[`HSAKMT_DEBUG_LEVEL=3`] : Only pr_err() prints.
+
+- [`export`]` `[`HSAKMT_DEBUG_LEVEL=4`] : pr_err() and pr_warn() print.
+
+- [`export`]` `[`HSAKMT_DEBUG_LEVEL=5`] : We currently do not implement "notice". Setting to 5 is same as setting to 4.
+
+- [`export`]` `[`HSAKMT_DEBUG_LEVEL=6`] : pr_err(), pr_warn(), and pr_info print.
+
+- [`export`]` `[`HSAKMT_DEBUG_LEVEL=7`] : Everything including pr_debug prints.
+
+## ROCr level environment variables for debug[\#](#rocr-level-environment-variables-for-debug "Link to this heading")
+
+[`HSA_ENABLE_SDMA=0`]
+
+[`HSA_ENABLE_INTERRUPT=0`]
+
+[`HSA_SVM_GUARD_PAGES=0`]
+
+[`HSA_DISABLE_CACHE=1`]
+
+## Turn off page retry on GFX9/Vega devices[\#](#turn-off-page-retry-on-gfx9-vega-devices "Link to this heading")
+
+[`sudo`]` `[`-s`]
+
+[`echo`]` `[`1`]` `[`>`]` `[`/sys/module/amdkfd/parameters/noretry`]
+
+## HIP environment variables 3.x[\#](#hip-environment-variables-3-x "Link to this heading")
+
+### OpenCL debug flags[\#](#opencl-debug-flags "Link to this heading")
+
+[`AMD_OCL_WAIT_COMMAND=1`]` `[`(0`]` `[`=`]` `[`OFF,`]` `[`1`]` `[`=`]` `[`On)`]
+
+## PCIe-debug[\#](#pcie-debug "Link to this heading")
+
+For information on how to debug and profile HIP applications, see [Debugging with HIP](https://rocm.docs.amd.com/projects/HIP/en/latest/how-to/debugging.html "(in HIP Documentation v7.2.53211)")
+
+(gpu-performance/mi300x.html "previous page")
+
+previous
+
+AMD Instinct MI300X performance guides
+
+(../conceptual/compiler-topics.html "next page")
+
+next
+
+Using compiler features
+
+Contents
+
+- [ROCm language and system-level debug, flags, and environment variables](#rocm-language-and-system-level-debug-flags-and-environment-variables)
+- [ROCr error code](#rocr-error-code)
+- [Command to dump firmware version and get Linux kernel version](#command-to-dump-firmware-version-and-get-linux-kernel-version)
+- [Debug flags](#debug-flags)
+- [ROCr level environment variables for debug](#rocr-level-environment-variables-for-debug)
+- [Turn off page retry on GFX9/Vega devices](#turn-off-page-retry-on-gfx9-vega-devices)
+- [HIP environment variables 3.x](#hip-environment-variables-3-x)
+  - [OpenCL debug flags](#opencl-debug-flags)
+- [PCIe-debug](#pcie-debug)

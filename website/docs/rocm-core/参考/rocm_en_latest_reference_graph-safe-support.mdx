@@ -30,6 +30,71 @@ import ArticleHeader from "@site/src/components/ArticleHeader";
 
 ---
 
-{/* BilingualViewer 待修复后重新启用 */}
-{/* import BilingualViewer from "@site/src/components/BilingualViewer"; */}
-{/* <BilingualViewer enPath="/data/raw/english/" zhPath="/data/translated/zh/" /> */}
+
+
+- (../index.html)&#123;.nav-link aria-label="Home"&#125;
+- Graph-safe\...
+
+# Graph-safe support for ROCm libraries
+
+# Graph-safe support for ROCm libraries[\#](#graph-safe-support-for-rocm-libraries "Link to this heading")
+
+[ !(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==) ] 2026-01-23
+
+[ !(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=) ] 3 min read time
+
+Applies to Linux and Windows
+
+HIP graph-safe libraries operate safely in HIP execution graphs. [HIP graphs](https://rocm.docs.amd.com/projects/HIP/en/latest/how-to/hip_runtime_api/hipgraph.html#how-to-hip-graph "(in HIP Documentation v7.2.53211)") are an alternative way of executing tasks on a GPU that can provide performance benefits over launching kernels using the standard method via streams.
+
+Functions and routines from graph-safe libraries shouldn't result in issues like race conditions, deadlocks, or unintended dependencies.
+
+The following table shows whether a ROCm library is graph-safe.
+
+  ROCm library                                                                           Graph safe support
+  -------------------------------------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  [Composable Kernel](https://github.com/ROCm/composable_kernel)   ❌
+  [hipBLAS](https://github.com/ROCm/hipBLAS)                       ✅
+  [hipBLASLt](https://github.com/ROCm/hipBLASLt)                   ⚠️
+  [hipCUB](https://github.com/ROCm/hipCUB)                         ✅
+  [hipFFT](https://github.com/ROCm/hipFFT)                         ✅ (see [[details]](https://rocm.docs.amd.com/projects/hipFFT/en/latest/reference/hipfft-api-usage.html#hip-graph-support-for-hipfft "(in hipFFT Documentation v1.0.22)"))
+  [hipRAND](https://github.com/ROCm/hipRAND)                       ✅
+  [hipSOLVER](https://github.com/ROCm/hipSOLVER)                   ⚠️ (experimental)
+  [hipSPARSE](https://github.com/ROCm/hipSPARSE)                   ✅
+  [hipSPARSELt](https://github.com/ROCm/hipSPARSELt)               ⚠️ (experimental)
+  [hipTensor](https://github.com/ROCm/hipTensor)                   ❌
+  [MIOpen](https://github.com/ROCm/MIOpen)                         ❌
+  [RCCL](https://github.com/ROCm/rccl)                             ✅
+  [rocAL](https://github.com/ROCm/rocAL)                           ❌
+  [rocALUTION](https://github.com/ROCm/rocALUTION)                 ❌
+  [rocBLAS](https://github.com/ROCm/rocBLAS)                       ✅ (see [[details]](https://rocm.docs.amd.com/projects/rocBLAS/en/latest/reference/beta-features.html "(in rocBLAS Documentation v5.2.0)"))
+  [rocDecode](https://github.com/ROCm/rocDecode)                   ❌
+  [rocFFT](https://github.com/ROCm/rocFFT)                         ✅ (see [[details]](https://rocm.docs.amd.com/projects/rocFFT/en/latest/reference/api.html#hip-graph-support-for-rocfft "(in rocFFT Documentation v1.0.36)"))
+  [rocHPCG](https://github.com/ROCm/rocHPCG)                       ❌
+  [rocJPEG](https://github.com/ROCm/rocJPEG)                       ❌
+  [rocPRIM](https://github.com/ROCm/rocPRIM)                       ✅
+  [rocRAND](https://github.com/ROCm/rocRAND)                       ✅
+  [rocSOLVER](https://github.com/ROCm/rocSOLVER)                   ⚠️ (experimental)
+  [rocSPARSE](https://github.com/ROCm/rocSPARSE)                   ⚠️ (experimental)
+  [rocThrust](https://github.com/ROCm/rocThrust)                   ❌
+  [rocWMMA](https://github.com/ROCm/rocWMMA)                       ❌
+  [RPP](https://github.com/ROCm/rpp)                               ⚠️
+  [Tensile](https://github.com/ROCm/Tensile)                       ✅
+
+✅: full support
+
+⚠️: partial support
+
+❌: not supported
+
+(precision-support.html "previous page")
+
+previous
+
+Data types and precision support
+
+(glossary.html "next page")
+
+next
+
+ROCm glossary

@@ -30,6 +30,111 @@ import ArticleHeader from "@site/src/components/ArticleHeader";
 
 ---
 
-{/* BilingualViewer 待修复后重新启用 */}
-{/* import BilingualViewer from "@site/src/components/BilingualViewer"; */}
-{/* <BilingualViewer enPath="/data/raw/english/" zhPath="/data/translated/zh/" /> */}
+
+
+- (../index.html)&#123;.nav-link aria-label="Home"&#125;
+- Contributing\...
+
+# Contributing to the ROCm documentation
+
+## Contents
+
+- [The ROCm repositories](#the-rocm-repositories)
+- [Editing and adding to the documentation](#editing-and-adding-to-the-documentation)
+
+# Contributing to the ROCm documentation[\#](#contributing-to-the-rocm-documentation "Link to this heading")
+
+[ !(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==) ] 2026-01-23
+
+[ !(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=) ] 5 min read time
+
+Applies to Linux and Windows
+
+The ROCm documentation, like all of ROCm, is open source and available on GitHub. You can contribute to the ROCm documentation by forking the appropriate repository, making your changes, and opening a pull request.
+
+To provide feedback on the ROCm documentation, including submitting an issue or suggesting a feature, see [[Providing feedback about the ROCm documentation]](feedback.html).
+
+## The ROCm repositories[\#](#the-rocm-repositories "Link to this heading")
+
+The repositories for ROCm and all ROCm components are available on GitHub.
+
+  Module                                  Documentation location
+  --------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------
+  ROCm framework                          [ROCm/ROCm](https://github.com/ROCm/ROCm/tree/develop/docs)
+  ROCm installation for Linux             [ROCm/rocm-install-on-linux](https://github.com/ROCm/rocm-install-on-linux/tree/develop/docs)
+  ROCm HIP SDK installation for Windows   [ROCm/rocm-install-on-windows](https://github.com/ROCm/rocm-install-on-windows/tree/develop/docs)
+
+Individual components have their own repositories with their own documentation in their own [`docs`] folders.
+
+The sub-folders within the [`docs`] folders across ROCm are typically structured as follows:
+
+  Sub-folder name                                         Documentation type
+  ------------------------------------------------------- ------------------------------------------------------------------
+  [`install`]      Installation instructions, build instructions, and prerequisites
+  [`conceptual`]   Important concepts
+  [`how-to`]       How to implement specific use cases
+  [`tutorials`]    Tutorials
+  [`reference`]    API references and other reference resources
+
+## Editing and adding to the documentation[\#](#editing-and-adding-to-the-documentation "Link to this heading")
+
+ROCm documentation follows the [Google developer documentation style guide](https://developers.google.com/style/highlights).
+
+Most topics in the ROCm documentation are written in [reStructuredText (rst)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html), with some topics written in Markdown. Only use reStructuredText when adding new topics. Only use Markdown if the topic you are editing is already in Markdown.
+
+To edit or add to the documentation:
+
+1.  Fork the repository you want to add to or edit.
+
+2.  Clone your fork locally.
+
+3.  Create a new local branch cut from the [`develop`] branch of the repository.
+
+4.  Make your changes to the documentation.
+
+5.  Optionally, build the documentation locally before creating a pull request by running the following commands from within the [`docs`] folder:
+
+    ::: highlight
+         pip3 install -r sphinx/requirements.txt  # You only need to run this command once
+         python3 -m sphinx -T -E -b html -d _build/doctrees -D language=en . _build/html
+
+    The output files will be located in the [`docs/_build`] folder. Open [`docs/_build/html/index.html`] to view the documentation.
+
+    For more information on ROCm build tools, see [[Documentation toolchain]](toolchain.html).
+
+6.  Push your changes. A GitHub link will be returned in the output of the [`git`]` `[`push`] command. Open this link in a browser to create the pull request.
+
+    The documentation is built as part of the checks on pull request, along with spell checking and linting. Scroll to the bottom of your pull request to view all the checks.
+
+    Verify that the linting and spell checking have passed, and that the documentation was built successfully. New words or acronyms can be added to the [wordlist file](https://github.com/ROCm/rocm-docs-core/blob/develop/.wordlist.txt). The wordlist is subject to approval by the ROCm documentation team.
+
+    The Read The Docs build of your pull request can be accessed by clicking on the Details link next to the Read The Docs build check. Verify that your changes are in the build and look as expected.
+
+    ![The GitHub checks are collapsed by default and can be accessed by clicking on \"Show All Checks\".](../_images/GitHubCheck-Highlight.png)
+
+    ![The Read The Docs Build is accessed from the Details link in the Read The Docs check.](../_images/GitHub-ReadThe-Docs-Highlight.png)
+
+    Your pull request will be reviewed by a member of the ROCm documentation team.
+
+See the [GitHub documentation](https://docs.github.com/en) for information on how to fork and clone a repository, and how to create and push a local branch.
+
+Important
+
+By creating a pull request (PR), you agree to allow your contribution to be licensed under the terms of the LICENSE.txt file in the corresponding repository. Different repositories can use different licenses.
+
+(../reference/glossary/performance.html "previous page")
+
+previous
+
+Performance analysis glossary
+
+(toolchain.html "next page")
+
+next
+
+ROCm documentation toolchain
+
+Contents
+
+- [The ROCm repositories](#the-rocm-repositories)
+- [Editing and adding to the documentation](#editing-and-adding-to-the-documentation)

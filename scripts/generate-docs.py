@@ -220,6 +220,39 @@ generated_at: "{datetime.now(timezone.utc).strftime('%Y-%m-%d')}"
     if is_issue:
         issue_check = '\nimport IssueNotice from "@site/src/components/IssueNotice";\n\n<IssueNotice />'
 
+    # ── 正文：清洗 raw_content（pandoc artifact 清理）+ 嵌入 ──
+    body = raw_content
+    # 1. 去除源文件的 frontmatter
+    if body.startswith("---"):
+        end_fm = body.find("---", 3)
+        if end_fm != -1:
+            body = body[end_fm + 3:].strip()
+    # 2. 去除 pandoc artifact: ::::: ::: 区块标记
+    body = re.sub(r'^:{3,}.*$', '', body, flags=re.MULTILINE)
+    # 3. 去除 pandoc inline class: {.class} {.class1 .class2}
+    body = re.sub(r'\{[.][a-zA-Z0-9_ .-]*\}', '', body)
+    # 4. 去除 pandoc header anchor: {#id}
+    body = re.sub(r'\{#[a-zA-Z0-9_-]+\}', '', body)
+    # 5. 去除空的 [] 和 [ ] 占位符
+    body = re.sub(r'\[\s*\]', '', body)
+    # 6. 删除纯 artifact 空行（base64 SVG data:image 行等）
+    body = re.sub(r'^\[?\s*!\[\]\(data:image[^)]*\)\s*\]?\s*$', '', body, flags=re.MULTILINE)
+    # 7. 删除 headerlink artifact (# GPU arch[\#](...){.headerlink} → # GPU arch)
+    body = re.sub(r'\[\\\\#\]\([^)]*\)', '', body)
+    # 8. 合并多余空行
+    body = re.sub(r'\n{3,}', '\n\n', body)
+    # 9. 转义 MDX 花括号（防止被 React 当成表达式）
+    #    但先保护已存在的 HTML 实体
+    body = body.replace('&', '&amp;')
+    body = body.replace('&amp;lt;', '&lt;').replace('&amp;gt;', '&gt;')
+    body = body.replace('&amp;amp;', '&amp;')
+    body = body.replace('&amp;quot;', '&quot;')
+    # 10. 花括号转义为 HTML 实体
+    body = body.replace('{', '&#123;').replace('}', '&#125;')
+    # 恢复常见的 HTML 实体
+    for ent in ['lt', 'gt', 'amp', 'quot', 'apos', '#123', '#125']:
+        body = body.replace(f'&amp;{ent};', f'&{ent};')
+    
     mdx = f"""{fm}
 
 import ArticleHeader from "@site/src/components/ArticleHeader";
@@ -232,9 +265,7 @@ import ArticleHeader from "@site/src/components/ArticleHeader";
 
 ---
 
-{{/* BilingualViewer 待修复后重新启用 */}}
-{{/* import BilingualViewer from "@site/src/components/BilingualViewer"; */}}
-{{/* <BilingualViewer enPath="/data/raw/english/" zhPath="/data/translated/zh/" /> */}}
+{body}
 """
     return mdx
 
