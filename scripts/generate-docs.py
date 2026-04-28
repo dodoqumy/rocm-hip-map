@@ -202,7 +202,9 @@ import {{ ArticleHeader }} from "@site/src/components/ArticleHeader";
 
 <BilingualViewer
   enPath="/data/raw/english/{src_file}"
-  zhPath="/data/translated/zh/{src_file}""""
+  zhPath="/data/translated/zh/{src_file}"
+/>
+"""
     return mdx
 
 
