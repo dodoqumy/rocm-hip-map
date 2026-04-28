@@ -5,7 +5,8 @@
 > 面向开发者、工程师、研究者。  
 > 核心价值：官方优先、原文可追溯、双语对照、结构化检索。
 
-🌐 **预览：** https://dodoqumy.github.io/rocm-hip-map/
+🌐 **预览：** https://dodoqumy.github.io/rocm-hip-map/  
+📋 **开发进度：** [PROGRESS.md](docs/PROGRESS.md) — 实时更新的 Phase 完成情况 & Tasklist
 
 ---
 
