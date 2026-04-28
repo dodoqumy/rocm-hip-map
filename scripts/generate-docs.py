@@ -172,12 +172,9 @@ tags: {tag_str}
 generated_at: {datetime.now(timezone.utc).strftime("%Y-%m-%d")}
 ---"""
     
-    # ── 正文（不使用 raw body，避免 pandoc artifact；由 BilingualViewer 加载）──
+    # ── 正文（不使用 raw body，避免 pandoc artifact；由 译文 加载）──
     
-    # 计算源文件名
-    src_file = Path(article.get("file", "undefined.md")).name if article.get("file") else "undefined.md"
     
-    import_str = 'import BilingualViewer from "@site/src/components/BilingualViewer";'
     
     # Issue 检测
     issue_check = ""
@@ -191,7 +188,7 @@ generated_at: {datetime.now(timezone.utc).strftime("%Y-%m-%d")}
     mdx = f"""{fm}
 
 import {{ ArticleHeader }} from "@site/src/components/ArticleHeader";
-{import_str}{issue_check}
+{issue_check}
 
 <ArticleHeader />
 
@@ -200,9 +197,8 @@ import {{ ArticleHeader }} from "@site/src/components/ArticleHeader";
 
 ---
 
-<BilingualViewer
-  enPath="/data/raw/english/{src_file}"
-  zhPath="/data/translated/zh/{src_file}"
+  enPath="/data/raw/english/"
+  zhPath="/data/translated/zh/"
 />
 """
     return mdx
