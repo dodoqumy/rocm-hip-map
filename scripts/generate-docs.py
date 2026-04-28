@@ -222,7 +222,7 @@ generated_at: "{datetime.now(timezone.utc).strftime('%Y-%m-%d')}"
 
     mdx = f"""{fm}
 
-import {{ ArticleHeader }} from "@site/src/components/ArticleHeader";
+import ArticleHeader from "@site/src/components/ArticleHeader";
 {issue_check}
 
 <ArticleHeader />
