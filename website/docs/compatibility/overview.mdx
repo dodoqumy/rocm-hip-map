@@ -1,0 +1,26 @@
+---
+sidebar_position: 1
+title: GPU 兼容性矩阵
+description: GPU × ROCm 版本 × OS × PyTorch/TensorFlow 交叉兼容表
+---
+
+# 🖥️ GPU 兼容性矩阵
+
+查询 ROCm 官方支持的 **GPU 型号、ROCm 版本、操作系统、深度学习框架** 兼容关系。
+
+数据来源：[ROCm Installation Guide (Linux)](https://rocm.docs.amd.com/en/latest/deploy/linux/install.html)  
+最后同步：2026-04-28
+
+---
+
+import CompatibilityMatrix from '@site/src/components/CompatibilityMatrix';
+
+<CompatibilityMatrix />
+
+---
+
+:::tip 使用提示
+- 使用下拉筛选器按 GPU / ROCm 版本 / OS 过滤
+- **推荐旗舰组合：MI300X + ROCm 7.2 + Ubuntu 22.04 + PyTorch 2.4+**
+- TensorFlow 在消费级 GPU（RX 系列）仍为实验性支持
+:::

@@ -1,0 +1,29 @@
+---
+sidebar_position: 4
+title: GitHub Issue 情报
+description: ROCm 社区已知 Bug 追踪，含 workaround 和修复版本
+---
+
+# 📡 Issue 情报面板
+
+追踪 ROCm 生态中 **已确认的 Bug 和 workaround**。信息来源为 GitHub Issues，覆盖：
+
+- **ROCm/ROCm** — 核心运行时
+- **ROCm/HIP** — HIP 编译器/运行时
+- **ROCm/pytorch** — PyTorch ROCm 移植
+
+数据自动同步自 GitHub，含修复版本和临时解决方案。
+
+---
+
+import IssueTracker from '@site/src/components/IssueTracker';
+
+<IssueTracker />
+
+---
+
+:::note 情报更新
+- 每天 08:00 CST 自动同步 (`sync.yml`)
+- 仅收录含 `bug` / `workaround` 标签的 Issues
+- 点击标题可直接跳转到 GitHub Issue 原文
+:::

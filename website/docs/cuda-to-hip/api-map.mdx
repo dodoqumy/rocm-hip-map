@@ -1,0 +1,29 @@
+---
+sidebar_position: 2
+title: CUDA → HIP API 对照
+description: CUDA 到 HIP API 完整映射表，支持搜索和分类筛选
+---
+
+# 🔄 CUDA → HIP API 对照表
+
+CUDA 迁移到 HIP 的 **API 一对一映射**。包含设备管理、内存管理、流管理、事件管理、Kernel 启动、错误处理、线程索引、Graph API 等全类别。
+
+数据来源：
+- [HIP Porting Guide](https://rocm.docs.amd.com/en/latest/reference/hip.html)
+- [HIPIFY GitHub](https://github.com/ROCm/HIPIFY)
+- [HIP API Reference](https://rocm.docs.amd.com/projects/HIP/en/latest/)
+
+---
+
+import CudaHipMap from '@site/src/components/CudaHipMap';
+
+<CudaHipMap />
+
+---
+
+:::info 迁移提示
+- 大部分 API 仅需 `cuda` → `hip` 前缀替换
+- **warpSize 注意：** HIP 的 Wavefront 为 64 线程，CUDA 的 Warp 为 32 线程
+- `cudaMallocHost` → `hipHostMalloc`（参数顺序不同！）
+- `hipify-perl` 可自动完成 90%+ API 替换
+:::
