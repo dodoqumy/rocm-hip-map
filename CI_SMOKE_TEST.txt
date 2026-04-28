@@ -1,0 +1,5 @@
+# CI 烟雾测试 — 验证 GitHub Actions 读写权限
+
+触发时间: 手动
+
+此文件仅用于触发 GitHub Actions 部署流水线。
