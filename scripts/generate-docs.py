@@ -185,6 +185,65 @@ def generate_mdx(article: dict, raw_content: str) -> str:
     published_date = article.get("published_date", article.get("date", ""))
     synced_date = article.get("synced_date", datetime.now(timezone.utc).strftime("%Y-%m-%d"))
 
+    # ── 自动生成 SEO 关键词（中英双语）──
+    def gen_keywords(article, tags, os_list, gpu, gpu_arch, driver, frameworks) -> list:
+        """从文章元数据生成 SEO 关键词。"""
+        kw = set()
+        # 来源关键词
+        source_type = article.get("source_type", "official")
+        if source_type == "official":
+            kw.update(["ROCm", "AMD", "GPU", "官方文档", "AMD官方"])
+        elif source_type == "paper":
+            kw.update(["ROCm", "AMD", "GPU", "论文", "学术", "arXiv"])
+        elif source_type == "github-issue":
+            kw.update(["ROCm", "AMD", "GPU", "Issue", "问题", "bug"])
+        
+        # 从 tags 提取
+        for t in tags:
+            t_lower = t.lower()
+            if t_lower in ("tutorial", "guide", "reference"):
+                kw.add("教程" if t_lower != "reference" else "参考")
+            elif t_lower in ("troubleshoot", "bug", "issue", "debugging"):
+                kw.add("故障排查")
+            elif t_lower in ("performance", "optimization"):
+                kw.update(["性能", "优化", "performance"])
+            elif t_lower in ("installation", "install", "setup"):
+                kw.update(["安装", "配置", "部署"])
+            else:
+                kw.add(t)
+        
+        # 从 GPU / 架构
+        for g in gpu:
+            kw.add(g.upper() if len(g) <= 8 else g)
+        for a in gpu_arch:
+            kw.add(a.upper() if len(a) <= 8 else a)
+        
+        # 从 OS
+        os_cn = {"linux": "Linux", "windows": "Windows", "docker": "Docker",
+                 "ubuntu-22.04": "Ubuntu", "wsl2": "WSL2"}
+        for o in os_list:
+            kw.add(os_cn.get(o, o))
+        
+        # 从框架
+        fw_cn = {"pytorch": "PyTorch", "tensorflow": "TensorFlow",
+                 "jax": "JAX", "onnx": "ONNX"}
+        for f in frameworks:
+            kw.add(fw_cn.get(f, f))
+        
+        # 从 driver
+        for d in driver:
+            kw.add(d)
+        
+        # 中文通用关键词
+        kw.update(["中英对照", "双语", "翻译", "bilingual", "GPU编程",
+                    "HPC", "人工智能", "深度学习", "并行计算"])
+        
+        # 限制 20 个，去重排序
+        return sorted(list(kw))[:20]
+
+    keywords = gen_keywords(article, tags, os_list, gpu, gpu_arch, driver, frameworks)
+    kw_str = "[" + ", ".join(f'"{k}"' for k in keywords) + "]"
+
     # ── Frontmatter ──
     safe_title = title.replace('"', "'").replace("\n", " ")
     safe_desc = (article.get("description") or safe_title[:60]).replace('"', "'").replace("\n", " ")
@@ -192,6 +251,7 @@ def generate_mdx(article: dict, raw_content: str) -> str:
     fm = f"""---
 title: "{safe_title}"
 description: "{safe_desc}"
+keywords: {kw_str}
 source_url: {source_url}
 source_type: {source_type}
 source_org: {source_org}
