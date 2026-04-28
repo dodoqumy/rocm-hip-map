@@ -137,45 +137,80 @@ def clean_title(raw: str) -> str:
     return cleaned
 
 
+def _list_to_yaml(seq, max_len=8):
+    """将 Python list 转为 YAML 内联数组字符串。"""
+    if not seq:
+        return "[]"
+    items = seq[:max_len]
+    return "[" + ", ".join(f'"{str(t)}"' for t in items) + "]"
+
+
+def _opt_str(val, default=""):
+    """返回 YAML 安全的字符串或空字符串。"""
+    if val is None or val == "":
+        return default
+    return str(val).replace('"', "'").replace("\n", " ")
+
+
 def generate_mdx(article: dict, raw_content: str) -> str:
-    """为单篇文章生成 Docusaurus MDX 内容。"""
+    """为单篇文章生成 Docusaurus MDX 内容。
+
+    模板参考：docs/templates/page-template.md
+    """
     title = article.get("title", parse_title_from_md(raw_content))
     title = clean_title(title)
     if not title or len(title) < 2 or title == "404 - Page Not Found":
-        # 通过 artifacts.json 的 file 字段回退
         fallback = article.get("file", "")
         if fallback:
             title = Path(fallback).stem.replace("_", " ").replace("-", " ").title()
     if not title or len(title) < 2:
         title = "Untitled"
-    
+
     source_url = article.get("source_url", "")
     source_type = article.get("source_type", "official")
+    source_org = article.get("source_org", "amd")
     credibility = article.get("credibility", 5)
     lifecycle = article.get("lifecycle", "latest")
     tags = article.get("tags_extra", article.get("tags", []))
-    
+
+    # ── 环境分类字段（从 article metadata 或 tags 推断）──
+    version = article.get("version", "")
+    rocm_versions = article.get("rocm_versions", [])
+    os_list = article.get("os", article.get("operating_systems", []))
+    gpu = article.get("gpu", [])
+    gpu_arch = article.get("gpu_arch", [])
+    driver = article.get("driver", [])
+    frameworks = article.get("frameworks", [])
+    difficulty = article.get("difficulty", "")
+    published_date = article.get("published_date", article.get("date", ""))
+    synced_date = article.get("synced_date", datetime.now(timezone.utc).strftime("%Y-%m-%d"))
+
     # ── Frontmatter ──
-    tag_str = "[" + ", ".join(f'"{t}"' for t in tags[:8]) + "]" if tags else "[]"
-    
-    # 确保 title 是 YAML 安全的
-    safe_title = title.replace('"', "'").replace('\n', ' ')
-    
+    safe_title = title.replace('"', "'").replace("\n", " ")
+    safe_desc = (article.get("description") or safe_title[:60]).replace('"', "'").replace("\n", " ")
+
     fm = f"""---
 title: "{safe_title}"
-description: "{safe_title[:60]}"
+description: "{safe_desc}"
 source_url: {source_url}
 source_type: {source_type}
+source_org: {source_org}
 credibility: {credibility}
 lifecycle: {lifecycle}
-tags: {tag_str}
-generated_at: {datetime.now(timezone.utc).strftime("%Y-%m-%d")}
+version: "{_opt_str(version)}"
+rocm_versions: {_list_to_yaml(rocm_versions)}
+os: {_list_to_yaml(os_list)}
+gpu: {_list_to_yaml(gpu)}
+gpu_arch: {_list_to_yaml(gpu_arch)}
+driver: {_list_to_yaml(driver)}
+frameworks: {_list_to_yaml(frameworks)}
+difficulty: "{_opt_str(difficulty)}"
+tags: {_list_to_yaml(tags)}
+published_date: "{_opt_str(published_date)}"
+synced_date: "{_opt_str(synced_date)}"
+generated_at: "{datetime.now(timezone.utc).strftime('%Y-%m-%d')}"
 ---"""
-    
-    # ── 正文（不使用 raw body，避免 pandoc artifact；由 译文 加载）──
-    
-    
-    
+
     # Issue 检测
     issue_check = ""
     is_issue = (
@@ -184,7 +219,7 @@ generated_at: {datetime.now(timezone.utc).strftime("%Y-%m-%d")}
     )
     if is_issue:
         issue_check = '\nimport IssueNotice from "@site/src/components/IssueNotice";\n\n<IssueNotice />'
-    
+
     mdx = f"""{fm}
 
 import {{ ArticleHeader }} from "@site/src/components/ArticleHeader";
@@ -192,14 +227,14 @@ import {{ ArticleHeader }} from "@site/src/components/ArticleHeader";
 
 <ArticleHeader />
 
-> 📄 **原文链接：** [{source_url}]({source_url})  
+> 📄 **原文链接：** [{source_url}]({source_url})
 > 🏷 **来源：** AMD 官方文档 · 可信度：{"⭐" * credibility}
 
 ---
 
-  enPath="/data/raw/english/"
-  zhPath="/data/translated/zh/"
-/>
+{{/* BilingualViewer 待修复后重新启用 */}}
+{{/* import BilingualViewer from "@site/src/components/BilingualViewer"; */}}
+{{/* <BilingualViewer enPath="/data/raw/english/" zhPath="/data/translated/zh/" /> */}}
 """
     return mdx
 
