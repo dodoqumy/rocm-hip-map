@@ -261,9 +261,62 @@ def check_translation_quality(source_en: str, translated_zh: str) -> dict:
         }
 
 
+def check_issue_completeness(raw_md: str, article: dict) -> dict:
+    """
+    Issue 类文章信息完整性校验。
+    检测维度：描述 / 环境 / 错误日志 / 解决状态 / 解决方案。
+    返回：{status, score, notes, dimensions}
+    """
+    # 判断是否为 Issue 类文章
+    tags = article.get("tags_extra", article.get("tags", []))
+    source_url = article.get("source_url", "")
+    title = article.get("title", "").lower()
+    body = extract_body_text(raw_md).lower()[:5000]
+
+    is_issue = (
+        "bug" in tags or "issue" in tags or "troubleshoot" in tags
+        or "github.com" in source_url and ("/issues/" in source_url or "/pull/" in source_url)
+        or any(kw in title for kw in ["bug", "issue", "error", "problem", "fail", "crash", "hang"])
+        or any(kw in body[:500] for kw in ["error:", "traceback", "segfault", "assertion failed"])
+    )
+
+    if not is_issue:
+        return {"status": "skip", "score": 1, "notes": "非 Issue 类文章", "dimensions": {}}
+
+    # 结构检测
+    dimensions = {
+        "has_description": bool(re.search(r'(problem|issue|bug|error|描述|问题)', body[:2000])),
+        "has_environment": bool(re.search(r'(rocm\s*\d|ubuntu|rhel|mi\d|gfx\d|driver|kernel|环境)', body[:2000])),
+        "has_error_log": bool(re.search(r'(error:|traceback|segfault|log|dmesg|journalctl|rocminfo)', body[:2000])),
+        "has_resolution_status": bool(re.search(r'(fixed|resolved|solved|closed|workaround|修复|解决|已修复|已关闭)', body[:3000])),
+        "has_solution": bool(re.search(r'(solution|workaround|fix|patch|commit|pr|解决|方案|办法|步骤)', body[:3000])),
+    }
+
+    # 评分
+    total = len(dimensions)
+    passed = sum(1 for v in dimensions.values() if v)
+    score = passed / total if total else 0
+
+    missing = [k.replace("has_", "") for k, v in dimensions.items() if not v]
+
+    if score >= 0.8:
+        status = "pass"
+        notes = f"信息完整 ({passed}/{total})"
+    elif score >= 0.4:
+        status = "warn"
+        notes = f"缺少: {', '.join(missing)}"
+    else:
+        status = "fail"
+        notes = f"严重缺失: {', '.join(missing)}"
+
+    return {"status": status, "score": round(score, 3), "notes": notes, "dimensions": dimensions}
+
+
 def verify_article(article: dict) -> dict:
     """校验单篇文章，返回报告。"""
-    article_id = article.get("id", "")
+    article_id = article.get("id", article.get("file", ""))
+    if article_id.endswith(".md"):
+        article_id = article_id[:-3]
     source_url = article.get("source_url", "")
     title = article.get("title", "Untitled")
 
@@ -314,7 +367,16 @@ def verify_article(article: dict) -> dict:
         }
         print("   🌐 翻译: skip (翻译暂未完成)")
 
-    # ── 3. 判定 overall ──
+    # ── 3. Issue 信息完整性（仅 Issue 类文章）──
+    if raw_file.exists():
+        with open(raw_file) as f:
+            local_md = f.read()
+        report["checks"]["issue_completeness"] = check_issue_completeness(local_md, article)
+        if report["checks"]["issue_completeness"]["status"] != "skip":
+            ic = report["checks"]["issue_completeness"]
+            print(f"   📋 Issue 完整性: {ic['status']} ({ic['score']:.0%}) — {ic['notes']}")
+
+    # ── 4. 判定 overall ──
     statuses = [c["status"] for c in report["checks"].values()]
     if all(s == "pass" for s in statuses):
         report["overall"] = "pass"

@@ -48,23 +48,71 @@ SOURCES = {
         "source_org": "amd",
         "credibility": 5,
         "pages": [
+            # ── 总览 ──
             "what-is-rocm.html",
+            "index.html",
+            # ── About ──
             "about/release-notes.html",
+            "about/license.html",
+            # ── Compatibility ──
             "compatibility/compatibility-matrix.html",
-            "reference/env-variables.html",
+            "compatibility/ml-compatibility/pytorch.html",
+            "compatibility/ml-compatibility/tensorflow.html",
+            "compatibility/ml-compatibility/jax.html",
+            "compatibility/ml-compatibility/dgl.html",
+            # ── Conceptual ──
+            "conceptual/gpu-arch.html",
+            "conceptual/gpu-arch/mi100.html",
+            "conceptual/gpu-arch/mi250.html",
+            "conceptual/gpu-arch/mi300.html",
+            "conceptual/file-reorg.html",
+            "conceptual/gpu-isolation.html",
+            "conceptual/cmake-packages.html",
+            "conceptual/ai-pytorch-inception.html",
+            "conceptual/compiler-topics.html",
+            # ── How-To: General ──
+            "how-to/deep-learning-rocm.html",
+            "how-to/programming_guide.html",
+            "how-to/build-rocm.html",
+            "how-to/system-debugging.html",
+            "how-to/setting-cus.html",
+            "how-to/Bar-Memory.html",
+            # ── How-To: Performance ──
+            "how-to/gpu-performance/mi300x.html",
+            "how-to/tuning-guides/mi300x/index.html",
+            "how-to/system-optimization/index.html",
+            "how-to/system-optimization/rdna3.5.html",
+            # ── ROCm for AI ──
+            "how-to/rocm-for-ai/index.html",
+            "how-to/rocm-for-ai/install.html",
+            "how-to/rocm-for-ai/system-setup/index.html",
+            "how-to/rocm-for-ai/training/index.html",
+            "how-to/rocm-for-ai/training/scale-model-training.html",
+            "how-to/rocm-for-ai/inference/index.html",
+            "how-to/rocm-for-ai/inference/deploy-your-model.html",
+            "how-to/rocm-for-ai/inference/hugging-face-models.html",
+            "how-to/rocm-for-ai/inference/llm-inference-frameworks.html",
+            "how-to/rocm-for-ai/fine-tuning/index.html",
+            "how-to/rocm-for-ai/inference-optimization/index.html",
+            "how-to/rocm-for-ai/inference-optimization/model-quantization.html",
+            # ── ROCm for HPC ──
+            "how-to/rocm-for-hpc/index.html",
+            # ── Reference ──
             "reference/api-libraries.html",
+            "reference/env-variables.html",
             "reference/rocm-tools.html",
             "reference/gpu-arch-specs.html",
-            "reference/glossary.html",
-            "conceptual/gpu-arch.html",
-            "conceptual/file-reorg.html",
-            "how-to/deep-learning-rocm.html",
-            "how-to/system-optimization/index.html",
-            "how-to/rocm-for-ai/index.html",
-            "how-to/rocm-for-hpc/index.html",
-            "how-to/gpu-performance/mi300x.html",
-            "how-to/system-debugging.html",
-            "how-to/programming_guide.html",
+            "reference/gpu-atomics-operation.html",
+            "reference/precision-support.html",
+            "reference/graph-safe-support.html",
+            "reference/glossary/index.html",
+            # ── Contribute ──
+            "contribute/contributing.html",
+            "contribute/building.html",
+            "contribute/toolchain.html",
+            # ── Release ──
+            "release/versions.html",
+            "release/changelog.html",
         ],
     },
     "hip": {
@@ -75,8 +123,10 @@ SOURCES = {
         "credibility": 5,
         "pages": [
             "index.html",
-            "reference/api.html",
             "how-to/hip_porting_guide.html",
+            "reference/index.html",
+            "how-to/hip_install.html",
+            "how-to/hip_debugging.html",
         ],
     },
     "rocm-install-linux": {
@@ -88,15 +138,23 @@ SOURCES = {
         "pages": [
             "index.html",
             "reference/system-requirements.html",
+            "install/install-quick.html",
+            "install/install-amdgpu.html",
+            "install/install-post.html",
         ],
     },
-    "pytorch-rocm": {
-        "name": "PyTorch ROCm",
-        "base_url": "https://pytorch.org/docs/stable/",
+    "hipify": {
+        "name": "HIPIFY Docs",
+        "base_url": "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/",
         "source_type": "official",
-        "source_org": "pytorch",
-        "credibility": 3,
-        "pages": [],  # PyTorch docs are huge, selective fetch
+        "source_org": "amd",
+        "credibility": 5,
+        "pages": [
+            "index.html",
+            "supported_apis.html",
+            "hipify-clang.html",
+            "hipify-perl.html",
+        ],
     },
     "amd-blog": {
         "name": "AMD ROCm Blog",
@@ -235,7 +293,18 @@ def process_source(source_key: str, config: dict, dry_run: bool = False) -> int:
             continue
 
         # 生成 frontmatter
-        title = md.split("\n")[0].lstrip("# ").strip() or page.replace(".html", "")
+        # 智能提取标题：跳过 pandoc artifact 行
+        title = ""
+        for line in md.split("\n"):
+            stripped = line.strip()
+            if stripped.startswith("# ") and not stripped.startswith("# :"):
+                candidate = stripped[2:].strip()
+                if candidate and "{" not in candidate and ":::" not in candidate:
+                    if candidate not in ("Skip to main content", "Back to top"):
+                        title = candidate
+                        break
+        if not title:
+            title = page.replace(".html", "").replace("index", "Overview")
         meta = {
             "title": title,
             "source_url": url,
