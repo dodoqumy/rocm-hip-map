@@ -1,0 +1,2927 @@
+{
+  "version": 1,
+  "updated": "2026-04-28T08:39:25Z",
+  "total": 87,
+  "papers": [
+    {
+      "id": "2604.24169v1",
+      "arxiv_id": "2604.24169v1",
+      "title": "PointTransformerX:Portable and Efficient 3D Point Cloud Processing without Sparse Algorithms",
+      "authors": [
+        "Laurenz Reichardt",
+        "Nikolas Ebert",
+        "Oliver Wasenmüller"
+      ],
+      "abstract": "3D point cloud perception remains tightly coupled to custom CUDA operators for spatial operations, limiting portability and efficiency on non-NVIDIA, AMD, and embedded hardware. We introduce PointTransformerX (PTX), a fully PyTorch-native vision transformer backbone for 3D point clouds, removing all custom CUDA operators and external libraries while retaining competitive accuracy. PTX introduces 3D-GS-RoPE, a rotary positional embedding that encodes 3D spatial relationships directly in self-attention without neighborhood construction, and further replaces sparse convolutional patch embedding with a linear projection. PTX explores inference-time scaling of attention windows to improve accuracy without retraining. With a redesigned feed-forward network, PTX achieves 98.7\\% of PointTransformer V3's accuracy on ScanNet with 79.2\\% fewer parameters and executing 1.6\\times faster while requiring just 253 MB memory. PTX runs natively on NVIDIA GPUs, AMD GPUs (ROCm), and CPUs, providing an efficient and portable foundation for point cloud perception.",
+      "arxiv_url": "https://arxiv.org/abs/2604.24169v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.24169v1",
+      "published": "2026-04-27",
+      "updated": "2026-04-27",
+      "categories": [
+        "cs.CV"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "hip",
+        "inference",
+        "llm",
+        "porting",
+        "rocm",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:07Z"
+    },
+    {
+      "id": "2604.18616v1",
+      "arxiv_id": "2604.18616v1",
+      "title": "ARGUS: Agentic GPU Optimization Guided by Data-Flow Invariants",
+      "authors": [
+        "Haohui Mai",
+        "Xiaoyan Guo",
+        "Xiangyun Ding",
+        "Daifeng Li",
+        "Qiuchu Yu",
+        "Chenzhun Guo",
+        "Cong Wang",
+        "Jiacheng Zhao",
+        "Christos Kozyrakis",
+        "Binhang Yuan"
+      ],
+      "abstract": "LLM-based coding agents can generate functionally correct GPU kernels, yet their performance remains far below hand-optimized libraries on critical computations such as matrix multiplication, attention, and Mixture-of-Experts (MoE). Peak GPU performance requires coordinated reasoning over tightly coupled optimizations, including tiling, shared-memory staging, software pipelining, and instruction scheduling, while existing agents rely on sparse pass/fail feedback, leaving them unable to diagnose global constraint violations. We present Argus, an agentic framework that addresses this through data-flow invariants: compile-time specifications encoding how data must be choreographed throughout kernel execution. Argus introduces a tile-based, Pythonic DSL exposing hardware instructions and compiler policies while hiding low-level representations. The DSL provides tag functions to propagate symbolic annotations through data and control flow, and tag assertions to enforce relational constraints at use sites. When violations occur, the compiler returns concrete counterexamples identifying the thread, data element, and program point, enabling dense, structured feedback for targeted fixes. Invariants are verified at compile time via abstract interpretation over a layout algebra and SMT solving, with zero runtime overhead. An in-context reinforcement learning planner learns to select optimizations and synthesize effective invariants, supported by a curated knowledge base of GPU optimization techniques. We evaluate Argus on the AMD MI300X GPU across GEMM, flash attention, and MoE kernels accounting for over 90% of GPU time in LLM inference. Generated kernels achieve 99-104% of state-of-the-art hand-optimized assembly throughput and are 2-1543x faster than existing agentic systems. Argus further generalizes to 200 KernelBench tasks, solving 100% of Level 1 and 90% of Level 2 problems.",
+      "arxiv_url": "https://arxiv.org/abs/2604.18616v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.18616v1",
+      "published": "2026-04-16",
+      "updated": "2026-04-16",
+      "categories": [
+        "cs.DC",
+        "cs.AI",
+        "cs.PL"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "distributed-computing",
+        "inference",
+        "kernel",
+        "llm",
+        "mi300",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:25Z"
+    },
+    {
+      "id": "2604.15379v1",
+      "arxiv_id": "2604.15379v1",
+      "title": "Fleet: Hierarchical Task-based Abstraction for Megakernels on Multi-Die GPUs",
+      "authors": [
+        "Sangeeta Chowdhary",
+        "Ryan Swann",
+        "Sean Siddens",
+        "Muhammad Osama",
+        "Stephen Neuendorffer",
+        "Alexandru Dutu",
+        "Karthik Sangaiah",
+        "Sandeepa Bhuyan",
+        "Samuel Bayliss",
+        "Ganesh Dasika"
+      ],
+      "abstract": "Modern GPUs adopt chiplet-based designs with multiple private cache hierarchies, but current programming models (CUDA/HIP) expose a flat execution hierarchy that cannot express chiplet-level locality or synchronization. This mismatch leads to redundant memory traffic and poor cache utilization in memory-bound workloads such as LLM inference. We present Fleet, a multi-level task model that maps computation to memory scopes. Fleet introduces Chiplet-tasks, a new abstraction that binds work and data to a chiplet and enables coordination through its shared L2 cache. Wavefront-level, CU-level, and device-level tasks align with existing abstractions, while Chiplet-tasks expose a previously unaddressed level of the hierarchy. Fleet is implemented as a persistent kernel runtime with per-chiplet scheduling, allowing workers within a chiplet to cooperatively execute tasks with coordinated cache reuse. On AMD Instinct MI350 with Qwen3-8B, Fleet achieves 1.3-1.5x lower decode latency than vLLM at batch sizes 1-8 through persistent kernel execution and per-chiplet scheduling. At larger batch sizes, cooperative weight tiling increases L2 hit rate (from 12% to 54% at batch size 32 and from 39% to 61% at batch size 64), reducing HBM traffic by up to 37% and delivering 1.27-1.30x speedup over a chiplet-unaware megakernel baseline.",
+      "arxiv_url": "https://arxiv.org/abs/2604.15379v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.15379v1",
+      "published": "2026-04-15",
+      "updated": "2026-04-15",
+      "categories": [
+        "cs.AR"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "architecture",
+        "cuda",
+        "hip",
+        "inference",
+        "kernel",
+        "llm",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2604.10852v1",
+      "arxiv_id": "2604.10852v1",
+      "title": "The xPU-athalon: Quantifying the Competition of AI Acceleration",
+      "authors": [
+        "Alicia Golden",
+        "Carole-Jean Wu",
+        "Gu-Yeon Wei",
+        "David Brooks"
+      ],
+      "abstract": "The push for greater efficiency in AI computation has given rise to an array of accelerator architectures that increasingly challenge the GPU's long-standing dominance. In this work, we provide a quantitative view of this evolving landscape of AI accelerators, including the Cerebras CS-3, SambaNova SN-40, Groq, Gaudi, and TPUv5e platforms, and compare against both NVIDIA (A100, H100) and AMD (MI-300X) GPUs. We evaluate key trade-offs in latency, throughput, power consumption, and energy-efficiency across both (i) end-to-end workloads and (ii) benchmarks of individual computational primitives. Notably, we find the optimal hardware platform varies across batch size, sequence length, and model size, revealing a large underlying optimization space. Our analysis includes detailed power measurements across the prefill and decode phases of LLM inference, as well as quantification of the energy cost of communication. We additionally find that Cerebras, SambaNova, and Gaudi have 10-60% higher idle power than NVIDIA and AMD GPUs, emphasizing the importance of high utilization in order to realize promised efficiency gains. Finally, we assess programmability across platforms based on our experiments with real profiled workloads, comparing the compilation times and software stack maturity required to achieve promised performance.",
+      "arxiv_url": "https://arxiv.org/abs/2604.10852v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.10852v1",
+      "published": "2026-04-12",
+      "updated": "2026-04-12",
+      "categories": [
+        "cs.AR"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "architecture",
+        "inference",
+        "llm",
+        "optimization",
+        "performance",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:25Z"
+    },
+    {
+      "id": "2604.08075v1",
+      "arxiv_id": "2604.08075v1",
+      "title": "Dual-Pool Token-Budget Routing for Cost-Efficient and Reliable LLM Serving",
+      "authors": [
+        "Xunzhuo Liu",
+        "Bowei He",
+        "Xue Liu",
+        "Andy Luo",
+        "Haichen Zhang",
+        "Huamin Chen"
+      ],
+      "abstract": "Production vLLM fleets typically provision each instance for the worst-case context length, leading to substantial KV-cache over-allocation and under-utilized concurrency. In practice, 80-95% of requests are short, yet are served under configurations optimized for long contexts, wasting 4-8$\\times$ throughput capacity and triggering reliability issues such as OOM crashes, preemption, and request rejections. We identify a common root cause for these inefficiencies: configuration-traffic mismatch. We propose dual-pool token-budget routing, a lightweight dispatch mechanism that partitions a homogeneous fleet into two specialized pools: a high-throughput short-context pool and a high-capacity long-context pool. Each request is routed based on its estimated total token budget, computed using a per-category bytes-to-token ratio that is learned online via exponential moving average from usage.prompt_tokens feedback, eliminating the need for a tokenizer. We also develop a simple analytical model that predicts fleet-level cost savings from workload characteristics and measured throughput differences, enabling practitioners to estimate benefits prior to deployment. Evaluations on real-world traces from the Azure LLM Inference Dataset and LMSYS-Chat-1M, serving Llama-3-70B on A100 GPUs, show that our approach reduces GPU-hours by 31-42%, corresponding to \\$2.86M annual savings at fleet scale, while lowering preemption rates by 5.4$\\times$ and improving P99 TTFT by 6%. A case study with Qwen3-235B-A22B on AMD MI300X at 10,000 req/s projects \\$15.4M in annual savings. The method incurs only O(1) dispatch overhead, adapts automatically to heterogeneous workloads, and composes seamlessly with existing optimizations such as PagedAttention, continuous batching, and prefill-decode disaggregation.",
+      "arxiv_url": "https://arxiv.org/abs/2604.08075v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.08075v1",
+      "published": "2026-04-09",
+      "updated": "2026-04-09",
+      "categories": [
+        "cs.CL"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "inference",
+        "llm",
+        "mi300",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:25Z"
+    },
+    {
+      "id": "2604.07276v1",
+      "arxiv_id": "2604.07276v1",
+      "title": "Making Room for AI: Multi-GPU Molecular Dynamics with Deep Potentials in GROMACS",
+      "authors": [
+        "Luca Pennati",
+        "Andong Hu",
+        "Ivy Peng",
+        "Lukas Müllender",
+        "Stefano Markidis"
+      ],
+      "abstract": "GROMACS is a de-facto standard for classical Molecular Dynamics (MD). The rise of AI-driven interatomic potentials that pursue near-quantum accuracy at MD throughput now poses a significant challenge: embedding neural-network inference into multi-GPU simulations retaining high-performance. In this work, we integrate the MLIP framework DeePMD-kit into GROMACS, enabling domain-decomposed, GPU-accelerated inference across multi-node systems. We extend the GROMACS NNPot interface with a DeePMD backend, and we introduce a domain decomposition layer decoupled from the main simulation. The inference is executed concurrently on all processes, with two MPI collectives used each step to broadcast coordinates and to aggregate and redistribute forces. We train an in-house DPA-1 model (1.6 M parameters) on a dataset of solvated protein fragments. We validate the implementation on a small protein system, then we benchmark the GROMACS-DeePMD integration with a 15,668 atom protein on NVIDIA A100 and AMD MI250x GPUs up to 32 devices. Strong-scaling efficiency reaches 66% at 16 devices and 40% at 32; weak-scaling efficiency is 80% to 16 devices and reaches 48% (MI250x) and 40% (A100) at 32 devices. Profiling with the ROCm System profiler shows that >90% of the wall time is spent in DeePMD inference, while MPI collectives contribute <10%, primarily since they act as a global synchronization point. The principal bottlenecks are the irreducible ghost-atom cost set by the cutoff radius, confirmed by a simple throughput model, and load imbalance across ranks. These results demonstrate that production MD with near ab initio fidelity is feasible at scale in GROMACS.",
+      "arxiv_url": "https://arxiv.org/abs/2604.07276v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.07276v1",
+      "published": "2026-04-08",
+      "updated": "2026-04-08",
+      "categories": [
+        "cs.DC",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "distributed-computing",
+        "inference",
+        "machine-learning",
+        "mi300",
+        "performance",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:07Z"
+    },
+    {
+      "id": "2604.06056v2",
+      "arxiv_id": "2604.06056v2",
+      "title": "Fine-Grained Power and Energy Attribution on AMD GPU/APU-Based Exascale Nodes",
+      "authors": [
+        "Adam McDaniel",
+        "Michael Jantz",
+        "Ashesh Sharma",
+        "Steve Abbott",
+        "Steven Martin",
+        "Shreyas Khandekar",
+        "Brandon Neth",
+        "Bruno Villasenor Alvarez",
+        "Aditya Kashi",
+        "Wael Elwasif",
+        "Oscar Hernandez"
+      ],
+      "abstract": "Modern exascale GPU- and APU-based systems provide multiple power and energy sensors, but differences in scope, update rate, timing, and filtering complicate the attribution of short-lived accelerator activity. This paper presents a methodology to characterize and correct these effects on Cray EX systems with AMD Instinct MI250X GPUs (Frontier) and MI300A APUs (Portage). Using controlled square-wave workloads, we quantify update intervals, delay, aliasing, and variability across up to 512 GPUs and 480 APUs with on-chip (rocm-smi/amd-smi) and off-chip Cray Power Management sensors. We reconstruct power from cumulative energy counters to achieve faster response times, validate it against on-chip, off-chip, and node-level sensors, and integrate the resulting streams into a Score-P/PAPI-based tool for time-aligned, phase-level attribution. Applied to rocHPL, rocHPL-MxP, and HPG-MxP, the method separates energy savings due to reduced runtime from changes in power. Mixed precision reduces node energy on Frontier by 79% for rocHPL-MxP and 31% for HPG-MxP, with similar trends on Portage. These results provide portable guidance for sensor validation and power-aware optimization on current and future exascale systems.",
+      "arxiv_url": "https://arxiv.org/abs/2604.06056v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.06056v2",
+      "published": "2026-04-07",
+      "updated": "2026-04-09",
+      "categories": [
+        "cs.DC",
+        "cs.AR"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "architecture",
+        "distributed-computing",
+        "hip",
+        "hpc",
+        "mi300",
+        "optimization",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:07Z"
+    },
+    {
+      "id": "2603.29002v1",
+      "arxiv_id": "2603.29002v1",
+      "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference",
+      "authors": [
+        "Zifan He",
+        "Rui Ma",
+        "Yizhou Sun",
+        "Jason Cong"
+      ],
+      "abstract": "Modern large language models (LLMs) increasingly depends on efficient long-context processing and generation mechanisms, including sparse attention, retrieval-augmented generation (RAG), and compressed contextual memory, to support complex reasoning. We show that these optimizations can be unified into a four-step memory processing pipeline: Prepare Memory, Compute Relevancy, Retrieval, and Apply to Inference. Through systematic profiling, we identify a 22%-97% memory processing overhead in LLM inference and strong heterogeneity in its computational characteristics. Motivated by this insight, we argue that \\textbf{heterogeneous systems} are well-suited to accelerate memory processing and thus end-to-end inference. We demonstrate this approach on a GPU-FPGA system by offloading sparse, irregular, and memory-bounded operations to FPGAs while retaining compute-intensive operations on GPUs. Evaluated on an AMD MI210 GPU and an Alveo U55C FPGA, our system is $1.04\\sim2.2\\times$ faster and requires $1.11\\sim4.7\\times$ less energy across multiple LLM inference optimizations than the GPU baseline (similar results hold on NVIDIA A100). These results establish heterogeneous systems as a practical direction for efficient LLM memory processing and inform future heterogeneous hardware design.",
+      "arxiv_url": "https://arxiv.org/abs/2603.29002v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.29002v1",
+      "published": "2026-03-30",
+      "updated": "2026-03-30",
+      "categories": [
+        "cs.DC",
+        "cs.AI"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "distributed-computing",
+        "inference",
+        "llm",
+        "mi300",
+        "optimization"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:25Z"
+    },
+    {
+      "id": "2603.28793v1",
+      "arxiv_id": "2603.28793v1",
+      "title": "Toward a Universal GPU Instruction Set Architecture: A Cross-Vendor Analysis of Hardware-Invariant Computational Primitives in Parallel Processors",
+      "authors": [
+        "Ojima Abraham",
+        "Onyinye Okoli"
+      ],
+      "abstract": "We present the first systematic cross-vendor analysis of GPU instruction set architectures spanning all four major GPU vendors: NVIDIA (PTX ISA v1.0 through v9.2, Fermi through Blackwell), AMD (RDNA 1 to 4 and CDNA 1 to 4), Intel (Gen11, Xe-LP, Xe-HPG, Xe-HPC), and Apple (G13, reverse-engineered). Drawing on official ISA reference manuals, architecture whitepapers, patent filings, and community reverse-engineering efforts totaling over 5,000 pages of primary sources across 16 distinct microarchitectures, we identify ten hardware-invariant computational primitives that appear across all four architectures, six parameterizable dialects where vendors implement identical concepts with different parameters, and six true architectural divergences representing fundamental design disagreements. Based on this analysis, we propose an abstract execution model for a vendor-neutral GPU ISA grounded in the physical constraints of parallel computation. We validate our model with benchmark results on NVIDIA T4 and Apple M1 hardware, the two most architecturally distant platforms in our study. On five of six benchmark-platform pairs, the abstract model matches or exceeds native vendor-optimized performance. The single outlier (parallel reduction on NVIDIA, 62.5% of native) reveals that intra-wave shuffle must be a mandatory primitive, a finding that refines our proposed model.",
+      "arxiv_url": "https://arxiv.org/abs/2603.28793v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.28793v1",
+      "published": "2026-03-22",
+      "updated": "2026-03-22",
+      "categories": [
+        "cs.DC",
+        "cs.AR"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "architecture",
+        "cdna",
+        "distributed-computing",
+        "hpc",
+        "optimization",
+        "performance",
+        "rdna"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "2603.16428v1",
+      "arxiv_id": "2603.16428v1",
+      "title": "An Efficient Heterogeneous Co-Design for Fine-Tuning on a Single GPU",
+      "authors": [
+        "Ruijia Yang",
+        "Zeyi Wen"
+      ],
+      "abstract": "Fine-tuning Large Language Models (LLMs) has become essential for domain adaptation, but its memory-intensive property exceeds the capabilities of most GPUs. To address this challenge and democratize LLM fine-tuning, we present SlideFormer, a novel system designed for single-GPU environments. Our innovations are: (1) A lightweight asynchronous engine that treats the GPU as a sliding window and overlaps GPU computation with CPU updates and multi-tier I/O. (2) A highly efficient heterogeneous memory management scheme significantly reduces peak memory usage. (3) Optimized Triton kernels to solve key bottlenecks and integrated advanced I/O. This collaborative design enables fine-tuning of the latest 123B+ models on a single RTX 4090, supporting up to 8x larger batch sizes and 6x larger models. In evaluations, SlideFormer achieves 1.40x to 6.27x higher throughput while roughly halving CPU/GPU memory usage compared to baselines, sustaining >95% peak performance on both NVIDIA and AMD GPUs.",
+      "arxiv_url": "https://arxiv.org/abs/2603.16428v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.16428v1",
+      "published": "2026-03-17",
+      "updated": "2026-03-17",
+      "categories": [
+        "cs.DC",
+        "cs.AI"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "distributed-computing",
+        "kernel",
+        "llm",
+        "optimization",
+        "performance",
+        "porting",
+        "rocm",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:25Z"
+    },
+    {
+      "id": "2603.14785v1",
+      "arxiv_id": "2603.14785v1",
+      "title": "SkipOPU: An FPGA-based Overlay Processor for Large Language Models with Dynamically Allocated Computation",
+      "authors": [
+        "Zicheng He",
+        "Anhao Zhao",
+        "Xiaoyu Shen",
+        "Chen Wu",
+        "Lei He"
+      ],
+      "abstract": "Large language models (LLMs) have achieved remarkable performance across a wide range of tasks, but their inference efficiency remains a critical bottleneck due to rapidly growing parameters. Recent advances in dynamic computation allocation address this challenge by exploiting the highly uneven contributions of different tokens and layers, enabling selective execution that significantly reduces redundant computation while preserving model accuracy. However, existing hardware platforms and accelerators are primarily optimized for uniform, static execution, limiting their ability to efficiently support such dynamic inference patterns. In this work, we propose SkipOPU, an FPGA-based overlay processor that dynamically allocates computation across tokens and layers with high flexibility through a lightweight routing mechanism. First, we decouple reduction operations from element-wise computation in nonlinear modules and perform reductions incrementally, which enables both stages to be fused with adjacent linear operations (router or matrix multiplication) for effective latency hiding. Second, motivated by asymmetric sensitivity to numerical precision between activation and weight, we design a PE array that efficiently supports float-fixed hybrid execution. A novel DSP overpacking technique is introduced to maximize hardware utilization while minimizing resource overhead. Finally, we develop a proactive on-chip KV history buffer that exploits cross-layer KV invariance of pruned tokens, eliminating irregular HBM accesses during decoding and supplementing off-chip bandwidth through high-locality on-chip reuse. Experimental results demonstrate that SkipOPU on an AMD U280 FPGA outperforms GPU and other FPGA-based accelerators by 1.23x-3.83x in bandwidth efficiency for LLMs inference with dynamic computation allocation and can reduce up to 25.4% KV storage overhead across varying sequence lengths.",
+      "arxiv_url": "https://arxiv.org/abs/2603.14785v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.14785v1",
+      "published": "2026-03-16",
+      "updated": "2026-03-16",
+      "categories": [
+        "cs.AR"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "architecture",
+        "hip",
+        "inference",
+        "llm",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:25Z"
+    },
+    {
+      "id": "2603.12646v1",
+      "arxiv_id": "2603.12646v1",
+      "title": "98$\\times$ Faster LLM Routing Without a Dedicated GPU: Flash Attention, Prompt Compression, and Near-Streaming for the vLLM Semantic Router",
+      "authors": [
+        "Xunzhuo Liu",
+        "Bowei He",
+        "Xue Liu",
+        "Andy Luo",
+        "Haichen Zhang",
+        "Huamin Chen"
+      ],
+      "abstract": "System-level routers that intercept LLM requests for safety classification, domain routing, and PII detection must be both fast and operationally lightweight: they should add minimal latency to every request, yet not require a dedicated GPU -- an expensive resource better used for LLM inference itself. When the router co-locates on the same GPU as vLLM serving instances, standard attention's $O(n^2)$ memory makes long-context classification (8K--32K tokens) impossible: at 8K tokens, three concurrent classifiers need ${\\sim}$4.5\\,GB for attention masks alone, far exceeding the memory left by vLLM. We present three staged optimizations for the vLLM Semantic Router, benchmarked on AMD Instinct MI300X, that solve both the latency and the memory problem. \\emph{Stage~1}: a custom CK Flash Attention operator for ONNX Runtime on ROCm reduces attention memory from $O(n^2)$ to $O(n)$ and end-to-end (E2E) latency from 4{,}918\\,ms to 127\\,ms (\\textbf{38.7$\\times$}), enabling 8K--32K tokens where SDPA OOMs. \\emph{Stage~2}: classical NLP prompt compression (TextRank, position weighting, TF-IDF, and novelty scoring) reduces all inputs to ${\\sim}$512 tokens without neural inference, capping both latency and GPU memory at a constant regardless of original prompt length (E2E 127$\\to$62\\,ms, \\textbf{2.0$\\times$}). \\emph{Stage~3}: near-streaming body processing with adaptive chunking and zero-copy JSON eliminates serialization overhead (E2E 62$\\to$50\\,ms, \\textbf{1.2$\\times$}). Cumulatively: \\textbf{98$\\times$} improvement (4{,}918\\,ms to 50\\,ms), 16K-token routing in 108\\,ms, and a total router GPU footprint under 800\\,MB -- small enough to share a GPU with LLM serving and removing the need for a dedicated accelerator. Stage~1 targets AMD ROCm (NVIDIA GPUs already have FlashAttention via cuDNN); Stages~2 and~3 are hardware-agnostic.",
+      "arxiv_url": "https://arxiv.org/abs/2603.12646v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12646v1",
+      "published": "2026-03-13",
+      "updated": "2026-03-13",
+      "categories": [
+        "cs.CL"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "inference",
+        "llm",
+        "mi300",
+        "optimization",
+        "performance",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:07Z"
+    },
+    {
+      "id": "2604.09613v2",
+      "arxiv_id": "2604.09613v2",
+      "title": "Token-Budget-Aware Pool Routing for Cost-Efficient LLM Inference",
+      "authors": [
+        "Huamin Chen",
+        "Xunzhuo Liu",
+        "Junchen Jiang",
+        "Bowei He",
+        "Xue Liu"
+      ],
+      "abstract": "Production vLLM fleets provision every instance for worst-case context length, wasting 4-8x concurrency on the 80-95% of requests that are short and simultaneously triggering KV-cache failures -- OOM crashes, preemption storms, and request rejections. Both problems share a single root cause: configuration-traffic mismatch. We propose token-budget-aware pool routing: estimate each request's total token budget using a self-calibrating per-category bytes-per-token ratio, then dispatch it to one of two vLLM pools -- a high-throughput short pool or a high-capacity long pool -- each right-sized for its workload class. The ratio is learned online via exponential moving average from usage.prompt_tokens feedback, requiring no tokenizer. A closed-form cost model, savings = alpha * (1 - 1/rho), predicts fleet-level GPU savings from two observable quantities: the short-traffic fraction alpha and the throughput gain ratio rho. On traces from the Azure LLM Inference Dataset and LMSYS-Chat-1M serving Llama-3-70B on A100 GPUs, token-budget routing reduces GPU instances by 17-39% (\\$1.2-2.0M/yr at 1,000 req/s), with savings verified by a self-contained discrete-event simulator. A case study projecting Qwen3-235B-A22B on AMD MI300X at 10,000 req/s shows \\$15.4M/yr in savings. The algorithm adds O(1) dispatch overhead, self-calibrates across content types without a tokenizer, and composes with PagedAttention, continuous batching, and prefill-decode disaggregation.",
+      "arxiv_url": "https://arxiv.org/abs/2604.09613v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.09613v2",
+      "published": "2026-03-13",
+      "updated": "2026-04-14",
+      "categories": [
+        "cs.DC",
+        "cs.AI"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "distributed-computing",
+        "inference",
+        "llm",
+        "mi300",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:25Z"
+    },
+    {
+      "id": "2603.05931v1",
+      "arxiv_id": "2603.05931v1",
+      "title": "A Persistent-State Dataflow Accelerator for Memory-Bound Linear Attention Decode on FPGA",
+      "authors": [
+        "Neelesh Gupta",
+        "Peter Wang",
+        "Rajgopal Kannan",
+        "Viktor K. Prasanna"
+      ],
+      "abstract": "Gated DeltaNet (GDN) is a linear attention mechanism that replaces the growing KV cache with a fixed-size recurrent state. Hybrid LLMs like Qwen3-Next use 75% GDN layers and achieve competitive accuracy to attention-only models. However, at batch-1, GDN decode is memory-bound on GPUs since the full recurrent state must be round-tripped through HBM every token. We show that this bottleneck is architectural, not algorithmic, as all subquadratic sequence models exhibit arithmetic intensities below 1 FLOP/B at decode time, making them more memory-bound than standard Transformers. We present an FPGA accelerator that eliminates this bottleneck by holding the full 2 MB recurrent state persistently in on-chip BRAM, converting the workload from memory-bound to compute-bound. Our design fuses the GDN recurrence into a five-phase pipelined datapath that performs only one read and one write pass over each state matrix per token, exploits Grouped Value Attention for paired-head parallelism, and overlaps preparation, computation, and output storage via dataflow pipelining. We explore four design points on an AMD Alveo U55C using Vitis HLS, varying head-level parallelism from 2 to 16 value-heads per iteration. Our fastest configuration achieves 63 $μ$s per token, 4.5$\\times$ faster than the GPU reference on NVIDIA H100 PCIe. Post-implementation power analysis reports 9.96 W on-chip, yielding up to 60$\\times$ greater energy efficiency per token decoded.",
+      "arxiv_url": "https://arxiv.org/abs/2603.05931v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05931v1",
+      "published": "2026-03-06",
+      "updated": "2026-03-06",
+      "categories": [
+        "cs.AR",
+        "cs.LG"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "architecture",
+        "hip",
+        "llm",
+        "machine-learning"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:25Z"
+    },
+    {
+      "id": "2603.08747v1",
+      "arxiv_id": "2603.08747v1",
+      "title": "Diagnosing FP4 inference: a layer-wise and block-wise sensitivity analysis of NVFP4 and MXFP4",
+      "authors": [
+        "Musa Cim",
+        "Burak Topcu",
+        "Mahmut Taylan Kandemir"
+      ],
+      "abstract": "Quantization addresses the high resource demand for large language models (LLMs) by alleviating memory pressure and bandwidth congestion and providing significantly scaled compute power with a tolerable impact on accuracy. Four-bit floating point (FP4), the lowest-precision format that preserves essential numerical properties such as exponent and sign, has begun to be adopted in cutting-edge architectures, including Blackwell and AMD CDNA, to support LLM quantization and reduce deployment costs. Although aggressive quantization can yield efficiency gains, the quantization sensitivity of within-transformer layers and whether these sensitivities generalize across existing FP4 formats and model scales remain underexplored. To elucidate quantization sensitivity, this study conducts a systematic analysis of two FP4 formats, MXFP4 and NVFP4, across three Qwen2.5 model scales (0.5B, 7B, and 14B), using controlled component-wise and block-wise isolation methodologies. We observe that MLP up- and down-projection layers consistently dominate in terms of sensitivity, while gate and attention projections are moderately and substantially less sensitive to FP4 quantization, respectively. We further find that sensitivity does not universally localize to the final blocks, but early blocks can be highly sensitive, particularly under MXFP4. Our results provide a diagnostic characterization of the inference behavior of FP4 across components, depths, and FP4 formats.",
+      "arxiv_url": "https://arxiv.org/abs/2603.08747v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.08747v1",
+      "published": "2026-03-05",
+      "updated": "2026-03-05",
+      "categories": [
+        "cs.AR",
+        "cs.AI"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "architecture",
+        "cdna",
+        "inference",
+        "llm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "2603.00292v1",
+      "arxiv_id": "2603.00292v1",
+      "title": "Ray Tracing using HIP",
+      "authors": [
+        "Atsushi Yoshimura",
+        "Kenta Eto",
+        "Daniel Meister",
+        "Takahiro Harada"
+      ],
+      "abstract": "In this technical report, we introduce the basics of ray tracing and explain how to accelerate the computation of the rendering algorithm in HIP. We also show how to use a HIP ray tracing framework - HIPRT, leveraging hardware ray tracing features of AMD GPUs. We conclude this technical report with a list of references for further reading.",
+      "arxiv_url": "https://arxiv.org/abs/2603.00292v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.00292v1",
+      "published": "2026-02-27",
+      "updated": "2026-02-27",
+      "categories": [
+        "cs.GR"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "hip",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2603.10031v1",
+      "arxiv_id": "2603.10031v1",
+      "title": "Architecture-Aware LLM Inference Optimization on AMD Instinct GPUs: A Comprehensive Benchmark and Deployment Study",
+      "authors": [
+        "Athos Georgiou"
+      ],
+      "abstract": "We present a cross-architecture evaluation of production LLM inference on AMD Instinct MI325X GPUs, benchmarking four models spanning 235B to 1 trillion parameters across three architectural families (MoE+MLA, Dense+GQA, MoE+GQA) on an 8-GPU cluster with 2TB aggregate HBM3e using vLLM v0.14.1. Our results demonstrate that architecture-aware optimization is essential: MLA models require block size 1 and cannot use KV cache offloading, while GQA models benefit from both. The AMD AITER runtime is required for competitive MLA inference throughput and must be selectively disabled for architectures with incompatible attention head configurations. A controlled AITER ablation on Llama-3.1-405B (n=5 per condition) reveals a modest 3-5% throughput benefit at high concurrency but 2-16x higher measurement variability, confirming that AITER's large speedups target MoE/MLA kernels specifically. Under text-only workloads, Llama-405B and DeepSeek V3.2 achieve comparable peak throughput (15,944 and 15,343 tok/s) despite an order-of-magnitude difference in active parameters. Under vision workloads, Qwen3-VL-235B reaches 47,873 tok/s, 6.5x higher than Kimi-K2.5 (7,327 tok/s). Active parameter count per token is associated with inference throughput, though confounded by differences in quantization, AITER acceleration, and tensor parallelism. All four models exhibit a common throughput saturation point consistent with a memory-bandwidth bottleneck (~500 concurrent for short sequences, ~100-200 for longer sequences). All models maintain 100% HTTP-level success rates through 1,000 concurrent users, processing 18.9 million tokens across 17,406 requests without failures.",
+      "arxiv_url": "https://arxiv.org/abs/2603.10031v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.10031v1",
+      "published": "2026-02-27",
+      "updated": "2026-02-27",
+      "categories": [
+        "cs.AR",
+        "cs.AI",
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "architecture",
+        "distributed-computing",
+        "inference",
+        "kernel",
+        "llm",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:15Z"
+    },
+    {
+      "id": "2604.02344v1",
+      "arxiv_id": "2604.02344v1",
+      "title": "Characterizing WebGPU Dispatch Overhead for LLM Inference Across Four GPU Vendors, Three Backends, and Three Browsers",
+      "authors": [
+        "Jędrzej Maczan"
+      ],
+      "abstract": "WebGPU's security-focused design imposes per-operation validation that compounds across the many small dispatches in neural network inference, yet the true cost of this overhead is poorly characterized. We present a systematic characterization of WebGPU dispatch overhead for LLM inference at batch size 1, spanning four GPU vendors (NVIDIA, AMD, Apple, Intel), two native implementations (Dawn, wgpu-native) and three browsers (Chrome, Safari, Firefox), and two model sizes (Qwen2.5-0.5B and 1.5B). Our primary contribution is a sequential-dispatch methodology that reveals naive single-operation benchmarks overestimate dispatch cost by ${\\sim}20\\times$. The true per-dispatch cost of WebGPU API overhead alone is 24-36 $μ$s on Vulkan and 32-71 $μ$s on Metal, while the total per-operation overhead including Python cost is ${\\sim}95$~$μ$s, which turns out to be a distinction critical for optimization. On Vulkan, kernel fusion improves throughput by 53%, while CUDA fusion provides no benefit, confirming that per-operation overhead is a primary differentiator. LLM inference was tested across three major operating systems (Linux, Windows, macOS). We built $\\texttt{torch-webgpu}$, a PrivateUse1-based out-of-tree PyTorch backend and an FX-to-WebGPU compiler, which on our reference platform achieves 11--12% of CUDA performance. At dtype-matched float32, RTX PRO 2000 achieves 1.4$\\times$ WebGPU's throughput despite ${\\sim}6\\times$ less compute than RTX 5090. For dispatch overhead, backend choice is the dominant factor, although implementation choice also matters substantially within a backend (2.2$\\times$ for Metal). In terms of dispatch vs kernel compute efficiency, we conclude that at batch=1 with the current dispatch-heavy pipeline, per-operation overhead dominates regardless of kernel quality. All code, benchmarks, and raw data are open source.",
+      "arxiv_url": "https://arxiv.org/abs/2604.02344v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.02344v1",
+      "published": "2026-02-09",
+      "updated": "2026-02-09",
+      "categories": [
+        "cs.LG",
+        "cs.DC",
+        "cs.PF"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "inference",
+        "kernel",
+        "llm",
+        "machine-learning",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:25Z"
+    },
+    {
+      "id": "2601.22585v1",
+      "arxiv_id": "2601.22585v1",
+      "title": "HetCCL: Accelerating LLM Training with Heterogeneous GPUs",
+      "authors": [
+        "Heehoon Kim",
+        "Jaehwan Lee",
+        "Taejeoung Kim",
+        "Jongwon Park",
+        "Jinpyo Kim",
+        "Pyongwon Suh",
+        "Ryan H. Choi",
+        "Sangwoo Lee",
+        "Jaejin Lee"
+      ],
+      "abstract": "The rapid growth of large language models is driving organizations to expand their GPU clusters, often with GPUs from multiple vendors. However, current deep learning frameworks lack support for collective communication across heterogeneous GPUs, leading to inefficiency and higher costs. We present HetCCL, a collective communication library that unifies vendor-specific backends and enables RDMA-based communication across GPUs without requiring driver modifications. HetCCL introduces two novel mechanisms that enable cross-vendor communication while leveraging optimized vendor libraries, NVIDIA NCCL and AMD RCCL. Evaluations on a multi-vendor GPU cluster show that HetCCL matches NCCL and RCCL performance in homogeneous setups while uniquely scaling in heterogeneous environments, enabling practical, high-performance training with both NVIDIA and AMD GPUs without changes to existing deep learning applications.",
+      "arxiv_url": "https://arxiv.org/abs/2601.22585v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.22585v1",
+      "published": "2026-01-30",
+      "updated": "2026-01-30",
+      "categories": [
+        "cs.DC",
+        "cs.LG"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "distributed-computing",
+        "llm",
+        "machine-learning",
+        "optimization",
+        "performance",
+        "rocm",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:25Z"
+    },
+    {
+      "id": "2601.17526v1",
+      "arxiv_id": "2601.17526v1",
+      "title": "Evaluating Application Characteristics for GPU Portability Layer Selection",
+      "authors": [
+        "Mohammad Atif",
+        "Meghna Bhattacharya",
+        "Mark Dewing",
+        "Zhihua Dong",
+        "Julien Esseiva",
+        "Oliver Gutsche",
+        "Matti Kortelainen",
+        "Ka Hei Martin Kwok",
+        "Charles Leggett",
+        "Meifeng Lin",
+        "Aleksei Strelchenko",
+        "Vakhang Tsulaia",
+        "Brett Viren",
+        "Tianle Wang",
+        "Haiwang Yu"
+      ],
+      "abstract": "GPUs have become the dominant source of computing power for high performance computing and are increasingly being used across the High Energy Physics computing landscape for a wide variety of tasks. Though NVIDIA is currently the main provider of GPUs, AMD and Intel are rapidly increasing their market share. As a result, programming using a vendor-specific language such as CUDA can significantly reduce deployment choices. There are a number of portability layers such as Kokkos, Alpaka, SYCL, OpenMP and std::par that permit execution on a broad range of GPU and CPU architectures, significantly increasing the flexibility of application programmers. However, each of these portability layers has its own characteristics, performing better at some tasks and worse at others, or placing limitations on aspects of the application. In this presentation, we report on a study of application and kernel characteristics that can influence the choice of a portability layer and show how each layer handles these characteristics. We have analyzed representative heterogeneous applications from CMS (patatrack and p2r), DUNE (Wire-Cell Toolkit), and ATLAS (FastCaloSim) to identify key application characteristics that have different behaviors for the various portability technologies. Using these results, developers can make more informed decisions on which GPU portability technology is best suited to their application.",
+      "arxiv_url": "https://arxiv.org/abs/2601.17526v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.17526v1",
+      "published": "2026-01-24",
+      "updated": "2026-01-24",
+      "categories": [
+        "hep-ex"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "inference",
+        "kernel",
+        "performance",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:21Z"
+    },
+    {
+      "id": "2601.15710v1",
+      "arxiv_id": "2601.15710v1",
+      "title": "FlexLLM: Composable HLS Library for Flexible Hybrid LLM Accelerator Design",
+      "authors": [
+        "Jiahao Zhang",
+        "Zifan He",
+        "Nicholas Fraser",
+        "Michaela Blott",
+        "Yizhou Sun",
+        "Jason Cong"
+      ],
+      "abstract": "We present FlexLLM, a composable High-Level Synthesis (HLS) library for rapid development of domain-specific LLM accelerators. FlexLLM exposes key architectural degrees of freedom for stage-customized inference, enabling hybrid designs that tailor temporal reuse and spatial dataflow differently for prefill and decode, and provides a comprehensive quantization suite to support accurate low-bit deployment. Using FlexLLM, we build a complete inference system for the Llama-3.2 1B model in under two months with only 1K lines of code. The system includes: (1) a stage-customized accelerator with hardware-efficient quantization (12.68 WikiText-2 PPL) surpassing SpinQuant baseline, and (2) a Hierarchical Memory Transformer (HMT) plug-in for efficient long-context processing. On the AMD U280 FPGA at 16nm, the accelerator achieves 1.29$\\times$ end-to-end speedup, 1.64$\\times$ higher decode throughput, and 3.14$\\times$ better energy efficiency than an NVIDIA A100 GPU (7nm) running BF16 inference; projected results on the V80 FPGA at 7nm reach 4.71$\\times$, 6.55$\\times$, and 4.13$\\times$, respectively. In long-context scenarios, integrating the HMT plug-in reduces prefill latency by 23.23$\\times$ and extends the context window by 64$\\times$, delivering 1.10$\\times$/4.86$\\times$ lower end-to-end latency and 5.21$\\times$/6.27$\\times$ higher energy efficiency on the U280/V80 compared to the A100 baseline. FlexLLM thus bridges algorithmic innovation in LLM inference and high-performance accelerators with minimal manual effort.",
+      "arxiv_url": "https://arxiv.org/abs/2601.15710v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.15710v1",
+      "published": "2026-01-22",
+      "updated": "2026-01-22",
+      "categories": [
+        "cs.AR",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "architecture",
+        "inference",
+        "llm",
+        "machine-learning",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:25Z"
+    },
+    {
+      "id": "2601.11822v1",
+      "arxiv_id": "2601.11822v1",
+      "title": "RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation",
+      "authors": [
+        "Amna Masood",
+        "Pratishtha Gaur",
+        "Nuwan Jayasena"
+      ],
+      "abstract": "Two widely adopted techniques for LLM inference serving systems today are hybrid batching and disaggregated serving. A hybrid batch combines prefill and decode tokens of different requests in the same batch to improve resource utilization and throughput at the cost of increased latency per token. In contrast, disaggregated serving decouples compute-bound prefill and bandwidth-bound decode phases to optimize for service level objectives (SLOs) at the cost of resource under-utilization and KV-cache transfer overheads. To address the limitations of these techniques, we propose RAPID-Serve: a technique to concurrently execute prefill and decode on the same GPU(s) to meet latency SLOs while maintaining high throughput and efficient resource utilization. Furthermore, we propose Adaptive Resource Management for runtime compute resource allocation, optionally leveraging CU masking (a fine-grained Compute Unit partitioning feature on AMD Instinct\\textsuperscript{TM} GPUs). RAPID-Serve provides up to 4.1x (average 1.7x) unconstrained throughput improvement and 32x and higher (average 4.9x) throughput improvement under SLO constraints, showing it as an effective strategy compared to the state-of-the-art approaches, particularly in resource-constrained environments.",
+      "arxiv_url": "https://arxiv.org/abs/2601.11822v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.11822v1",
+      "published": "2026-01-16",
+      "updated": "2026-01-16",
+      "categories": [
+        "cs.DC",
+        "cs.LG"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "distributed-computing",
+        "inference",
+        "llm",
+        "machine-learning",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:15Z"
+    },
+    {
+      "id": "2512.21697v1",
+      "arxiv_id": "2512.21697v1",
+      "title": "GaDE -- GPU-acceleration of time-dependent Dirac Equation for exascale",
+      "authors": [
+        "Johanne Elise Vembe",
+        "Marcin Krotkiewski",
+        "Magnar Bjørgve",
+        "Morten Førre",
+        "Hicham Agueny"
+      ],
+      "abstract": "Modern heterogeneous high-performance computing (HPC) systems powered by advanced graphics processing unit (GPU) architectures enable accelerating computing with unprecedented performance and scalability. Here, we present a GPU-accelerated solver for the three-dimensional (3D) time-dependent Dirac equation optimized for distributed HPC systems. The solver named GaDE is designed to simulate the electron dynamics in atoms induced by electromagnetic fields in the relativistic regime. It combines MPI with CUDA/HIP to target both NVIDIA and AMD GPU architectures. We discuss our implementation strategies in which most of the computations are carried out on GPUs, taking advantage of the GPU-aware MPI feature to optimize communication performance. We evaluate GaDE on the pre-exascale supercomputer LUMI, powered by AMD MI250X GPUs and HPE's Slingshot interconnect. Single-GPU performance on NVIDIA A100, GH200, and AMD MI250X shows comparable performance between A100 and MI250X in compute and memory bandwidth, with GH200 delivering higher performance. Weak scaling on LUMI demonstrates exceptional scalability, achieving 85% parallel efficiency across 2048 GPUs, while strong scaling delivers a 16x speedup on 32 GPUs - 50% efficiency for a communication-intensive, time-dependent Dirac equation solver. These results demonstrate GaDE's high scalability, making it suitable for exascale systems and enabling predictive simulations for ultra-intense laser experiments probing relativistic quantum effects.",
+      "arxiv_url": "https://arxiv.org/abs/2512.21697v1",
+      "pdf_url": "https://arxiv.org/pdf/2512.21697v1",
+      "published": "2025-12-25",
+      "updated": "2025-12-25",
+      "categories": [
+        "physics.comp-ph",
+        "quant-ph"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "hip",
+        "hpc",
+        "mi300",
+        "optimization",
+        "performance",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2512.22147v1",
+      "arxiv_id": "2512.22147v1",
+      "title": "GPU Kernel Optimization Beyond Full Builds: An LLM Framework with Minimal Executable Programs",
+      "authors": [
+        "Ruifan Chu",
+        "Anbang Wang",
+        "Xiuxiu Bai",
+        "Shuai Liu",
+        "Xiaoshe Dong"
+      ],
+      "abstract": "In high-performance computing, hotspot GPU kernels are primary bottlenecks, and expert manual tuning is costly and hard to port. Large language model methods often assume kernels can be compiled and executed cheaply, which fails in large applications where full builds and runs are expensive. We present an end-to-end LLM framework with performance feedback that optimizes kernels without building the full application. From independently extracted hotspot kernels, it automatically completes code into a Minimal Executable Program (MEP), then performs multi-round iterative optimization and evaluation outside the full application. The framework integrates Automatic Error Repair and Performance Pattern Inheritance to fix faults, preserve correctness, reuse effective tiling/memory/synchronization strategies, and reduce search cost. Optimized variants are reintegrated into the original application for validation. We evaluate on NVIDIA GPUs and the Haiguang Deep Computing Unit (DCU) platform (AMD-licensed architecture) using PolyBench, the AMD APP SDK, and hotspot kernels from large-scale supercomputing applications. The method achieves average speedups of 5.05x (PolyBench on NVIDIA), 7.77x (PolyBench on DCU), 1.77x (AMD APP SDK), and 1.25x on three hotspot kernels, surpassing direct LLM optimization. The approach requires no full-source dependencies, offers cross-platform portability, and enables practical, low-cost GPU kernel optimization.",
+      "arxiv_url": "https://arxiv.org/abs/2512.22147v1",
+      "pdf_url": "https://arxiv.org/pdf/2512.22147v1",
+      "published": "2025-12-15",
+      "updated": "2025-12-15",
+      "categories": [
+        "cs.DC",
+        "cs.AI",
+        "cs.LG",
+        "cs.PF"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "distributed-computing",
+        "hpc",
+        "kernel",
+        "llm",
+        "machine-learning",
+        "optimization",
+        "performance",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:25Z"
+    },
+    {
+      "id": "2512.08242v1",
+      "arxiv_id": "2512.08242v1",
+      "title": "Chopper: A Multi-Level GPU Characterization Tool & Derived Insights Into LLM Training Inefficiency",
+      "authors": [
+        "Marco Kurzynski",
+        "Shaizeen Aga",
+        "Di Wu"
+      ],
+      "abstract": "Training large language models (LLMs) efficiently requires a deep understanding of how modern GPU systems behave under real-world distributed training workloads. While prior work has focused primarily on kernel-level performance or single-GPU microbenchmarks, the complex interaction between communication, computation, memory behavior, and power management in multi-GPU LLM training remains poorly characterized. In this work, we introduce Chopper, a profiling and analysis framework that collects, aligns, and visualizes GPU kernel traces and hardware performance counters across multiple granularities (i.e., from individual kernels to operations, layers, phases, iterations, and GPUs). Using Chopper, we perform a comprehensive end-to-end characterization of Llama 3 8B training under fully sharded data parallelism (FSDP) on an eight-GPU AMD InstinctTM MI300X node. Our analysis reveals several previously underexplored bottlenecks and behaviors, such as memory determinism enabling higher, more stable GPU and memory frequencies. We identify several sources of inefficiencies, with frequency overhead (DVFS effects) being the single largest contributor to the gap between theoretical and observed performance, exceeding the impact of MFMA utilization loss, communication/computation overlap, and kernel launch overheads. Overall, Chopper provides the first holistic, multi-granularity characterization of LLM training on AMD InstinctTM MI300X GPUs, yielding actionable insights for optimizing training frameworks, improving power-management strategies, and guiding future GPU architecture and system design.",
+      "arxiv_url": "https://arxiv.org/abs/2512.08242v1",
+      "pdf_url": "https://arxiv.org/pdf/2512.08242v1",
+      "published": "2025-12-09",
+      "updated": "2025-12-09",
+      "categories": [
+        "cs.DC",
+        "cs.AR"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "architecture",
+        "distributed-computing",
+        "kernel",
+        "llm",
+        "mi300",
+        "performance",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:25Z"
+    },
+    {
+      "id": "2512.04447v2",
+      "arxiv_id": "2512.04447v2",
+      "title": "GPU-Portable Real-Space Density Functional Theory Implementation on Unified-Memory Architectures",
+      "authors": [
+        "Atsushi M. Ito"
+      ],
+      "abstract": "We present a GPU-portable implementation of a real-space density functional theory (DFT) code ``QUMASUN'' and benchmark it on the new Plasma Simulator featuring Intel Xeon 6980P CPUs, and AMD MI300A GPUs. Additional tests were performed on an NVIDIA GH200 GPU. In particular MI300A supports unified memory and GH200 supports coherent memory interconnect, simplifying GPU porting. A lightweight C++ lambda-based layer enables CPU, CUDA, and HIP execution without OpenMP/OpenACC preprocessor directives. For diamond (216 atoms) and tungsten (128 atoms) systems, MI300A and GH200 achieve 2.0-2.8 $\\times$ and 2.3-2.4 $\\times$ speedups over a 256-core Xeon node. The compute-bound kernels, which are fast Fourier transforms (FFT), dense matrix-matrix multiplications (GEMM) and eigenvalue solver, show substantial acceleration on both GPUs, indicating that the present GPU-portable approach can benefit a wide range of plasma-fusion simulation codes beyond DFT.",
+      "arxiv_url": "https://arxiv.org/abs/2512.04447v2",
+      "pdf_url": "https://arxiv.org/pdf/2512.04447v2",
+      "published": "2025-12-04",
+      "updated": "2025-12-05",
+      "categories": [
+        "physics.comp-ph",
+        "cond-mat.mtrl-sci",
+        "physics.plasm-ph"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "hip",
+        "kernel",
+        "mi300",
+        "performance",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2511.10628v2",
+      "arxiv_id": "2511.10628v2",
+      "title": "Instella: Fully Open Language Models with Stellar Performance",
+      "authors": [
+        "Jiang Liu",
+        "Jialian Wu",
+        "Xiaodong Yu",
+        "Yusheng Su",
+        "Prakamya Mishra",
+        "Gowtham Ramesh",
+        "Sudhanshu Ranjan",
+        "Chaitanya Manem",
+        "Ximeng Sun",
+        "Ze Wang",
+        "Pratik Prabhanjan Brahma",
+        "Zicheng Liu",
+        "Emad Barsoum"
+      ],
+      "abstract": "Large language models (LLMs) have demonstrated remarkable performance across a wide range of tasks, yet the majority of high-performing models remain closed-source or partially open, limiting transparency and reproducibility. In this work, we introduce Instella, a family of fully open three billion parameter language models trained entirely on openly available data and codebase. Powered by AMD Instinct MI300X GPUs, Instella is developed through large-scale pre-training, general-purpose instruction tuning, and alignment with human preferences. Despite using substantially fewer pre-training tokens than many contemporaries, Instella achieves state-of-the-art results among fully open models and is competitive with leading open-weight models of comparable size. We further release two specialized variants: Instella-Long, capable of handling context lengths up to 128K tokens, and Instella-Math, a reasoning-focused model enhanced through supervised fine-tuning and reinforcement learning on mathematical tasks. Together, these contributions establish Instella as a transparent, performant, and versatile alternative for the community, advancing the goal of open and reproducible language modeling research.",
+      "arxiv_url": "https://arxiv.org/abs/2511.10628v2",
+      "pdf_url": "https://arxiv.org/pdf/2511.10628v2",
+      "published": "2025-11-13",
+      "updated": "2025-11-14",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "llm",
+        "machine-learning",
+        "mi300",
+        "optimization",
+        "performance",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:15Z"
+    },
+    {
+      "id": "2511.09861v2",
+      "arxiv_id": "2511.09861v2",
+      "title": "Lit Silicon: A Case Where Thermal Imbalance Couples Concurrent Execution in Multiple GPUs",
+      "authors": [
+        "Marco Kurzynski",
+        "Shaizeen Aga",
+        "Di Wu"
+      ],
+      "abstract": "GPU systems are increasingly powering modern datacenters at scale. Despite being highly performant, GPU systems suffer from performance variation at the node and cluster levels. Such performance variation significantly impacts both high-performance computing and artificial intelligence workloads, such as cutting-edge large language models (LLMs). We analyze the performance of a single-node multi-GPU system running LLM training, and observe that the kernel-level performance variation is highly correlated with concurrent computation communication (C3), a technique to overlap computation and communication across GPUs for performance gains. We then take a further step to reason that thermally induced straggling coupling with C3 impacts performance variation, coined as the Lit Silicon effect. Lit Silicon describes that in a multi-GPU node, thermal imbalance across GPUs introduces node-level straggler GPUs, which in turn slow down the leader GPUs. Lit Silicon leads to node-level performance variation and inefficiency, impacting the entire datacenter from the bottom up. We propose analytical performance and power models for Lit Silicon, to understand the potential system-level gains. We further design simple detection and mitigation techniques to effectively address the Lit Silicon problem, and evaluate three different power management solutions, including power optimization under GPU thermal design power, performance optimization under node-level GPU power capping, and performance optimization under node-level CPU power sloshing. We conduct experiments on two workloads on two AMD InstinctTM MI300X GPU systems under two LLM training frameworks, and observe up to 6% performance and 4% power improvements, potentially saving hundreds of millions of dollars in datacenters. Our solution is almost free lunch and can be effortlessly adopted in datacenters as a new node-level power management layer.",
+      "arxiv_url": "https://arxiv.org/abs/2511.09861v2",
+      "pdf_url": "https://arxiv.org/pdf/2511.09861v2",
+      "published": "2025-11-13",
+      "updated": "2025-11-14",
+      "categories": [
+        "cs.DC",
+        "cs.AR"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "architecture",
+        "distributed-computing",
+        "kernel",
+        "llm",
+        "mi300",
+        "optimization",
+        "performance",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:25Z"
+    },
+    {
+      "id": "2511.06605v2",
+      "arxiv_id": "2511.06605v2",
+      "title": "DMA-Latte: Expanding the Reach of DMA Offloads to Latency-bound ML Communication",
+      "authors": [
+        "Suchita Pati",
+        "Shaizeen Aga",
+        "Mahzabeen Islam",
+        "Ryan Quach",
+        "Saleel Kudchadker",
+        "Mohamed Assem Ibrahim"
+      ],
+      "abstract": "Offloading communication to existing direct memory access (DMA) engines, available on most state-of-the-art commercial GPUs, has emerged as an interesting and low-cost solution to efficiently overlap computation and communication in machine learning (ML). That said, so far, the reach of DMA offloads has been limited to bandwidth-bound scenarios only (10s of MB to GB transfer sizes). In this work, we aim to break this barrier and expand the reach of DMA communication offloads to even latency-bound regions (KB to low MB). Specifically, we discuss in this work hitherto untapped features available in the state-of-the-art AMD Instinct$^{\\mathrm{TM}}$ MI300X GPUs that render DMA communication offloads competitive even for latency-bound regions. We demonstrate the efficacy of these features at the operator-level (ML communication collectives such as all-gather and all-to-all), and also at the end-to-end workload-level (LLM inference). For the former, our optimized DMA offloads close up to 4.5$\\times$ performance gap and deliver additional power savings (3-10%) for ML collectives as compared to state-of-the-art GPU core-based communication library, RCCL. For the latter, we demonstrate acceleration for LLM inference: up to 1.5$\\times$ lower latency and up to 1.9$\\times$ higher throughput over the state-of-the-art vLLM inference framework. We conclude with a discussion of AMD Instinct GPU runtime innovations that stand to expose these features and additionally identify future hardware-software co-design potential to further improve DMA offload efficiency.",
+      "arxiv_url": "https://arxiv.org/abs/2511.06605v2",
+      "pdf_url": "https://arxiv.org/pdf/2511.06605v2",
+      "published": "2025-11-10",
+      "updated": "2026-04-10",
+      "categories": [
+        "cs.DC",
+        "cs.AR"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "architecture",
+        "distributed-computing",
+        "inference",
+        "llm",
+        "machine-learning",
+        "mi300",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:15Z"
+    },
+    {
+      "id": "2509.21039v1",
+      "arxiv_id": "2509.21039v1",
+      "title": "Mojo: MLIR-Based Performance-Portable HPC Science Kernels on GPUs for the Python Ecosystem",
+      "authors": [
+        "William F. Godoy",
+        "Tatiana Melnichenko",
+        "Pedro Valero-Lara",
+        "Wael Elwasif",
+        "Philip Fackler",
+        "Rafael Ferreira Da Silva",
+        "Keita Teranishi",
+        "Jeffrey S. Vetter"
+      ],
+      "abstract": "We explore the performance and portability of the novel Mojo language for scientific computing workloads on GPUs. As the first language based on the LLVM's Multi-Level Intermediate Representation (MLIR) compiler infrastructure, Mojo aims to close performance and productivity gaps by combining Python's interoperability and CUDA-like syntax for compile-time portable GPU programming. We target four scientific workloads: a seven-point stencil (memory-bound), BabelStream (memory-bound), miniBUDE (compute-bound), and Hartree-Fock (compute-bound with atomic operations); and compare their performance against vendor baselines on NVIDIA H100 and AMD MI300A GPUs. We show that Mojo's performance is competitive with CUDA and HIP for memory-bound kernels, whereas gaps exist on AMD GPUs for atomic operations and for fast-math compute-bound kernels on both AMD and NVIDIA GPUs. Although the learning curve and programming requirements are still fairly low-level, Mojo can close significant gaps in the fragmented Python ecosystem in the convergence of scientific computing and AI.",
+      "arxiv_url": "https://arxiv.org/abs/2509.21039v1",
+      "pdf_url": "https://arxiv.org/pdf/2509.21039v1",
+      "published": "2025-09-25",
+      "updated": "2025-09-25",
+      "categories": [
+        "cs.DC",
+        "cs.CE",
+        "cs.ET",
+        "cs.PL"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "hip",
+        "hpc",
+        "kernel",
+        "mi300",
+        "performance",
+        "porting",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2509.16328v2",
+      "arxiv_id": "2509.16328v2",
+      "title": "The Role of High-Performance GPU Resources in Large Language Model Based Radiology Imaging Diagnosis",
+      "authors": [
+        "Jyun-Ping Kao"
+      ],
+      "abstract": "Large-language models (LLMs) are rapidly being applied to radiology, enabling automated image interpretation and report generation tasks. Their deployment in clinical practice requires both high diagnostic accuracy and low inference latency, which in turn demands powerful hardware. High-performance graphical processing units (GPUs) provide the necessary compute and memory throughput to run large LLMs on imaging data. We review modern GPU architectures (e.g. NVIDIA A100/H100, AMD Instinct MI250X/MI300) and key performance metrics of floating-point throughput, memory bandwidth, VRAM capacity. We show how these hardware capabilities affect radiology tasks: for example, generating reports or detecting findings on CheXpert and MIMIC-CXR images is computationally intensive and benefits from GPU parallelism and tensor-core acceleration. Empirical studies indicate that using appropriate GPU resources can reduce inference time and improve throughput. We discuss practical challenges including privacy, deployment, cost, power and optimization strategies: mixed-precision, quantization, compression, and multi-GPU scaling. Finally, we anticipate that next-generation features (8-bit tensor cores, enhanced interconnect) will further enable on-premise and federated radiology AI. Advancing GPU infrastructure is essential for safe, efficient LLM-based radiology diagnostics.",
+      "arxiv_url": "https://arxiv.org/abs/2509.16328v2",
+      "pdf_url": "https://arxiv.org/pdf/2509.16328v2",
+      "published": "2025-09-19",
+      "updated": "2025-09-24",
+      "categories": [
+        "q-bio.TO",
+        "cs.CL",
+        "eess.IV",
+        "physics.med-ph"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "inference",
+        "llm",
+        "mi300",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:15Z"
+    },
+    {
+      "id": "2508.16806v1",
+      "arxiv_id": "2508.16806v1",
+      "title": "Accelerating a Linear Programming Algorithm on AMD GPUs",
+      "authors": [
+        "Xiyan Hu",
+        "Titus Parker",
+        "Connor Phillips",
+        "Yifa Yu"
+      ],
+      "abstract": "Linear Programming (LP) is a foundational optimization technique with widespread applications in finance, energy trading, and supply chain logistics. However, traditional Central Processing Unit (CPU)-based LP solvers often struggle to meet the latency and scalability demands of dynamic, high-dimensional industrial environments, creating a significant computational challenge. This project addresses these limitations by accelerating linear programming on AMD Graphics Processing Units (GPUs), leveraging the ROCm open-source platform and PyTorch. The core of this work is the development of a robust, high-performance, open-source implementation of the Primal-Dual Hybrid Gradient (PDHG) algorithm, engineered specifically for general LP problems on AMD hardware. Performance is evaluated against standard LP test sets and established CPU-based solvers, with a particular focus on challenging real- world instances including the Security-Constrained Economic Dispatch (SCED) to guide hyperparameter tuning. Our results show a significant improvement, with up to a 36x speedup on GPU over CPU for large-scale problems, highlighting the advantages of GPU acceleration in solving complex optimization tasks.",
+      "arxiv_url": "https://arxiv.org/abs/2508.16806v1",
+      "pdf_url": "https://arxiv.org/pdf/2508.16806v1",
+      "published": "2025-08-22",
+      "updated": "2025-08-22",
+      "categories": [
+        "math.OC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "optimization",
+        "performance",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:07Z"
+    },
+    {
+      "id": "2508.11298v2",
+      "arxiv_id": "2508.11298v2",
+      "title": "Inter-APU Communication on AMD MI300A Systems via Infinity Fabric: a Deep Dive",
+      "authors": [
+        "Gabin Schieffer",
+        "Jacob Wahlgren",
+        "Ruimin Shi",
+        "Edgar A. León",
+        "Roger Pearce",
+        "Maya Gokhale",
+        "Ivy Peng"
+      ],
+      "abstract": "The ever-increasing compute performance of GPU accelerators drives up the need for efficient data movements within HPC applications to sustain performance. Proposed as a solution to alleviate CPU-GPU data movement, AMD MI300A Accelerated Processing Unit (APU) combines CPU, GPU, and high-bandwidth memory (HBM) within a single physical package. Leadership supercomputers, such as El Capitan, group four APUs within a single compute node, using Infinity Fabric Interconnect. In this work, we design specific benchmarks to evaluate direct memory access from the GPU, explicit inter-APU data movement, and collective multi-APU communication. We also compare the efficiency of HIP APIs, MPI routines, and the GPU-specialized RCCL library. Our results highlight key design choices for optimizing inter-APU communication on multi-APU AMD MI300A systems with Infinity Fabric, including programming interfaces, allocators, and data movement. Finally, we optimize two real HPC applications, Quicksilver and CloverLeaf, and evaluate them on a four MI100A APU system.",
+      "arxiv_url": "https://arxiv.org/abs/2508.11298v2",
+      "pdf_url": "https://arxiv.org/pdf/2508.11298v2",
+      "published": "2025-08-15",
+      "updated": "2025-08-18",
+      "categories": [
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "distributed-computing",
+        "hip",
+        "hpc",
+        "mi300",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2508.10202v2",
+      "arxiv_id": "2508.10202v2",
+      "title": "Mixed-Precision Performance Portability of FFT-Based GPU-Accelerated Algorithms for Block-Triangular Toeplitz Matrices",
+      "authors": [
+        "Sreeram Venkat",
+        "Kasia Swirydowicz",
+        "Noah Wolfe",
+        "Omar Ghattas"
+      ],
+      "abstract": "The hardware diversity in leadership-class computing facilities, alongside the immense performance boosts from today's GPUs when computing in lower precision, incentivizes scientific HPC workflows to adopt mixed-precision algorithms and performance portability models. We present an on-the-fly framework using hipify for performance portability and apply it to FFTMatvec - an HPC application that computes matrix-vector products with block-triangular Toeplitz matrices. Our approach enables FFTMatvec, initially a CUDA-only application, to run seamlessly on AMD GPUs with excellent performance. Performance optimizations for AMD GPUs are integrated into the open-source rocBLAS library, keeping the application code unchanged. We then present a dynamic mixed-precision framework for FFTMatvec; a Pareto front analysis determines the optimal mixed-precision configuration for a desired error tolerance. Results are shown for AMD Instinct MI250X, MI300X, and the newly launched MI355X GPUs. The performance-portable, mixed-precision FFTMatvec is scaled to 4,096 GPUs on the OLCF Frontier supercomputer.",
+      "arxiv_url": "https://arxiv.org/abs/2508.10202v2",
+      "pdf_url": "https://arxiv.org/pdf/2508.10202v2",
+      "published": "2025-08-13",
+      "updated": "2025-10-02",
+      "categories": [
+        "cs.DC",
+        "cs.PF",
+        "math.NA"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "hip",
+        "hpc",
+        "mi300",
+        "optimization",
+        "performance",
+        "porting",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:15Z"
+    },
+    {
+      "id": "2508.04917v1",
+      "arxiv_id": "2508.04917v1",
+      "title": "Mapping Sparse Triangular Solves to GPUs via Fine-grained Domain Decomposition",
+      "authors": [
+        "Atharva Gondhalekar",
+        "Kjetil Haugen",
+        "Thomas Gibson",
+        "Wu-chun Feng"
+      ],
+      "abstract": "Sparse linear systems are typically solved using preconditioned iterative methods, but applying preconditioners via sparse triangular solves introduces bottlenecks due to irregular memory accesses and data dependencies. This work leverages fine-grained domain decomposition to adapt triangular solves to the GPU architecture. We develop a fine-grained domain decomposition strategy that generates non-overlapping subdomains, increasing parallelism in the application of preconditioner at the expense of a modest increase in the iteration count for convergence. Each subdomain is assigned to a thread block and is sized such that the subdomain vector fits in the GPU shared memory, eliminating the need for inter-block synchronization and reducing irregular global memory accesses. Compared to other state-of-the-art implementations using the ROCm$^{\\text{TM}}$ software stack, we achieve a 10.7$\\times$ speedup for triangular solves and a 3.2$\\times$ speedup for the ILU0-preconditioned biconjugate gradient stabilized (BiCGSTAB) solver on the AMD Instinct$^{\\text{TM}}$ MI210 GPU.",
+      "arxiv_url": "https://arxiv.org/abs/2508.04917v1",
+      "pdf_url": "https://arxiv.org/pdf/2508.04917v1",
+      "published": "2025-08-06",
+      "updated": "2025-08-06",
+      "categories": [
+        "cs.PF",
+        "math.NA"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "mi300",
+        "performance",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:07Z"
+    },
+    {
+      "id": "2507.20719v1",
+      "arxiv_id": "2507.20719v1",
+      "title": "Exascale Implicit Kinetic Plasma Simulations on El~Capitan for Solving the Micro-Macro Coupling in Magnetospheric Physics",
+      "authors": [
+        "Stefano Markidis",
+        "Andong Hu",
+        "Ivy Peng",
+        "Luca Pennati",
+        "Ian Lumsden",
+        "Dewi Yokelson",
+        "Stephanie Brink",
+        "Olga Pearce",
+        "Thomas R. W. Scogland",
+        "Bronis R. de Supinski",
+        "Gian Luca Delzanno",
+        "Michela Taufer"
+      ],
+      "abstract": "Our fully kinetic, implicit Particle-in-Cell (PIC) simulations of global magnetospheres on up to 32,768 of El Capitan's AMD Instinct MI300A Accelerated Processing Units (APUs) represent an unprecedented computational capability that addresses a fundamental challenge in space physics: resolving the multi-scale coupling between microscopic (electron-scale) and macroscopic (global-scale) dynamics in planetary magnetospheres. The implicit scheme of iPIC3D supports time steps and grid spacing that are up to 10 times larger than those of explicit methods, without sacrificing physical accuracy. This enables the simulation of magnetospheres while preserving fine-scale electron physics, which is critical for key processes such as magnetic reconnection and plasma turbulence. Our algorithmic and technological innovations include GPU-optimized kernels, particle control, and physics-aware data compression using Gaussian Mixture Models. With simulation domains spanning 100-1,000 ion skin depths, we reach the global scale of small-to-medium planetary magnetospheres, such as those of Mercury and Ganymede, which supports fully kinetic treatment of global-scale dynamics in systems previously out of reach for fully kinetic PIC codes.",
+      "arxiv_url": "https://arxiv.org/abs/2507.20719v1",
+      "pdf_url": "https://arxiv.org/pdf/2507.20719v1",
+      "published": "2025-07-28",
+      "updated": "2025-07-28",
+      "categories": [
+        "cs.CE"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "hpc",
+        "inference",
+        "kernel",
+        "mi300",
+        "optimization"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:15Z"
+    },
+    {
+      "id": "2505.16968v4",
+      "arxiv_id": "2505.16968v4",
+      "title": "CASS: Nvidia to AMD Transpilation with Data, Models, and Benchmark",
+      "authors": [
+        "Ahmed Heakl",
+        "Gustavo Bertolo Stahl",
+        "Sarim Hashmi",
+        "Seung Hun Eddie Han",
+        "Mukul Ranjan",
+        "Arina Kharlamova",
+        "Salman Khan",
+        "Abdulrahman Mahmoud"
+      ],
+      "abstract": "Cross-architecture GPU code transpilation is essential for unlocking low-level hardware portability, yet no scalable solution exists. We introduce CASS, the first dataset and model suite for source- and assembly-level GPU translation (CUDA <--> HIP, SASS <--> RDNA3). CASS contains 60k verified host-device code pairs, enabling learning-based translation across both ISA and runtime boundaries. We generate each sample using our automated pipeline that scrapes, translates, compiles, and aligns GPU programs across vendor stacks. Leveraging CASS, we train a suite of domain-specific translation models that achieve 88.2% accuracy on CUDA -> HIP and 69.1% on SASS -> RDNA3, outperforming commercial baselines including GPT-5.1, Claude-4.5, and Hipify by wide margins. Generated code matches native performance in 85% of cases, preserving both runtime and memory behavior. To support rigorous evaluation, we introduce CASS-Bench, a curated benchmark spanning 18 GPU domains with ground-truth execution. All data, models, and evaluation tools will be released as open source to support progress in GPU compiler tooling, binary compatibility, and LLM-guided code translation.",
+      "arxiv_url": "https://arxiv.org/abs/2505.16968v4",
+      "pdf_url": "https://arxiv.org/pdf/2505.16968v4",
+      "published": "2025-05-22",
+      "updated": "2026-04-21",
+      "categories": [
+        "cs.AR",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.PL"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "architecture",
+        "cuda",
+        "hip",
+        "inference",
+        "llm",
+        "machine-learning",
+        "performance",
+        "porting",
+        "rdna"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2505.07046v1",
+      "arxiv_id": "2505.07046v1",
+      "title": "Streaming Krylov-Accelerated Stochastic Gradient Descent",
+      "authors": [
+        "Stephen Thomas"
+      ],
+      "abstract": "We present SKA-SGD (Streaming Krylov-Accelerated Stochastic Gradient Descent), a novel optimization approach that accelerates convergence for ill-conditioned problems by projecting stochastic gradients onto a low-dimensional Krylov subspace. Directly inspired by recent advances in s-step Conjugate Gradient methods with streaming Gauss-Seidel Gram solvers \\cite{dambra2025sstep}, our method extends these techniques to the stochastic optimization domain. Our approach combines three key innovations: (1) projection coefficients computed via a single streaming Gauss-Seidel iteration, which is mathematically equivalent to Modified Gram-Schmidt orthogonalization; (2) a Chebyshev polynomial basis for constructing the Krylov subspace, providing superior numerical stability; and (3) efficient implementation for AMD GPUs using HIP. We prove that our streaming approach achieves a backward error near machine precision with $O(s^2)$ complexity rather than $O(s^3)$, where $s$ is the Krylov subspace dimension. Experimental results demonstrate that SKA-SGD significantly outperforms standard SGD and Adam in convergence rate and final error, particularly for problems with condition numbers exceeding $10^3$. GPU performance analysis reveals a crossover point where communication-avoiding benefits outweigh computational overhead, typically occurring at moderate scale ($p \\approx 64$ processors) for problem sizes $n \\geq 10^6$.",
+      "arxiv_url": "https://arxiv.org/abs/2505.07046v1",
+      "pdf_url": "https://arxiv.org/pdf/2505.07046v1",
+      "published": "2025-05-11",
+      "updated": "2025-05-11",
+      "categories": [
+        "math.NA",
+        "cs.LG"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "hip",
+        "machine-learning",
+        "optimization",
+        "performance",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2505.02146v1",
+      "arxiv_id": "2505.02146v1",
+      "title": "QiMeng-Xpiler: Transcompiling Tensor Programs for Deep Learning Systems with a Neural-Symbolic Approach",
+      "authors": [
+        "Shouyang Dong",
+        "Yuanbo Wen",
+        "Jun Bi",
+        "Di Huang",
+        "Jiaming Guo",
+        "Jianxing Xu",
+        "Ruibai Xu",
+        "Xinkai Song",
+        "Yifan Hao",
+        "Xuehai Zhou",
+        "Tianshi Chen",
+        "Qi Guo",
+        "Yunji Chen"
+      ],
+      "abstract": "Heterogeneous deep learning systems (DLS) such as GPUs and ASICs have been widely deployed in industrial data centers, which requires to develop multiple low-level tensor programs for different platforms. An attractive solution to relieve the programming burden is to transcompile the legacy code of one platform to others. However, current transcompilation techniques struggle with either tremendous manual efforts or functional incorrectness, rendering \"Write Once, Run Anywhere\" of tensor programs an open question. We propose a novel transcompiler, i.e., QiMeng-Xpiler, for automatically translating tensor programs across DLS via both large language models (LLMs) and symbolic program synthesis, i.e., neural-symbolic synthesis. The key insight is leveraging the powerful code generation ability of LLM to make costly search-based symbolic synthesis computationally tractable. Concretely, we propose multiple LLM-assisted compilation passes via pre-defined meta-prompts for program transformation. During each program transformation, efficient symbolic program synthesis is employed to repair incorrect code snippets with a limited scale. To attain high performance, we propose a hierarchical auto-tuning approach to systematically explore both the parameters and sequences of transformation passes. Experiments on 4 DLS with distinct programming interfaces, i.e., Intel DL Boost with VNNI, NVIDIA GPU with CUDA, AMD MI with HIP, and Cambricon MLU with BANG, demonstrate that QiMeng-Xpiler correctly translates different tensor programs at the accuracy of 95% on average, and the performance of translated programs achieves up to 2.0x over vendor-provided manually-optimized libraries. As a result, the programming productivity of DLS is improved by up to 96.0x via transcompiling legacy tensor programs.",
+      "arxiv_url": "https://arxiv.org/abs/2505.02146v1",
+      "pdf_url": "https://arxiv.org/pdf/2505.02146v1",
+      "published": "2025-05-04",
+      "updated": "2025-05-04",
+      "categories": [
+        "cs.CL",
+        "cs.LG",
+        "cs.PL"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "hip",
+        "llm",
+        "machine-learning",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2502.16631v1",
+      "arxiv_id": "2502.16631v1",
+      "title": "CRIUgpu: Transparent Checkpointing of GPU-Accelerated Workloads",
+      "authors": [
+        "Radostin Stoyanov",
+        "Viktória Spišaková",
+        "Jesus Ramos",
+        "Steven Gurfinkel",
+        "Andrei Vagin",
+        "Adrian Reber",
+        "Wesley Armour",
+        "Rodrigo Bruno"
+      ],
+      "abstract": "Deep learning training at scale is resource-intensive and time-consuming, often running across hundreds or thousands of GPUs for weeks or months. Efficient checkpointing is crucial for running these workloads, especially in multi-tenant environments where compute resources are shared, and job preemptions or interruptions are common. However, transparent and unified GPU snapshots are particularly challenging because of the hardware architecture differences between CPU and GPU, including memory subsystems, dynamic parallelism, and thread synchronization. State-of-the-art GPU checkpointing techniques typically leverage mechanisms that intercept, log, and replay device API calls. However, this approach adds performance overhead and requires hardware-specific implementation that is difficult to test, maintain, and integrate with existing container platforms. In this paper, we present CRIUgpu - a novel approach for transparent checkpointing of GPU-accelerated workloads that builds on recently introduced driver capabilities, enabling support for CUDA and ROCm applications. Our evaluation results show that CRIUgpu works with a variety of deep learning and high-performance computing workloads running across multiple GPUs, completely eliminating steady-state performance overheads, and significantly reducing recovery times compared to state-of-the-art transparent GPU checkpointing mechanisms.",
+      "arxiv_url": "https://arxiv.org/abs/2502.16631v1",
+      "pdf_url": "https://arxiv.org/pdf/2502.16631v1",
+      "published": "2025-02-23",
+      "updated": "2025-02-23",
+      "categories": [
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "machine-learning",
+        "performance",
+        "rocm",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:07Z"
+    },
+    {
+      "id": "2502.03249v1",
+      "arxiv_id": "2502.03249v1",
+      "title": "Portable Lattice QCD implementation based on OpenCL",
+      "authors": [
+        "Piyush Kumar",
+        "Szabolcs Borsanyi",
+        "Jana N. Guenther",
+        "Chik Him Wong"
+      ],
+      "abstract": "The presence of GPU from different vendors demands the Lattice QCD codes to support multiple architectures. To this end, Open Computing Language (OpenCL) is one of the viable frameworks for writing a portable code. It is of interest to find out how the OpenCL implementation performs as compared to the code based on a dedicated programming interface such as CUDA for Nvidia GPUs. We have developed an OpenCL backend for our already existing code of the Wuppertal-Budapest collaboration. In this contribution, we show benchmarks of the most time consuming part of the numerical simulation, namely, the inversion of the Dirac operator. We present the code performance on the JUWELS and LUMI Supercomputers based on Nvidia and AMD graphics cards, respectively, and compare with the CUDA backend implementation.",
+      "arxiv_url": "https://arxiv.org/abs/2502.03249v1",
+      "pdf_url": "https://arxiv.org/pdf/2502.03249v1",
+      "published": "2025-02-05",
+      "updated": "2025-02-05",
+      "categories": [
+        "hep-lat"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:21Z"
+    },
+    {
+      "id": "2412.12426v2",
+      "arxiv_id": "2412.12426v2",
+      "title": "FinGraV: Methodology for Fine-Grain GPU Power Visibility and Insights",
+      "authors": [
+        "Varsha Singhania",
+        "Shaizeen Aga",
+        "Mohamed Assem Ibrahim"
+      ],
+      "abstract": "Ubiquity of AI makes optimizing GPU power a priority as large GPU-based clusters are often employed to train and serve AI models. An important first step in optimizing GPU power consumption is high-fidelity and fine-grain power measurement of key AI computations on GPUs. To this end, we observe that as GPUs get more powerful, the resulting sub-millisecond to millisecond executions make fine-grain power analysis challenging. In this work, we first carefully identify the challenges in obtaining fine-grain GPU power profiles. To address these challenges, we devise FinGraV methodology where we employ execution time binning, careful CPU-GPU time synchronization, and power profile differentiation to collect fine-grain GPU power profiles across prominent AI computations and across a spectrum of scenarios. Using the said FinGraV power profiles, we provide both, guidance on accurate power measurement and, in-depth view of power consumption on state-of-the-art AMD Instinct MI300X. For the former, we highlight a methodology for power differentiation across executions. For the latter, we make several observations pertaining to GPU sub-component power consumption and GPU power proportionality across different scenarios. We believe that FinGraV unlocks both an accurate and a deeper view of power consumption of GPUs and opens up avenues for power optimization of these ubiquitous accelerators.",
+      "arxiv_url": "https://arxiv.org/abs/2412.12426v2",
+      "pdf_url": "https://arxiv.org/pdf/2412.12426v2",
+      "published": "2024-12-17",
+      "updated": "2025-03-28",
+      "categories": [
+        "cs.AR",
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "architecture",
+        "distributed-computing",
+        "mi300",
+        "optimization"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:15Z"
+    },
+    {
+      "id": "2412.08308v3",
+      "arxiv_id": "2412.08308v3",
+      "title": "Analyzing the Performance Portability of SYCL across CPUs, GPUs, and Hybrid Systems with SW Sequence Alignment",
+      "authors": [
+        "Manuel Costanzo",
+        "Enzo Rucci",
+        "Carlos García-Sánchez",
+        "Marcelo Naiouf",
+        "Manuel Prieto-Matías"
+      ],
+      "abstract": "The high-performance computing (HPC) landscape is undergoing rapid transformation, with an increasing emphasis on energy-efficient and heterogeneous computing environments. This comprehensive study extends our previous research on SYCL's performance portability by evaluating its effectiveness across a broader spectrum of computing architectures, including CPUs, GPUs, and hybrid CPU-GPU configurations from NVIDIA, Intel, and AMD. Our analysis covers single-GPU, multi-GPU, single-CPU, and CPU-GPU hybrid setups, using two common, bioinformatic applications as a case study. The results demonstrate SYCL's versatility across different architectures, maintaining comparable performance to CUDA on NVIDIA GPUs while achieving similar architectural efficiency rates on AMD and Intel GPUs in the majority of cases tested. SYCL also demonstrated remarkable versatility and effectiveness across CPUs from various manufacturers, including the latest hybrid architectures from Intel. Although SYCL showed excellent functional portability in hybrid CPU-GPU configurations, performance varied significantly based on specific hardware combinations. Some performance limitations were identified in multi-GPU and CPU-GPU configurations, primarily attributed to workload distribution strategies rather than SYCL-specific constraints. These findings position SYCL as a promising unified programming model for heterogeneous computing environments, particularly for bioinformatic applications.",
+      "arxiv_url": "https://arxiv.org/abs/2412.08308v3",
+      "pdf_url": "https://arxiv.org/pdf/2412.08308v3",
+      "published": "2024-12-11",
+      "updated": "2025-04-14",
+      "categories": [
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "hpc",
+        "performance",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:21Z"
+    },
+    {
+      "id": "2411.05009v1",
+      "arxiv_id": "2411.05009v1",
+      "title": "A Study of Performance Portability in Plasma Physics Simulations",
+      "authors": [
+        "Josef Ruzicka",
+        "Christian Asch",
+        "Esteban Meneses",
+        "Markus Rampp",
+        "Erwin Laure"
+      ],
+      "abstract": "The high-performance computing (HPC) community has recently seen a substantial diversification of hardware platforms and their associated programming models. From traditional multicore processors to highly specialized accelerators, vendors and tool developers back up the relentless progress of those architectures. In the context of scientific programming, it is fundamental to consider performance portability frameworks, i.e., software tools that allow programmers to write code once and run it on different computer architectures without sacrificing performance. We report here on the benefits and challenges of performance portability using a field-line tracing simulation and a particle-in-cell code, two relevant applications in computational plasma physics with applications to magnetically-confined nuclear-fusion energy research. For these applications we report performance results obtained on four HPC platforms with server-class CPUs from Intel (Xeon) and AMD (EPYC), and high-end GPUs from Nvidia and AMD, including the latest Nvidia H100 GPU and the novel AMD Instinct MI300A APU. Our results show that both Kokkos and OpenMP are powerful tools to achieve performance portability and decent \"out-of-the-box\" performance, even for the very latest hardware platforms. For our applications, Kokkos provided performance portability to the broadest range of hardware architectures from different vendors.",
+      "arxiv_url": "https://arxiv.org/abs/2411.05009v1",
+      "pdf_url": "https://arxiv.org/pdf/2411.05009v1",
+      "published": "2024-10-19",
+      "updated": "2024-10-19",
+      "categories": [
+        "physics.plasm-ph",
+        "cs.DC",
+        "cs.PF",
+        "physics.comp-ph"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "distributed-computing",
+        "hpc",
+        "mi300",
+        "performance",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:15Z"
+    },
+    {
+      "id": "2410.10911v1",
+      "arxiv_id": "2410.10911v1",
+      "title": "Quantum-Enhanced Detection of Viral cDNA via Luminescence Resonance Energy Transfer Using Upconversion and Gold Nanoparticles",
+      "authors": [
+        "Shahriar Esmaeili",
+        "Navid Rajil",
+        "Ayla Hazrathosseini",
+        "Benjamin W. Neuman",
+        "Masfer H. Alkahtani",
+        "Dipankar Sen",
+        "Qiang Hu",
+        "Hung-Jen Wu",
+        "Zhenhuan Yi",
+        "Robert W. Brick",
+        "Alexei V. Sokolov",
+        "Philip R. Hemmer",
+        "Marlan O. Scully"
+      ],
+      "abstract": "The COVID-19 pandemic has profoundly impacted global economies and healthcare systems, revealing critical vulnerabilities in both. In response, our study introduces a groundbreaking method for the detection of SARS-CoV-2 cDNA, leveraging Luminescence resonance energy transfer (LRET) between upconversion nanoparticles (UCNPs) and gold nanoparticles (AuNPs) to achieve an unprecedented detection limit of 242 femtomolar (fM). This innovative sensing platform utilizes UCNPs conjugated with one primer and AuNPs with another, targeting the 5' and 3' ends of the SARS-CoV-2 cDNA, respectively, enabling precise differentiation of mismatched DNA sequences and significantly enhancing detection specificity. Through rigorous experimental analysis, we established a quenching efficiency range from 10.4\\% to 73.6\\%, with an optimal midpoint of 42\\%, thereby demonstrating the superior sensitivity of our method. By comparing the quenching efficiency of mismatched DNAs to the target DNA, we identified an optimal DNA:UCNP:AuNP ratio that ensures accurate detection. Our comparative analysis with existing SARS-CoV-2 detection methods revealed that our approach not only provides a lower detection limit but also offers higher specificity and potential for rapid, on-site testing. This study demonstrates the superior sensitivity and specificity of using UCNPs and AuNPs for SARS-CoV-2 cDNA detection, offering a significant advancement in rapid, accessible diagnostic technologies. Our method, characterized by its low detection limit and high precision, represents a critical step forward in managing current and future viral outbreaks, contributing to the enhancement of global healthcare responsiveness and infectious disease control.",
+      "arxiv_url": "https://arxiv.org/abs/2410.10911v1",
+      "pdf_url": "https://arxiv.org/pdf/2410.10911v1",
+      "published": "2024-10-14",
+      "updated": "2024-10-14",
+      "categories": [
+        "q-bio.QM",
+        "physics.atm-clus"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "2410.09172v1",
+      "arxiv_id": "2410.09172v1",
+      "title": "Testing GPU Numerics: Finding Numerical Differences Between NVIDIA and AMD GPUs",
+      "authors": [
+        "Anwar Hossain Zahid",
+        "Ignacio Laguna",
+        "Wei Le"
+      ],
+      "abstract": "As scientific codes are ported between GPU platforms, continuous testing is required to ensure numerical robustness and identify numerical differences. Compiler-induced numerical differences occur when a program is compiled and run on different GPUs, and the numerical outcomes are different for the same input. We present a study of compiler-induced numerical differences between NVIDIA and AMD GPUs. Our approach uses Varity to generate thousands of short numerical tests in CUDA and HIP, and their inputs; then, we use differential testing to check if the program produced a numerical inconsistency when run on these GPUs. We also use the HIPIFY tool to convert CUDA tests into HIP and check if there are numerical inconsistencies induced by HIPIFY. We generated more than 600,000 tests and found subtle numerical differences that come from (1) math library calls, (2) differences in floating-point precision (FP64 versus FP32), and (3) converting code with HIPIFY.",
+      "arxiv_url": "https://arxiv.org/abs/2410.09172v1",
+      "pdf_url": "https://arxiv.org/pdf/2410.09172v1",
+      "published": "2024-10-11",
+      "updated": "2024-10-11",
+      "categories": [
+        "math.NA",
+        "cs.PL"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "hip",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2409.10729v1",
+      "arxiv_id": "2409.10729v1",
+      "title": "OpenACC offloading of the MFC compressible multiphase flow solver on AMD and NVIDIA GPUs",
+      "authors": [
+        "Benjamin Wilfong",
+        "Anand Radhakrishnan",
+        "Henry A. Le Berre",
+        "Steve Abbott",
+        "Reuben D. Budiardja",
+        "Spencer H. Bryngelson"
+      ],
+      "abstract": "GPUs are the heart of the latest generations of supercomputers. We efficiently accelerate a compressible multiphase flow solver via OpenACC on NVIDIA and AMD Instinct GPUs. Optimization is accomplished by specifying the directive clauses 'gang vector' and 'collapse'. Further speedups of six and ten times are achieved by packing user-defined types into coalesced multidimensional arrays and manual inlining via metaprogramming. Additional optimizations yield seven-times speedup in array packing and thirty-times speedup of select kernels on Frontier. Weak scaling efficiencies of 97% and 95% are observed when scaling to 50% of Summit and 95% of Frontier. Strong scaling efficiencies of 84% and 81% are observed when increasing the device count by a factor of 8 and 16 on V100 and MI250X hardware. The strong scaling efficiency of AMD's MI250X increases to 92% when increasing the device count by a factor of 16 when GPU-aware MPI is used for communication.",
+      "arxiv_url": "https://arxiv.org/abs/2409.10729v1",
+      "pdf_url": "https://arxiv.org/pdf/2409.10729v1",
+      "published": "2024-09-16",
+      "updated": "2024-09-16",
+      "categories": [
+        "physics.flu-dyn",
+        "cs.MS",
+        "physics.comp-ph"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "kernel",
+        "mi300",
+        "modeling-simulation",
+        "optimization"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:15Z"
+    },
+    {
+      "id": "2408.16509v1",
+      "arxiv_id": "2408.16509v1",
+      "title": "PyFR v2.0.3: Towards Industrial Adoption of Scale-Resolving Simulations",
+      "authors": [
+        "Freddie D. Witherden",
+        "Peter E. Vincent",
+        "Will Trojak",
+        "Yoshiaki Abe",
+        "Amir Akbarzadeh",
+        "Semih Akkurt",
+        "Mohammad Alhawwary",
+        "Lidia Caros",
+        "Tarik Dzanic",
+        "Giorgio Giangaspero",
+        "Arvind S. Iyer",
+        "Antony Jameson",
+        "Marius Koch",
+        "Niki Loppi",
+        "Sambit Mishra",
+        "Rishit Modi",
+        "Gonzalo Sáez-Mischlich",
+        "Jin Seok Park",
+        "Brian C. Vermeire",
+        "Lai Wang"
+      ],
+      "abstract": "PyFR is an open-source cross-platform computational fluid dynamics framework based on the high-order Flux Reconstruction approach, specifically designed for undertaking high-accuracy scale-resolving simulations in the vicinity of complex engineering geometries. Since the initial release of PyFR v0.1.0 in 2013, a range of new capabilities have been added to the framework, with a view to enabling industrial adoption of the capability. This paper provides details of those enhancements as released in PyFR v2.0.3, explains efforts to grow an engaged developer and user community, and provides latest performance and scaling results on up to 1024 AMD Instinct MI250X accelerators of Frontier at ORNL (each with two GCDs), and up to 2048 NVIDIA GH200 GPUs on Alps at CSCS.",
+      "arxiv_url": "https://arxiv.org/abs/2408.16509v1",
+      "pdf_url": "https://arxiv.org/pdf/2408.16509v1",
+      "published": "2024-08-29",
+      "updated": "2024-08-29",
+      "categories": [
+        "physics.comp-ph"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "mi300",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:15Z"
+    },
+    {
+      "id": "2408.11417v2",
+      "arxiv_id": "2408.11417v2",
+      "title": "Stream-K++: Adaptive GPU GEMM Kernel Scheduling and Selection using Bloom Filters",
+      "authors": [
+        "Harisankar Sadasivan",
+        "Muhammed Emin Ozturk",
+        "Muhammad Osama",
+        "Chris Millette",
+        "Astha Rai",
+        "Maksim Podkorytov",
+        "John Afaganis",
+        "Carlus Huang",
+        "Jing Zhang",
+        "Jun Liu"
+      ],
+      "abstract": "General matrix multiplication (GEMM) operations are the fundamental building blocks of computational domains including artificial intelligence (AI). As GPU architectures evolve and high-performance AI becomes increasingly important, optimizing GEMM performance becomes a fundamental problem that needs to be addressed. This paper introduces Stream-K++, an enhancement to the promising Stream-K GEMM scheduling algorithm for workload balancing. We expand Stream-K's scheduling policies from three to seven and implement an efficient solution selection mechanism using Bloom filters. Our approach rapidly eliminates up to 95.8% of unsuitable configurations while maintaining a 100% true-negative rate. Implemented using the AMD Composable Kernel library and evaluated on AMD Instinct MI250X GPUs, Stream-K++ demonstrates significant performance gains (up to 43%) in select scenarios. It remains competitive (within 20% of optimal) for 60-97.6% of problem sizes. Our flexible framework, implemented in the Open-sieve C++ library, allows for easy adaptation to new problem sizes, scheduling policies, or additional tuning parameters, paving the way for future optimizations in GPU-based GEMM operations.",
+      "arxiv_url": "https://arxiv.org/abs/2408.11417v2",
+      "pdf_url": "https://arxiv.org/pdf/2408.11417v2",
+      "published": "2024-08-21",
+      "updated": "2025-11-25",
+      "categories": [
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "distributed-computing",
+        "kernel",
+        "mi300",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:15Z"
+    },
+    {
+      "id": "2407.11488v1",
+      "arxiv_id": "2407.11488v1",
+      "title": "Bringing Auto-tuning to HIP: Analysis of Tuning Impact and Difficulty on AMD and Nvidia GPUs",
+      "authors": [
+        "Milo Lurati",
+        "Stijn Heldens",
+        "Alessio Sclocco",
+        "Ben van Werkhoven"
+      ],
+      "abstract": "Many studies have focused on developing and improving auto-tuning algorithms for Nvidia Graphics Processing Units (GPUs), but the effectiveness and efficiency of these approaches on AMD devices have hardly been studied. This paper aims to address this gap by introducing an auto-tuner for AMD's HIP. We do so by extending Kernel Tuner, an open-source Python library for auto-tuning GPU programs. We analyze the performance impact and tuning difficulty for four highly-tunable benchmark kernels on four different GPUs: two from Nvidia and two from AMD. Our results demonstrate that auto-tuning has a significantly higher impact on performance on AMD compared to Nvidia (10x vs 2x). Additionally, we show that applications tuned for Nvidia do not perform optimally on AMD, underscoring the importance of auto-tuning specifically for AMD to achieve high performance on these GPUs.",
+      "arxiv_url": "https://arxiv.org/abs/2407.11488v1",
+      "pdf_url": "https://arxiv.org/pdf/2407.11488v1",
+      "published": "2024-07-16",
+      "updated": "2024-07-16",
+      "categories": [
+        "cs.DC",
+        "cs.PF"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "distributed-computing",
+        "hip",
+        "kernel",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2406.10362v1",
+      "arxiv_id": "2406.10362v1",
+      "title": "A Comparison of the Performance of the Molecular Dynamics Simulation Package GROMACS Implemented in the SYCL and CUDA Programming Models",
+      "authors": [
+        "L. Apanasevich",
+        "Yogesh Kale",
+        "Himanshu Sharma",
+        "Ana Marija Sokovic"
+      ],
+      "abstract": "For many years, systems running Nvidia-based GPU architectures have dominated the heterogeneous supercomputer landscape. However, recently GPU chipsets manufactured by Intel and AMD have cut into this market and can now be found in some of the worlds fastest supercomputers. The June 2023 edition of the TOP500 list of supercomputers ranks the Frontier supercomputer at the Oak Ridge National Laboratory in Tennessee as the top system in the world. This system features AMD Instinct 250 X GPUs and is currently the only true exascale computer in the world.The first framework that enabled support for heterogeneous platforms across multiple hardware vendors was OpenCL, in 2009. Since then a number of frameworks have been developed to support vendor agnostic heterogeneous environments including OpenMP, OpenCL, Kokkos, and SYCL. SYCL, which combines the concepts of OpenCL with the flexibility of single-source C++, is one of the more promising programming models for heterogeneous computing devices. One key advantage of this framework is that it provides a higher-level programming interface that abstracts away many of the hardware details than the other frameworks. This makes SYCL easier to learn and to maintain across multiple architectures and vendors. In n recent years, there has been growing interest in using heterogeneous computing architectures to accelerate molecular dynamics simulations. Some of the more popular molecular dynamics simulations include Amber, NAMD, and Gromacs. However, to the best of our knowledge, only Gromacs has been successfully ported to SYCL to date. In this paper, we compare the performance of GROMACS compiled using the SYCL and CUDA frameworks for a variety of standard GROMACS benchmarks. In addition, we compare its performance across three different Nvidia GPU chipsets, P100, V100, and A100.",
+      "arxiv_url": "https://arxiv.org/abs/2406.10362v1",
+      "pdf_url": "https://arxiv.org/pdf/2406.10362v1",
+      "published": "2024-06-14",
+      "updated": "2024-06-14",
+      "categories": [
+        "cs.DC",
+        "cs.PF"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "hip",
+        "hpc",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:15Z"
+    },
+    {
+      "id": "2406.02201v1",
+      "arxiv_id": "2406.02201v1",
+      "title": "Porting the grid-based 3D+3V hybrid-Vlasov kinetic plasma simulation Vlasiator to heterogeneous GPU architectures",
+      "authors": [
+        "Markus Battarbee",
+        "Konstantinos Papadakis",
+        "Urs Ganse",
+        "Jaro Hokkanen",
+        "Leo Kotipalo",
+        "Yann Pfau-Kempf",
+        "Markku Alho",
+        "Minna Palmroth"
+      ],
+      "abstract": "Vlasiator is a space plasma simulation code which models near-Earth ion-kinetic dynamics in three spatial and three velocity dimensions. It is highly parallelized, modeling the Vlasov equation directly through the distribution function, discretized on a Cartesian grid, instead of the more common particle-in-cell approach. Modeling near-Earth space, plasma properties span several orders of magnitude in temperature, density, and magnetic field strength. In order to fit the required six-dimensional grids in memory, Vlasiator utilizes a sparse block-based velocity mesh, where chunks of velocity space are added or deleted based on the advection requirements of the Vlasov solver. In addition, the spatial mesh is adaptively refined through cell-based octree refinement. In this paper, we describe the design choices of porting Vlasiator to heterogeneous CPU/GPU architectures. We detail the memory management, algorithmic changes, and kernel construction as well as our unified codebase approach, resulting in portability to both NVIDIA and AMD hardware (CUDA and HIP languages, respectively). In particular, we showcase a highly parallel block adjustment approach allowing efficient re-ordering of a sparse velocity mesh. We detail pitfalls we have overcome and lay out a plan for optimization to facilitate future exascale simulations using multi-node GPU supercomputing.",
+      "arxiv_url": "https://arxiv.org/abs/2406.02201v1",
+      "pdf_url": "https://arxiv.org/pdf/2406.02201v1",
+      "published": "2024-06-04",
+      "updated": "2024-06-04",
+      "categories": [
+        "physics.comp-ph",
+        "physics.plasm-ph",
+        "physics.space-ph"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "hip",
+        "hpc",
+        "kernel",
+        "optimization",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2405.00436v1",
+      "arxiv_id": "2405.00436v1",
+      "title": "Porting HPC Applications to AMD Instinct$^\\text{TM}$ MI300A Using Unified Memory and OpenMP",
+      "authors": [
+        "Suyash Tandon",
+        "Leopold Grinberg",
+        "Gheorghe-Teodor Bercea",
+        "Carlo Bertolli",
+        "Mark Olesen",
+        "Simone Bnà",
+        "Nicholas Malaya"
+      ],
+      "abstract": "AMD Instinct$^\\text{TM}$ MI300A is the world's first data center accelerated processing unit (APU) with memory shared between the AMD \"Zen 4\" EPYC$^\\text{TM}$ cores and third generation CDNA$^\\text{TM}$ compute units. A single memory space offers several advantages: i) it eliminates the need for data replication and costly data transfers, ii) it substantially simplifies application development and allows an incremental acceleration of applications, iii) is easy to maintain, and iv) its potential can be well realized via the abstractions in the OpenMP 5.2 standard, where the host and the device data environments can be unified in a more performant way. In this article, we provide a blueprint of the APU programming model leveraging unified memory and highlight key distinctions compared to the conventional approach with discrete GPUs. OpenFOAM, an open-source C++ library for computational fluid dynamics, is presented as a case study to emphasize the flexibility and ease of offloading a full-scale production-ready application on MI300 APUs using directive-based OpenMP programming.",
+      "arxiv_url": "https://arxiv.org/abs/2405.00436v1",
+      "pdf_url": "https://arxiv.org/pdf/2405.00436v1",
+      "published": "2024-05-01",
+      "updated": "2024-05-01",
+      "categories": [
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna",
+        "distributed-computing",
+        "hpc",
+        "mi300",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:15Z"
+    },
+    {
+      "id": "2403.06931v1",
+      "arxiv_id": "2403.06931v1",
+      "title": "Optimizing sDTW for AMD GPUs",
+      "authors": [
+        "Daniel Latta-Lin",
+        "Sofia Isadora Padilla Munoz"
+      ],
+      "abstract": "Subsequence Dynamic Time Warping (sDTW) is the metric of choice when performing many sequence matching and alignment tasks. While sDTW is flexible and accurate, it is neither simple nor fast to compute; significant research effort has been spent devising parallel implementations on the GPU that leverage efficient memory access and computation patterns, as well as features offered by specific vendors and architectures (notably NVIDIA's). We present an implementation of sDTW on AMD hardware using HIP and ROCm. Our implementation employs well-known parallel patterns, as well as lower-level features offered by ROCm. We use shuffling for intra-wavefront communication and shared memory to transfer data between consecutive wavefronts. By constraining the input data to batches of 512 queries of length 2,000, we optimized for peak performance the width of reference elements operated on by a single thread.",
+      "arxiv_url": "https://arxiv.org/abs/2403.06931v1",
+      "pdf_url": "https://arxiv.org/pdf/2403.06931v1",
+      "published": "2024-03-11",
+      "updated": "2024-03-11",
+      "categories": [
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "distributed-computing",
+        "hip",
+        "kernel",
+        "optimization",
+        "performance",
+        "rocm",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:07Z"
+    },
+    {
+      "id": "2402.08950v4",
+      "arxiv_id": "2402.08950v4",
+      "title": "Taking GPU Programming Models to Task for Performance Portability",
+      "authors": [
+        "Joshua H. Davis",
+        "Pranav Sivaraman",
+        "Joy Kitson",
+        "Konstantinos Parasyris",
+        "Harshitha Menon",
+        "Isaac Minn",
+        "Giorgis Georgakoudis",
+        "Abhinav Bhatele"
+      ],
+      "abstract": "Portability is critical to ensuring high productivity in developing and maintaining scientific software as the diversity in on-node hardware architectures increases. While several programming models provide portability for diverse GPU systems, they don't make any guarantees about performance portability. In this work, we explore several programming models -- CUDA, HIP, Kokkos, RAJA, OpenMP, OpenACC, and SYCL, to assess the consistency of their performance across NVIDIA and AMD GPUs. We use five proxy applications from different scientific domains, create implementations where missing, and use them to present a comprehensive comparative evaluation of the performance portability of these programming models. We provide a Spack scripting-based methodology to ensure reproducibility of experiments conducted in this work. Finally, we analyze the reasons for why some programming models underperform in certain scenarios and in some cases, present performance optimizations to the proxy applications.",
+      "arxiv_url": "https://arxiv.org/abs/2402.08950v4",
+      "pdf_url": "https://arxiv.org/pdf/2402.08950v4",
+      "published": "2024-02-14",
+      "updated": "2025-09-04",
+      "categories": [
+        "cs.DC",
+        "cs.PF"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "hip",
+        "optimization",
+        "performance",
+        "porting",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2402.08161v2",
+      "arxiv_id": "2402.08161v2",
+      "title": "The Monte Carlo Computational Summit -- October 25 & 26, 2023 -- Notre Dame, Indiana, USA",
+      "authors": [
+        "Joanna Piper Morgan",
+        "Alexander Mote",
+        "Samuel Lee Pasmann",
+        "Gavin Ridley",
+        "Todd Palmer",
+        "Kyle E. Niemeyer",
+        "Ryan McClarren"
+      ],
+      "abstract": "The Monte Carlo Computational Summit was held on the campus of the University of Notre Dame in South Bend, Indiana, USA on 25--26 October 2023. The goals of the summit were to discuss algorithmic and software alterations required for successfully porting respective code bases to exascale-class computing hardware, compare software engineering techniques used by various code teams, and consider the adoption of industry-standard benchmark problems to better facilitate code-to-code performance comparisons. A large portion of the meeting included candid discussions of direct experiences with approaches that have and have not worked. Participants reported that identifying and implementing suitable Monte Carlo algorithms for GPUs continues to be a sticking point. They also report significant difficulty porting existing algorithms between GPU APIs (specifically Nvidia CUDA to AMD ROCm). To better compare code-to-code performance, participants decided to design a C5G7-like benchmark problem with a defined figure of merit, with the expectation of adding more benchmarks in the future. Problem specifications and results will eventually be hosted in a public repository and will be open to submissions by all Monte Carlo transport codes capable of running the benchmark problem. The participants also identified the need to explore the intermediate and long-term future of the Monte Carlo neutron transport community and how best to modernize and contextualize Monte Carlo as a useful tool in modern industry. Overall the summit was considered to be a success by the organizers and participants, and the group shared a strong desire for future, potentially larger, Monte Carlo summits.",
+      "arxiv_url": "https://arxiv.org/abs/2402.08161v2",
+      "pdf_url": "https://arxiv.org/pdf/2402.08161v2",
+      "published": "2024-02-13",
+      "updated": "2025-05-30",
+      "categories": [
+        "physics.comp-ph"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "hpc",
+        "performance",
+        "porting",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:07Z"
+    },
+    {
+      "id": "2402.06384v1",
+      "arxiv_id": "2402.06384v1",
+      "title": "pSTL-Bench: A Micro-Benchmark Suite for Assessing Scalability of C++ Parallel STL Implementations",
+      "authors": [
+        "Ruben Laso",
+        "Diego Krupitza",
+        "Sascha Hunold"
+      ],
+      "abstract": "Since the advent of parallel algorithms in the C++17 Standard Template Library (STL), the STL has become a viable framework for creating performance-portable applications. Given multiple existing implementations of the parallel algorithms, a systematic, quantitative performance comparison is essential for choosing the appropriate implementation for a particular hardware configuration. In this work, we introduce a specialized set of micro-benchmarks to assess the scalability of the parallel algorithms in the STL. By selecting different backends, our micro-benchmarks can be used on multi-core systems and GPUs. Using the suite, in a case study on AMD and Intel CPUs and NVIDIA GPUs, we were able to identify substantial performance disparities among different implementations, including GCC+TBB, GCC+HPX, Intel's compiler with TBB, or NVIDIA's compiler with OpenMP and CUDA.",
+      "arxiv_url": "https://arxiv.org/abs/2402.06384v1",
+      "pdf_url": "https://arxiv.org/pdf/2402.06384v1",
+      "published": "2024-02-09",
+      "updated": "2024-02-09",
+      "categories": [
+        "cs.DC",
+        "cs.PF",
+        "cs.PL"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:21Z"
+    },
+    {
+      "id": "2401.02680v1",
+      "arxiv_id": "2401.02680v1",
+      "title": "Preliminary report: Initial evaluation of StdPar implementations on AMD GPUs for HPC",
+      "authors": [
+        "Wei-Chen Lin",
+        "Simon McIntosh-Smith",
+        "Tom Deakin"
+      ],
+      "abstract": "Recently, AMD platforms have not supported offloading C++17 PSTL (StdPar) programs to the GPU. Our previous work highlights how StdPar is able to achieve good performance across NVIDIA and Intel GPU platforms. In that work, we acknowledged AMD's past effort such as HCC, which unfortunately is deprecated and does not support newer hardware platforms. Recent developments by AMD, Codeplay, and AdaptiveCpp (previously known as hipSYCL or OpenSYCL) have enabled multiple paths for StdPar programs to run on AMD GPUs. This informal report discusses our experiences and evaluation of currently available StdPar implementations for AMD GPUs. We conduct benchmarks using our suite of HPC mini-apps with ports in many heterogeneous programming models, including StdPar. We then compare the performance of StdPar, using all available StdPar compilers, to contemporary heterogeneous programming models supported on AMD GPUs: HIP, OpenCL, Thrust, Kokkos, OpenMP, SYCL. Where appropriate, we discuss issues encountered and workarounds applied during our evaluation. Finally, the StdPar model discussed in this report largely depends on Unified Shared Memory (USM) performance and very few AMD GPUs have proper support for this feature. As such, this report demonstrates a proof-of-concept host-side userspace pagefault solution for models that use the HIP API. We discuss performance improvements achieved with our solution using the same set of benchmarks.",
+      "arxiv_url": "https://arxiv.org/abs/2401.02680v1",
+      "pdf_url": "https://arxiv.org/pdf/2401.02680v1",
+      "published": "2024-01-05",
+      "updated": "2024-01-05",
+      "categories": [
+        "cs.DC",
+        "cs.PF"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "distributed-computing",
+        "hip",
+        "hpc",
+        "performance",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2310.16122v1",
+      "arxiv_id": "2310.16122v1",
+      "title": "A Performance-Portable SYCL Implementation of CRK-HACC for Exascale",
+      "authors": [
+        "Esteban M. Rangel",
+        "S. John Pennycook",
+        "Adrian Pope",
+        "Nicholas Frontiere",
+        "Zhiqiang Ma",
+        "Varsha Madananth"
+      ],
+      "abstract": "The first generation of exascale systems will include a variety of machine architectures, featuring GPUs from multiple vendors. As a result, many developers are interested in adopting portable programming models to avoid maintaining multiple versions of their code. It is necessary to document experiences with such programming models to assist developers in understanding the advantages and disadvantages of different approaches. To this end, this paper evaluates the performance portability of a SYCL implementation of a large-scale cosmology application (CRK-HACC) running on GPUs from three different vendors: AMD, Intel, and NVIDIA. We detail the process of migrating the original code from CUDA to SYCL and show that specializing kernels for specific targets can greatly improve performance portability without significantly impacting programmer productivity. The SYCL version of CRK-HACC achieves a performance portability of 0.96 with a code divergence of almost 0, demonstrating that SYCL is a viable programming model for performance-portable applications.",
+      "arxiv_url": "https://arxiv.org/abs/2310.16122v1",
+      "pdf_url": "https://arxiv.org/pdf/2310.16122v1",
+      "published": "2023-10-24",
+      "updated": "2023-10-24",
+      "categories": [
+        "cs.PF",
+        "astro-ph.CO",
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "hpc",
+        "kernel",
+        "performance",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:21Z"
+    },
+    {
+      "id": "2310.12979v2",
+      "arxiv_id": "2310.12979v2",
+      "title": "Predicting a Protein's Stability under a Million Mutations",
+      "authors": [
+        "Jeffrey Ouyang-Zhang",
+        "Daniel J. Diaz",
+        "Adam R. Klivans",
+        "Philipp Krähenbühl"
+      ],
+      "abstract": "Stabilizing proteins is a foundational step in protein engineering. However, the evolutionary pressure of all extant proteins makes identifying the scarce number of mutations that will improve thermodynamic stability challenging. Deep learning has recently emerged as a powerful tool for identifying promising mutations. Existing approaches, however, are computationally expensive, as the number of model inferences scales with the number of mutations queried. Our main contribution is a simple, parallel decoding algorithm. Our Mutate Everything is capable of predicting the effect of all single and double mutations in one forward pass. It is even versatile enough to predict higher-order mutations with minimal computational overhead. We build Mutate Everything on top of ESM2 and AlphaFold, neither of which were trained to predict thermodynamic stability. We trained on the Mega-Scale cDNA proteolysis dataset and achieved state-of-the-art performance on single and higher-order mutations on S669, ProTherm, and ProteinGym datasets. Code is available at https://github.com/jozhang97/MutateEverything",
+      "arxiv_url": "https://arxiv.org/abs/2310.12979v2",
+      "pdf_url": "https://arxiv.org/pdf/2310.12979v2",
+      "published": "2023-10-19",
+      "updated": "2023-10-30",
+      "categories": [
+        "q-bio.BM"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna",
+        "inference",
+        "machine-learning",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "2310.06947v1",
+      "arxiv_id": "2310.06947v1",
+      "title": "Open SYCL on heterogeneous GPU systems: A case of study",
+      "authors": [
+        "Rocío Carratalá-Sáez",
+        "Francisco J. andújar",
+        "Yuri Torres",
+        "Arturo Gonzalez-Escribano",
+        "Diego R. Llanos"
+      ],
+      "abstract": "Computational platforms for high-performance scientific applications are becoming more heterogenous, including hardware accelerators such as multiple GPUs. Applications in a wide variety of scientific fields require an efficient and careful management of the computational resources of this type of hardware to obtain the best possible performance. However, there are currently different GPU vendors, architectures and families that can be found in heterogeneous clusters or machines. Programming with the vendor provided languages or frameworks, and optimizing for specific devices, may become cumbersome and compromise portability to other systems. To overcome this problem, several proposals for high-level heterogeneous programming have appeared, trying to reduce the development effort and increase functional and performance portability, specifically when using GPU hardware accelerators. This paper evaluates the SYCL programming model, using the Open SYCL compiler, from two different perspectives: The performance it offers when dealing with single or multiple GPU devices from the same or different vendors, and the development effort required to implement the code. We use as case of study the Finite Time Lyapunov Exponent calculation over two real-world scenarios and compare the performance and the development effort of its Open SYCL-based version against the equivalent versions that use CUDA or HIP. Based on the experimental results, we observe that the use of SYCL does not lead to a remarkable overhead in terms of the GPU kernels execution time. In general terms, the Open SYCL development effort for the host code is lower than that observed with CUDA or HIP. Moreover, the SYCL version can take advantage of both CUDA and AMD GPU devices simultaneously much easier than directly using the vendor-specific programming solutions.",
+      "arxiv_url": "https://arxiv.org/abs/2310.06947v1",
+      "pdf_url": "https://arxiv.org/pdf/2310.06947v1",
+      "published": "2023-10-10",
+      "updated": "2023-10-10",
+      "categories": [
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "hip",
+        "kernel",
+        "performance",
+        "porting",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2309.11001v1",
+      "arxiv_id": "2309.11001v1",
+      "title": "GME: GPU-based Microarchitectural Extensions to Accelerate Homomorphic Encryption",
+      "authors": [
+        "Kaustubh Shivdikar",
+        "Yuhui Bao",
+        "Rashmi Agrawal",
+        "Michael Shen",
+        "Gilbert Jonatan",
+        "Evelio Mora",
+        "Alexander Ingare",
+        "Neal Livesay",
+        "José L. Abellán",
+        "John Kim",
+        "Ajay Joshi",
+        "David Kaeli"
+      ],
+      "abstract": "Fully Homomorphic Encryption (FHE) enables the processing of encrypted data without decrypting it. FHE has garnered significant attention over the past decade as it supports secure outsourcing of data processing to remote cloud services. Despite its promise of strong data privacy and security guarantees, FHE introduces a slowdown of up to five orders of magnitude as compared to the same computation using plaintext data. This overhead is presently a major barrier to the commercial adoption of FHE. In this work, we leverage GPUs to accelerate FHE, capitalizing on a well-established GPU ecosystem available in the cloud. We propose GME, which combines three key microarchitectural extensions along with a compile-time optimization to the current AMD CDNA GPU architecture. First, GME integrates a lightweight on-chip compute unit (CU)-side hierarchical interconnect to retain ciphertext in cache across FHE kernels, thus eliminating redundant memory transactions. Second, to tackle compute bottlenecks, GME introduces special MOD-units that provide native custom hardware support for modular reduction operations, one of the most commonly executed sets of operations in FHE. Third, by integrating the MOD-unit with our novel pipelined $64$-bit integer arithmetic cores (WMAC-units), GME further accelerates FHE workloads by $19\\%$. Finally, we propose a Locality-Aware Block Scheduler (LABS) that exploits the temporal locality available in FHE primitive blocks. Incorporating these microarchitectural features and compiler optimizations, we create a synergistic approach achieving average speedups of $796\\times$, $14.2\\times$, and $2.3\\times$ over Intel Xeon CPU, NVIDIA V100 GPU, and Xilinx FPGA implementations, respectively.",
+      "arxiv_url": "https://arxiv.org/abs/2309.11001v1",
+      "pdf_url": "https://arxiv.org/pdf/2309.11001v1",
+      "published": "2023-09-20",
+      "updated": "2023-09-20",
+      "categories": [
+        "cs.CR",
+        "cs.AR"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "architecture",
+        "cdna",
+        "hip",
+        "kernel",
+        "optimization"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "2309.10292v3",
+      "arxiv_id": "2309.10292v3",
+      "title": "Julia as a unifying end-to-end workflow language on the Frontier exascale system",
+      "authors": [
+        "William F. Godoy",
+        "Pedro Valero-Lara",
+        "Caira Anderson",
+        "Katrina W. Lee",
+        "Ana Gainaru",
+        "Rafael Ferreira da Silva",
+        "Jeffrey S. Vetter"
+      ],
+      "abstract": "We evaluate Julia as a single language and ecosystem paradigm powered by LLVM to develop workflow components for high-performance computing. We run a Gray-Scott, 2-variable diffusion-reaction application using a memory-bound, 7-point stencil kernel on Frontier, the US Department of Energy's first exascale supercomputer. We evaluate the performance, scaling, and trade-offs of (i) the computational kernel on AMD's MI250x GPUs, (ii) weak scaling up to 4,096 MPI processes/GPUs or 512 nodes, (iii) parallel I/O writes using the ADIOS2 library bindings, and (iv) Jupyter Notebooks for interactive analysis. Results suggest that although Julia generates a reasonable LLVM-IR, a nearly 50% performance difference exists vs. native AMD HIP stencil codes when running on the GPUs. As expected, we observed near-zero overhead when using MPI and parallel I/O bindings for system-wide installed implementations. Consequently, Julia emerges as a compelling high-performance and high-productivity workflow composition language, as measured on the fastest supercomputer in the world.",
+      "arxiv_url": "https://arxiv.org/abs/2309.10292v3",
+      "pdf_url": "https://arxiv.org/pdf/2309.10292v3",
+      "published": "2023-09-19",
+      "updated": "2023-09-28",
+      "categories": [
+        "cs.DC",
+        "cs.PL"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "distributed-computing",
+        "hip",
+        "hpc",
+        "kernel",
+        "mi300",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2309.10075v1",
+      "arxiv_id": "2309.10075v1",
+      "title": "Evaluating the performance portability of SYCL across CPUs and GPUs on bandwidth-bound applications",
+      "authors": [
+        "Istvan Z Reguly"
+      ],
+      "abstract": "In this paper, we evaluate the portability of the SYCL programming model on some of the latest CPUs and GPUs from a wide range of vendors, utilizing the two main compilers: DPC++ and hipSYCL/OpenSYCL. Both compilers currently support GPUs from all three major vendors; we evaluate performance on the Intel(R) Data Center GPU Max 1100, the NVIDIA A100 GPU, and the AMD MI250X GPU. Support on CPUs currently is less established, with DPC++ only supporting x86 CPUs through OpenCL, however, OpenSYCL does have an OpenMP backend capable of targeting all modern CPUs; we benchmark the Intel Xeon Platinum 8360Y Processor (Ice Lake), the AMD EPYC 9V33X (Genoa-X), and the Ampere Altra platforms. We study a range of primarily bandwidth-bound applications implemented using the OPS and OP2 DSLs, evaluate different formulations in SYCL, and contrast their performance to \"native\" programming approaches where available (CUDA/HIP/OpenMP). On GPU architectures SCYL on average even slightly outperforms native approaches, while on CPUs it falls behind - highlighting a continued need for improving CPU performance. While SYCL does not solve all the challenges of performance portability (e.g. needing different algorithms on different hardware), it does provide a single programming model and ecosystem to target most current HPC architectures productively.",
+      "arxiv_url": "https://arxiv.org/abs/2309.10075v1",
+      "pdf_url": "https://arxiv.org/pdf/2309.10075v1",
+      "published": "2023-09-18",
+      "updated": "2023-09-18",
+      "categories": [
+        "cs.PF",
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "hip",
+        "hpc",
+        "mi300",
+        "performance",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2309.09609v2",
+      "arxiv_id": "2309.09609v2",
+      "title": "Comparing Performance and Portability between CUDA and SYCL for Protein Database Search on NVIDIA, AMD, and Intel GPUs",
+      "authors": [
+        "Manuel Costanzo",
+        "Enzo Rucci",
+        "Carlos García Sánchez",
+        "Marcelo Naiouf",
+        "Manuel Prieto-Matías"
+      ],
+      "abstract": "The heterogeneous computing paradigm has led to the need for portable and efficient programming solutions that can leverage the capabilities of various hardware devices, such as NVIDIA, Intel, and AMD GPUs. This study evaluates the portability and performance of the SYCL and CUDA languages for one fundamental bioinformatics application (Smith-Waterman protein database search) across different GPU architectures, considering single and multi-GPU configurations from different vendors. The experimental work showed that, while both CUDA and SYCL versions achieve similar performance on NVIDIA devices, the latter demonstrated remarkable code portability to other GPU architectures, such as AMD and Intel. Furthermore, the architectural efficiency rates achieved on these devices were superior in 3 of the 4 cases tested. This brief study highlights the potential of SYCL as a viable solution for achieving both performance and portability in the heterogeneous computing ecosystem.",
+      "arxiv_url": "https://arxiv.org/abs/2309.09609v2",
+      "pdf_url": "https://arxiv.org/pdf/2309.09609v2",
+      "published": "2023-09-18",
+      "updated": "2023-11-10",
+      "categories": [
+        "cs.PL"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "performance",
+        "porting",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:21Z"
+    },
+    {
+      "id": "2309.04671v2",
+      "arxiv_id": "2309.04671v2",
+      "title": "A Portable Framework for Accelerating Stencil Computations on Modern Node Architectures",
+      "authors": [
+        "Ryuichi Sai",
+        "John Mellor-Crummey",
+        "Jinfan Xu",
+        "Mauricio Araya-Polo"
+      ],
+      "abstract": "Finite-difference methods based on high-order stencils are widely used in seismic simulations, weather forecasting, computational fluid dynamics, and other scientific applications. Achieving HPC-level stencil computations on one architecture is challenging, porting to other architectures without sacrificing performance requires significant effort, especially in this golden age of many distinctive architectures. To help developers achieve performance, portability, and productivity with stencil computations, we developed StencilPy. With StencilPy, developers write stencil computations in a high-level domain-specific language, which promotes productivity, while its backends generate efficient code for existing and emerging architectures, including modern many-core CPUs (such as AMD Genoa-X, Fujitsu A64FX, and Intel Sapphire Rapids), latest generations of GPUs (including NVIDIA H100 and A100, AMD MI200, and Intel Ponte Vecchio), and accelerators (including Cerebras and STX). StencilPy demonstrates promising performance results on par with hand-written code, maintains cross-architectural performance portability, and enhances productivity. Its modular design enables easy configuration, customization, and extension. A 25-point star-shaped stencil written in StencilPy is one-quarter of the length of a hand-crafted CUDA code and achieves similar performance on an NVIDIA H100 GPU. In addition, the same kernel written using our tool is 7x shorter than hand-optimized code written in Cerebras Software Language (CSL), and it delivers comparable performance that code on a Cerebras CS-2.",
+      "arxiv_url": "https://arxiv.org/abs/2309.04671v2",
+      "pdf_url": "https://arxiv.org/pdf/2309.04671v2",
+      "published": "2023-09-09",
+      "updated": "2024-07-07",
+      "categories": [
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "hpc",
+        "kernel",
+        "optimization",
+        "performance",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:21Z"
+    },
+    {
+      "id": "2308.05118v1",
+      "arxiv_id": "2308.05118v1",
+      "title": "Vector Embeddings by Sequence Similarity and Context for Improved Compression, Similarity Search, Clustering, Organization, and Manipulation of cDNA Libraries",
+      "authors": [
+        "Daniel H. Um",
+        "David A. Knowles",
+        "Gail E. Kaiser"
+      ],
+      "abstract": "This paper demonstrates the utility of organized numerical representations of genes in research involving flat string gene formats (i.e., FASTA/FASTQ5). FASTA/FASTQ files have several current limitations, such as their large file sizes, slow processing speeds for mapping and alignment, and contextual dependencies. These challenges significantly hinder investigations and tasks that involve finding similar sequences. The solution lies in transforming sequences into an alternative representation that facilitates easier clustering into similar groups compared to the raw sequences themselves. By assigning a unique vector embedding to each short sequence, it is possible to more efficiently cluster and improve upon compression performance for the string representations of cDNA libraries. Furthermore, through learning alternative coordinate vector embeddings based on the contexts of codon triplets, we can demonstrate clustering based on amino acid properties. Finally, using this sequence embedding method to encode barcodes and cDNA sequences, we can improve the time complexity of the similarity search by coupling vector embeddings with an algorithm that determines the proximity of vectors in Euclidean space; this allows us to perform sequence similarity searches in a quicker and more modular fashion.",
+      "arxiv_url": "https://arxiv.org/abs/2308.05118v1",
+      "pdf_url": "https://arxiv.org/pdf/2308.05118v1",
+      "published": "2023-08-08",
+      "updated": "2023-08-08",
+      "categories": [
+        "q-bio.GN",
+        "cs.LG"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna",
+        "machine-learning",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "2304.06835v3",
+      "arxiv_id": "2304.06835v3",
+      "title": "Automated Translation and Accelerated Solving of Differential Equations on Multiple GPU Platforms",
+      "authors": [
+        "Utkarsh Utkarsh",
+        "Valentin Churavy",
+        "Yingbo Ma",
+        "Tim Besard",
+        "Prakitr Srisuma",
+        "Tim Gymnich",
+        "Adam R. Gerlach",
+        "Alan Edelman",
+        "George Barbastathis",
+        "Richard D. Braatz",
+        "Christopher Rackauckas"
+      ],
+      "abstract": "We demonstrate a high-performance vendor-agnostic method for massively parallel solving of ensembles of ordinary differential equations (ODEs) and stochastic differential equations (SDEs) on GPUs. The method is integrated with a widely used differential equation solver library in a high-level language (Julia's DifferentialEquations.jl) and enables GPU acceleration without requiring code changes by the user. Our approach achieves state-of-the-art performance compared to hand-optimized CUDA-C++ kernels while performing 20--100$\\times$ faster than the vectorizing map (vmap) approach implemented in JAX and PyTorch. Performance evaluation on NVIDIA, AMD, Intel, and Apple GPUs demonstrates performance portability and vendor-agnosticism. We show composability with MPI to enable distributed multi-GPU workflows. The implemented solvers are fully featured -- supporting event handling, automatic differentiation, and incorporation of datasets via the GPU's texture memory -- allowing scientists to take advantage of GPU acceleration on all major current architectures without changing their model code and without loss of performance. We distribute the software as an open-source library https://github.com/SciML/DiffEqGPU.jl",
+      "arxiv_url": "https://arxiv.org/abs/2304.06835v3",
+      "pdf_url": "https://arxiv.org/pdf/2304.06835v3",
+      "published": "2023-04-13",
+      "updated": "2023-11-13",
+      "categories": [
+        "cs.DC",
+        "cs.MS",
+        "math.NA"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "kernel",
+        "modeling-simulation",
+        "optimization",
+        "performance",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:21Z"
+    },
+    {
+      "id": "2303.06195v1",
+      "arxiv_id": "2303.06195v1",
+      "title": "Evaluating performance and portability of high-level programming models: Julia, Python/Numba, and Kokkos on exascale nodes",
+      "authors": [
+        "William F. Godoy",
+        "Pedro Valero-Lara",
+        "T. Elise Dettling",
+        "Christian Trefftz",
+        "Ian Jorquera",
+        "Thomas Sheehy",
+        "Ross G. Miller",
+        "Marc Gonzalez-Tallada",
+        "Jeffrey S. Vetter",
+        "Valentin Churavy"
+      ],
+      "abstract": "We explore the performance and portability of the high-level programming models: the LLVM-based Julia and Python/Numba, and Kokkos on high-performance computing (HPC) nodes: AMD Epyc CPUs and MI250X graphical processing units (GPUs) on Frontier's test bed Crusher system and Ampere's Arm-based CPUs and NVIDIA's A100 GPUs on the Wombat system at the Oak Ridge Leadership Computing Facilities. We compare the default performance of a hand-rolled dense matrix multiplication algorithm on CPUs against vendor-compiled C/OpenMP implementations, and on each GPU against CUDA and HIP. Rather than focusing on the kernel optimization per-se, we select this naive approach to resemble exploratory work in science and as a lower-bound for performance to isolate the effect of each programming model. Julia and Kokkos perform comparably with C/OpenMP on CPUs, while Julia implementations are competitive with CUDA and HIP on GPUs. Performance gaps are identified on NVIDIA A100 GPUs for Julia's single precision and Kokkos, and for Python/Numba in all scenarios. We also comment on half-precision support, productivity, performance portability metrics, and platform readiness. We expect to contribute to the understanding and direction for high-level, high-productivity languages in HPC as the first-generation exascale systems are deployed.",
+      "arxiv_url": "https://arxiv.org/abs/2303.06195v1",
+      "pdf_url": "https://arxiv.org/pdf/2303.06195v1",
+      "published": "2023-03-10",
+      "updated": "2023-03-10",
+      "categories": [
+        "cs.DC",
+        "cs.PL"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "hip",
+        "hpc",
+        "kernel",
+        "mi300",
+        "optimization",
+        "performance",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2303.08058v2",
+      "arxiv_id": "2303.08058v2",
+      "title": "Stellar Mergers with HPX-Kokkos and SYCL: Methods of using an Asynchronous Many-Task Runtime System with SYCL",
+      "authors": [
+        "Gregor Daiß",
+        "Patrick Diehl",
+        "Hartmut Kaiser",
+        "Dirk Pflüger"
+      ],
+      "abstract": "Ranging from NVIDIA GPUs to AMD GPUs and Intel GPUs: Given the heterogeneity of available accelerator cards within current supercomputers, portability is a key aspect for modern HPC applications. In Octo-Tiger, we rely on Kokkos and its various execution spaces for portable compute kernels. In turn, we use HPX to coordinate kernel launches, CPU tasks, and communication. This combination allows us to have a fine interleaving between portable CPU/GPU computations and communication, enabling scalability on various supercomputers. However, for HPX and Kokkos to work together optimally, we need to be able to treat Kokkos kernels as HPX tasks. Otherwise, instead of integrating asynchronous Kokkos kernel launches into HPX's task graph, we would have to actively wait for them with fence commands, which wastes CPU time better spent otherwise. Using an integration layer called HPX-Kokkos, treating Kokkos kernels as tasks already works for some Kokkos execution spaces (like the CUDA one), but not for others (like the SYCL one). In this work, we started making Octo-Tiger and HPX itself compatible with SYCL. To do so, we introduce numerous software changes, most notably an HPX-SYCL integration. This integration allows us to treat SYCL events as HPX tasks, which in turn allows us to better integrate Kokkos by extending the support of HPX-Kokkos to also fully support Kokkos' SYCL execution space. We show two ways to implement this HPX-SYCL integration and test them using Octo-Tiger and its Kokkos kernels, on both an NVIDIA A100 and an AMD MI100. We find modest, yet noticeable, speedups by enabling this integration, even when just running simple single-node scenarios with Octo-Tiger where communication and CPU utilization are not yet an issue.",
+      "arxiv_url": "https://arxiv.org/abs/2303.08058v2",
+      "pdf_url": "https://arxiv.org/pdf/2303.08058v2",
+      "published": "2023-03-04",
+      "updated": "2023-05-09",
+      "categories": [
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "hpc",
+        "kernel",
+        "mi300",
+        "porting",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:21Z"
+    },
+    {
+      "id": "2302.00850v1",
+      "arxiv_id": "2302.00850v1",
+      "title": "Evolving the COLA software library",
+      "authors": [
+        "Waseem Kamleh"
+      ],
+      "abstract": "COLA is a software library for lattice QCD, written in a combination of modern Fortran and C/C++. Intel and NVIDIA have dominated the HPC domain in the years leading up to the exascale era, but the status quo has changed with the arrival of Frontier and other AMD-based systems in the supercomputing Top 500. Setonix is a next generation HPE Cray EX system hosted at the Pawsey Supercomputing Centre in Perth, Australia. Setonix features AMD EPYC CPUs and AMD Instinct GPUs. This report describes some of my experiences in evolving COLA to adapt to the current hardware landscape.",
+      "arxiv_url": "https://arxiv.org/abs/2302.00850v1",
+      "pdf_url": "https://arxiv.org/pdf/2302.00850v1",
+      "published": "2023-02-02",
+      "updated": "2023-02-02",
+      "categories": [
+        "hep-lat"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "hpc"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:15Z"
+    },
+    {
+      "id": "2301.10838v2",
+      "arxiv_id": "2301.10838v2",
+      "title": "Fast Merge Tree Computation via SYCL",
+      "authors": [
+        "Arnur Nigmetov",
+        "Dmitriy Morozov"
+      ],
+      "abstract": "A merge tree is a topological descriptor of a real-valued function. Merge trees are used in visualization and topological data analysis, either directly or as a means to another end: computing a 0-dimensional persistence diagram, identifying connected components, performing topological simplification, etc. Scientific computing relies more and more on GPUs to achieve fast, scalable computation. For efficiency, data analysis should take place at the same location as the main computation, which motivates interest in parallel algorithms and portable software for merge trees that can run not only on a CPU, but also on a GPU, or other types of accelerators. The SYCL standard defines a programming model that allows the same code, written in standard C++, to compile targets for multiple parallel backends (CPUs via OpenMP or TBB, NVIDIA GPUs via CUDA, AMD GPUs via ROCm, Intel GPUs via Level Zero, FPGAs). In this paper, we adapt the triplet merge tree algorithm to SYCL and compare our implementation with the VTK-m implementation, which is the only other implementation of merge trees for GPUs that we know of.",
+      "arxiv_url": "https://arxiv.org/abs/2301.10838v2",
+      "pdf_url": "https://arxiv.org/pdf/2301.10838v2",
+      "published": "2023-01-25",
+      "updated": "2023-01-27",
+      "categories": [
+        "cs.CG"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:07Z"
+    },
+    {
+      "id": "2207.04584v1",
+      "arxiv_id": "2207.04584v1",
+      "title": "HEGrid: A High Efficient Multi-Channel Radio Astronomical Data Gridding Framework in Heterogeneous Computing Environments",
+      "authors": [
+        "Hao Wang",
+        "Ce Yu",
+        "Jian Xiao",
+        "Shanjiang Tang",
+        "Min Long",
+        "Ming Zhu"
+      ],
+      "abstract": "The challenge to fully exploit the potential of existing and upcoming scientific instruments like large single-dish radio telescopes is to process the collected massive data effectively and efficiently. As a \"quasi 2D stencil computation\" with the \"Moore neighborhood pattern,\" gridding is the most computationally intensive step in data reduction pipeline for radio astronomy studies, enabling astronomers to create correct sky images for further analysis. However, the existing gridding frameworks can either only run on multi-core CPU architecture or do not support high-concurrency, multi-channel data gridding. Their performance is then limited, and there are emerging needs for innovative gridding frameworks to process data from large single-dish radio telescopes like the Five-hundred-meter Aperture Spherical Telescope (FAST). To address those challenges, we developed a High Efficient Gridding framework, HEGrid, by overcoming the above limitations. Specifically, we propose and construct the gridding pipeline in heterogeneous computing environments and achieve multi-pipeline concurrency for high performance multi-channel processing. Furthermore, we propose pipeline-based co-optimization to alleviate the potential negative performance impact of possible intra- and inter-pipeline low computation and I/O utilization, including component share-based redundancy elimination, thread-level data reuse and overlapping I/O and computation. Our experiments are based on both simulated datasets and actual FAST observational datasets. The results show that HEGrid outperforms other state-of-the-art gridding frameworks by up to 5.5x and has robust hardware portability, including AMD Radeon Instinct GPU and NVIDIA GPU.",
+      "arxiv_url": "https://arxiv.org/abs/2207.04584v1",
+      "pdf_url": "https://arxiv.org/pdf/2207.04584v1",
+      "published": "2022-07-11",
+      "updated": "2022-07-11",
+      "categories": [
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "distributed-computing",
+        "optimization",
+        "performance",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:15Z"
+    },
+    {
+      "id": "2203.06777v1",
+      "arxiv_id": "2203.06777v1",
+      "title": "Grid: OneCode and FourAPIs",
+      "authors": [
+        "Peter Boyle",
+        "Guido Cossu",
+        "Gianluca Filaci",
+        "Christoph Lehner",
+        "Antonin Portelli",
+        "Azusa Yamaguchi"
+      ],
+      "abstract": "We discuss a substantial update to the Grid software library for Lattice QCD, enabling it to port to multiple GPU architectures while retaining CPU vectorisation and SIMD execution within OpenMP threads. The GPU environments supported include vendor specific Nvidia CUDA and AMD HIP environments and a (mostly) standards based SYCL implementation. This is performed by an internal abstraction interface giving single source cross-platform performance portability across all number of planned Exascale architectures, and all those planned by the US Department of Energy.",
+      "arxiv_url": "https://arxiv.org/abs/2203.06777v1",
+      "pdf_url": "https://arxiv.org/pdf/2203.06777v1",
+      "published": "2022-03-13",
+      "updated": "2022-03-13",
+      "categories": [
+        "hep-lat"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "hip",
+        "hpc",
+        "performance",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:11Z"
+    },
+    {
+      "id": "2107.07809v1",
+      "arxiv_id": "2107.07809v1",
+      "title": "A method for decompilation of AMD GCN kernels to OpenCL",
+      "authors": [
+        "K. I. Mihajlenko",
+        "M. A. Lukin",
+        "A. S. Stankevich"
+      ],
+      "abstract": "Introduction: Decompilers are useful tools for software analysis and support in the absence of source code. They are available for many hardware architectures and programming languages. However, none of the existing decompilers support modern AMD GPU architectures such as AMD GCN and RDNA. Purpose: We aim at developing the first assembly decompiler tool for a modern AMD GPU architecture that generates code in the OpenCL language, which is widely used for programming GPGPUs. Results: We developed the algorithms for the following operations: preprocessing assembly code, searching data accesses, extracting system values, decompiling arithmetic operations and recovering data types. We also developed templates for decompilation of branching operations. Practical relevance: We implemented the presented algorithms in Python as a tool called OpenCLDecompiler, which supports a large subset of AMD GCN instructions. This tool automatically converts disassembled GPGPU code into the equivalent OpenCL code, which reduces the effort required to analyze assembly code.",
+      "arxiv_url": "https://arxiv.org/abs/2107.07809v1",
+      "pdf_url": "https://arxiv.org/pdf/2107.07809v1",
+      "published": "2021-07-16",
+      "updated": "2021-07-16",
+      "categories": [
+        "cs.PL",
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "distributed-computing",
+        "kernel",
+        "rdna",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "2104.08178v1",
+      "arxiv_id": "2104.08178v1",
+      "title": "Design of an Efficient, Ease-of-use and Affordable Artificial Intelligence based Nucleic Acid Amplification Diagnosis Technology for Tuberculosis and Multi-drug Resistant Tuberculosis",
+      "authors": [
+        "Arastu Sharma",
+        "Rakesh Jain"
+      ],
+      "abstract": "Current technologies that facilitate diagnosis for simultaneous detection of Mycobacterium tuberculosis and its resistance to first-line anti-tuberculosis drugs (Isoniazid and Rifampicim) are designed for lab-based settings and are unaffordable for large scale testing implementations. The suitability of a TB diagnosis instrument, generally required in low-resource settings, to be implementable in point-of-care last mile public health centres depends on manufacturing cost, ease-of-use, automation and portability. This paper discusses a portable, low-cost, machine learning automated Nucleic acid amplification testing (NAAT) device that employs the use of a smartphone-based fluorescence detection using novel image processing and chromaticity detection algorithms. To test the instrument, real time polymerase chain reaction (qPCR) experiment on cDNA dilution spanning over two concentrations (40 ng/uL and 200 ng/uL) was performed and sensitive detection of multiplexed positive control assay was verified.",
+      "arxiv_url": "https://arxiv.org/abs/2104.08178v1",
+      "pdf_url": "https://arxiv.org/pdf/2104.08178v1",
+      "published": "2021-04-14",
+      "updated": "2021-04-14",
+      "categories": [
+        "physics.med-ph",
+        "cs.LG",
+        "eess.IV",
+        "physics.bio-ph",
+        "physics.ins-det",
+        "q-bio.QM"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna",
+        "machine-learning",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "2001.03092v1",
+      "arxiv_id": "2001.03092v1",
+      "title": "De Novo Assembly of Uca minax Transcriptome from Next Generation Sequencing",
+      "authors": [
+        "Hanin Omar",
+        "Casey A. Cole",
+        "Arjang Fahim",
+        "Giuliana Gusmaroli",
+        "Stephen Borgianini",
+        "Homayoun Valafar"
+      ],
+      "abstract": "High-throughput cDNA sequencing (RNA-seq) is a very powerful technique to quantify gene expression in an unbiased way. The Crustacean family is among the groups of organisms sparsely represented in current genomic databases. Here we present transcriptome data from Uca minax (red-jointed fiddler crab) as an opportunity to extend our knowledge. Next generation sequencing was performed on six tissue samples from Uca minax using the Illumina HiSeq system. Six Transcriptome libraries were created using Trinity; a free, open-source software tool for de novo transcriptome assembly of high-throughput mRNA sequencing (RNA-seq) data with the absence of a reference genome. In addition, several tools that aid in management of data were used, such as RSEM, Bowtie, Blast, and IGV; a tool for visualizing RNA-seq analysis results. Fast quality control (FastQC) analysis of the raw sequenced files revealed that both adapter and PCR primer sequences were prevalently present, which may require a preprocessing step.",
+      "arxiv_url": "https://arxiv.org/abs/2001.03092v1",
+      "pdf_url": "https://arxiv.org/pdf/2001.03092v1",
+      "published": "2020-01-09",
+      "updated": "2020-01-09",
+      "categories": [
+        "q-bio.GN"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "2002.07050v1",
+      "arxiv_id": "2002.07050v1",
+      "title": "Ultrasensitive THz Biosensor for PCR-free cDNA detection based on frequency selective surfaces",
+      "authors": [
+        "Christian Weisenstein",
+        "Dominik Schaar",
+        "Anna Katharina Wigger",
+        "Heiko Schäfer-Eberwein",
+        "Anja K. Bosserhoff",
+        "Peter Haring Bolívar"
+      ],
+      "abstract": "THz technologies are a powerful tool for label-free detection of biomolecules. However, significant reduction of the lower detection limit is required to apply THz-sensors in biomedical diagnosis. This paper reports an ultrasensitive THz-biosensor based on asymmetric double split ring resonators (aDSRR) for the direct label- and PCR-free detection of DNA at physiologically relevant concentrations. We introduce selective functionalization and localized electric field concentration to enhance aDSRR sensitivity and specificity. The sensor characteristics are demonstrated using the human tumor marker MIA in cDNA samples produced from total RNA without PCR-amplification. Measurements of DNA samples with concentrations as low as $1.55\\,\\times\\,10^{-12}\\,$mol/l are presented.",
+      "arxiv_url": "https://arxiv.org/abs/2002.07050v1",
+      "pdf_url": "https://arxiv.org/pdf/2002.07050v1",
+      "published": "2020-01-06",
+      "updated": "2020-01-06",
+      "categories": [
+        "physics.app-ph"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "1809.08805v1",
+      "arxiv_id": "1809.08805v1",
+      "title": "Data and Spectrum Trading Policies in a Trusted Cognitive Dynamic Network",
+      "authors": [
+        "B. Lorenzo",
+        "A. Shams Shafigh",
+        "J. Liu",
+        "J. Gonzalez Castano",
+        "Y. Fang"
+      ],
+      "abstract": "Future wireless networks will progressively displace service provisioning towards the edge to accommodate increasing growth in traffic. This paradigm shift calls for smart policies to efficiently share network resources and ensure service delivery. In this paper, we consider a cognitive dynamic network architecture (CDNA) where primary users (PUs) are rewarded for sharing their connectivities and acting as access points for secondary users (SUs). CDNA creates opportunities for capacity increase by network-wide harvesting of unused data plans and spectrum from different operators. Different policies for data and spectrum trading are presented based on centralized, hybrid and distributed schemes involving primary operator (PO), secondary operator (SO) and their respective end users. In these schemes, PO and SO progressively delegate trading to their end users and adopt more flexible cooperation agreements to reduce computational time and track available resources dynamically. A novel matching-with-pricing algorithm is presented to enable self-organized SU-PU associations, channel allocation and pricing for data and spectrum with low computational complexity. Since connectivity is provided by the actual users, the success of the underlying collaborative market relies on the trustworthiness of the connections. A behavioral-based access control mechanism is developed to incentivize/penalize honest/dishonest behavior and create a trusted collaborative network. Numerical results show that the computational time of the hybrid scheme is one order of magnitude faster than the benchmark centralized scheme and that the matching algorithm reconfigures the network up to three orders of magnitude faster than in the centralized scheme.",
+      "arxiv_url": "https://arxiv.org/abs/1809.08805v1",
+      "pdf_url": "https://arxiv.org/pdf/1809.08805v1",
+      "published": "2018-09-24",
+      "updated": "2018-09-24",
+      "categories": [
+        "cs.NI"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "1806.03142v2",
+      "arxiv_id": "1806.03142v2",
+      "title": "CLEAR: Coverage-based Limiting-cell Experiment Analysis for RNA-seq",
+      "authors": [
+        "Logan A Walker",
+        "Michael G Sovic",
+        "Chi-Ling Chiang",
+        "Eileen Hu",
+        "Jiyeon K Denninger",
+        "Xi Chen",
+        "Elizabeth D Kirby",
+        "John C Byrd",
+        "Natarajan Muthusamy",
+        "Ralf Bundschuh",
+        "Pearlly Yan"
+      ],
+      "abstract": "Direct cDNA preamplification protocols developed for single-cell RNA-seq have enabled transcriptome profiling of precious clinical samples and rare cells without sample pooling or RNA extraction. Currently, there is no algorithm optimized to reveal and remove noisy transcripts in limiting-cell RNA-seq (lcRNA-seq) data for downstream analyses. Herein, we present CLEAR, a workflow that identifies reliably quantifiable transcripts in lcRNA-seq data for differentially expressed gene (DEG) analysis. Libraries at three input amounts of FACS-derived CD5+ and CD5- cells from a chronic lymphocytic leukemia patient were used to develop CLEAR. When using CLEAR transcripts vs. using all transcripts, downstream analyses revealed more shared transcripts across different input RNA amounts, improved Principal Component Analysis (PCA) separation, and yielded more DEGs between cell types. As proof-of-principle, CLEAR was applied to an in-house lcRNA-seq dataset and two public datasets. When imputation is used, CLEAR is also adaptable to large clinical studies and for single cell analyses.",
+      "arxiv_url": "https://arxiv.org/abs/1806.03142v2",
+      "pdf_url": "https://arxiv.org/pdf/1806.03142v2",
+      "published": "2018-06-08",
+      "updated": "2019-05-23",
+      "categories": [
+        "q-bio.GN",
+        "q-bio.QM"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna",
+        "optimization"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "1802.02975v1",
+      "arxiv_id": "1802.02975v1",
+      "title": "Practical Issues of Action-conditioned Next Image Prediction",
+      "authors": [
+        "Donglai Zhu",
+        "Hao Chen",
+        "Hengshuai Yao",
+        "Masoud Nosrati",
+        "Peyman Yadmellat",
+        "Yunfei Zhang"
+      ],
+      "abstract": "The problem of action-conditioned image prediction is to predict the expected next frame given the current camera frame the robot observes and an action selected by the robot. We provide the first comparison of two recent popular models, especially for image prediction on cars. Our major finding is that action tiling encoding is the most important factor leading to the remarkable performance of the CDNA model. We present a light-weight model by action tiling encoding which has a single-decoder feedforward architecture same as [action_video_prediction_honglak]. On a real driving dataset, the CDNA model achieves ${0.3986} \\times 10^{-3}$ MSE and ${0.9846}$ Structure SIMilarity (SSIM) with a network size of about {\\bfseries ${12.6}$ million} parameters. With a small network of fewer than {\\bfseries ${1}$ million} parameters, our new model achieves a comparable performance to CDNA at ${0.3613} \\times 10^{-3}$ MSE and ${0.9633}$ SSIM. Our model requires less memory, is more computationally efficient and is advantageous to be used inside self-driving vehicles.",
+      "arxiv_url": "https://arxiv.org/abs/1802.02975v1",
+      "pdf_url": "https://arxiv.org/pdf/1802.02975v1",
+      "published": "2018-02-08",
+      "updated": "2018-02-08",
+      "categories": [
+        "cs.CV"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "1708.01492v5",
+      "arxiv_id": "1708.01492v5",
+      "title": "Minimap2: pairwise alignment for nucleotide sequences",
+      "authors": [
+        "Heng Li"
+      ],
+      "abstract": "Motivation: Recent advances in sequencing technologies promise ultra-long reads of $\\sim$100 kilo bases (kb) in average, full-length mRNA or cDNA reads in high throughput and genomic contigs over 100 mega bases (Mb) in length. Existing alignment programs are unable or inefficient to process such data at scale, which presses for the development of new alignment algorithms. Results: Minimap2 is a general-purpose alignment program to map DNA or long mRNA sequences against a large reference database. It works with accurate short reads of $\\ge$100bp in length, $\\ge$1kb genomic reads at error rate $\\sim$15%, full-length noisy Direct RNA or cDNA reads, and assembly contigs or closely related full chromosomes of hundreds of megabases in length. Minimap2 does split-read alignment, employs concave gap cost for long insertions and deletions (INDELs) and introduces new heuristics to reduce spurious alignments. It is 3-4 times faster than mainstream short-read mappers at comparable accuracy and $\\ge$30 times faster at higher accuracy for both genomic and mRNA reads, surpassing most aligners specialized in one type of alignment. Availability and implementation: https://github.com/lh3/minimap2 Contact: hengli@broadinstitute.org",
+      "arxiv_url": "https://arxiv.org/abs/1708.01492v5",
+      "pdf_url": "https://arxiv.org/pdf/1708.01492v5",
+      "published": "2017-08-04",
+      "updated": "2018-03-16",
+      "categories": [
+        "q-bio.GN"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "1706.09487v1",
+      "arxiv_id": "1706.09487v1",
+      "title": "Parameterized Algorithms for Partitioning Graphs into Highly Connected Clusters",
+      "authors": [
+        "Ivan Bliznets",
+        "Nikolai Karpov"
+      ],
+      "abstract": "Clustering is a well-known and important problem with numerous applications. The graph-based model is one of the typical cluster models. In the graph model, clusters are generally defined as cliques. However, such an approach might be too restrictive as in some applications, not all objects from the same cluster must be connected. That is why different types of cliques relaxations often considered as clusters. In our work, we consider a problem of partitioning graph into clusters and a problem of isolating cluster of a special type whereby cluster we mean highly connected subgraph. Initially, such clusterization was proposed by Hartuv and Shamir. And their HCS clustering algorithm was extensively applied in practice. It was used to cluster cDNA fingerprints, to find complexes in protein-protein interaction data, to group protein sequences hierarchically into superfamily and family clusters, to find families of regulatory RNA structures. The HCS algorithm partitions graph in highly connected subgraphs. However, it is achieved by deletion of not necessarily the minimum number of edges. In our work, we try to minimize the number of edge deletions. We consider problems from the parameterized point of view where the main parameter is a number of allowed edge deletions.",
+      "arxiv_url": "https://arxiv.org/abs/1706.09487v1",
+      "pdf_url": "https://arxiv.org/pdf/1706.09487v1",
+      "published": "2017-06-28",
+      "updated": "2017-06-28",
+      "categories": [
+        "cs.DS"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "1705.08246v1",
+      "arxiv_id": "1705.08246v1",
+      "title": "IGoR: a tool for high-throughput immune repertoire analysis",
+      "authors": [
+        "Quentin Marcou",
+        "Thierry Mora",
+        "Aleksandra M Walczak"
+      ],
+      "abstract": "High throughput immune repertoire sequencing is promising to lead to new statistical diagnostic tools for medicine and biology. Successful implementations of these methods require a correct characterization, analysis and interpretation of these datasets. We present IGoR -- a new comprehensive tool that takes B or T-cell receptors sequence reads and quantitatively characterizes the statistics of receptor generation from both cDNA and gDNA. It probabilistically annotates sequences and its modular structure can investigate models of increasing biological complexity for different organisms. For B-cells IGoR returns the hypermutation statistics, which we use to reveal co-localization of hypermutations along the sequence. We demonstrate that IGoR outperforms existing tools in accuracy and estimate the sample sizes needed for reliable repertoire characterization.",
+      "arxiv_url": "https://arxiv.org/abs/1705.08246v1",
+      "pdf_url": "https://arxiv.org/pdf/1705.08246v1",
+      "published": "2017-05-23",
+      "updated": "2017-05-23",
+      "categories": [
+        "q-bio.GN",
+        "q-bio.QM"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "1702.01875v1",
+      "arxiv_id": "1702.01875v1",
+      "title": "Adaptive Basis Selection for Exponential Family Smoothing Splines with Application in Joint Modeling of Multiple Sequencing Samples",
+      "authors": [
+        "Ping Ma",
+        "Nan Zhang",
+        "Jianhua Z. Huang",
+        "Wenxuan Zhong"
+      ],
+      "abstract": "Second-generation sequencing technologies have replaced array-based technologies and become the default method for genomics and epigenomics analysis. Second-generation sequencing technologies sequence tens of millions of DNA/cDNA fragments in parallel. After the resulting sequences (short reads) are mapped to the genome, one gets a sequence of short read counts along the genome. Effective extraction of signals in these short read counts is the key to the success of sequencing technologies. Nonparametric methods, in particular smoothing splines, have been used extensively for modeling and processing single sequencing samples. However, nonparametric joint modeling of multiple second-generation sequencing samples is still lacking due to computational cost. In this article, we develop an adaptive basis selection method for efficient computation of exponential family smoothing splines for modeling multiple second-generation sequencing samples. Our adaptive basis selection gives a sparse approximation of smoothing splines, yielding a lower-dimensional effective model space for a more scalable computation. The asymptotic analysis shows that the effective model space is rich enough to retain essential features of the data. Moreover, exponential family smoothing spline models computed via adaptive basis selection are shown to have good statistical properties, e.g., convergence at the same rate as that of full basis exponential family smoothing splines. The empirical performance is demonstrated through simulation studies and two second-generation sequencing data examples.",
+      "arxiv_url": "https://arxiv.org/abs/1702.01875v1",
+      "pdf_url": "https://arxiv.org/pdf/1702.01875v1",
+      "published": "2017-02-07",
+      "updated": "2017-02-07",
+      "categories": [
+        "stat.ME"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "1610.02895v1",
+      "arxiv_id": "1610.02895v1",
+      "title": "A Novel Collaborative Cognitive Dynamic Network Architecture",
+      "authors": [
+        "Beatriz Lorenzo",
+        "F. Javier Gonzalez-Castano",
+        "Yuguang Fang"
+      ],
+      "abstract": "Increasing mobile data demands in current cellular networks and proliferation of advanced handheld devices have given rise to a new generation of dynamic network architectures (DNAs). In a DNA, users share their connectivities and act as access points providing Internet connections for others without additional network infrastructure cost. A large number of users and their dynamic connections make DNA highly adaptive to variations in the network and suitable for low cost ubiquitous Internet connectivity. In this article, we propose a novel collaborative cognitive dynamic network architecture (CDNA) which incorporates cognitive capabilities to exploit underutilized spectrum in a more flexible and intelligent way. The design principles of CDNA are perfectly aligned to the functionality requirements of future 5G wireless networks such as energy and spectrum efficiency, scalability, dynamic reconfigurability, support for multi-hop communications, infrastructure sharing, and multi-operator cooperation. A case study with a new resource allocation problem enabled by CDNA is conducted using matching theory with pricing to illustrate the potential benefits of CDNA for users and operators, tackle user associations for data and spectrum trading with low complexity, and enable self-organizing capabilities. Finally, possible challenges and future research directions are given.",
+      "arxiv_url": "https://arxiv.org/abs/1610.02895v1",
+      "pdf_url": "https://arxiv.org/pdf/1610.02895v1",
+      "published": "2016-10-10",
+      "updated": "2016-10-10",
+      "categories": [
+        "cs.GT",
+        "cs.NI"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    },
+    {
+      "id": "1607.00592v1",
+      "arxiv_id": "1607.00592v1",
+      "title": "Automatic Techniques for Gridding cDNA Microarray Images",
+      "authors": [
+        "Naima Kaabouch",
+        "Hamid Shahbazkia"
+      ],
+      "abstract": "Microarray is considered an important instrument and powerful new technology for large-scale gene sequence and gene expression analysis. One of the major challenges of this technique is the image processing phase. The accuracy of this phase has an important impact on the accuracy and effectiveness of the subsequent gene expression and identification analysis. The processing can be organized mainly into four steps: gridding, spot isolation, segmentation, and quantification. Although several commercial software packages are now available, microarray image analysis still requires some intervention by the user, and thus a certain level of image processing expertise. This paper describes and compares four techniques that perform automatic gridding and spot isolation. The proposed techniques are based on template matching technique, standard deviation, sum, and derivative of these profiles. Experimental results show that the accuracy of the derivative of the sum profile is highly accurate compared to other techniques for good and poor quality microarray images.",
+      "arxiv_url": "https://arxiv.org/abs/1607.00592v1",
+      "pdf_url": "https://arxiv.org/pdf/1607.00592v1",
+      "published": "2016-07-03",
+      "updated": "2016-07-03",
+      "categories": [
+        "cs.CV"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-04-28T08:39:19Z"
+    }
+  ]
+}

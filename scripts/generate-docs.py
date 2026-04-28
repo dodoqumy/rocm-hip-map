@@ -14,11 +14,76 @@ import re
 import sys
 from pathlib import Path
 from datetime import datetime, timezone
+from urllib.parse import urljoin, urlparse
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CONTENT_RAW_EN = PROJECT_ROOT / "content" / "raw" / "english"
 WEBSITE_DOCS = PROJECT_ROOT / "website" / "docs"
 ARTICLES_JSON = PROJECT_ROOT / "data" / "articles.json"
+CACHE_JSON = PROJECT_ROOT / "data" / "image-cache.json"
+
+
+def load_image_cache() -> dict:
+    """加载图片缓存映射表。key = raw markdown 中的原始路径，value = {local, ...}。"""
+    if not CACHE_JSON.exists():
+        return {}
+    with open(CACHE_JSON) as f:
+        data = json.load(f)
+    return data.get("mappings", {})
+
+
+def rewrite_image_urls(body: str, page_url: str) -> str:
+    """将正文中的相对图片路径解析为绝对远程 URL。
+
+    保留远程 URL 作为主源，让客户端 fallback 模块处理加载失败。
+
+    例如:
+      ![](../../_images/image001.png)
+      → ![](https://rocm.docs.amd.com/en/latest/_images/image001.png)
+    """
+    if not page_url:
+        return body
+
+    def resolve_ref(m):
+        prefix = m.group(1)  # ![
+        alt_text = m.group(2) or ""  # alt text or empty
+        close_bracket = m.group(3)  # ](
+        url = m.group(4)  # the URL
+        suffix = m.group(5) or ""  # ) or ){.class}
+
+        # 跳过 data: URI
+        if url.startswith("data:"):
+            return m.group(0)
+
+        # 跳过已经是绝对 HTTP URL 的
+        if url.startswith("http://") or url.startswith("https://"):
+            return m.group(0)
+
+        # 跳过本地缓存路径
+        if url.startswith("/img/cached/"):
+            return m.group(0)
+
+        # 相对路径 → 用页面 URL 解析为绝对 URL
+        abs_url = urljoin(page_url, url)
+        return f"{prefix}{alt_text}{close_bracket}{abs_url}{suffix}"
+
+    # 匹配 ![alt](url) 或 [![alt](url){.class}](url){.ref} 等复杂嵌套
+    # 只处理简单的 ![...](...) 模式
+    body = re.sub(
+        r'(!\[)([^\]]*)(\]\()([^)]+)(\))',
+        resolve_ref,
+        body,
+    )
+
+    return body
+
+def raw_frontmatter_field(content: str, field: str, default: str = "") -> str:
+    """从 raw markdown 的 frontmatter 中提取单个字段。"""
+    m = re.search(rf'(?:^|\n){field}:\s*"?(.+?)"?\s*$', content, re.MULTILINE)
+    if m:
+        return m.group(1).strip().strip('"').strip("'")
+    return default
+
 
 # ── 来源 → 网站目录映射 ──────────────────────────
 SOURCE_TO_DOCS_DIR = {
@@ -152,7 +217,7 @@ def _opt_str(val, default=""):
     return str(val).replace('"', "'").replace("\n", " ")
 
 
-def generate_mdx(article: dict, raw_content: str) -> str:
+def generate_mdx(article: dict, raw_content: str, doc_slug: str = "") -> str:
     """为单篇文章生成 Docusaurus MDX 内容。
 
     模板参考：docs/templates/page-template.md
@@ -269,6 +334,7 @@ tags: {_list_to_yaml(tags)}
 published_date: "{_opt_str(published_date)}"
 synced_date: "{_opt_str(synced_date)}"
 generated_at: "{datetime.now(timezone.utc).strftime('%Y-%m-%d')}"
+arxiv_id: "{_opt_str(article.get("arxiv_id", ""))}"
 ---"""
 
     # Issue 检测
@@ -301,6 +367,8 @@ generated_at: "{datetime.now(timezone.utc).strftime('%Y-%m-%d')}"
     body = re.sub(r'\[\\\\#\]\([^)]*\)', '', body)
     # 8. 合并多余空行
     body = re.sub(r'\n{3,}', '\n\n', body)
+    # 8.5. 图片路径解析：相对路径 → 绝对远程 URL（保留远程主源 + 客户端 fallback）
+    body = rewrite_image_urls(body, source_url)
     # 9. 转义 MDX 花括号（防止被 React 当成表达式）
     #    但先保护已存在的 HTML 实体
     body = body.replace('&', '&amp;')
@@ -313,15 +381,23 @@ generated_at: "{datetime.now(timezone.utc).strftime('%Y-%m-%d')}"
     for ent in ['lt', 'gt', 'amp', 'quot', 'apos', '#123', '#125']:
         body = body.replace(f'&amp;{ent};', f'&{ent};')
     
+    # ── 来源行（文档 vs 论文）──
+    stars = "\u2b50" * credibility
+    src_label = "arXiv：" if source_type == "paper" else "原文链接："
+    org_label = "学术论文 · 同行评审" if source_type == "paper" else "AMD 官方文档 · 可信度"
+    source_line = "> 📄 **" + src_label + "** [" + source_url + "](" + source_url + ")  \n> 🏷 **来源：** " + org_label + "：" + stars
+
+
     mdx = f"""{fm}
 
 import ArticleHeader from "@site/src/components/ArticleHeader";
+import PaperArticleHeader from "@site/src/components/PaperArticleHeader";
 {issue_check}
 
 <ArticleHeader />
+<PaperArticleHeader />
 
-> 📄 **原文链接：** [{source_url}]({source_url})
-> 🏷 **来源：** AMD 官方文档 · 可信度：{"⭐" * credibility}
+{source_line}
 
 ---
 
@@ -408,6 +484,33 @@ def main():
     print(f"\n📊 {generated} pages generated in {len(by_dir)} directories:")
     for d, c in sorted(by_dir.items()):
         print(f"   {d}: {c} pages")
+
+    # ── 论文页生成 ──
+    papers_dir = PROJECT_ROOT / "content" / "raw" / "papers"
+    if papers_dir.exists():
+        paper_files = sorted(papers_dir.glob("*.md"))
+        paper_generated = 0
+        for pf in paper_files:
+            with open(pf) as f:
+                raw = f.read()
+            article = article_index.get(pf.stem, {})
+            # 从 raw frontmatter 补全论文特有字段
+            article["source_type"] = "paper"
+            article["source_org"] = "arxiv"
+            if not article.get("source_url"):
+                article["source_url"] = raw_frontmatter_field(raw, "source_url", "")
+            if not article.get("arxiv_id"):
+                article["arxiv_id"] = raw_frontmatter_field(raw, "arxiv_id", pf.stem)
+            if not article.get("title"):
+                article["title"] = raw_frontmatter_field(raw, "title", pf.stem)
+            out_path = WEBSITE_DOCS / "papers" / f"{pf.stem}.mdx"
+            mdx = generate_mdx(article, raw, str(out_path.relative_to(WEBSITE_DOCS)).replace(".mdx", ""))
+            if not args.dry_run:
+                out_path.parent.mkdir(parents=True, exist_ok=True)
+                with open(out_path, "w") as f:
+                    f.write(mdx)
+            paper_generated += 1
+        print(f"\n📜 {paper_generated} paper pages generated in website/docs/papers/")
 
 
 if __name__ == "__main__":

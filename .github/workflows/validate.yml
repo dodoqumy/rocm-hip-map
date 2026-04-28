@@ -51,7 +51,110 @@ jobs:
           fi
 
       # ──────────────────────────────────────────────
-      # 2. 检查 frontmatter 规范合规
+      # 2. 检查缓存图片文件是否存在
+      # ──────────────────────────────────────────────
+      - name: Validate cached images
+        run: |
+          echo "🖼️ Checking cached images..."
+          if [ -f data/image-cache.json ]; then
+            python3 -c "
+          import json, os, sys
+          with open('data/image-cache.json') as f:
+              cache = json.load(f)
+          missing = []
+          for raw_path, mapping in cache.get('mappings', {}).items():
+              local = mapping.get('local', '')
+              if not local:
+                  continue
+              # /img/cached/rocm/foo/bar.png → website/static/img/cached/rocm/foo/bar.png
+              rel = local.replace('/img/cached/', '')
+              filepath = os.path.join('website', 'static', 'img', 'cached', rel)
+              if not os.path.isfile(filepath):
+                  missing.append((raw_path, local, filepath))
+          if missing:
+              for raw_path, local, fp in missing:
+                  print(f'  ❌ Missing cached file: {local} (from {raw_path})')
+              sys.exit(1)
+          print(f'  ✅ All {len(cache[\"mappings\"])} cached images present')
+          "
+          else
+            echo "  ⏭ No data/image-cache.json — skipping cache check"
+          fi
+
+      # ──────────────────────────────────────────────
+      # 3. 检查未缓存的远程图片是否可达
+      # ──────────────────────────────────────────────
+      - name: Validate remote images
+        run: |
+          echo "🌐 Checking remote image URLs..."
+          python3 -c "
+          import os, re, json, requests, sys
+          from urllib.parse import urljoin
+
+          # 加载已缓存的映射（这些不用检查）
+          cached = set()
+          if os.path.exists('data/image-cache.json'):
+              with open('data/image-cache.json') as f:
+                  cache = json.load(f)
+              for m in cache.get('mappings', {}).values():
+                  cached.add(m.get('source_url', ''))
+
+          # 扫描 raw markdown 中的图片引用
+          broken = []
+          seen = set()
+          for root, dirs, files in os.walk('content/raw'):
+              for f in files:
+                  if not f.endswith('.md'):
+                      continue
+                  path = os.path.join(root, f)
+                  with open(path) as fh:
+                      text = fh.read()
+
+                  # 提取 source_url
+                  page_url = None
+                  fm = re.match(r'^---\s*\n(.*?)\n---', text, re.DOTALL)
+                  if fm:
+                      m2 = re.search(r'source_url:\s*\"?(.+?)\"?\s*$', fm.group(1), re.MULTILINE)
+                      if m2:
+                          page_url = m2.group(1).strip().strip('\"').strip(\"'\")
+
+                  # 扫描图片
+                  for m in re.finditer(r'!\[[^\]]*\]\(([^)]+)\)', text):
+                      raw_url = m.group(1)
+                      if raw_url.startswith('data:') or raw_url.startswith('/img/cached/'):
+                          continue
+                      if raw_url.startswith('http'):
+                          abs_url = raw_url
+                      elif page_url:
+                          abs_url = urljoin(page_url, raw_url)
+                      else:
+                          continue
+
+                      if abs_url in seen or abs_url in cached:
+                          continue
+                      seen.add(abs_url)
+
+                      try:
+                          r = requests.head(abs_url, timeout=10, allow_redirects=True, headers={'User-Agent': 'rocm-hip-map-validator/1.0'})
+                          if r.status_code >= 400:
+                              broken.append((abs_url, r.status_code, path))
+                      except Exception as e:
+                          broken.append((abs_url, str(e), path))
+
+          # 输出结果
+          total = len(seen)
+          if broken:
+              for url, err, src in broken[:20]:
+                  print(f'  ❌ {url} → {err} (in {src})')
+              print(f'\\n  {len(broken)}/{total} remote images unreachable')
+              # 不阻塞：允许部分远程图片失效（有缓存兜底）
+          else:
+              print(f'  ✅ All {total} remote images reachable')
+          "
+          continue-on-error: true
+
+      # ──────────────────────────────────────────────
+      # 4. 检查 frontmatter 规范合规
       # ──────────────────────────────────────────────
       - name: Validate frontmatter
         run: |

@@ -33,6 +33,7 @@ from typing import Optional
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CONTENT_RAW_EN = PROJECT_ROOT / "content" / "raw" / "english"
+CONTENT_RAW_PAPERS = PROJECT_ROOT / "content" / "raw" / "papers"
 CONTENT_TRANSLATED_ZH = PROJECT_ROOT / "content" / "translated" / "zh"
 GLOSSARY_PATH = PROJECT_ROOT / "glossary" / "rocm-terms.yaml"
 DOCS_BILINGUAL = PROJECT_ROOT / "docs" / "bilingual" / "en-zh"
@@ -121,22 +122,44 @@ def translate_openai(text: str, api_key: str, model: str = "gpt-4o-mini") -> Opt
 
 
 def translate_deepseek(text: str, api_key: str, model: str = "deepseek-chat",
-                      base_url: str = "https://api.deepseek.com/v1") -> Optional[str]:
-    """DeepSeek / OpenAI-compatible 翻译（支持自定义 base_url）。"""
+                      base_url: str = "https://api.deepseek.com/v1",
+                      mode: str = "doc") -> Optional[str]:
+    """DeepSeek / OpenAI-compatible 翻译（支持自定义 base_url）。
+
+    mode: "doc" = 技术文档翻译, "paper" = 学术论文翻译
+    """
     try:
+        # 选择系统提示
+        if mode == "paper":
+            system_prompt = (
+                "You are a technical translator specialized in academic papers "
+                "on GPU computing, deep learning, and parallel computing. "
+                "Translate the following English academic text to Simplified Chinese (zh-CN). "
+                "Rules:\n"
+                "1. Preserve ALL mathematical notation, equations, variables unchanged.\n"
+                "2. Keep ALL citations like [42], [1,2,3] in their original form.\n"
+                "3. Keep ALL figure/table references like 'Figure 1', 'Table 2' unchanged.\n"
+                "4. Keep technical terms like ROCm, HIP, GPU, CUDA, AMD, PyTorch, CUDA unchanged.\n"
+                "5. Keep ALL markdown formatting, code blocks, inline code, and links unchanged.\n"
+                "6. For section headings, translate naturally but keep the numbering.\n"
+                "7. Translate academic prose into formal technical Chinese.\n"
+                "8. Output ONLY the translation — no explanations, no notes, no preamble."
+            )
+        else:
+            system_prompt = (
+                "You are a technical translator specialized in GPU/ROCm/HIP documentation. "
+                "Translate the following English text to Simplified Chinese (zh-CN). "
+                "Rules:\n"
+                "1. Preserve ALL markdown formatting, code blocks, inline code, and links unchanged.\n"
+                "2. Keep technical terms like ROCm, HIP, GPU, CUDA, AMD, PyTorch, TensorFlow in their original English form.\n"
+                "3. Keep API names, function names, file paths, commands unchanged.\n"
+                "4. Output ONLY the translation — no explanations, no notes, no preamble.\n"
+                "5. Use technical Chinese that a GPU developer would expect."
+            )
         payload = json.dumps({
             "model": model,
             "messages": [
-                {"role": "system", "content": (
-                    "You are a technical translator specialized in GPU/ROCm/HIP documentation. "
-                    "Translate the following English text to Simplified Chinese (zh-CN). "
-                    "Rules:\n"
-                    "1. Preserve ALL markdown formatting, code blocks, inline code, and links unchanged.\n"
-                    "2. Keep technical terms like ROCm, HIP, GPU, CUDA, AMD, PyTorch, TensorFlow in their original English form.\n"
-                    "3. Keep API names, function names, file paths, commands unchanged.\n"
-                    "4. Output ONLY the translation — no explanations, no notes, no preamble.\n"
-                    "5. Use technical Chinese that a GPU developer would expect."
-                )},
+                {"role": "system", "content": system_prompt},
                 {"role": "user", "content": text},
             ],
             "temperature": 0.1,
@@ -160,7 +183,7 @@ def translate_deepseek(text: str, api_key: str, model: str = "deepseek-chat",
         return None
 
 
-def translate(text: str, glossary: dict) -> Optional[str]:
+def translate(text: str, glossary: dict, mode: str = "doc") -> Optional[str]:
     """统一翻译入口，自动选择后端。
 
     环境变量：
@@ -170,6 +193,8 @@ def translate(text: str, glossary: dict) -> Optional[str]:
                            opencode 默认 deepseek-v4-pro）
       TRANSLATE_BASE_URL   自定义端点（opencode 需要设置为
                            https://opencode.ai/zen/go/v1）
+
+    mode: "doc" = 技术文档, "paper" = 学术论文
     """
     provider = os.environ.get("TRANSLATE_PROVIDER", "deepseek")
     api_key = os.environ.get("TRANSLATE_API_KEY", "")
@@ -192,7 +217,7 @@ def translate(text: str, glossary: dict) -> Optional[str]:
         base_url = os.environ.get("TRANSLATE_BASE_URL",
             "https://api.deepseek.com/v1" if provider == "deepseek"
             else "https://opencode.ai/zen/go/v1")
-        return translate_deepseek(text, api_key, model=model, base_url=base_url)
+        return translate_deepseek(text, api_key, model=model, base_url=base_url, mode=mode)
     else:
         print(f"  ⚠ Unknown provider: {provider}")
         return None
@@ -264,8 +289,30 @@ def split_markdown(content: str) -> list:
     return segments
 
 
-def translate_markdown_file(filepath: Path, glossary: dict, dry_run: bool = False) -> bool:
-    """翻译单个 Markdown 文件。"""
+def translate_markdown_file(filepath: Path, glossary: dict, dry_run: bool = False,
+                           mode: str = "doc") -> bool:
+    """翻译单个 Markdown 文件。
+
+    mode: "doc" = 技术文档, "paper" = 学术论文
+    """
+    # 跳过不适合翻译的文件
+    SKIP_PATTERNS = [
+        "changelog",       # 版本日志，纯列表无翻译价值
+        "versions",        # 版本号列表
+        "release-notes",   # 发布说明
+        "compatibility-matrix",  # 兼容性矩阵（表格为主）
+    ]
+    fname_lower = filepath.name.lower()
+    for pat in SKIP_PATTERNS:
+        if pat in fname_lower:
+            print(f"  ⏭ Skipped (SKIP_PATTERNS: {pat}): {filepath.name}")
+            return True
+
+    # 跳过超大文件（>500KB）—— 内容太多，翻译耗时数小时
+    MAX_SIZE = 500 * 1024
+    if filepath.stat().st_size > MAX_SIZE:
+        print(f"  ⏭ Skipped (too large: {filepath.stat().st_size // 1024}KB): {filepath.name}")
+        return True
     with open(filepath) as f:
         content = f.read()
 
@@ -284,7 +331,7 @@ def translate_markdown_file(filepath: Path, glossary: dict, dry_run: bool = Fals
             if dry_run:
                 translated_parts.append(f"[ZH-TRANSLATED] {text[:80]}...")
             else:
-                translated = translate(text, glossary)
+                translated = translate(text, glossary, mode=mode)
                 if translated:
                     translated_parts.append(translated)
                 else:
@@ -295,8 +342,16 @@ def translate_markdown_file(filepath: Path, glossary: dict, dry_run: bool = Fals
     result = "\n\n".join(translated_parts)
 
     # 保存翻译结果
-    rel_path = filepath.relative_to(CONTENT_RAW_EN) if CONTENT_RAW_EN in filepath.parents else filepath
-    out_path = CONTENT_TRANSLATED_ZH / rel_path.with_name(rel_path.stem + "_zh.md")
+    rel_path = None
+    if CONTENT_RAW_EN in filepath.parents:
+        rel_path = filepath.relative_to(CONTENT_RAW_EN)
+        out_path = CONTENT_TRANSLATED_ZH / rel_path.with_name(rel_path.stem + "_zh.md")
+    elif CONTENT_RAW_PAPERS in filepath.parents:
+        rel_path = filepath.relative_to(CONTENT_RAW_PAPERS)
+        out_path = CONTENT_TRANSLATED_ZH / "papers" / rel_path.with_name(rel_path.stem + "_zh.md")
+    else:
+        rel_path = filepath
+        out_path = CONTENT_TRANSLATED_ZH / rel_path.with_name(rel_path.stem + "_zh.md")
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     if not dry_run:
@@ -310,18 +365,36 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--file", help="Single file to translate")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--mode", choices=["doc", "paper"], default="doc",
+                       help="Translation mode: doc (default) or paper")
+    parser.add_argument("--papers-dir", type=str, default="",
+                       help="Translate all papers in content/raw/papers/")
     args = parser.parse_args()
 
     print("🌐 rocm-hip-map translate.py")
     print(f"   Provider: {os.environ.get('TRANSLATE_PROVIDER', 'not set')}")
+    print(f"   Mode: {args.mode}")
     print(f"   {'DRY RUN' if args.dry_run else 'LIVE MODE'}")
 
     glossary = load_glossary()
     print(f"   Glossary: {len(glossary.get('terms',[]))} terms")
 
-    if args.file:
+    if args.papers_dir:
+        # 批量论文翻译模式
+        papers_dir = Path(args.papers_dir)
+        if not papers_dir.exists():
+            print(f"   No papers found at {papers_dir}")
+            return
+        md_files = sorted(papers_dir.glob("*.md"))
+        count = 0
+        for md_file in md_files:
+            print(f"  📜 {md_file.name}")
+            translate_markdown_file(md_file, glossary, dry_run=args.dry_run, mode="paper")
+            count += 1
+        print(f"\n📊 {count} papers translated")
+    elif args.file:
         path = Path(args.file)
-        translate_markdown_file(path, glossary, dry_run=args.dry_run)
+        translate_markdown_file(path, glossary, dry_run=args.dry_run, mode=args.mode)
         print(f"   ✅ Translated: {path.name}")
     else:
         if not CONTENT_RAW_EN.exists():
@@ -330,7 +403,7 @@ def main():
         count = 0
         for md_file in sorted(CONTENT_RAW_EN.glob("*.md")):
             print(f"  📝 {md_file.name}")
-            translate_markdown_file(md_file, glossary, dry_run=args.dry_run)
+            translate_markdown_file(md_file, glossary, dry_run=args.dry_run, mode=args.mode)
             count += 1
         print(f"\n📊 {count} files translated")
 

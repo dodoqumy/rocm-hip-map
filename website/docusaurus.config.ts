@@ -21,7 +21,6 @@ const config: Config = {
   projectName: 'rocm-hip-map',
 
   onBrokenLinks: 'warn',
-  onBrokenMarkdownImages: 'warn',
 
   // i18n 中英双语配置
   i18n: {

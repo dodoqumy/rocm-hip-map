@@ -328,6 +328,25 @@ def process_source(source_key: str, config: dict, dry_run: bool = False) -> int:
     return count
 
 
+def _run_cache_images():
+    """Phase 11.2: 抓取完成后自动缓存图片。"""
+    cache_script = PROJECT_ROOT / "scripts" / "cache-images.py"
+    if not cache_script.exists():
+        print("  ⚠ cache-images.py not found — skipping image cache")
+        return
+    print("\n🖼️  Syncing image cache...")
+    try:
+        subprocess.run(
+            [sys.executable, str(cache_script)],
+            check=True, timeout=180,
+            capture_output=False,
+        )
+    except subprocess.CalledProcessError:
+        print("  ⚠ Image caching had errors (non-fatal)")
+    except subprocess.TimeoutExpired:
+        print("  ⚠ Image caching timed out (non-fatal)")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Fetch ROCm/HIP official docs")
     parser.add_argument("--dry-run", action="store_true", help="Preview only")
@@ -347,6 +366,8 @@ def main():
     if not args.dry_run and total > 0:
         print(f"   Raw files → {CONTENT_RAW_EN}")
         print("   Run 'python3 scripts/classify.py' to classify & tag.")
+        # ── Phase 11.2: 跟随抓取同步缓存图片 ──
+        _run_cache_images()
 
 
 if __name__ == "__main__":

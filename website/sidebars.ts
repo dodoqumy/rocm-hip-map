@@ -283,6 +283,14 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: '📜 论文检索',
+      collapsible: true,
+      collapsed: true,
+      link: { type: 'doc', id: 'papers/index' },
+      items: [],  // auto-generated, too many to list
+    },
+    {
+      type: 'category',
       label: '📋 兼容性矩阵',
       collapsible: true,
       collapsed: true,
