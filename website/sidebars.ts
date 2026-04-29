@@ -15,6 +15,20 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: '🔤 双语对照',
+      collapsible: true,
+      collapsed: false,
+      link: { type: 'doc', id: 'bilingual/en-zh/index' },
+      items: [
+        'bilingual/en-zh/rocm_en_latest_what-is-rocm',
+        'bilingual/en-zh/rocm_en_latest_about_license',
+        'bilingual/en-zh/rocm_en_latest_conceptual_gpu-arch',
+        'bilingual/en-zh/rocm_en_latest_how-to_programming_guide',
+        'bilingual/en-zh/rocm_en_latest_compatibility_ml-compatibility_pytorch',
+      ],
+    },
+    {
+      type: 'category',
       label: '💻 HIP 编程',
       collapsible: true,
       collapsed: false,

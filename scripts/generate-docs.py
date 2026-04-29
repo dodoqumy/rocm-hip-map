@@ -602,6 +602,98 @@ def main():
                 ml_generated += 1
         print(f"\n🌐 {ml_generated} multilingual pages generated in website/docs/multilingual/")
 
+    # ── 双语对照页生成 ──
+    bil_gen = generate_bilingual_pages(dry_run=args.dry_run)
+    if bil_gen > 0:
+        print(f"\n📖 {bil_gen} bilingual pages generated in website/docs/bilingual/en-zh/")
+
+def generate_bilingual_pages(dry_run=False):
+    """为所有已翻译文章生成双语对照 MDX 页面。"""
+    import re as _re
+
+    translated_dir = PROJECT_ROOT / "content" / "translated" / "zh"
+    english_dir = PROJECT_ROOT / "content" / "raw" / "english"
+    bilingual_out = WEBSITE_DOCS / "bilingual" / "en-zh"
+
+    if not translated_dir.exists():
+        print("  No translations found — skipping bilingual pages")
+        return 0
+
+    def _escape_jsx(text):
+        """Escape markdown content for safe embedding in JSX template literals."""
+        # Escape backslashes first
+        text = text.replace("\\", "\\\\")
+        # Escape backticks
+        text = text.replace("`", "\\`")
+        # Escape template literals
+        text = text.replace("${", "\\${")
+        # Escape JSX curly braces
+        text = _re.sub(r"(?<!\\)\\{", "\\{", text)
+        text = _re.sub(r"(?<!\\)\\}", "\\}", text)
+        return text
+
+    generated = 0
+    for zh_file in sorted(translated_dir.glob("*_zh.md")):
+        # Derive English file name
+        stem = zh_file.stem  # e.g., "rocm_en_latest_what-is-rocm_zh"
+        en_stem = stem.replace("_zh", "")
+        en_file = english_dir / f"{en_stem}.md"
+
+        if not en_file.exists():
+            print(f"  ⚠ No English source for {zh_file.name} — skipping")
+            continue
+
+        with open(en_file) as f:
+            en_content = f.read()
+        with open(zh_file) as f:
+            zh_content = f.read()
+
+        # Extract frontmatter from English for title/source_url
+        en_title = en_stem.replace("_", " ").replace("-", " ").title()
+        source_url = ""
+        if en_content.startswith("---"):
+            end = en_content.find("---", 3)
+            if end != -1:
+                fm_block = en_content[3:end]
+                for line in fm_block.split("\n"):
+                    if line.startswith("title:"):
+                        en_title = line.split(":", 1)[1].strip().strip('"')
+                    elif line.startswith("source_url:"):
+                        source_url = line.split(":", 1)[1].strip().strip('"')
+
+        # Escape both contents
+        en_escaped = _escape_jsx(en_content)
+        zh_escaped = _escape_jsx(zh_content)
+
+        # Generate MDX
+        mdx = f"""---
+title: "{en_title} (双语对照)"
+description: "{en_title} — 中英双语对照阅读"
+keywords: ["双语对照", "中英对照", "bilingual", "翻译", "ROCm", "AMD", "GPU"]
+source_url: {source_url}
+source_type: bilingual
+original_lang: en
+---
+
+import BilingualViewer from "@site/src/components/BilingualViewer";
+
+export const enContent = `{en_escaped}`;
+
+export const zhContent = `{zh_escaped}`;
+
+<BilingualViewer enContent={{enContent}} zhContent={{zhContent}} sourceUrl="{source_url}" />
+"""
+
+        out_path = bilingual_out / f"{en_stem}.mdx"
+        if not dry_run:
+            out_path.parent.mkdir(parents=True, exist_ok=True)
+            with open(out_path, "w") as f:
+                f.write(mdx)
+            print(f"  📖 {out_path.relative_to(PROJECT_ROOT)}")
+        generated += 1
+
+    return generated
+
 
 if __name__ == "__main__":
     main()
