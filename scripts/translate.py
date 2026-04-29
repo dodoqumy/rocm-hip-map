@@ -32,11 +32,11 @@ from pathlib import Path
 from typing import Optional
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-CONTENT_RAW_EN = PROJECT_ROOT / "content" / "raw" / "english"
-CONTENT_RAW_PAPERS = PROJECT_ROOT / "content" / "raw" / "papers"
-CONTENT_TRANSLATED_ZH = PROJECT_ROOT / "content" / "translated" / "zh"
-GLOSSARY_PATH = PROJECT_ROOT / "glossary" / "rocm-terms.yaml"
-DOCS_BILINGUAL = PROJECT_ROOT / "docs" / "bilingual" / "en-zh"
+CONTENT_RAW_EN = (PROJECT_ROOT / "content" / "raw" / "english").resolve()
+CONTENT_RAW_PAPERS = (PROJECT_ROOT / "content" / "raw" / "papers").resolve()
+CONTENT_TRANSLATED_ZH = (PROJECT_ROOT / "content" / "translated" / "zh").resolve()
+GLOSSARY_PATH = (PROJECT_ROOT / "glossary" / "rocm-terms.yaml").resolve()
+DOCS_BILINGUAL = (PROJECT_ROOT / "docs" / "bilingual" / "en-zh").resolve()
 
 # ── 术语表 ──────────────────────────────────────────
 
