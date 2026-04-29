@@ -22,6 +22,21 @@ WEBSITE_DOCS = (PROJECT_ROOT / "website" / "docs").resolve()
 ARTICLES_JSON = (PROJECT_ROOT / "data" / "articles.json").resolve()
 CACHE_JSON = (PROJECT_ROOT / "data" / "image-cache.json").resolve()
 
+# ── 多语言源 → 国家代码映射 ──
+SOURCE_ORG_COUNTRY = {
+    "csc-lumi": "fi", "csc-en": "fi",
+    "hal-fr": "fr", "genci": "fr",
+    "julich": "de", "lrz": "de",
+    "cineca": "it", "cineca-docs": "it",
+    "amd-japan": "jp", "titech-tsubame": "jp", "riken": "jp",
+    "u-tokyo-hpc": "jp", "osaka-u-cybermedia": "jp", "cinii": "jp",
+    "kisti": "kr", "kaist": "kr", "snu-hpc": "kr", "riss": "kr",
+    "bsc": "es", "bsc-es-en": "es",
+    "surf": "nl",
+    "msu-hpc": "ru", "elibrary-ru": "ru",
+    "pdc-kth": "sv", "nsc-sv": "sv", "uppmax": "sv",
+}
+
 
 def load_image_cache() -> dict:
     """加载图片缓存映射表。key = raw markdown 中的原始路径，value = {local, ...}。"""
@@ -239,6 +254,7 @@ def generate_mdx(article: dict, raw_content: str, doc_slug: str = "") -> str:
     if not title or len(title) < 2:
         title = "Untitled"
 
+    country = article.get("country", "")
     source_url = article.get("source_url", "")
     source_type = article.get("source_type", "official")
     source_org = article.get("source_org", "amd")
@@ -343,6 +359,7 @@ published_date: "{_opt_str(published_date)}"
 synced_date: "{_opt_str(synced_date)}"
 generated_at: "{datetime.now(timezone.utc).strftime('%Y-%m-%d')}"
 arxiv_id: "{_opt_str(article.get("arxiv_id", ""))}"
+country: "{_opt_str(country)}"
 ---"""
 
     # Issue 检测
@@ -394,6 +411,11 @@ arxiv_id: "{_opt_str(article.get("arxiv_id", ""))}"
     
     # ── 来源行（文档 vs 论文）──
     stars = "\u2b50" * credibility
+    # ── 国旗标签（多语言页面）──
+    flag_badge = ""
+    if country and source_type == "multilingual":
+        flag_badge = "\n<FlagBadge country=\"" + country + "\" />"
+    
     src_label = "arXiv：" if source_type == "paper" else "原文链接："
     org_label = "学术论文 · 同行评审" if source_type == "paper" else "AMD 官方文档 · 可信度"
     source_line = "> 📄 **" + src_label + "** [" + source_url + "](" + source_url + ")  \n> 🏷 **来源：** " + org_label + "：" + stars
@@ -402,11 +424,13 @@ arxiv_id: "{_opt_str(article.get("arxiv_id", ""))}"
     mdx = f"""{fm}
 
 import ArticleHeader from "@site/src/components/ArticleHeader";
+import FlagBadge from "@site/src/components/FlagBadge";
 import PaperArticleHeader from "@site/src/components/PaperArticleHeader";
 {issue_check}
 
 <ArticleHeader />
 <PaperArticleHeader />
+{flag_badge}
 
 {source_line}
 
@@ -566,6 +590,7 @@ def main():
                 article["source_org"] = raw_frontmatter_field(raw, "source_org", "unknown")
                 article["source_url"] = raw_frontmatter_field(raw, "source_url", "")
                 article["original_lang"] = raw_frontmatter_field(raw, "original_lang", lang)
+                article["country"] = SOURCE_ORG_COUNTRY.get(article["source_org"], "")
                 if not article.get("title"):
                     article["title"] = raw_frontmatter_field(raw, "title", pf.stem)
                 out_path = WEBSITE_DOCS / "multilingual" / lang / f"{pf.stem}.mdx"
