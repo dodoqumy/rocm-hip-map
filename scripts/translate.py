@@ -394,7 +394,17 @@ def main():
         print(f"\n📊 {count} papers translated")
     elif args.file:
         path = Path(args.file)
-        translate_markdown_file(path, glossary, dry_run=args.dry_run, mode=args.mode)
+        if not path.is_absolute():
+            path = (PROJECT_ROOT / path).resolve()
+
+        if not path.exists():
+            print(f"   ❌ Input file not found: {path}")
+            sys.exit(1)
+
+        ok = translate_markdown_file(path, glossary, dry_run=args.dry_run, mode=args.mode)
+        if not ok:
+            sys.exit(1)
+
         print(f"   ✅ Translated: {path.name}")
     else:
         if not CONTENT_RAW_EN.exists():

@@ -45,20 +45,25 @@ jobs:
 
       - name: Show translation result
         run: |
+          echo "🔍 Searching for translation output..."
+          find content/translated/zh -type f -maxdepth 5 -print
+
           STEM=$(basename "${{ inputs.file }}" .md)
-          OUT="content/translated/zh/${STEM}_zh.md"
-          if [ -f "$OUT" ]; then
-            echo "✅ Translation produced: $OUT"
+          OUT=$(find content/translated/zh -name "${STEM}_zh.md" -type f 2>/dev/null | head -1)
+
+          if [ -n "$OUT" ] && [ -f "$OUT" ]; then
+            echo ""
+            echo "✅ Translation found: $OUT"
             echo "   Size: $(wc -c < "$OUT") bytes"
             echo "   Lines: $(wc -l < "$OUT")"
             echo ""
             echo "=== First 50 lines ==="
             head -50 "$OUT"
           else
-            echo "❌ No output file found at $OUT"
+            echo "❌ No ${STEM}_zh.md found under content/translated/zh/"
             echo ""
-            echo "=== Check content/translated/zh/ ==="
-            ls -la content/translated/zh/ 2>/dev/null || echo "(empty)"
+            echo "=== Full tree ==="
+            find content/translated/zh -type f 2>/dev/null || echo "(empty)"
             exit 1
           fi
 
