@@ -7,9 +7,10 @@
 import json, os
 from pathlib import Path
 
-PAPERS_DIR = Path("website/docs/papers")
-PAPERS_JSON = Path("data/papers.json")
-SIDEBARS_TS = Path("website/sidebars.ts")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+PAPERS_DIR = (PROJECT_ROOT / "website" / "docs" / "papers").resolve()
+PAPERS_JSON = (PROJECT_ROOT / "data" / "papers.json").resolve()
+SIDEBARS_TS = (PROJECT_ROOT / "website" / "sidebars.ts").resolve()
 
 # 获取实际 MDX 文件
 mdx_files = {f.replace('.mdx', '') for f in os.listdir(PAPERS_DIR) if f.endswith('.mdx')}

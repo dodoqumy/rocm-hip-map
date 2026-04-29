@@ -27,12 +27,12 @@ from PIL import Image
 
 # ── 项目根目录 ──────────────────────────────────────
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-CONTENT_RAW_EN = PROJECT_ROOT / "content" / "raw" / "english"
-CONTENT_RAW_ZH = PROJECT_ROOT / "content" / "raw" / "chinese"
-STATIC_IMG = PROJECT_ROOT / "website" / "static" / "img" / "cached"
-DATA_DIR = PROJECT_ROOT / "data"
-CACHE_JSON = DATA_DIR / "image-cache.json"
-FALLBACKS_JSON = PROJECT_ROOT / "website" / "static" / "data" / "image-fallbacks.json"
+CONTENT_RAW_EN = (PROJECT_ROOT / "content" / "raw" / "english").resolve()
+CONTENT_RAW_ZH = (PROJECT_ROOT / "content" / "raw" / "chinese").resolve()
+STATIC_IMG = (PROJECT_ROOT / "website" / "static" / "img" / "cached").resolve()
+DATA_DIR = (PROJECT_ROOT / "data").resolve()
+CACHE_JSON = (DATA_DIR / "image-cache.json").resolve()
+FALLBACKS_JSON = (PROJECT_ROOT / "website" / "static" / "data" / "image-fallbacks.json").resolve()
 
 
 def save_fallbacks(cache: dict):

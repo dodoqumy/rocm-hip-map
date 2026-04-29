@@ -17,10 +17,10 @@ from datetime import datetime, timezone
 from urllib.parse import urljoin, urlparse
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-CONTENT_RAW_EN = PROJECT_ROOT / "content" / "raw" / "english"
-WEBSITE_DOCS = PROJECT_ROOT / "website" / "docs"
-ARTICLES_JSON = PROJECT_ROOT / "data" / "articles.json"
-CACHE_JSON = PROJECT_ROOT / "data" / "image-cache.json"
+CONTENT_RAW_EN = (PROJECT_ROOT / "content" / "raw" / "english").resolve()
+WEBSITE_DOCS = (PROJECT_ROOT / "website" / "docs").resolve()
+ARTICLES_JSON = (PROJECT_ROOT / "data" / "articles.json").resolve()
+CACHE_JSON = (PROJECT_ROOT / "data" / "image-cache.json").resolve()
 
 
 def load_image_cache() -> dict:

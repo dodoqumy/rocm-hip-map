@@ -18,9 +18,9 @@ from pathlib import Path
 
 # ── 项目路径 ────────────────────────────────────────
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DOCS_DIR = PROJECT_ROOT / "website" / "docs"
-DATA_DIR = PROJECT_ROOT / "data"
-OUTPUT_JSON = DATA_DIR / "related-articles.json"
+DOCS_DIR = (PROJECT_ROOT / "website" / "docs").resolve()
+DATA_DIR = (PROJECT_ROOT / "data").resolve()
+OUTPUT_JSON = (DATA_DIR / "related-articles.json").resolve()
 
 # ── 关键词黑名单（太泛的关键词不加权）──────────────
 STOP_KEYWORDS = {

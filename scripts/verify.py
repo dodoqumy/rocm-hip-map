@@ -32,10 +32,10 @@ from typing import Optional
 
 # ── 项目根 ─────────────────────────────────────────
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-CONTENT_RAW_EN = PROJECT_ROOT / "content" / "raw" / "english"
-CONTENT_TRANSLATED_ZH = PROJECT_ROOT / "content" / "translated" / "zh"
-VERIFICATION_DIR = PROJECT_ROOT / "data" / "verification"
-ARTICLES_JSON = PROJECT_ROOT / "data" / "articles.json"
+CONTENT_RAW_EN = (PROJECT_ROOT / "content" / "raw" / "english").resolve()
+CONTENT_TRANSLATED_ZH = (PROJECT_ROOT / "content" / "translated" / "zh").resolve()
+VERIFICATION_DIR = (PROJECT_ROOT / "data" / "verification").resolve()
+ARTICLES_JSON = (PROJECT_ROOT / "data" / "articles.json").resolve()
 
 # ── 翻译校验用 LLM 配置 ─────────────────────────────
 LLM_PROVIDER = os.environ.get("TRANSLATE_PROVIDER", "opencode")
