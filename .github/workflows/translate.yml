@@ -1,0 +1,70 @@
+name: Translate Content
+
+# 🌐 增量翻译 — 每天定时运行，每次最多翻译 5 篇新文章
+# 断点续传：_zh.md 存在且 >200B 则跳过，<200B 视为失败重新翻译
+#
+# 设计原则：
+#   - 与 sync.yml 解耦，独立运行，互不阻塞
+#   - 增量模式：每次仅翻译新增/失败的 N 篇
+#   - 超时安全：单次最多 ~30min（5 篇 × 5min/篇）
+
+on:
+  schedule:
+    # 每天 UTC 04:00（北京时间 12:00）
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+    inputs:
+      max_files:
+        description: '每次最多翻译篇数'
+        required: false
+        default: '5'
+      mode:
+        description: '翻译模式'
+        required: false
+        default: 'doc'
+        type: choice
+        options:
+          - doc
+          - paper
+
+permissions:
+  contents: write
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install pyyaml requests
+
+      - name: Incremental translate
+        env:
+          TRANSLATE_PROVIDER: opencode
+          TRANSLATE_API_KEY: ${{ secrets.TRANSLATE_API_KEY }}
+          TRANSLATE_MODEL: deepseek-v4-pro
+          TRANSLATE_BASE_URL: https://opencode.ai/zen/go/v1
+        run: |
+          python3 scripts/translate.py \
+            --incremental \
+            --max-files "${{ inputs.max_files || '5' }}" \
+            --mode "${{ inputs.mode || 'doc' }}"
+
+      - name: Commit translations
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add content/translated/ || true
+
+          if git diff --cached --quiet; then
+            echo "No new translations to commit"
+          else
+            git commit -m "auto: incremental translate $(date +%Y-%m-%d)"
+            git push
+          fi

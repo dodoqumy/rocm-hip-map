@@ -38,24 +38,13 @@ jobs:
         run: python3 scripts/classify.py
 
       # ──────────────────────────────────────────────
-      # 3. AI 翻译（opencode-go / DeepSeek）
-      # ──────────────────────────────────────────────
-      - name: Translate to Chinese
-        env:
-          TRANSLATE_PROVIDER: opencode
-          TRANSLATE_API_KEY: ${{ secrets.TRANSLATE_API_KEY }}
-          TRANSLATE_MODEL: deepseek-v4-pro
-          TRANSLATE_BASE_URL: https://opencode.ai/zen/go/v1
-        run: python3 scripts/translate.py
-
-      # ──────────────────────────────────────────────
-      # 4. 版本更新检测（仅记录，不发 Issue）
+      # 4. 版本更新检测
       # ──────────────────────────────────────────────
       - name: Release watch
         run: python3 scripts/release-watch.py
 
       # ──────────────────────────────────────────────
-      # 5. 有变更则自动提交
+      # 3. 有变更则自动提交
       # ──────────────────────────────────────────────
       - name: Commit changes
         run: |

@@ -369,12 +369,17 @@ def main():
                        help="Translation mode: doc (default) or paper")
     parser.add_argument("--papers-dir", type=str, default="",
                        help="Translate all papers in content/raw/papers/")
+    parser.add_argument("--incremental", action="store_true",
+                       help="Incremental: only translate files without _zh.md or with failed output")
+    parser.add_argument("--max-files", type=int, default=5,
+                       help="Max files per run in incremental mode (default: 5)")
     args = parser.parse_args()
 
     print("🌐 rocm-hip-map translate.py")
     print(f"   Provider: {os.environ.get('TRANSLATE_PROVIDER', 'not set')}")
     print(f"   Mode: {args.mode}")
     print(f"   {'DRY RUN' if args.dry_run else 'LIVE MODE'}")
+    print(f"   {'INCREMENTAL' if args.incremental else 'FULL'}")
 
     glossary = load_glossary()
     print(f"   Glossary: {len(glossary.get('terms',[]))} terms")
@@ -406,6 +411,45 @@ def main():
             sys.exit(1)
 
         print(f"   ✅ Translated: {path.name}")
+    elif args.incremental:
+        # 增量模式：只翻译未完成/失败的文件
+        # 断点续传逻辑：_zh.md 存在且 > MIN_VALID_SIZE 则跳过
+        MIN_VALID_SIZE = 200  # bytes — 低于此值视为失败断点，重新翻译
+
+        if not CONTENT_RAW_EN.exists():
+            print("   No raw English content found. Run fetch-official.py first.")
+            return
+
+        all_files = sorted(CONTENT_RAW_EN.glob("*.md"))
+        skipped = 0
+        failed_resume = 0
+        count = 0
+
+        for md_file in all_files:
+            zh_file = CONTENT_TRANSLATED_ZH / (md_file.stem + "_zh.md")
+
+            if zh_file.exists() and zh_file.stat().st_size > MIN_VALID_SIZE:
+                skipped += 1
+                continue  # ✅ 已完成，断点保留
+
+            if zh_file.exists() and zh_file.stat().st_size <= MIN_VALID_SIZE:
+                print(f"  🔄 Resume (failed checkpoint, {zh_file.stat().st_size}B): {md_file.name}")
+                failed_resume += 1
+            else:
+                print(f"  📝 {md_file.name}")
+
+            translate_markdown_file(md_file, glossary, dry_run=args.dry_run, mode=args.mode)
+            count += 1
+
+            if count >= args.max_files:
+                remaining = len(all_files) - skipped - failed_resume - count
+                print(f"\n  ⏸ Reached --max-files={args.max_files}")
+                if remaining > 0:
+                    print(f"     {remaining} file(s) remain for next run")
+                break
+
+        print(f"\n📊 {count} translated, {failed_resume} resumed, {skipped} skipped, "
+              f"{len(all_files) - skipped - failed_resume - count} remaining")
     else:
         if not CONTENT_RAW_EN.exists():
             print("   No raw English content found. Run fetch-official.py first.")
