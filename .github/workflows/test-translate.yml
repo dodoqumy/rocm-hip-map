@@ -1,15 +1,17 @@
-name: Test Translate Single File
+name: Test Translate Batch
 
-# 🔬 单篇翻译测试 — 手动触发，验证翻译管道是否畅通
-# 用法：GitHub Actions → "Test Translate Single File" → Run workflow
+# 🔬 翻译测试 — 支持单篇或批量，手动触发
+# 用法：GitHub Actions → "Test Translate Batch" → Run workflow
+#   单篇：输入一个文件名
+#   批量：输入多个文件名，用逗号分隔（最多5篇）
 
 on:
   workflow_dispatch:
     inputs:
-      file:
-        description: '要翻译的文件（相对于 content/raw/english/）'
+      files:
+        description: '要翻译的文件（逗号分隔，相对于 content/raw/english/）'
         required: true
-        default: 'rocm_en_latest_what-is-rocm.md'
+        default: 'rocm_en_latest_what-is-rocm.md,rocm_en_latest_about_license.md,rocm_en_latest_conceptual_gpu-arch.md,rocm_en_latest_how-to_programming_guide.md,rocm_en_latest_compatibility_ml-compatibility_pytorch.md'
       mode:
         description: '翻译模式'
         required: false
@@ -20,7 +22,7 @@ on:
           - paper
 
 jobs:
-  translate-one:
+  translate-batch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -32,35 +34,69 @@ jobs:
       - name: Install deps
         run: pip install pyyaml requests
 
-      - name: Translate single file
+      - name: Translate batch
         env:
           TRANSLATE_PROVIDER: opencode
           TRANSLATE_API_KEY: ${{ secrets.TRANSLATE_API_KEY }}
           TRANSLATE_MODEL: deepseek-v4-pro
           TRANSLATE_BASE_URL: https://opencode.ai/zen/go/v1
         run: |
-          python3 scripts/translate.py \
-            --file "content/raw/english/${{ inputs.file }}" \
-            --mode "${{ inputs.mode }}"
+          set -e
+          IFS=',' read -ra FILES <<< "${{ inputs.files }}"
+          TOTAL=0
+          OK=0
 
-      - name: Show translation result
-        run: |
-          echo "=== Find translated files ==="
-          find content/translated/zh -type f -maxdepth 10 -print -exec wc -c {} \;
-
-          STEM=$(basename "${{ inputs.file }}" .md)
-          OUT="content/translated/zh/${STEM}_zh.md"
-
-          if [ -f "$OUT" ]; then
+          for f in "${FILES[@]}"; do
+            f=$(echo "$f" | xargs)  # trim whitespace
             echo ""
-            echo "✅ Translation produced: $OUT"
-            head -50 "$OUT"
-          else
-            echo "❌ Expected output not found: $OUT"
+            echo "═══════════════════════════════════════"
+            echo "📝 [$((TOTAL+1))] Translating: $f"
+            echo "═══════════════════════════════════════"
+            python3 scripts/translate.py \
+              --file "content/raw/english/$f" \
+              --mode "${{ inputs.mode }}" && OK=$((OK+1)) || echo "⚠ Failed: $f"
+            TOTAL=$((TOTAL+1))
+          done
+
+          echo ""
+          echo "═══════════════════════════════════════"
+          echo "📊 Batch result: $OK/$TOTAL succeeded"
+          echo "═══════════════════════════════════════"
+
+      - name: Show translation results
+        run: |
+          echo "=== All translated files ==="
+          find content/translated/zh -type f -not -name '.gitkeep' -maxdepth 10 -print -exec wc -c {} \;
+
+          IFS=',' read -ra FILES <<< "${{ inputs.files }}"
+          FAIL=0
+          PASS=0
+
+          for f in "${FILES[@]}"; do
+            f=$(echo "$f" | xargs)
+            STEM=$(basename "$f" .md)
+            OUT="content/translated/zh/${STEM}_zh.md"
+            if [ -f "$OUT" ]; then
+              echo ""
+              echo "✅ $OUT ($(wc -c < "$OUT") bytes)"
+              echo "--- First 10 lines ---"
+              head -20 "$OUT"
+              PASS=$((PASS+1))
+            else
+              echo ""
+              echo "❌ Missing: $OUT"
+              FAIL=$((FAIL+1))
+            fi
+          done
+
+          echo ""
+          echo "📊 Verification: $PASS found, $FAIL missing"
+          if [ "$FAIL" -gt 0 ]; then
+            echo "⚠ Some files were not translated. Check logs above."
             exit 1
           fi
 
-      - name: Commit translation to test branch
+      - name: Commit translations to test branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -68,7 +104,7 @@ jobs:
           BRANCH="test/translate-${{ github.run_number }}"
           git checkout -b "$BRANCH"
           git add content/translated/
-          git commit -m "test: translate ${{ inputs.file }} (#${{ github.run_number }})" || echo "No changes"
+          git commit -m "test: translate batch ${{ inputs.files }} (#${{ github.run_number }})" || echo "No changes"
           git push origin "$BRANCH"
 
           echo "📌 Translation pushed to branch: $BRANCH"
