@@ -316,6 +316,14 @@ const sidebars: SidebarsConfig = {
       link: { type: 'doc', id: 'issues/index' },
       items: [],
     },
+    {
+      type: 'category',
+      label: '💰 GPU 二手价格',
+      collapsible: true,
+      collapsed: true,
+      link: { type: 'doc', id: 'prices/index' },
+      items: [],
+    },
   ],
 };
 

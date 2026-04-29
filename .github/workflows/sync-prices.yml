@@ -1,0 +1,66 @@
+name: Sync GPU Prices
+
+# Phase 10.7 — 每周一 03:00 UTC 抓取全球 GPU 二手价格
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'  # Every Monday 03:00 UTC
+  workflow_dispatch:      # Manual trigger
+
+jobs:
+  sync-prices:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install requests
+
+      # ── eBay API 抓取 (P0 主力源) ──
+      - name: Fetch eBay prices (US/DE/UK)
+        env:
+          EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
+          EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
+        run: python3 scripts/fetch-prices-ebay.py
+
+      # ── 价格标准化 ──
+      - name: Normalize prices
+        run: python3 scripts/normalize-prices.py
+
+      # ── 生成 prices-latest.json（前端加载） ──
+      - name: Generate latest price snapshot
+        run: |
+          python3 -c "
+          import json, os
+          from pathlib import Path
+          from datetime import datetime, timezone
+
+          prices_dir = Path('data/prices')
+          norm_files = sorted(prices_dir.glob('prices-*-normalized.json'), reverse=True)
+          if norm_files:
+              with open(norm_files[0]) as f:
+                  data = json.load(f)
+              data['updated'] = datetime.now(timezone.utc).isoformat()
+              with open(prices_dir / 'prices-latest.json', 'w') as f:
+                  json.dump(data, f, ensure_ascii=False, indent=2)
+              print(f'✅ prices-latest.json generated from {norm_files[0].name}')
+          else:
+              print('⚠ No normalized price data found')
+          "
+
+      # ── 提交更新 ──
+      - name: Commit price updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/prices/
+          if git diff --staged --quiet; then
+            echo "No price changes"
+          else
+            git commit -m "data: weekly GPU price update ($(date +%Y-W%V))"
+            git push origin main
+          fi
