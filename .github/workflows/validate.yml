@@ -149,7 +149,7 @@ jobs:
           else:
               print(f'  ✅ All {total} remote images reachable')
           "
-          continue-on-error: true
+      continue-on-error: true
 
       # ──────────────────────────────────────────────
       # 4. 检查 frontmatter 规范合规
