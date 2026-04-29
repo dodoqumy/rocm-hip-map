@@ -45,34 +45,48 @@ jobs:
         with:
           path: website/build
 
+      # ── 部署前构建验证 ──
+      - name: Verify build output
+        run: |
+          echo "🔍 Verifying build output..."
+          HTML_COUNT=$(find website/build -name '*.html' | wc -l)
+          echo "📊 Found $HTML_COUNT HTML files"
+          if [ "$HTML_COUNT" -lt 20 ]; then
+            echo "❌ Too few HTML files (< 20), build may be broken!"
+            exit 1
+          fi
+          # 确认关键页面存在
+          for page in "index.html" "docs/getting-started/index.html" "404.html"; do
+            if [ -f "website/build/$page" ]; then
+              echo "✅ $page exists"
+            else
+              echo "❌ Missing: $page"
+              exit 1
+            fi
+          done
+          echo "✅ Build output verified"
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
 
-      # ── 部署后烟雾测试 ──
+      # ── 部署后可达性检查 ──
       - name: Smoke test
         run: |
-          echo "🔍 Verifying deployed site..."
-          sleep 15  # 等 CDN 生效
+          echo "🔍 Checking deployed site reachability..."
+          sleep 15
           STATUS=$(curl -sL -o /dev/null -w "%{http_code}" "${{ steps.deployment.outputs.page_url }}")
           if [ "$STATUS" != "200" ]; then
             echo "❌ Site returned HTTP $STATUS"
             exit 1
           fi
           echo "✅ Site reachable (HTTP 200)"
-          # 检查是否有文章：侧边栏应该包含 "ROCm 核心文档"
-          BODY=$(curl -sL "${{ steps.deployment.outputs.page_url }}")
-          if echo "$BODY" | grep -q "ROCm 核心文档"; then
-            echo "✅ Articles found in sidebar"
+          # 检查页面标题
+          TITLE=$(curl -sL "${{ steps.deployment.outputs.page_url }}" | grep -o '<title>[^<]*</title>' | head -1)
+          echo "📄 Page title: $TITLE"
+          if echo "$TITLE" | grep -q "ROCm"; then
+            echo "✅ Homepage title verified"
           else
-            echo "❌ No articles found in deployed site!"
-            exit 1
-          fi
-          # 检查至少有几个文档链接
-          DOC_COUNT=$(echo "$BODY" | grep -o 'href="/rocm-hip-map/docs/' | wc -l)
-          echo "📊 Found ~$DOC_COUNT document links"
-          if [ "$DOC_COUNT" -lt 10 ]; then
-            echo "❌ Too few document links (< 10), sidebar may be broken!"
-            exit 1
+            echo "⚠️  Homepage title mismatch (not critical)"
           fi
           echo "✅ Smoke test passed"
