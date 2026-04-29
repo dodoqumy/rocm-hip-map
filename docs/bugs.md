@@ -1,95 +1,313 @@
 # 🐛 Bug 记录
 
-> 记录项目开发过程中发现的所有 bug，包含根因分析、修复方案和预防措施。
+> 记录项目开发过程中发现的所有 bug，按时间倒序排列。
+> 每个 bug 包含：症状 → 根因 → 修改点 → 预防措施。
 
 ---
 
-## BUG-001: 翻译输出嵌套路径（translate.py）
+## BUG-001: 全量路径常量 `.resolve()` 缺失 (2026-04-29)
 
-**发现日期：** 2026-04-29  
-**严重程度：** 🟡 Medium（翻译结果路径错位，功能不可用但不影响主站）  
-**提交：** `eebb8ca` `e7403f6`  
+**严重程度：** 🔴 Critical  
+**提交：** `e9379ea`  
+**分类：** Python / 路径解析  
 **状态：** ✅ 已修复
 
 ### 症状
 
-翻译文件输出到嵌套路径：
-```
-实际: content/translated/zh/content/raw/english/xxx_zh.md
-预期: content/translated/zh/xxx_zh.md
-```
+`gen-papers-sidebar.py` 在非项目根目录运行时 `os.listdir(Path("website/docs/papers"))` 崩溃。
+其余 4 脚本 (`cache-images`, `generate-docs`, `related-articles`, `verify`) 的路径常量从 resolved PROJECT_ROOT 派生但未 `.resolve()`。
 
-### 根因分析
-
-**因果链：**
-```
-translate.py --file 接受相对路径
-  → Path(args.file) 保持相对
-  → filepath.parents = {Path('content/raw/english'), Path('content'), Path('.')}
-  → CONTENT_RAW_EN = Path('/abs/path/content/raw/english')（绝对）
-  → "相对" in "绝对列表" → False
-  → 命中 else 分支
-  → rel_path = filepath（仍为相对路径）
-  → out = CONTENT_TRANSLATED_ZH / rel_path / ...  ← 嵌套！
-```
-
-**根本原因：** 路径常量 `CONTENT_RAW_EN` 等未调用 `.resolve()`，与已 resolve 的 `filepath` 在 `in filepath.parents` 比较时不匹配。
-
-### 修改点
-
-- `scripts/translate.py:35-39` — 5 个路径常量全部加 `.resolve()`
-- `.github/workflows/test-translate.yml` — 诊断步骤改用直接路径断言，扩大 find 深度
-
-### 为何之前没发现
-
-1. **本地测试习惯用绝对路径：** 开发时通常 `cd` 到项目根再跑脚本，相对路径展开后碰巧匹配
-2. **CI 首次运行即暴露：** `workflow_dispatch` 触发时，输入的 `content/raw/english/xxx` 是相对路径
-3. **e7403f6 只修了 --file handler：** 上次修复只加了 `path.resolve()`，没意识到路径常量也需要 resolve
-4. **`else` 分支覆写隐患：** 代码中 else 分支重写了 rel_path → out_path 逻辑，掩盖了 if 未被命中的事实
-
-### 最小修复
-
-路径常量加 `.resolve()`（已应用）。
-
-### 长期优化
-
-- **BUG-002 全量硬化：** 项目所有 Python 脚本的 Path 常量一律 `.resolve()`
-- **新增 lint 规则：** PR 审查时检查 `path in other.parents` 模式，确保两边都是绝对路径
-
-### 新增测试
-
-- CI workflow 的 "Show translation result" 步骤改为直接路径断言（不再依赖 find 通配符）
-- 本地编译验证：`npm run build` 每次 PR 前强制执行
-
----
-
-## BUG-002: 全量路径常量 resolution 缺失
-
-**发现日期：** 2026-04-29  
-**严重程度：** 🔴 Critical（`gen-papers-sidebar.py` 纯相对路径，跨目录运行必炸）  
-**提交：** TBD  
-**状态：** ✅ 已修复
-
-### 症状
-
-`gen-papers-sidebar.py` 在任何非项目根目录运行时，`os.listdir(Path("website/docs/papers"))` 因相对路径找不到目录而崩溃。
-
-其余 4 个脚本的路径常量虽是绝对路径（从 resolved PROJECT_ROOT 派生），但未 `.resolve()`，与 BUG-001 模式相同，可能在 symlink 环境或 CI 中触发。
-
-### 根因分析
+### 根因
 
 | 脚本 | 问题 | 风险 |
 |------|------|------|
-| `gen-papers-sidebar.py` | 3 个常量全是纯相对路径 `Path("relative")`，没有 PROJECT_ROOT | 🔴 必炸 |
-| `cache-images.py` | 6 个常量从 resolved PROJECT_ROOT 派生但未 .resolve() | 🟡 可能炸 |
-| `generate-docs.py` | 4 个常量同上 | 🟡 可能炸 |
-| `related-articles.py` | 3 个常量同上 | 🟡 可能炸 |
-| `verify.py` | 4 个常量同上 | 🟡 可能炸 |
+| `gen-papers-sidebar.py` | 3 个常量是纯相对路径 `Path("...")`，无 PROJECT_ROOT | 🔴 必炸 |
+| `cache-images.py` | 6 个常量未 `.resolve()` | 🟡 可能炸 |
+| `generate-docs.py` | 4 个常量未 `.resolve()` | 🟡 可能炸 |
+| `related-articles.py` | 3 个常量未 `.resolve()` | 🟡 可能炸 |
+| `verify.py` | 4 个常量未 `.resolve()` | 🟡 可能炸 |
 
 ### 修改点
 
-全部 5 个脚本的所有路径常量加 `.resolve()`，`gen-papers-sidebar.py` 额外补充 PROJECT_ROOT。
+全部 5 脚本的 20 个路径常量加 `.resolve()`。`gen-papers-sidebar.py` 额外补充 `PROJECT_ROOT`。
 
-### 长期优化
+### 预防
 
-建立项目编码规范：**所有 Path 常量必须 `.resolve()`**，写入 `docs/lessons-learned.md`。
+建立铁律：**所有 Python Path 常量必须 `(PROJECT_ROOT / "rel").resolve()`**。
+
+---
+
+## BUG-002: translate.py 翻译输出嵌套路径 (2026-04-29)
+
+**严重程度：** 🟡 Medium  
+**提交：** `e7403f6` `eebb8ca`  
+**分类：** Python / 路径解析  
+**状态：** ✅ 已修复（两次迭代）
+
+### 症状
+
+翻译输出到 `content/translated/zh/content/raw/english/xxx_zh.md`（嵌套），正确应为 `content/translated/zh/xxx_zh.md`。
+
+### 根因
+
+`--file` 接受相对路径 → `Path(args.file)` 保持相对 → `filepath.parents` 中无绝对路径 → `CONTENT_RAW_EN in filepath.parents` 为 `False` → 命中 else 分支输出嵌套路径。
+
+- **第一次修复 (e7403f6):** `--file` handler 加 `path.resolve()`，但路径常量未 resolve。
+- **第二次修复 (eebb8ca):** 5 个路径常量全部 `.resolve()`。
+
+### 预防
+
+- Path 常量与比较对象必须同时 resolve
+- CI 诊断用确定性路径而非 `find` 通配符
+
+---
+
+## BUG-003: `generate-docs.py` `../_images/` 图片路径 (2026-04-29)
+
+**严重程度：** 🟡 Medium  
+**提交：** `874136f`  
+**分类：** Python / 内容生成  
+**状态：** ✅ 已修复
+
+### 症状
+
+Pandoc 转换的 MDX 文件中，图片引用指向 `../_images/`，Docusaurus 无法解析。
+
+### 根因
+
+Pandoc 在导出时保持原始 Markdown 相对路径，但这些路径在 Docusaurus 的 `static/` 目录下不存在。
+
+### 修改点
+
+`generate-docs.py` 中将 `../_images/` 替换为 `/rocm-hip-map/img/`。
+
+### 预防
+
+内容生成脚本应在生成后运行路径校验步骤。
+
+---
+
+## BUG-004: `validate.yml` `continue-on-error` 缩进 (2026-04-29)
+
+**严重程度：** 🟡 Medium  
+**提交：** `09d0298`  
+**分类：** CI/CD / YAML  
+**状态：** ✅ 已修复
+
+### 症状
+
+`validate.yml` 的 `continue-on-error: true` 缩进层级错误，导致该 step 的 shell 命令未执行。
+
+### 根因
+
+YAML 中 `continue-on-error` 放到了与 `run` 同级而非 `step` 级别，GitHub Actions 静默忽略后该 step 退化为 no-op。
+
+### 修改点
+
+将 `continue-on-error: true` 移到正确的缩进层级（`- name:` 同级）。
+
+### 预防
+
+CI 配置文件用 `yamllint` 或 GitHub Actions VS Code 插件检查缩进。
+
+---
+
+## BUG-005: `validate.yml` 外链检查 403 (2026-04-29)
+
+**严重程度：** 🟢 Low  
+**提交：** `a7a9691`  
+**分类：** CI/CD / 网络  
+**状态：** ✅ 已修复
+
+### 症状
+
+`validate.yml` 的外链检查对 `docs.amd.com` 全部返回 403。
+
+### 根因
+
+AMD 官方文档服务器屏蔽 GitHub Actions runner IP 段。
+
+### 修改点
+
+外链检查改为格式校验（URL 格式是否合法），不再做 HTTP 可达性验证。
+
+### 预防
+
+对已知会屏蔽 CI IP 的外部源，建立豁免列表。
+
+---
+
+## BUG-006: `validate.yml` `articles.json` 结构 (2026-04-29)
+
+**严重程度：** 🟡 Medium  
+**提交：** `7a70997`  
+**分类：** CI/CD / 数据格式  
+**状态：** ✅ 已修复
+
+### 症状
+
+`validate.yml` 将 `articles.json` 当作 `list` 处理，实际数据结构为 `{"articles": [...], "stats": {...}}`，导致 `for article in articles` 迭代 dict key。
+
+### 根因
+
+脚本初期 `articles.json` 是纯列表，后来增加了 `stats` 字段包裹为 dict，CI 未同步更新。
+
+### 修改点
+
+`validate.yml` 将 `jq '.[]'` 改为 `jq '.articles[]'`。
+
+### 预防
+
+数据 schema 变更时，必须同步更新所有消费者（CI、脚本、生成器）。
+
+---
+
+## BUG-007: 部署烟雾测试脚本 (2026-04-28~29)
+
+**严重程度：** 🟡 Medium  
+**提交：** `9d5a81b` `4756aa1`  
+**分类：** CI/CD / 部署  
+**状态：** ✅ 已修复
+
+### 症状
+
+初始烟雾测试仅检查静态 HTML 文件存在性，未验证 HTTP 响应。
+
+### 修改点
+
+改为两步验证：(1) 部署前检查 `website/build/` 产物完整性，(2) 部署后对 5+ 关键页面做 HTTP 200 断言。
+
+### 预防
+
+部署验证必须做 HTTP 层面的测试，不能仅依赖文件存在检查。
+
+---
+
+## BUG-008: `translate.py` 跳过模式不完整 (2026-04-28)
+
+**严重程度：** 🟢 Low  
+**提交：** `d16398f`  
+**分类：** Python / 翻译管道  
+**状态：** ✅ 已修复
+
+### 症状
+
+`changelog.md`、`versions.md`、`release-notes.md` 等不适合翻译的文件仍被处理。
+
+### 修改点
+
+`translate_markdown_file()` 添加 `SKIP_PATTERNS` 列表 + 超大文件 (>500KB) 自动跳过。
+
+### 预防
+
+翻译管道应有文件类型白名单/黑名单机制。
+
+---
+
+## BUG-009: `sync.yml` `cache:pip` 失败 (2026-04-28)
+
+**严重程度：** 🟡 Medium  
+**提交：** `fa2994d`  
+**分类：** CI/CD / GitHub Actions  
+**状态：** ✅ 已修复
+
+### 症状
+
+`setup-python@v5` + `cache: pip` 在 repo 根没有 `requirements.txt` 时失败。
+
+### 根因
+
+`cache: pip` 需要在仓库根目录存在 `requirements.txt` 才能计算缓存 hash。
+
+### 修改点
+
+移除 `cache: pip`，改为纯 `pip install`（依赖少，安装快）。
+
+### 预防
+
+使用 `cache: pip` 前确认仓库根存在 `requirements.txt`；否则不加 cache。
+
+---
+
+## BUG-010: GitHub Pages 部署权限 (2026-04-28)
+
+**严重程度：** 🔴 Critical  
+**提交：** `ffe4fa7`  
+**分类：** CI/CD / 部署  
+**状态：** ✅ 已修复
+
+### 症状
+
+Deploy job 报 `Permission denied` 无法写入 `gh-pages` 分支。
+
+### 根因
+
+未使用 `actions/deploy-pages@v4`，手动 git push 方式缺乏 Pages 写入权限。
+
+### 修改点
+
+改用 GitHub 官方 Action：`actions/configure-pages` → `actions/upload-pages-artifact` → `actions/deploy-pages`。
+
+### 预防
+
+GitHub Pages 部署必须使用官方 Action 链，不走手动 git 流程。
+
+---
+
+## BUG-011: MDX 构建失败 — BilingualViewer 残骸 + ArticleHeader 导入 (2026-04-28)
+
+**严重程度：** 🔴 Critical  
+**提交：** `cb46042` `d238cc0`  
+**分类：** Docusaurus / React / MDX  
+**状态：** ✅ 已修复
+
+### 症状
+
+`npm run build` 失败，错误指向 `BilingualViewer` 组件不存在、`ArticleHeader` 导入方式错误。
+
+### 根因
+
+1. **BilingualViewer 残骸：** 组件已删除 (`BilingualViewer.tsx` 移除)，但 `generate-docs.py` 仍为所有 MDX 生成 `<BilingualViewer ...>` 标签
+2. **ArticleHeader 导入：** `ArticleHeader` 是 `default export`，MDX 中 `import { ArticleHeader }` 应改为 `import ArticleHeader`
+
+### 修改点
+
+- `generate-docs.py`：移除 `<BilingualViewer>` 模板片段
+- 68+ 篇 MDX：批量替换 `{ ArticleHeader }` → `ArticleHeader`
+
+### 预防
+
+- 删除组件后必须同步更新 `generate-docs.py` 模板
+- 组件导出方式变更后需检查所有 MDX 导入
+
+---
+
+## BUG-012: `generate-docs.py` f-string 语法错误 (2026-04-28)
+
+**严重程度：** 🔴 Critical  
+**提交：** `412b2d1`  
+**分类：** Python / 语法  
+**状态：** ✅ 已修复
+
+### 症状
+
+`generate-docs.py` 运行时 `SyntaxError: f-string expression part cannot include a backslash`。
+
+### 根因
+
+f-string 内部使用 `\n` 转义：
+```python
+f"...{value.replace('\n', ' ')}..."  # ❌
+```
+
+### 修改点
+
+将包含 `\` 的表达式提取为变量：
+```python
+_val = value.replace('\n', ' ')
+f"...{_val}..."  # ✅
+```
+
+### 预防
+
+Python 3.11 及以下不允许 f-string 表达式含 `\`。用 pylint/flake8 静态检查。
