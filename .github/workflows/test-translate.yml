@@ -1,0 +1,76 @@
+name: Test Translate Single File
+
+# 🔬 单篇翻译测试 — 手动触发，验证翻译管道是否畅通
+# 用法：GitHub Actions → "Test Translate Single File" → Run workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      file:
+        description: '要翻译的文件（相对于 content/raw/english/）'
+        required: true
+        default: 'rocm_en_latest_what-is-rocm.md'
+      mode:
+        description: '翻译模式'
+        required: false
+        default: 'doc'
+        type: choice
+        options:
+          - doc
+          - paper
+
+jobs:
+  translate-one:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install pyyaml requests
+
+      - name: Translate single file
+        env:
+          TRANSLATE_PROVIDER: opencode
+          TRANSLATE_API_KEY: ${{ secrets.TRANSLATE_API_KEY }}
+          TRANSLATE_MODEL: deepseek-v4-pro
+          TRANSLATE_BASE_URL: https://opencode.ai/zen/go/v1
+        run: |
+          python3 scripts/translate.py \
+            --file "content/raw/english/${{ inputs.file }}" \
+            --mode "${{ inputs.mode }}"
+
+      - name: Show translation result
+        run: |
+          STEM=$(basename "${{ inputs.file }}" .md)
+          OUT="content/translated/zh/${STEM}_zh.md"
+          if [ -f "$OUT" ]; then
+            echo "✅ Translation produced: $OUT"
+            echo "   Size: $(wc -c < "$OUT") bytes"
+            echo "   Lines: $(wc -l < "$OUT")"
+            echo ""
+            echo "=== First 50 lines ==="
+            head -50 "$OUT"
+          else
+            echo "❌ No output file found at $OUT"
+            echo ""
+            echo "=== Check content/translated/zh/ ==="
+            ls -la content/translated/zh/ 2>/dev/null || echo "(empty)"
+            exit 1
+          fi
+
+      - name: Commit translation to test branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          BRANCH="test/translate-${{ github.run_number }}"
+          git checkout -b "$BRANCH"
+          git add content/translated/
+          git commit -m "test: translate ${{ inputs.file }} (#${{ github.run_number }})" || echo "No changes"
+          git push origin "$BRANCH"
+
+          echo "📌 Translation pushed to branch: $BRANCH"
