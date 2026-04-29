@@ -1,0 +1,102 @@
+---
+title: "GPU architecture documentation"
+source_url: "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch.html"
+source_type: "official"
+source_org: "amd"
+original_lang: "en"
+credibility: 5
+lifecycle: "latest"
+synced_date: 2026-04-28
+---
+
+::::: header-article-items__start
+::: header-article-item
+[]{.fa-solid .fa-angle-right}
+
+::: header-article-item
+- [](../index.html){.nav-link aria-label="首页"}
+- GPU\...
+
+::::: header-article-items__end
+:::: header-article-item
+::: article-header-buttons
+
+# GPU 架构文档
+
+# GPU 架构文档[\#](#gpu-architecture-documentation "Link to this heading"){.headerlink}
+
+[ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==){.sd-octicon .sd-octicon-calendar} ]{.sd-pr-2 .article-info-date-svg} 2026-02-17
+
+[ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=){.sd-octicon .sd-octicon-clock} ]{.sd-pr-2 .article-info-read-time-svg} 3 分钟阅读时间
+
+适用于 Linux 和 Windows
+
+**AMD Instinct MI300 Series**
+
+Review hardware aspects of the AMD Instinct™ MI300 Series GPUs and the CDNA™ 3 architecture.
+
+- [[AMD Instinct（Instinct（AMD 数据中心 GPU 系列））™ MI300 微架构]{.std .std-doc}](gpu-arch/mi300.html){.reference .internal}
+
+- [AMD Instinct MI300/CDNA3 ISA](https://www.amd.com/content/dam/amd/en/documents/instinct-tech-docs/instruction-set-architectures/amd-instinct-mi300-cdna3-instruction-set-architecture.pdf){.reference .external}
+
+- [白皮书](https://www.amd.com/content/dam/amd/en/documents/instinct-tech-docs/white-papers/amd-cdna-3-white-paper.pdf){.reference .external}
+
+- [[MI300 性能计数器]{.std .std-doc}](gpu-arch/mi300-mi200-performance-counters.html){.reference .internal}
+
+- [[MI350 系列性能计数器]{.std .std-doc}](gpu-arch/mi350-performance-counters.html){.reference .internal}
+
+**AMD Instinct（AMD 数据中心 GPU 系列）MI200 系列**
+
+回顾 AMD Instinct（AMD 数据中心 GPU 系列）™ MI200 系列 GPU 与 CDNA（计算 DNA 架构）™ 2 架构的硬件方面。
+
+- [[AMD Instinct（Instinct（AMD 数据中心 GPU 系列））™ MI250 微架构]{.std .std-doc}](gpu-arch/mi250.html){.reference .internal}
+
+- [AMD Instinct MI200/CDNA2 ISA](https://www.amd.com/system/files/TechDocs/instinct-mi200-cdna2-instruction-set-architecture.pdf){.reference .external}
+
+- [白皮书](https://www.amd.com/content/dam/amd/en/documents/instinct-business-docs/white-papers/amd-cdna2-white-paper.pdf){.reference .external}
+
+- [[性能计数器]{.std .std-doc}](gpu-arch/mi300-mi200-performance-counters.html){.reference .internal}
+
+**AMD Instinct MI100**
+
+审查 AMD Instinct™ MI100 系列 GPU 与 CDNA™ 1 架构的硬件方面
+
+- [[AMD Instinct™ MI100 microarchitecture]{.std .std-doc}](gpu-arch/mi100.html){.reference .internal}
+
+- [AMD Instinct MI100/CDNA1 ISA](https://www.amd.com/system/files/TechDocs/instinct-mi100-cdna1-shader-instruction-set-architecture%C2%A0.pdf){.reference .external}
+
+- [白皮书](https://www.amd.com/content/dam/amd/en/documents/instinct-business-docs/white-papers/amd-cdna-white-paper.pdf){.reference .external}
+
+**RDNA（Radeon DNA 架构）**
+
+- [AMD RDNA4 指令集架构](https://www.amd.com/content/dam/amd/en/documents/radeon-tech-docs/instruction-set-architectures/rdna4-instruction-set-architecture.pdf){.reference .external}
+
+- [AMD RDNA3 ISA](https://www.amd.com/system/files/TechDocs/rdna3-shader-instruction-set-architecture-feb-2023_0.pdf){.reference .external}
+
+- [AMD RDNA2 ISA](https://www.amd.com/system/files/TechDocs/rdna2-shader-instruction-set-architecture.pdf){.reference .external}
+
+- [AMD RDNA ISA](https://www.amd.com/system/files/TechDocs/rdna-shader-instruction-set-architecture.pdf){.reference .external}
+
+**旧版架构**
+
+- [AMD Instinct MI50/Vega 7nm ISA](https://www.amd.com/system/files/TechDocs/vega-7nm-shader-instruction-set-architecture.pdf){.reference .external}
+
+- [AMD Instinct MI25/Vega ISA](https://www.amd.com/system/files/TechDocs/vega-shader-instruction-set-architecture.pdf){.reference .external}
+
+- [AMD GCN3 ISA](https://www.amd.com/system/files/TechDocs/gcn3-instruction-set-architecture.pdf){.reference .external}
+
+- AMD Vega 架构白皮书
+
+::::: prev-next-area
+[](../how-to/Bar-Memory.html "上一页"){.left-prev}
+
+::: prev-next-info 上一页
+
+排查 BAR 访问限制
+
+[](gpu-arch/mi300.html "下一页"){.right-next}
+
+::: prev-next-info
+下一页
+
+AMD Instinct™ MI300 Series microarchitecture
