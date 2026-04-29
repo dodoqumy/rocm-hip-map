@@ -1,0 +1,1106 @@
+---
+title: "PDC — KTH 瑞典超算中心 — "
+source_url: "https://www.pdc.kth.se/"
+source_type: "multilingual"
+source_org: "pdc-kth"
+source_name: "PDC — KTH 瑞典超算中心"
+original_lang: "en"
+credibility: 5
+lifecycle: "latest"
+synced_date: 2026-04-29
+region: "eu"
+country: "sv"
+---
+
+PDC | KTH 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ PDC Center for High Performance Computing 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ PDC User Support Area 
+ PDC svensk webbplats 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PDC
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ User support
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ HPC services
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ HPC training
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Academic users
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Industry R&D
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Research by PDC
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ About PDC
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ Latest news
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ Gert Svensson will be retiring from PDC/KTH soon 
+
+ 
+ 
+ 
+ 
+ 
+ - read about Gert's story including how PDC began and developed and supported HPC for research over the last 36 years! 
+ Find out how PDC will continue supporting your computational research as part of the new KTH Center for Scientific Computing - see the
+ 
+ 
+ 
+ 
+
+ PDC Newsletter for 2025 
+
+ 
+ 
+ 
+ 
+ 
+ . 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ PDC Center for High Performance Computing
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ PDC runs the Dardel
+ 
+ 
+ 
+ 
+
+ high performance computing (HPC) system 
+
+ 
+ 
+ 
+ 
+ 
+ which is currently the fastest supercomputer for academic research in Sweden. The system is mainly funded by the National Academic Infrastructure for Supercomputing in Sweden (
+ 
+ 
+ 
+ 
+
+ NAISS 
+
+ 
+ 
+ 
+ 
+ 
+ ). To assist with
+ 
+ 
+ 
+ 
+
+ academic research 
+
+ 
+ 
+ 
+ 
+ 
+ and
+ 
+ 
+ 
+ 
+
+ business R&D 
+
+ 
+ 
+ 
+ 
+ 
+ , PDC also provides
+ 
+ 
+ 
+ 
+
+ data storage facilities 
+
+ 
+ 
+ 
+ 
+ 
+ ,
+ 
+ 
+ 
+ 
+
+ application experts 
+
+ 
+ 
+ 
+ 
+ 
+ and other services, including
+ 
+ 
+ 
+ 
+
+ HPC training 
+
+ 
+ 
+ 
+ 
+ 
+ . In addition, PDC is involved in a range of international and national
+ 
+ 
+ 
+ 
+
+ research projects and infrastructures 
+
+ 
+ 
+ 
+ 
+ 
+ . 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ Need help? Go to PDC Support pages 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ If you want to find out more, see 
+ -
+ 
+ 
+ 
+ 
+
+ information for academic researchers 
+
+ 
+ 
+ 
+ 
+ 
+ -
+ 
+ 
+ 
+ 
+
+ information for industry/business research 
+
+ 
+ 
+ 
+ 
+ 
+ -
+ 
+ 
+ 
+ 
+
+ information for students 
+
+ 
+ 
+ 
+ 
+ 
+ -
+ 
+ 
+ 
+ 
+
+ job openings at PDC 
+
+ 
+ 
+ 
+ 
+ 
+ -
+ 
+ 
+ 
+ 
+
+ resources about PDC for press and media 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ PDC News & Events 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ PDC Blog 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ Follow PDC on Facebook 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ Showcase: HPC Research via PDC 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ PDC News 
+ 
+ 
+ 
+ 
+ Gert Svensson to retire soon from PDC/KTH 
+ 24 Feb 2026 
+ 
+ 
+ 
+ 
+ 
+ Contract signed for new Arrhenius national supercomputer in Sweden 
+ 15 Jul 2025 
+ 
+ 
+ 
+ 
+ 
+ HPC system manager position at PDC 
+ 23 Jun 2025 
+ 
+ 
+ 
+ 
+ More PDC news 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ PDC Events 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ LUMI Profiling and Optimization Workshop, May 11-13 in Stockholm 
+ 
+ 
+ 11 
+ May 
+ 
+ 
+ Training and Courses 
+ 
+ 
+ 
+ 
+ 
+ Mon 2026-05-11 
+ 
+ 
+ - 
+ 
+ 
+ Wed 2026-05-13 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Location: Fantum, Lindstedtsvägen 24 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 2026-05-11T00:00:00.000+02:00
+ 
+ 
+ 2026-05-13T23:59:00.000+02:00
+ 
+ 
+ LUMI Profiling and Optimization Workshop, May 11-13 in Stockholm (Training and Courses) Fantum, Lindstedtsvägen 24 (KTH, Stockholm, Sweden) LUMI Profiling and Optimization Workshop, May 11-13 in Stockholm (Training and Courses) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ More PDC events 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ System Alerts 
+ 
+ More... 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ System Usage 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ Useful HPC links... 
+ 
+ 
+
+ NAISS 
+
+ 
+ 
+
+ EuroHPC 
+
+ 
+ 
+
+ ENCCS 
+
+ 
+ 
+
+ EOSC 
+
+ 
+ 
+
+ ETP4HPC 
+
+ 
+ 
+
+ EUDAT 
+
+ 
+ 
+
+ NeIC 
+
+ 
+ 
+
+ PRACE 
+
+ 
+ 
+
+ SeRC 
+
+ 
+ 
+
+ SeSE 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ PDC is a key collaborator with
+ 
+ 
+ 
+ 
+
+ NAISS 
+
+ 
+ 
+ 
+ 
+ 
+ . 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ KTH 
+ 
+ 
+ Study at KTH 
+ Research 
+ Cooperation 
+ About KTH 
+ Student at KTH 
+ Alumni 
+ KTH Intranet 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ Organisation 
+ 
+ 
+ KTH Library 
+ KTH Schools 
+ Competence centres 
+ President and management 
+ University Administration 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ Services 
+ 
+ 
+ Timetables 
+ Course and programme directory 
+ Webmail 
+ Learning management system (Canvas) 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ Contact
+ 
+ 
+ 
+ 
+ 
+ 
+ KTH Royal Institute of Technology SE-100 44 Stockholm Sweden +46 8 790 60 00 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ Contact KTH 
+ Work at KTH 
+ Press and media 
+ About KTH website 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ To page top  <!-- 截断至 50K 字符 -->

@@ -78,7 +78,7 @@ def rewrite_image_urls(body: str, page_url: str) -> str:
 
     # 匹配 ![...](...) 模式
     body = re.sub(
-        r'(!\\[)([^\\]]*)(\\]\\()([^)]+)(\\))',
+        r'(!\[)([^\]]*)(\]\()([^)]+)(\))',
         resolve_ref,
         body,
     )

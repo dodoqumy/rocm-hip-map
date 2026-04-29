@@ -7,7 +7,7 @@ source_name: "GENCI — 法国国家超算中心"
 original_lang: "en"
 credibility: 5
 lifecycle: "latest"
-synced_date: 2026-04-28
+synced_date: 2026-04-29
 region: "eu"
 country: "fr"
 ---

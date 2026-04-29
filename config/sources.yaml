@@ -249,10 +249,41 @@ sources:
     credibility: 5
     urls:
       - "https://www.bsc.es/"
+      - "https://www.bsc.es/research-development/publications"
+      - "https://www.bsc.es/support/marenostrum5-documentation"
     search_terms:
       - "BSC MareNostrum AMD GPU ROCm"
-      - "BSC GPU programación AMD"
-    notes: "MareNostrum 5 使用 AMD GPU"
+      - "BSC GPU programación AMD aceleración"
+      - "MareNostrum 5 HIP ROCm documentación"
+    notes: "MareNostrum 5 使用 AMD Instinct MI250X GPU"
+
+  - id: bsc-es-en
+    name: "BSC — 英文材料"
+    region: "eu"
+    country: "es"
+    language: "en"
+    credibility: 5
+    urls:
+      - "https://www.bsc.es/research-development/publications"
+      - "https://www.bsc.es/support/marenostrum5-documentation"
+    search_terms:
+      - "BSC MareNostrum 5 AMD GPU programming guide"
+      - "MareNostrum HIP ROCm optimization"
+
+  # ── 意大利 (it) ──
+  - id: cineca-docs
+    name: "CINECA — 文档与培训"
+    region: "eu"
+    country: "it"
+    language: "it"
+    credibility: 5
+    urls:
+      - "https://wiki.u-gov.it/confluence/display/SCAIUS/HPC+User+Documentation"
+      - "https://www.hpc.cineca.it/"
+    search_terms:
+      - "CINECA Leonardo AMD GPU ROCm guida"
+      - "Leonardo supercomputer HIP programmazione"
+    notes: "Leonardo 超算（AMD MI250X）欧洲最大 GPU 集群之一"
 
   # ── 荷兰 (nl) ──
   - id: surf
@@ -261,7 +292,84 @@ sources:
     country: "nl"
     language: "nl"
     credibility: 4
+    urls:
+      - "https://www.surf.nl/"
+      - "https://servicedesk.surf.nl/wiki/display/WIKI/"
     search_terms:
       - "SURF AMD GPU ROCm HPC"
-      - "Dutch HPC ROCm training"
-    notes: "SURF 运营荷兰国家超算基础设施"
+      - "SURF GPU rekenen versnelling"
+      - "Dutch National Supercomputer Snellius AMD"
+    notes: "SURF 运营 Snellius 国家超算，含 AMD GPU 节点"
+
+  # ── 俄罗斯 (ru) ──
+  - id: msu-hpc
+    name: "МГУ — 研究计算中心"
+    region: "eu"
+    country: "ru"
+    language: "ru"
+    credibility: 4
+    urls:
+      - "https://hpc.msu.ru/"
+      - "https://parallel.ru/"
+    search_terms:
+      - "МГУ AMD GPU ROCm вычисления"
+      - "Lomonosov-2 суперкомпьютер GPU программирование"
+      - "AMD Instinct GPU российские вычисления"
+    notes: "Lomonosov-2 超算是俄罗斯最大通用超算"
+
+  - id: elibrary-ru
+    name: "eLibrary.ru — 俄罗斯学术索引"
+    region: "eu"
+    country: "ru"
+    language: "ru"
+    credibility: 4
+    urls:
+      - "https://elibrary.ru/"
+    search_terms:
+      - "AMD GPU ROCm вычисления программирование"
+      - "графические процессоры ROCm HIP"
+    notes: "俄罗斯最大俄语学术数据库"
+
+  # ── 瑞典 (sv) ──
+  - id: pdc-kth
+    name: "PDC — KTH 瑞典超算中心"
+    region: "eu"
+    country: "sv"
+    language: "sv"
+    credibility: 5
+    urls:
+      - "https://www.pdc.kth.se/"
+      - "https://www.pdc.kth.se/support/"
+    search_terms:
+      - "PDC Dardel AMD GPU ROCm"
+      - "KTH GPU beräkning AMD accelerator"
+      - "Dardel superdator HIP programmering"
+    notes: "Dardel 超算使用 AMD MI250X GPU"
+
+  - id: nsc-sv
+    name: "NSC — 瑞典国家超算中心"
+    region: "eu"
+    country: "sv"
+    language: "sv"
+    credibility: 5
+    urls:
+      - "https://www.nsc.liu.se/"
+      - "https://www.nsc.liu.se/support/"
+    search_terms:
+      - "NSC Tetralith AMD GPU ROCm"
+      - "NSC GPU programmering acceleration"
+    notes: "位于林雪平大学，运营 Tetralith 超算"
+
+  - id: uppmax
+    name: "UPPMAX — 乌普萨拉大学"
+    region: "eu"
+    country: "sv"
+    language: "sv"
+    credibility: 4
+    urls:
+      - "https://www.uppmax.uu.se/"
+      - "https://www.uppmax.uu.se/support/user-guides/"
+    search_terms:
+      - "UPPMAX AMD GPU ROCm beräkning"
+      - "Uppsala GPU programmering accelerator"
+    notes: "乌普萨拉大学高性能计算中心"
