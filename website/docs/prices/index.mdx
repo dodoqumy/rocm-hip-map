@@ -1,0 +1,58 @@
+---
+title: "AMD GPU 二手市场价格追踪"
+description: "AMD Instinct / Radeon GPU 全球二手市场价格追踪，覆盖 eBay/闲鱼/Mercari 等平台"
+keywords: ["AMD", "GPU", "二手价格", "eBay", "Instinct", "Radeon", "MI50", "MI100", "RX 7900 XTX"]
+source_url: "https://github.com/dodoqumy/rocm-hip-map"
+source_type: "tool"
+source_org: "rocm-hip-map"
+credibility: 4
+lifecycle: "latest"
+tags: ["price", "gpu", "market"]
+published_date: "2026-04-28"
+synced_date: "2026-04-29"
+generated_at: "2026-04-29"
+---
+
+import PriceTracker from "@site/src/components/PriceTracker";
+import PriceChart from "@site/src/components/PriceChart";
+
+# 💰 AMD GPU 二手市场价格追踪
+
+> 覆盖 3 大洲 · 9 个国家 · 15 个平台 · 14 款 GPU 型号  
+> 数据每周一自动更新 · 中位数价格 · 来源可追溯
+
+---
+
+## 📊 当前价格对比
+
+<PriceTracker />
+
+---
+
+## 📈 历史趋势
+
+选择 GPU 型号查看 52 周价格走势：
+
+<PriceChart />
+
+---
+
+## 📋 数据来源
+
+| 平台 | 国家 | 类型 | 更新频率 |
+|------|------|------|---------|
+| eBay | 🇺🇸 🇩🇪 🇬🇧 | API（官方） | 每周 |
+| 闲鱼 | 🇨🇳 | 网页抓取 | 每周 |
+| Mercari | 🇯🇵 | 网页抓取 | 每周 |
+| Yahoo 拍卖 | 🇯🇵 | 网页抓取 | 每周 |
+| Leboncoin | 🇫🇷 | 网页抓取 | 每周 |
+| Kleinanzeigen | 🇩🇪 | 网页抓取 | 每周 |
+
+---
+
+## ⚠️ 免责声明
+
+- 价格为公开平台二手/开封商品的中位数成交价，统一换算为美元（USD）
+- 已过滤异常值（IQR 方法），条件加权（全新 100% / 二手 95% / 翻新 85%）
+- 价格仅供参考，实际成交价可能因成色、运费、地区供需而异
+- **不构成投资建议**
