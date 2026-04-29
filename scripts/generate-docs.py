@@ -40,6 +40,10 @@ def rewrite_image_urls(body: str, page_url: str) -> str:
     例如:
       ![](../../_images/image001.png)
       → ![](https://rocm.docs.amd.com/en/latest/_images/image001.png)
+
+    Pandoc RST→MD 转换会生成 ../_images/ 前缀，但 AMD Sphinx 构建中
+    _images/ 实际位于页面同级目录（latest/ 下），而非父目录（en/ 下）。
+    因此对 ../_images/ 做特殊处理：去掉 ../，按页面目录解析。
     """
     if not page_url:
         return body
@@ -63,14 +67,18 @@ def rewrite_image_urls(body: str, page_url: str) -> str:
         if url.startswith("/img/cached/"):
             return m.group(0)
 
+        # Pandoc RST artifact: ../_images/ → _images/（AMD docs 中图片在页面同级目录）
+        # urljoin('.../latest/page.html', '../_images/x.png') → '.../en/_images/x.png' (错)
+        # urljoin('.../latest/page.html', '_images/x.png') → '.../latest/_images/x.png' (对)
+        url = re.sub(r'^(\.\./)+(_images/)', r'\2', url)
+
         # 相对路径 → 用页面 URL 解析为绝对 URL
         abs_url = urljoin(page_url, url)
         return f"{prefix}{alt_text}{close_bracket}{abs_url}{suffix}"
 
-    # 匹配 ![alt](url) 或 [![alt](url){.class}](url){.ref} 等复杂嵌套
-    # 只处理简单的 ![...](...) 模式
+    # 匹配 ![...](...) 模式
     body = re.sub(
-        r'(!\[)([^\]]*)(\]\()([^)]+)(\))',
+        r'(!\\[)([^\\]]*)(\\]\\()([^)]+)(\\))',
         resolve_ref,
         body,
     )
