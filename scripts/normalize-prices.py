@@ -165,18 +165,48 @@ def normalize_entry(
 # ── 合并标准化 ──────────────────────────────────
 
 def normalize_week(week_tag: str, rates: dict[str, float]) -> list[dict]:
-    """标准化某一周的全部价格数据。"""
-    week_file = PRICES_DIR / f"prices-{week_tag}.json"
-    if not week_file.exists():
-        print(f"  ⚠ No data for {week_tag}")
-        return []
+    """标准化某一周的全部价格数据。
 
-    with open(week_file) as f:
-        data = json.load(f)
+    优先读取按站点拆分的并行文件 (prices-YYYY-Www-ebay_*.json)，
+    若无则回退到合并文件 (prices-YYYY-Www.json)。
+    """
+    # 1. 尝试读取按站点拆分的并行输出
+    site_files = sorted(PRICES_DIR.glob(f"prices-{week_tag}-*.json"))
+    site_files = [f for f in site_files if "normalized" not in f.name]
 
-    entries = data.get("entries", [])
+    all_entries = []
+    if site_files:
+        print(f"  📦 Merging {len(site_files)} site files for {week_tag}")
+        for sf in site_files:
+            with open(sf) as f:
+                data = json.load(f)
+            entries = data.get("entries", [])
+            all_entries.extend(entries)
+            print(f"     {sf.name}: {len(entries)} entries")
+
+        # 合并后写入统一文件（供历史回溯）
+        merged_path = PRICES_DIR / f"prices-{week_tag}.json"
+        with open(merged_path, "w", encoding="utf-8") as f:
+            json.dump({
+                "updated": datetime.now(timezone.utc).isoformat(),
+                "week": week_tag,
+                "source": "eBay Browse API (merged)",
+                "entries": all_entries,
+            }, f, ensure_ascii=False, indent=2)
+        print(f"  ✅ {len(all_entries)} total entries merged → {merged_path}")
+    else:
+        # 2. 回退：读取传统单文件
+        week_file = PRICES_DIR / f"prices-{week_tag}.json"
+        if not week_file.exists():
+            print(f"  ⚠ No data for {week_tag}")
+            return []
+
+        with open(week_file) as f:
+            data = json.load(f)
+        all_entries = data.get("entries", [])
+
     normalized = []
-    for entry in entries:
+    for entry in all_entries:
         result = normalize_entry(entry, rates)
         if result:
             normalized.append(result)
@@ -201,13 +231,22 @@ def normalize_week(week_tag: str, rates: dict[str, float]) -> list[dict]:
 
 def rebuild_history(rates: dict[str, float]):
     """重建全部历史标准化数据。"""
-    week_files = sorted(PRICES_DIR.glob("prices-20*-W*.json"))
-    # Filter out normalized files
-    week_files = [f for f in week_files if "normalized" not in f.name]
+    # 收集所有原始价格文件（排除 normalized）
+    raw_files = sorted(PRICES_DIR.glob("prices-20*-W*.json"))
+    raw_files = [f for f in raw_files if "normalized" not in f.name]
+
+    # 按周标签分组（处理站点拆分文件）
+    import re
+    weeks = {}
+    for wf in raw_files:
+        # 提取纯周标签: prices-2026-W17-ebay_us.json → 2026-W17
+        match = re.match(r"prices-(\d{4}-W\d{2})", wf.name)
+        if match:
+            week_tag = match.group(1)
+            weeks.setdefault(week_tag, []).append(wf)
 
     all_history = {}
-    for wf in week_files:
-        week_tag = wf.stem.replace("prices-", "")
+    for week_tag, files in sorted(weeks.items()):
         normalized = normalize_week(week_tag, rates)
         if normalized:
             all_history[week_tag] = {

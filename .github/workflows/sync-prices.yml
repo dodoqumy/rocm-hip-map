@@ -1,14 +1,43 @@
 name: Sync GPU Prices
 
 # Phase 10.7 — 每周一 03:00 UTC 抓取全球 GPU 二手价格
+# 按国家并行拆分：US/DE/UK 同时抓取，归一化等待全部完成后执行
 
 on:
   schedule:
     - cron: '0 3 * * 1'  # Every Monday 03:00 UTC
   workflow_dispatch:      # Manual trigger
 
+permissions:
+  contents: write
+
 jobs:
-  sync-prices:
+  # ── 并行抓取各国价格 ──
+  fetch:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        site: [EBAY-US, EBAY-DE, EBAY-UK]
+      max-parallel: 3
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Fetch ${{ matrix.site }}
+        env:
+          EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
+          EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
+        run: python3 scripts/fetch-prices-ebay.py --site ${{ matrix.site }}
+
+  # ── 归一化 + 生成前端数据 + 提交（等待全部抓取完成） ──
+  normalize:
+    needs: fetch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,22 +49,13 @@ jobs:
       - name: Install deps
         run: pip install requests
 
-      # ── eBay API 抓取 (P0 主力源) ──
-      - name: Fetch eBay prices (US/DE/UK)
-        env:
-          EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
-          EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
-        run: python3 scripts/fetch-prices-ebay.py
-
-      # ── 价格标准化 ──
       - name: Normalize prices
         run: python3 scripts/normalize-prices.py
 
-      # ── 生成 prices-latest.json（前端加载） ──
       - name: Generate latest price snapshot
         run: |
           python3 -c "
-          import json, os
+          import json
           from pathlib import Path
           from datetime import datetime, timezone
 
@@ -52,7 +72,6 @@ jobs:
               print('⚠ No normalized price data found')
           "
 
-      # ── 提交更新 ──
       - name: Commit price updates
         run: |
           git config user.name "github-actions[bot]"

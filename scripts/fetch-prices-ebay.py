@@ -344,12 +344,19 @@ def main():
         now = datetime.now(timezone.utc)
         iso_week = now.isocalendar()
         week_tag = f"{now.year}-W{iso_week.week:02d}"
-        out_path = PRICES_DIR / f"prices-{week_tag}.json"
+
+        # 按站点分文件（并行友好）
+        if args.site:
+            site_suffix = args.site.replace("-", "_").lower()
+            out_path = PRICES_DIR / f"prices-{week_tag}-{site_suffix}.json"
+        else:
+            out_path = PRICES_DIR / f"prices-{week_tag}.json"
 
         output = {
             "updated": now.isoformat(),
             "week": week_tag,
             "source": "eBay Browse API",
+            "site": args.site if args.site else "all",
             "entries": all_entries,
         }
 
@@ -359,8 +366,9 @@ def main():
 
         print(f"\n📊 {len(all_entries)} entries saved → {out_path}")
 
-        # 更新 price-history.json
-        update_history(now, week_tag, all_entries)
+        # 仅在合并模式下更新 history（--site 时不更新，避免竞态）
+        if not args.site:
+            update_history(now, week_tag, all_entries)
     elif not args.dry_run:
         print("\n⚠ No data collected (check API credentials or search terms)")
 
