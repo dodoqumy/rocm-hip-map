@@ -607,9 +607,54 @@ def main():
     if bil_gen > 0:
         print(f"\n📖 {bil_gen} bilingual pages generated in website/docs/bilingual/en-zh/")
 
-def generate_bilingual_pages(dry_run=False):
-    """为所有已翻译文章生成双语对照 MDX 页面。"""
+def _md_to_html(content: str) -> str:
+    """Convert MyST-flavored Markdown content to clean HTML via pandoc.
+
+    Cleans RST container directives and inline roles before passing
+    to pandoc as standard Markdown.
+    """
     import re as _re
+    import subprocess
+
+    # 1. Strip YAML frontmatter block (between first pair of --- lines)
+    content = _re.sub(r'^---\n.*?---\n', '', content, flags=_re.DOTALL, count=1)
+
+    # 2. Strip MyST container directives (lines beginning with :::+)
+    content = _re.sub(r'^:{3,}.*$', '', content, flags=_re.MULTILINE)
+
+    # 3. Strip inline RST class directives: {.class1 .class2}
+    #    These appear as trailing attributes on Markdown elements
+    content = _re.sub(r'\s+\{[\.\w\s-]+\}', '', content)
+
+    # 4. Strip escaped headerlink self-references: [\\#](#...) — these
+    #    are Docusaurus auto-generated header anchors that become noise
+    content = _re.sub(r'\[\\\\#\]\(#[^)]*\)\s*', '', content)
+
+    # 5. Collapse excessive blank lines
+    content = _re.sub(r'\n{4,}', '\n\n\n', content)
+
+    # 6. Convert via pandoc: Markdown → HTML (no syntax highlighting wrapper)
+    proc = subprocess.run(
+        ["pandoc", "-f", "markdown", "-t", "html", "--syntax-highlighting=none"],
+        input=content,
+        capture_output=True,
+        text=True,
+        timeout=60,
+    )
+    if proc.returncode != 0:
+        print(f"  ⚠ pandoc failed: {proc.stderr[:200]}")
+        return ""
+
+    return proc.stdout.strip()
+
+
+def generate_bilingual_pages(dry_run=False):
+    """为所有已翻译文章生成双语对照 MDX 页面。
+
+    英文原文经 MyST→HTML 转换后以 json.dumps() 安全嵌入 JSX，
+    避免模板字符串转义问题和 RST 源码泄露。
+    """
+    import json
 
     translated_dir = PROJECT_ROOT / "content" / "translated" / "zh"
     english_dir = PROJECT_ROOT / "content" / "raw" / "english"
@@ -618,19 +663,6 @@ def generate_bilingual_pages(dry_run=False):
     if not translated_dir.exists():
         print("  No translations found — skipping bilingual pages")
         return 0
-
-    def _escape_jsx(text):
-        """Escape markdown content for safe embedding in JSX template literals."""
-        # Escape backslashes first
-        text = text.replace("\\", "\\\\")
-        # Escape backticks
-        text = text.replace("`", "\\`")
-        # Escape template literals
-        text = text.replace("${", "\\${")
-        # Escape JSX curly braces
-        text = _re.sub(r"(?<!\\)\\{", "\\{", text)
-        text = _re.sub(r"(?<!\\)\\}", "\\}", text)
-        return text
 
     generated = 0
     for zh_file in sorted(translated_dir.glob("*_zh.md")):
@@ -644,26 +676,34 @@ def generate_bilingual_pages(dry_run=False):
             continue
 
         with open(en_file) as f:
-            en_content = f.read()
+            en_raw = f.read()
         with open(zh_file) as f:
-            zh_content = f.read()
+            zh_raw = f.read()
 
         # Extract frontmatter from English for title/source_url
         en_title = en_stem.replace("_", " ").replace("-", " ").title()
         source_url = ""
-        if en_content.startswith("---"):
-            end = en_content.find("---", 3)
+        if en_raw.startswith("---"):
+            end = en_raw.find("---", 3)
             if end != -1:
-                fm_block = en_content[3:end]
+                fm_block = en_raw[3:end]
                 for line in fm_block.split("\n"):
                     if line.startswith("title:"):
                         en_title = line.split(":", 1)[1].strip().strip('"')
                     elif line.startswith("source_url:"):
                         source_url = line.split(":", 1)[1].strip().strip('"')
 
-        # Escape both contents
-        en_escaped = _escape_jsx(en_content)
-        zh_escaped = _escape_jsx(zh_content)
+        # Convert both sides to HTML
+        en_html = _md_to_html(en_raw)
+        zh_html = _md_to_html(zh_raw)
+
+        if not en_html:
+            print(f"  ⚠ pandoc failed for {en_file.name} — skipping")
+            continue
+
+        # json.dumps produces a safe JS string literal (handles all escaping)
+        en_js = json.dumps(en_html)
+        zh_js = json.dumps(zh_html)
 
         # Generate MDX
         mdx = f"""---
@@ -677,9 +717,9 @@ original_lang: en
 
 import BilingualViewer from "@site/src/components/BilingualViewer";
 
-export const enContent = `{en_escaped}`;
+export const enContent = {en_js};
 
-export const zhContent = `{zh_escaped}`;
+export const zhContent = {zh_js};
 
 <BilingualViewer enContent={{enContent}} zhContent={{zhContent}} sourceUrl="{source_url}" />
 """
