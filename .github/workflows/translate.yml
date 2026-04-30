@@ -15,17 +15,13 @@ on:
   workflow_dispatch:
     inputs:
       max_files:
-        description: '每次最多翻译篇数'
+        description: '每次翻译篇数（0=不设限）'
         required: false
         default: '5'
       model:
         description: '翻译模型'
         required: false
         default: 'deepseek-v4-pro'
-        type: choice
-        options:
-          - deepseek-v4-pro
-          - deepseek-coder
       mode:
         description: '翻译模式'
         required: false

@@ -372,7 +372,7 @@ def main():
     parser.add_argument("--incremental", action="store_true",
                        help="Incremental: only translate files without _zh.md or with failed output")
     parser.add_argument("--max-files", type=int, default=5,
-                       help="Max files per run in incremental mode (default: 5)")
+                       help="Max files per run in incremental mode (0=unlimited, default: 5)")
     args = parser.parse_args()
 
     print("🌐 rocm-hip-map translate.py")
@@ -441,7 +441,7 @@ def main():
             translate_markdown_file(md_file, glossary, dry_run=args.dry_run, mode=args.mode)
             count += 1
 
-            if count >= args.max_files:
+            if args.max_files > 0 and count >= args.max_files:
                 remaining = len(all_files) - skipped - failed_resume - count
                 print(f"\n  ⏸ Reached --max-files={args.max_files}")
                 if remaining > 0:
