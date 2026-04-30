@@ -76,3 +76,6 @@ jobs:
             git commit -m "auto: incremental translate $(date +%Y-%m-%d)"
             git push
           fi
+
+      - name: Audit translations
+        run: python3 scripts/audit_translations.py

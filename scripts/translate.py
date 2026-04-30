@@ -319,6 +319,7 @@ def translate_markdown_file(filepath: Path, glossary: dict, dry_run: bool = Fals
     segments = split_markdown(content)
 
     translated_parts = []
+    failed_count = 0  # 跟踪翻译失败次数
     for seg in segments:
         if seg["type"] in ("frontmatter", "code"):
             translated_parts.append(seg["content"])
@@ -335,11 +336,16 @@ def translate_markdown_file(filepath: Path, glossary: dict, dry_run: bool = Fals
                 if translated:
                     translated_parts.append(translated)
                 else:
-                    translated_parts.append(seg["content"])
+                    failed_count += 1
+                    # 翻译失败不写入原文，保持空白让 is_valid_translation 检测出问题
         else:
             translated_parts.append(seg["content"])
 
     result = "\n\n".join(translated_parts)
+
+    # 如果有段落翻译失败，不写入文件（下次会重试）
+    if failed_count > 0:
+        print(f"  ⚠ Failed segments: {failed_count}, keeping checkpoint for retry")
 
     # 保存翻译结果
     rel_path = None
@@ -357,6 +363,40 @@ def translate_markdown_file(filepath: Path, glossary: dict, dry_run: bool = Fals
     if not dry_run:
         with open(out_path, "w") as f:
             f.write(result)
+
+    return True
+
+
+def is_valid_translation(path: Path) -> bool:
+    """检查翻译文件是否有效（含有中文）。
+
+    规则：
+    1. 文件存在
+    2. 大于 200 bytes
+    3. 含中文字符
+    4. 中文占比 > 3%
+    """
+    if not path.exists():
+        return False
+
+    size = path.stat().st_size
+    if size <= 200:
+        return False
+
+    try:
+        content = path.read_text(encoding="utf-8")
+    except Exception:
+        return False
+
+    # 检查是否含中文
+    chinese_chars = len(re.findall(r"[\u4e00-\u9fff]", content))
+    if chinese_chars == 0:
+        return False
+
+    # 检查中文占比
+    total_chars = len(re.sub(r"\s", "", content))
+    if total_chars > 0 and (chinese_chars / total_chars) < 0.03:
+        return False
 
     return True
 
@@ -428,12 +468,14 @@ def main():
         for md_file in all_files:
             zh_file = CONTENT_TRANSLATED_ZH / (md_file.stem + "_zh.md")
 
-            if zh_file.exists() and zh_file.stat().st_size > MIN_VALID_SIZE:
+            # 使用 is_valid_translation 判断是否真正完成
+            if is_valid_translation(zh_file):
                 skipped += 1
-                continue  # ✅ 已完成，断点保留
+                continue  # ✅ 已完成，跳过
 
-            if zh_file.exists() and zh_file.stat().st_size <= MIN_VALID_SIZE:
-                print(f"  🔄 Resume (failed checkpoint, {zh_file.stat().st_size}B): {md_file.name}")
+            if zh_file.exists():
+                # 存在但无效，视为失败断点
+                print(f"  🔄 Resume (invalid translation, {zh_file.stat().st_size}B): {md_file.name}")
                 failed_resume += 1
             else:
                 print(f"  📝 {md_file.name}")
@@ -448,8 +490,8 @@ def main():
                     print(f"     {remaining} file(s) remain for next run")
                 break
 
-        print(f"\n📊 {count} translated, {failed_resume} resumed, {skipped} skipped, "
-              f"{len(all_files) - skipped - failed_resume - count} remaining")
+        print(f"\n📊 Success: {count}, Failed: {failed_resume}, Skipped(valid): {skipped}, "
+              f"Remaining: {len(all_files) - skipped - failed_resume - count}")
     else:
         if not CONTENT_RAW_EN.exists():
             print("   No raw English content found. Run fetch-official.py first.")
