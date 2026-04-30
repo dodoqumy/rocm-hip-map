@@ -18,6 +18,14 @@ on:
         description: '每次最多翻译篇数'
         required: false
         default: '5'
+      model:
+        description: '翻译模型'
+        required: false
+        default: 'deepseek-v4-pro'
+        type: choice
+        options:
+          - deepseek-v4-pro
+          - deepseek-coder
       mode:
         description: '翻译模式'
         required: false
@@ -47,13 +55,13 @@ jobs:
         env:
           TRANSLATE_PROVIDER: opencode
           TRANSLATE_API_KEY: ${{ secrets.TRANSLATE_API_KEY }}
-          TRANSLATE_MODEL: deepseek-v4-pro
+          TRANSLATE_MODEL: ${{ inputs.model }}
           TRANSLATE_BASE_URL: https://opencode.ai/zen/go/v1
         run: |
           python3 scripts/translate.py \
             --incremental \
-            --max-files "${{ inputs.max_files || '5' }}" \
-            --mode "${{ inputs.mode || 'doc' }}"
+            --max-files "${{ inputs.max_files }}" \
+            --mode "${{ inputs.mode }}"
 
       - name: Commit translations
         run: |
