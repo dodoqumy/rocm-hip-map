@@ -1,0 +1,100 @@
+{
+  "by_source": [
+    {
+      "type": "official",
+      "count": 56
+    }
+  ],
+  "by_difficulty": [
+    {
+      "difficulty": "advanced",
+      "count": 33
+    },
+    {
+      "difficulty": "beginner",
+      "count": 16
+    },
+    {
+      "difficulty": "intermediate",
+      "count": 4
+    },
+    {
+      "difficulty": "reference",
+      "count": 3
+    }
+  ],
+  "by_lifecycle": [
+    {
+      "lifecycle": "latest",
+      "count": 56
+    }
+  ],
+  "tag_cloud": [
+    {
+      "tag": "docker",
+      "namespace": "os",
+      "count": 56
+    },
+    {
+      "tag": "container",
+      "namespace": "topic",
+      "count": 56
+    },
+    {
+      "tag": "linux",
+      "namespace": "topic",
+      "count": 53
+    },
+    {
+      "tag": "performance",
+      "namespace": "topic",
+      "count": 40
+    },
+    {
+      "tag": "advanced",
+      "namespace": "difficulty",
+      "count": 33
+    },
+    {
+      "tag": "windows",
+      "namespace": "os",
+      "count": 31
+    },
+    {
+      "tag": "install",
+      "namespace": "topic",
+      "count": 31
+    },
+    {
+      "tag": "beginner",
+      "namespace": "difficulty",
+      "count": 16
+    },
+    {
+      "tag": "debugging",
+      "namespace": "topic",
+      "count": 13
+    },
+    {
+      "tag": "compatibility",
+      "namespace": "topic",
+      "count": 7
+    },
+    {
+      "tag": "intermediate",
+      "namespace": "difficulty",
+      "count": 4
+    },
+    {
+      "tag": "reference",
+      "namespace": "difficulty",
+      "count": 3
+    },
+    {
+      "tag": "wsl2",
+      "namespace": "os",
+      "count": 1
+    }
+  ],
+  "exported_at": "2026-04-30T22:07:37.197079+00:00"
+}

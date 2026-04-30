@@ -1,166 +1,1201 @@
 {
   "articles": [
     {
-      "file": "content/raw/english/hip_projects_HIP_en_latest_how-to_hip_debugging.md",
-      "title": "404 - Page Not Found",
-      "source_url": "https://rocm.docs.amd.com/projects/HIP/en/latest/how-to/hip_debugging.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker"
-      ],
-      "tags_extra": [
-        "container"
-      ],
-      "difficulty": "beginner",
-      "char_count": 892,
-      "classified_at": "2026-04-28T05:13:16.008813+00:00"
-    },
-    {
-      "file": "content/raw/english/hip_projects_HIP_en_latest_how-to_hip_install.md",
-      "title": "404 - Page Not Found",
-      "source_url": "https://rocm.docs.amd.com/projects/HIP/en/latest/how-to/hip_install.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker"
-      ],
-      "tags_extra": [
-        "container"
-      ],
-      "difficulty": "beginner",
-      "char_count": 892,
-      "classified_at": "2026-04-28T05:13:16.009202+00:00"
-    },
-    {
-      "file": "content/raw/english/hip_projects_HIP_en_latest_how-to_hip_porting_guide.md",
-      "title": "Porting CUDA code to HIP",
-      "source_url": "https://rocm.docs.amd.com/projects/HIP/en/latest/how-to/hip_porting_guide.html",
+      "file": "content/raw/english/d1c818ba0a6bbc4d.md",
+      "title": "What is ROCm?",
+      "source_url": "https://rocm.docs.amd.com/en/latest/what-is-rocm.html",
       "source_type": "official",
       "source_org": "amd",
       "credibility": 5,
       "lifecycle": "latest",
       "os": [
         "docker",
-        "linux"
-      ],
-      "tags_extra": [
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 68070,
-      "classified_at": "2026-04-28T05:13:16.033604+00:00"
-    },
-    {
-      "file": "content/raw/english/hip_projects_HIP_en_latest_index.md",
-      "title": "HIP documentation",
-      "source_url": "https://rocm.docs.amd.com/projects/HIP/en/latest/index.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker"
-      ],
-      "tags_extra": [
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 7304,
-      "classified_at": "2026-04-28T05:13:16.036221+00:00"
-    },
-    {
-      "file": "content/raw/english/hip_projects_HIP_en_latest_reference_index.md",
-      "title": "404 - Page Not Found",
-      "source_url": "https://rocm.docs.amd.com/projects/HIP/en/latest/reference/index.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker"
-      ],
-      "tags_extra": [
-        "container"
-      ],
-      "difficulty": "beginner",
-      "char_count": 892,
-      "classified_at": "2026-04-28T05:13:16.036591+00:00"
-    },
-    {
-      "file": "content/raw/english/hipify_projects_HIPIFY_en_latest_hipify-clang.md",
-      "title": "Using hipify-clang",
-      "source_url": "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/hipify-clang.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
         "windows"
       ],
       "tags_extra": [
-        "container",
-        "install"
-      ],
-      "difficulty": "beginner",
-      "char_count": 106150,
-      "classified_at": "2026-04-28T05:13:16.063120+00:00"
-    },
-    {
-      "file": "content/raw/english/hipify_projects_HIPIFY_en_latest_hipify-perl.md",
-      "title": "Using hipify-perl",
-      "source_url": "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/hipify-perl.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker"
-      ],
-      "tags_extra": [
-        "container"
-      ],
-      "difficulty": "advanced",
-      "char_count": 3200,
-      "classified_at": "2026-04-28T05:13:16.064515+00:00"
-    },
-    {
-      "file": "content/raw/english/hipify_projects_HIPIFY_en_latest_index.md",
-      "title": "HIPIFY documentation",
-      "source_url": "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/index.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
         "linux",
-        "windows"
-      ],
-      "frameworks": [
-        "pytorch"
-      ],
-      "tags_extra": [
-        "container",
+        "docker",
+        "windows",
+        "advanced",
+        "performance",
         "debugging",
-        "performance"
+        "container"
       ],
-      "difficulty": "beginner",
-      "char_count": 6101,
-      "classified_at": "2026-04-28T05:13:16.066240+00:00"
+      "difficulty": "advanced",
+      "char_count": 25680,
+      "classified_at": "2026-04-30T22:07:32.374694+00:00"
     },
     {
-      "file": "content/raw/english/hipify_projects_HIPIFY_en_latest_supported_apis.md",
+      "file": "content/raw/english/61efeb69318d0b1e.md",
+      "title": "ROCm release history",
+      "source_url": "https://rocm.docs.amd.com/en/latest/release/versions.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "beginner",
+        "container"
+      ],
+      "difficulty": "beginner",
+      "char_count": 6561,
+      "classified_at": "2026-04-30T22:07:32.374289+00:00"
+    },
+    {
+      "file": "content/raw/english/6b32168ef7086dda.md",
+      "title": "ROCm consolidated changelog",
+      "source_url": "https://rocm.docs.amd.com/en/latest/release/changelog.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "advanced",
+        "install",
+        "performance",
+        "debugging",
+        "compatibility",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 1036415,
+      "classified_at": "2026-04-30T22:07:32.372774+00:00"
+    },
+    {
+      "file": "content/raw/english/d0c502ec94271f4a.md",
+      "title": "ROCm tools, compilers, and runtime API",
+      "source_url": "https://rocm.docs.amd.com/en/latest/reference/rocm-tools.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "intermediate",
+        "performance",
+        "debugging",
+        "container"
+      ],
+      "difficulty": "intermediate",
+      "char_count": 5560,
+      "classified_at": "2026-04-30T22:07:32.365069+00:00"
+    },
+    {
+      "file": "content/raw/english/a7f14d8cfd9297f5.md",
+      "title": "Data types and precision support",
+      "source_url": "https://rocm.docs.amd.com/en/latest/reference/precision-support.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "reference",
+        "performance",
+        "compatibility",
+        "container"
+      ],
+      "difficulty": "reference",
+      "char_count": 80079,
+      "classified_at": "2026-04-30T22:07:32.364750+00:00"
+    },
+    {
+      "file": "content/raw/english/a7417a67a3e2d520.md",
+      "title": "Graph-safe support for ROCm libraries",
+      "source_url": "https://rocm.docs.amd.com/en/latest/reference/graph-safe-support.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "beginner",
+        "performance",
+        "container"
+      ],
+      "difficulty": "beginner",
+      "char_count": 6489,
+      "classified_at": "2026-04-30T22:07:32.363363+00:00"
+    },
+    {
+      "file": "content/raw/english/ffdfd8c70b76e147.md",
+      "title": "Hardware atomics operation support",
+      "source_url": "https://rocm.docs.amd.com/en/latest/reference/gpu-atomics-operation.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "reference",
+        "container"
+      ],
+      "difficulty": "reference",
+      "char_count": 1239225,
+      "classified_at": "2026-04-30T22:07:32.360163+00:00"
+    },
+    {
+      "file": "content/raw/english/d52ddac5c18a8ba0.md",
+      "title": "GPU hardware specifications",
+      "source_url": "https://rocm.docs.amd.com/en/latest/reference/gpu-arch-specs.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "advanced",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 24160,
+      "classified_at": "2026-04-30T22:07:32.336621+00:00"
+    },
+    {
+      "file": "content/raw/english/bb4fa383c9d97927.md",
+      "title": "ROCm environment variables",
+      "source_url": "https://rocm.docs.amd.com/en/latest/reference/env-variables.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "advanced",
+        "install",
+        "performance",
+        "debugging",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 472873,
+      "classified_at": "2026-04-30T22:07:32.327210+00:00"
+    },
+    {
+      "file": "content/raw/english/9d119b90099e6d60.md",
+      "title": "ROCm libraries",
+      "source_url": "https://rocm.docs.amd.com/en/latest/reference/api-libraries.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "intermediate",
+        "performance",
+        "container"
+      ],
+      "difficulty": "intermediate",
+      "char_count": 7374,
+      "classified_at": "2026-04-30T22:07:32.323177+00:00"
+    },
+    {
+      "file": "content/raw/english/ab6ae450eb644755.md",
+      "title": "AMD ROCm documentation",
+      "source_url": "https://rocm.docs.amd.com/en/latest/index.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "advanced",
+        "install",
+        "performance",
+        "debugging",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 6392,
+      "classified_at": "2026-04-30T22:07:32.322958+00:00"
+    },
+    {
+      "file": "content/raw/english/1755abdf37815659.md",
+      "title": "AMD MI300X tuning guides",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/tuning-guides/mi300x/index.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "advanced",
+        "install",
+        "performance",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 2656,
+      "classified_at": "2026-04-30T22:07:32.322748+00:00"
+    },
+    {
+      "file": "content/raw/english/f6163a63a2a0f0b8.md",
+      "title": "System optimization",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/system-optimization/index.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "advanced",
+        "install",
+        "performance",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 3183,
+      "classified_at": "2026-04-30T22:07:32.322559+00:00"
+    },
+    {
+      "file": "content/raw/english/206c1997033508ce.md",
+      "title": "System debugging",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/system-debugging.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "intermediate",
+        "performance",
+        "debugging",
+        "container"
+      ],
+      "difficulty": "intermediate",
+      "char_count": 8826,
+      "classified_at": "2026-04-30T22:07:32.322373+00:00"
+    },
+    {
+      "file": "content/raw/english/63181706fe23316c.md",
+      "title": "Setting the number of compute units",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/setting-cus.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "advanced",
+        "install",
+        "debugging",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 4397,
+      "classified_at": "2026-04-30T22:07:32.322139+00:00"
+    },
+    {
+      "file": "content/raw/english/9b8e22f53f78d360.md",
+      "title": "Using ROCm for HPC",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-hpc/index.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "advanced",
+        "install",
+        "performance",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 47565,
+      "classified_at": "2026-04-30T22:07:32.321897+00:00"
+    },
+    {
+      "file": "content/raw/english/ddefaa24a2496956.md",
+      "title": "Scaling model training",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/training/scale-model-training.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "advanced",
+        "performance",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 10129,
+      "classified_at": "2026-04-30T22:07:32.321307+00:00"
+    },
+    {
+      "file": "content/raw/english/878db0871c2390ad.md",
+      "title": "Use ROCm for training",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/training/index.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "beginner",
+        "install",
+        "performance",
+        "container"
+      ],
+      "difficulty": "beginner",
+      "char_count": 4350,
+      "classified_at": "2026-04-30T22:07:32.321086+00:00"
+    },
+    {
+      "file": "content/raw/english/6fdecdf724e7ed5f.md",
+      "title": "System setup for AI workloads on ROCm",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/system-setup/index.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "advanced",
+        "install",
+        "performance",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 4880,
+      "classified_at": "2026-04-30T22:07:32.320897+00:00"
+    },
+    {
+      "file": "content/raw/english/8d67ec99e52580ab.md",
+      "title": "Installing ROCm and deep learning frameworks",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/install.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "beginner",
+        "install",
+        "performance",
+        "container"
+      ],
+      "difficulty": "beginner",
+      "char_count": 6404,
+      "classified_at": "2026-04-30T22:07:32.320698+00:00"
+    },
+    {
+      "file": "content/raw/english/3cfe6cbb902c340e.md",
+      "title": "LLM inference frameworks",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/llm-inference-frameworks.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "advanced",
+        "install",
+        "performance",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 11891,
+      "classified_at": "2026-04-30T22:07:32.320476+00:00"
+    },
+    {
+      "file": "content/raw/english/a91b4f2edb230b8c.md",
+      "title": "Use ROCm for AI inference",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/index.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "beginner",
+        "install",
+        "performance",
+        "container"
+      ],
+      "difficulty": "beginner",
+      "char_count": 4807,
+      "classified_at": "2026-04-30T22:07:32.320151+00:00"
+    },
+    {
+      "file": "content/raw/english/83b4d1369263607e.md",
+      "title": "Running models from Hugging Face",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/hugging-face-models.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "advanced",
+        "install",
+        "performance",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 10658,
+      "classified_at": "2026-04-30T22:07:32.319954+00:00"
+    },
+    {
+      "file": "content/raw/english/27ef0131bb8569d9.md",
+      "title": "Deploying your model",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/deploy-your-model.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "advanced",
+        "install",
+        "performance",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 8464,
+      "classified_at": "2026-04-30T22:07:32.319716+00:00"
+    },
+    {
+      "file": "content/raw/english/3589201866de3309.md",
+      "title": "Model quantization techniques",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-quantization.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "advanced",
+        "install",
+        "performance",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 23155,
+      "classified_at": "2026-04-30T22:07:32.319445+00:00"
+    },
+    {
+      "file": "content/raw/english/da0df28eaae6c676.md",
+      "title": "Use ROCm for AI inference optimization",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/index.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "advanced",
+        "performance",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 4510,
+      "classified_at": "2026-04-30T22:07:32.319040+00:00"
+    },
+    {
+      "file": "content/raw/english/2f4996dde59bf6b3.md",
+      "title": "Use ROCm for AI",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/index.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "advanced",
+        "install",
+        "performance",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 4109,
+      "classified_at": "2026-04-30T22:07:32.318806+00:00"
+    },
+    {
+      "file": "content/raw/english/b3ff6f443fa7e58d.md",
+      "title": "Use ROCm for fine-tuning LLMs",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/fine-tuning/index.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "advanced",
+        "performance",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 4110,
+      "classified_at": "2026-04-30T22:07:32.310081+00:00"
+    },
+    {
+      "file": "content/raw/english/4a0895c573cb0ac0.md",
+      "title": "Programming guide",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/programming_guide.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "beginner",
+        "performance",
+        "container"
+      ],
+      "difficulty": "beginner",
+      "char_count": 3823,
+      "classified_at": "2026-04-30T22:07:32.309893+00:00"
+    },
+    {
+      "file": "content/raw/english/aa4c0a4b8fba4b4d.md",
+      "title": "AMD Instinct MI300X performance guides",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/gpu-performance/mi300x.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "advanced",
+        "install",
+        "performance",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 3609,
+      "classified_at": "2026-04-30T22:07:32.309709+00:00"
+    },
+    {
+      "file": "content/raw/english/0d574faecbc15d10.md",
+      "title": "Deep learning frameworks for ROCm",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/deep-learning-rocm.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "advanced",
+        "install",
+        "performance",
+        "compatibility",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 11342,
+      "classified_at": "2026-04-30T22:07:32.309510+00:00"
+    },
+    {
+      "file": "content/raw/english/f84f37264455896c.md",
+      "title": "Build ROCm from source",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/build-rocm.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "beginner",
+        "container"
+      ],
+      "difficulty": "beginner",
+      "char_count": 2857,
+      "classified_at": "2026-04-30T22:07:32.309282+00:00"
+    },
+    {
+      "file": "content/raw/english/2955f36314977d25.md",
+      "title": "Troubleshoot BAR access limitation",
+      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/Bar-Memory.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "advanced",
+        "install",
+        "performance",
+        "debugging",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 15586,
+      "classified_at": "2026-04-30T22:07:32.309075+00:00"
+    },
+    {
+      "file": "content/raw/english/8da35dd10c106430.md",
+      "title": "ROCm documentation toolchain",
+      "source_url": "https://rocm.docs.amd.com/en/latest/contribute/toolchain.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "advanced",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 6164,
+      "classified_at": "2026-04-30T22:07:32.308797+00:00"
+    },
+    {
+      "file": "content/raw/english/6a9e2e77e04dee75.md",
+      "title": "Contributing to the ROCm documentation",
+      "source_url": "https://rocm.docs.amd.com/en/latest/contribute/contributing.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "beginner",
+        "install",
+        "performance",
+        "container"
+      ],
+      "difficulty": "beginner",
+      "char_count": 8473,
+      "classified_at": "2026-04-30T22:07:32.308595+00:00"
+    },
+    {
+      "file": "content/raw/english/ca637dc460b05654.md",
+      "title": "Building documentation",
+      "source_url": "https://rocm.docs.amd.com/en/latest/contribute/building.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "wsl2",
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "wsl2",
+        "docker",
+        "windows",
+        "advanced",
+        "install",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 10303,
+      "classified_at": "2026-04-30T22:07:32.308373+00:00"
+    },
+    {
+      "file": "content/raw/english/66f47489ac14e638.md",
+      "title": "GPU isolation techniques",
+      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/gpu-isolation.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "beginner",
+        "install",
+        "container"
+      ],
+      "difficulty": "beginner",
+      "char_count": 9103,
+      "classified_at": "2026-04-30T22:07:32.308136+00:00"
+    },
+    {
+      "file": "content/raw/english/8e60fee2835f699e.md",
+      "title": "AMD Instinct™ MI300 Series microarchitecture",
+      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi300.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "advanced",
+        "performance",
+        "compatibility",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 7728,
+      "classified_at": "2026-04-30T22:07:32.307871+00:00"
+    },
+    {
+      "file": "content/raw/english/7e1abecddb106a39.md",
+      "title": "AMD Instinct™ MI250 microarchitecture",
+      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi250.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "advanced",
+        "performance",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 8483,
+      "classified_at": "2026-04-30T22:07:32.307513+00:00"
+    },
+    {
+      "file": "content/raw/english/79098aa9291947c9.md",
+      "title": "AMD Instinct™ MI100 microarchitecture",
+      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi100.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "advanced",
+        "performance",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 8638,
+      "classified_at": "2026-04-30T22:07:32.307248+00:00"
+    },
+    {
+      "file": "content/raw/english/2b5b393044121d02.md",
+      "title": "GPU architecture documentation",
+      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "beginner",
+        "performance",
+        "debugging",
+        "container"
+      ],
+      "difficulty": "beginner",
+      "char_count": 5348,
+      "classified_at": "2026-04-30T22:07:32.306991+00:00"
+    },
+    {
+      "file": "content/raw/english/64ec837ebb52b473.md",
+      "title": "ROCm Linux Filesystem Hierarchy Standard reorganization",
+      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/file-reorg.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "beginner",
+        "container"
+      ],
+      "difficulty": "beginner",
+      "char_count": 14283,
+      "classified_at": "2026-04-30T22:07:32.306778+00:00"
+    },
+    {
+      "file": "content/raw/english/49ce523fae4ad671.md",
+      "title": "Using compiler features",
+      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/compiler-topics.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "beginner",
+        "container"
+      ],
+      "difficulty": "beginner",
+      "char_count": 2719,
+      "classified_at": "2026-04-30T22:07:32.306472+00:00"
+    },
+    {
+      "file": "content/raw/english/a0c2f97e7835a15a.md",
+      "title": "Using CMake",
+      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/cmake-packages.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "advanced",
+        "install",
+        "debugging",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 23670,
+      "classified_at": "2026-04-30T22:07:32.306259+00:00"
+    },
+    {
+      "file": "content/raw/english/aa50a1295cde2935.md",
+      "title": "Deep learning: Inception V3 with PyTorch",
+      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/ai-pytorch-inception.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "advanced",
+        "install",
+        "performance",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 54585,
+      "classified_at": "2026-04-30T22:07:32.305795+00:00"
+    },
+    {
+      "file": "content/raw/english/73eb6a67974c1794.md",
+      "title": "Compatibility matrix",
+      "source_url": "https://rocm.docs.amd.com/en/latest/compatibility/compatibility-matrix.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "reference",
+        "install",
+        "performance",
+        "debugging",
+        "compatibility",
+        "container"
+      ],
+      "difficulty": "reference",
+      "char_count": 248709,
+      "classified_at": "2026-04-30T22:07:32.304063+00:00"
+    },
+    {
+      "file": "content/raw/english/5617e8b9f4682798.md",
+      "title": "ROCm 7.2.2 release notes",
+      "source_url": "https://rocm.docs.amd.com/en/latest/about/release-notes.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "intermediate",
+        "performance",
+        "container"
+      ],
+      "difficulty": "intermediate",
+      "char_count": 8126,
+      "classified_at": "2026-04-30T22:07:32.295436+00:00"
+    },
+    {
+      "file": "content/raw/english/79d59a12ff9a6fe3.md",
+      "title": "ROCm license",
+      "source_url": "https://rocm.docs.amd.com/en/latest/about/license.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "advanced",
+        "install",
+        "performance",
+        "debugging",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 23419,
+      "classified_at": "2026-04-30T22:07:32.287408+00:00"
+    },
+    {
+      "file": "content/raw/english/1253f1355327b577.md",
+      "title": "System requirements (Linux)",
+      "source_url": "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "advanced",
+        "install",
+        "compatibility",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 25934,
+      "classified_at": "2026-04-30T22:07:32.286994+00:00"
+    },
+    {
+      "file": "content/raw/english/f864d5eb192f1bdf.md",
+      "title": "ROCm installation for Linux",
+      "source_url": "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/index.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "beginner",
+        "install",
+        "compatibility",
+        "container"
+      ],
+      "difficulty": "beginner",
+      "char_count": 4014,
+      "classified_at": "2026-04-30T22:07:32.286323+00:00"
+    },
+    {
+      "file": "content/raw/english/41e3848ec3fd4253.md",
       "title": "Supported CUDA APIs",
       "source_url": "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/supported_apis.html",
       "source_type": "official",
@@ -171,1114 +1206,43 @@
         "docker"
       ],
       "tags_extra": [
+        "docker",
+        "beginner",
         "container"
       ],
       "difficulty": "beginner",
-      "char_count": 6117,
-      "classified_at": "2026-04-28T05:13:16.068362+00:00"
+      "char_count": 5757,
+      "classified_at": "2026-04-30T22:07:32.286147+00:00"
     },
     {
-      "file": "content/raw/english/rocm-install-linux_projects_install-on-linux_en_latest_index.md",
-      "title": "ROCm installation for Linux",
-      "source_url": "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/index.html",
+      "file": "content/raw/english/89c32522df7551d4.md",
+      "title": "HIPIFY documentation",
+      "source_url": "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/index.html",
       "source_type": "official",
       "source_org": "amd",
       "credibility": 5,
       "lifecycle": "latest",
       "os": [
         "docker",
-        "linux"
-      ],
-      "frameworks": [
-        "jax",
-        "pytorch",
-        "tensorflow"
-      ],
-      "tags_extra": [
-        "compatibility",
-        "container",
-        "install"
-      ],
-      "difficulty": "beginner",
-      "char_count": 7039,
-      "classified_at": "2026-04-28T05:13:16.070361+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm-install-linux_projects_install-on-linux_en_latest_install_install-amdgpu.md",
-      "title": "404 - Page Not Found",
-      "source_url": "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/install-amdgpu.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "tags_extra": [
-        "container",
-        "install"
-      ],
-      "difficulty": "beginner",
-      "char_count": 905,
-      "classified_at": "2026-04-28T05:13:16.070677+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm-install-linux_projects_install-on-linux_en_latest_install_install-post.md",
-      "title": "404 - Page Not Found",
-      "source_url": "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/install-post.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "tags_extra": [
-        "container",
-        "install"
-      ],
-      "difficulty": "beginner",
-      "char_count": 905,
-      "classified_at": "2026-04-28T05:13:16.070956+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm-install-linux_projects_install-on-linux_en_latest_install_install-quick.md",
-      "title": "404 - Page Not Found",
-      "source_url": "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/install-quick.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "tags_extra": [
-        "container",
-        "install"
-      ],
-      "difficulty": "beginner",
-      "char_count": 905,
-      "classified_at": "2026-04-28T05:13:16.071255+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm-install-linux_projects_install-on-linux_en_latest_reference_system-requirements.md",
-      "title": "System requirements (Linux)",
-      "source_url": "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "gpu": [
-        "mi100",
-        "mi210",
-        "mi250",
-        "mi250x",
-        "mi300x",
-        "mi50",
-        "rx7900",
-        "rx7900xtx"
-      ],
-      "gpu_arch": [
-        "cdna2",
-        "cdna3",
-        "rdna2",
-        "rdna3"
-      ],
-      "tags_extra": [
-        "compatibility",
-        "container",
-        "install"
-      ],
-      "difficulty": "advanced",
-      "char_count": 28106,
-      "classified_at": "2026-04-28T05:13:16.076994+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_about_license.md",
-      "title": "ROCm license",
-      "source_url": "https://rocm.docs.amd.com/en/latest/about/license.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
         "windows"
       ],
       "tags_extra": [
-        "container",
-        "debugging",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 25130,
-      "classified_at": "2026-04-28T05:13:16.084065+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_about_release-notes.md",
-      "title": "ROCm 7.2.2 release notes",
-      "source_url": "https://rocm.docs.amd.com/en/latest/about/release-notes.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "gpu": [
-        "mi300x"
-      ],
-      "frameworks": [
-        "jax"
-      ],
-      "tags_extra": [
-        "container",
-        "performance"
-      ],
-      "difficulty": "intermediate",
-      "char_count": 9628,
-      "classified_at": "2026-04-28T05:13:16.087197+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_compatibility_compatibility-matrix.md",
-      "title": "Compatibility matrix",
-      "source_url": "https://rocm.docs.amd.com/en/latest/compatibility/compatibility-matrix.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "gpu_arch": [
-        "cdna2",
-        "cdna3",
-        "rdna2",
-        "rdna3"
-      ],
-      "driver": [
-        "amdgpu-6.x"
-      ],
-      "frameworks": [
-        "jax",
-        "onnx",
-        "pytorch",
-        "tensorflow"
-      ],
-      "tags_extra": [
-        "compatibility",
-        "container",
-        "debugging",
-        "install",
-        "performance"
-      ],
-      "difficulty": "reference",
-      "char_count": 250582,
-      "classified_at": "2026-04-28T05:13:16.132064+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_compatibility_ml-compatibility_dgl.md",
-      "title": "404 - Page Not Found",
-      "source_url": "https://rocm.docs.amd.com/en/latest/compatibility/ml-compatibility/dgl.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker"
-      ],
-      "tags_extra": [
-        "container"
-      ],
-      "difficulty": "beginner",
-      "char_count": 879,
-      "classified_at": "2026-04-28T05:13:16.132639+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_compatibility_ml-compatibility_jax.md",
-      "title": "404 - Page Not Found",
-      "source_url": "https://rocm.docs.amd.com/en/latest/compatibility/ml-compatibility/jax.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker"
-      ],
-      "tags_extra": [
-        "container"
-      ],
-      "difficulty": "beginner",
-      "char_count": 879,
-      "classified_at": "2026-04-28T05:13:16.133033+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_compatibility_ml-compatibility_pytorch.md",
-      "title": "404 - Page Not Found",
-      "source_url": "https://rocm.docs.amd.com/en/latest/compatibility/ml-compatibility/pytorch.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker"
-      ],
-      "tags_extra": [
-        "container"
-      ],
-      "difficulty": "beginner",
-      "char_count": 879,
-      "classified_at": "2026-04-28T05:13:16.133405+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_compatibility_ml-compatibility_tensorflow.md",
-      "title": "404 - Page Not Found",
-      "source_url": "https://rocm.docs.amd.com/en/latest/compatibility/ml-compatibility/tensorflow.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker"
-      ],
-      "tags_extra": [
-        "container"
-      ],
-      "difficulty": "beginner",
-      "char_count": 879,
-      "classified_at": "2026-04-28T05:13:16.133722+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_conceptual_ai-pytorch-inception.md",
-      "title": "Deep learning: Inception V3 with PyTorch",
-      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/ai-pytorch-inception.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
         "linux",
-        "windows"
-      ],
-      "frameworks": [
-        "pytorch",
-        "tensorflow"
-      ],
-      "tags_extra": [
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 62998,
-      "classified_at": "2026-04-28T05:13:16.151303+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_conceptual_cmake-packages.md",
-      "title": "Using CMake",
-      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/cmake-packages.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
         "docker",
-        "linux",
-        "windows"
-      ],
-      "frameworks": [
-        "pytorch"
-      ],
-      "tags_extra": [
-        "container",
-        "debugging",
-        "install"
-      ],
-      "difficulty": "advanced",
-      "char_count": 26308,
-      "classified_at": "2026-04-28T05:13:16.160863+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_conceptual_compiler-topics.md",
-      "title": "Using compiler features",
-      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/compiler-topics.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "tags_extra": [
-        "container"
-      ],
-      "difficulty": "beginner",
-      "char_count": 4041,
-      "classified_at": "2026-04-28T05:13:16.162261+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_conceptual_file-reorg.md",
-      "title": "ROCm Linux Filesystem Hierarchy Standard reorganization",
-      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/file-reorg.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "gpu": [
-        "mi100"
-      ],
-      "driver": [
-        "amdgpu-5.x",
-        "amdgpu-6.x"
-      ],
-      "tags_extra": [
-        "container"
-      ],
-      "difficulty": "beginner",
-      "char_count": 16723,
-      "classified_at": "2026-04-28T05:13:16.168925+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_conceptual_gpu-arch.md",
-      "title": "GPU architecture documentation",
-      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "gpu": [
-        "mi100",
-        "mi250",
-        "mi50"
-      ],
-      "gpu_arch": [
-        "cdna1",
-        "cdna2",
-        "cdna3",
-        "rdna2",
-        "rdna3"
-      ],
-      "tags_extra": [
-        "container",
-        "debugging",
-        "performance"
-      ],
-      "difficulty": "beginner",
-      "char_count": 7919,
-      "classified_at": "2026-04-28T05:13:16.170748+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_conceptual_gpu-arch_mi100.md",
-      "title": "AMD Instinct™ MI100 microarchitecture",
-      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi100.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "gpu": [
-        "mi100",
-        "mi250"
-      ],
-      "tags_extra": [
-        "container",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 10377,
-      "classified_at": "2026-04-28T05:13:16.173970+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_conceptual_gpu-arch_mi250.md",
-      "title": "AMD Instinct™ MI250 microarchitecture",
-      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi250.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "gpu": [
-        "mi100",
-        "mi250"
-      ],
-      "gpu_arch": [
-        "cdna2"
-      ],
-      "tags_extra": [
-        "container",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 10246,
-      "classified_at": "2026-04-28T05:13:16.176979+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_conceptual_gpu-arch_mi300.md",
-      "title": "AMD Instinct™ MI300 Series microarchitecture",
-      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi300.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "gpu": [
-        "mi250x",
-        "mi300x"
-      ],
-      "gpu_arch": [
-        "cdna2",
-        "cdna3"
-      ],
-      "tags_extra": [
-        "compatibility",
-        "container",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 9490,
-      "classified_at": "2026-04-28T05:13:16.179599+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_conceptual_gpu-isolation.md",
-      "title": "GPU isolation techniques",
-      "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/gpu-isolation.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "tags_extra": [
-        "container",
-        "install"
-      ],
-      "difficulty": "beginner",
-      "char_count": 11641,
-      "classified_at": "2026-04-28T05:13:16.184061+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_contribute_building.md",
-      "title": "Building documentation",
-      "source_url": "https://rocm.docs.amd.com/en/latest/contribute/building.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
         "windows",
-        "wsl2"
-      ],
-      "tags_extra": [
-        "container",
-        "install"
-      ],
-      "difficulty": "advanced",
-      "char_count": 12311,
-      "classified_at": "2026-04-28T05:13:16.187960+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_contribute_contributing.md",
-      "title": "Contributing to the ROCm documentation",
-      "source_url": "https://rocm.docs.amd.com/en/latest/contribute/contributing.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "tags_extra": [
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "beginner",
-      "char_count": 10243,
-      "classified_at": "2026-04-28T05:13:16.191344+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_contribute_toolchain.md",
-      "title": "ROCm documentation toolchain",
-      "source_url": "https://rocm.docs.amd.com/en/latest/contribute/toolchain.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "tags_extra": [
-        "container"
-      ],
-      "difficulty": "advanced",
-      "char_count": 7980,
-      "classified_at": "2026-04-28T05:13:16.194031+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_Bar-Memory.md",
-      "title": "Troubleshoot BAR access limitation",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/Bar-Memory.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "tags_extra": [
-        "container",
+        "beginner",
+        "performance",
         "debugging",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 17333,
-      "classified_at": "2026-04-28T05:13:16.198982+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_build-rocm.md",
-      "title": "Build ROCm from source",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/build-rocm.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "tags_extra": [
         "container"
       ],
       "difficulty": "beginner",
-      "char_count": 4130,
-      "classified_at": "2026-04-28T05:13:16.200856+00:00"
+      "char_count": 4523,
+      "classified_at": "2026-04-30T22:07:32.285936+00:00"
     },
     {
-      "file": "content/raw/english/rocm_en_latest_how-to_deep-learning-rocm.md",
-      "title": "Deep learning frameworks for ROCm",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/deep-learning-rocm.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "frameworks": [
-        "jax",
-        "pytorch",
-        "tensorflow"
-      ],
-      "tags_extra": [
-        "compatibility",
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 12645,
-      "classified_at": "2026-04-28T05:13:16.204121+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_gpu-performance_mi300x.md",
-      "title": "AMD Instinct MI300X performance guides",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/gpu-performance/mi300x.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "gpu": [
-        "mi300x"
-      ],
-      "tags_extra": [
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 4851,
-      "classified_at": "2026-04-28T05:13:16.205511+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_programming_guide.md",
-      "title": "Programming guide",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/programming_guide.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "frameworks": [
-        "pytorch",
-        "tensorflow"
-      ],
-      "tags_extra": [
-        "container",
-        "performance"
-      ],
-      "difficulty": "beginner",
-      "char_count": 5075,
-      "classified_at": "2026-04-28T05:13:16.206977+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_rocm-for-ai_fine-tuning_index.md",
-      "title": "Use ROCm for fine-tuning LLMs",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/fine-tuning/index.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "tags_extra": [
-        "container",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 5390,
-      "classified_at": "2026-04-28T05:13:16.208777+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_rocm-for-ai_index.md",
-      "title": "Use ROCm for AI",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/index.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "tags_extra": [
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 5401,
-      "classified_at": "2026-04-28T05:13:16.210423+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_rocm-for-ai_inference-optimization_index.md",
-      "title": "Use ROCm for AI inference optimization",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/index.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "frameworks": [
-        "pytorch"
-      ],
-      "tags_extra": [
-        "container",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 5779,
-      "classified_at": "2026-04-28T05:13:16.212188+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_rocm-for-ai_inference-optimization_model-quantization.md",
-      "title": "Model quantization techniques",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-quantization.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "driver": [
-        "amdgpu-6.x"
-      ],
-      "frameworks": [
-        "pytorch"
-      ],
-      "tags_extra": [
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 26757,
-      "classified_at": "2026-04-28T05:13:16.221091+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_rocm-for-ai_inference_deploy-your-model.md",
-      "title": "Deploying your model",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/deploy-your-model.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "gpu": [
-        "mi300x"
-      ],
-      "frameworks": [
-        "pytorch"
-      ],
-      "tags_extra": [
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 10482,
-      "classified_at": "2026-04-28T05:13:16.224341+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_rocm-for-ai_inference_hugging-face-models.md",
-      "title": "Running models from Hugging Face",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/hugging-face-models.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "frameworks": [
-        "onnx",
-        "pytorch"
-      ],
-      "tags_extra": [
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 13257,
-      "classified_at": "2026-04-28T05:13:16.228335+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_rocm-for-ai_inference_index.md",
-      "title": "Use ROCm for AI inference",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/index.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "gpu": [
-        "mi300x"
-      ],
-      "frameworks": [
-        "pytorch"
-      ],
-      "tags_extra": [
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "beginner",
-      "char_count": 6089,
-      "classified_at": "2026-04-28T05:13:16.230120+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_rocm-for-ai_inference_llm-inference-frameworks.md",
-      "title": "LLM inference frameworks",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/llm-inference-frameworks.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "gpu": [
-        "mi300x"
-      ],
-      "frameworks": [
-        "pytorch"
-      ],
-      "tags_extra": [
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 14876,
-      "classified_at": "2026-04-28T05:13:16.234491+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_rocm-for-ai_install.md",
-      "title": "Installing ROCm and deep learning frameworks",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/install.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "frameworks": [
-        "jax",
-        "pytorch",
-        "tensorflow"
-      ],
-      "tags_extra": [
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "beginner",
-      "char_count": 8901,
-      "classified_at": "2026-04-28T05:13:16.237143+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_rocm-for-ai_system-setup_index.md",
-      "title": "System setup for AI workloads on ROCm",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/system-setup/index.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "gpu": [
-        "mi300x"
-      ],
-      "tags_extra": [
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 6594,
-      "classified_at": "2026-04-28T05:13:16.239087+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_rocm-for-ai_training_index.md",
-      "title": "Use ROCm for training",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/training/index.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "frameworks": [
-        "jax",
-        "pytorch"
-      ],
-      "tags_extra": [
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "beginner",
-      "char_count": 5633,
-      "classified_at": "2026-04-28T05:13:16.240775+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_rocm-for-ai_training_scale-model-training.md",
-      "title": "Scaling model training",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/training/scale-model-training.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "frameworks": [
-        "jax",
-        "pytorch"
-      ],
-      "tags_extra": [
-        "container",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 11957,
-      "classified_at": "2026-04-28T05:13:16.245012+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_rocm-for-hpc_index.md",
-      "title": "Using ROCm for HPC",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-hpc/index.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "driver": [
-        "amdgpu-6.x"
-      ],
-      "tags_extra": [
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 48910,
-      "classified_at": "2026-04-28T05:13:16.256844+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_setting-cus.md",
-      "title": "Setting the number of compute units",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/setting-cus.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "tags_extra": [
-        "container",
-        "debugging",
-        "install"
-      ],
-      "difficulty": "advanced",
-      "char_count": 5813,
-      "classified_at": "2026-04-28T05:13:16.258777+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_system-debugging.md",
-      "title": "System debugging",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/system-debugging.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "gpu": [
-        "mi300x"
-      ],
-      "tags_extra": [
-        "container",
-        "debugging",
-        "performance"
-      ],
-      "difficulty": "intermediate",
-      "char_count": 10862,
-      "classified_at": "2026-04-28T05:13:16.262105+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_system-optimization_index.md",
-      "title": "System optimization",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/system-optimization/index.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "gpu": [
-        "mi100",
-        "mi300x"
-      ],
-      "gpu_arch": [
-        "rdna2",
-        "rdna3"
-      ],
-      "tags_extra": [
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 5156,
-      "classified_at": "2026-04-28T05:13:16.263612+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_how-to_system-optimization_rdna3_5.md",
-      "title": "404 - Page Not Found",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/system-optimization/rdna3.5.html",
+      "file": "content/raw/english/e0c5ca570e853958.md",
+      "title": "Using hipify-perl",
+      "source_url": "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/hipify-perl.html",
       "source_type": "official",
       "source_org": "amd",
       "credibility": 5,
@@ -1287,116 +1251,42 @@
         "docker"
       ],
       "tags_extra": [
+        "docker",
+        "advanced",
+        "container"
+      ],
+      "difficulty": "advanced",
+      "char_count": 2540,
+      "classified_at": "2026-04-30T22:07:32.285779+00:00"
+    },
+    {
+      "file": "content/raw/english/a880ea370ea0fe01.md",
+      "title": "Using hipify-clang",
+      "source_url": "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/hipify-clang.html",
+      "source_type": "official",
+      "source_org": "amd",
+      "credibility": 5,
+      "lifecycle": "latest",
+      "os": [
+        "docker",
+        "windows"
+      ],
+      "tags_extra": [
+        "linux",
+        "docker",
+        "windows",
+        "beginner",
+        "install",
         "container"
       ],
       "difficulty": "beginner",
-      "char_count": 879,
-      "classified_at": "2026-04-28T05:13:16.264015+00:00"
+      "char_count": 104538,
+      "classified_at": "2026-04-30T22:07:32.285361+00:00"
     },
     {
-      "file": "content/raw/english/rocm_en_latest_how-to_tuning-guides_mi300x_index.md",
-      "title": "AMD MI300X tuning guides",
-      "source_url": "https://rocm.docs.amd.com/en/latest/how-to/tuning-guides/mi300x/index.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "gpu": [
-        "mi300x"
-      ],
-      "tags_extra": [
-        "container",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 3872,
-      "classified_at": "2026-04-28T05:13:16.265224+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_index.md",
-      "title": "AMD ROCm documentation",
-      "source_url": "https://rocm.docs.amd.com/en/latest/index.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "gpu": [
-        "mi300x"
-      ],
-      "frameworks": [
-        "pytorch"
-      ],
-      "tags_extra": [
-        "container",
-        "debugging",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 9424,
-      "classified_at": "2026-04-28T05:13:16.267732+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_reference_api-libraries.md",
-      "title": "ROCm libraries",
-      "source_url": "https://rocm.docs.amd.com/en/latest/reference/api-libraries.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "frameworks": [
-        "pytorch"
-      ],
-      "tags_extra": [
-        "container",
-        "performance"
-      ],
-      "difficulty": "intermediate",
-      "char_count": 10108,
-      "classified_at": "2026-04-28T05:13:16.270583+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_reference_env-variables.md",
-      "title": "ROCm environment variables",
-      "source_url": "https://rocm.docs.amd.com/en/latest/reference/env-variables.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "tags_extra": [
-        "container",
-        "debugging",
-        "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 475270,
-      "classified_at": "2026-04-28T05:13:16.376095+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_reference_glossary_index.md",
-      "title": "404 - Page Not Found",
-      "source_url": "https://rocm.docs.amd.com/en/latest/reference/glossary/index.html",
+      "file": "content/raw/english/1924b759af2fd4d0.md",
+      "title": "HIP documentation",
+      "source_url": "https://rocm.docs.amd.com/projects/HIP/en/latest/index.html",
       "source_type": "official",
       "source_org": "amd",
       "credibility": 5,
@@ -1405,245 +1295,39 @@
         "docker"
       ],
       "tags_extra": [
-        "container"
-      ],
-      "difficulty": "beginner",
-      "char_count": 879,
-      "classified_at": "2026-04-28T05:13:16.376758+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_reference_gpu-arch-specs.md",
-      "title": "GPU hardware specifications",
-      "source_url": "https://rocm.docs.amd.com/en/latest/reference/gpu-arch-specs.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
         "docker",
-        "linux",
-        "windows"
-      ],
-      "gpu": [
-        "mi100",
-        "mi210",
-        "mi250",
-        "mi250x",
-        "mi300x",
-        "mi50",
-        "rx6800",
-        "rx6900",
-        "rx7900",
-        "rx7900xtx"
-      ],
-      "gpu_arch": [
-        "cdna2",
-        "cdna3",
-        "rdna2",
-        "rdna3"
-      ],
-      "tags_extra": [
-        "container"
-      ],
-      "difficulty": "advanced",
-      "char_count": 25695,
-      "classified_at": "2026-04-28T05:13:16.382133+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_reference_gpu-atomics-operation.md",
-      "title": "Hardware atomics operation support",
-      "source_url": "https://rocm.docs.amd.com/en/latest/reference/gpu-atomics-operation.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "gpu": [
-        "mi100",
-        "mi300x"
-      ],
-      "tags_extra": [
-        "container"
-      ],
-      "difficulty": "reference",
-      "char_count": 1300426,
-      "classified_at": "2026-04-28T05:13:16.726825+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_reference_graph-safe-support.md",
-      "title": "Graph-safe support for ROCm libraries",
-      "source_url": "https://rocm.docs.amd.com/en/latest/reference/graph-safe-support.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "tags_extra": [
-        "container",
-        "performance"
-      ],
-      "difficulty": "beginner",
-      "char_count": 7744,
-      "classified_at": "2026-04-28T05:13:16.729327+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_reference_precision-support.md",
-      "title": "Data types and precision support",
-      "source_url": "https://rocm.docs.amd.com/en/latest/reference/precision-support.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "gpu": [
-        "mi100",
-        "mi210",
-        "mi250",
-        "mi250x",
-        "mi300x",
-        "rx7900xtx"
-      ],
-      "gpu_arch": [
-        "cdna1",
-        "cdna2",
-        "cdna3",
-        "rdna2",
-        "rdna3"
-      ],
-      "tags_extra": [
-        "compatibility",
-        "container",
-        "performance"
-      ],
-      "difficulty": "reference",
-      "char_count": 88468,
-      "classified_at": "2026-04-28T05:13:16.745272+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_reference_rocm-tools.md",
-      "title": "ROCm tools, compilers, and runtime API",
-      "source_url": "https://rocm.docs.amd.com/en/latest/reference/rocm-tools.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux"
-      ],
-      "tags_extra": [
-        "container",
-        "debugging",
-        "performance"
-      ],
-      "difficulty": "intermediate",
-      "char_count": 8591,
-      "classified_at": "2026-04-28T05:13:16.747823+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_release_changelog.md",
-      "title": "ROCm consolidated changelog",
-      "source_url": "https://rocm.docs.amd.com/en/latest/release/changelog.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "gpu": [
-        "mi100",
-        "mi210",
-        "mi250",
-        "mi300x",
-        "mi50"
-      ],
-      "gpu_arch": [
-        "cdna3",
-        "rdna2",
-        "rdna3"
-      ],
-      "driver": [
-        "amdgpu-5.x",
-        "amdgpu-6.x"
-      ],
-      "frameworks": [
-        "jax",
-        "onnx",
-        "pytorch",
-        "tensorflow"
-      ],
-      "tags_extra": [
-        "compatibility",
-        "container",
-        "debugging",
+        "advanced",
         "install",
-        "performance"
-      ],
-      "difficulty": "advanced",
-      "char_count": 1114905,
-      "classified_at": "2026-04-28T05:13:16.912680+00:00"
-    },
-    {
-      "file": "content/raw/english/rocm_en_latest_release_versions.md",
-      "title": "ROCm release history",
-      "source_url": "https://rocm.docs.amd.com/en/latest/release/versions.html",
-      "source_type": "official",
-      "source_org": "amd",
-      "credibility": 5,
-      "lifecycle": "latest",
-      "os": [
-        "docker",
-        "linux",
-        "windows"
-      ],
-      "tags_extra": [
+        "performance",
         "container"
       ],
-      "difficulty": "beginner",
-      "char_count": 7838,
-      "classified_at": "2026-04-28T05:13:16.915359+00:00"
+      "difficulty": "advanced",
+      "char_count": 5612,
+      "classified_at": "2026-04-30T22:07:32.284057+00:00"
     },
     {
-      "file": "content/raw/english/rocm_en_latest_what-is-rocm.md",
-      "title": "What is ROCm?",
-      "source_url": "https://rocm.docs.amd.com/en/latest/what-is-rocm.html",
+      "file": "content/raw/english/eac0bbaf4a771626.md",
+      "title": "Porting CUDA code to HIP",
+      "source_url": "https://rocm.docs.amd.com/projects/HIP/en/latest/how-to/hip_porting_guide.html",
       "source_type": "official",
       "source_org": "amd",
       "credibility": 5,
       "lifecycle": "latest",
       "os": [
-        "docker",
-        "linux",
-        "windows"
+        "docker"
       ],
       "tags_extra": [
-        "container",
-        "debugging",
-        "performance"
+        "linux",
+        "docker",
+        "advanced",
+        "install",
+        "performance",
+        "container"
       ],
       "difficulty": "advanced",
-      "char_count": 27910,
-      "classified_at": "2026-04-28T05:13:16.923238+00:00"
+      "char_count": 63583,
+      "classified_at": "2026-04-30T22:07:32.283532+00:00"
     }
   ],
-  "stats": {
-    "total": 68,
-    "classified": 68,
-    "skipped": 0
-  }
+  "updated": "2026-04-30T22:07:37.194758+00:00"
 }
