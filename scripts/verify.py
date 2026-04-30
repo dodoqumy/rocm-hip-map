@@ -37,6 +37,49 @@ CONTENT_TRANSLATED_ZH = (PROJECT_ROOT / "content" / "translated" / "zh").resolve
 VERIFICATION_DIR = (PROJECT_ROOT / "data" / "verification").resolve()
 ARTICLES_JSON = (PROJECT_ROOT / "data" / "articles.json").resolve()
 
+
+def _find_translation_file(article_id: str) -> Path:
+    """Find Chinese translation file for given article_id.
+    
+    Tries multiple strategies:
+    1. Direct: article_id + "_zh.md"
+    2. Normalized: Try replacing common prefixes (hip_projects_HIP_, etc.) with "rocm_"
+    3. Glob search for any file ending with article_id suffix + "_zh.md"
+    """
+    # Strategy 1: Direct match with _zh suffix
+    zh_file = CONTENT_TRANSLATED_ZH / f"{article_id}_zh.md"
+    if zh_file.exists():
+        return zh_file
+    
+    # Strategy 2: Try normalized naming (replace project prefixes)
+    # e.g., "hip_projects_HIP_en_latest_xxx" -> "rocm_en_latest_xxx"
+    normalized = article_id
+    for prefix in ["hip_projects_HIP_", "hipify_projects_HIPIFY_", "rocm-install-linux_projects_install-on-linux_"]:
+        if normalized.startswith(prefix):
+            normalized = "rocm_" + normalized[len(prefix):]
+            break
+    
+    if normalized != article_id:
+        zh_file = CONTENT_TRANSLATED_ZH / f"{normalized}_zh.md"
+        if zh_file.exists():
+            return zh_file
+    
+    # Strategy 3: Glob search for any matching file
+    # Extract suffix after first "_en_" or similar pattern
+    pattern_suffixes = ["_en_", "_latest_"]
+    for suffix in pattern_suffixes:
+        if suffix in article_id:
+            parts = article_id.split(suffix)
+            if len(parts) > 1:
+                search_pattern = f"*{suffix}{parts[-1]}_zh.md"
+                matches = list(CONTENT_TRANSLATED_ZH.glob(search_pattern))
+                if matches:
+                    return matches[0]
+    
+    # Return empty path if not found
+    return Path("")
+
+
 # ── 翻译校验用 LLM 配置 ─────────────────────────────
 LLM_PROVIDER = os.environ.get("TRANSLATE_PROVIDER", "opencode")
 LLM_API_KEY = os.environ.get("TRANSLATE_API_KEY", "")
@@ -314,9 +357,10 @@ def check_issue_completeness(raw_md: str, article: dict) -> dict:
 
 def verify_article(article: dict) -> dict:
     """校验单篇文章，返回报告。"""
-    article_id = article.get("id", article.get("file", ""))
-    if article_id.endswith(".md"):
-        article_id = article_id[:-3]
+    # Extract article_id from "file" field - take the filename stem
+    file_path = article.get("file", "")
+    article_id = Path(file_path).stem  # e.g., "hip_projects_HIP_en_latest_how-to_hip_debugging"
+    
     source_url = article.get("source_url", "")
     title = article.get("title", "Untitled")
 
@@ -348,8 +392,9 @@ def verify_article(article: dict) -> dict:
         print("   📄 一致性: warn (本地存档不存在)")
 
     # ── 2. 翻译质量校验 ──
-    zh_file = CONTENT_TRANSLATED_ZH / f"{article_id}.md"
-    if zh_file.exists() and raw_file.exists():
+    # Try to find Chinese translation with _zh suffix
+    zh_file = _find_translation_file(article_id)
+    if zh_file.exists() and zh_file.is_file() and raw_file.exists():
         with open(raw_file) as f:
             src_content = f.read()
         with open(zh_file) as f:
@@ -361,6 +406,11 @@ def verify_article(article: dict) -> dict:
         if report["checks"]["translation_quality"]["issues"]:
             for issue in report["checks"]["translation_quality"]["issues"][:3]:
                 print(f"      ⚠ {issue}")
+    elif not raw_file.exists():
+        report["checks"]["translation_quality"] = {
+            "status": "skip", "score": 0, "notes": "无原文文件", "issues": []
+        }
+        print("   🌐 翻译: skip (无原文文件)")
     else:
         report["checks"]["translation_quality"] = {
             "status": "skip", "score": 0, "notes": "翻译暂未完成", "issues": []
@@ -487,8 +537,13 @@ def main():
     index = load_article_index()
 
     if args.id:
-        # 单篇模式
-        article = next((a for a in index if a.get("id") == args.id), None)
+        # 单篇模式 - match by file stem
+        target_stem = args.id
+        article = None
+        for a in index:
+            if Path(a.get("file", "")).stem == target_stem:
+                article = a
+                break
         if not article:
             print(f"❌ 文章 {args.id} 在索引中未找到")
             sys.exit(1)
