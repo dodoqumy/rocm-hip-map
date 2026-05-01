@@ -1,116 +1,1987 @@
 ---
 title: "ROCm consolidated changelog"
 source_url: "https://rocm.docs.amd.com/en/latest/release/changelog.html"
-source_type: official
-source_org: amd
+source_type: "official"
+source_org: "amd"
+original_lang: "en"
 credibility: 5
-lifecycle: latest
-fetched_at: 2026-05-01T06:58:14.873559+00:00
-content_hash: "0667d9003200ad35"
+lifecycle: "latest"
+synced_date: 2026-05-01
 ---
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-{#main-content .bd-main role="main"}
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#main-content .bd-main role="main"}
+::: sbt-scroll-pixel-helper
+:::
 
-sbt-scroll-pixel-helper
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-bd-content
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-bd-article-container
-:::::::
-{.bd-header-article .d-print-none}
-::::::
-{.header-article-items .header-article__inner}
-::
-header-article-items__start
-
-header-article-item
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: bd-content
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: bd-article-container
+:::::::::: {.bd-header-article .d-print-none}
+::::::::: {.header-article-items .header-article__inner}
+::::: header-article-items__start
+::: header-article-item
 []{.fa-solid .fa-angle-right}
+:::
 
-header-article-item
+::: header-article-item
+- [](../index.html){.nav-link aria-label="Home"}
+- ROCm\...
+:::
+:::::
 
-::
-
-::
-header-article-items__end
-:
-header-article-item
-
-article-header-buttons
+::::: header-article-items__end
+:::: header-article-item
+::: article-header-buttons
 []{.fa-solid .fa-list}
+:::
+::::
+:::::
+:::::::::
+::::::::::
 
-:
-::
-::::::
-:::::::
-
-{#jb-print-docs-body .onlyprint}
+:::::: {#jb-print-docs-body .onlyprint}
 # ROCm consolidated changelog
 
-::
-{#print-main-content}
-:
-{#jb-print-toc}
-
-{}
+::::: {#print-main-content}
+:::: {#jb-print-toc}
+::: {}
 ## Contents
+:::
 
-:
-::
+- [ROCm 7.2.1](#rocm-7-2-1){.reference .internal .nav-link}
+  - [**AMD SMI** (26.2.2)](#amd-smi-26-2-2){.reference .internal .nav-link}
+    - [Added](#added){.reference .internal .nav-link}
+    - [Resolved issues](#resolved-issues){.reference .internal .nav-link}
+  - [**HIP** (7.2.1)](#hip-7-2-1){.reference .internal .nav-link}
+    - [Resolved issues](#id1){.reference .internal .nav-link}
+    - [Changed](#changed){.reference .internal .nav-link}
+  - [**hipBLASLt** (1.2.2)](#hipblaslt-1-2-2){.reference .internal .nav-link}
+    - [Changed](#id2){.reference .internal .nav-link}
+  - [**rocDecode** (1.7.0)](#rocdecode-1-7-0){.reference .internal .nav-link}
+    - [Upcoming changes](#upcoming-changes){.reference .internal .nav-link}
+  - [**rocJPEG** (1.4.0)](#rocjpeg-1-4-0){.reference .internal .nav-link}
+    - [Changed](#id3){.reference .internal .nav-link}
+    - [Upcoming changes](#id4){.reference .internal .nav-link}
+  - [**rocSHMEM** (3.2.0)](#rocshmem-3-2-0){.reference .internal .nav-link}
+    - [Added](#id5){.reference .internal .nav-link}
+    - [Resolved issues](#id6){.reference .internal .nav-link}
+    - [Known issues](#known-issues){.reference .internal .nav-link}
+  - [**RPP** (2.2.1)](#rpp-2-2-1){.reference .internal .nav-link}
+    - [Added](#id7){.reference .internal .nav-link}
+    - [Optimized](#optimized){.reference .internal .nav-link}
+- [ROCm 7.2.0](#rocm-7-2-0){.reference .internal .nav-link}
+  - [**AMD SMI** (26.2.1)](#amd-smi-26-2-1){.reference .internal .nav-link}
+    - [Added](#id8){.reference .internal .nav-link}
+    - [Changed](#id9){.reference .internal .nav-link}
+    - [Resolved Issues](#id10){.reference .internal .nav-link}
+  - [**Composable Kernel** (1.2.0)](#composable-kernel-1-2-0){.reference .internal .nav-link}
+    - [Added](#id11){.reference .internal .nav-link}
+    - [Changed](#id12){.reference .internal .nav-link}
+    - [Upcoming changes](#id13){.reference .internal .nav-link}
+  - [**HIP** (7.2.0)](#hip-7-2-0){.reference .internal .nav-link}
+    - [Added](#id14){.reference .internal .nav-link}
+    - [Optimized](#id15){.reference .internal .nav-link}
+    - [Resolved issues](#id16){.reference .internal .nav-link}
+  - [**hipBLAS** (3.2.0)](#hipblas-3-2-0){.reference .internal .nav-link}
+    - [Resolved issues](#id17){.reference .internal .nav-link}
+  - [**hipBLASLt** (1.2.1)](#hipblaslt-1-2-1){.reference .internal .nav-link}
+    - [Added](#id18){.reference .internal .nav-link}
+    - [Resolved issues](#id19){.reference .internal .nav-link}
+  - [**hipCUB** (4.2.0)](#hipcub-4-2-0){.reference .internal .nav-link}
+    - [Added](#id20){.reference .internal .nav-link}
+    - [Resolved issues](#id21){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.22)](#hipfft-1-0-22){.reference .internal .nav-link}
+    - [Added](#id22){.reference .internal .nav-link}
+  - [**HIPIFY** (22.0.0)](#hipify-22-0-0){.reference .internal .nav-link}
+    - [Added](#id23){.reference .internal .nav-link}
+    - [Resolved issues](#id24){.reference .internal .nav-link}
+  - [**hipSOLVER** (3.2.0)](#hipsolver-3-2-0){.reference .internal .nav-link}
+    - [Added](#id25){.reference .internal .nav-link}
+  - [**hipSPARSE** (4.2.0)](#hipsparse-4-2-0){.reference .internal .nav-link}
+    - [Added](#id26){.reference .internal .nav-link}
+    - [Optimized](#id27){.reference .internal .nav-link}
+    - [Resolved Issues](#id28){.reference .internal .nav-link}
+  - [**hipSPARSELt** (0.2.6)](#hipsparselt-0-2-6){.reference .internal .nav-link}
+    - [Optimized](#id29){.reference .internal .nav-link}
+  - [**hipTensor** (2.2.0)](#hiptensor-2-2-0){.reference .internal .nav-link}
+    - [Added](#id30){.reference .internal .nav-link}
+    - [Changed](#id31){.reference .internal .nav-link}
+    - [Resolved issues](#id32){.reference .internal .nav-link}
+  - [**llvm-project** (22.0.0)](#llvm-project-22-0-0){.reference .internal .nav-link}
+    - [Added](#id33){.reference .internal .nav-link}
+    - [Changed](#id34){.reference .internal .nav-link}
+    - [Upcoming changes](#id35){.reference .internal .nav-link}
+  - [**MIGraphX** (2.15.0)](#migraphx-2-15-0){.reference .internal .nav-link}
+    - [Added](#id36){.reference .internal .nav-link}
+    - [Changed](#id37){.reference .internal .nav-link}
+    - [Optimized](#id38){.reference .internal .nav-link}
+    - [Resolved issues](#id39){.reference .internal .nav-link}
+  - [**MIOpen** (3.5.1)](#miopen-3-5-1){.reference .internal .nav-link}
+    - [Added](#id40){.reference .internal .nav-link}
+    - [Changed](#id41){.reference .internal .nav-link}
+    - [Optimized](#id42){.reference .internal .nav-link}
+    - [Resolved issues](#id43){.reference .internal .nav-link}
+  - [**MIVisionX** (3.5.0)](#mivisionx-3-5-0){.reference .internal .nav-link}
+    - [Changed](#id44){.reference .internal .nav-link}
+    - [Resolved issues](#id45){.reference .internal .nav-link}
+    - [Known issues](#id46){.reference .internal .nav-link}
+    - [Upcoming changes](#id47){.reference .internal .nav-link}
+  - [**RCCL** (2.27.7)](#rccl-2-27-7){.reference .internal .nav-link}
+    - [Changed](#id48){.reference .internal .nav-link}
+  - [**rocAL** (2.5.0)](#rocal-2-5-0){.reference .internal .nav-link}
+    - [Added](#id49){.reference .internal .nav-link}
+    - [Changed](#id50){.reference .internal .nav-link}
+    - [Resolved issues](#id51){.reference .internal .nav-link}
+    - [Known issues](#id52){.reference .internal .nav-link}
+  - [**rocALUTION** (4.1.0)](#rocalution-4-1-0){.reference .internal .nav-link}
+    - [Added](#id53){.reference .internal .nav-link}
+  - [**rocBLAS** (5.2.0)](#rocblas-5-2-0){.reference .internal .nav-link}
+    - [Added](#id54){.reference .internal .nav-link}
+    - [Optimized](#id55){.reference .internal .nav-link}
+    - [Resolved issues](#id56){.reference .internal .nav-link}
+  - [**rocDecode** (1.5.0)](#rocdecode-1-5-0){.reference .internal .nav-link}
+    - [Added](#id57){.reference .internal .nav-link}
+    - [Changed](#id58){.reference .internal .nav-link}
+    - [Resolved issues](#id59){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.36)](#rocfft-1-0-36){.reference .internal .nav-link}
+    - [Optimized](#id60){.reference .internal .nav-link}
+    - [Resolved issues](#id61){.reference .internal .nav-link}
+  - [**rocJPEG** (1.3.0)](#rocjpeg-1-3-0){.reference .internal .nav-link}
+    - [Changed](#id62){.reference .internal .nav-link}
+  - [**ROCm Bandwidth Test** (2.6.0)](#rocm-bandwidth-test-2-6-0){.reference .internal .nav-link}
+    - [Resolved issues](#id63){.reference .internal .nav-link}
+  - [**ROCm Compute Profiler** (3.4.0)](#rocm-compute-profiler-3-4-0){.reference .internal .nav-link}
+    - [Added](#id64){.reference .internal .nav-link}
+    - [Changed](#id65){.reference .internal .nav-link}
+    - [Removed](#removed){.reference .internal .nav-link}
+    - [Resolved issues](#id66){.reference .internal .nav-link}
+    - [Upcoming changes](#id67){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (1.3.0)](#rocm-systems-profiler-1-3-0){.reference .internal .nav-link}
+    - [Added](#id68){.reference .internal .nav-link}
+    - [Changed](#id69){.reference .internal .nav-link}
+    - [Resolved issues](#id70){.reference .internal .nav-link}
+  - [**rocPRIM** (4.2.0)](#rocprim-4-2-0){.reference .internal .nav-link}
+    - [Added](#id71){.reference .internal .nav-link}
+    - [Optimized](#id72){.reference .internal .nav-link}
+    - [Resolved issues](#id73){.reference .internal .nav-link}
+    - [Known issues](#id74){.reference .internal .nav-link}
+  - [**ROCprofiler-SDK** (1.1.0)](#rocprofiler-sdk-1-1-0){.reference .internal .nav-link}
+    - [Added](#id75){.reference .internal .nav-link}
+    - [Optimized](#id76){.reference .internal .nav-link}
+    - [Resolved issues](#id77){.reference .internal .nav-link}
+  - [**rocPyDecode** (0.8.0)](#rocpydecode-0-8-0){.reference .internal .nav-link}
+    - [Changed](#id78){.reference .internal .nav-link}
+  - [**rocRAND** (4.2.0)](#rocrand-4-2-0){.reference .internal .nav-link}
+    - [Added](#id79){.reference .internal .nav-link}
+    - [Changed](#id80){.reference .internal .nav-link}
+    - [Removed](#id81){.reference .internal .nav-link}
+  - [**rocSHMEM** (3.2.0)](#id82){.reference .internal .nav-link}
+    - [Added](#id83){.reference .internal .nav-link}
+    - [Changed](#id84){.reference .internal .nav-link}
+    - [Known issues](#id85){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.32.0)](#rocsolver-3-32-0){.reference .internal .nav-link}
+    - [Optimized](#id86){.reference .internal .nav-link}
+  - [**rocSPARSE** (4.2.0)](#rocsparse-4-2-0){.reference .internal .nav-link}
+    - [Added](#id87){.reference .internal .nav-link}
+    - [Changed](#id88){.reference .internal .nav-link}
+    - [Optimized](#id89){.reference .internal .nav-link}
+    - [Resolved issues](#id90){.reference .internal .nav-link}
+  - [**rocThrust** (4.2.0)](#rocthrust-4-2-0){.reference .internal .nav-link}
+    - [Added](#id91){.reference .internal .nav-link}
+  - [**rocWMMA** (2.2.0)](#rocwmma-2-2-0){.reference .internal .nav-link}
+    - [Added](#id92){.reference .internal .nav-link}
+    - [Changed](#id93){.reference .internal .nav-link}
+    - [Resolved issues](#id94){.reference .internal .nav-link}
+  - [**RPP** (2.2.0)](#rpp-2-2-0){.reference .internal .nav-link}
+    - [Added](#id95){.reference .internal .nav-link}
+    - [Changed](#id96){.reference .internal .nav-link}
+    - [Removed](#id97){.reference .internal .nav-link}
+    - [Resolved issues](#id98){.reference .internal .nav-link}
+  - [**Tensile** (4.45.0)](#tensile-4-45-0){.reference .internal .nav-link}
+    - [Removed](#id99){.reference .internal .nav-link}
+- [ROCm 7.1.1](#rocm-7-1-1){.reference .internal .nav-link}
+  - [**AMD SMI** (26.2.0)](#amd-smi-26-2-0){.reference .internal .nav-link}
+    - [Added](#id100){.reference .internal .nav-link}
+    - [Changed](#id101){.reference .internal .nav-link}
+    - [Resolved issues](#id102){.reference .internal .nav-link}
+  - [**Composable Kernel** (1.1.0)](#composable-kernel-1-1-0){.reference .internal .nav-link}
+    - [Upcoming changes](#id103){.reference .internal .nav-link}
+  - [**HIP** (7.1.1)](#hip-7-1-1){.reference .internal .nav-link}
+    - [Added](#id104){.reference .internal .nav-link}
+    - [Resolved issues](#id105){.reference .internal .nav-link}
+  - [**MIGraphX** (2.14.0)](#migraphx-2-14-0){.reference .internal .nav-link}
+    - [Resolved issues](#id106){.reference .internal .nav-link}
+  - [**RCCL** (2.27.7)](#id107){.reference .internal .nav-link}
+    - [Resolved issues](#id108){.reference .internal .nav-link}
+  - [**rocBLAS** (5.1.1)](#rocblas-5-1-1){.reference .internal .nav-link}
+    - [Changed](#id109){.reference .internal .nav-link}
+  - [**ROCm Bandwidth Test** (2.6.0)](#id110){.reference .internal .nav-link}
+    - [Resolved issues](#id111){.reference .internal .nav-link}
+    - [Known issues](#id112){.reference .internal .nav-link}
+  - [**ROCm Compute Profiler** (3.3.1)](#rocm-compute-profiler-3-3-1){.reference .internal .nav-link}
+    - [Added](#id113){.reference .internal .nav-link}
+    - [Changed](#id114){.reference .internal .nav-link}
+    - [Optimized](#id115){.reference .internal .nav-link}
+    - [Resolved issues](#id116){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (1.2.1)](#rocm-systems-profiler-1-2-1){.reference .internal .nav-link}
+    - [Resolved issues](#id117){.reference .internal .nav-link}
+  - [**ROCm Validation Suite** (1.3.0)](#rocm-validation-suite-1-3-0){.reference .internal .nav-link}
+    - [Added](#id118){.reference .internal .nav-link}
+  - [**rocSHMEM** (3.1.0)](#rocshmem-3-1-0){.reference .internal .nav-link}
+    - [Added](#id119){.reference .internal .nav-link}
+    - [Changed](#id120){.reference .internal .nav-link}
+    - [Removed](#id121){.reference .internal .nav-link}
+    - [Known issues](#id122){.reference .internal .nav-link}
+  - [**rocWMMA** (2.1.0)](#rocwmma-2-1-0){.reference .internal .nav-link}
+    - [Added](#id123){.reference .internal .nav-link}
+    - [Changed](#id124){.reference .internal .nav-link}
+    - [Removed](#id125){.reference .internal .nav-link}
+    - [Resolved issues](#id126){.reference .internal .nav-link}
+- [ROCm 7.1.0](#rocm-7-1-0){.reference .internal .nav-link}
+  - [**AMD SMI** (26.1.0)](#amd-smi-26-1-0){.reference .internal .nav-link}
+    - [Added](#id127){.reference .internal .nav-link}
+    - [Changed](#id128){.reference .internal .nav-link}
+    - [Optimized](#id129){.reference .internal .nav-link}
+    - [Resolved issues](#id130){.reference .internal .nav-link}
+  - [**Composable Kernel** (1.1.0)](#id131){.reference .internal .nav-link}
+    - [Added](#id132){.reference .internal .nav-link}
+    - [Upcoming changes](#id133){.reference .internal .nav-link}
+  - [**HIP** (7.1.0)](#hip-7-1-0){.reference .internal .nav-link}
+    - [Added](#id134){.reference .internal .nav-link}
+    - [Optimized](#id135){.reference .internal .nav-link}
+    - [Resolved issues](#id136){.reference .internal .nav-link}
+    - [Known issues](#id137){.reference .internal .nav-link}
+  - [**hipBLAS** (3.1.0)](#hipblas-3-1-0){.reference .internal .nav-link}
+    - [Added](#id138){.reference .internal .nav-link}
+    - [Changed](#id139){.reference .internal .nav-link}
+  - [**hipBLASLt** (1.1.0)](#hipblaslt-1-1-0){.reference .internal .nav-link}
+    - [Added](#id140){.reference .internal .nav-link}
+    - [Changed](#id141){.reference .internal .nav-link}
+    - [Optimized](#id142){.reference .internal .nav-link}
+    - [Resolved issues](#id143){.reference .internal .nav-link}
+  - [**hipCUB** (4.1.0)](#hipcub-4-1-0){.reference .internal .nav-link}
+    - [Added](#id144){.reference .internal .nav-link}
+    - [Changed](#id145){.reference .internal .nav-link}
+    - [Removed](#id146){.reference .internal .nav-link}
+    - [Known issues](#id147){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.21)](#hipfft-1-0-21){.reference .internal .nav-link}
+    - [Added](#id148){.reference .internal .nav-link}
+  - [**hipfort** (0.7.1)](#hipfort-0-7-1){.reference .internal .nav-link}
+    - [Added](#id149){.reference .internal .nav-link}
+    - [Resolved issues](#id150){.reference .internal .nav-link}
+  - [**hipRAND** (3.1.0)](#hiprand-3-1-0){.reference .internal .nav-link}
+    - [Resolved issues](#id151){.reference .internal .nav-link}
+  - [**hipSOLVER** (3.1.0)](#hipsolver-3-1-0){.reference .internal .nav-link}
+    - [Added](#id152){.reference .internal .nav-link}
+    - [Changed](#id153){.reference .internal .nav-link}
+  - [**hipSPARSE** (4.1.0)](#hipsparse-4-1-0){.reference .internal .nav-link}
+    - [Added](#id154){.reference .internal .nav-link}
+  - [**hipSPARSELt** (0.2.5)](#hipsparselt-0-2-5){.reference .internal .nav-link}
+    - [Changed](#id155){.reference .internal .nav-link}
+    - [Optimized](#id156){.reference .internal .nav-link}
+  - [**MIGraphX** (2.14.0)](#id157){.reference .internal .nav-link}
+    - [Added](#id158){.reference .internal .nav-link}
+    - [Changed](#id159){.reference .internal .nav-link}
+    - [Removed](#id160){.reference .internal .nav-link}
+    - [Optimized](#id161){.reference .internal .nav-link}
+    - [Resolved issues](#id162){.reference .internal .nav-link}
+  - [**MIOpen** (3.5.1)](#id163){.reference .internal .nav-link}
+    - [Added](#id164){.reference .internal .nav-link}
+    - [Changed](#id165){.reference .internal .nav-link}
+    - [Optimized](#id166){.reference .internal .nav-link}
+    - [Resolved issues](#id167){.reference .internal .nav-link}
+  - [**MIVisionX** (3.4.0)](#mivisionx-3-4-0){.reference .internal .nav-link}
+    - [Added](#id168){.reference .internal .nav-link}
+    - [Changed](#id169){.reference .internal .nav-link}
+    - [Resolved issues](#id170){.reference .internal .nav-link}
+    - [Known issues](#id171){.reference .internal .nav-link}
+    - [Upcoming changes](#id172){.reference .internal .nav-link}
+  - [**RCCL** (2.27.7)](#id173){.reference .internal .nav-link}
+    - [Added](#id174){.reference .internal .nav-link}
+    - [Changed](#id175){.reference .internal .nav-link}
+    - [Optimized](#id176){.reference .internal .nav-link}
+    - [Known issues](#id177){.reference .internal .nav-link}
+  - [**rocAL** (2.4.0)](#rocal-2-4-0){.reference .internal .nav-link}
+    - [Added](#id178){.reference .internal .nav-link}
+    - [Changed](#id179){.reference .internal .nav-link}
+    - [Resolved issues](#id180){.reference .internal .nav-link}
+    - [Known issues](#id181){.reference .internal .nav-link}
+  - [**rocALUTION** (4.0.1)](#rocalution-4-0-1){.reference .internal .nav-link}
+    - [Added](#id182){.reference .internal .nav-link}
+    - [Changed](#id183){.reference .internal .nav-link}
+    - [Optimized](#id184){.reference .internal .nav-link}
+    - [Resolved issues](#id185){.reference .internal .nav-link}
+  - [**rocBLAS** (5.1.0)](#rocblas-5-1-0){.reference .internal .nav-link}
+    - [Added](#id186){.reference .internal .nav-link}
+    - [Changed](#id187){.reference .internal .nav-link}
+    - [Optimized](#id188){.reference .internal .nav-link}
+  - [**ROCdbgapi** (0.77.4)](#rocdbgapi-0-77-4){.reference .internal .nav-link}
+    - [Added](#id189){.reference .internal .nav-link}
+  - [**rocDecode** (1.4.0)](#rocdecode-1-4-0){.reference .internal .nav-link}
+    - [Added](#id190){.reference .internal .nav-link}
+    - [Resolved issues](#id191){.reference .internal .nav-link}
+    - [Changed](#id192){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.35)](#rocfft-1-0-35){.reference .internal .nav-link}
+    - [Optimized](#id193){.reference .internal .nav-link}
+  - [**rocJPEG** (1.2.0)](#rocjpeg-1-2-0){.reference .internal .nav-link}
+    - [Changed](#id194){.reference .internal .nav-link}
+    - [Resolved issues](#id195){.reference .internal .nav-link}
+  - [**ROCm Compute Profiler** (3.3.0)](#rocm-compute-profiler-3-3-0){.reference .internal .nav-link}
+    - [Added](#id196){.reference .internal .nav-link}
+    - [Changed](#id197){.reference .internal .nav-link}
+    - [Removed](#id198){.reference .internal .nav-link}
+    - [Optimized](#id199){.reference .internal .nav-link}
+    - [Resolved issues](#id200){.reference .internal .nav-link}
+    - [Known issues](#id201){.reference .internal .nav-link}
+  - [**ROCm Data Center Tool** (1.2.0)](#rocm-data-center-tool-1-2-0){.reference .internal .nav-link}
+    - [Added](#id202){.reference .internal .nav-link}
+    - [Optimized](#id203){.reference .internal .nav-link}
+    - [Resolved issues](#id204){.reference .internal .nav-link}
+  - [**ROCm Debugger (ROCgdb)** (16.3)](#rocm-debugger-rocgdb-16-3){.reference .internal .nav-link}
+    - [Added](#id205){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (1.2.0)](#rocm-systems-profiler-1-2-0){.reference .internal .nav-link}
+    - [Added](#id206){.reference .internal .nav-link}
+    - [Changed](#id207){.reference .internal .nav-link}
+    - [Known issues](#id208){.reference .internal .nav-link}
+  - [**rocPRIM** (4.1.0)](#rocprim-4-1-0){.reference .internal .nav-link}
+    - [Added](#id209){.reference .internal .nav-link}
+    - [Changed](#id210){.reference .internal .nav-link}
+    - [Optimized](#id211){.reference .internal .nav-link}
+    - [Resolved issues](#id212){.reference .internal .nav-link}
+    - [Upcoming changes](#id213){.reference .internal .nav-link}
+  - [**ROCProfiler** (2.0.0)](#rocprofiler-2-0-0){.reference .internal .nav-link}
+    - [Removed](#id214){.reference .internal .nav-link}
+  - [**ROCprofiler-SDK** (1.0.0)](#rocprofiler-sdk-1-0-0){.reference .internal .nav-link}
+    - [Added](#id215){.reference .internal .nav-link}
+    - [Optimized](#id216){.reference .internal .nav-link}
+  - [**rocPyDecode** (0.7.0)](#rocpydecode-0-7-0){.reference .internal .nav-link}
+    - [Added](#id217){.reference .internal .nav-link}
+    - [Changed](#id218){.reference .internal .nav-link}
+    - [Resolved issues](#id219){.reference .internal .nav-link}
+  - [**rocRAND** (4.1.0)](#rocrand-4-1-0){.reference .internal .nav-link}
+    - [Changed](#id220){.reference .internal .nav-link}
+    - [Resolved issues](#id221){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.31.0)](#rocsolver-3-31-0){.reference .internal .nav-link}
+    - [Optimized](#id222){.reference .internal .nav-link}
+  - [**rocSPARSE** (4.1.0)](#rocsparse-4-1-0){.reference .internal .nav-link}
+    - [Added](#id223){.reference .internal .nav-link}
+    - [Optimized](#id224){.reference .internal .nav-link}
+    - [Upcoming changes](#id225){.reference .internal .nav-link}
+  - [**rocThrust** (4.1.0)](#rocthrust-4-1-0){.reference .internal .nav-link}
+    - [Added](#id226){.reference .internal .nav-link}
+    - [Changed](#id227){.reference .internal .nav-link}
+    - [Removed](#id228){.reference .internal .nav-link}
+    - [Known issues](#id229){.reference .internal .nav-link}
+  - [**RPP** (2.1.0)](#rpp-2-1-0){.reference .internal .nav-link}
+    - [Added](#id230){.reference .internal .nav-link}
+    - [Changed](#id231){.reference .internal .nav-link}
+    - [Removed](#id232){.reference .internal .nav-link}
+    - [Resolved issues](#id233){.reference .internal .nav-link}
+- [ROCm 7.0.2](#rocm-7-0-2){.reference .internal .nav-link}
+  - [**AMD SMI** (26.0.2)](#amd-smi-26-0-2){.reference .internal .nav-link}
+    - [Added](#id234){.reference .internal .nav-link}
+    - [Removed](#id235){.reference .internal .nav-link}
+    - [Resolved Issues](#id236){.reference .internal .nav-link}
+  - [**HIP** (7.0.2)](#hip-7-0-2){.reference .internal .nav-link}
+    - [Added](#id237){.reference .internal .nav-link}
+    - [Resolved issues](#id238){.reference .internal .nav-link}
+  - [**hipBLAS** (3.0.2)](#hipblas-3-0-2){.reference .internal .nav-link}
+    - [Added](#id239){.reference .internal .nav-link}
+  - [**RCCL** (2.26.6)](#rccl-2-26-6){.reference .internal .nav-link}
+    - [Added](#id240){.reference .internal .nav-link}
+  - [**rocBLAS** (5.0.2)](#rocblas-5-0-2){.reference .internal .nav-link}
+    - [Added](#id241){.reference .internal .nav-link}
+    - [Resolved issues](#id242){.reference .internal .nav-link}
+  - [**ROCdbgapi** (0.77.4)](#id243){.reference .internal .nav-link}
+    - [Added](#id244){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (1.1.1)](#rocm-systems-profiler-1-1-1){.reference .internal .nav-link}
+    - [Resolved issues](#id245){.reference .internal .nav-link}
+  - [**rocPRIM** (4.0.1)](#rocprim-4-0-1){.reference .internal .nav-link}
+    - [Resolved issues](#id246){.reference .internal .nav-link}
+  - [**rocSPARSE** (4.0.3)](#rocsparse-4-0-3){.reference .internal .nav-link}
+    - [Resolved issues](#id247){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.30.1)](#rocsolver-3-30-1){.reference .internal .nav-link}
+    - [Optimized](#id248){.reference .internal .nav-link}
+- [ROCm 7.0.1](#rocm-7-0-1){.reference .internal .nav-link}
+- [ROCm 7.0.0](#rocm-7-0-0){.reference .internal .nav-link}
+  - [**AMD SMI** (26.0.0)](#amd-smi-26-0-0){.reference .internal .nav-link}
+    - [Added](#id249){.reference .internal .nav-link}
+    - [Changed](#id250){.reference .internal .nav-link}
+    - [Removed](#id251){.reference .internal .nav-link}
+    - [Optimized](#id252){.reference .internal .nav-link}
+    - [Resolved issues](#id253){.reference .internal .nav-link}
+    - [Known issues](#id254){.reference .internal .nav-link}
+  - [**Composable Kernel** (1.1.0)](#id255){.reference .internal .nav-link}
+    - [Added](#id256){.reference .internal .nav-link}
+    - [Changed](#id257){.reference .internal .nav-link}
+    - [Removed](#id258){.reference .internal .nav-link}
+    - [Optimized](#id259){.reference .internal .nav-link}
+  - [**HIP** 7.0.0](#hip-7-0-0){.reference .internal .nav-link}
+    - [Added](#id260){.reference .internal .nav-link}
+    - [Changed](#id261){.reference .internal .nav-link}
+    - [Optimized](#id262){.reference .internal .nav-link}
+    - [Resolved issues](#id263){.reference .internal .nav-link}
+    - [Known issues](#id264){.reference .internal .nav-link}
+  - [**hipBLAS** (3.0.0)](#hipblas-3-0-0){.reference .internal .nav-link}
+    - [Added](#id265){.reference .internal .nav-link}
+    - [Changed](#id266){.reference .internal .nav-link}
+    - [Removed](#id267){.reference .internal .nav-link}
+    - [Resolved issues](#id268){.reference .internal .nav-link}
+  - [**hipBLASLt** (1.0.0)](#hipblaslt-1-0-0){.reference .internal .nav-link}
+    - [Added](#id269){.reference .internal .nav-link}
+    - [Changed](#id270){.reference .internal .nav-link}
+    - [Removed](#id271){.reference .internal .nav-link}
+    - [Optimized](#id272){.reference .internal .nav-link}
+    - [Upcoming changes](#id273){.reference .internal .nav-link}
+  - [**hipCUB** (4.0.0)](#hipcub-4-0-0){.reference .internal .nav-link}
+    - [Added](#id274){.reference .internal .nav-link}
+    - [Changed](#id275){.reference .internal .nav-link}
+    - [Removed](#id276){.reference .internal .nav-link}
+    - [Resolved issues](#id277){.reference .internal .nav-link}
+    - [Known issues](#id278){.reference .internal .nav-link}
+    - [Upcoming changes](#id279){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.20)](#hipfft-1-0-20){.reference .internal .nav-link}
+    - [Added](#id280){.reference .internal .nav-link}
+    - [Removed](#id281){.reference .internal .nav-link}
+  - [**hipfort** (0.7.0)](#hipfort-0-7-0){.reference .internal .nav-link}
+    - [Added](#id282){.reference .internal .nav-link}
+    - [Changed](#id283){.reference .internal .nav-link}
+  - [**HIPIFY** (20.0.0)](#hipify-20-0-0){.reference .internal .nav-link}
+    - [Added](#id284){.reference .internal .nav-link}
+    - [Resolved issues](#id285){.reference .internal .nav-link}
+  - [**hipRAND** (3.0.0)](#hiprand-3-0-0){.reference .internal .nav-link}
+    - [Added](#id286){.reference .internal .nav-link}
+    - [Changed](#id287){.reference .internal .nav-link}
+    - [Removed](#id288){.reference .internal .nav-link}
+  - [**hipSOLVER** (3.0.0)](#hipsolver-3-0-0){.reference .internal .nav-link}
+    - [Added](#id289){.reference .internal .nav-link}
+    - [Resolved issues](#id290){.reference .internal .nav-link}
+  - [**hipSPARSE** (4.0.1)](#hipsparse-4-0-1){.reference .internal .nav-link}
+    - [Added](#id291){.reference .internal .nav-link}
+    - [Changed](#id292){.reference .internal .nav-link}
+    - [Resolved issues](#id293){.reference .internal .nav-link}
+    - [Known issues](#id294){.reference .internal .nav-link}
+  - [**hipSPARSELt** (0.2.4)](#hipsparselt-0-2-4){.reference .internal .nav-link}
+    - [Added](#id295){.reference .internal .nav-link}
+    - [Removed](#id296){.reference .internal .nav-link}
+    - [Optimized](#id297){.reference .internal .nav-link}
+  - [**hipTensor** (2.0.0)](#hiptensor-2-0-0){.reference .internal .nav-link}
+    - [Added](#id298){.reference .internal .nav-link}
+    - [Changed](#id299){.reference .internal .nav-link}
+  - [**llvm-project** (20.0.0)](#llvm-project-20-0-0){.reference .internal .nav-link}
+    - [Added](#id300){.reference .internal .nav-link}
+    - [Changed](#id301){.reference .internal .nav-link}
+    - [Optimized](#id302){.reference .internal .nav-link}
+    - [Upcoming changes](#id303){.reference .internal .nav-link}
+  - [**MIGraphX** (2.13.0)](#migraphx-2-13-0){.reference .internal .nav-link}
+    - [Added](#id304){.reference .internal .nav-link}
+    - [Changed](#id305){.reference .internal .nav-link}
+    - [Removed](#id306){.reference .internal .nav-link}
+    - [Optimized](#id307){.reference .internal .nav-link}
+    - [Resolved issues](#id308){.reference .internal .nav-link}
+  - [**MIOpen** (3.5.0)](#miopen-3-5-0){.reference .internal .nav-link}
+    - [Added](#id309){.reference .internal .nav-link}
+    - [Changed](#id310){.reference .internal .nav-link}
+    - [Optimized](#id311){.reference .internal .nav-link}
+    - [Resolved issues](#id312){.reference .internal .nav-link}
+  - [**MIVisionX** (3.3.0)](#mivisionx-3-3-0){.reference .internal .nav-link}
+    - [Added](#id313){.reference .internal .nav-link}
+    - [Changed](#id314){.reference .internal .nav-link}
+    - [Known issues](#id315){.reference .internal .nav-link}
+    - [Upcoming changes](#id316){.reference .internal .nav-link}
+  - [**RCCL** (2.26.6)](#id317){.reference .internal .nav-link}
+    - [Added](#id318){.reference .internal .nav-link}
+    - [Changed](#id319){.reference .internal .nav-link}
+    - [Optimized](#id320){.reference .internal .nav-link}
+    - [Resolved issues](#id321){.reference .internal .nav-link}
+  - [**rocAL** (2.3.0)](#rocal-2-3-0){.reference .internal .nav-link}
+    - [Added](#id322){.reference .internal .nav-link}
+    - [Resolved issues](#id323){.reference .internal .nav-link}
+    - [Known issues](#id324){.reference .internal .nav-link}
+    - [Upcoming changes](#id325){.reference .internal .nav-link}
+  - [**rocALUTION** (4.0.0)](#rocalution-4-0-0){.reference .internal .nav-link}
+    - [Added](#id326){.reference .internal .nav-link}
+    - [Changed](#id327){.reference .internal .nav-link}
+    - [Optimized](#id328){.reference .internal .nav-link}
+    - [Resolved issues](#id329){.reference .internal .nav-link}
+  - [**rocBLAS** (5.0.0)](#rocblas-5-0-0){.reference .internal .nav-link}
+    - [Added](#id330){.reference .internal .nav-link}
+    - [Changed](#id331){.reference .internal .nav-link}
+    - [Removed](#id332){.reference .internal .nav-link}
+    - [Optimized](#id333){.reference .internal .nav-link}
+    - [Resolved issues](#id334){.reference .internal .nav-link}
+    - [Upcoming changes](#id335){.reference .internal .nav-link}
+  - [**ROCdbgapi** (0.77.3)](#rocdbgapi-0-77-3){.reference .internal .nav-link}
+    - [Added](#id336){.reference .internal .nav-link}
+    - [Removed](#id337){.reference .internal .nav-link}
+  - [**rocDecode** (1.0.0)](#rocdecode-1-0-0){.reference .internal .nav-link}
+    - [Added](#id338){.reference .internal .nav-link}
+    - [Changed](#id339){.reference .internal .nav-link}
+    - [Removed](#id340){.reference .internal .nav-link}
+    - [Optimized](#id341){.reference .internal .nav-link}
+    - [Resolved issues](#id342){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.34)](#rocfft-1-0-34){.reference .internal .nav-link}
+    - [Added](#id343){.reference .internal .nav-link}
+    - [Removed](#id344){.reference .internal .nav-link}
+    - [Optimized](#id345){.reference .internal .nav-link}
+    - [Resolved issues](#id346){.reference .internal .nav-link}
+  - [**ROCgdb** (16.3)](#rocgdb-16-3){.reference .internal .nav-link}
+    - [Added](#id347){.reference .internal .nav-link}
+    - [Removed](#id348){.reference .internal .nav-link}
+  - [**rocJPEG** (1.1.0)](#rocjpeg-1-1-0){.reference .internal .nav-link}
+    - [Added](#id349){.reference .internal .nav-link}
+    - [Changed](#id350){.reference .internal .nav-link}
+    - [Removed](#id351){.reference .internal .nav-link}
+    - [Resolved issues](#id352){.reference .internal .nav-link}
+  - [**ROCm Bandwidth Test** (2.6.0)](#id353){.reference .internal .nav-link}
+    - [Added](#id354){.reference .internal .nav-link}
+    - [Changed](#id355){.reference .internal .nav-link}
+    - [Removed](#id356){.reference .internal .nav-link}
+  - [**ROCm Compute Profiler** (3.2.3)](#rocm-compute-profiler-3-2-3){.reference .internal .nav-link}
+    - [Added](#id357){.reference .internal .nav-link}
+      - [CDNA4 (AMD Instinct MI350/MI355) support](#cdna4-amd-instinct-mi350-mi355-support){.reference .internal .nav-link}
+      - [Textual User Interface (TUI) (beta version)](#textual-user-interface-tui-beta-version){.reference .internal .nav-link}
+      - [PC Sampling (beta version)](#pc-sampling-beta-version){.reference .internal .nav-link}
+      - [Roofline](#roofline){.reference .internal .nav-link}
+      - [rocprofv3 support](#rocprofv3-support){.reference .internal .nav-link}
+      - [Others](#others){.reference .internal .nav-link}
+    - [Changed](#id358){.reference .internal .nav-link}
+    - [Removed](#id359){.reference .internal .nav-link}
+    - [Optimized](#id360){.reference .internal .nav-link}
+    - [Resolved issues](#id361){.reference .internal .nav-link}
+    - [Known issues](#id362){.reference .internal .nav-link}
+    - [Upcoming changes](#id363){.reference .internal .nav-link}
+  - [**ROCm Data Center Tool** (1.1.0)](#rocm-data-center-tool-1-1-0){.reference .internal .nav-link}
+    - [Added](#id364){.reference .internal .nav-link}
+    - [Changed](#id365){.reference .internal .nav-link}
+    - [Optimized](#id366){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.8.0)](#rocm-smi-7-8-0){.reference .internal .nav-link}
+    - [Added](#id367){.reference .internal .nav-link}
+    - [Removed](#id368){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (1.1.0)](#rocm-systems-profiler-1-1-0){.reference .internal .nav-link}
+    - [Added](#id369){.reference .internal .nav-link}
+    - [Changed](#id370){.reference .internal .nav-link}
+    - [Resolved issues](#id371){.reference .internal .nav-link}
+  - [**ROCm Validation Suite** (1.2.0)](#rocm-validation-suite-1-2-0){.reference .internal .nav-link}
+    - [Added](#id372){.reference .internal .nav-link}
+    - [Changed](#id373){.reference .internal .nav-link}
+  - [**rocPRIM** (4.0.0)](#rocprim-4-0-0){.reference .internal .nav-link}
+    - [Added](#id374){.reference .internal .nav-link}
+    - [Changed](#id375){.reference .internal .nav-link}
+    - [Removed](#id376){.reference .internal .nav-link}
+    - [Optimized](#id377){.reference .internal .nav-link}
+    - [Resolved issues](#id378){.reference .internal .nav-link}
+    - [Known issues](#id379){.reference .internal .nav-link}
+    - [Upcoming changes](#id380){.reference .internal .nav-link}
+  - [**ROCprofiler-SDK** (1.0.0)](#id381){.reference .internal .nav-link}
+    - [Added](#id382){.reference .internal .nav-link}
+    - [Changed](#id383){.reference .internal .nav-link}
+      - [Removed](#id384){.reference .internal .nav-link}
+    - [Resolved issues](#id385){.reference .internal .nav-link}
+  - [**rocPyDecode** (0.6.0)](#rocpydecode-0-6-0){.reference .internal .nav-link}
+    - [Added](#id386){.reference .internal .nav-link}
+    - [Changed](#id387){.reference .internal .nav-link}
+  - [**rocRAND** (4.0.0)](#rocrand-4-0-0){.reference .internal .nav-link}
+    - [Added](#id388){.reference .internal .nav-link}
+    - [Changed](#id389){.reference .internal .nav-link}
+    - [Removed](#id390){.reference .internal .nav-link}
+    - [Resolved issues](#id391){.reference .internal .nav-link}
+    - [Upcoming changes](#id392){.reference .internal .nav-link}
+  - [**ROCr Debug Agent** (2.1.0)](#rocr-debug-agent-2-1-0){.reference .internal .nav-link}
+    - [Added](#id393){.reference .internal .nav-link}
+  - [**ROCr Runtime** (1.18.0)](#rocr-runtime-1-18-0){.reference .internal .nav-link}
+    - [Added](#id394){.reference .internal .nav-link}
+  - [**rocSHMEM** (3.0.0)](#rocshmem-3-0-0){.reference .internal .nav-link}
+    - [Added](#id395){.reference .internal .nav-link}
+    - [Changed](#id396){.reference .internal .nav-link}
+    - [Resolved issues](#id397){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.30.0)](#rocsolver-3-30-0){.reference .internal .nav-link}
+    - [Added](#id398){.reference .internal .nav-link}
+    - [Optimized](#id399){.reference .internal .nav-link}
+    - [Resolved issues](#id400){.reference .internal .nav-link}
+  - [**rocSPARSE** (4.0.2)](#rocsparse-4-0-2){.reference .internal .nav-link}
+    - [Added](#id401){.reference .internal .nav-link}
+    - [Changed](#id402){.reference .internal .nav-link}
+    - [Removed](#id403){.reference .internal .nav-link}
+    - [Optimized](#id404){.reference .internal .nav-link}
+    - [Resolved issues](#id405){.reference .internal .nav-link}
+    - [Upcoming changes](#id406){.reference .internal .nav-link}
+  - [**rocThrust** (4.0.0)](#rocthrust-4-0-0){.reference .internal .nav-link}
+    - [Added](#id407){.reference .internal .nav-link}
+    - [Changed](#id408){.reference .internal .nav-link}
+    - [Removed](#id409){.reference .internal .nav-link}
+    - [Resolved issues](#id410){.reference .internal .nav-link}
+    - [Known issues](#id411){.reference .internal .nav-link}
+    - [Upcoming changes](#id412){.reference .internal .nav-link}
+  - [**rocWMMA** (2.0.0)](#rocwmma-2-0-0){.reference .internal .nav-link}
+    - [Added](#id413){.reference .internal .nav-link}
+    - [Changed](#id414){.reference .internal .nav-link}
+    - [Removed](#id415){.reference .internal .nav-link}
+    - [Optimized](#id416){.reference .internal .nav-link}
+    - [Resolved issues](#id417){.reference .internal .nav-link}
+  - [**RPP** (2.0.0)](#rpp-2-0-0){.reference .internal .nav-link}
+    - [Added](#id418){.reference .internal .nav-link}
+    - [Changed](#id419){.reference .internal .nav-link}
+    - [Removed](#id420){.reference .internal .nav-link}
+    - [Resolved issues](#id421){.reference .internal .nav-link}
+  - [**Tensile** (4.44.0)](#tensile-4-44-0){.reference .internal .nav-link}
+    - [Added](#id422){.reference .internal .nav-link}
+    - [Changed](#id423){.reference .internal .nav-link}
+    - [Removed](#id424){.reference .internal .nav-link}
+    - [Resolved issues](#id425){.reference .internal .nav-link}
+- [ROCm 6.4.3](#rocm-6-4-3){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.7.0)](#rocm-smi-7-7-0){.reference .internal .nav-link}
+    - [Added](#id426){.reference .internal .nav-link}
+- [ROCm 6.4.2](#rocm-6-4-2){.reference .internal .nav-link}
+  - [**AMD SMI** (25.5.1)](#amd-smi-25-5-1){.reference .internal .nav-link}
+    - [Added](#id427){.reference .internal .nav-link}
+    - [Changed](#id428){.reference .internal .nav-link}
+    - [Resolved issues](#id429){.reference .internal .nav-link}
+  - [**HIP** (6.4.2)](#hip-6-4-2){.reference .internal .nav-link}
+    - [Added](#id430){.reference .internal .nav-link}
+    - [Optimized](#id431){.reference .internal .nav-link}
+    - [Resolved issues](#id432){.reference .internal .nav-link}
+  - [**hipBLASLt** (0.12.1)](#hipblaslt-0-12-1){.reference .internal .nav-link}
+    - [Added](#id433){.reference .internal .nav-link}
+  - [**RCCL** (2.22.3)](#rccl-2-22-3){.reference .internal .nav-link}
+    - [Added](#id434){.reference .internal .nav-link}
+  - [**rocBLAS** (4.4.1)](#rocblas-4-4-1){.reference .internal .nav-link}
+    - [Resolved issues](#id435){.reference .internal .nav-link}
+  - [**ROCm Compute Profiler** (3.1.1)](#rocm-compute-profiler-3-1-1){.reference .internal .nav-link}
+    - [Added](#id436){.reference .internal .nav-link}
+    - [Changed](#id437){.reference .internal .nav-link}
+    - [Resolved issues](#id438){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (1.0.2)](#rocm-systems-profiler-1-0-2){.reference .internal .nav-link}
+    - [Optimized](#id439){.reference .internal .nav-link}
+    - [Resolved issues](#id440){.reference .internal .nav-link}
+  - [**ROCm Validation Suite** (1.1.0)](#rocm-validation-suite-1-1-0){.reference .internal .nav-link}
+    - [Added](#id441){.reference .internal .nav-link}
+  - [**rocPRIM** (3.4.1)](#rocprim-3-4-1){.reference .internal .nav-link}
+    - [Upcoming changes](#id442){.reference .internal .nav-link}
+  - [**rocSHMEM** (2.0.1)](#rocshmem-2-0-1){.reference .internal .nav-link}
+    - [Resolved issues](#id443){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.28.2)](#rocsolver-3-28-2){.reference .internal .nav-link}
+    - [Added](#id444){.reference .internal .nav-link}
+    - [Optimized](#id445){.reference .internal .nav-link}
+- [ROCm 6.4.1](#rocm-6-4-1){.reference .internal .nav-link}
+  - [**AMD SMI** (25.4.2)](#amd-smi-25-4-2){.reference .internal .nav-link}
+    - [Added](#id446){.reference .internal .nav-link}
+    - [Changed](#id447){.reference .internal .nav-link}
+    - [Optimized](#id448){.reference .internal .nav-link}
+    - [Resolved issues](#id449){.reference .internal .nav-link}
+    - [Known issues](#id450){.reference .internal .nav-link}
+  - [**HIP** (6.4.1)](#hip-6-4-1){.reference .internal .nav-link}
+    - [Added](#id451){.reference .internal .nav-link}
+    - [Changed](#id452){.reference .internal .nav-link}
+    - [Optimized](#id453){.reference .internal .nav-link}
+    - [Resolved issues](#id454){.reference .internal .nav-link}
+  - [**hipBLASLt** (0.12.1)](#id455){.reference .internal .nav-link}
+    - [Resolved issues](#id456){.reference .internal .nav-link}
+  - [**RCCL** (2.22.3)](#id457){.reference .internal .nav-link}
+    - [Changed](#id458){.reference .internal .nav-link}
+    - [Resolved issues](#id459){.reference .internal .nav-link}
+    - [Known issues](#id460){.reference .internal .nav-link}
+  - [**rocALUTION** (3.2.3)](#rocalution-3-2-3){.reference .internal .nav-link}
+    - [Added](#id461){.reference .internal .nav-link}
+    - [Resolved issues](#id462){.reference .internal .nav-link}
+  - [**ROCm Data Center Tool** (0.3.0)](#rocm-data-center-tool-0-3-0){.reference .internal .nav-link}
+    - [Added](#id463){.reference .internal .nav-link}
+    - [Changed](#id464){.reference .internal .nav-link}
+    - [Resolved issues](#id465){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.5.0)](#rocm-smi-7-5-0){.reference .internal .nav-link}
+    - [Resolved issues](#id466){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (1.0.1)](#rocm-systems-profiler-1-0-1){.reference .internal .nav-link}
+    - [Added](#id467){.reference .internal .nav-link}
+    - [Resolved issues](#id468){.reference .internal .nav-link}
+  - [**ROCr Runtime** (1.15.0)](#rocr-runtime-1-15-0){.reference .internal .nav-link}
+    - [Resolved issues](#id469){.reference .internal .nav-link}
+- [ROCm 6.4.0](#rocm-6-4-0){.reference .internal .nav-link}
+  - [**AMD SMI** (25.3.0)](#amd-smi-25-3-0){.reference .internal .nav-link}
+    - [Added](#id470){.reference .internal .nav-link}
+    - [Changed](#id471){.reference .internal .nav-link}
+    - [Removed](#id472){.reference .internal .nav-link}
+    - [Optimized](#id473){.reference .internal .nav-link}
+    - [Resolved issues](#id474){.reference .internal .nav-link}
+    - [Known issues](#id475){.reference .internal .nav-link}
+    - [Upcoming changes](#id476){.reference .internal .nav-link}
+  - [**AMDMIGraphX** (2.12.0)](#amdmigraphx-2-12-0){.reference .internal .nav-link}
+    - [Added](#id477){.reference .internal .nav-link}
+    - [Changed](#id478){.reference .internal .nav-link}
+    - [Removed](#id479){.reference .internal .nav-link}
+    - [Optimized](#id480){.reference .internal .nav-link}
+    - [Resolved issues](#id481){.reference .internal .nav-link}
+  - [**Composable Kernel** (1.1.0)](#id482){.reference .internal .nav-link}
+    - [Added](#id483){.reference .internal .nav-link}
+    - [Changed](#id484){.reference .internal .nav-link}
+    - [Removed](#id485){.reference .internal .nav-link}
+    - [Optimized](#id486){.reference .internal .nav-link}
+    - [Resolved issues](#id487){.reference .internal .nav-link}
+  - [**HIP** (6.4.0)](#hip-6-4-0){.reference .internal .nav-link}
+    - [Added](#id488){.reference .internal .nav-link}
+    - [Changed](#id489){.reference .internal .nav-link}
+    - [Optimized](#id490){.reference .internal .nav-link}
+    - [Resolved issues](#id491){.reference .internal .nav-link}
+    - [Upcoming changes](#id492){.reference .internal .nav-link}
+  - [**hipBLAS** (2.4.0)](#hipblas-2-4-0){.reference .internal .nav-link}
+    - [Changed](#id493){.reference .internal .nav-link}
+    - [Resolved issues](#id494){.reference .internal .nav-link}
+  - [**hipBLASLt** (0.12.0)](#hipblaslt-0-12-0){.reference .internal .nav-link}
+    - [Added](#id495){.reference .internal .nav-link}
+    - [Changed](#id496){.reference .internal .nav-link}
+    - [Optimized](#id497){.reference .internal .nav-link}
+    - [Resolved issues](#id498){.reference .internal .nav-link}
+  - [**hipCUB** (3.4.0)](#hipcub-3-4-0){.reference .internal .nav-link}
+    - [Added](#id499){.reference .internal .nav-link}
+    - [Changed](#id500){.reference .internal .nav-link}
+    - [Known issues](#id501){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.18)](#hipfft-1-0-18){.reference .internal .nav-link}
+    - [Added](#id502){.reference .internal .nav-link}
+    - [Changed](#id503){.reference .internal .nav-link}
+    - [Resolved issues](#id504){.reference .internal .nav-link}
+  - [**hipfort** (0.6.0)](#hipfort-0-6-0){.reference .internal .nav-link}
+    - [Upcoming changes](#id505){.reference .internal .nav-link}
+  - [**HIPIFY** (19.0.0)](#hipify-19-0-0){.reference .internal .nav-link}
+    - [Added](#id506){.reference .internal .nav-link}
+    - [Resolved issues](#id507){.reference .internal .nav-link}
+    - [Known issues](#id508){.reference .internal .nav-link}
+  - [**hipRAND** (2.12.0)](#hiprand-2-12-0){.reference .internal .nav-link}
+    - [Changed](#id509){.reference .internal .nav-link}
+    - [Resolved issues](#id510){.reference .internal .nav-link}
+  - [**hipSOLVER** (2.4.0)](#hipsolver-2-4-0){.reference .internal .nav-link}
+    - [Added](#id511){.reference .internal .nav-link}
+  - [**hipSPARSE** (3.2.0)](#hipsparse-3-2-0){.reference .internal .nav-link}
+    - [Added](#id512){.reference .internal .nav-link}
+    - [Optimized](#id513){.reference .internal .nav-link}
+  - [**hipSPARSELt** (0.2.3)](#hipsparselt-0-2-3){.reference .internal .nav-link}
+    - [Added](#id514){.reference .internal .nav-link}
+    - [Changed](#id515){.reference .internal .nav-link}
+  - [**hipTensor** (1.5.0)](#hiptensor-1-5-0){.reference .internal .nav-link}
+    - [Added](#id516){.reference .internal .nav-link}
+    - [Changed](#id517){.reference .internal .nav-link}
+    - [Optimized](#id518){.reference .internal .nav-link}
+    - [Resolved issues](#id519){.reference .internal .nav-link}
+    - [Upcoming changes](#id520){.reference .internal .nav-link}
+  - [**llvm-project** (19.0.0)](#llvm-project-19-0-0){.reference .internal .nav-link}
+    - [Added](#id521){.reference .internal .nav-link}
+  - [**MIOpen** (3.4.0)](#miopen-3-4-0){.reference .internal .nav-link}
+    - [Added](#id522){.reference .internal .nav-link}
+    - [Optimized](#id523){.reference .internal .nav-link}
+    - [Resolved issues](#id524){.reference .internal .nav-link}
+  - [**MIVisionX** (3.2.0)](#mivisionx-3-2-0){.reference .internal .nav-link}
+    - [Changed](#id525){.reference .internal .nav-link}
+    - [Known issues](#id526){.reference .internal .nav-link}
+    - [Upcoming changes](#id527){.reference .internal .nav-link}
+  - [**rccl** (2.22.3)](#id528){.reference .internal .nav-link}
+    - [Added](#id529){.reference .internal .nav-link}
+    - [Changed](#id530){.reference .internal .nav-link}
+  - [**rocAL** (2.2.0)](#rocal-2-2-0){.reference .internal .nav-link}
+    - [Changed](#id531){.reference .internal .nav-link}
+    - [Known issues](#id532){.reference .internal .nav-link}
+  - [**rocALUTION** (3.2.2)](#rocalution-3-2-2){.reference .internal .nav-link}
+    - [Changed](#id533){.reference .internal .nav-link}
+  - [**rocBLAS** (4.4.0)](#rocblas-4-4-0){.reference .internal .nav-link}
+    - [Added](#id534){.reference .internal .nav-link}
+    - [Changed](#id535){.reference .internal .nav-link}
+    - [Optimized](#id536){.reference .internal .nav-link}
+    - [Resolved issues](#id537){.reference .internal .nav-link}
+    - [Upcoming changes](#id538){.reference .internal .nav-link}
+  - [**ROCdbgapi** (0.77.2)](#rocdbgapi-0-77-2){.reference .internal .nav-link}
+    - [Added](#id539){.reference .internal .nav-link}
+    - [Changed](#id540){.reference .internal .nav-link}
+  - [**rocDecode** (0.10.0)](#rocdecode-0-10-0){.reference .internal .nav-link}
+    - [Added](#id541){.reference .internal .nav-link}
+    - [Changed](#id542){.reference .internal .nav-link}
+    - [Removed](#id543){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.32)](#rocfft-1-0-32){.reference .internal .nav-link}
+    - [Changed](#id544){.reference .internal .nav-link}
+    - [Removed](#id545){.reference .internal .nav-link}
+    - [Optimized](#id546){.reference .internal .nav-link}
+    - [Resolved issues](#id547){.reference .internal .nav-link}
+  - [**ROCm Compute Profiler** (3.1.0)](#rocm-compute-profiler-3-1-0){.reference .internal .nav-link}
+    - [Added](#id548){.reference .internal .nav-link}
+    - [Resolved issues](#id549){.reference .internal .nav-link}
+  - [**ROCgdb** (15.2)](#rocgdb-15-2){.reference .internal .nav-link}
+    - [Added](#id550){.reference .internal .nav-link}
+  - [**ROCm Data Center Tool** (0.3.0)](#id551){.reference .internal .nav-link}
+    - [Added](#id552){.reference .internal .nav-link}
+    - [Changed](#id553){.reference .internal .nav-link}
+    - [Resolved issues](#id554){.reference .internal .nav-link}
+  - [**rocJPEG** (0.8.0)](#rocjpeg-0-8-0){.reference .internal .nav-link}
+    - [Changed](#id555){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.5.0)](#id556){.reference .internal .nav-link}
+    - [Added](#id557){.reference .internal .nav-link}
+    - [Resolved issues](#id558){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (1.0.0)](#rocm-systems-profiler-1-0-0){.reference .internal .nav-link}
+    - [Added](#id559){.reference .internal .nav-link}
+    - [Changed](#id560){.reference .internal .nav-link}
+    - [Resolved issues](#id561){.reference .internal .nav-link}
+  - [**ROCm Validation Suite** (1.1.0)](#id562){.reference .internal .nav-link}
+    - [Added](#id563){.reference .internal .nav-link}
+    - [Changed](#id564){.reference .internal .nav-link}
+  - [**rocPRIM** (3.4.0)](#rocprim-3-4-0){.reference .internal .nav-link}
+    - [Added](#id565){.reference .internal .nav-link}
+    - [Changed](#id566){.reference .internal .nav-link}
+    - [Removed](#id567){.reference .internal .nav-link}
+    - [Resolved issues](#id568){.reference .internal .nav-link}
+    - [Upcoming changes](#id569){.reference .internal .nav-link}
+  - [**ROCProfiler** (2.0.0)](#id570){.reference .internal .nav-link}
+    - [Added](#id571){.reference .internal .nav-link}
+    - [Changed](#id572){.reference .internal .nav-link}
+    - [Resolved issues](#id573){.reference .internal .nav-link}
+  - [**ROCprofiler-SDK** (0.6.0)](#rocprofiler-sdk-0-6-0){.reference .internal .nav-link}
+    - [Added](#id574){.reference .internal .nav-link}
+  - [**rocPyDecode** (0.3.1)](#rocpydecode-0-3-1){.reference .internal .nav-link}
+    - [Added](#id575){.reference .internal .nav-link}
+    - [Changed](#id576){.reference .internal .nav-link}
+    - [Removed](#id577){.reference .internal .nav-link}
+    - [Resolved issues](#id578){.reference .internal .nav-link}
+  - [**rocRAND** (3.3.0)](#rocrand-3-3-0){.reference .internal .nav-link}
+    - [Added](#id579){.reference .internal .nav-link}
+    - [Changed](#id580){.reference .internal .nav-link}
+  - [**ROCr Debug Agent** (2.0.4)](#rocr-debug-agent-2-0-4){.reference .internal .nav-link}
+    - [Added](#id581){.reference .internal .nav-link}
+  - [**ROCr Runtime** (1.15.0)](#id582){.reference .internal .nav-link}
+    - [Added](#id583){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.28.0)](#rocsolver-3-28-0){.reference .internal .nav-link}
+    - [Added](#id584){.reference .internal .nav-link}
+    - [Optimized](#id585){.reference .internal .nav-link}
+  - [**rocSPARSE** (3.4.0)](#rocsparse-3-4-0){.reference .internal .nav-link}
+    - [Added](#id586){.reference .internal .nav-link}
+    - [Changed](#id587){.reference .internal .nav-link}
+    - [Optimized](#id588){.reference .internal .nav-link}
+    - [Resolved issues](#id589){.reference .internal .nav-link}
+    - [Upcoming changes](#id590){.reference .internal .nav-link}
+  - [**ROCTracer** (4.1.0)](#roctracer-4-1-0){.reference .internal .nav-link}
+    - [Added](#id591){.reference .internal .nav-link}
+  - [**rocThrust** (3.3.0)](#rocthrust-3-3-0){.reference .internal .nav-link}
+    - [Added](#id592){.reference .internal .nav-link}
+    - [Changed](#id593){.reference .internal .nav-link}
+    - [Known issues](#id594){.reference .internal .nav-link}
+  - [**rocWMMA** (1.7.0)](#rocwmma-1-7-0){.reference .internal .nav-link}
+    - [Added](#id595){.reference .internal .nav-link}
+    - [Changed](#id596){.reference .internal .nav-link}
+    - [Resolved issues](#id597){.reference .internal .nav-link}
+    - [Upcoming changes](#id598){.reference .internal .nav-link}
+  - [**rpp** (1.9.10)](#rpp-1-9-10){.reference .internal .nav-link}
+    - [Added](#id599){.reference .internal .nav-link}
+    - [Changed](#id600){.reference .internal .nav-link}
+    - [Resolved issues](#id601){.reference .internal .nav-link}
+  - [**Tensile** (4.43.0)](#tensile-4-43-0){.reference .internal .nav-link}
+    - [Added](#id602){.reference .internal .nav-link}
+    - [Changed](#id603){.reference .internal .nav-link}
+    - [Removed](#id604){.reference .internal .nav-link}
+    - [Optimized](#id605){.reference .internal .nav-link}
+    - [Resolved issues](#id606){.reference .internal .nav-link}
+- [ROCm 6.3.3](#rocm-6-3-3){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (0.1.2)](#rocm-systems-profiler-0-1-2){.reference .internal .nav-link}
+    - [Resolved issues](#id607){.reference .internal .nav-link}
+- [ROCm 6.3.2](#rocm-6-3-2){.reference .internal .nav-link}
+  - [**HIP** (6.3.2)](#hip-6-3-2){.reference .internal .nav-link}
+    - [Added](#id608){.reference .internal .nav-link}
+    - [Optimized](#id609){.reference .internal .nav-link}
+    - [Resolved issues](#id610){.reference .internal .nav-link}
+  - [**hipfort** (0.5.1)](#hipfort-0-5-1){.reference .internal .nav-link}
+    - [Added](#id611){.reference .internal .nav-link}
+    - [Resolved issues](#id612){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (0.1.1)](#rocm-systems-profiler-0-1-1){.reference .internal .nav-link}
+    - [Resolved issues](#id613){.reference .internal .nav-link}
+  - [**ROCProfiler** (2.0.0)](#id614){.reference .internal .nav-link}
+    - [Changed](#id615){.reference .internal .nav-link}
+    - [Resolved issues](#id616){.reference .internal .nav-link}
+  - [**ROCprofiler-SDK** (0.5.0)](#rocprofiler-sdk-0-5-0){.reference .internal .nav-link}
+    - [Added](#id617){.reference .internal .nav-link}
+    - [Changed](#id618){.reference .internal .nav-link}
+- [ROCm 6.3.1](#rocm-6-3-1){.reference .internal .nav-link}
+  - [**AMD SMI** (24.7.1)](#amd-smi-24-7-1){.reference .internal .nav-link}
+    - [Changed](#id619){.reference .internal .nav-link}
+    - [Resolved issues](#id620){.reference .internal .nav-link}
+  - [**HIP** (6.3.1)](#hip-6-3-1){.reference .internal .nav-link}
+    - [Added](#id621){.reference .internal .nav-link}
+    - [Resolved issues](#id622){.reference .internal .nav-link}
+  - [**HIPIFY** (18.0.0)](#hipify-18-0-0){.reference .internal .nav-link}
+    - [Added](#id623){.reference .internal .nav-link}
+    - [Resolved issues](#id624){.reference .internal .nav-link}
+  - [**MIVisionX** (3.1.0)](#mivisionx-3-1-0){.reference .internal .nav-link}
+    - [Changed](#id625){.reference .internal .nav-link}
+    - [Resolved issues](#id626){.reference .internal .nav-link}
+    - [Known issues](#id627){.reference .internal .nav-link}
+    - [Upcoming changes](#id628){.reference .internal .nav-link}
+  - [**RCCL** (2.21.5)](#rccl-2-21-5){.reference .internal .nav-link}
+    - [Changed](#id629){.reference .internal .nav-link}
+    - [Resolved Issues](#id630){.reference .internal .nav-link}
+  - [**ROCm Compute Profiler** (3.0.0)](#rocm-compute-profiler-3-0-0){.reference .internal .nav-link}
+    - [Resolved issues](#id631){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (0.1.0)](#rocm-systems-profiler-0-1-0){.reference .internal .nav-link}
+    - [Added](#id632){.reference .internal .nav-link}
+    - [Resolved issues](#id633){.reference .internal .nav-link}
+  - [**ROCprofiler-SDK** (0.5.0)](#id634){.reference .internal .nav-link}
+    - [Added](#id635){.reference .internal .nav-link}
+- [ROCm 6.3.0](#rocm-6-3-0){.reference .internal .nav-link}
+  - [**AMD SMI** (24.7.1)](#id636){.reference .internal .nav-link}
+    - [Added](#id637){.reference .internal .nav-link}
+    - [Changed](#id638){.reference .internal .nav-link}
+    - [Removed](#id639){.reference .internal .nav-link}
+    - [Optimized](#id640){.reference .internal .nav-link}
+    - [Known issues](#id641){.reference .internal .nav-link}
+    - [Resolved issues](#id642){.reference .internal .nav-link}
+    - [Upcoming changes](#id643){.reference .internal .nav-link}
+  - [**HIP** (6.3.0)](#hip-6-3-0){.reference .internal .nav-link}
+    - [Added](#id644){.reference .internal .nav-link}
+    - [Changed](#id645){.reference .internal .nav-link}
+    - [Optimized](#id646){.reference .internal .nav-link}
+    - [Resolved issues](#id647){.reference .internal .nav-link}
+  - [**hipBLAS** (2.3.0)](#hipblas-2-3-0){.reference .internal .nav-link}
+    - [Added](#id648){.reference .internal .nav-link}
+    - [Changed](#id649){.reference .internal .nav-link}
+  - [**hipBLASLt** (0.10.0)](#hipblaslt-0-10-0){.reference .internal .nav-link}
+    - [Added](#id650){.reference .internal .nav-link}
+    - [Changed](#id651){.reference .internal .nav-link}
+    - [Optimized](#id652){.reference .internal .nav-link}
+    - [Upcoming changes](#id653){.reference .internal .nav-link}
+  - [**hipCUB** (3.3.0)](#hipcub-3-3-0){.reference .internal .nav-link}
+    - [Added](#id654){.reference .internal .nav-link}
+    - [Changed](#id655){.reference .internal .nav-link}
+    - [Resolved issues](#id656){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.17)](#hipfft-1-0-17){.reference .internal .nav-link}
+    - [Changed](#id657){.reference .internal .nav-link}
+  - [**hipfort** (0.5.0)](#hipfort-0-5-0){.reference .internal .nav-link}
+    - [Added](#id658){.reference .internal .nav-link}
+    - [Changed](#id659){.reference .internal .nav-link}
+  - [**HIPIFY** (18.0.0)](#id660){.reference .internal .nav-link}
+    - [Added](#id661){.reference .internal .nav-link}
+    - [Resolved issues](#id662){.reference .internal .nav-link}
+    - [Known issues](#id663){.reference .internal .nav-link}
+  - [**hipRAND** (2.11.0)](#hiprand-2-11-0){.reference .internal .nav-link}
+    - [Changed](#id664){.reference .internal .nav-link}
+    - [Resolved issues](#id665){.reference .internal .nav-link}
+  - [**hipSOLVER** (2.3.0)](#hipsolver-2-3-0){.reference .internal .nav-link}
+    - [Added](#id666){.reference .internal .nav-link}
+    - [Changed](#id667){.reference .internal .nav-link}
+    - [Upcoming changes](#id668){.reference .internal .nav-link}
+  - [**hipSPARSE** (3.1.2)](#hipsparse-3-1-2){.reference .internal .nav-link}
+    - [Added](#id669){.reference .internal .nav-link}
+    - [Changed](#id670){.reference .internal .nav-link}
+    - [Resolved issues](#id671){.reference .internal .nav-link}
+    - [Known issues](#id672){.reference .internal .nav-link}
+  - [**hipSPARSELt** (0.2.2)](#hipsparselt-0-2-2){.reference .internal .nav-link}
+    - [Added](#id673){.reference .internal .nav-link}
+    - [Changed](#id674){.reference .internal .nav-link}
+    - [Upcoming changes](#id675){.reference .internal .nav-link}
+  - [**hipTensor** (1.4.0)](#hiptensor-1-4-0){.reference .internal .nav-link}
+    - [Added](#id676){.reference .internal .nav-link}
+    - [Changed](#id677){.reference .internal .nav-link}
+    - [Optimized](#id678){.reference .internal .nav-link}
+    - [Resolved issues](#id679){.reference .internal .nav-link}
+  - [**llvm-project** (18.0.0)](#llvm-project-18-0-0){.reference .internal .nav-link}
+    - [Resolved issues](#id680){.reference .internal .nav-link}
+  - [**MIGraphX** (2.11.0)](#migraphx-2-11-0){.reference .internal .nav-link}
+    - [Added](#id681){.reference .internal .nav-link}
+    - [Changed](#id682){.reference .internal .nav-link}
+    - [Removed](#id683){.reference .internal .nav-link}
+    - [Optimized](#id684){.reference .internal .nav-link}
+    - [Resolved issues](#id685){.reference .internal .nav-link}
+  - [**MIOpen** (3.3.0)](#miopen-3-3-0){.reference .internal .nav-link}
+    - [Added](#id686){.reference .internal .nav-link}
+    - [Optimized](#id687){.reference .internal .nav-link}
+    - [Resolved issues](#id688){.reference .internal .nav-link}
+  - [**MIVisionX** (3.1.0)](#id689){.reference .internal .nav-link}
+    - [Changed](#id690){.reference .internal .nav-link}
+    - [Known issues](#id691){.reference .internal .nav-link}
+    - [Upcoming changes](#id692){.reference .internal .nav-link}
+  - [**RCCL** (2.21.5)](#id693){.reference .internal .nav-link}
+    - [Added](#id694){.reference .internal .nav-link}
+    - [Changed](#id695){.reference .internal .nav-link}
+    - [Resolved issues](#id696){.reference .internal .nav-link}
+    - [Known issues](#id697){.reference .internal .nav-link}
+  - [**rocAL** (2.1.0)](#rocal-2-1-0){.reference .internal .nav-link}
+    - [Added](#id698){.reference .internal .nav-link}
+    - [Changed](#id699){.reference .internal .nav-link}
+    - [Optimized](#id700){.reference .internal .nav-link}
+    - [Resolved issues](#id701){.reference .internal .nav-link}
+    - [Known issues](#id702){.reference .internal .nav-link}
+    - [Upcoming changes](#id703){.reference .internal .nav-link}
+  - [**rocALUTION** (3.2.1)](#rocalution-3-2-1){.reference .internal .nav-link}
+    - [Changed](#id704){.reference .internal .nav-link}
+    - [Resolved issues](#id705){.reference .internal .nav-link}
+  - [**rocBLAS** (4.3.0)](#rocblas-4-3-0){.reference .internal .nav-link}
+    - [Added](#id706){.reference .internal .nav-link}
+    - [Changed](#id707){.reference .internal .nav-link}
+    - [Optimized](#id708){.reference .internal .nav-link}
+    - [Resolved issues](#id709){.reference .internal .nav-link}
+    - [Upcoming changes](#id710){.reference .internal .nav-link}
+  - [**ROCdbgapi** (0.77.0)](#rocdbgapi-0-77-0){.reference .internal .nav-link}
+    - [Added](#id711){.reference .internal .nav-link}
+  - [**rocDecode** (0.8.0)](#rocdecode-0-8-0){.reference .internal .nav-link}
+    - [Changed](#id712){.reference .internal .nav-link}
+    - [Removed](#id713){.reference .internal .nav-link}
+    - [Resolved issues](#id714){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.31)](#rocfft-1-0-31){.reference .internal .nav-link}
+    - [Added](#id715){.reference .internal .nav-link}
+    - [Changed](#id716){.reference .internal .nav-link}
+  - [**ROCgdb** (15.2)](#id717){.reference .internal .nav-link}
+    - [Added](#id718){.reference .internal .nav-link}
+    - [Changed](#id719){.reference .internal .nav-link}
+    - [Resolved issues](#id720){.reference .internal .nav-link}
+  - [**ROCm Compute Profiler** (3.0.0)](#id721){.reference .internal .nav-link}
+    - [Changed](#id722){.reference .internal .nav-link}
+    - [Known issues](#id723){.reference .internal .nav-link}
+  - [**ROCm Data Center Tool** (0.3.0)](#id724){.reference .internal .nav-link}
+    - [Added](#id725){.reference .internal .nav-link}
+    - [Known issues](#id726){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.4.0)](#rocm-smi-7-4-0){.reference .internal .nav-link}
+    - [Added](#id727){.reference .internal .nav-link}
+    - [Changed](#id728){.reference .internal .nav-link}
+    - [Removals](#removals){.reference .internal .nav-link}
+    - [Resolved issues](#id729){.reference .internal .nav-link}
+    - [Upcoming changes](#id730){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (0.1.0)](#id731){.reference .internal .nav-link}
+    - [Changed](#id732){.reference .internal .nav-link}
+    - [Known issues](#id733){.reference .internal .nav-link}
+  - [**ROCm Validation Suite** (1.1.0)](#id734){.reference .internal .nav-link}
+    - [Added](#id735){.reference .internal .nav-link}
+    - [Changed](#id736){.reference .internal .nav-link}
+    - [Known issues](#id737){.reference .internal .nav-link}
+  - [**rocPRIM** (3.3.0)](#rocprim-3-3-0){.reference .internal .nav-link}
+    - [Added](#id738){.reference .internal .nav-link}
+    - [Changed](#id739){.reference .internal .nav-link}
+    - [Removed](#id740){.reference .internal .nav-link}
+    - [Resolved issues](#id741){.reference .internal .nav-link}
+  - [**ROCProfiler** (2.0.0)](#id742){.reference .internal .nav-link}
+    - [Added](#id743){.reference .internal .nav-link}
+    - [Changed](#id744){.reference .internal .nav-link}
+    - [Removed](#id745){.reference .internal .nav-link}
+    - [Optimized](#id746){.reference .internal .nav-link}
+    - [Resolved issues](#id747){.reference .internal .nav-link}
+  - [**ROCprofiler-SDK** (0.5.0)](#id748){.reference .internal .nav-link}
+    - [Added](#id749){.reference .internal .nav-link}
+    - [Changed](#id750){.reference .internal .nav-link}
+    - [Removed](#id751){.reference .internal .nav-link}
+    - [Resolved issues](#id752){.reference .internal .nav-link}
+  - [**rocPyDecode** (0.2.0)](#rocpydecode-0-2-0){.reference .internal .nav-link}
+    - [Added](#id753){.reference .internal .nav-link}
+    - [Changed](#id754){.reference .internal .nav-link}
+    - [Removed](#id755){.reference .internal .nav-link}
+    - [Optimized](#id756){.reference .internal .nav-link}
+    - [Resolved issues](#id757){.reference .internal .nav-link}
+  - [**rocRAND** (3.2.0)](#rocrand-3-2-0){.reference .internal .nav-link}
+    - [Added](#id758){.reference .internal .nav-link}
+    - [Changed](#id759){.reference .internal .nav-link}
+    - [Resolved issues](#id760){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.27.0)](#rocsolver-3-27-0){.reference .internal .nav-link}
+    - [Added](#id761){.reference .internal .nav-link}
+    - [Changed](#id762){.reference .internal .nav-link}
+    - [Optimized](#id763){.reference .internal .nav-link}
+    - [Resolved issues](#id764){.reference .internal .nav-link}
+    - [Known issues](#id765){.reference .internal .nav-link}
+  - [**rocSPARSE** (3.3.0)](#rocsparse-3-3-0){.reference .internal .nav-link}
+    - [Added](#id766){.reference .internal .nav-link}
+    - [Changed](#id767){.reference .internal .nav-link}
+    - [Optimized](#id768){.reference .internal .nav-link}
+    - [Resolved issues](#id769){.reference .internal .nav-link}
+  - [**rocThrust** (3.2.0)](#rocthrust-3-2-0){.reference .internal .nav-link}
+    - [Added](#id770){.reference .internal .nav-link}
+    - [Changed](#id771){.reference .internal .nav-link}
+    - [Resolved issues](#id772){.reference .internal .nav-link}
+  - [**rocWMMA** (1.6.0)](#rocwmma-1-6-0){.reference .internal .nav-link}
+    - [Added](#id773){.reference .internal .nav-link}
+    - [Changed](#id774){.reference .internal .nav-link}
+    - [Resolved issues](#id775){.reference .internal .nav-link}
+  - [**RPP** (1.9.1)](#rpp-1-9-1){.reference .internal .nav-link}
+    - [Added](#id776){.reference .internal .nav-link}
+    - [Changed](#id777){.reference .internal .nav-link}
+    - [Removed](#id778){.reference .internal .nav-link}
+    - [Optimized](#id779){.reference .internal .nav-link}
+    - [Resolved issues](#id780){.reference .internal .nav-link}
+    - [Known issues](#id781){.reference .internal .nav-link}
+    - [Upcoming changes](#id782){.reference .internal .nav-link}
+  - [**Tensile** (4.42.0)](#tensile-4-42-0){.reference .internal .nav-link}
+    - [Added](#id783){.reference .internal .nav-link}
+    - [Changed](#id784){.reference .internal .nav-link}
+    - [Removed](#id785){.reference .internal .nav-link}
+    - [Optimized](#id786){.reference .internal .nav-link}
+    - [Resolved issues](#id787){.reference .internal .nav-link}
+- [ROCm 6.2.4](#rocm-6-2-4){.reference .internal .nav-link}
+  - [**AMD SMI** (24.6.3)](#amd-smi-24-6-3){.reference .internal .nav-link}
+    - [Resolved issues](#id788){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.30)](#rocfft-1-0-30){.reference .internal .nav-link}
+    - [Optimized](#id789){.reference .internal .nav-link}
+    - [Resolved issues](#id790){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.26.2)](#rocsolver-3-26-2){.reference .internal .nav-link}
+    - [Resolved issues](#id791){.reference .internal .nav-link}
+- [ROCm 6.2.2](#rocm-6-2-2){.reference .internal .nav-link}
+  - [**AMD SMI** (24.6.3)](#id792){.reference .internal .nav-link}
+    - [Changed](#id793){.reference .internal .nav-link}
+    - [Removed](#id794){.reference .internal .nav-link}
+    - [Resolved issues](#id795){.reference .internal .nav-link}
+  - [**HIP** (6.2.1)](#hip-6-2-1){.reference .internal .nav-link}
+    - [Resolved issues](#id796){.reference .internal .nav-link}
+  - [**HIPIFY** (18.0.0)](#id797){.reference .internal .nav-link}
+    - [Added](#id798){.reference .internal .nav-link}
+  - [**Omnitrace** (1.11.2)](#omnitrace-1-11-2){.reference .internal .nav-link}
+    - [Known issues](#id799){.reference .internal .nav-link}
+  - [**RCCL** (2.20.5)](#rccl-2-20-5){.reference .internal .nav-link}
+    - [Known issues](#id800){.reference .internal .nav-link}
+  - [**rocAL** (2.0.0)](#rocal-2-0-0){.reference .internal .nav-link}
+    - [Changed](#id801){.reference .internal .nav-link}
+    - [Known issues](#id802){.reference .internal .nav-link}
+  - [**rocBLAS** (4.2.1)](#rocblas-4-2-1){.reference .internal .nav-link}
+    - [Removed](#id803){.reference .internal .nav-link}
+    - [Resolved issues](#id804){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.29)](#rocfft-1-0-29){.reference .internal .nav-link}
+    - [Optimized](#id805){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.3.0)](#rocm-smi-7-3-0){.reference .internal .nav-link}
+    - [Optimized](#id806){.reference .internal .nav-link}
+    - [Resolved issues](#id807){.reference .internal .nav-link}
+    - [Known issues](#id808){.reference .internal .nav-link}
+  - [**rocPRIM** (3.2.1)](#rocprim-3-2-1){.reference .internal .nav-link}
+    - [Optimized](#id809){.reference .internal .nav-link}
+- [ROCm 6.2.1](#rocm-6-2-1){.reference .internal .nav-link}
+  - [**AMD SMI** (24.6.3)](#id810){.reference .internal .nav-link}
+    - [Changes](#changes){.reference .internal .nav-link}
+    - [Removals](#id811){.reference .internal .nav-link}
+    - [Resolved issues](#id812){.reference .internal .nav-link}
+  - [**HIP** (6.2.1)](#id813){.reference .internal .nav-link}
+    - [Resolved issues](#id814){.reference .internal .nav-link}
+  - [**HIPIFY** (18.0.0)](#id815){.reference .internal .nav-link}
+    - [Changes](#id816){.reference .internal .nav-link}
+  - [**Omniperf** (2.0.1)](#omniperf-2-0-1){.reference .internal .nav-link}
+    - [Changes](#id817){.reference .internal .nav-link}
+    - [Resolved issues](#id818){.reference .internal .nav-link}
+    - [Optimizations](#optimizations){.reference .internal .nav-link}
+  - [**Omnitrace** (1.11.2)](#id819){.reference .internal .nav-link}
+    - [Known issues](#id820){.reference .internal .nav-link}
+  - [**RCCL** (2.20.5)](#id821){.reference .internal .nav-link}
+    - [Known issues](#id822){.reference .internal .nav-link}
+  - [**rocAL** (2.0.0)](#id823){.reference .internal .nav-link}
+    - [Changed](#id824){.reference .internal .nav-link}
+    - [Known issues](#id825){.reference .internal .nav-link}
+  - [**rocBLAS** (4.2.1)](#id826){.reference .internal .nav-link}
+    - [Removed](#id827){.reference .internal .nav-link}
+    - [Resolved issues](#id828){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.29)](#id829){.reference .internal .nav-link}
+    - [Optimized](#id830){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.3.0)](#id831){.reference .internal .nav-link}
+    - [Optimized](#id832){.reference .internal .nav-link}
+    - [Resolved issues](#id833){.reference .internal .nav-link}
+    - [Known issues](#id834){.reference .internal .nav-link}
+  - [**rocPRIM** (3.2.1)](#id835){.reference .internal .nav-link}
+    - [Optimized](#id836){.reference .internal .nav-link}
+- [ROCm 6.2.0](#rocm-6-2-0){.reference .internal .nav-link}
+  - [**AMD SMI** (24.6.2)](#amd-smi-24-6-2){.reference .internal .nav-link}
+    - [Changed](#id837){.reference .internal .nav-link}
+    - [Removed](#id838){.reference .internal .nav-link}
+    - [Optimized](#id839){.reference .internal .nav-link}
+    - [Resolved issues](#id840){.reference .internal .nav-link}
+    - [Known issues](#id841){.reference .internal .nav-link}
+  - [**Composable Kernel** (1.1.0)](#id842){.reference .internal .nav-link}
+    - [Changed](#id843){.reference .internal .nav-link}
+    - [Optimized](#id844){.reference .internal .nav-link}
+  - [**HIP** (6.2.0)](#hip-6-2-0){.reference .internal .nav-link}
+    - [Changed](#id845){.reference .internal .nav-link}
+    - [Resolved issues](#id846){.reference .internal .nav-link}
+    - [Upcoming changes](#id847){.reference .internal .nav-link}
+  - [**hipBLAS** (2.2.0)](#hipblas-2-2-0){.reference .internal .nav-link}
+    - [Changed](#id848){.reference .internal .nav-link}
+  - [**hipBLASLt** (0.8.0)](#hipblaslt-0-8-0){.reference .internal .nav-link}
+    - [Changed](#id849){.reference .internal .nav-link}
+    - [Optimized](#id850){.reference .internal .nav-link}
+  - [**HIPCC** (1.1.1)](#hipcc-1-1-1){.reference .internal .nav-link}
+    - [Changed](#id851){.reference .internal .nav-link}
+    - [Resolved issues](#id852){.reference .internal .nav-link}
+  - [**hipCUB** (3.2.0)](#hipcub-3-2-0){.reference .internal .nav-link}
+    - [Changed](#id853){.reference .internal .nav-link}
+    - [Removed](#id854){.reference .internal .nav-link}
+    - [Resolved issues](#id855){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.15)](#hipfft-1-0-15){.reference .internal .nav-link}
+    - [Resolved issues](#id856){.reference .internal .nav-link}
+  - [**HIPIFY** (18.0.0)](#id857){.reference .internal .nav-link}
+    - [Changed](#id858){.reference .internal .nav-link}
+    - [Resolved issues](#id859){.reference .internal .nav-link}
+  - [**hipRAND** (2.11.0)](#id860){.reference .internal .nav-link}
+    - [Changed](#id861){.reference .internal .nav-link}
+    - [Removed](#id862){.reference .internal .nav-link}
+    - [Resolved issues](#id863){.reference .internal .nav-link}
+  - [**hipSOLVER** (2.2.0)](#hipsolver-2-2-0){.reference .internal .nav-link}
+    - [Changed](#id864){.reference .internal .nav-link}
+    - [Removed](#id865){.reference .internal .nav-link}
+  - [**hipSPARSE** (3.1.1)](#hipsparse-3-1-1){.reference .internal .nav-link}
+    - [Changed](#id866){.reference .internal .nav-link}
+    - [Resolved issues](#id867){.reference .internal .nav-link}
+    - [Known issues](#id868){.reference .internal .nav-link}
+  - [**hipSPARSELt** (0.2.1)](#hipsparselt-0-2-1){.reference .internal .nav-link}
+    - [Optimized](#id869){.reference .internal .nav-link}
+  - [**hipTensor** (1.3.0)](#hiptensor-1-3-0){.reference .internal .nav-link}
+    - [Changed](#id870){.reference .internal .nav-link}
+    - [Resolved issues](#id871){.reference .internal .nav-link}
+  - [**llvm-project** (18.0.0)](#id872){.reference .internal .nav-link}
+    - [Changed](#id873){.reference .internal .nav-link}
+    - [Removals](#id874){.reference .internal .nav-link}
+    - [Resolved issues](#id875){.reference .internal .nav-link}
+    - [Known issues](#id876){.reference .internal .nav-link}
+  - [**MIGraphX** (2.10.0)](#migraphx-2-10-0){.reference .internal .nav-link}
+    - [Changed](#id877){.reference .internal .nav-link}
+    - [Removed](#id878){.reference .internal .nav-link}
+    - [Optimized](#id879){.reference .internal .nav-link}
+    - [Resolved issues](#id880){.reference .internal .nav-link}
+  - [**MIOpen** (3.2.0)](#miopen-3-2-0){.reference .internal .nav-link}
+    - [Changed](#id881){.reference .internal .nav-link}
+    - [Resolved issues](#id882){.reference .internal .nav-link}
+    - [Optimized](#id883){.reference .internal .nav-link}
+  - [**MIVisionX** (3.0.0)](#mivisionx-3-0-0){.reference .internal .nav-link}
+    - [Changed](#id884){.reference .internal .nav-link}
+    - [Removed](#id885){.reference .internal .nav-link}
+    - [Resolved issues](#id886){.reference .internal .nav-link}
+    - [Known issues](#id887){.reference .internal .nav-link}
+  - [**Omniperf** (2.0.1)](#id888){.reference .internal .nav-link}
+    - [Known issues](#id889){.reference .internal .nav-link}
+  - [**OpenMP** (17.0.0)](#openmp-17-0-0){.reference .internal .nav-link}
+    - [Changed](#id890){.reference .internal .nav-link}
+    - [Removed](#id891){.reference .internal .nav-link}
+    - [Resolved issues](#id892){.reference .internal .nav-link}
+  - [**RCCL** (2.20.5)](#id893){.reference .internal .nav-link}
+    - [Changed](#id894){.reference .internal .nav-link}
+    - [Resolved issues](#id895){.reference .internal .nav-link}
+  - [**rocAL** (1.0.0)](#rocal-1-0-0){.reference .internal .nav-link}
+    - [Changed](#id896){.reference .internal .nav-link}
+    - [Removed](#id897){.reference .internal .nav-link}
+    - [Optimized](#id898){.reference .internal .nav-link}
+    - [Resolved issues](#id899){.reference .internal .nav-link}
+  - [**rocALUTION** (3.2.0)](#rocalution-3-2-0){.reference .internal .nav-link}
+    - [Changed](#id900){.reference .internal .nav-link}
+    - [Removed](#id901){.reference .internal .nav-link}
+  - [**rocBLAS** (4.2.0)](#rocblas-4-2-0){.reference .internal .nav-link}
+    - [Changed](#id902){.reference .internal .nav-link}
+    - [Optimized](#id903){.reference .internal .nav-link}
+    - [Removed](#id904){.reference .internal .nav-link}
+  - [**ROCdbgapi** (0.76.0)](#rocdbgapi-0-76-0){.reference .internal .nav-link}
+    - [Removed](#id905){.reference .internal .nav-link}
+  - [**rocDecode** (0.6.0)](#rocdecode-0-6-0){.reference .internal .nav-link}
+    - [Changed](#id906){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.28)](#rocfft-1-0-28){.reference .internal .nav-link}
+    - [Changed](#id907){.reference .internal .nav-link}
+    - [Optimized](#id908){.reference .internal .nav-link}
+  - [**rocm-cmake** (0.13.0)](#rocm-cmake-0-13-0){.reference .internal .nav-link}
+    - [Changed](#id909){.reference .internal .nav-link}
+  - [**ROCm Data Center Tool** (1.0.0)](#rocm-data-center-tool-1-0-0){.reference .internal .nav-link}
+    - [Changed](#id910){.reference .internal .nav-link}
+    - [Removed](#id911){.reference .internal .nav-link}
+  - [**ROCm Debugger (ROCgdb)** (14.2)](#rocm-debugger-rocgdb-14-2){.reference .internal .nav-link}
+    - [Changed](#id912){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.3.0)](#id913){.reference .internal .nav-link}
+    - [Changed](#id914){.reference .internal .nav-link}
+    - [Resolved issues](#id915){.reference .internal .nav-link}
+  - [**ROCm Validation Suite** (1.0.0)](#rocm-validation-suite-1-0-0){.reference .internal .nav-link}
+    - [Changed](#id916){.reference .internal .nav-link}
+  - [**rocPRIM** (3.2.0)](#rocprim-3-2-0){.reference .internal .nav-link}
+    - [Changed](#id917){.reference .internal .nav-link}
+    - [Removed](#id918){.reference .internal .nav-link}
+    - [Optimized](#id919){.reference .internal .nav-link}
+    - [Resolved issues](#id920){.reference .internal .nav-link}
+  - [**ROCProfiler** (2.0.0)](#id921){.reference .internal .nav-link}
+    - [Removed](#id922){.reference .internal .nav-link}
+  - [**rocRAND** (3.1.0)](#rocrand-3-1-0){.reference .internal .nav-link}
+    - [Changed](#id923){.reference .internal .nav-link}
+    - [Removed](#id924){.reference .internal .nav-link}
+    - [Known issues](#id925){.reference .internal .nav-link}
+  - [**ROCr Runtime** (1.14.0)](#rocr-runtime-1-14-0){.reference .internal .nav-link}
+    - [Changed](#id926){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.26.0)](#rocsolver-3-26-0){.reference .internal .nav-link}
+    - [Changed](#id927){.reference .internal .nav-link}
+    - [Optimized](#id928){.reference .internal .nav-link}
+    - [Resolved issues](#id929){.reference .internal .nav-link}
+  - [**rocSPARSE** (3.2.0)](#rocsparse-3-2-0){.reference .internal .nav-link}
+    - [Changed](#id930){.reference .internal .nav-link}
+    - [Optimized](#id931){.reference .internal .nav-link}
+    - [Resolved issues](#id932){.reference .internal .nav-link}
+  - [**rocThrust** (3.1.0)](#rocthrust-3-1-0){.reference .internal .nav-link}
+    - [Changed](#id933){.reference .internal .nav-link}
+    - [Known issues](#id934){.reference .internal .nav-link}
+  - [**rocWMMA** (1.5.0)](#rocwmma-1-5-0){.reference .internal .nav-link}
+    - [Changed](#id935){.reference .internal .nav-link}
+    - [Resolved issues](#id936){.reference .internal .nav-link}
+  - [**RPP** (1.8.0)](#rpp-1-8-0){.reference .internal .nav-link}
+    - [Changed](#id937){.reference .internal .nav-link}
+  - [**Tensile** (4.41.0)](#tensile-4-41-0){.reference .internal .nav-link}
+    - [Changed](#id938){.reference .internal .nav-link}
+    - [Optimized](#id939){.reference .internal .nav-link}
+    - [Resolved issues](#id940){.reference .internal .nav-link}
+- [ROCm 6.1.2](#rocm-6-1-2){.reference .internal .nav-link}
+  - [**AMD SMI** (24.5.1)](#amd-smi-24-5-1){.reference .internal .nav-link}
+    - [Added](#id941){.reference .internal .nav-link}
+    - [Changed](#id942){.reference .internal .nav-link}
+    - [Removed](#id943){.reference .internal .nav-link}
+    - [Optimized](#id944){.reference .internal .nav-link}
+    - [Resolved issues](#id945){.reference .internal .nav-link}
+  - [**RCCL** (2.18.6)](#rccl-2-18-6){.reference .internal .nav-link}
+    - [Changed](#id946){.reference .internal .nav-link}
+  - [**rocBLAS** (4.1.2)](#rocblas-4-1-2){.reference .internal .nav-link}
+    - [Optimized](#id947){.reference .internal .nav-link}
+    - [Resolved issues](#id948){.reference .internal .nav-link}
+  - [**rocDecode** (0.6.0)](#id949){.reference .internal .nav-link}
+    - [Added](#id950){.reference .internal .nav-link}
+    - [Changed](#id951){.reference .internal .nav-link}
+    - [Optimized](#id952){.reference .internal .nav-link}
+    - [Resolved issues](#id953){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.2.0)](#rocm-smi-7-2-0){.reference .internal .nav-link}
+    - [Added](#id954){.reference .internal .nav-link}
+    - [Resolved issues](#id955){.reference .internal .nav-link}
+- [ROCm 6.1.1](#rocm-6-1-1){.reference .internal .nav-link}
+  - [**AMD SMI** (24.5.1)](#id956){.reference .internal .nav-link}
+    - [Added](#id957){.reference .internal .nav-link}
+    - [Changed](#id958){.reference .internal .nav-link}
+    - [Removed](#id959){.reference .internal .nav-link}
+    - [Resolved issues](#id960){.reference .internal .nav-link}
+    - [Known issues](#id961){.reference .internal .nav-link}
+  - [**hipBLASLt** (0.7.0)](#hipblaslt-0-7-0){.reference .internal .nav-link}
+    - [Added](#id962){.reference .internal .nav-link}
+    - [Upcoming changes](#id963){.reference .internal .nav-link}
+  - [**HIPCC** (1.0.0)](#hipcc-1-0-0){.reference .internal .nav-link}
+    - [Changed](#id964){.reference .internal .nav-link}
+  - [**hipSOLVER** (2.1.1)](#hipsolver-2-1-1){.reference .internal .nav-link}
+    - [Changed](#id965){.reference .internal .nav-link}
+    - [Resolved issues](#id966){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.27)](#rocfft-1-0-27){.reference .internal .nav-link}
+    - [Added](#id967){.reference .internal .nav-link}
+    - [Resolved issues](#id968){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.0.0)](#rocm-smi-7-0-0){.reference .internal .nav-link}
+    - [Added](#id969){.reference .internal .nav-link}
+    - [Changed](#id970){.reference .internal .nav-link}
+    - [Resolved issues](#id971){.reference .internal .nav-link}
+    - [Known issues](#id972){.reference .internal .nav-link}
+- [ROCm 6.1.0](#rocm-6-1-0){.reference .internal .nav-link}
+  - [**AMD SMI** (24.4.1)](#amd-smi-24-4-1){.reference .internal .nav-link}
+    - [Added](#id973){.reference .internal .nav-link}
+  - [**Composable Kernel** (1.1.0)](#id974){.reference .internal .nav-link}
+    - [Added](#id975){.reference .internal .nav-link}
+    - [Changed](#id976){.reference .internal .nav-link}
+  - [**HIP** (6.1)](#hip-6-1){.reference .internal .nav-link}
+    - [Added](#id977){.reference .internal .nav-link}
+  - [**hipBLASLt** (0.7.0)](#id978){.reference .internal .nav-link}
+    - [Added](#id979){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.14)](#hipfft-1-0-14){.reference .internal .nav-link}
+    - [Added](#id980){.reference .internal .nav-link}
+  - [**HIPIFY** (17.0.0)](#hipify-17-0-0){.reference .internal .nav-link}
+    - [Changed](#id981){.reference .internal .nav-link}
+  - [**hipSPARSELt** (0.1.0)](#hipsparselt-0-1-0){.reference .internal .nav-link}
+    - [Added](#id982){.reference .internal .nav-link}
+  - [**hipTensor** (1.2.0)](#hiptensor-1-2-0){.reference .internal .nav-link}
+    - [Added](#id983){.reference .internal .nav-link}
+  - [**llvm-project** (17.0.0)](#llvm-project-17-0-0){.reference .internal .nav-link}
+    - [Changed](#id984){.reference .internal .nav-link}
+  - [**MIGraphX** (2.9.0)](#migraphx-2-9-0){.reference .internal .nav-link}
+    - [Added](#id985){.reference .internal .nav-link}
+  - [**MIOpen** (3.1.0)](#miopen-3-1-0){.reference .internal .nav-link}
+    - [Added](#id986){.reference .internal .nav-link}
+  - [**OpenMP** (17.60.0)](#openmp-17-60-0){.reference .internal .nav-link}
+    - [Added](#id987){.reference .internal .nav-link}
+    - [Changed](#id988){.reference .internal .nav-link}
+  - [**RCCL** (2.18.6)](#id989){.reference .internal .nav-link}
+    - [Changed](#id990){.reference .internal .nav-link}
+  - [**rocALUTION** (3.1.1)](#rocalution-3-1-1){.reference .internal .nav-link}
+    - [Added](#id991){.reference .internal .nav-link}
+  - [**rocDecode** (0.5.0)](#rocdecode-0-5-0){.reference .internal .nav-link}
+    - [Added](#id992){.reference .internal .nav-link}
+  - [**ROCm Data Center Tool** (0.3.0)](#id993){.reference .internal .nav-link}
+    - [Changed](#id994){.reference .internal .nav-link}
+  - [**RPP** (1.5.0)](#rpp-1-5-0){.reference .internal .nav-link}
+    - [Added](#id995){.reference .internal .nav-link}
+  - [**ROCm Validation Suite** (1.0)](#rocm-validation-suite-1-0){.reference .internal .nav-link}
+    - [Added](#id996){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.25.0)](#rocsolver-3-25-0){.reference .internal .nav-link}
+    - [Added](#id997){.reference .internal .nav-link}
+  - [**ROCTracer** (4.1)](#roctracer-4-1){.reference .internal .nav-link}
+    - [Changed](#id998){.reference .internal .nav-link}
+- [ROCm 6.0.2](#rocm-6-0-2){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.13)](#hipfft-1-0-13){.reference .internal .nav-link}
+    - [Changed](#id999){.reference .internal .nav-link}
+- [ROCm 6.0.0](#rocm-6-0-0){.reference .internal .nav-link}
+  - [**AMD SMI** (23.4.2)](#amd-smi-23-4-2){.reference .internal .nav-link}
+    - [Added](#id1000){.reference .internal .nav-link}
+  - [**HIP** (6.0.0)](#hip-6-0-0){.reference .internal .nav-link}
+    - [Added](#id1001){.reference .internal .nav-link}
+    - [Changed](#id1002){.reference .internal .nav-link}
+  - [**hipCUB** (3.0.0)](#hipcub-3-0-0){.reference .internal .nav-link}
+    - [Changed](#id1003){.reference .internal .nav-link}
+  - [**HIPIFY** (17.0.0)](#id1004){.reference .internal .nav-link}
+    - [Added](#id1005){.reference .internal .nav-link}
+    - [Optimized](#id1006){.reference .internal .nav-link}
+  - [**hipRAND** (2.10.16)](#hiprand-2-10-16){.reference .internal .nav-link}
+  - [**hipTensor** (1.1.0)](#hiptensor-1-1-0){.reference .internal .nav-link}
+    - [Added](#id1007){.reference .internal .nav-link}
+    - [Optimized](#id1008){.reference .internal .nav-link}
+  - [**llvm-project** (17.0.0)](#id1009){.reference .internal .nav-link}
+    - [Added](#id1010){.reference .internal .nav-link}
+    - [Optimized](#id1011){.reference .internal .nav-link}
+  - [**MIGraphX** (2.8.0)](#migraphx-2-8-0){.reference .internal .nav-link}
+    - [Added](#id1012){.reference .internal .nav-link}
+  - [**ROCgdb** (13.2)](#rocgdb-13-2){.reference .internal .nav-link}
+    - [Added](#id1013){.reference .internal .nav-link}
+  - [**ROCm SMI** (6.0.0)](#rocm-smi-6-0-0){.reference .internal .nav-link}
+    - [Added](#id1014){.reference .internal .nav-link}
+    - [Optimized](#id1015){.reference .internal .nav-link}
+  - [**ROCm Validation Suite** (1.0)](#id1016){.reference .internal .nav-link}
+    - [Added](#id1017){.reference .internal .nav-link}
+  - [**ROCProfiler** (2.0)](#rocprofiler-2-0){.reference .internal .nav-link}
+    - [Added](#id1018){.reference .internal .nav-link}
+    - [Changed](#id1019){.reference .internal .nav-link}
+  - [**ROCr Runtime** (1.12.0)](#rocr-runtime-1-12-0){.reference .internal .nav-link}
+    - [Added](#id1020){.reference .internal .nav-link}
+  - [**rocThrust** (3.0.0)](#rocthrust-3-0-0){.reference .internal .nav-link}
+    - [Added](#id1021){.reference .internal .nav-link}
+  - [**rocWMMA** (1.3.0)](#rocwmma-1-3-0){.reference .internal .nav-link}
+    - [Added](#id1022){.reference .internal .nav-link}
+  - [**TransferBench** (beta)](#transferbench-beta){.reference .internal .nav-link}
+    - [Optimized](#id1023){.reference .internal .nav-link}
+- [ROCm 5.7.1](#rocm-5-7-1){.reference .internal .nav-link}
+  - [**HIP** (5.7.1)](#hip-5-7-1){.reference .internal .nav-link}
+    - [Resolved issues](#id1024){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.8.2)](#hipsolver-1-8-2){.reference .internal .nav-link}
+    - [Resolved issues](#id1025){.reference .internal .nav-link}
+  - [**rocBLAS** (3.1.0)](#rocblas-3-1-0){.reference .internal .nav-link}
+    - [Added](#id1026){.reference .internal .nav-link}
+- [ROCm 5.7.0](#rocm-5-7-0){.reference .internal .nav-link}
+  - [**HIP** (5.7.0)](#hip-5-7-0){.reference .internal .nav-link}
+    - [Added](#id1027){.reference .internal .nav-link}
+    - [Known issues](#id1028){.reference .internal .nav-link}
+    - [Upcoming changes](#id1029){.reference .internal .nav-link}
+  - [**hipBLAS** (1.1.0)](#hipblas-1-1-0){.reference .internal .nav-link}
+    - [Changed](#id1030){.reference .internal .nav-link}
+  - [**hipCUB** (2.13.1)](#hipcub-2-13-1){.reference .internal .nav-link}
+    - [Changed](#id1031){.reference .internal .nav-link}
+    - [Known issues](#id1032){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.12)](#hipfft-1-0-12){.reference .internal .nav-link}
+    - [Added](#id1033){.reference .internal .nav-link}
+    - [Changed](#id1034){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.8.1)](#hipsolver-1-8-1){.reference .internal .nav-link}
+    - [Changed](#id1035){.reference .internal .nav-link}
+  - [**hipSPARSE** (2.3.8)](#hipsparse-2-3-8){.reference .internal .nav-link}
+    - [Optimized](#id1036){.reference .internal .nav-link}
+  - [**MIOpen** (2.19.0)](#miopen-2-19-0){.reference .internal .nav-link}
+    - [Added](#id1037){.reference .internal .nav-link}
+    - [Changed](#id1038){.reference .internal .nav-link}
+    - [Resolved issues](#id1039){.reference .internal .nav-link}
+  - [**RCCL** (2.17.1-1)](#rccl-2-17-1-1){.reference .internal .nav-link}
+    - [Added](#id1040){.reference .internal .nav-link}
+    - [Changed](#id1041){.reference .internal .nav-link}
+    - [Resolved issues](#id1042){.reference .internal .nav-link}
+  - [**rocALUTION** (2.1.11)](#rocalution-2-1-11){.reference .internal .nav-link}
+    - [Added](#id1043){.reference .internal .nav-link}
+    - [Optimized](#id1044){.reference .internal .nav-link}
+  - [**rocBLAS** (3.1.0)](#id1045){.reference .internal .nav-link}
+    - [Added](#id1046){.reference .internal .nav-link}
+    - [Changed](#id1047){.reference .internal .nav-link}
+    - [Resolved issues](#id1048){.reference .internal .nav-link}
+    - [Upcoming changes](#id1049){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.24)](#rocfft-1-0-24){.reference .internal .nav-link}
+    - [Added](#id1050){.reference .internal .nav-link}
+    - [Changed](#id1051){.reference .internal .nav-link}
+    - [Optimized](#id1052){.reference .internal .nav-link}
+  - [**rocm-cmake** (0.10.0)](#rocm-cmake-0-10-0){.reference .internal .nav-link}
+    - [Added](#id1053){.reference .internal .nav-link}
+  - [**rocPRIM** (2.13.1)](#rocprim-2-13-1){.reference .internal .nav-link}
+    - [Changed](#id1054){.reference .internal .nav-link}
+    - [Resolved issues](#id1055){.reference .internal .nav-link}
+  - [**rocRAND** (2.10.17)](#rocrand-2-10-17){.reference .internal .nav-link}
+    - [Added](#id1056){.reference .internal .nav-link}
+    - [Changed](#id1057){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.23.0)](#rocsolver-3-23-0){.reference .internal .nav-link}
+    - [Added](#id1058){.reference .internal .nav-link}
+    - [Changed](#id1059){.reference .internal .nav-link}
+    - [Resolved issues](#id1060){.reference .internal .nav-link}
+  - [**rocSPARSE** (2.5.4)](#rocsparse-2-5-4){.reference .internal .nav-link}
+    - [Added](#id1061){.reference .internal .nav-link}
+    - [Optimized](#id1062){.reference .internal .nav-link}
+    - [Known issues](#id1063){.reference .internal .nav-link}
+  - [**rocThrust** (2.18.0)](#rocthrust-2-18-0){.reference .internal .nav-link}
+    - [Changed](#id1064){.reference .internal .nav-link}
+    - [Resolved issues](#id1065){.reference .internal .nav-link}
+  - [**rocWMMA** (1.2.0)](#rocwmma-1-2-0){.reference .internal .nav-link}
+    - [Changed](#id1066){.reference .internal .nav-link}
+  - [**Tensile** (4.38.0)](#tensile-4-38-0){.reference .internal .nav-link}
+    - [Added](#id1067){.reference .internal .nav-link}
+    - [Changed](#id1068){.reference .internal .nav-link}
+    - [Optimized](#id1069){.reference .internal .nav-link}
+    - [Resolved issues](#id1070){.reference .internal .nav-link}
+- [ROCm 5.6.1](#rocm-5-6-1){.reference .internal .nav-link}
+  - [**HIP** (5.6.1)](#hip-5-6-1){.reference .internal .nav-link}
+    - [Resolved issues](#id1071){.reference .internal .nav-link}
+- [ROCm 5.6.0](#rocm-5-6-0){.reference .internal .nav-link}
+  - [**AMD SMI** (1.0.0)](#amd-smi-1-0-0){.reference .internal .nav-link}
+    - [Added](#id1072){.reference .internal .nav-link}
+    - [Known issues](#id1073){.reference .internal .nav-link}
+  - [**HIP** (5.6.0)](#hip-5-6-0){.reference .internal .nav-link}
+    - [Added](#id1074){.reference .internal .nav-link}
+    - [Changed](#id1075){.reference .internal .nav-link}
+    - [Optimized](#id1076){.reference .internal .nav-link}
+    - [Resolved issues](#id1077){.reference .internal .nav-link}
+    - [Known issues](#id1078){.reference .internal .nav-link}
+    - [Upcoming changes](#id1079){.reference .internal .nav-link}
+  - [**ROCgdb** (13.1)](#rocgdb-13-1){.reference .internal .nav-link}
+    - [Optimized](#id1080){.reference .internal .nav-link}
+    - [Known issues](#id1081){.reference .internal .nav-link}
+  - [**hipBLAS** (1.0.0)](#hipblas-1-0-0){.reference .internal .nav-link}
+    - [Changed](#id1082){.reference .internal .nav-link}
+    - [Removed](#id1083){.reference .internal .nav-link}
+  - [**hipCUB** (2.13.1)](#id1084){.reference .internal .nav-link}
+    - [Added](#id1085){.reference .internal .nav-link}
+    - [Changed](#id1086){.reference .internal .nav-link}
+    - [Known issues](#id1087){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.12)](#id1088){.reference .internal .nav-link}
+    - [Added](#id1089){.reference .internal .nav-link}
+    - [Changed](#id1090){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.8.0)](#hipsolver-1-8-0){.reference .internal .nav-link}
+    - [Added](#id1091){.reference .internal .nav-link}
+  - [**hipSPARSE** (2.3.6)](#hipsparse-2-3-6){.reference .internal .nav-link}
+    - [Added](#id1092){.reference .internal .nav-link}
+    - [Changed](#id1093){.reference .internal .nav-link}
+  - [**MIOpen** (2.19.0)](#id1094){.reference .internal .nav-link}
+    - [Added](#id1095){.reference .internal .nav-link}
+    - [Changed](#id1096){.reference .internal .nav-link}
+    - [Resolved issues](#id1097){.reference .internal .nav-link}
+  - [**RCCL** (2.15.5)](#rccl-2-15-5){.reference .internal .nav-link}
+    - [Added](#id1098){.reference .internal .nav-link}
+    - [Changed](#id1099){.reference .internal .nav-link}
+    - [Removed](#id1100){.reference .internal .nav-link}
+    - [Resolved issues](#id1101){.reference .internal .nav-link}
+  - [**rocALUTION** (2.1.9)](#rocalution-2-1-9){.reference .internal .nav-link}
+    - [Optimized](#id1102){.reference .internal .nav-link}
+  - [**rocBLAS** (3.0.0)](#rocblas-3-0-0){.reference .internal .nav-link}
+    - [Added](#id1103){.reference .internal .nav-link}
+    - [Changed](#id1104){.reference .internal .nav-link}
+    - [Removed](#id1105){.reference .internal .nav-link}
+    - [Optimized](#id1106){.reference .internal .nav-link}
+    - [Resolved issues](#id1107){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.23)](#rocfft-1-0-23){.reference .internal .nav-link}
+    - [Added](#id1108){.reference .internal .nav-link}
+    - [Changed](#id1109){.reference .internal .nav-link}
+    - [Resolved issues](#id1110){.reference .internal .nav-link}
+  - [**rocm-cmake** (0.9.0)](#rocm-cmake-0-9-0){.reference .internal .nav-link}
+    - [Added](#id1111){.reference .internal .nav-link}
+  - [**rocPRIM** (2.13.0)](#rocprim-2-13-0){.reference .internal .nav-link}
+    - [Added](#id1112){.reference .internal .nav-link}
+    - [Changed](#id1113){.reference .internal .nav-link}
+    - [Known issues](#id1114){.reference .internal .nav-link}
+  - [**ROCprofiler**](#rocprofiler){.reference .internal .nav-link}
+    - [Added](#id1115){.reference .internal .nav-link}
+    - [Optimized](#id1116){.reference .internal .nav-link}
+    - [Resolved issues](#id1117){.reference .internal .nav-link}
+  - [**rocRAND** (2.10.17)](#id1118){.reference .internal .nav-link}
+    - [Added](#id1119){.reference .internal .nav-link}
+    - [Changed](#id1120){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.22.0)](#rocsolver-3-22-0){.reference .internal .nav-link}
+    - [Added](#id1121){.reference .internal .nav-link}
+    - [Optimized](#id1122){.reference .internal .nav-link}
+    - [Resolved issues](#id1123){.reference .internal .nav-link}
+  - [**rocSPARSE** (2.5.2)](#rocsparse-2-5-2){.reference .internal .nav-link}
+    - [Optimized](#id1124){.reference .internal .nav-link}
+  - [**rocThrust** (2.18.0)](#id1125){.reference .internal .nav-link}
+    - [Changed](#id1126){.reference .internal .nav-link}
+    - [Resolved issues](#id1127){.reference .internal .nav-link}
+  - [**rocWMMA** (1.1.0)](#rocwmma-1-1-0){.reference .internal .nav-link}
+    - [Added](#id1128){.reference .internal .nav-link}
+    - [Changed](#id1129){.reference .internal .nav-link}
+  - [**Tensile** (4.37.0)](#tensile-4-37-0){.reference .internal .nav-link}
+    - [Added](#id1130){.reference .internal .nav-link}
+    - [Changed](#id1131){.reference .internal .nav-link}
+    - [Optimized](#id1132){.reference .internal .nav-link}
+    - [Resolved issues](#id1133){.reference .internal .nav-link}
+- [ROCm 5.5.1](#rocm-5-5-1){.reference .internal .nav-link}
+- [ROCm 5.5.0](#rocm-5-5-0){.reference .internal .nav-link}
+  - [**hipBLAS** (0.54.0)](#hipblas-0-54-0){.reference .internal .nav-link}
+    - [Added](#id1134){.reference .internal .nav-link}
+    - [Changed](#id1135){.reference .internal .nav-link}
+    - [Resolved issues](#id1136){.reference .internal .nav-link}
+  - [**hipCUB** (2.13.1)](#id1137){.reference .internal .nav-link}
+    - [Added](#id1138){.reference .internal .nav-link}
+    - [Changed](#id1139){.reference .internal .nav-link}
+    - [Resolved issues](#id1140){.reference .internal .nav-link}
+    - [Known Issues](#id1141){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.11)](#hipfft-1-0-11){.reference .internal .nav-link}
+    - [Resolved issues](#id1142){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.7.0)](#hipsolver-1-7-0){.reference .internal .nav-link}
+    - [Added](#id1143){.reference .internal .nav-link}
+  - [**hipSPARSE** (2.3.5)](#hipsparse-2-3-5){.reference .internal .nav-link}
+    - [Optimized](#id1144){.reference .internal .nav-link}
+  - [**MIOpen** (2.19.0)](#id1145){.reference .internal .nav-link}
+    - [Added](#id1146){.reference .internal .nav-link}
+    - [Changed](#id1147){.reference .internal .nav-link}
+    - [Resolved issues](#id1148){.reference .internal .nav-link}
+  - [**RCCL** (2.15.5)](#id1149){.reference .internal .nav-link}
+    - [Added](#id1150){.reference .internal .nav-link}
+    - [Changed](#id1151){.reference .internal .nav-link}
+    - [Removed](#id1152){.reference .internal .nav-link}
+    - [Resolved issues](#id1153){.reference .internal .nav-link}
+  - [**rocALUTION** (2.1.8)](#rocalution-2-1-8){.reference .internal .nav-link}
+    - [Added](#id1154){.reference .internal .nav-link}
+    - [Changed](#id1155){.reference .internal .nav-link}
+    - [Optimized](#id1156){.reference .internal .nav-link}
+  - [**rocBLAS** (2.47.0)](#rocblas-2-47-0){.reference .internal .nav-link}
+    - [Added](#id1157){.reference .internal .nav-link}
+    - [Changed](#id1158){.reference .internal .nav-link}
+    - [Removed](#id1159){.reference .internal .nav-link}
+    - [Optimized](#id1160){.reference .internal .nav-link}
+    - [Resolved issues](#id1161){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.22)](#rocfft-1-0-22){.reference .internal .nav-link}
+    - [Added](#id1162){.reference .internal .nav-link}
+    - [Changed](#id1163){.reference .internal .nav-link}
+    - [Optimized](#id1164){.reference .internal .nav-link}
+    - [Resolved issues](#id1165){.reference .internal .nav-link}
+  - [**rocm-cmake** (0.8.1)](#rocm-cmake-0-8-1){.reference .internal .nav-link}
+    - [Changed](#id1166){.reference .internal .nav-link}
+    - [Resolved issues](#id1167){.reference .internal .nav-link}
+  - [**rocPRIM** (2.13.0)](#id1168){.reference .internal .nav-link}
+    - [Added](#id1169){.reference .internal .nav-link}
+    - [Changed](#id1170){.reference .internal .nav-link}
+    - [Resolved issues](#id1171){.reference .internal .nav-link}
+    - [Known issues](#id1172){.reference .internal .nav-link}
+  - [**rocRAND** (2.10.17)](#id1173){.reference .internal .nav-link}
+    - [Added](#id1174){.reference .internal .nav-link}
+    - [Changed](#id1175){.reference .internal .nav-link}
+    - [Fixed](#fixed){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.21.0)](#rocsolver-3-21-0){.reference .internal .nav-link}
+    - [Added](#id1176){.reference .internal .nav-link}
+    - [Optimized](#id1177){.reference .internal .nav-link}
+    - [Changed](#id1178){.reference .internal .nav-link}
+    - [Fixed](#id1179){.reference .internal .nav-link}
+  - [**rocSPARSE** (2.5.1)](#rocsparse-2-5-1){.reference .internal .nav-link}
+    - [Added](#id1180){.reference .internal .nav-link}
+    - [Improved](#improved){.reference .internal .nav-link}
+    - [Known issues](#id1181){.reference .internal .nav-link}
+  - [**rocWMMA** (1.0)](#rocwmma-1-0){.reference .internal .nav-link}
+    - [Added](#id1182){.reference .internal .nav-link}
+    - [Changed](#id1183){.reference .internal .nav-link}
+  - [**Tensile** (4.36.0)](#tensile-4-36-0){.reference .internal .nav-link}
+    - [Added](#id1184){.reference .internal .nav-link}
+    - [Changed](#id1185){.reference .internal .nav-link}
+    - [Optimized](#id1186){.reference .internal .nav-link}
+    - [Resolved issues](#id1187){.reference .internal .nav-link}
+- [ROCm 5.4.3](#rocm-5-4-3){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.21)](#rocfft-1-0-21){.reference .internal .nav-link}
+    - [Resolved issues](#id1188){.reference .internal .nav-link}
+- [ROCm 5.4.2](#rocm-5-4-2){.reference .internal .nav-link}
+- [ROCm 5.4.1](#rocm-5-4-1){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.20)](#rocfft-1-0-20){.reference .internal .nav-link}
+    - [Fixed](#id1189){.reference .internal .nav-link}
+- [ROCm 5.4.0](#rocm-5-4-0){.reference .internal .nav-link}
+  - [**hipBLAS** (0.53.0)](#hipblas-0-53-0){.reference .internal .nav-link}
+    - [Added](#id1190){.reference .internal .nav-link}
+  - [**hipCUB** (2.13.0)](#hipcub-2-13-0){.reference .internal .nav-link}
+    - [Added](#id1191){.reference .internal .nav-link}
+    - [Changed](#id1192){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.10)](#hipfft-1-0-10){.reference .internal .nav-link}
+    - [Added](#id1193){.reference .internal .nav-link}
+    - [Changed](#id1194){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.6.0)](#hipsolver-1-6-0){.reference .internal .nav-link}
+    - [Added](#id1195){.reference .internal .nav-link}
+  - [**hipSPARSE** (2.3.3)](#hipsparse-2-3-3){.reference .internal .nav-link}
+    - [Added](#id1196){.reference .internal .nav-link}
+    - [Changed](#id1197){.reference .internal .nav-link}
+  - [**RCCL** (2.13.4)](#rccl-2-13-4){.reference .internal .nav-link}
+    - [Changed](#id1198){.reference .internal .nav-link}
+    - [Resolved issues](#id1199){.reference .internal .nav-link}
+  - [**rocALUTION** (2.1.3)](#rocalution-2-1-3){.reference .internal .nav-link}
+    - [Added](#id1200){.reference .internal .nav-link}
+    - [Changed](#id1201){.reference .internal .nav-link}
+    - [Optimized](#id1202){.reference .internal .nav-link}
+  - [**rocBLAS** (2.46.0)](#rocblas-2-46-0){.reference .internal .nav-link}
+    - [Added](#id1203){.reference .internal .nav-link}
+    - [Changed](#id1204){.reference .internal .nav-link}
+    - [Optimized](#id1205){.reference .internal .nav-link}
+    - [Fixed](#id1206){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.19)](#rocfft-1-0-19){.reference .internal .nav-link}
+    - [Added](#id1207){.reference .internal .nav-link}
+    - [Changed](#id1208){.reference .internal .nav-link}
+    - [Optimized](#id1209){.reference .internal .nav-link}
+  - [**rocPRIM** (2.12.0)](#rocprim-2-12-0){.reference .internal .nav-link}
+    - [Changed](#id1210){.reference .internal .nav-link}
+    - [Removed](#id1211){.reference .internal .nav-link}
+    - [Resolved issues](#id1212){.reference .internal .nav-link}
+  - [**rocRAND** (2.10.16)](#rocrand-2-10-16){.reference .internal .nav-link}
+    - [Added](#id1213){.reference .internal .nav-link}
+    - [Changed](#id1214){.reference .internal .nav-link}
+    - [Resolved issues](#id1215){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.20.0)](#rocsolver-3-20-0){.reference .internal .nav-link}
+    - [Added](#id1216){.reference .internal .nav-link}
+    - [Changed](#id1217){.reference .internal .nav-link}
+  - [**rocSPARSE** (2.4.0)](#rocsparse-2-4-0){.reference .internal .nav-link}
+    - [Added](#id1218){.reference .internal .nav-link}
+    - [Optimized](#id1219){.reference .internal .nav-link}
+  - [**rocThrust** (2.17.0)](#rocthrust-2-17-0){.reference .internal .nav-link}
+    - [Added](#id1220){.reference .internal .nav-link}
+  - [**rocWMMA** (0.9)](#rocwmma-0-9){.reference .internal .nav-link}
+    - [Added](#id1221){.reference .internal .nav-link}
+    - [Changed](#id1222){.reference .internal .nav-link}
+  - [**Tensile** (4.35.0)](#tensile-4-35-0){.reference .internal .nav-link}
+    - [Added](#id1223){.reference .internal .nav-link}
+    - [Changed](#id1224){.reference .internal .nav-link}
+    - [Optimized](#id1225){.reference .internal .nav-link}
+    - [Resolved issues](#id1226){.reference .internal .nav-link}
+- [ROCm 5.3.3](#rocm-5-3-3){.reference .internal .nav-link}
+- [ROCm 5.3.2](#rocm-5-3-2){.reference .internal .nav-link}
+- [ROCm 5.3.0](#rocm-5-3-0){.reference .internal .nav-link}
+  - [**hipBLAS** (0.52.0)](#hipblas-0-52-0){.reference .internal .nav-link}
+    - [Added](#id1227){.reference .internal .nav-link}
+    - [Resolved issues](#id1228){.reference .internal .nav-link}
+  - [**hipCUB** (2.12.0)](#hipcub-2-12-0){.reference .internal .nav-link}
+    - [Added](#id1229){.reference .internal .nav-link}
+    - [Changed](#id1230){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.9)](#hipfft-1-0-9){.reference .internal .nav-link}
+    - [Changed](#id1231){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.5.0)](#hipsolver-1-5-0){.reference .internal .nav-link}
+    - [Added](#id1232){.reference .internal .nav-link}
+    - [Changed](#id1233){.reference .internal .nav-link}
+    - [Fixed](#id1234){.reference .internal .nav-link}
+  - [**hipSPARSE** (2.3.1)](#hipsparse-2-3-1){.reference .internal .nav-link}
+    - [Added](#id1235){.reference .internal .nav-link}
+  - [**rocALUTION** (2.1.0)](#rocalution-2-1-0){.reference .internal .nav-link}
+    - [Added](#id1236){.reference .internal .nav-link}
+    - [Optimized](#id1237){.reference .internal .nav-link}
+  - [**rocBLAS** (2.45.0)](#rocblas-2-45-0){.reference .internal .nav-link}
+    - [Added](#id1238){.reference .internal .nav-link}
+    - [Changed](#id1239){.reference .internal .nav-link}
+    - [Removed](#id1240){.reference .internal .nav-link}
+    - [Optimized](#id1241){.reference .internal .nav-link}
+    - [Resolved issues](#id1242){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.18)](#rocfft-1-0-18){.reference .internal .nav-link}
+    - [Changed](#id1243){.reference .internal .nav-link}
+    - [Optimized](#id1244){.reference .internal .nav-link}
+    - [Resolved issues](#id1245){.reference .internal .nav-link}
+  - [**rocm-cmake** (0.8.0)](#rocm-cmake-0-8-0){.reference .internal .nav-link}
+    - [Changed](#id1246){.reference .internal .nav-link}
+    - [Resolved issues](#id1247){.reference .internal .nav-link}
+  - [**rocPRIM** (2.11.0)](#rocprim-2-11-0){.reference .internal .nav-link}
+    - [Added](#id1248){.reference .internal .nav-link}
+  - [**rocRAND** (2.10.15)](#rocrand-2-10-15){.reference .internal .nav-link}
+    - [Changed](#id1249){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.19.0)](#rocsolver-3-19-0){.reference .internal .nav-link}
+    - [Added](#id1250){.reference .internal .nav-link}
+    - [Changed](#id1251){.reference .internal .nav-link}
+    - [Removed](#id1252){.reference .internal .nav-link}
+    - [Resolved issues](#id1253){.reference .internal .nav-link}
+  - [**rocThrust** (2.16.0)](#rocthrust-2-16-0){.reference .internal .nav-link}
+    - [Changed](#id1254){.reference .internal .nav-link}
+  - [**Tensile** (4.34.0)](#tensile-4-34-0){.reference .internal .nav-link}
+    - [Added](#id1255){.reference .internal .nav-link}
+    - [Changed](#id1256){.reference .internal .nav-link}
+    - [Optimized](#id1257){.reference .internal .nav-link}
+    - [Resolved issues](#id1258){.reference .internal .nav-link}
+- [ROCm 5.2.3](#rocm-5-2-3){.reference .internal .nav-link}
+  - [**RCCL** (2.12.10)](#rccl-2-12-10){.reference .internal .nav-link}
+    - [Added](#id1259){.reference .internal .nav-link}
+    - [Removed](#id1260){.reference .internal .nav-link}
+- [ROCm 5.2.1](#rocm-5-2-1){.reference .internal .nav-link}
+- [ROCm 5.2.0](#rocm-5-2-0){.reference .internal .nav-link}
+  - [**hipBLAS** (0.51.0)](#hipblas-0-51-0){.reference .internal .nav-link}
+    - [Added](#id1261){.reference .internal .nav-link}
+    - [Resolved issues](#id1262){.reference .internal .nav-link}
+  - [**hipCUB** (2.11.1)](#hipcub-2-11-1){.reference .internal .nav-link}
+    - [Added](#id1263){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.8)](#hipfft-1-0-8){.reference .internal .nav-link}
+    - [Added](#id1264){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.4.0)](#hipsolver-1-4-0){.reference .internal .nav-link}
+    - [Added](#id1265){.reference .internal .nav-link}
+    - [Resolved issues](#id1266){.reference .internal .nav-link}
+  - [**hipSPARSE** (2.2.0)](#hipsparse-2-2-0){.reference .internal .nav-link}
+    - [Added](#id1267){.reference .internal .nav-link}
+  - [**rocALUTION** (2.0.3)](#rocalution-2-0-3){.reference .internal .nav-link}
+    - [Added](#id1268){.reference .internal .nav-link}
+  - [**rocBLAS** (2.44.0)](#rocblas-2-44-0){.reference .internal .nav-link}
+    - [Added](#id1269){.reference .internal .nav-link}
+    - [Changed](#id1270){.reference .internal .nav-link}
+    - [Removed](#id1271){.reference .internal .nav-link}
+    - [Optimized](#id1272){.reference .internal .nav-link}
+    - [Resolved issues](#id1273){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.17)](#rocfft-1-0-17){.reference .internal .nav-link}
+    - [Added](#id1274){.reference .internal .nav-link}
+    - [Changed](#id1275){.reference .internal .nav-link}
+    - [Optimized](#id1276){.reference .internal .nav-link}
+    - [Resolved issues](#id1277){.reference .internal .nav-link}
+  - [**rocPRIM** (2.10.14)](#rocprim-2-10-14){.reference .internal .nav-link}
+    - [Added](#id1278){.reference .internal .nav-link}
+  - [**rocRAND** (2.10.14)](#rocrand-2-10-14){.reference .internal .nav-link}
+    - [Added](#id1279){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.18.0)](#rocsolver-3-18-0){.reference .internal .nav-link}
+    - [Added](#id1280){.reference .internal .nav-link}
+    - [Resolved issues](#id1281){.reference .internal .nav-link}
+  - [**rocSPARSE** (2.2.0)](#rocsparse-2-2-0){.reference .internal .nav-link}
+    - [Added](#id1282){.reference .internal .nav-link}
+    - [Changed](#id1283){.reference .internal .nav-link}
+    - [Optimized](#id1284){.reference .internal .nav-link}
+  - [**rocThrust** (2.15.0)](#rocthrust-2-15-0){.reference .internal .nav-link}
+    - [Added](#id1285){.reference .internal .nav-link}
+  - [**rocWMMA** (0.7)](#rocwmma-0-7){.reference .internal .nav-link}
+    - [Added](#id1286){.reference .internal .nav-link}
+    - [Changed](#id1287){.reference .internal .nav-link}
+  - [**Tensile** (4.33.0)](#tensile-4-33-0){.reference .internal .nav-link}
+    - [Added](#id1288){.reference .internal .nav-link}
+    - [Optimizations](#id1289){.reference .internal .nav-link}
+    - [Changed](#id1290){.reference .internal .nav-link}
+    - [Resolved issues](#id1291){.reference .internal .nav-link}
+- [ROCm 5.1.3](#rocm-5-1-3){.reference .internal .nav-link}
+- [ROCm 5.1.1](#rocm-5-1-1){.reference .internal .nav-link}
+- [ROCm 5.1.0](#rocm-5-1-0){.reference .internal .nav-link}
+  - [**hipBLAS** (0.50.0)](#hipblas-0-50-0){.reference .internal .nav-link}
+    - [Added](#id1292){.reference .internal .nav-link}
+    - [Fixed](#id1293){.reference .internal .nav-link}
+    - [Changed](#id1294){.reference .internal .nav-link}
+  - [**hipCUB** (2.11.0)](#hipcub-2-11-0){.reference .internal .nav-link}
+    - [Added](#id1295){.reference .internal .nav-link}
+    - [Changed](#id1296){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.7)](#hipfft-1-0-7){.reference .internal .nav-link}
+    - [Changed](#id1297){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.3.0)](#hipsolver-1-3-0){.reference .internal .nav-link}
+    - [Added](#id1298){.reference .internal .nav-link}
+    - [Changed](#id1299){.reference .internal .nav-link}
+    - [Resolved issues](#id1300){.reference .internal .nav-link}
+  - [**hipSPARSE** (2.1.0)](#hipsparse-2-1-0){.reference .internal .nav-link}
+    - [Added](#id1301){.reference .internal .nav-link}
+    - [Changed](#id1302){.reference .internal .nav-link}
+    - [Resolved issues](#id1303){.reference .internal .nav-link}
+  - [**RCCL** (2.11.4)](#rccl-2-11-4){.reference .internal .nav-link}
+    - [Added](#id1304){.reference .internal .nav-link}
+    - [Known issues](#id1305){.reference .internal .nav-link}
+  - [**rocALUTION** (2.0.2)](#rocalution-2-0-2){.reference .internal .nav-link}
+    - [Added](#id1306){.reference .internal .nav-link}
+  - [**rocBLAS** (2.43.0)](#rocblas-2-43-0){.reference .internal .nav-link}
+    - [Added](#id1307){.reference .internal .nav-link}
+    - [Changed](#id1308){.reference .internal .nav-link}
+    - [Optimized](#id1309){.reference .internal .nav-link}
+    - [Resolved issues](#id1310){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.16)](#rocfft-1-0-16){.reference .internal .nav-link}
+    - [Changed](#id1311){.reference .internal .nav-link}
+    - [Removed](#id1312){.reference .internal .nav-link}
+    - [Optimized](#id1313){.reference .internal .nav-link}
+    - [Resolved issues](#id1314){.reference .internal .nav-link}
+  - [**rocPRIM** (2.10.13)](#rocprim-2-10-13){.reference .internal .nav-link}
+    - [Added](#id1315){.reference .internal .nav-link}
+    - [Changed](#id1316){.reference .internal .nav-link}
+    - [Resolved issues](#id1317){.reference .internal .nav-link}
+    - [Known issues](#id1318){.reference .internal .nav-link}
+  - [**rocRAND** (2.10.13)](#rocrand-2-10-13){.reference .internal .nav-link}
+    - [Added](#id1319){.reference .internal .nav-link}
+    - [Changed](#id1320){.reference .internal .nav-link}
+    - [Resolved issues](#id1321){.reference .internal .nav-link}
+    - [Known issues](#id1322){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.17.0)](#rocsolver-3-17-0){.reference .internal .nav-link}
+    - [Optimized](#id1323){.reference .internal .nav-link}
+    - [Resolved issues](#id1324){.reference .internal .nav-link}
+  - [**rocSPARSE** (2.1.0)](#rocsparse-2-1-0){.reference .internal .nav-link}
+    - [Added](#id1325){.reference .internal .nav-link}
+    - [Optimized](#id1326){.reference .internal .nav-link}
+  - [**rocThrust** (2.14.0)](#rocthrust-2-14-0){.reference .internal .nav-link}
+    - [Added](#id1327){.reference .internal .nav-link}
+    - [Known issues](#id1328){.reference .internal .nav-link}
+  - [**Tensile** (4.32.0)](#tensile-4-32-0){.reference .internal .nav-link}
+    - [Added](#id1329){.reference .internal .nav-link}
+    - [Changed](#id1330){.reference .internal .nav-link}
+      - [Removed](#id1331){.reference .internal .nav-link}
+    - [Optimized](#id1332){.reference .internal .nav-link}
+- [ROCm 5.0.2](#rocm-5-0-2){.reference .internal .nav-link}
+- [ROCm 5.0.1](#rocm-5-0-1){.reference .internal .nav-link}
+- [ROCm 5.0.0](#rocm-5-0-0){.reference .internal .nav-link}
+  - [**hipBLAS** (0.49.0)](#hipblas-0-49-0){.reference .internal .nav-link}
+    - [Added](#id1333){.reference .internal .nav-link}
+    - [Resolved issues](#id1334){.reference .internal .nav-link}
+  - [**hipCUB** (2.10.13)](#hipcub-2-10-13){.reference .internal .nav-link}
+    - [Added](#id1335){.reference .internal .nav-link}
+    - [Changed](#id1336){.reference .internal .nav-link}
+    - [Resolved issues](#id1337){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.4)](#hipfft-1-0-4){.reference .internal .nav-link}
+    - [Fixed](#id1338){.reference .internal .nav-link}
+    - [Added](#id1339){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.2.0)](#hipsolver-1-2-0){.reference .internal .nav-link}
+    - [Added](#id1340){.reference .internal .nav-link}
+    - [Resolved issues](#id1341){.reference .internal .nav-link}
+  - [**hipSPARSE** (2.0.0)](#hipsparse-2-0-0){.reference .internal .nav-link}
+    - [Added](#id1342){.reference .internal .nav-link}
+  - [**RCCL** (2.10.3)](#rccl-2-10-3){.reference .internal .nav-link}
+    - [Added](#id1343){.reference .internal .nav-link}
+    - [Known issues](#id1344){.reference .internal .nav-link}
+  - [**rocALUTION** (2.0.1)](#rocalution-2-0-1){.reference .internal .nav-link}
+    - [Changed](#id1345){.reference .internal .nav-link}
+    - [Optimized](#id1346){.reference .internal .nav-link}
+  - [**rocBLAS** (2.42.0)](#rocblas-2-42-0){.reference .internal .nav-link}
+    - [Added](#id1347){.reference .internal .nav-link}
+    - [Changed](#id1348){.reference .internal .nav-link}
+    - [Optimized](#id1349){.reference .internal .nav-link}
+    - [Resolved issues](#id1350){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.13)](#rocfft-1-0-13){.reference .internal .nav-link}
+    - [Added](#id1351){.reference .internal .nav-link}
+    - [Optimized](#id1352){.reference .internal .nav-link}
+    - [Resolved issues](#id1353){.reference .internal .nav-link}
+  - [**rocPRIM** (2.10.12)](#rocprim-2-10-12){.reference .internal .nav-link}
+    - [Added](#id1354){.reference .internal .nav-link}
+    - [Changed](#id1355){.reference .internal .nav-link}
+    - [Resolved issues](#id1356){.reference .internal .nav-link}
+    - [Known issues](#id1357){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.16.0)](#rocsolver-3-16-0){.reference .internal .nav-link}
+    - [Added](#id1358){.reference .internal .nav-link}
+    - [Changed](#id1359){.reference .internal .nav-link}
+    - [Optimized](#id1360){.reference .internal .nav-link}
+    - [Resolved issues](#id1361){.reference .internal .nav-link}
+  - [**rocSPARSE** (2.0.0)](#rocsparse-2-0-0){.reference .internal .nav-link}
+    - [Added](#id1362){.reference .internal .nav-link}
+    - [Changed](#id1363){.reference .internal .nav-link}
+  - [**rocThrust** (2.13.0)](#rocthrust-2-13-0){.reference .internal .nav-link}
+    - [Added](#id1364){.reference .internal .nav-link}
+    - [Changed](#id1365){.reference .internal .nav-link}
+  - [**Tensile** (4.31.0)](#tensile-4-31-0){.reference .internal .nav-link}
+    - [Added](#id1366){.reference .internal .nav-link}
+    - [Changed](#id1367){.reference .internal .nav-link}
+    - [Removed](#id1368){.reference .internal .nav-link}
+    - [Optimized](#id1369){.reference .internal .nav-link}
+    - [Resolved issues](#id1370){.reference .internal .nav-link}
+::::
+:::::
+::::::
 
-{#searchbox}
+::: {#searchbox}
+:::
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-{#rocm-consolidated-changelog .section .tex2jax_ignore .mathjax_ignore}
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#rocm-consolidated-changelog .section .tex2jax_ignore .mathjax_ignore}
 # ROCm consolidated changelog[\#](#rocm-consolidated-changelog "Link to this heading"){.headerlink}
 
-::::::::
-{#rocm-docs-core-article-info .sd-container-fluid .sd-sphinx-override .sd-p-0 .sd-mt-2 .sd-mb-4 .sd-p-2 .sd-rounded-1 .docutils}
-:::::::
-{.sd-row .sd-row-cols-2 .sd-gx-2 .sd-gy-1 .docutils}
-::::::
-{.sd-col .sd-d-flex-row .sd-align-minor-center .docutils}
-:::::
-{.sd-container-fluid .sd-sphinx-override .docutils}
-::::
-{.sd-row .sd-row-cols-2 .sd-row-cols-xs-2 .sd-row-cols-sm-3 .sd-row-cols-md-3 .sd-row-cols-lg-3 .sd-gx-3 .sd-gy-1 .docutils}
-
-{.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+::::::::::: {#rocm-docs-core-article-info .sd-container-fluid .sd-sphinx-override .sd-p-0 .sd-mt-2 .sd-mb-4 .sd-p-2 .sd-rounded-1 .docutils}
+:::::::::: {.sd-row .sd-row-cols-2 .sd-gx-2 .sd-gy-1 .docutils}
+::::::::: {.sd-col .sd-d-flex-row .sd-align-minor-center .docutils}
+:::::::: {.sd-container-fluid .sd-sphinx-override .docutils}
+::::::: {.sd-row .sd-row-cols-2 .sd-row-cols-xs-2 .sd-row-cols-sm-3 .sd-row-cols-md-3 .sd-row-cols-lg-3 .sd-gx-3 .sd-gy-1 .docutils}
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==){.sd-octicon .sd-octicon-calendar} ]{.sd-pr-2 .article-info-date-svg}
+:::
 
-{.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=){.sd-octicon .sd-octicon-clock} ]{.sd-pr-2 .article-info-read-time-svg} 363 min read time
+:::
 
-{.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils style="color:gray;"}
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils style="color:gray;"}
 Applies to Linux
+:::
 
-{.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
-
-::::
-:::::
-::::::
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+:::
 :::::::
 ::::::::
+:::::::::
+::::::::::
+:::::::::::
 
 This page is a historical overview of changes made to ROCm components. This consolidated changelog documents key modifications and improvements across different versions of the ROCm software stack and its components.
 
-::::::::::::::::::::
-{#rocm-7-2-1 .section}
+::::::::::::::::::::::: {#rocm-7-2-1 .section}
 ## ROCm 7.2.1[\#](#rocm-7-2-1 "Link to this heading"){.headerlink}
 
 See the [ROCm 7.2.1 release notes](https://rocm.docs.amd.com/en/docs-7.2.1/about/release-notes.html#rocm-7-2-1-release-notes){.reference .external} for a complete overview of this release.
 
-::
-{#amd-smi-26-2-2 .section}
+::::: {#amd-smi-26-2-2 .section}
 ### **AMD SMI** (26.2.2)[\#](#amd-smi-26-2-2 "Link to this heading"){.headerlink}
 
-{#added .section}
+::: {#added .section}
 #### Added[\#](#added "Link to this heading"){.headerlink}
 
 - GPU board and base board temperature sensors to [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre} command.
+:::
 
-{#resolved-issues .section}
+::: {#resolved-issues .section}
 #### Resolved issues[\#](#resolved-issues "Link to this heading"){.headerlink}
 
 - JSON output was not formatted correctly when using watch mode with metrics.
@@ -122,14 +1993,13 @@ See the [ROCm 7.2.1 release notes](https://rocm.docs.amd.com/en/docs-7.2.1/about
 - Invalid CPER files caused garbage output for AFID lists.
 
 - JSON output was not formatted correctly for reset commands.
+:::
+:::::
 
-::
-
-::
-{#hip-7-2-1 .section}
+::::: {#hip-7-2-1 .section}
 ### **HIP** (7.2.1)[\#](#hip-7-2-1 "Link to this heading"){.headerlink}
 
-{#id1 .section}
+::: {#id1 .section}
 #### Resolved issues[\#](#id1 "Link to this heading"){.headerlink}
 
 - Corrected the validation of stream capture in global‑capture mode. It is no longer affected by any thread‑local capture‑mode sequences occurring in other threads.
@@ -139,99 +2009,101 @@ See the [ROCm 7.2.1 release notes](https://rocm.docs.amd.com/en/docs-7.2.1/about
 - Corrected an issue in the batch-dispatch doorbell for AQL packets to avoid a potential CPU hang.
 
 - To address potential delays in memory‑object destruction that could affect application logic, the HIP runtime disables memory‑object reference counting in direct‑dispatch mode.
+:::
 
-{#changed .section}
+::: {#changed .section}
 #### Changed[\#](#changed "Link to this heading"){.headerlink}
 
 - The [`AMD_DIRECT_DISPATCH`{.docutils .literal .notranslate}]{.pre} environment variable has been deprecated in the HIP runtime.
+:::
+:::::
 
-::
-
-:
-{#hipblaslt-1-2-2 .section}
+:::: {#hipblaslt-1-2-2 .section}
 ### **hipBLASLt** (1.2.2)[\#](#hipblaslt-1-2-2 "Link to this heading"){.headerlink}
 
-{#id2 .section}
+::: {#id2 .section}
 #### Changed[\#](#id2 "Link to this heading"){.headerlink}
 
 - Enumeration value update for the Sigmoid Activation Function feature.
+:::
+::::
 
-:
-
-:
-{#rocdecode-1-7-0 .section}
+:::: {#rocdecode-1-7-0 .section}
 ### **rocDecode** (1.7.0)[\#](#rocdecode-1-7-0 "Link to this heading"){.headerlink}
 
-{#upcoming-changes .section}
+::: {#upcoming-changes .section}
 #### Upcoming changes[\#](#upcoming-changes "Link to this heading"){.headerlink}
 
 - The rocDecode GitHub repository will be officially moved to [ROCm/rocm-systems](https://github.com/ROCm/rocm-systems/tree/develop/projects/rocdecode){.github .reference .external} in an upcoming release.
+:::
+::::
 
-:
-
-::
-{#rocjpeg-1-4-0 .section}
+::::: {#rocjpeg-1-4-0 .section}
 ### **rocJPEG** (1.4.0)[\#](#rocjpeg-1-4-0 "Link to this heading"){.headerlink}
 
-{#id3 .section}
+::: {#id3 .section}
 #### Changed[\#](#id3 "Link to this heading"){.headerlink}
 
 - Bug fixes and performance improvements.
+:::
 
-{#id4 .section}
+::: {#id4 .section}
 #### Upcoming changes[\#](#id4 "Link to this heading"){.headerlink}
 
 - The rocJPEG GitHub repository will be officially moved to [ROCm/rocm-systems](https://github.com/ROCm/rocm-systems/tree/develop/projects/rocjpeg){.github .reference .external} in an upcoming release.
+:::
+:::::
 
-::
-
-{#rocshmem-3-2-0 .section}
+:::::: {#rocshmem-3-2-0 .section}
 ### **rocSHMEM** (3.2.0)[\#](#rocshmem-3-2-0 "Link to this heading"){.headerlink}
 
-{#id5 .section}
+::: {#id5 .section}
 #### Added[\#](#id5 "Link to this heading"){.headerlink}
 
 - Warnings to notify if large BAR is not available.
+:::
 
-{#id6 .section}
+::: {#id6 .section}
 #### Resolved issues[\#](#id6 "Link to this heading"){.headerlink}
 
 - GDA Backend will disable itself when no GDA compatible NICs are available rather than crashing.
 
 - Fix memory coherency issues on gfx1201.
+:::
 
-{#known-issues .section}
+::: {#known-issues .section}
 #### Known issues[\#](#known-issues "Link to this heading"){.headerlink}
 
 - Only 64-bit rocSHMEM atomic APIs are implemented for the GDA conduit.
+:::
+::::::
 
-::
-{#rpp-2-2-1 .section}
+::::: {#rpp-2-2-1 .section}
 ### **RPP** (2.2.1)[\#](#rpp-2-2-1 "Link to this heading"){.headerlink}
 
-{#id7 .section}
+::: {#id7 .section}
 #### Added[\#](#id7 "Link to this heading"){.headerlink}
 
 - Error-code capture in test scripts for all C++ tests.
+:::
 
-{#optimized .section}
+::: {#optimized .section}
 #### Optimized[\#](#optimized "Link to this heading"){.headerlink}
 
 - Optimized F16 variants by replacing scalar load/store operations with AVX2 intrinsics for spatter, log, blend, color_cast, flip, crop_mirror_normalize, and exposure kernels.
+:::
+:::::
+:::::::::::::::::::::::
 
-::
-::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-{#rocm-7-2-0 .section}
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#rocm-7-2-0 .section}
 ## ROCm 7.2.0[\#](#rocm-7-2-0 "Link to this heading"){.headerlink}
 
 See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about/release-notes.html#rocm-7-2-0-release-notes){.reference .external} for a complete overview of this release.
 
-{#amd-smi-26-2-1 .section}
+:::::: {#amd-smi-26-2-1 .section}
 ### **AMD SMI** (26.2.1)[\#](#amd-smi-26-2-1 "Link to this heading"){.headerlink}
 
-{#id8 .section}
+::: {#id8 .section}
 #### Added[\#](#id8 "Link to this heading"){.headerlink}
 
 - GPU and baseboard temperature options to [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre} CLI.
@@ -321,8 +2193,9 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
     - Original APIs remain the same but now can get/set both PPT0 and PPT1 limits (on supported hardware): [`amdsmi_get_power_cap_info()`{.docutils .literal .notranslate}]{.pre} and [`amdsmi_set_power_cap()`{.docutils .literal .notranslate}]{.pre}.
 
   - See the Changed section for changes made to the [`set`{.docutils .literal .notranslate}]{.pre} and [`static`{.docutils .literal .notranslate}]{.pre} commands regarding support for PPT1.
+:::
 
-{#id9 .section}
+::: {#id9 .section}
 #### Changed[\#](#id9 "Link to this heading"){.headerlink}
 
 - The [`amd-smi`{.docutils .literal .notranslate}]{.pre} command now shows [`hsmp`{.docutils .literal .notranslate}]{.pre} rather than [`amd_hsmp`{.docutils .literal .notranslate}]{.pre}.
@@ -338,16 +2211,19 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - The [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`reset`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--power-cap`{.docutils .literal .notranslate}]{.pre} command will now attempt to reset both [`PPT0`{.docutils .literal .notranslate}]{.pre} and [`PPT1`{.docutils .literal .notranslate}]{.pre} power caps to their default values. If a device only has [`PPT0`{.docutils .literal .notranslate}]{.pre}, then only [`PPT0`{.docutils .literal .notranslate}]{.pre} will be reset.
 
 - The [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`static`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--limit`{.docutils .literal .notranslate}]{.pre} command now has a [`PPT1`{.docutils .literal .notranslate}]{.pre} section when PPT1 is available. The [`static`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--limit`{.docutils .literal .notranslate}]{.pre} command has been updated to include [`PPT1`{.docutils .literal .notranslate}]{.pre} power limit information when available on the device.
+:::
 
-{#id10 .section}
+::: {#id10 .section}
 #### Resolved Issues[\#](#id10 "Link to this heading"){.headerlink}
 
 - Fixed an issue where [`amdsmi_get_gpu_od_volt_info()`{.docutils .literal .notranslate}]{.pre} returned a reference to a Python object. The returned dictionary was changed to return values in all fields.
+:::
+::::::
 
-{#composable-kernel-1-2-0 .section}
+:::::: {#composable-kernel-1-2-0 .section}
 ### **Composable Kernel** (1.2.0)[\#](#composable-kernel-1-2-0 "Link to this heading"){.headerlink}
 
-{#id11 .section}
+::: {#id11 .section}
 #### Added[\#](#id11 "Link to this heading"){.headerlink}
 
 - Support for mixed precision fp8 x bf8 universal GEMM and weight preshuffle GEMM.
@@ -387,25 +2263,29 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - Blockscale 2D support for CK Tile GEMM.
 
 - An optional template parameter, [`Arch`{.docutils .literal .notranslate}]{.pre}, to [`make_kernel`{.docutils .literal .notranslate}]{.pre} to support linking multiple object files that have the same kernel compiled for different architectures.
+:::
 
-{#id12 .section}
+::: {#id12 .section}
 #### Changed[\#](#id12 "Link to this heading"){.headerlink}
 
 - Removed [`BlockSize`{.docutils .literal .notranslate}]{.pre} in [`make_kernel`{.docutils .literal .notranslate}]{.pre} and [`CShuffleEpilogueProblem`{.docutils .literal .notranslate}]{.pre} to support Wave32 in CK Tile.
 
 - FMHA examples and tests can be built for multiple architectures (gfx9, gfx950, gfx12) at the same time.
+:::
 
-{#id13 .section}
+::: {#id13 .section}
 #### Upcoming changes[\#](#id13 "Link to this heading"){.headerlink}
 
 - Composable Kernel will be adopting C++20 features in an upcoming ROCm release, updating the minimum compiler requirement to C++20. Ensure that your development environment complies with this requirement to facilitate a seamless transition.
 
 - In an upcoming major ROCm release, Composable Kernel will transition to a header-only library. Neither ckProfiler nor the static libraries will be packaged with Composable Kernel. They will also no longer be built by default. ckProfiler can be built independently from Composable Kernel as a standalone binary, and the static Composable Kernel libraries can be built from source.
+:::
+::::::
 
-{#hip-7-2-0 .section}
+:::::: {#hip-7-2-0 .section}
 ### **HIP** (7.2.0)[\#](#hip-7-2-0 "Link to this heading"){.headerlink}
 
-{#id14 .section}
+::: {#id14 .section}
 #### Added[\#](#id14 "Link to this heading"){.headerlink}
 
 - New HIP APIs
@@ -441,8 +2321,9 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
     - [`HIP_GET_PROC_ADDRESS_LEGACY_STREAM`{.docutils .literal .notranslate}]{.pre}
 
     - [`HIP_GET_PROC_ADDRESS_PER_THREAD_DEFAULT_STREAM`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id15 .section}
+::: {#id15 .section}
 #### Optimized[\#](#id15 "Link to this heading"){.headerlink}
 
 - Graph node scaling:
@@ -468,30 +2349,31 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
   - HIP runtime has removed the lock contention in async handler enqueue path.
 
   - - The enhancement reduces runtime overhead and maximizes GPU throughput for asynchronous kernel execution, especially in multi-threaded applications.
+:::
 
-{#id16 .section}
+::: {#id16 .section}
 #### Resolved issues[\#](#id16 "Link to this heading"){.headerlink}
 
 - Corrected the calculation of the value of maximum shared memory per multiprocessor, in HIP device properties.
+:::
+::::::
 
-:
-{#hipblas-3-2-0 .section}
+:::: {#hipblas-3-2-0 .section}
 ### **hipBLAS** (3.2.0)[\#](#hipblas-3-2-0 "Link to this heading"){.headerlink}
 
-{#id17 .section}
+::: {#id17 .section}
 #### Resolved issues[\#](#id17 "Link to this heading"){.headerlink}
 
 - Corrected client memory use counts for the [`HIPBLAS_CLIENT_RAM_GB_LIMIT`{.docutils .literal .notranslate}]{.pre} environment variable.
 
 - Fixed false Clang static analysis warnings.
+:::
+::::
 
-:
-
-::
-{#hipblaslt-1-2-1 .section}
+::::: {#hipblaslt-1-2-1 .section}
 ### **hipBLASLt** (1.2.1)[\#](#hipblaslt-1-2-1 "Link to this heading"){.headerlink}
 
-{#id18 .section}
+::: {#id18 .section}
 #### Added[\#](#id18 "Link to this heading"){.headerlink}
 
 - Support for the [`BF16`{.docutils .literal .notranslate}]{.pre} input data type with an [`FP32`{.docutils .literal .notranslate}]{.pre} output data type for gfx90a.
@@ -501,35 +2383,35 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - [`HIPBLASLT_OVERRIDE_COMPUTE_TYPE_XF32`{.docutils .literal .notranslate}]{.pre} to override the compute type from [`xf32`{.docutils .literal .notranslate}]{.pre} to other compute types.
 
 - Support for the Sigmoid Activation function.
+:::
 
-{#id19 .section}
+::: {#id19 .section}
 #### Resolved issues[\#](#id19 "Link to this heading"){.headerlink}
 
 - Fixed the [`HIPBLAS_STATUS_INTERNAL_ERROR`{.docutils .literal .notranslate}]{.pre} issue that could occur with various sizes in CPX mode.
+:::
+:::::
 
-::
-
-::
-{#hipcub-4-2-0 .section}
+::::: {#hipcub-4-2-0 .section}
 ### **hipCUB** (4.2.0)[\#](#hipcub-4-2-0 "Link to this heading"){.headerlink}
 
-{#id20 .section}
+::: {#id20 .section}
 #### Added[\#](#id20 "Link to this heading"){.headerlink}
 
 - Experimental SPIR-V support.
+:::
 
-{#id21 .section}
+::: {#id21 .section}
 #### Resolved issues[\#](#id21 "Link to this heading"){.headerlink}
 
 - Fixed memory leak issues with some unit tests.
+:::
+:::::
 
-::
-
-:
-{#hipfft-1-0-22 .section}
+:::: {#hipfft-1-0-22 .section}
 ### **hipFFT** (1.0.22)[\#](#hipfft-1-0-22 "Link to this heading"){.headerlink}
 
-{#id22 .section}
+::: {#id22 .section}
 #### Added[\#](#id22 "Link to this heading"){.headerlink}
 
 - hipFFTW execution functions, where input and output data buffers differ from the buffers specified at plan creation:
@@ -545,14 +2427,13 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
   - fftw_execute_dft_c2r
 
   - fftwf_execute_dft_c2r
+:::
+::::
 
-:
-
-::
-{#hipify-22-0-0 .section}
+::::: {#hipify-22-0-0 .section}
 ### **HIPIFY** (22.0.0)[\#](#hipify-22-0-0 "Link to this heading"){.headerlink}
 
-{#id23 .section}
+::: {#id23 .section}
 #### Added[\#](#id23 "Link to this heading"){.headerlink}
 
 - Partial support for CUDA 13.0.0 support.
@@ -574,58 +2455,61 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
   - [`--local-headers`{.docutils .literal .notranslate}]{.pre} to enable hipification of quoted local headers (non-recursive).
 
   - [`--local-headers-recursive`{.docutils .literal .notranslate}]{.pre} to enable hipification of quoted local headers recursively.
+:::
 
-{#id24 .section}
+::: {#id24 .section}
 #### Resolved issues[\#](#id24 "Link to this heading"){.headerlink}
 
 - [#2088](https://github.com/ROCm/HIPIFY/issues/2088){.reference .external} Missing support of [`cuda_bf16.h`{.docutils .literal .notranslate}]{.pre} import in hipification.
+:::
+:::::
 
-::
-
-:
-{#hipsolver-3-2-0 .section}
+:::: {#hipsolver-3-2-0 .section}
 ### **hipSOLVER** (3.2.0)[\#](#hipsolver-3-2-0 "Link to this heading"){.headerlink}
 
-{#id25 .section}
+::: {#id25 .section}
 #### Added[\#](#id25 "Link to this heading"){.headerlink}
 
 - Ability to control rocSOLVER logging using the environment variables [`ROCSOLVER_LEVELS`{.docutils .literal .notranslate}]{.pre} and [`ROCSOLVER_LAYER`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::
 
-:
-
-{#hipsparse-4-2-0 .section}
+:::::: {#hipsparse-4-2-0 .section}
 ### **hipSPARSE** (4.2.0)[\#](#hipsparse-4-2-0 "Link to this heading"){.headerlink}
 
-{#id26 .section}
+::: {#id26 .section}
 #### Added[\#](#id26 "Link to this heading"){.headerlink}
 
 - [`--clients-only`{.docutils .literal .notranslate}]{.pre} option to the [`install.sh`{.docutils .literal .notranslate}]{.pre} and [`rmake.py`{.docutils .literal .notranslate}]{.pre} scripts for building only the clients when using a version of hipSPARSE that is already installed.
+:::
 
-{#id27 .section}
+::: {#id27 .section}
 #### Optimized[\#](#id27 "Link to this heading"){.headerlink}
 
 - Improved the user documentation.
+:::
 
-{#id28 .section}
+::: {#id28 .section}
 #### Resolved Issues[\#](#id28 "Link to this heading"){.headerlink}
 
 - Fixed a memory leak in the [`hipsparseCreate`{.docutils .literal .notranslate}]{.pre} functions.
+:::
+::::::
 
-:
-{#hipsparselt-0-2-6 .section}
+:::: {#hipsparselt-0-2-6 .section}
 ### **hipSPARSELt** (0.2.6)[\#](#hipsparselt-0-2-6 "Link to this heading"){.headerlink}
 
-{#id29 .section}
+::: {#id29 .section}
 #### Optimized[\#](#id29 "Link to this heading"){.headerlink}
 
 - Provided more kernels for the [`FP16`{.docutils .literal .notranslate}]{.pre} and [`FP8(E4M3)`{.docutils .literal .notranslate}]{.pre} data types.
+:::
+::::
 
-:
-
-{#hiptensor-2-2-0 .section}
+:::::: {#hiptensor-2-2-0 .section}
 ### **hipTensor** (2.2.0)[\#](#hiptensor-2-2-0 "Link to this heading"){.headerlink}
 
-{#id30 .section}
+::: {#id30 .section}
 #### Added[\#](#id30 "Link to this heading"){.headerlink}
 
 - Software-managed plan cache support.
@@ -643,8 +2527,9 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - A CMake function to allow projects to query architecture support.
 
 - An option to configure the memory layout for tests and benchmarks.
+:::
 
-{#id31 .section}
+::: {#id31 .section}
 #### Changed[\#](#id31 "Link to this heading"){.headerlink}
 
 - hipTensor has been moved into the new rocm-libraries "monorepo" repository []{.fab .fa-github} [rocm-libraries](https://github.com/ROCm/rocm-libraries){.reference .external}. This repository consolidates a number of separate ROCm libraries and shared components.
@@ -656,35 +2541,41 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - Include files [`hiptensor/hiptensor.hpp`{.docutils .literal .notranslate}]{.pre} and [`hiptensor/hiptensor_types.hpp`{.docutils .literal .notranslate}]{.pre} are now deprecated. Use [`hiptensor/hiptensor.h`{.docutils .literal .notranslate}]{.pre} and [`hiptensor/hiptensor_types.h`{.docutils .literal .notranslate}]{.pre} instead.
 
 - Converted include guards from #ifndef/#define/#endif to #pragma once.
+:::
 
-{#id32 .section}
+::: {#id32 .section}
 #### Resolved issues[\#](#id32 "Link to this heading"){.headerlink}
 
 - Removed large tensor sizes causing problem in benchmarks.
+:::
+::::::
 
-{#llvm-project-22-0-0 .section}
+:::::: {#llvm-project-22-0-0 .section}
 ### **llvm-project** (22.0.0)[\#](#llvm-project-22-0-0 "Link to this heading"){.headerlink}
 
-{#id33 .section}
+::: {#id33 .section}
 #### Added[\#](#id33 "Link to this heading"){.headerlink}
 
 - Enabled ThinLTO for ROCm compilers using [`-foffload-lto=thin`{.docutils .literal .notranslate}]{.pre}. For more information, see [ROCm compiler reference](https://rocm.docs.amd.com/projects/llvm-project/en/docs-7.2.0/reference/rocmcc.html#amd-gpu-compilation){.reference .external}.
+:::
 
-{#id34 .section}
+::: {#id34 .section}
 #### Changed[\#](#id34 "Link to this heading"){.headerlink}
 
 - Updated clang/llvm to AMD clang version 22.0.0 (equivalent to LLVM 22.0.0 with additional out-of-tree patches).
+:::
 
-{#id35 .section}
+::: {#id35 .section}
 #### Upcoming changes[\#](#id35 "Link to this heading"){.headerlink}
 
 - As of ROCm 7.2.0, the [HIPCC](https://rocm.docs.amd.com/projects/HIPCC/en/latest/index.html){.reference .external} compiler is deprecated. HIPCC now invokes [AMD Clang](https://rocm.docs.amd.com/projects/llvm-project/en/latest/index.html){.reference .external}. It's recommended that you now invoke AMD Clang directly rather than using HIPCC. There isn't any expected impact on usability, functionality, or performance when invoking AMD Clang directly. In a future ROCm release, HIPCC will become a symbolic link to AMD Clang.
+:::
+::::::
 
-::::
-{#migraphx-2-15-0 .section}
+::::::: {#migraphx-2-15-0 .section}
 ### **MIGraphX** (2.15.0)[\#](#migraphx-2-15-0 "Link to this heading"){.headerlink}
 
-{#id36 .section}
+::: {#id36 .section}
 #### Added[\#](#id36 "Link to this heading"){.headerlink}
 
 - MXFP4 support for Quark and Brevitas quantized models.
@@ -708,8 +2599,9 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - Operator Builders with supporting documentation.
 
 - Index range check to the Gather operator.
+:::
 
-{#id37 .section}
+::: {#id37 .section}
 #### Changed[\#](#id37 "Link to this heading"){.headerlink}
 
 - Updated the Resize operator to support linear mode for Dynamic shapes.
@@ -729,8 +2621,9 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - Model compilation failures now produce an mxr file for debugging the failure.
 
 - Bumped SQlite3 to 3.50.4.
+:::
 
-{#id38 .section}
+::: {#id38 .section}
 #### Optimized[\#](#id38 "Link to this heading"){.headerlink}
 
 - Converted the [`LRN`{.docutils .literal .notranslate}]{.pre} operator to an optimized [`pooling`{.docutils .literal .notranslate}]{.pre} operator.
@@ -740,8 +2633,9 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - Reduced the number of splits used for [`split_reduce`{.docutils .literal .notranslate}]{.pre}.
 
 - Improved layout propagation in pointwise fusion when using broadcasted inputs.
+:::
 
-{#id39 .section}
+::: {#id39 .section}
 #### Resolved issues[\#](#id39 "Link to this heading"){.headerlink}
 
 - Quiet nrvo and noreturn warnings.
@@ -765,14 +2659,13 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - Ensured directories exist when generating files for debugging.
 
 - Resolved a compilation hang issue.
+:::
+:::::::
 
-::::
-
-::::
-{#miopen-3-5-1 .section}
+::::::: {#miopen-3-5-1 .section}
 ### **MIOpen** (3.5.1)[\#](#miopen-3-5-1 "Link to this heading"){.headerlink}
 
-{#id40 .section}
+::: {#id40 .section}
 #### Added[\#](#id40 "Link to this heading"){.headerlink}
 
 - 3D heuristics for gfx950.
@@ -782,13 +2675,15 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - Option to log when MIOpen starts and finishes tuning.
 
 - Winograd Fury 4.6.0 for gfx12 for improved convolution performance.
+:::
 
-{#id41 .section}
+::: {#id41 .section}
 #### Changed[\#](#id41 "Link to this heading"){.headerlink}
 
 - Ported several OCL kernels to HIP.
+:::
 
-{#id42 .section}
+::: {#id42 .section}
 #### Optimized[\#](#id42 "Link to this heading"){.headerlink}
 
 - Improved Composable Kernel (CK) kernel selection during tuning.
@@ -796,8 +2691,9 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - Improved user DB file locking to better handle network storage.
 
 - Improved performance for MIOpen check numerics capabilities.
+:::
 
-{#id43 .section}
+::: {#id43 .section}
 #### Resolved issues[\#](#id43 "Link to this heading"){.headerlink}
 
 - Addressed an issue in the stride adjustment logic for ASM (MISA) kernels when the output dimension is one.
@@ -807,55 +2703,55 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - \[BatchNorm\] Fixed issue where batchnorm tuning would give incorrect results.
 
 - Fixed issue where generic search was not providing sufficient warm-up for some kernels.
+:::
+:::::::
 
-::::
-
-::::
-{#mivisionx-3-5-0 .section}
+::::::: {#mivisionx-3-5-0 .section}
 ### **MIVisionX** (3.5.0)[\#](#mivisionx-3-5-0 "Link to this heading"){.headerlink}
 
-{#id44 .section}
+::: {#id44 .section}
 #### Changed[\#](#id44 "Link to this heading"){.headerlink}
 
 - AMD Clang++ location updated to [`${ROCM_PATH}/lib/llvm/bin`{.docutils .literal .notranslate}]{.pre}.
 
 - Required RPP version updated to RPP V2.2.1.
+:::
 
-{#id45 .section}
+::: {#id45 .section}
 #### Resolved issues[\#](#id45 "Link to this heading"){.headerlink}
 
 - Memory leaks in OpenVX core, vx_nn, & vx_opencv.
+:::
 
-{#id46 .section}
+::: {#id46 .section}
 #### Known issues[\#](#id46 "Link to this heading"){.headerlink}
 
 - Installation on RedHat and SLES requires the manual installation of the FFmpeg and OpenCV dev packages.
+:::
 
-{#id47 .section}
+::: {#id47 .section}
 #### Upcoming changes[\#](#id47 "Link to this heading"){.headerlink}
 
 - VX_AMD_MEDIA - [`rocDecode`{.docutils .literal .notranslate}]{.pre} and [`rocJPEG`{.docutils .literal .notranslate}]{.pre} support for hardware decode.
+:::
+:::::::
 
-::::
-
-:
-{#rccl-2-27-7 .section}
+:::: {#rccl-2-27-7 .section}
 ### **RCCL** (2.27.7)[\#](#rccl-2-27-7 "Link to this heading"){.headerlink}
 
-{#id48 .section}
+::: {#id48 .section}
 #### Changed[\#](#id48 "Link to this heading"){.headerlink}
 
 - RCCL error messages have been made more verbose in several cases. RCCL now prints out fatal error messages by default. Fatal error messages can be suppressed by setting [`NCCL_DEBUG=NONE`{.docutils .literal .notranslate}]{.pre}.
 
 - Disabled [`reduceCopyPacks`{.docutils .literal .notranslate}]{.pre} pipelining for [`gfx950`{.docutils .literal .notranslate}]{.pre}.
-
-:
-
+:::
 ::::
-{#rocal-2-5-0 .section}
+
+::::::: {#rocal-2-5-0 .section}
 ### **rocAL** (2.5.0)[\#](#rocal-2-5-0 "Link to this heading"){.headerlink}
 
-{#id49 .section}
+::: {#id49 .section}
 #### Added[\#](#id49 "Link to this heading"){.headerlink}
 
 - [`EnumRegistry`{.docutils .literal .notranslate}]{.pre} to register all the enums present in rocAL.
@@ -865,8 +2761,9 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - [`PipelineOperator`{.docutils .literal .notranslate}]{.pre} class to represent operators in the pipeline with metadata.
 
 - Support to track operators in MasterGraph with unique naming.
+:::
 
-{#id50 .section}
+::: {#id50 .section}
 #### Changed[\#](#id50 "Link to this heading"){.headerlink}
 
 - OpenCL backend support is deprecated.
@@ -876,8 +2773,9 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - Refactored external enum usage in rocAL to maintain separation between external and internal enums.
 
 - Introduced the following enums [`ResizeScalingMode`{.docutils .literal .notranslate}]{.pre}, [`ResizeInterpolationType`{.docutils .literal .notranslate}]{.pre}, [`MelScaleFormula`{.docutils .literal .notranslate}]{.pre}, [`AudioBorderType`{.docutils .literal .notranslate}]{.pre}, and [`OutOfBoundsPolicy`{.docutils .literal .notranslate}]{.pre} in [`commons.h`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id51 .section}
+::: {#id51 .section}
 #### Resolved issues[\#](#id51 "Link to this heading"){.headerlink}
 
 - Use HIP memory for fused crop rocJPEG decoder.
@@ -885,81 +2783,89 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - Issue in numpy loader where ROI is updated incorrectly.
 
 - Issue in CropResize node where [`crop_w`{.docutils .literal .notranslate}]{.pre} and [`crop_h`{.docutils .literal .notranslate}]{.pre} values were not correctly updated.
+:::
 
-{#id52 .section}
+::: {#id52 .section}
 #### Known issues[\#](#id52 "Link to this heading"){.headerlink}
 
 - Package installation on SLES requires manually installing [`TurboJPEG`{.docutils .literal .notranslate}]{.pre}.
 
 - Package installation on RedHat and SLES requires manually installing the FFmpeg dev package.
+:::
+:::::::
 
-::::
-
-:
-{#rocalution-4-1-0 .section}
+:::: {#rocalution-4-1-0 .section}
 ### **rocALUTION** (4.1.0)[\#](#rocalution-4-1-0 "Link to this heading"){.headerlink}
 
-{#id53 .section}
+::: {#id53 .section}
 #### Added[\#](#id53 "Link to this heading"){.headerlink}
 
 - [`--clients-only`{.docutils .literal .notranslate}]{.pre} option to the [`install.sh`{.docutils .literal .notranslate}]{.pre} and [`rmake.py`{.docutils .literal .notranslate}]{.pre} scripts to allow building only the clients while using an already installed version of rocALUTION.
+:::
+::::
 
-:
-
-{#rocblas-5-2-0 .section}
+:::::: {#rocblas-5-2-0 .section}
 ### **rocBLAS** (5.2.0)[\#](#rocblas-5-2-0 "Link to this heading"){.headerlink}
 
-{#id54 .section}
+::: {#id54 .section}
 #### Added[\#](#id54 "Link to this heading"){.headerlink}
 
 - Level 3 [`syrk_ex`{.docutils .literal .notranslate}]{.pre} function for both C and FORTRAN, without API support for the ILP64 format.
+:::
 
-{#id55 .section}
+::: {#id55 .section}
 #### Optimized[\#](#id55 "Link to this heading"){.headerlink}
 
 - Level 2 [`tpmv`{.docutils .literal .notranslate}]{.pre} and [`sbmv`{.docutils .literal .notranslate}]{.pre} functions.
+:::
 
-{#id56 .section}
+::: {#id56 .section}
 #### Resolved issues[\#](#id56 "Link to this heading"){.headerlink}
 
 - Corrected client memory use counts for the [`ROCBLAS_CLIENT_RAM_GB_LIMIT`{.docutils .literal .notranslate}]{.pre} environment variable.
 
 - Fixed false Clang static analysis warnings.
+:::
+::::::
 
-{#rocdecode-1-5-0 .section}
+:::::: {#rocdecode-1-5-0 .section}
 ### **rocDecode** (1.5.0)[\#](#rocdecode-1-5-0 "Link to this heading"){.headerlink}
 
-{#id57 .section}
+::: {#id57 .section}
 #### Added[\#](#id57 "Link to this heading"){.headerlink}
 
 - Logging control. Message output from the core components is now controlled by the logging level threshold, which can be set by an environment variable or other methods.
 
 - The new [`rocdecode-host`{.docutils .literal .notranslate}]{.pre} package must be installed to use the FFmpeg decoder.
+:::
 
-{#id58 .section}
+::: {#id58 .section}
 #### Changed[\#](#id58 "Link to this heading"){.headerlink}
 
 - Updated [`libdrm`{.docutils .literal .notranslate}]{.pre} path configuration and [`libva`{.docutils .literal .notranslate}]{.pre} version requirements for ROCm and TheRock platforms.
+:::
 
-{#id59 .section}
+::: {#id59 .section}
 #### Resolved issues[\#](#id59 "Link to this heading"){.headerlink}
 
 - Fixed the build error with videodecodepicfiles sample.
 
 - Added error handling of sample app command option combination of memory type OUT_SURFACE_MEM_NOT_MAPPED and MD5 generation.
+:::
+::::::
 
-::
-{#rocfft-1-0-36 .section}
+::::: {#rocfft-1-0-36 .section}
 ### **rocFFT** (1.0.36)[\#](#rocfft-1-0-36 "Link to this heading"){.headerlink}
 
-{#id60 .section}
+::: {#id60 .section}
 #### Optimized[\#](#id60 "Link to this heading"){.headerlink}
 
 - Removed a potentially unnecessary global transpose operation from MPI 3D multi-GPU pencil decompositions.
 
 - Enabled optimization of 3D pencil decompositions for single-process multi-GPU transforms.
+:::
 
-{#id61 .section}
+::: {#id61 .section}
 #### Resolved issues[\#](#id61 "Link to this heading"){.headerlink}
 
 - Fixed potential division by zero when constructing plans using dimensions of length 1.
@@ -967,14 +2873,13 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - Fixed result scaling on multi-device transforms.
 
 - Fixed callbacks on multi-device transforms.
+:::
+:::::
 
-::
-
-:
-{#rocjpeg-1-3-0 .section}
+:::: {#rocjpeg-1-3-0 .section}
 ### **rocJPEG** (1.3.0)[\#](#rocjpeg-1-3-0 "Link to this heading"){.headerlink}
 
-{#id62 .section}
+::: {#id62 .section}
 #### Changed[\#](#id62 "Link to this heading"){.headerlink}
 
 - Updated [`libdrm`{.docutils .literal .notranslate}]{.pre} path configuration and [`libva`{.docutils .literal .notranslate}]{.pre} version requirements for ROCm and TheRock platforms.
@@ -982,25 +2887,23 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - RHEL now uses [`libva-devel`{.docutils .literal .notranslate}]{.pre} instead of [`libva-amdgpu`{.docutils .literal .notranslate}]{.pre}/[`libva-amdgpu-devel`{.docutils .literal .notranslate}]{.pre}.
 
 - Use ROCm clang++ from [`${ROCM_PATH}/lib/llvm/bin`{.docutils .literal .notranslate}]{.pre} location.
+:::
+::::
 
-:
-
-:
-{#rocm-bandwidth-test-2-6-0 .section}
+:::: {#rocm-bandwidth-test-2-6-0 .section}
 ### **ROCm Bandwidth Test** (2.6.0)[\#](#rocm-bandwidth-test-2-6-0 "Link to this heading"){.headerlink}
 
-{#id63 .section}
+::: {#id63 .section}
 #### Resolved issues[\#](#id63 "Link to this heading"){.headerlink}
 
 - [`rocm-bandwidth-test`{.docutils .literal .notranslate}]{.pre} folder is no longer present after driver uninstallation.
+:::
+::::
 
-:
-
-:::::
-{#rocm-compute-profiler-3-4-0 .section}
+:::::::: {#rocm-compute-profiler-3-4-0 .section}
 ### **ROCm Compute Profiler** (3.4.0)[\#](#rocm-compute-profiler-3-4-0 "Link to this heading"){.headerlink}
 
-{#id64 .section}
+::: {#id64 .section}
 #### Added[\#](#id64 "Link to this heading"){.headerlink}
 
 - [`--list-blocks`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`<arch>`{.docutils .literal .notranslate}]{.pre} option to general options. It lists the available IP blocks on the specified arch (similar to [`--list-metrics`{.docutils .literal .notranslate}]{.pre}). However, cannot be used with [`--block`{.docutils .literal .notranslate}]{.pre}.
@@ -1018,8 +2921,9 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - AMDGPU driver info and GPU VRAM attributes in the system info section of the analysis report.
 
 - [`CU`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`Utilization`{.docutils .literal .notranslate}]{.pre} metric to display the percentage of CUs utilized during kernel execution.
+:::
 
-{#id65 .section}
+::: {#id65 .section}
 #### Changed[\#](#id65 "Link to this heading"){.headerlink}
 
 - [`-b/--block`{.docutils .literal .notranslate}]{.pre} accepts block alias(es). See block aliases using command-line option [`--list-blocks`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`<arch>`{.docutils .literal .notranslate}]{.pre}.
@@ -1029,8 +2933,9 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - [`amdsmi`{.docutils .literal .notranslate}]{.pre} python API is used instead of [`amd-smi`{.docutils .literal .notranslate}]{.pre} CLI to query GPU specifications.
 
 - Empty cells replaced with [`N/A`{.docutils .literal .notranslate}]{.pre} for unavailable metrics in analysis.
+:::
 
-{#removed .section}
+::: {#removed .section}
 #### Removed[\#](#removed "Link to this heading"){.headerlink}
 
 - Removed [`database`{.docutils .literal .notranslate}]{.pre} mode from ROCm Compute Profiler in favor of other visualization methods, rather than Grafana and MongoDB integration, such as the upcoming Analysis DB-based Visualizer.
@@ -1038,35 +2943,39 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
   - Plotly server based standalone GUI.
 
   - Commandline based Textual User Interface.
+:::
 
-{#id66 .section}
+::: {#id66 .section}
 #### Resolved issues[\#](#id66 "Link to this heading"){.headerlink}
 
 - Fixed issue of sL1D metric values displaying as [`N/A`{.docutils .literal .notranslate}]{.pre} in memory chart diagram.
+:::
 
-{#id67 .section}
+::: {#id67 .section}
 #### Upcoming changes[\#](#id67 "Link to this heading"){.headerlink}
 
 - [`Active`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`CUs`{.docutils .literal .notranslate}]{.pre} metric has been deprecated in favor of [`CU`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`Utilization`{.docutils .literal .notranslate}]{.pre} and will be removed in a future release.
+:::
+::::::::
 
-:::::
-
-{#rocm-systems-profiler-1-3-0 .section}
+:::::: {#rocm-systems-profiler-1-3-0 .section}
 ### **ROCm Systems Profiler** (1.3.0)[\#](#rocm-systems-profiler-1-3-0 "Link to this heading"){.headerlink}
 
-{#id68 .section}
+::: {#id68 .section}
 #### Added[\#](#id68 "Link to this heading"){.headerlink}
 
 - [`ROCPROFSYS_PERFETTO_FLUSH_PERIOD_MS`{.docutils .literal .notranslate}]{.pre} configuration setting to set the flush period for Perfetto traces. The default value is 10000 ms (10 seconds).
 
 - Fetching of the [`rocpd`{.docutils .literal .notranslate}]{.pre} schema from rocprofiler-sdk-rocpd.
+:::
 
-{#id69 .section}
+::: {#id69 .section}
 #### Changed[\#](#id69 "Link to this heading"){.headerlink}
 
 - Improved Fortran main function detection to ensure [`rocprof-sys-instrument`{.docutils .literal .notranslate}]{.pre} uses the Fortran program main function instead of the C wrapper.
+:::
 
-{#id70 .section}
+::: {#id70 .section}
 #### Resolved issues[\#](#id70 "Link to this heading"){.headerlink}
 
 - Fixed a crash when running [`rocprof-sys-python`{.docutils .literal .notranslate}]{.pre} with ROCPROFSYS_USE_ROCPD enabled.
@@ -1076,12 +2985,13 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - Fixed a soft hang in collecting available PAPI metrics on some systems with Intel CPU.
 
 - Fixed some duplicate HIP and HSA API events in [`rocpd`{.docutils .literal .notranslate}]{.pre} output.
+:::
+::::::
 
-::::
-{#rocprim-4-2-0 .section}
+::::::: {#rocprim-4-2-0 .section}
 ### **rocPRIM** (4.2.0)[\#](#rocprim-4-2-0 "Link to this heading"){.headerlink}
 
-{#id71 .section}
+::: {#id71 .section}
 #### Added[\#](#id71 "Link to this heading"){.headerlink}
 
 - Missing benchmarks, such that every autotuned specialization is now benchmarked.
@@ -1097,13 +3007,15 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - Kernel Tuner proof-of-concept.
 
 - Enhanced SPIR-V support and performance.
+:::
 
-{#id72 .section}
+::: {#id72 .section}
 #### Optimized[\#](#id72 "Link to this heading"){.headerlink}
 
 - Improved performance of [`device_radix_sort`{.docutils .literal .notranslate}]{.pre} onesweep variant.
+:::
 
-{#id73 .section}
+::: {#id73 .section}
 #### Resolved issues[\#](#id73 "Link to this heading"){.headerlink}
 
 - Fixed the issue where [`rocprim::device_scan_by_key`{.docutils .literal .notranslate}]{.pre} failed when performing an "in-place" inclusive scan by reusing "keys" as output, by adding a buffer to store the last keys of each block (excluding the last block). This fix only affects the specific case of reusing "keys" as output in an inclusive scan, and does not affect other cases.
@@ -1117,18 +3029,19 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - Fixed handling of undefined behaviour when [`__builtin_clz`{.docutils .literal .notranslate}]{.pre}, [`__builtin_ctz`{.docutils .literal .notranslate}]{.pre}, and similar builtins are called.
 
 - Fixed potential build error with [`rocprim::detail::histogram_impl`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id74 .section}
+::: {#id74 .section}
 #### Known issues[\#](#id74 "Link to this heading"){.headerlink}
 
 - Potential hang with [`rocprim::partition_threeway`{.docutils .literal .notranslate}]{.pre} with large input data sizes on later ROCm builds. A workaround is currently in place.
+:::
+:::::::
 
-::::
-
-{#rocprofiler-sdk-1-1-0 .section}
+:::::: {#rocprofiler-sdk-1-1-0 .section}
 ### **ROCprofiler-SDK** (1.1.0)[\#](#rocprofiler-sdk-1-1-0 "Link to this heading"){.headerlink}
 
-{#id75 .section}
+::: {#id75 .section}
 #### Added[\#](#id75 "Link to this heading"){.headerlink}
 
 - Counter collection support for gfx1150 and gfx1151.
@@ -1136,8 +3049,9 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - HSA Extension API v8 support.
 
 - [`hipStreamCopyAttributes`{.docutils .literal .notranslate}]{.pre} API implementation.
+:::
 
-{#id76 .section}
+::: {#id76 .section}
 #### Optimized[\#](#id76 "Link to this heading"){.headerlink}
 
 - Improved process attachment and updated the corresponding [documentation](https://rocm.docs.amd.com/projects/rocprofiler-sdk/en/latest/how-to/using-rocprofv3-process-attachment.html){.reference .external}.
@@ -1145,8 +3059,9 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - Improved [Quick reference guide for rocprofv3](https://rocm.docs.amd.com/projects/rocprofiler-sdk/en/latest/quick_guide.html){.reference .external}.
 
 - Updated the [installation documentation](https://rocm.docs.amd.com/projects/rocprofiler-sdk/en/latest/install/installation.html){.reference .external} with the links to the latest repository.
+:::
 
-{#id77 .section}
+::: {#id77 .section}
 #### Resolved issues[\#](#id77 "Link to this heading"){.headerlink}
 
 - Fixed multi-GPU dimension mismatch.
@@ -1158,47 +3073,53 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - Fixed stream ID errors arising during process attachment.
 
 - Fixed issues arising during dynamic code object loading.
+:::
+::::::
 
-:
-{#rocpydecode-0-8-0 .section}
+:::: {#rocpydecode-0-8-0 .section}
 ### **rocPyDecode** (0.8.0)[\#](#rocpydecode-0-8-0 "Link to this heading"){.headerlink}
 
-{#id78 .section}
+::: {#id78 .section}
 #### Changed[\#](#id78 "Link to this heading"){.headerlink}
 
 - CXX Compiler location - Use default [`${ROCM_PATH}/lib/llvm/bin`{.docutils .literal .notranslate}]{.pre} for AMD Clang.
+:::
+::::
 
-:
-
-{#rocrand-4-2-0 .section}
+:::::: {#rocrand-4-2-0 .section}
 ### **rocRAND** (4.2.0)[\#](#rocrand-4-2-0 "Link to this heading"){.headerlink}
 
-{#id79 .section}
+::: {#id79 .section}
 #### Added[\#](#id79 "Link to this heading"){.headerlink}
 
 - Added a new CMake option [`-DUSE_SYSTEM_LIB`{.docutils .literal .notranslate}]{.pre} to allow tests to be built from [`ROCm`{.docutils .literal .notranslate}]{.pre} libraries provided by the system.
 
 - Experimental SPIR-V support.
+:::
 
-{#id80 .section}
+::: {#id80 .section}
 #### Changed[\#](#id80 "Link to this heading"){.headerlink}
 
 - The [`launch`{.docutils .literal .notranslate}]{.pre} method in [`host_system`{.docutils .literal .notranslate}]{.pre} and [`device_system`{.docutils .literal .notranslate}]{.pre}, so that kernels with all supported arches can be compiled with correct configuration during host pass. All generators are updated accordingly for support of SPIR-V. To invoke SPIR-V, it should be built with [`-DAMDGPU_TARGETS=amdgcnspirv`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id81 .section}
+::: {#id81 .section}
 #### Removed[\#](#id81 "Link to this heading"){.headerlink}
 
 - For performance reasons, the [`mrg31k3p_state`{.docutils .literal .notranslate}]{.pre}, [`mrg32k3a_state`{.docutils .literal .notranslate}]{.pre}, [`xorwow_state`{.docutils .literal .notranslate}]{.pre} and [`philox4x32_10_state`{.docutils .literal .notranslate}]{.pre} states no longer use the [`boxmuller_float_state`{.docutils .literal .notranslate}]{.pre} and [`boxmuller_double_state`{.docutils .literal .notranslate}]{.pre} states, and the [`boxmuller_float`{.docutils .literal .notranslate}]{.pre} and [`boxmuller_double`{.docutils .literal .notranslate}]{.pre} variables are set with [`NaN`{.docutils .literal .notranslate}]{.pre} as default values.
+:::
+::::::
 
-{#id82 .section}
+:::::: {#id82 .section}
 ### **rocSHMEM** (3.2.0)[\#](#id82 "Link to this heading"){.headerlink}
 
-{#id83 .section}
+::: {#id83 .section}
 #### Added[\#](#id83 "Link to this heading"){.headerlink}
 
 - The GDA conduit for AMD Pensando IONIC.
+:::
 
-{#id84 .section}
+::: {#id84 .section}
 #### Changed[\#](#id84 "Link to this heading"){.headerlink}
 
 - Dependency libraries are now loaded dynamically.
@@ -1216,28 +3137,29 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
   - [`rocshmem_<TYPE>_atomic_{and,or,xor,swap}`{.docutils .literal .notranslate}]{.pre}
 
   - [`rocshmem_<TYPE>_atomic_fetch_{and,or,xor,swap}`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id85 .section}
+::: {#id85 .section}
 #### Known issues[\#](#id85 "Link to this heading"){.headerlink}
 
 - Only 64-bit rocSHMEM atomic APIs are implemented for the GDA conduit.
+:::
+::::::
 
-:
-{#rocsolver-3-32-0 .section}
+:::: {#rocsolver-3-32-0 .section}
 ### **rocSOLVER** (3.32.0)[\#](#rocsolver-3-32-0 "Link to this heading"){.headerlink}
 
-{#id86 .section}
+::: {#id86 .section}
 #### Optimized[\#](#id86 "Link to this heading"){.headerlink}
 
 - Improved the performance of LARFB and downstream functions such as GEQRF and ORMTR.
-
-:
-
+:::
 ::::
-{#rocsparse-4-2-0 .section}
+
+::::::: {#rocsparse-4-2-0 .section}
 ### **rocSPARSE** (4.2.0)[\#](#rocsparse-4-2-0 "Link to this heading"){.headerlink}
 
-{#id87 .section}
+::: {#id87 .section}
 #### Added[\#](#id87 "Link to this heading"){.headerlink}
 
 - Sliced ELL format support to the [`rocsparse_spmv`{.docutils .literal .notranslate}]{.pre} routine.
@@ -1247,20 +3169,23 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - The [`--clients-only`{.docutils .literal .notranslate}]{.pre} option to the [`install.sh`{.docutils .literal .notranslate}]{.pre} and [`rmake.py`{.docutils .literal .notranslate}]{.pre} scripts to only build the clients for a version of rocSPARSE that is already installed.
 
 - NNZ split algorithm [`rocsparse_spmv_alg_csr_nnzsplit`{.docutils .literal .notranslate}]{.pre} to [`rocsparse_spmv`{.docutils .literal .notranslate}]{.pre}. This algorithm might be superior to the existing adaptive algorithm [`rocsparse_spmv_alg_csr_adaptive`{.docutils .literal .notranslate}]{.pre} when running the computation a small number of times because it avoids paying the analysis cost of the adaptive algorithm.
+:::
 
-{#id88 .section}
+::: {#id88 .section}
 #### Changed[\#](#id88 "Link to this heading"){.headerlink}
 
 - rocBLAS is a requirement when it's requested when building from source. Previously, rocBLAS was not used if it could not be found. To opt out of using rocBLAS when building from source, use the [`--no-rocblas`{.docutils .literal .notranslate}]{.pre} option with the [`install.sh`{.docutils .literal .notranslate}]{.pre} or [`rmake.py`{.docutils .literal .notranslate}]{.pre} build scripts.
+:::
 
-{#id89 .section}
+::: {#id89 .section}
 #### Optimized[\#](#id89 "Link to this heading"){.headerlink}
 
 - Significantly improved the [`rocsparse_sddmm`{.docutils .literal .notranslate}]{.pre} routine when using CSR format, especially as the number of columns in the dense [`A`{.docutils .literal .notranslate}]{.pre} matrix (or rows in the dense [`B`{.docutils .literal .notranslate}]{.pre} matrix) increases.
 
 - Improved the user documentation.
+:::
 
-{#id90 .section}
+::: {#id90 .section}
 #### Resolved issues[\#](#id90 "Link to this heading"){.headerlink}
 
 - Fixed the [`rmake.py`{.docutils .literal .notranslate}]{.pre} build script to properly handle [`auto`{.docutils .literal .notranslate}]{.pre} and all options when selecting offload targets.
@@ -1268,14 +3193,13 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - Fixed an issue when building rocSPARSE with the install script on some operating systems.
 
 - Fixed [`std::fma`{.docutils .literal .notranslate}]{.pre} casting in host routines to properly deduce types. This could have previously caused compilation failures when building from source.
+:::
+:::::::
 
-::::
-
-:
-{#rocthrust-4-2-0 .section}
+:::: {#rocthrust-4-2-0 .section}
 ### **rocThrust** (4.2.0)[\#](#rocthrust-4-2-0 "Link to this heading"){.headerlink}
 
-{#id91 .section}
+::: {#id91 .section}
 #### Added[\#](#id91 "Link to this heading"){.headerlink}
 
 - [`thrust::unique_ptr`{.docutils .literal .notranslate}]{.pre} - a smart pointer for managing device memory with automatic cleanup.
@@ -1283,20 +3207,21 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
 - A new cmake option, [`BUILD_OFFLOAD_COMPRESS`{.docutils .literal .notranslate}]{.pre}. When rocThrust is built with this option enabled, the [`--offload-compress`{.docutils .literal .notranslate}]{.pre} switch is passed to the compiler. This causes the compiler to compress the binary that it generates. Compression can be useful when compiling for a large number of targets, because it often results in a larger binary. Without compression, in some cases, the generated binary may become so large symbols are placed out of range, resulting in linking errors. The new [`BUILD_OFFLOAD_COMPRESS`{.docutils .literal .notranslate}]{.pre} option is set to [`ON`{.docutils .literal .notranslate}]{.pre} by default.
 
 - Experimental SPIR-V support.
+:::
+::::
 
-:
-
-{#rocwmma-2-2-0 .section}
+:::::: {#rocwmma-2-2-0 .section}
 ### **rocWMMA** (2.2.0)[\#](#rocwmma-2-2-0 "Link to this heading"){.headerlink}
 
-{#id92 .section}
+::: {#id92 .section}
 #### Added[\#](#id92 "Link to this heading"){.headerlink}
 
 - Sample [`perf_i8gemm`{.docutils .literal .notranslate}]{.pre} to demonstrate [`int8_t`{.docutils .literal .notranslate}]{.pre} as matrix input data type.
 
 - Support for the gfx1150 target.
+:::
 
-{#id93 .section}
+::: {#id93 .section}
 #### Changed[\#](#id93 "Link to this heading"){.headerlink}
 
 - Removed unnecessary const keyword to avoid compiler warnings.
@@ -1306,65 +3231,67 @@ See the [ROCm 7.2.0 release notes](https://rocm.docs.amd.com/en/docs-7.2.0/about
   - The repository migration requires a few changes to the CMake configuration of rocWMMA.
 
   - The repository migration required the GTest dependency to be updated to v1.16.0.
+:::
 
-{#id94 .section}
+::: {#id94 .section}
 #### Resolved issues[\#](#id94 "Link to this heading"){.headerlink}
 
 - Skip invalid test configurations when using 'register file' LDS mapping.
 
 - Ensured transform functions in samples are only available on the device.
+:::
+::::::
 
-::::
-{#rpp-2-2-0 .section}
+::::::: {#rpp-2-2-0 .section}
 ### **RPP** (2.2.0)[\#](#rpp-2-2-0 "Link to this heading"){.headerlink}
 
-{#id95 .section}
+::: {#id95 .section}
 #### Added[\#](#id95 "Link to this heading"){.headerlink}
 
 - Pinned buffer API support for HOST and HIP.
+:::
 
-{#id96 .section}
+::: {#id96 .section}
 #### Changed[\#](#id96 "Link to this heading"){.headerlink}
 
 - AMDClag++ compiler has moved to [`${ROCM_PATH}/lib/llvm/bin`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id97 .section}
+::: {#id97 .section}
 #### Removed[\#](#id97 "Link to this heading"){.headerlink}
 
 - The [`copy_param_float()`{.docutils .literal .notranslate}]{.pre} and [`copy_param_uint()`{.docutils .literal .notranslate}]{.pre} mem copy helper functions have been removed as buffers now consistently use pinned/HIP memory.
+:::
 
-{#id98 .section}
+::: {#id98 .section}
 #### Resolved issues[\#](#id98 "Link to this heading"){.headerlink}
 
 - Test Suite - Error Code Capture updates.
+:::
+:::::::
 
-::::
-
-:
-{#tensile-4-45-0 .section}
+:::: {#tensile-4-45-0 .section}
 ### **Tensile** (4.45.0)[\#](#tensile-4-45-0 "Link to this heading"){.headerlink}
 
-{#id99 .section}
+::: {#id99 .section}
 #### Removed[\#](#id99 "Link to this heading"){.headerlink}
 
 - [`op_sel`{.docutils .literal .notranslate}]{.pre} modifiers for [`v_dot4`{.docutils .literal .notranslate}]{.pre} from Tensile codegen.
 
 - Dependency on [`rocm-agent-enumerator`{.docutils .literal .notranslate}]{.pre} during build.
+:::
+::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::
-{#rocm-7-1-1 .section}
+::::::::::::::::::::::::::::::::::::::::: {#rocm-7-1-1 .section}
 ## ROCm 7.1.1[\#](#rocm-7-1-1 "Link to this heading"){.headerlink}
 
 See the [ROCm 7.1.1 release notes](https://rocm.docs.amd.com/en/docs-7.1.1/about/release-notes.html#rocm-7-1-1-release-notes){.reference .external} for a complete overview of this release.
 
-::::
-{#amd-smi-26-2-0 .section}
+::::::: {#amd-smi-26-2-0 .section}
 ### **AMD SMI** (26.2.0)[\#](#amd-smi-26-2-0 "Link to this heading"){.headerlink}
 
-{#id100 .section}
+::: {#id100 .section}
 #### Added[\#](#id100 "Link to this heading"){.headerlink}
 
 - Caching for repeated ASIC information calls.
@@ -1382,14 +3309,15 @@ See the [ROCm 7.1.1 release notes](https://rocm.docs.amd.com/en/docs-7.1.1/about
 - Support for displaying newer VRAM memory types in [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`static`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--vram`{.docutils .literal .notranslate}]{.pre}.
 
   - The [`amdsmi_get_gpu_vram_info()`{.docutils .literal .notranslate}]{.pre} API now supports detecting DDR5, LPDDR4, LPDDR5, and HBM3E memory types.
+:::
 
-{#id101 .section}
+::: {#id101 .section}
 #### Changed[\#](#id101 "Link to this heading"){.headerlink}
 
 - Updated [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`static`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--numa`{.docutils .literal .notranslate}]{.pre} socket affinity data structure. It now displays CPU affinity information in both hexadecimal bitmask format and expanded CPU core ranges, replacing the previous simplified socket enumeration approach.
+:::
 
-:
-{#id102 .section}
+:::: {#id102 .section}
 #### Resolved issues[\#](#id102 "Link to this heading"){.headerlink}
 
 - Fixed incorrect topology weight calculations.
@@ -1406,35 +3334,34 @@ See the [ROCm 7.1.1 release notes](https://rocm.docs.amd.com/en/docs-7.1.1/about
 
 - Fixed output for [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`xgmi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-l`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--json`{.docutils .literal .notranslate}]{.pre}.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/rocm-rel-7.1/CHANGELOG.md#amd_smi_lib-for-rocm-711){.reference .external} for details, examples, and in-depth descriptions.
-
-:
+:::
 ::::
+:::::::
 
-:
-{#composable-kernel-1-1-0 .section}
+:::: {#composable-kernel-1-1-0 .section}
 ### **Composable Kernel** (1.1.0)[\#](#composable-kernel-1-1-0 "Link to this heading"){.headerlink}
 
-{#id103 .section}
+::: {#id103 .section}
 #### Upcoming changes[\#](#id103 "Link to this heading"){.headerlink}
 
 - Composable Kernel will adopt C++20 features in an upcoming ROCm release, updating the minimum compiler requirement to C++20. Ensure that your development environment meets this requirement to facilitate a seamless transition.
+:::
+::::
 
-:
-
-::
-{#hip-7-1-1 .section}
+::::: {#hip-7-1-1 .section}
 ### **HIP** (7.1.1)[\#](#hip-7-1-1 "Link to this heading"){.headerlink}
 
-{#id104 .section}
+::: {#id104 .section}
 #### Added[\#](#id104 "Link to this heading"){.headerlink}
 
 - Support for the flag [`hipHostRegisterIoMemory`{.docutils .literal .notranslate}]{.pre} in [`hipHostRegister`{.docutils .literal .notranslate}]{.pre}, used to register I/O memory with HIP runtime so the GPU can access it.
+:::
 
-{#id105 .section}
+::: {#id105 .section}
 #### Resolved issues[\#](#id105 "Link to this heading"){.headerlink}
 
 - Incorrect Compute Unit (CU) mask in logging. HIP runtime now correctly sets the field width for the output print operation. When logging is enabled via the environment variable [`AMD_LOG_LEVEL`{.docutils .literal .notranslate}]{.pre}, the runtime logs the accurate CU mask.
@@ -1444,47 +3371,43 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - An error encountered on HIP tear-down after device reset in certain applications due to accessing stale memory objects. HIP runtime now properly releases memory associated with host calls, ensuring reliable device resets.
 
 - A race condition occurred in certain graph-related applications when pending asynchronous signal handlers referenced device memory that had already been released, leading to memory corruption. HIP runtime now uses a reference counting strategy to manage access to device objects in asynchronous event handlers, ensuring safe and reliable memory usage.
+:::
+:::::
 
-::
-
-:
-{#migraphx-2-14-0 .section}
+:::: {#migraphx-2-14-0 .section}
 ### **MIGraphX** (2.14.0)[\#](#migraphx-2-14-0 "Link to this heading"){.headerlink}
 
-{#id106 .section}
+::: {#id106 .section}
 #### Resolved issues[\#](#id106 "Link to this heading"){.headerlink}
 
 - Fixed an error that resulted when running [`make`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`check`{.docutils .literal .notranslate}]{.pre} on systems running on a gfx1201 GPU.
+:::
+::::
 
-:
-
-:
-{#id107 .section}
+:::: {#id107 .section}
 ### **RCCL** (2.27.7)[\#](#id107 "Link to this heading"){.headerlink}
 
-{#id108 .section}
+::: {#id108 .section}
 #### Resolved issues[\#](#id108 "Link to this heading"){.headerlink}
 
 - Fixed a single-node data corruption issue in MSCCL on the AMD Instinct MI350X and MI355X GPUs for the LL protocol. This previously affected about two percent of the runs for single-node [`AllReduce`{.docutils .literal .notranslate}]{.pre} with inputs smaller than 512 KiB.
+:::
+::::
 
-:
-
-:
-{#rocblas-5-1-1 .section}
+:::: {#rocblas-5-1-1 .section}
 ### **rocBLAS** (5.1.1)[\#](#rocblas-5-1-1 "Link to this heading"){.headerlink}
 
-{#id109 .section}
+::: {#id109 .section}
 #### Changed[\#](#id109 "Link to this heading"){.headerlink}
 
 - By default, rocBLAS will not use stream order allocation for its internal workspace. To enable this behavior, set the [`ROCBLAS_STREAM_ORDER_ALLOC`{.docutils .literal .notranslate}]{.pre} environment variable.
+:::
+::::
 
-:
-
-::
-{#id110 .section}
+::::: {#id110 .section}
 ### **ROCm Bandwidth Test** (2.6.0)[\#](#id110 "Link to this heading"){.headerlink}
 
-{#id111 .section}
+::: {#id111 .section}
 #### Resolved issues[\#](#id111 "Link to this heading"){.headerlink}
 
 - Test failure with error message [`Cannot`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`make`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`canonical`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`path`{.docutils .literal .notranslate}]{.pre}.
@@ -1492,8 +3415,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Healthcheck test failure with seg fault on gfx942.
 
 - Segmentation fault observed in [`schmoo`{.docutils .literal .notranslate}]{.pre} and [`one2all`{.docutils .literal .notranslate}]{.pre} when executed on [`sgpu`{.docutils .literal .notranslate}]{.pre} setup.
+:::
 
-{#id112 .section}
+::: {#id112 .section}
 #### Known issues[\#](#id112 "Link to this heading"){.headerlink}
 
 - [`rocm-bandwidth-test`{.docutils .literal .notranslate}]{.pre} folder fails to be removed after driver uninstallation:
@@ -1502,21 +3426,18 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 
   - Workaround: Remove the package manually using:
 
-  :
-{.highlight-default .notranslate}
-  
-highlight
+  :::: {.highlight-default .notranslate}
+  ::: highlight
       sudo apt-get remove -y rocm-bandwidth-test
-  
-  :
+  :::
+  ::::
+:::
+:::::
 
-::
-
-::::
-{#rocm-compute-profiler-3-3-1 .section}
+::::::: {#rocm-compute-profiler-3-3-1 .section}
 ### **ROCm Compute Profiler** (3.3.1)[\#](#rocm-compute-profiler-3-3-1 "Link to this heading"){.headerlink}
 
-{#id113 .section}
+::: {#id113 .section}
 #### Added[\#](#id113 "Link to this heading"){.headerlink}
 
 - Support for PC sampling of multi-kernel applications.
@@ -1524,13 +3445,15 @@ highlight
   - PC Sampling output instructions are displayed with the name of the kernel to which the individual instruction belongs.
 
   - Single kernel selection is supported so that the PC samples of the selected kernel can be displayed.
+:::
 
-{#id114 .section}
+::: {#id114 .section}
 #### Changed[\#](#id114 "Link to this heading"){.headerlink}
 
 - Roofline analysis now runs on GPU 0 by default instead of all GPUs.
+:::
 
-{#id115 .section}
+::: {#id115 .section}
 #### Optimized[\#](#id115 "Link to this heading"){.headerlink}
 
 - Improved roofline benchmarking by updating the [`flops_benchmark`{.docutils .literal .notranslate}]{.pre} calculation.
@@ -1544,43 +3467,41 @@ highlight
   - Added AI points chart with respective values, cache level, and compute/memory bound status.
 
   - Added full kernel names to the symbol chart.
+:::
 
-{#id116 .section}
+::: {#id116 .section}
 #### Resolved issues[\#](#id116 "Link to this heading"){.headerlink}
 
 - Resolved existing issues to improve stability.
+:::
+:::::::
 
-::::
-
-:
-{#rocm-systems-profiler-1-2-1 .section}
+:::: {#rocm-systems-profiler-1-2-1 .section}
 ### **ROCm Systems Profiler** (1.2.1)[\#](#rocm-systems-profiler-1-2-1 "Link to this heading"){.headerlink}
 
-{#id117 .section}
+::: {#id117 .section}
 #### Resolved issues[\#](#id117 "Link to this heading"){.headerlink}
 
 - Fixed an issue of OpenMP Tools (OMPT) events, GPU performance counters, VA-API, MPI, and host events failing to be collected in the [`rocpd`{.docutils .literal .notranslate}]{.pre} output.
+:::
+::::
 
-:
-
-:
-{#rocm-validation-suite-1-3-0 .section}
+:::: {#rocm-validation-suite-1-3-0 .section}
 ### **ROCm Validation Suite** (1.3.0)[\#](#rocm-validation-suite-1-3-0 "Link to this heading"){.headerlink}
 
-{#id118 .section}
+::: {#id118 .section}
 #### Added[\#](#id118 "Link to this heading"){.headerlink}
 
 - Support for different test levels with [`-r`{.docutils .literal .notranslate}]{.pre} option for AMD Instinct MI3XXx GPUs.
 
 - Set compute type for DGEMM operations on AMD Instinct MI350X and MI355X GPUs.
-
-:
-
+:::
 ::::
-{#rocshmem-3-1-0 .section}
+
+::::::: {#rocshmem-3-1-0 .section}
 ### **rocSHMEM** (3.1.0)[\#](#rocshmem-3-1-0 "Link to this heading"){.headerlink}
 
-{#id119 .section}
+::: {#id119 .section}
 #### Added[\#](#id119 "Link to this heading"){.headerlink}
 
 - Allowed IPC, RO, and GDA backends to be selected at runtime.
@@ -1594,8 +3515,9 @@ highlight
 - New APIs:
 
   - [`rocshmem_get_device_ctx`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id120 .section}
+::: {#id120 .section}
 #### Changed[\#](#id120 "Link to this heading"){.headerlink}
 
 - The following APIs have been deprecated:
@@ -1611,41 +3533,45 @@ highlight
 - [`ROCSHMEM_RO_DISABLE_IPC`{.docutils .literal .notranslate}]{.pre} is renamed to [`ROCSHMEM_DISABLE_MIXED_IPC`{.docutils .literal .notranslate}]{.pre}.
 
   - This environment variable wasn't documented in earlier releases. It's now documented.
+:::
 
-{#id121 .section}
+::: {#id121 .section}
 #### Removed[\#](#id121 "Link to this heading"){.headerlink}
 
 - rocSHMEM no longer requires rocPRIM and rocThrust as dependencies.
 
 - Removed MPI compile-time dependency.
+:::
 
-{#id122 .section}
+::: {#id122 .section}
 #### Known issues[\#](#id122 "Link to this heading"){.headerlink}
 
 - Only a subset of rocSHMEM APIs are implemented for the GDA conduit.
+:::
+:::::::
 
-::::
-
-::::
-{#rocwmma-2-1-0 .section}
+::::::: {#rocwmma-2-1-0 .section}
 ### **rocWMMA** (2.1.0)[\#](#rocwmma-2-1-0 "Link to this heading"){.headerlink}
 
-{#id123 .section}
+::: {#id123 .section}
 #### Added[\#](#id123 "Link to this heading"){.headerlink}
 
 - More unit tests to increase the code coverage.
+:::
 
-{#id124 .section}
+::: {#id124 .section}
 #### Changed[\#](#id124 "Link to this heading"){.headerlink}
 
 - Increased compile timeout and improved visualization in [`math-ci`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id125 .section}
+::: {#id125 .section}
 #### Removed[\#](#id125 "Link to this heading"){.headerlink}
 
 - Absolute paths from the [`RPATH`{.docutils .literal .notranslate}]{.pre} of sample and test binary files.
+:::
 
-{#id126 .section}
+::: {#id126 .section}
 #### Resolved issues[\#](#id126 "Link to this heading"){.headerlink}
 
 - Fixed issues caused by HIP changes:
@@ -1661,21 +3587,19 @@ highlight
 - Corrected test predicates for [`BLK`{.docutils .literal .notranslate}]{.pre} and [`VW`{.docutils .literal .notranslate}]{.pre} cooperative kernels.
 
 - Modified [`compute_utils.sh`{.docutils .literal .notranslate}]{.pre} in [`build-infra`{.docutils .literal .notranslate}]{.pre} to ensure rocWMMA is built with gfx1151 target for ROCm 7.0 and beyond.
+:::
+:::::::
+:::::::::::::::::::::::::::::::::::::::::
 
-::::
-::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-{#rocm-7-1-0 .section}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#rocm-7-1-0 .section}
 ## ROCm 7.1.0[\#](#rocm-7-1-0 "Link to this heading"){.headerlink}
 
 See the [ROCm 7.1.0 release notes](https://rocm.docs.amd.com/en/docs-7.1.0/about/release-notes.html#rocm-7-1-0-release-notes){.reference .external} for a complete overview of this release.
 
-:::::
-{#amd-smi-26-1-0 .section}
+:::::::: {#amd-smi-26-1-0 .section}
 ### **AMD SMI** (26.1.0)[\#](#amd-smi-26-1-0 "Link to this heading"){.headerlink}
 
-{#id127 .section}
+::: {#id127 .section}
 #### Added[\#](#id127 "Link to this heading"){.headerlink}
 
 - [`GPU`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`LINK`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`PORT`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`STATUS`{.docutils .literal .notranslate}]{.pre} table to [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`xgmi`{.docutils .literal .notranslate}]{.pre} command. The [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`xgmi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-s`{.docutils .literal .notranslate}]{.pre} or [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`xgmi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--source-status`{.docutils .literal .notranslate}]{.pre} will now show the [`GPU`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`LINK`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`PORT`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`STATUS`{.docutils .literal .notranslate}]{.pre} table.
@@ -1683,8 +3607,9 @@ See the [ROCm 7.1.0 release notes](https://rocm.docs.amd.com/en/docs-7.1.0/about
 - [`amdsmi_get_gpu_revision()`{.docutils .literal .notranslate}]{.pre} to Python API. This function retrieves the GPU revision ID. Available in [`amdsmi_interface.py`{.docutils .literal .notranslate}]{.pre} as [`amdsmi_get_gpu_revision()`{.docutils .literal .notranslate}]{.pre}.
 
 - Gpuboard and baseboard temperatures to [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`metric`{.docutils .literal .notranslate}]{.pre} command.
+:::
 
-{#id128 .section}
+::: {#id128 .section}
 #### Changed[\#](#id128 "Link to this heading"){.headerlink}
 
 - Struct [`amdsmi_topology_nearest_t`{.docutils .literal .notranslate}]{.pre} member [`processor_list`{.docutils .literal .notranslate}]{.pre}. Member size changed, processor_list\[AMDSMI_MAX_DEVICES \* AMDSMI_MAX_NUM_XCP\].
@@ -1704,14 +3629,15 @@ See the [ROCm 7.1.0 release notes](https://rocm.docs.amd.com/en/docs-7.1.0/about
   - Legacy command [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`static`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--vbios`{.docutils .literal .notranslate}]{.pre} remains functional for backward compatibility, but displays updated IFWI heading.
 
   - The Python, C, and Rust API for [`amdsmi_get_gpu_vbios_version()`{.docutils .literal .notranslate}]{.pre} will now have a new field called [`boot_firmware`{.docutils .literal .notranslate}]{.pre}, which will return the legacy vbios version number that is also known as the Unified BootLoader (UBL) version.
+:::
 
-{#id129 .section}
+::: {#id129 .section}
 #### Optimized[\#](#id129 "Link to this heading"){.headerlink}
 
 - Optimized the way [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`process`{.docutils .literal .notranslate}]{.pre} validates, which processes are running on a GPU.
+:::
 
-:
-{#id130 .section}
+:::: {#id130 .section}
 #### Resolved issues[\#](#id130 "Link to this heading"){.headerlink}
 
 - Fixed a CPER record count mismatch issue when using the [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`ras`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--cper`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--file-limit`{.docutils .literal .notranslate}]{.pre}. Updated the deletion calculation to use [`files_to_delete`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`=`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`len(folder_files)`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`file_limit`{.docutils .literal .notranslate}]{.pre} for exact file count management.
@@ -1722,37 +3648,36 @@ See the [ROCm 7.1.0 release notes](https://rocm.docs.amd.com/en/docs-7.1.0/about
 
 - Fixed certain output in [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre} when GPUs are partitioned. It fixes the issue with amd-smi monitor such as: [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-Vqt`{.docutils .literal .notranslate}]{.pre}, [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-g`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`0`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-Vqt`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-w`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`1`{.docutils .literal .notranslate}]{.pre}, and [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-Vqt`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--file`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`/tmp/test1`{.docutils .literal .notranslate}]{.pre}. These commands will now be able to display as normal in partitioned GPU scenarios.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/rocm-rel-7.1/CHANGELOG.md#amd_smi_lib-for-rocm-710){.reference .external} for details, examples, and in-depth descriptions.
+:::
+::::
+::::::::
 
-:
-:::::
-
-::
-{#id131 .section}
+::::: {#id131 .section}
 ### **Composable Kernel** (1.1.0)[\#](#id131 "Link to this heading"){.headerlink}
 
-{#id132 .section}
+::: {#id132 .section}
 #### Added[\#](#id132 "Link to this heading"){.headerlink}
 
 - Support for hdim as a multiple of 32 for FMHA (fwd/fwd_splitkv/bwd).
 
 - Support for elementwise kernel.
+:::
 
-{#id133 .section}
+::: {#id133 .section}
 #### Upcoming changes[\#](#id133 "Link to this heading"){.headerlink}
 
 - Non-grouped convolutions are deprecated. Their functionality is supported by grouped convolution.
+:::
+:::::
 
-::
-
-::::
-{#hip-7-1-0 .section}
+::::::: {#hip-7-1-0 .section}
 ### **HIP** (7.1.0)[\#](#hip-7-1-0 "Link to this heading"){.headerlink}
 
-{#id134 .section}
+::: {#id134 .section}
 #### Added[\#](#id134 "Link to this heading"){.headerlink}
 
 - New HIP APIs
@@ -1798,8 +3723,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
   - [`hipStreamGetId`{.docutils .literal .notranslate}]{.pre} queries the id of a stream
 
 - Support for nested tile partitioning within cooperative groups, matching CUDA functionality.
+:::
 
-{#id135 .section}
+::: {#id135 .section}
 #### Optimized[\#](#id135 "Link to this heading"){.headerlink}
 
 - Improved HIP module loading latency.
@@ -1813,8 +3739,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
   - Dynamic packet copying based on a defined maximum threshold or power-of-2 staggered copy pattern
 
   - If timestamps are not collected for a signal for reuse, it creates a new signal. This can potentially increase the signal footprint if the handler doesn't run fast enough
+:::
 
-{#id136 .section}
+::: {#id136 .section}
 #### Resolved issues[\#](#id136 "Link to this heading"){.headerlink}
 
 - A segmentation fault occurred in the application when capturing the same HIP graph from multiple streams with cross-stream dependencies. The HIP runtime has fixed an issue where a forked stream joined to a parent stream that was not originally created with the API [`hipStreamBeginCapture`{.docutils .literal .notranslate}]{.pre}.
@@ -1822,19 +3749,19 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Different behavior of en-queuing command on a legacy stream during stream capture on AMD ROCM platform, compared with CUDA. HIP runtime now returns an error in this specific situation to match CUDA behavior.
 
 - Failure of memory access fault occurred in rocm-examples test suite. When Heterogeneous Memory Management (HMM) is not supported in the driver, [`hipMallocManaged`{.docutils .literal .notranslate}]{.pre} will only allocate system memory in HIP runtime.
+:::
 
-{#id137 .section}
+::: {#id137 .section}
 #### Known issues[\#](#id137 "Link to this heading"){.headerlink}
 
 - SPIR-V-enabled applications might encounter a segmentation fault. The problem doesn't exist when SPIR-V is disabled. The issue will be fixed in the next ROCm release.
+:::
+:::::::
 
-::::
-
-::
-{#hipblas-3-1-0 .section}
+::::: {#hipblas-3-1-0 .section}
 ### **hipBLAS** (3.1.0)[\#](#hipblas-3-1-0 "Link to this heading"){.headerlink}
 
-{#id138 .section}
+::: {#id138 .section}
 #### Added[\#](#id138 "Link to this heading"){.headerlink}
 
 - [`--clients-only`{.docutils .literal .notranslate}]{.pre} build option to only build clients against a prebuilt library.
@@ -1844,19 +3771,19 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - FORTRAN enabled for the Microsoft Windows build and tests.
 
 - Additional reference library fallback options added.
+:::
 
-{#id139 .section}
+::: {#id139 .section}
 #### Changed[\#](#id139 "Link to this heading"){.headerlink}
 
 - Improved the build time for clients by removing [`clients_common.cpp`{.docutils .literal .notranslate}]{.pre} from the hipblas-test build.
+:::
+:::::
 
-::
-
-::::
-{#hipblaslt-1-1-0 .section}
+::::::: {#hipblaslt-1-1-0 .section}
 ### **hipBLASLt** (1.1.0)[\#](#hipblaslt-1-1-0 "Link to this heading"){.headerlink}
 
-{#id140 .section}
+::: {#id140 .section}
 #### Added[\#](#id140 "Link to this heading"){.headerlink}
 
 - Fused Clamp GEMM for [`HIPBLASLT_EPILOGUE_CLAMP_EXT`{.docutils .literal .notranslate}]{.pre} and [`HIPBLASLT_EPILOGUE_CLAMP_BIAS_EXT`{.docutils .literal .notranslate}]{.pre}. This feature requires the minimum ([`HIPBLASLT_MATMUL_DESC_EPILOGUE_ACT_ARG0_EXT`{.docutils .literal .notranslate}]{.pre}) and maximum ([`HIPBLASLT_MATMUL_DESC_EPILOGUE_ACT_ARG1_EXT`{.docutils .literal .notranslate}]{.pre}) to be set.
@@ -1872,29 +3799,31 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Support for swizzleA by using the hipblaslt-ext cpp API.
 
 - Support for hipBLASLt extop for gfx11XX and gfx12XX.
+:::
 
-{#id141 .section}
+::: {#id141 .section}
 #### Changed[\#](#id141 "Link to this heading"){.headerlink}
 
 - [`hipblasLtMatmul()`{.docutils .literal .notranslate}]{.pre} now returns an error when the workspace size is insufficient, rather than causing a segmentation fault.
+:::
 
-{#id142 .section}
+::: {#id142 .section}
 #### Optimized[\#](#id142 "Link to this heading"){.headerlink}
 
 - [`TF32`{.docutils .literal .notranslate}]{.pre} kernel optimization for the AMD Instinct MI355X GPU to enhance training and inference efficiency.
+:::
 
-{#id143 .section}
+::: {#id143 .section}
 #### Resolved issues[\#](#id143 "Link to this heading"){.headerlink}
 
 - Fixed incorrect results when using ldd and ldc dimension parameters with some solutions.
+:::
+:::::::
 
-::::
-
-::::
-{#hipcub-4-1-0 .section}
+::::::: {#hipcub-4-1-0 .section}
 ### **hipCUB** (4.1.0)[\#](#hipcub-4-1-0 "Link to this heading"){.headerlink}
 
-{#id144 .section}
+::: {#id144 .section}
 #### Added[\#](#id144 "Link to this heading"){.headerlink}
 
 - Exposed Thread-level reduction API [`hipcub::ThreadReduce`{.docutils .literal .notranslate}]{.pre}.
@@ -1920,8 +3849,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
     - [`MONOREPO`{.docutils .literal .notranslate}]{.pre} - this option is intended to be used if you are building hipCUB from within a copy of the rocm-libraries repository that you have cloned (and therefore already contains rocPRIM). When selected, the build will try find the dependency in the local repository tree. If it cannot be found, the build will attempt to use git to perform a sparse-checkout of rocPRIM. If that also fails, it will fall back to using the [`DOWNLOAD`{.docutils .literal .notranslate}]{.pre} option described above.
 
 - A new CMake option [`-DUSE_SYSTEM_LIB`{.docutils .literal .notranslate}]{.pre} to allow tests to be built from installed [`hipCUB`{.docutils .literal .notranslate}]{.pre} provided by the system.
+:::
 
-{#id145 .section}
+::: {#id145 .section}
 #### Changed[\#](#id145 "Link to this heading"){.headerlink}
 
 - Changed include headers to avoid relative includes that have slipped in.
@@ -1937,8 +3867,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Added tests for large num_items.
 
 - The previous dependency-related build option [`DEPENDENCIES_FORCE_DOWNLOAD`{.docutils .literal .notranslate}]{.pre} has been renamed [`EXTERNAL_DEPS_FORCE_DOWNLOAD`{.docutils .literal .notranslate}]{.pre} to differentiate it from the new rocPRIM dependency option described above. Its behavior remains the same - it forces non-ROCm dependencies (Google Benchmark and Google Test) to be downloaded rather than searching for installed packages. This option defaults to [`OFF`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id146 .section}
+::: {#id146 .section}
 #### Removed[\#](#id146 "Link to this heading"){.headerlink}
 
 - Removed [`TexRefInputIterator`{.docutils .literal .notranslate}]{.pre}, which was removed from CUB after CCCL's 2.6.0 release. This API should have already been removed, but somehow it remained and was not tested.
@@ -1956,75 +3887,73 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Deprecated almost all functions in [`projects/hipcub/hipcub/include/hipcub/backend/rocprim/util_ptx.hpp`{.docutils .literal .notranslate}]{.pre}.
 
 - Deprecated hipCUB macros: [`HIPCUB_MAX`{.docutils .literal .notranslate}]{.pre}, [`HIPCUB_MIN`{.docutils .literal .notranslate}]{.pre}, [`HIPCUB_QUOTIENT_FLOOR`{.docutils .literal .notranslate}]{.pre}, [`HIPCUB_QUOTIENT_CEILING`{.docutils .literal .notranslate}]{.pre}, [`HIPCUB_ROUND_UP_NEAREST`{.docutils .literal .notranslate}]{.pre} and [`HIPCUB_ROUND_DOWN_NEAREST`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id147 .section}
+::: {#id147 .section}
 #### Known issues[\#](#id147 "Link to this heading"){.headerlink}
 
 - The [`__half`{.docutils .literal .notranslate}]{.pre} template specializations of Simd operators are currently disabled due to possible build issues with PyTorch.
+:::
+:::::::
 
-::::
-
-:
-{#hipfft-1-0-21 .section}
+:::: {#hipfft-1-0-21 .section}
 ### **hipFFT** (1.0.21)[\#](#hipfft-1-0-21 "Link to this heading"){.headerlink}
 
-{#id148 .section}
+::: {#id148 .section}
 #### Added[\#](#id148 "Link to this heading"){.headerlink}
 
 - Improved test coverage of multi-stream plans, user-specified work areas, and default stride calculation.
 
 - Experimental introduction of hipFFTW library, interfacing rocFFT on AMD platforms using the same symbols as FFTW3 (with partial support).
+:::
+::::
 
-:
-
-::
-{#hipfort-0-7-1 .section}
+::::: {#hipfort-0-7-1 .section}
 ### **hipfort** (0.7.1)[\#](#hipfort-0-7-1 "Link to this heading"){.headerlink}
 
-{#id149 .section}
+::: {#id149 .section}
 #### Added[\#](#id149 "Link to this heading"){.headerlink}
 
 - Support for building with CMake 4.0.
+:::
 
-{#id150 .section}
+::: {#id150 .section}
 #### Resolved issues[\#](#id150 "Link to this heading"){.headerlink}
 
 - Fixed a potential integer overflow issue in [`hipMalloc`{.docutils .literal .notranslate}]{.pre} interfaces.
+:::
+:::::
 
-::
-
-:
-{#hiprand-3-1-0 .section}
+:::: {#hiprand-3-1-0 .section}
 ### **hipRAND** (3.1.0)[\#](#hiprand-3-1-0 "Link to this heading"){.headerlink}
 
-{#id151 .section}
+::: {#id151 .section}
 #### Resolved issues[\#](#id151 "Link to this heading"){.headerlink}
 
 - Updated error handling for several hipRAND unit tests to accommodate the new [`hipGetLastError`{.docutils .literal .notranslate}]{.pre} behavior that was introduced in ROCm 7.0.0. As of ROCm 7.0.0, the internal error state is cleared on each call to [`hipGetLastError`{.docutils .literal .notranslate}]{.pre} rather than on every HIP API call.
+:::
+::::
 
-:
-
-::
-{#hipsolver-3-1-0 .section}
+::::: {#hipsolver-3-1-0 .section}
 ### **hipSOLVER** (3.1.0)[\#](#hipsolver-3-1-0 "Link to this heading"){.headerlink}
 
-{#id152 .section}
+::: {#id152 .section}
 #### Added[\#](#id152 "Link to this heading"){.headerlink}
 
 - Extended test suites for [`hipsolverDn`{.docutils .literal .notranslate}]{.pre} compatibility functions.
+:::
 
-{#id153 .section}
+::: {#id153 .section}
 #### Changed[\#](#id153 "Link to this heading"){.headerlink}
 
 - Changed code coverage to use [`llvm-cov`{.docutils .literal .notranslate}]{.pre} instead of [`gcov`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::
 
-::
-
-:
-{#hipsparse-4-1-0 .section}
+:::: {#hipsparse-4-1-0 .section}
 ### **hipSPARSE** (4.1.0)[\#](#hipsparse-4-1-0 "Link to this heading"){.headerlink}
 
-{#id154 .section}
+::: {#id154 .section}
 #### Added[\#](#id154 "Link to this heading"){.headerlink}
 
 - Brain half float mixed precision for the following routines:
@@ -2046,30 +3975,29 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Brain half float uniform precision to [`hipsparseScatter`{.docutils .literal .notranslate}]{.pre} and [`hipsparseGather`{.docutils .literal .notranslate}]{.pre} routines.
 
 - Documentation for installing and building hipSPARSE on Microsoft Windows.
+:::
+::::
 
-:
-
-::
-{#hipsparselt-0-2-5 .section}
+::::: {#hipsparselt-0-2-5 .section}
 ### **hipSPARSELt** (0.2.5)[\#](#hipsparselt-0-2-5 "Link to this heading"){.headerlink}
 
-{#id155 .section}
+::: {#id155 .section}
 #### Changed[\#](#id155 "Link to this heading"){.headerlink}
 
 - Changed the behavior of the Relu activation.
+:::
 
-{#id156 .section}
+::: {#id156 .section}
 #### Optimized[\#](#id156 "Link to this heading"){.headerlink}
 
 - Provided more kernels for the [`FP16`{.docutils .literal .notranslate}]{.pre} and [`BF16`{.docutils .literal .notranslate}]{.pre} data types.
-
-::
-
+:::
 :::::
-{#id157 .section}
+
+:::::::: {#id157 .section}
 ### **MIGraphX** (2.14.0)[\#](#id157 "Link to this heading"){.headerlink}
 
-{#id158 .section}
+::: {#id158 .section}
 #### Added[\#](#id158 "Link to this heading"){.headerlink}
 
 - Python 3.13 support.
@@ -2095,8 +4023,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Operator builders (phase 2).
 
 - [`MIGRAPHX_GPU_HIP_FLAGS`{.docutils .literal .notranslate}]{.pre} to allow extra HIP compile flags.
+:::
 
-{#id159 .section}
+::: {#id159 .section}
 #### Changed[\#](#id159 "Link to this heading"){.headerlink}
 
 - Updated C API to include [`current()`{.docutils .literal .notranslate}]{.pre} caller information in error reporting.
@@ -2126,15 +4055,17 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Updated [`any_ptr`{.docutils .literal .notranslate}]{.pre} assertion to avoid failure on default HIP stream.
 
 - Print kernel and module information on compile failure.
+:::
 
-{#id160 .section}
+::: {#id160 .section}
 #### Removed[\#](#id160 "Link to this heading"){.headerlink}
 
 - Removed Perl dependency from SLES builds.
 
 - Removed redundant includes and unused internal dependencies.
+:::
 
-{#id161 .section}
+::: {#id161 .section}
 #### Optimized[\#](#id161 "Link to this heading"){.headerlink}
 
 - Reduced nested visits in reference operators to improve compile time.
@@ -2148,8 +4079,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Optimized interdependency checking during compilation.
 
 - Skip hipBLASLt solutions that require a workspace size larger than 128 MB for efficient memory utilization.
+:::
 
-{#id162 .section}
+::: {#id162 .section}
 #### Resolved issues[\#](#id162 "Link to this heading"){.headerlink}
 
 - Error in [`MIGRAPHX_GPU_COMPILE_PARALLEL`{.docutils .literal .notranslate}]{.pre} documentation (#4337).
@@ -2177,14 +4109,13 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - CI Perl dependency issue for SLES builds (#4254).
 
 - Compiler warnings for ROCm 7.0 of [`error:`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`unknown`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`warning`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`option`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`'-Wnrvo'`{.docutils .literal .notranslate}]{.pre}(#4192).
+:::
+::::::::
 
-:::::
-
-::::
-{#id163 .section}
+::::::: {#id163 .section}
 ### **MIOpen** (3.5.1)[\#](#id163 "Link to this heading"){.headerlink}
 
-{#id164 .section}
+::: {#id164 .section}
 #### Added[\#](#id164 "Link to this heading"){.headerlink}
 
 - Added a new trust verify find mode.
@@ -2192,45 +4123,49 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Ported Op4dTensorLite kernel from OpenCL to HIP.
 
 - Implemented a generic HIP kernel for backward layer normalization.
+:::
 
-{#id165 .section}
+::: {#id165 .section}
 #### Changed[\#](#id165 "Link to this heading"){.headerlink}
 
 - Kernel DBs moved from Git LFS to DVC (Data Version Control).
+:::
 
-{#id166 .section}
+::: {#id166 .section}
 #### Optimized[\#](#id166 "Link to this heading"){.headerlink}
 
 - \[Conv\] Enabled Composable Kernel (CK) implicit gemms on gfx950.
+:::
 
-{#id167 .section}
+::: {#id167 .section}
 #### Resolved issues[\#](#id167 "Link to this heading"){.headerlink}
 
 - \[BatchNorm\] Fixed a bug for the NHWC layout when a variant was not applicable.
 
 - Fixed a bug that caused a zero-size LDS array to be defined on Navi.
+:::
+:::::::
 
-::::
-
-:::::
-{#mivisionx-3-4-0 .section}
+:::::::: {#mivisionx-3-4-0 .section}
 ### **MIVisionX** (3.4.0)[\#](#mivisionx-3-4-0 "Link to this heading"){.headerlink}
 
-{#id168 .section}
+::: {#id168 .section}
 #### Added[\#](#id168 "Link to this heading"){.headerlink}
 
 - VX_RPP - Update blur
 
 - HIP - HIP_CHECK for hipLaunchKernelGGL for gated launch
+:::
 
-{#id169 .section}
+::: {#id169 .section}
 #### Changed[\#](#id169 "Link to this heading"){.headerlink}
 
 - AMD Custom V1.1.0 - OpenMP updates
 
 - HALF - Fix half.hpp path updates
+:::
 
-{#id170 .section}
+::: {#id170 .section}
 #### Resolved issues[\#](#id170 "Link to this heading"){.headerlink}
 
 - AMD Custom - dependency linking errors resolved
@@ -2238,38 +4173,41 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - VX_RPP - Fix memory leak
 
 - Packaging - Remove Meta Package dependency for HIP
+:::
 
-{#id171 .section}
+::: {#id171 .section}
 #### Known issues[\#](#id171 "Link to this heading"){.headerlink}
 
 - Installation on RedHat/SLES requires the manual installation of the [`FFMPEG`{.docutils .literal .notranslate}]{.pre} & [`OpenCV`{.docutils .literal .notranslate}]{.pre} dev packages.
+:::
 
-{#id172 .section}
+::: {#id172 .section}
 #### Upcoming changes[\#](#id172 "Link to this heading"){.headerlink}
 
 - VX_AMD_MEDIA - rocDecode support for hardware decode
+:::
+::::::::
 
-:::::
-
-::::
-{#id173 .section}
+::::::: {#id173 .section}
 ### **RCCL** (2.27.7)[\#](#id173 "Link to this heading"){.headerlink}
 
-{#id174 .section}
+::: {#id174 .section}
 #### Added[\#](#id174 "Link to this heading"){.headerlink}
 
 - [`RCCL_P2P_BATCH_THRESHOLD`{.docutils .literal .notranslate}]{.pre} to set the message size limit for batching P2P operations. This mainly affects small message performance for alltoall at a large scale but also applies to alltoallv.
 
 - [`RCCL_P2P_BATCH_ENABLE`{.docutils .literal .notranslate}]{.pre} to enable batching P2P operations to receive performance gains for smaller messages up to 4MB for alltoall when the workload requires it. This is to avoid performance dips for larger messages.
+:::
 
-{#id175 .section}
+::: {#id175 .section}
 #### Changed[\#](#id175 "Link to this heading"){.headerlink}
 
 - The MSCCL++ feature is now disabled by default. The [`--disable-mscclpp`{.docutils .literal .notranslate}]{.pre} build flag is replaced with [`--enable-mscclpp`{.docutils .literal .notranslate}]{.pre} in the [`rccl/install.sh`{.docutils .literal .notranslate}]{.pre} script.
 
 - Compatibility with NCCL 2.27.7.
+:::
 
-{#id176 .section}
+::: {#id176 .section}
 #### Optimized[\#](#id176 "Link to this heading"){.headerlink}
 
 - Enabled and optimized batched P2P operations to improve small message performance for [`AllToAll`{.docutils .literal .notranslate}]{.pre} and [`AllGather`{.docutils .literal .notranslate}]{.pre}.
@@ -2277,113 +4215,121 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Optimized channel count selection to improve efficiency for small-to-medium message sizes in [`ReduceScatter`{.docutils .literal .notranslate}]{.pre}.
 
 - Changed code inlining to improve latency for small message sizes for [`AllReduce`{.docutils .literal .notranslate}]{.pre}, [`AllGather`{.docutils .literal .notranslate}]{.pre}, and [`ReduceScatter`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id177 .section}
+::: {#id177 .section}
 #### Known issues[\#](#id177 "Link to this heading"){.headerlink}
 
 - Symmetric memory kernels are currently disabled due to ongoing CUMEM enablement work.
 
 - When running this version of RCCL using ROCm versions earlier than 6.4.0, the user must set the environment flag [`HSA_NO_SCRATCH_RECLAIM=1`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::::
 
-::::
-
-::::
-{#rocal-2-4-0 .section}
+::::::: {#rocal-2-4-0 .section}
 ### **rocAL** (2.4.0)[\#](#rocal-2-4-0 "Link to this heading"){.headerlink}
 
-{#id178 .section}
+::: {#id178 .section}
 #### Added[\#](#id178 "Link to this heading"){.headerlink}
 
 - JAX iterator support in rocAL
 
 - rocJPEG - Fused Crop decoding support
+:::
 
-{#id179 .section}
+::: {#id179 .section}
 #### Changed[\#](#id179 "Link to this heading"){.headerlink}
 
 - CropResize - updates and fixes
 
 - Packaging - Remove Meta Package dependency for HIP
+:::
 
-{#id180 .section}
+::: {#id180 .section}
 #### Resolved issues[\#](#id180 "Link to this heading"){.headerlink}
 
 - OpenMP - dependency linking errors resolved.
 
 - Bugfix - memory leaks in rocAL.
+:::
 
-{#id181 .section}
+::: {#id181 .section}
 #### Known issues[\#](#id181 "Link to this heading"){.headerlink}
 
 - Package installation on SLES requires manually installing [`TurboJPEG`{.docutils .literal .notranslate}]{.pre}.
 
 - Package installation on RedHat and SLES requires manually installing the [`FFMPEG`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`Dev`{.docutils .literal .notranslate}]{.pre} package.
+:::
+:::::::
 
-::::
-
-::::
-{#rocalution-4-0-1 .section}
+::::::: {#rocalution-4-0-1 .section}
 ### **rocALUTION** (4.0.1)[\#](#rocalution-4-0-1 "Link to this heading"){.headerlink}
 
-{#id182 .section}
+::: {#id182 .section}
 #### Added[\#](#id182 "Link to this heading"){.headerlink}
 
 - Support for gfx950.
+:::
 
-{#id183 .section}
+::: {#id183 .section}
 #### Changed[\#](#id183 "Link to this heading"){.headerlink}
 
 - Updated the default build standard to C++17 when compiling rocALUTION from source (previously C++14).
+:::
 
-{#id184 .section}
+::: {#id184 .section}
 #### Optimized[\#](#id184 "Link to this heading"){.headerlink}
 
 - Improved and expanded user documentation.
+:::
 
-{#id185 .section}
+::: {#id185 .section}
 #### Resolved issues[\#](#id185 "Link to this heading"){.headerlink}
 
 - Fixed a bug in the GPU hashing algorithm that occurred when not compiling with -O2/-O3.
 
 - Fixed an issue with the SPAI preconditioner when using complex numbers.
+:::
+:::::::
 
-::::
-
-{#rocblas-5-1-0 .section}
+:::::: {#rocblas-5-1-0 .section}
 ### **rocBLAS** (5.1.0)[\#](#rocblas-5-1-0 "Link to this heading"){.headerlink}
 
-{#id186 .section}
+::: {#id186 .section}
 #### Added[\#](#id186 "Link to this heading"){.headerlink}
 
 - Sample for clients using OpenMP threads calling rocBLAS functions.
 
 - gfx1150 and gfx1151 enabled.
+:::
 
-{#id187 .section}
+::: {#id187 .section}
 #### Changed[\#](#id187 "Link to this heading"){.headerlink}
 
 - By default, the Tensile build is no longer based on [`tensile_tag.txt`{.docutils .literal .notranslate}]{.pre} but uses the same commit from shared/tensile in the rocm-libraries repository. The rmake or install [`-t`{.docutils .literal .notranslate}]{.pre} option can build from another local path with a different commit.
+:::
 
-{#id188 .section}
+::: {#id188 .section}
 #### Optimized[\#](#id188 "Link to this heading"){.headerlink}
 
 - Improved the performance of Level 2 gemv transposed ([`TransA`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`!=`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`N`{.docutils .literal .notranslate}]{.pre}) for the problem sizes where [`m`{.docutils .literal .notranslate}]{.pre} is small and [`n`{.docutils .literal .notranslate}]{.pre} is large on gfx90a and gfx942.
+:::
+::::::
 
-:
-{#rocdbgapi-0-77-4 .section}
+:::: {#rocdbgapi-0-77-4 .section}
 ### **ROCdbgapi** (0.77.4)[\#](#rocdbgapi-0-77-4 "Link to this heading"){.headerlink}
 
-{#id189 .section}
+::: {#id189 .section}
 #### Added[\#](#id189 "Link to this heading"){.headerlink}
 
 - gfx1150 and gfx1151 enabled.
+:::
+::::
 
-:
-
-{#rocdecode-1-4-0 .section}
+:::::: {#rocdecode-1-4-0 .section}
 ### **rocDecode** (1.4.0)[\#](#rocdecode-1-4-0 "Link to this heading"){.headerlink}
 
-{#id190 .section}
+::: {#id190 .section}
 #### Added[\#](#id190 "Link to this heading"){.headerlink}
 
 - AV1 12-bit decode support on VA-API version 1.23.0 and later.
@@ -2393,26 +4339,29 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - FFmpeg version support for 5.1 and 6.1
 
 - Find package - rocdecode-host
+:::
 
-{#id191 .section}
+::: {#id191 .section}
 #### Resolved issues[\#](#id191 "Link to this heading"){.headerlink}
 
 - rocdecode-host - failure to build debuginfo packages without FFmpeg resolved.
 
 - Fix a memory leak for rocDecodeNegativeTests
+:::
 
-{#id192 .section}
+::: {#id192 .section}
 #### Changed[\#](#id192 "Link to this heading"){.headerlink}
 
 - HIP meta package changed - Use hip-dev/devel to bring required hip dev deps
 
 - rocdecode host - linking updates to rocdecode-host library
+:::
+::::::
 
-:
-{#rocfft-1-0-35 .section}
+:::: {#rocfft-1-0-35 .section}
 ### **rocFFT** (1.0.35)[\#](#rocfft-1-0-35 "Link to this heading"){.headerlink}
 
-{#id193 .section}
+::: {#id193 .section}
 #### Optimized[\#](#id193 "Link to this heading"){.headerlink}
 
 - Implemented single-kernel plans for some 2D problem sizes, on devices with at least 160KiB of LDS.
@@ -2420,32 +4369,31 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Improved performance of unit-strided, complex-interleaved, forward/inverse FFTs for lengths: (64,64,128), (64,64,52), (60,60,60) , (32,32,128), (32,32,64), (64,32,128)
 
 - Improved performance of 3D MPI pencil decompositions by using sub-communicators for global transpose operations.
+:::
+::::
 
-:
-
-::
-{#rocjpeg-1-2-0 .section}
+::::: {#rocjpeg-1-2-0 .section}
 ### **rocJPEG** (1.2.0)[\#](#rocjpeg-1-2-0 "Link to this heading"){.headerlink}
 
-{#id194 .section}
+::: {#id194 .section}
 #### Changed[\#](#id194 "Link to this heading"){.headerlink}
 
 - HIP meta package has been changed. Use [`hip-dev/devel`{.docutils .literal .notranslate}]{.pre} to bring required hip dev deps.
+:::
 
-{#id195 .section}
+::: {#id195 .section}
 #### Resolved issues[\#](#id195 "Link to this heading"){.headerlink}
 
 - Fixed an issue where extra padding was incorrectly included when saving decoded JPEG images to files.
 
 - Resolved a memory leak in the jpegDecode application.
+:::
+:::::
 
-::
-
-::::::
-{#rocm-compute-profiler-3-3-0 .section}
+::::::::: {#rocm-compute-profiler-3-3-0 .section}
 ### **ROCm Compute Profiler** (3.3.0)[\#](#rocm-compute-profiler-3-3-0 "Link to this heading"){.headerlink}
 
-{#id196 .section}
+::: {#id196 .section}
 #### Added[\#](#id196 "Link to this heading"){.headerlink}
 
 - Dynamic process attachment feature that allows coupling with a workload process, without controlling its start or end.
@@ -2487,8 +4435,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Notice for change in default output format to [`rocpd`{.docutils .literal .notranslate}]{.pre} in a future release
 
   - This is displayed when [`--format-rocprof-output`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`rocpd`{.docutils .literal .notranslate}]{.pre} is not used in profile mode
+:::
 
-{#id197 .section}
+::: {#id197 .section}
 #### Changed[\#](#id197 "Link to this heading"){.headerlink}
 
 - In the memory chart, long string of numbers are now displayed as scientific notation. It also solves the issue of overflow of displaying long number
@@ -2586,8 +4535,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
   - Use ROCPROF=rocprofv3 to use rocprofv3 interface
 
 - Updated metric names for better alignment between analysis configuration and documentation.
+:::
 
-{#id198 .section}
+::: {#id198 .section}
 #### Removed[\#](#id198 "Link to this heading"){.headerlink}
 
 - Usage of [`rocm-smi`{.docutils .literal .notranslate}]{.pre} in favor of [`amd-smi`{.docutils .literal .notranslate}]{.pre}.
@@ -2595,8 +4545,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Hardware IP block-based filtering has been removed in favor of analysis report block-based filtering.
 
 - Aggregated analysis view from TUI analyze mode.
+:::
 
-{#id199 .section}
+::: {#id199 .section}
 #### Optimized[\#](#id199 "Link to this heading"){.headerlink}
 
 - Improved [`--time-unit`{.docutils .literal .notranslate}]{.pre} option in analyze mode to apply time unit conversion across all analysis sections, not just kernel top stats.
@@ -2608,8 +4559,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Improve analysis block based filtering to accept metric ID level filtering.
 
   - This can be used to collect individual metrics from various sections of the analysis config.
+:::
 
-{#id200 .section}
+::: {#id200 .section}
 #### Resolved issues[\#](#id200 "Link to this heading"){.headerlink}
 
 - Fixed an issue of not detecting the memory clock when using [`amd-smi`{.docutils .literal .notranslate}]{.pre}.
@@ -2621,8 +4573,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Fixed an issue where accumulation counters could not be collected on AMD Instinct MI100.
 
 - Fixed an issue of kernel filtering not working in the roofline chart.
+:::
 
-{#id201 .section}
+::: {#id201 .section}
 #### Known issues[\#](#id201 "Link to this heading"){.headerlink}
 
 - MI300A/X L2-Fabric 64B read counter may display negative values - The rocprof-compute metric 17.6.1 (Read 64B) can report negative values due to incorrect calculation when TCC_BUBBLE_sum + TCC_EA0_RDREQ_32B_sum exceeds TCC_EA0_RDREQ_sum.
@@ -2632,13 +4585,13 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - The profile mode crashes when [`--format-rocprof-output`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`json`{.docutils .literal .notranslate}]{.pre} is selected.
 
   - As a workaround, this option should either not be provided or should be set to [`csv`{.docutils .literal .notranslate}]{.pre} instead of [`json`{.docutils .literal .notranslate}]{.pre}. This issue does not affect the profiling results since both [`csv`{.docutils .literal .notranslate}]{.pre} and [`json`{.docutils .literal .notranslate}]{.pre} output formats lead to the same profiling data.
+:::
+:::::::::
 
-::::::
-
-{#rocm-data-center-tool-1-2-0 .section}
+:::::: {#rocm-data-center-tool-1-2-0 .section}
 ### **ROCm Data Center Tool** (1.2.0)[\#](#rocm-data-center-tool-1-2-0 "Link to this heading"){.headerlink}
 
-{#id202 .section}
+::: {#id202 .section}
 #### Added[\#](#id202 "Link to this heading"){.headerlink}
 
 - CPU monitoring support with 30+ CPU field definitions through AMD SMI integration.
@@ -2646,35 +4599,37 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - CPU partition format support (c0.0, c1.0) for monitoring AMD EPYC processors.
 
 - Mixed GPU/CPU monitoring in single [`rdci`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`dmon`{.docutils .literal .notranslate}]{.pre} command.
+:::
 
-{#id203 .section}
+::: {#id203 .section}
 #### Optimized[\#](#id203 "Link to this heading"){.headerlink}
 
 - Improved profiler metrics path detection for counter definitions.
+:::
 
-{#id204 .section}
+::: {#id204 .section}
 #### Resolved issues[\#](#id204 "Link to this heading"){.headerlink}
 
 - Group management issues with listing created/non-created groups.
 
 - ECC_UNCORRECT field behavior.
+:::
+::::::
 
-:
-{#rocm-debugger-rocgdb-16-3 .section}
+:::: {#rocm-debugger-rocgdb-16-3 .section}
 ### **ROCm Debugger (ROCgdb)** (16.3)[\#](#rocm-debugger-rocgdb-16-3 "Link to this heading"){.headerlink}
 
-{#id205 .section}
+::: {#id205 .section}
 #### Added[\#](#id205 "Link to this heading"){.headerlink}
 
 - gfx1150 and gfx1151 support enabled.
+:::
+::::
 
-:
-
-:::::
-{#rocm-systems-profiler-1-2-0 .section}
+:::::::: {#rocm-systems-profiler-1-2-0 .section}
 ### **ROCm Systems Profiler** (1.2.0)[\#](#rocm-systems-profiler-1-2-0 "Link to this heading"){.headerlink}
 
-{#id206 .section}
+::: {#id206 .section}
 #### Added[\#](#id206 "Link to this heading"){.headerlink}
 
 - [`ROCPROFSYS_ROCM_GROUP_BY_QUEUE`{.docutils .literal .notranslate}]{.pre} configuration setting to allow grouping of events by hardware queue, instead of the default grouping.
@@ -2686,8 +4641,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Support for tracing OpenMP API in Fortran applications.
 
 - An error warning is triggered if the profiler application fails because SELinux enforcement is enabled. The warning includes steps to disable SELinux enforcement.
+:::
 
-{#id207 .section}
+::: {#id207 .section}
 #### Changed[\#](#id207 "Link to this heading"){.headerlink}
 
 - Updated the grouping of "kernel dispatch" and "memory copy" events in Perfetto traces. They are now grouped together by HIP Stream rather than separately and by hardware queue.
@@ -2695,28 +4651,25 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Updated PAPI module to v7.2.0b2.
 
 - ROCprofiler-SDK is now used for tracing OMPT API calls.
+:::
 
-::
-{#id208 .section}
+::::: {#id208 .section}
 #### Known issues[\#](#id208 "Link to this heading"){.headerlink}
 
 - Profiling PyTorch and other AI workloads might fail because it is unable to find the libraries in the default linker path. As a workaround, you need to explicitly add the library path to [`LD_LIBRARY_PATH`{.docutils .literal .notranslate}]{.pre}. For example, when using PyTorch with Python 3.10, add the following to the environment:
 
-:
-{.highlight-default .notranslate}
-
-highlight
+:::: {.highlight-default .notranslate}
+::: highlight
     export LD_LIBRARY_PATH=:/opt/venv/lib/python3.10/site-packages/torch/lib:$LD_LIBRARY_PATH
-
-:
-::
+:::
+::::
 :::::
+::::::::
 
-:::::
-{#rocprim-4-1-0 .section}
+:::::::: {#rocprim-4-1-0 .section}
 ### **rocPRIM** (4.1.0)[\#](#rocprim-4-1-0 "Link to this heading"){.headerlink}
 
-{#id209 .section}
+::: {#id209 .section}
 #### Added[\#](#id209 "Link to this heading"){.headerlink}
 
 - [`get_sreg_lanemask_lt`{.docutils .literal .notranslate}]{.pre}, [`get_sreg_lanemask_le`{.docutils .literal .notranslate}]{.pre}, [`get_sreg_lanemask_gt`{.docutils .literal .notranslate}]{.pre} and [`get_sreg_lanemask_ge`{.docutils .literal .notranslate}]{.pre}.
@@ -2730,13 +4683,15 @@ highlight
 - A new CMake option [`-DUSE_SYSTEM_LIB`{.docutils .literal .notranslate}]{.pre} to allow tests to be built from [`ROCm`{.docutils .literal .notranslate}]{.pre} libraries provided by the system.
 
 - [`rocprim::apply`{.docutils .literal .notranslate}]{.pre} which applies a function to a [`rocprim::tuple`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id210 .section}
+::: {#id210 .section}
 #### Changed[\#](#id210 "Link to this heading"){.headerlink}
 
 - Changed tests to support [`ptr-to-const`{.docutils .literal .notranslate}]{.pre} output in [`/test/rocprim/test_device_batch_memcpy.cpp`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id211 .section}
+::: {#id211 .section}
 #### Optimized[\#](#id211 "Link to this heading"){.headerlink}
 
 - Improved performance of many algorithms by updating their tuned configs.
@@ -2744,8 +4699,9 @@ highlight
   - 891 specializations have been improved.
 
   - 399 specializations have been added.
+:::
 
-{#id212 .section}
+::: {#id212 .section}
 #### Resolved issues[\#](#id212 "Link to this heading"){.headerlink}
 
 - Fixed [`device_select`{.docutils .literal .notranslate}]{.pre}, [`device_merge`{.docutils .literal .notranslate}]{.pre}, and [`device_merge_sort`{.docutils .literal .notranslate}]{.pre} not allocating the correct amount of virtual shared memory on the host.
@@ -2753,30 +4709,29 @@ highlight
 - Fixed the [`-&gt;`{.docutils .literal .notranslate}]{.pre} operator for the [`transform_iterator`{.docutils .literal .notranslate}]{.pre}, the [`texture_cache_iterator`{.docutils .literal .notranslate}]{.pre}, and the [`arg_index_iterator`{.docutils .literal .notranslate}]{.pre}, by now returning a proxy pointer.
 
   - The [`arg_index_iterator`{.docutils .literal .notranslate}]{.pre} also now only returns the internal iterator for the [`-&gt;`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id213 .section}
+::: {#id213 .section}
 #### Upcoming changes[\#](#id213 "Link to this heading"){.headerlink}
 
 - Deprecated the [`-&gt;`{.docutils .literal .notranslate}]{.pre} operator for the [`zip_iterator`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::::::
 
-:::::
-
-:
-{#rocprofiler-2-0-0 .section}
+:::: {#rocprofiler-2-0-0 .section}
 ### **ROCProfiler** (2.0.0)[\#](#rocprofiler-2-0-0 "Link to this heading"){.headerlink}
 
-{#id214 .section}
+::: {#id214 .section}
 #### Removed[\#](#id214 "Link to this heading"){.headerlink}
 
 - [`rocprofv2`{.docutils .literal .notranslate}]{.pre} doesn't support gfx12XX Series GPUs. For gfx12XX Series GPUs, use [`rocprofv3`{.docutils .literal .notranslate}]{.pre} tool.
+:::
+::::
 
-:
-
-::
-{#rocprofiler-sdk-1-0-0 .section}
+::::: {#rocprofiler-sdk-1-0-0 .section}
 ### **ROCprofiler-SDK** (1.0.0)[\#](#rocprofiler-sdk-1-0-0 "Link to this heading"){.headerlink}
 
-{#id215 .section}
+::: {#id215 .section}
 #### Added[\#](#id215 "Link to this heading"){.headerlink}
 
 - Dynamic process attachment- ROCprofiler-SDK and [`rocprofv3`{.docutils .literal .notranslate}]{.pre} now facilitate dynamic profiling of a running GPU application by attaching to its process ID (PID), rather than launching the application through the profiler itself.
@@ -2792,57 +4747,61 @@ highlight
 - Documentation for dynamic process attachment.
 
 - Documentation for [`rocpd`{.docutils .literal .notranslate}]{.pre} summaries.
+:::
 
-{#id216 .section}
+::: {#id216 .section}
 #### Optimized[\#](#id216 "Link to this heading"){.headerlink}
 
 - Improved the stability and robustness of the [`rocpd`{.docutils .literal .notranslate}]{.pre} output.
+:::
+:::::
 
-::
-
-{#rocpydecode-0-7-0 .section}
+:::::: {#rocpydecode-0-7-0 .section}
 ### **rocPyDecode** (0.7.0)[\#](#rocpydecode-0-7-0 "Link to this heading"){.headerlink}
 
-{#id217 .section}
+::: {#id217 .section}
 #### Added[\#](#id217 "Link to this heading"){.headerlink}
 
 - rocPyJpegPerfSample - samples for JPEG decode
+:::
 
-{#id218 .section}
+::: {#id218 .section}
 #### Changed[\#](#id218 "Link to this heading"){.headerlink}
 
 - Package - rocjpeg set as required dependency.
 
 - rocDecode host - rocdecode host linking updates
+:::
 
-{#id219 .section}
+::: {#id219 .section}
 #### Resolved issues[\#](#id219 "Link to this heading"){.headerlink}
 
 - rocJPEG Bindings - bug fixes
 
 - Test package - find dependencies updated
+:::
+::::::
 
-::
-{#rocrand-4-1-0 .section}
+::::: {#rocrand-4-1-0 .section}
 ### **rocRAND** (4.1.0)[\#](#rocrand-4-1-0 "Link to this heading"){.headerlink}
 
-{#id220 .section}
+::: {#id220 .section}
 #### Changed[\#](#id220 "Link to this heading"){.headerlink}
 
 - Changed the [`USE_DEVICE_DISPATCH`{.docutils .literal .notranslate}]{.pre} flag so it can turn device dispatch off by setting it to zero. Device dispatch should be turned off when building for SPIRV.
+:::
 
-{#id221 .section}
+::: {#id221 .section}
 #### Resolved issues[\#](#id221 "Link to this heading"){.headerlink}
 
 - Updated error handling for several rocRAND unit tests to accommodate the new [`hipGetLastError`{.docutils .literal .notranslate}]{.pre} behavior that was introduced in ROCm 7.0. As of ROCm 7.0, the internal error state is cleared on each call to [`hipGetLastError`{.docutils .literal .notranslate}]{.pre} rather than on every HIP API call.
+:::
+:::::
 
-::
-
-:
-{#rocsolver-3-31-0 .section}
+:::: {#rocsolver-3-31-0 .section}
 ### **rocSOLVER** (3.31.0)[\#](#rocsolver-3-31-0 "Link to this heading"){.headerlink}
 
-{#id222 .section}
+::: {#id222 .section}
 #### Optimized[\#](#id222 "Link to this heading"){.headerlink}
 
 Improved the performance of:
@@ -2850,13 +4809,13 @@ Improved the performance of:
 - LARF, LARFT, GEQR2, and downstream functions such as GEQRF.
 
 - STEDC and divide and conquer Eigensolvers.
+:::
+::::
 
-:
-
-{#rocsparse-4-1-0 .section}
+:::::: {#rocsparse-4-1-0 .section}
 ### **rocSPARSE** (4.1.0)[\#](#rocsparse-4-1-0 "Link to this heading"){.headerlink}
 
-{#id223 .section}
+::: {#id223 .section}
 #### Added[\#](#id223 "Link to this heading"){.headerlink}
 
 - Brain half float mixed precision for the following routines:
@@ -2876,22 +4835,25 @@ Improved the performance of:
 - Half float mixed precision to [`rocsparse_sddmm`{.docutils .literal .notranslate}]{.pre} where A and B and C use float16 and the compute type use float.
 
 - Brain half float uniform precision to [`rocsparse_scatter`{.docutils .literal .notranslate}]{.pre} and [`rocsparse_gather`{.docutils .literal .notranslate}]{.pre} routines.
+:::
 
-{#id224 .section}
+::: {#id224 .section}
 #### Optimized[\#](#id224 "Link to this heading"){.headerlink}
 
 - Improved the user documentation.
+:::
 
-{#id225 .section}
+::: {#id225 .section}
 #### Upcoming changes[\#](#id225 "Link to this heading"){.headerlink}
 
 - Deprecate trace, debug, and bench logging using the environment variable [`ROCSPARSE_LAYER`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::::
 
-::::
-{#rocthrust-4-1-0 .section}
+::::::: {#rocthrust-4-1-0 .section}
 ### **rocThrust** (4.1.0)[\#](#rocthrust-4-1-0 "Link to this heading"){.headerlink}
 
-{#id226 .section}
+::: {#id226 .section}
 #### Added[\#](#id226 "Link to this heading"){.headerlink}
 
 - A new CMake option [`-DSQLITE_USE_SYSTEM_PACKAGE`{.docutils .literal .notranslate}]{.pre} to allow SQLite to be provided by the system.
@@ -2899,18 +4861,21 @@ Improved the performance of:
 - Introduced [`libhipcxx`{.docutils .literal .notranslate}]{.pre} as a soft dependency. When [`libhipcxx`{.docutils .literal .notranslate}]{.pre} can be included, rocThrust can use structs and methods defined in [`libhipcxx`{.docutils .literal .notranslate}]{.pre}. This allows for a more complete behavior parity with CCCL and mirrors CCCL's thrust own dependency on [`libcudacxx`{.docutils .literal .notranslate}]{.pre}.
 
 - Added a new CMake option [`-DUSE_SYSTEM_LIB`{.docutils .literal .notranslate}]{.pre} to allow tests to be built from [`ROCm`{.docutils .literal .notranslate}]{.pre} libraries provided by the system.
+:::
 
-{#id227 .section}
+::: {#id227 .section}
 #### Changed[\#](#id227 "Link to this heading"){.headerlink}
 
 - The previously hidden cmake build option [`FORCE_DEPENDENCIES_DOWNLOAD`{.docutils .literal .notranslate}]{.pre} has been unhidden and renamed [`EXTERNAL_DEPS_FORCE_DOWNLOAD`{.docutils .literal .notranslate}]{.pre} to differentiate it from the new rocPRIM and rocRAND dependency options described above. Its behavior remains the same - it forces non-ROCm dependencies (Google Benchmark, Google Test, and SQLite) to be downloaded instead of searching for existing installed packages. This option defaults to [`OFF`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id228 .section}
+::: {#id228 .section}
 #### Removed[\#](#id228 "Link to this heading"){.headerlink}
 
 - The previous dependency-related build options [`DOWNLOAD_ROCPRIM`{.docutils .literal .notranslate}]{.pre} and [`DOWNLOAD_ROCRAND`{.docutils .literal .notranslate}]{.pre} have been removed. Use [`ROCPRIM_FETCH_METHOD=DOWNLOAD`{.docutils .literal .notranslate}]{.pre} and [`ROCRAND_FETCH_METHOD=DOWNLOAD`{.docutils .literal .notranslate}]{.pre} instead.
+:::
 
-{#id229 .section}
+::: {#id229 .section}
 #### Known issues[\#](#id229 "Link to this heading"){.headerlink}
 
 - [`event`{.docutils .literal .notranslate}]{.pre} test is failing on CI and local runs on MI300, MI250 and MI210.
@@ -2928,14 +4893,13 @@ Improved the performance of:
     - [`DOWNLOAD`{.docutils .literal .notranslate}]{.pre} - downloads the dependency from the rocm-libraries repository. If git \>= 2.25 is present, this option uses a sparse checkout that avoids downloading more than it needs to. If not, the whole monorepo is downloaded (this may take some time).
 
     - [`MONOREPO`{.docutils .literal .notranslate}]{.pre} - this option is intended to be used if you are building rocThrust from within a copy of the rocm-libraries repository that you have cloned (and therefore already contains the dependencies rocPRIM and rocRAND). When selected, the build will try to find the dependency in the local repository tree. If it can't be found, the build will attempt to add it to the local tree using a sparse-checkout. If that also fails, it will fall back to using the [`DOWNLOAD`{.docutils .literal .notranslate}]{.pre} option.
+:::
+:::::::
 
-::::
-
-::::
-{#rpp-2-1-0 .section}
+::::::: {#rpp-2-1-0 .section}
 ### **RPP** (2.1.0)[\#](#rpp-2-1-0 "Link to this heading"){.headerlink}
 
-{#id230 .section}
+::: {#id230 .section}
 #### Added[\#](#id230 "Link to this heading"){.headerlink}
 
 - Solarize augmentation for HOST and HIP.
@@ -2945,22 +4909,25 @@ Improved the performance of:
 - Find RPP - cmake module.
 
 - Posterize augmentation for HOST and HIP.
+:::
 
-{#id231 .section}
+::: {#id231 .section}
 #### Changed[\#](#id231 "Link to this heading"){.headerlink}
 
 - HALF - Fix [`half.hpp`{.docutils .literal .notranslate}]{.pre} path updates.
 
 - Box filter - padding updates.
+:::
 
-{#id232 .section}
+::: {#id232 .section}
 #### Removed[\#](#id232 "Link to this heading"){.headerlink}
 
 - Packaging - Removed Meta Package dependency for HIP.
 
 - SLES 15 SP6 support.
+:::
 
-{#id233 .section}
+::: {#id233 .section}
 #### Resolved issues[\#](#id233 "Link to this heading"){.headerlink}
 
 - Test Suite - Fixes for accuracy.
@@ -2968,25 +4935,25 @@ Improved the performance of:
 - HIP Backend - Check return status warning fixes.
 
 - Bug fix - HIP vector types init.
+:::
+:::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::
-{#rocm-7-0-2 .section}
+::::::::::::::::::::::::::: {#rocm-7-0-2 .section}
 ## ROCm 7.0.2[\#](#rocm-7-0-2 "Link to this heading"){.headerlink}
 
 See the [ROCm 7.0.2 release notes](https://rocm.docs.amd.com/en/docs-7.0.2/about/release-notes.html#rocm-7-0-2-release-notes){.reference .external} for a complete overview of this release.
 
-{#amd-smi-26-0-2 .section}
+:::::: {#amd-smi-26-0-2 .section}
 ### **AMD SMI** (26.0.2)[\#](#amd-smi-26-0-2 "Link to this heading"){.headerlink}
 
-{#id234 .section}
+::: {#id234 .section}
 #### Added[\#](#id234 "Link to this heading"){.headerlink}
 
 - Added [`bad_page_threshold_exceeded`{.docutils .literal .notranslate}]{.pre} field to [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`static`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--ras`{.docutils .literal .notranslate}]{.pre}, which compares retired pages count against bad page threshold. This field displays [`True`{.docutils .literal .notranslate}]{.pre} if retired pages exceed the threshold, [`False`{.docutils .literal .notranslate}]{.pre} if within threshold, or [`N/A`{.docutils .literal .notranslate}]{.pre} if threshold data is unavailable. Note that [`sudo`{.docutils .literal .notranslate}]{.pre} is required to have the [`bad_page_threshold_exceeded`{.docutils .literal .notranslate}]{.pre} field populated.
+:::
 
-{#id235 .section}
+::: {#id235 .section}
 #### Removed[\#](#id235 "Link to this heading"){.headerlink}
 
 - Removed gpuboard and baseboard temperatures enums in amdsmi Python Library.
@@ -2998,8 +4965,9 @@ See the [ROCm 7.0.2 release notes](https://rocm.docs.amd.com/en/docs-7.0.2/about
     - [`AmdSmiTemperatureType.GPUBOARD_VR_FIRST`{.docutils .literal .notranslate}]{.pre}
 
     - [`AmdSmiTemperatureType.BASEBOARD_FIRST`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id236 .section}
+::: {#id236 .section}
 #### Resolved Issues[\#](#id236 "Link to this heading"){.headerlink}
 
 - Fixed [`attribute`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`error`{.docutils .literal .notranslate}]{.pre} in [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre} on Linux Guest systems, where the violations argument caused CLI to break.
@@ -3019,12 +4987,13 @@ See the [ROCm 7.0.2 release notes](https://rocm.docs.amd.com/en/docs-7.0.2/about
   - Issue where the RAS HBM CRC read was failing due to an incorrect AFID value.
 
   - Issue where RAS injections were not consistently producing related CPERs.
+:::
+::::::
 
-::
-{#hip-7-0-2 .section}
+::::: {#hip-7-0-2 .section}
 ### **HIP** (7.0.2)[\#](#hip-7-0-2 "Link to this heading"){.headerlink}
 
-{#id237 .section}
+::: {#id237 .section}
 #### Added[\#](#id237 "Link to this heading"){.headerlink}
 
 - Support for the [`hipMemAllocationTypeUncached`{.docutils .literal .notranslate}]{.pre} flag, enabling developers to allocate uncached memory. This flag is now supported in the following APIs:
@@ -3032,8 +5001,9 @@ See the [ROCm 7.0.2 release notes](https://rocm.docs.amd.com/en/docs-7.0.2/about
   - [`hipMemGetAllocationGranularity`{.docutils .literal .notranslate}]{.pre} determines the recommended allocation granularity for uncached memory.
 
   - [`hipMemCreate`{.docutils .literal .notranslate}]{.pre} allocates memory with uncached properties.
+:::
 
-{#id238 .section}
+::: {#id238 .section}
 #### Resolved issues[\#](#id238 "Link to this heading"){.headerlink}
 
 - A compilation failure affecting applications that compile kernels using [`hiprtc`{.docutils .literal .notranslate}]{.pre} with the compiler option [`std=c++11`{.docutils .literal .notranslate}]{.pre}.
@@ -3045,102 +5015,95 @@ See the [ROCm 7.0.2 release notes](https://rocm.docs.amd.com/en/docs-7.0.2/about
 - A page fault occurred during viewport rendering while running the file undo.blend in Blender. The issue was resolved by the HIP runtime, which reused the same context during image creation.
 
 - Resolved a segmentation fault in [`gpu_metrics`{.docutils .literal .notranslate}]{.pre}, which is used in threshold logic for command submission patches to GPU device(s) during CPU synchronization.
+:::
+:::::
 
-::
-
-:
-{#hipblas-3-0-2 .section}
+:::: {#hipblas-3-0-2 .section}
 ### **hipBLAS** (3.0.2)[\#](#hipblas-3-0-2 "Link to this heading"){.headerlink}
 
-{#id239 .section}
+::: {#id239 .section}
 #### Added[\#](#id239 "Link to this heading"){.headerlink}
 
 - Enabled support for gfx1150, gfx1151, gfx1200, and gfx1201 AMD hardware.
+:::
+::::
 
-:
-
-:
-{#rccl-2-26-6 .section}
+:::: {#rccl-2-26-6 .section}
 ### **RCCL** (2.26.6)[\#](#rccl-2-26-6 "Link to this heading"){.headerlink}
 
-{#id240 .section}
+::: {#id240 .section}
 #### Added[\#](#id240 "Link to this heading"){.headerlink}
 
 - Enabled double-buffering in [`reduceCopyPacks`{.docutils .literal .notranslate}]{.pre} to trigger pipelining, especially to overlap bf16 arithmetic.
 
 - Added [`--force-reduce-pipeline`{.docutils .literal .notranslate}]{.pre} as an option that can be passed to the [`install.sh`{.docutils .literal .notranslate}]{.pre} script. Passing this option will enable software-triggered pipelining [`bfloat16`{.docutils .literal .notranslate}]{.pre} reductions (that is, [`all_reduce`{.docutils .literal .notranslate}]{.pre}, [`reduce_scatter`{.docutils .literal .notranslate}]{.pre}, and [`reduce`{.docutils .literal .notranslate}]{.pre}).
+:::
+::::
 
-:
-
-::
-{#rocblas-5-0-2 .section}
+::::: {#rocblas-5-0-2 .section}
 ### **rocBLAS** (5.0.2)[\#](#rocblas-5-0-2 "Link to this heading"){.headerlink}
 
-{#id241 .section}
+::: {#id241 .section}
 #### Added[\#](#id241 "Link to this heading"){.headerlink}
 
 - Enabled gfx1150 and gfx1151.
 
 - The [`ROCBLAS_USE_HIPBLASLT_BATCHED`{.docutils .literal .notranslate}]{.pre} variable to independently control the batched hipblaslt backend. Set [`ROCBLAS_USE_HIPBLASLT_BATCHED=0`{.docutils .literal .notranslate}]{.pre} to disable batched GEMM use of the hipblaslt backend.
+:::
 
-{#id242 .section}
+::: {#id242 .section}
 #### Resolved issues[\#](#id242 "Link to this heading"){.headerlink}
 
 - Set the imaginary portion of the main diagonal of the output matrix to zero in syrk and herk.
+:::
+:::::
 
-::
-
-:
-{#id243 .section}
+:::: {#id243 .section}
 ### **ROCdbgapi** (0.77.4)[\#](#id243 "Link to this heading"){.headerlink}
 
-{#id244 .section}
+::: {#id244 .section}
 #### Added[\#](#id244 "Link to this heading"){.headerlink}
 
 - ROCdbgapi documentation link in the README.md file.
+:::
+::::
 
-:
-
-:
-{#rocm-systems-profiler-1-1-1 .section}
+:::: {#rocm-systems-profiler-1-1-1 .section}
 ### **ROCm Systems Profiler** (1.1.1)[\#](#rocm-systems-profiler-1-1-1 "Link to this heading"){.headerlink}
 
-{#id245 .section}
+::: {#id245 .section}
 #### Resolved issues[\#](#id245 "Link to this heading"){.headerlink}
 
 - Fixed an issue where ROC-TX ranges were displayed as two separate events instead of a single spanning event.
+:::
+::::
 
-:
-
-:
-{#rocprim-4-0-1 .section}
+:::: {#rocprim-4-0-1 .section}
 ### **rocPRIM** (4.0.1)[\#](#rocprim-4-0-1 "Link to this heading"){.headerlink}
 
-{#id246 .section}
+::: {#id246 .section}
 #### Resolved issues[\#](#id246 "Link to this heading"){.headerlink}
 
 - Fixed compilation issue when using [`rocprim::texture_cache_iterator`{.docutils .literal .notranslate}]{.pre}.
 
 - Fixed a HIP version check used to determine whether [`hipStreamLegacy`{.docutils .literal .notranslate}]{.pre} is supported. This resolves runtime errors that occur when [`hipStreamLegacy`{.docutils .literal .notranslate}]{.pre} is used in ROCm 7.0.0 and later.
+:::
+::::
 
-:
-
-:
-{#rocsparse-4-0-3 .section}
+:::: {#rocsparse-4-0-3 .section}
 ### **rocSPARSE** (4.0.3)[\#](#rocsparse-4-0-3 "Link to this heading"){.headerlink}
 
-{#id247 .section}
+::: {#id247 .section}
 #### Resolved issues[\#](#id247 "Link to this heading"){.headerlink}
 
 - Fixed an issue causing premature deallocation of internal buffers while still in use.
+:::
+::::
 
-:
-
-:
-{#rocsolver-3-30-1 .section}
+:::: {#rocsolver-3-30-1 .section}
 ### **rocSOLVER** (3.30.1)[\#](#rocsolver-3-30-1 "Link to this heading"){.headerlink}
 
-{#id248 .section}
+::: {#id248 .section}
 #### Optimized[\#](#id248 "Link to this heading"){.headerlink}
 
 Improved the performance of:
@@ -3152,26 +5115,25 @@ Improved the performance of:
 - ORMTR and downstream functions such as SYEVD.
 
 - GEQR2 and downstream functions such as GEQRF.
+:::
+::::
+:::::::::::::::::::::::::::
 
-:
-::::::::::::::::::::::::
-
-{#rocm-7-0-1 .section}
+::: {#rocm-7-0-1 .section}
 ## ROCm 7.0.1[\#](#rocm-7-0-1 "Link to this heading"){.headerlink}
 
 ROCm 7.0.1 is a quality release that resolves the existing issue. There is no change in component from the previous ROCm 7.0.0 release. See the [ROCm 7.0.1 release notes](https://rocm.docs.amd.com/en/docs-7.0.1/about/release-notes.html#rocm-7-0-1-release-notes){.reference .external} for a complete overview of this release.
+:::
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-{#rocm-7-0-0 .section}
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#rocm-7-0-0 .section}
 ## ROCm 7.0.0[\#](#rocm-7-0-0 "Link to this heading"){.headerlink}
 
 See the [ROCm 7.0.0 release notes](https://rocm.docs.amd.com/en/docs-7.0.0/about/release-notes.html#rocm-7-0-0-release-notes){.reference .external} for a complete overview of this release.
 
-::::::
-{#amd-smi-26-0-0 .section}
+::::::::: {#amd-smi-26-0-0 .section}
 ### **AMD SMI** (26.0.0)[\#](#amd-smi-26-0-0 "Link to this heading"){.headerlink}
 
-{#id249 .section}
+::: {#id249 .section}
 #### Added[\#](#id249 "Link to this heading"){.headerlink}
 
 - Ability to restart the AMD GPU driver from the CLI and API.
@@ -3245,8 +5207,9 @@ See the [ROCm 7.0.0 release notes](https://rocm.docs.amd.com/en/docs-7.0.0/about
 - Power cap to [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre}.
 
   - [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-p`{.docutils .literal .notranslate}]{.pre} will display the power cap along with power.
+:::
 
-{#id250 .section}
+::: {#id250 .section}
 #### Changed[\#](#id250 "Link to this heading"){.headerlink}
 
 - Separated driver reload functionality from [`amdsmi_set_gpu_memory_partition()`{.docutils .literal .notranslate}]{.pre} and [`amdsmi_set_gpu_memory_partition_mode()`{.docutils .literal .notranslate}]{.pre} APIs -- and from the CLI [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`set`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-M`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`<NPS`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`mode>`{.docutils .literal .notranslate}]{.pre}.
@@ -3300,8 +5263,9 @@ See the [ROCm 7.0.0 release notes](https://rocm.docs.amd.com/en/docs-7.0.0/about
   - Added new values to [`amdsmi_temperature_type_t`{.docutils .literal .notranslate}]{.pre} representing various baseboard and GPU board temperature measures.
 
   - Updated [`amdsmi_get_temp_metric`{.docutils .literal .notranslate}]{.pre} API to be able to take in and return the respective values for the new temperature types.
+:::
 
-{#id251 .section}
+::: {#id251 .section}
 #### Removed[\#](#id251 "Link to this heading"){.headerlink}
 
 - Unnecessary API, [`amdsmi_free_name_value_pairs()`{.docutils .literal .notranslate}]{.pre}
@@ -3343,8 +5307,9 @@ See the [ROCm 7.0.0 release notes](https://rocm.docs.amd.com/en/docs-7.0.0/about
   - Providing both [`vcn_activity`{.docutils .literal .notranslate}]{.pre}/[`jpeg_activity`{.docutils .literal .notranslate}]{.pre} and XCP (partition) stats [`vcn_busy`{.docutils .literal .notranslate}]{.pre}/[`jpeg_busy`{.docutils .literal .notranslate}]{.pre} caused confusion about which field to use. By removing backward compatibility, it is easier to identify the relevant field.
 
   - The [`jpeg_busy`{.docutils .literal .notranslate}]{.pre} field increased in size (for supported ASICs), making backward compatibility unable to fully copy the structure into [`jpeg_activity`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id252 .section}
+::: {#id252 .section}
 #### Optimized[\#](#id252 "Link to this heading"){.headerlink}
 
 - Reduced [`amd-smi`{.docutils .literal .notranslate}]{.pre} CLI API calls needed to be called before reading or (re)setting GPU features. This improves overall runtime performance of the CLI.
@@ -3358,26 +5323,27 @@ See the [ROCm 7.0.0 release notes](https://rocm.docs.amd.com/en/docs-7.0.0/about
 - Optimized CLI command [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`topology`{.docutils .literal .notranslate}]{.pre} in partition mode.
 
   - Reduced the number of [`amdsmi_topo_get_p2p_status`{.docutils .literal .notranslate}]{.pre} API calls to one fourth.
+:::
 
-{#id253 .section}
+::: {#id253 .section}
 #### Resolved issues[\#](#id253 "Link to this heading"){.headerlink}
 
 - Removed duplicated GPU IDs when receiving events using the [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`event`{.docutils .literal .notranslate}]{.pre} command.
 
 - Fixed [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre} decoder utilization ([`DEC%`{.docutils .literal .notranslate}]{.pre}) not showing up on MI300 Series ASICs.
+:::
 
-{#id254 .section}
+::: {#id254 .section}
 #### Known issues[\#](#id254 "Link to this heading"){.headerlink}
 
 - [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre} on Linux Guest systems triggers an attribute error.
+:::
+:::::::::
 
-::::::
-
-::::
-{#id255 .section}
+::::::: {#id255 .section}
 ### **Composable Kernel** (1.1.0)[\#](#id255 "Link to this heading"){.headerlink}
 
-{#id256 .section}
+::: {#id256 .section}
 #### Added[\#](#id256 "Link to this heading"){.headerlink}
 
 - Support for [`BF16`{.docutils .literal .notranslate}]{.pre}, [`F32`{.docutils .literal .notranslate}]{.pre}, and [`F16`{.docutils .literal .notranslate}]{.pre} for 2D and 3D NGCHW grouped convolution backward data.
@@ -3417,8 +5383,9 @@ See the [ROCm 7.0.0 release notes](https://rocm.docs.amd.com/en/docs-7.0.0/about
 - Vectorize Transpose optimization for CK Tile.
 
 - Asynchronous copy for gfx950.
+:::
 
-{#id257 .section}
+::: {#id257 .section}
 #### Changed[\#](#id257 "Link to this heading"){.headerlink}
 
 - Replaced the raw buffer load/store intrinsics with Clang20 built-ins.
@@ -3430,24 +5397,25 @@ See the [ROCm 7.0.0 release notes](https://rocm.docs.amd.com/en/docs-7.0.0/about
 - Number of instances in instance factory for grouped convolution backward weight NGCHW/GKYXC/NGKHW has been reduced.
 
 - Number of instances in instance factory for grouped convolution backward data NGCHW/GKYXC/NGKHW has been reduced.
+:::
 
-{#id258 .section}
+::: {#id258 .section}
 #### Removed[\#](#id258 "Link to this heading"){.headerlink}
 
 - Removed support for gfx940 and gfx941 targets.
+:::
 
-{#id259 .section}
+::: {#id259 .section}
 #### Optimized[\#](#id259 "Link to this heading"){.headerlink}
 
 - Optimized the GEMM multiply preshuffle and lds bypass with Pack of KGroup and better instruction layout.
+:::
+:::::::
 
-::::
-
-:::::
-{#hip-7-0-0 .section}
+:::::::: {#hip-7-0-0 .section}
 ### **HIP** 7.0.0[\#](#hip-7-0-0 "Link to this heading"){.headerlink}
 
-{#id260 .section}
+::: {#id260 .section}
 #### Added[\#](#id260 "Link to this heading"){.headerlink}
 
 - New HIP APIs
@@ -3491,8 +5459,9 @@ See the [ROCm 7.0.0 release notes](https://rocm.docs.amd.com/en/docs-7.0.0/about
 - Added new tests applications for OCP data types [`FP4`{.docutils .literal .notranslate}]{.pre}/[`FP6`{.docutils .literal .notranslate}]{.pre}/[`FP8`{.docutils .literal .notranslate}]{.pre}.
 
 - A new attribute in HIP runtime was implemented which exposes a new device capability of how many compute dies (chiplets, xcc) are available on a given GPU. Developers can get this attribute via the API [`hipDeviceGetAttribute`{.docutils .literal .notranslate}]{.pre}, to make use of the best cache locality in a kernel, and optimize the Kernel launch grid layout, for performance improvement.
+:::
 
-{#id261 .section}
+::: {#id261 .section}
 #### Changed[\#](#id261 "Link to this heading"){.headerlink}
 
 - Some unsupported GPUs such as gfx9, gfx8 and gfx7 are deprecated on Microsoft Windows.
@@ -3690,8 +5659,9 @@ See the [ROCm 7.0.0 release notes](https://rocm.docs.amd.com/en/docs-7.0.0/about
     - [`hipEventRecord`{.docutils .literal .notranslate}]{.pre}
 
     - [`hipEventRecordWithFlags`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id262 .section}
+::: {#id262 .section}
 #### Optimized[\#](#id262 "Link to this heading"){.headerlink}
 
 HIP runtime has the following functional improvements which improves runtime performance and user experience:
@@ -3723,8 +5693,9 @@ HIP runtime has the following functional improvements which improves runtime per
 - Improved launch latency for [`D2D`{.docutils .literal .notranslate}]{.pre} copies and [`memset`{.docutils .literal .notranslate}]{.pre} on MI300 Series.
 
 - Introduced a threshold to handle the command submission patch to the GPU device(s), considering the synchronization with CPU, for performance improvement.
+:::
 
-{#id263 .section}
+::: {#id263 .section}
 #### Resolved issues[\#](#id263 "Link to this heading"){.headerlink}
 
 - Error of "unable to find modules" in HIP clean up for code object module.
@@ -3748,28 +5719,29 @@ HIP runtime has the following functional improvements which improves runtime per
 - A crash during kernel execution in a customer application. The structure of kernel arguments was updated via adding the size of kernel arguments, and HIP runtime does validation before launch kernel with the structured arguments.
 
 - Compilation error when using bfloat16 functions. HIP runtime removed the anonymous namespace from FP16 functions to resolve this issue.
+:::
 
-{#id264 .section}
+::: {#id264 .section}
 #### Known issues[\#](#id264 "Link to this heading"){.headerlink}
 
 - [`hipLaunchHostFunc`{.docutils .literal .notranslate}]{.pre} returns an error during stream capture. Any application using [`hipLaunchHostFunc`{.docutils .literal .notranslate}]{.pre} might fail to capture graphs during stream capture, instead, it returns [`hipErrorStreamCaptureUnsupported`{.docutils .literal .notranslate}]{.pre}.
 
 - Compilation failure in kernels via hiprtc when using option [`std=c++11`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::::::
 
-:::::
-
-::::
-{#hipblas-3-0-0 .section}
+::::::: {#hipblas-3-0-0 .section}
 ### **hipBLAS** (3.0.0)[\#](#hipblas-3-0-0 "Link to this heading"){.headerlink}
 
-{#id265 .section}
+::: {#id265 .section}
 #### Added[\#](#id265 "Link to this heading"){.headerlink}
 
 - Added the [`hipblasSetWorkspace()`{.docutils .literal .notranslate}]{.pre} API.
 
 - Support for codecoverage tests.
+:::
 
-{#id266 .section}
+::: {#id266 .section}
 #### Changed[\#](#id266 "Link to this heading"){.headerlink}
 
 - HIPBLAS_V2 API is the only available API using the [`hipComplex`{.docutils .literal .notranslate}]{.pre} and [`hipDatatype`{.docutils .literal .notranslate}]{.pre} types.
@@ -3777,8 +5749,9 @@ HIP runtime has the following functional improvements which improves runtime per
 - Documentation updates.
 
 - Verbose compilation for [`hipblas.cpp`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id267 .section}
+::: {#id267 .section}
 #### Removed[\#](#id267 "Link to this heading"){.headerlink}
 
 - [`hipblasDatatype_t`{.docutils .literal .notranslate}]{.pre} type.
@@ -3786,21 +5759,21 @@ HIP runtime has the following functional improvements which improves runtime per
 - [`hipComplex`{.docutils .literal .notranslate}]{.pre} and [`hipDoubleComplex`{.docutils .literal .notranslate}]{.pre} types.
 
 - Support code for non-production gfx targets.
+:::
 
-{#id268 .section}
+::: {#id268 .section}
 #### Resolved issues[\#](#id268 "Link to this heading"){.headerlink}
 
 - The build time [`CMake`{.docutils .literal .notranslate}]{.pre} configuration for the dependency on [`hipBLAS-common`{.docutils .literal .notranslate}]{.pre} is fixed.
 
 - Compiler warnings for unhandled enumerations have been resolved.
+:::
+:::::::
 
-::::
-
-:::::
-{#hipblaslt-1-0-0 .section}
+:::::::: {#hipblaslt-1-0-0 .section}
 ### **hipBLASLt** (1.0.0)[\#](#hipblaslt-1-0-0 "Link to this heading"){.headerlink}
 
-{#id269 .section}
+::: {#id269 .section}
 #### Added[\#](#id269 "Link to this heading"){.headerlink}
 
 - Stream-K GEMM support has been enabled for the [`FP32`{.docutils .literal .notranslate}]{.pre}, [`FP16`{.docutils .literal .notranslate}]{.pre}, [`BF16`{.docutils .literal .notranslate}]{.pre}, [`FP8`{.docutils .literal .notranslate}]{.pre}, and [`BF8`{.docutils .literal .notranslate}]{.pre} data types on the Instinct MI300A APU. To activate this feature, set the [`TENSILE_SOLUTION_SELECTION_METHOD`{.docutils .literal .notranslate}]{.pre} environment variable to [`2`{.docutils .literal .notranslate}]{.pre}, for example, [`export`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`TENSILE_SOLUTION_SELECTION_METHOD=2`{.docutils .literal .notranslate}]{.pre}.
@@ -3818,20 +5791,23 @@ HIP runtime has the following functional improvements which improves runtime per
 - Support for [`FP6`{.docutils .literal .notranslate}]{.pre}, [`BF6`{.docutils .literal .notranslate}]{.pre}, and [`FP4`{.docutils .literal .notranslate}]{.pre} on gfx950.
 
 - Support for block scaling by setting [`HIPBLASLT_MATMUL_DESC_A_SCALE_MODE`{.docutils .literal .notranslate}]{.pre} and [`HIPBLASLT_MATMUL_DESC_B_SCALE_MODE`{.docutils .literal .notranslate}]{.pre} to [`HIPBLASLT_MATMUL_MATRIX_SCALE_VEC32_UE8M0`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id270 .section}
+::: {#id270 .section}
 #### Changed[\#](#id270 "Link to this heading"){.headerlink}
 
 - The non-V2 APIs ([`GemmPreference`{.docutils .literal .notranslate}]{.pre}, [`GemmProblemType`{.docutils .literal .notranslate}]{.pre}, [`GemmEpilogue`{.docutils .literal .notranslate}]{.pre}, [`GemmTuning`{.docutils .literal .notranslate}]{.pre}, [`GemmInputs`{.docutils .literal .notranslate}]{.pre}) in the cpp header are now the same as the V2 APIs ([`GemmPreferenceV2`{.docutils .literal .notranslate}]{.pre}, [`GemmProblemTypeV2`{.docutils .literal .notranslate}]{.pre}, [`GemmEpilogueV2`{.docutils .literal .notranslate}]{.pre}, [`GemmTuningV2`{.docutils .literal .notranslate}]{.pre}, [`GemmInputsV2`{.docutils .literal .notranslate}]{.pre}). The original non-V2 APIs are removed.
+:::
 
-{#id271 .section}
+::: {#id271 .section}
 #### Removed[\#](#id271 "Link to this heading"){.headerlink}
 
 - [`HIPBLASLT_MATMUL_DESC_A_SCALE_POINTER_VEC_EXT`{.docutils .literal .notranslate}]{.pre} and [`HIPBLASLT_MATMUL_DESC_B_SCALE_POINTER_VEC_EXT`{.docutils .literal .notranslate}]{.pre} are removed. Use the [`HIPBLASLT_MATMUL_DESC_A_SCALE_MODE`{.docutils .literal .notranslate}]{.pre} and [`HIPBLASLT_MATMUL_DESC_B_SCALE_MODE`{.docutils .literal .notranslate}]{.pre} attributes to set scalar ([`HIPBLASLT_MATMUL_MATRIX_SCALE_SCALAR_32F`{.docutils .literal .notranslate}]{.pre}) or vector ([`HIPBLASLT_MATMUL_MATRIX_SCALE_OUTER_VEC_32F`{.docutils .literal .notranslate}]{.pre}) attributes.
 
 - The [`hipblasltExtAMaxWithScale`{.docutils .literal .notranslate}]{.pre} API is removed.
+:::
 
-{#id272 .section}
+::: {#id272 .section}
 #### Optimized[\#](#id272 "Link to this heading"){.headerlink}
 
 - Improved performance for 8-bit ([`FP8`{.docutils .literal .notranslate}]{.pre} / [`BF8`{.docutils .literal .notranslate}]{.pre} / [`I8`{.docutils .literal .notranslate}]{.pre}) NN/NT cases by adding [`s_delay_alu`{.docutils .literal .notranslate}]{.pre} to reduce stalls from dependent ALU operations on gfx12+.
@@ -3839,19 +5815,19 @@ HIP runtime has the following functional improvements which improves runtime per
 - Improved performance for 8-bit and 16-bit ([`FP16`{.docutils .literal .notranslate}]{.pre} / [`BF16`{.docutils .literal .notranslate}]{.pre}) TN cases by enabling software dependency checks (Expert Scheduling Mode) under certain restrictions to reduce redundant hardware dependency checks on gfx12+.
 
 - Improved performance for 8-bit, 16-bit, and 32-bit batched GEMM with a better heuristic search algorithm for gfx942.
+:::
 
-{#id273 .section}
+::: {#id273 .section}
 #### Upcoming changes[\#](#id273 "Link to this heading"){.headerlink}
 
 - V2 APIs ([`GemmPreferenceV2`{.docutils .literal .notranslate}]{.pre}, [`GemmProblemTypeV2`{.docutils .literal .notranslate}]{.pre}, [`GemmEpilogueV2`{.docutils .literal .notranslate}]{.pre}, [`GemmTuningV2`{.docutils .literal .notranslate}]{.pre}, [`GemmInputsV2`{.docutils .literal .notranslate}]{.pre}) are deprecated.
+:::
+::::::::
 
-:::::
-
-::::::
-{#hipcub-4-0-0 .section}
+::::::::: {#hipcub-4-0-0 .section}
 ### **hipCUB** (4.0.0)[\#](#hipcub-4-0-0 "Link to this heading"){.headerlink}
 
-{#id274 .section}
+::: {#id274 .section}
 #### Added[\#](#id274 "Link to this heading"){.headerlink}
 
 - A new cmake option, [`BUILD_OFFLOAD_COMPRESS`{.docutils .literal .notranslate}]{.pre}. When hipCUB is built with this option enabled, the [`--offload-compress`{.docutils .literal .notranslate}]{.pre} switch is passed to the compiler. This causes the compiler to compress the binary that it generates. Compression can be useful in cases where you are compiling for a large number of targets, since this often results in a large binary. Without compression, in some cases, the generated binary may become so large that symbols are placed out of range, resulting in linking errors. The new [`BUILD_OFFLOAD_COMPRESS`{.docutils .literal .notranslate}]{.pre} option is set to [`ON`{.docutils .literal .notranslate}]{.pre} by default.
@@ -3879,8 +5855,9 @@ HIP runtime has the following functional improvements which improves runtime per
 - [`ThreadStoreVolatilePtr`{.docutils .literal .notranslate}]{.pre} and the [`IterateThreadStore`{.docutils .literal .notranslate}]{.pre} struct were added to align hipCUB with CUB.
 
 - [`hipcub::InclusiveScanInit`{.docutils .literal .notranslate}]{.pre} for CUB parity.
+:::
 
-{#id275 .section}
+::: {#id275 .section}
 #### Changed[\#](#id275 "Link to this heading"){.headerlink}
 
 - The CUDA backend now requires CUB, Thrust, and libcu++ 2.7.0. If they aren't found, they will be downloaded from the CUDA CCCL repository.
@@ -3894,8 +5871,9 @@ HIP runtime has the following functional improvements which improves runtime per
 - The [`hipcub::detail::accumulator_t`{.docutils .literal .notranslate}]{.pre} in rocPRIM backend has been changed to utilise [`rocprim::accumulator_t`{.docutils .literal .notranslate}]{.pre}.
 
 - The usage of [`rocprim::invoke_result_binary_op_t`{.docutils .literal .notranslate}]{.pre} has been replaced with [`rocprim::accumulator_t`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id276 .section}
+::: {#id276 .section}
 #### Removed[\#](#id276 "Link to this heading"){.headerlink}
 
 - The AMD GPU targets [`gfx803`{.docutils .literal .notranslate}]{.pre} and [`gfx900`{.docutils .literal .notranslate}]{.pre} are no longer built by default. If you want to build for these architectures, specify them explicitly in the [`AMDGPU_TARGETS`{.docutils .literal .notranslate}]{.pre} cmake option.
@@ -3909,38 +5887,41 @@ HIP runtime has the following functional improvements which improves runtime per
 - This release removes support for custom builds on gfx940 and gfx941.
 
 - Removed C++14 support. Only C++17 is supported.
+:::
 
-{#id277 .section}
+::: {#id277 .section}
 #### Resolved issues[\#](#id277 "Link to this heading"){.headerlink}
 
 - Fixed an issue where [`Sort(keys,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`compare_op,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`valid_items,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`oob_default)`{.docutils .literal .notranslate}]{.pre} in [`block_merge_sort.hpp`{.docutils .literal .notranslate}]{.pre} would not fill in elements that are out of range (items after [`valid_items`{.docutils .literal .notranslate}]{.pre}) with [`oob_default`{.docutils .literal .notranslate}]{.pre}.
 
 - Fixed an issue where [`ScatterToStripedFlagged`{.docutils .literal .notranslate}]{.pre} in [`block_exhange.hpp`{.docutils .literal .notranslate}]{.pre} was calling the wrong function.
+:::
 
-{#id278 .section}
+::: {#id278 .section}
 #### Known issues[\#](#id278 "Link to this heading"){.headerlink}
 
 - [`BlockAdjacentDifference::FlagHeads`{.docutils .literal .notranslate}]{.pre}, [`BlockAdjacentDifference::FlagTails`{.docutils .literal .notranslate}]{.pre} and [`BlockAdjacentDifference::FlagHeadsAndTails`{.docutils .literal .notranslate}]{.pre} have been removed from hipCUB's CUB backend. They were already deprecated as of version 2.12.0 of hipCUB and they were removed from CCCL (CUB) as of CCCL's 2.6.0 release.
 
 - [`BlockScan::InclusiveScan`{.docutils .literal .notranslate}]{.pre} for the CUDA backend does not compute the block aggregate correctly when passing an initial value parameter. This behavior is not matched by the AMD backend.
+:::
 
-{#id279 .section}
+::: {#id279 .section}
 #### Upcoming changes[\#](#id279 "Link to this heading"){.headerlink}
 
 - [`BlockAdjacentDifference::FlagHeads`{.docutils .literal .notranslate}]{.pre}, [`BlockAdjacentDifference::FlagTails`{.docutils .literal .notranslate}]{.pre} and [`BlockAdjacentDifference::FlagHeadsAndTails`{.docutils .literal .notranslate}]{.pre} were deprecated as of version 2.12.0 of hipCUB, and will be removed from the rocPRIM backend in a future release for the next ROCm major version (ROCm 7.0.0).
+:::
+:::::::::
 
-::::::
-
-::
-{#hipfft-1-0-20 .section}
+::::: {#hipfft-1-0-20 .section}
 ### **hipFFT** (1.0.20)[\#](#hipfft-1-0-20 "Link to this heading"){.headerlink}
 
-{#id280 .section}
+::: {#id280 .section}
 #### Added[\#](#id280 "Link to this heading"){.headerlink}
 
 - Support for gfx950.
+:::
 
-{#id281 .section}
+::: {#id281 .section}
 #### Removed[\#](#id281 "Link to this heading"){.headerlink}
 
 - Removed hipfft-rider legacy compatibility from clients.
@@ -3948,30 +5929,29 @@ HIP runtime has the following functional improvements which improves runtime per
 - Removed support for the gfx940 and gfx941 targets from the client programs.
 
 - Removed backward compatibility symlink for include directories.
+:::
+:::::
 
-::
-
-::
-{#hipfort-0-7-0 .section}
+::::: {#hipfort-0-7-0 .section}
 ### **hipfort** (0.7.0)[\#](#hipfort-0-7-0 "Link to this heading"){.headerlink}
 
-{#id282 .section}
+::: {#id282 .section}
 #### Added[\#](#id282 "Link to this heading"){.headerlink}
 
 - Documentation clarifying how hipfort is built for the CUDA platform.
+:::
 
-{#id283 .section}
+::: {#id283 .section}
 #### Changed[\#](#id283 "Link to this heading"){.headerlink}
 
 - Updated and reorganized documentation for clarity and consistency.
+:::
+:::::
 
-::
-
-::
-{#hipify-20-0-0 .section}
+::::: {#hipify-20-0-0 .section}
 ### **HIPIFY** (20.0.0)[\#](#hipify-20-0-0 "Link to this heading"){.headerlink}
 
-{#id284 .section}
+::: {#id284 .section}
 #### Added[\#](#id284 "Link to this heading"){.headerlink}
 
 - CUDA 12.9.1 support.
@@ -3981,8 +5961,9 @@ HIP runtime has the following functional improvements which improves runtime per
 - cuTENSOR 2.2.0.0 support.
 
 - LLVM 20.1.8 support.
+:::
 
-{#id285 .section}
+::: {#id285 .section}
 #### Resolved issues[\#](#id285 "Link to this heading"){.headerlink}
 
 - [`hipDNN`{.docutils .literal .notranslate}]{.pre} support is removed by default.
@@ -3994,32 +5975,35 @@ HIP runtime has the following functional improvements which improves runtime per
 - [#1962](https://github.com/ROCm/HIPIFY/issues/1962){.reference .external} Support for cuda-samples helper headers.
 
 - [#2035](https://github.com/ROCm/HIPIFY/issues/2035){.reference .external} Removed [`const_cast<const`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`char**>;`{.docutils .literal .notranslate}]{.pre} in [`hiprtcCreateProgram`{.docutils .literal .notranslate}]{.pre} and [`hiprtcCompileProgram`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::
 
-::
-
-{#hiprand-3-0-0 .section}
+:::::: {#hiprand-3-0-0 .section}
 ### **hipRAND** (3.0.0)[\#](#hiprand-3-0-0 "Link to this heading"){.headerlink}
 
-{#id286 .section}
+::: {#id286 .section}
 #### Added[\#](#id286 "Link to this heading"){.headerlink}
 
 - Support for gfx950.
+:::
 
-{#id287 .section}
+::: {#id287 .section}
 #### Changed[\#](#id287 "Link to this heading"){.headerlink}
 
 - Deprecated the hipRAND Fortran API in favor of hipfort.
+:::
 
-{#id288 .section}
+::: {#id288 .section}
 #### Removed[\#](#id288 "Link to this heading"){.headerlink}
 
 - Removed C++14 support, so only C++17 is supported.
+:::
+::::::
 
-::
-{#hipsolver-3-0-0 .section}
+::::: {#hipsolver-3-0-0 .section}
 ### **hipSOLVER** (3.0.0)[\#](#hipsolver-3-0-0 "Link to this heading"){.headerlink}
 
-{#id289 .section}
+::: {#id289 .section}
 #### Added[\#](#id289 "Link to this heading"){.headerlink}
 
 - Added compatibility-only functions:
@@ -4027,21 +6011,21 @@ HIP runtime has the following functional improvements which improves runtime per
   - csrlsvqr
 
     - [`hipsolverSpCcsrlsvqr`{.docutils .literal .notranslate}]{.pre}, [`hipsolverSpZcsrlsvqr`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id290 .section}
+::: {#id290 .section}
 #### Resolved issues[\#](#id290 "Link to this heading"){.headerlink}
 
 - Corrected the value of [`lwork`{.docutils .literal .notranslate}]{.pre} returned by various [`bufferSize`{.docutils .literal .notranslate}]{.pre} functions to be consistent with CUDA cuSOLVER. The following functions now return [`lwork`{.docutils .literal .notranslate}]{.pre} so that the workspace size (in bytes) is [`sizeof(T)`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`*`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`lwork`{.docutils .literal .notranslate}]{.pre}, rather than [`lwork`{.docutils .literal .notranslate}]{.pre}. To restore the original behavior, set the environment variable [`HIPSOLVER_BUFFERSIZE_RETURN_BYTES`{.docutils .literal .notranslate}]{.pre}.
 
   - [`hipsolverXorgbr_bufferSize`{.docutils .literal .notranslate}]{.pre}, [`hipsolverXorgqr_bufferSize`{.docutils .literal .notranslate}]{.pre}, [`hipsolverXorgtr_bufferSize`{.docutils .literal .notranslate}]{.pre}, [`hipsolverXormqr_bufferSize`{.docutils .literal .notranslate}]{.pre}, [`hipsolverXormtr_bufferSize`{.docutils .literal .notranslate}]{.pre}, [`hipsolverXgesvd_bufferSize`{.docutils .literal .notranslate}]{.pre}, [`hipsolverXgesvdj_bufferSize`{.docutils .literal .notranslate}]{.pre}, [`hipsolverXgesvdBatched_bufferSize`{.docutils .literal .notranslate}]{.pre}, [`hipsolverXgesvdaStridedBatched_bufferSize`{.docutils .literal .notranslate}]{.pre}, [`hipsolverXsyevd_bufferSize`{.docutils .literal .notranslate}]{.pre}, [`hipsolverXsyevdx_bufferSize`{.docutils .literal .notranslate}]{.pre}, [`hipsolverXsyevj_bufferSize`{.docutils .literal .notranslate}]{.pre}, [`hipsolverXsyevjBatched_bufferSize`{.docutils .literal .notranslate}]{.pre}, [`hipsolverXsygvd_bufferSize`{.docutils .literal .notranslate}]{.pre}, [`hipsolverXsygvdx_bufferSize`{.docutils .literal .notranslate}]{.pre}, [`hipsolverXsygvj_bufferSize`{.docutils .literal .notranslate}]{.pre}, [`hipsolverXsytrd_bufferSize`{.docutils .literal .notranslate}]{.pre}, [`hipsolverXsytrf_bufferSize`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::
 
-::
-
-::::
-{#hipsparse-4-0-1 .section}
+::::::: {#hipsparse-4-0-1 .section}
 ### **hipSPARSE** (4.0.1)[\#](#hipsparse-4-0-1 "Link to this heading"){.headerlink}
 
-{#id291 .section}
+::: {#id291 .section}
 #### Added[\#](#id291 "Link to this heading"){.headerlink}
 
 - [`int8`{.docutils .literal .notranslate}]{.pre}, [`int32`{.docutils .literal .notranslate}]{.pre}, and [`float16`{.docutils .literal .notranslate}]{.pre} data types to [`hipDataTypeToHCCDataType`{.docutils .literal .notranslate}]{.pre} so that sparse matrix descriptors can be used with them.
@@ -4061,30 +6045,33 @@ HIP runtime has the following functional improvements which improves runtime per
 - [`int8`{.docutils .literal .notranslate}]{.pre} precision to the [`hipsparseCsr2cscEx2`{.docutils .literal .notranslate}]{.pre} routine.
 
 - The [`almalinux`{.docutils .literal .notranslate}]{.pre} operating system name to correct the GFortran dependency.
+:::
 
-{#id292 .section}
+::: {#id292 .section}
 #### Changed[\#](#id292 "Link to this heading"){.headerlink}
 
 - Switched to defaulting to C++17 when building hipSPARSE from source. Previously hipSPARSE was using C++14 by default.
+:::
 
-{#id293 .section}
+::: {#id293 .section}
 #### Resolved issues[\#](#id293 "Link to this heading"){.headerlink}
 
 - Fixed a compilation [issue](https://github.com/ROCm/hipSPARSE/issues/555){.reference .external} related to using [`std::filesystem`{.docutils .literal .notranslate}]{.pre} and C++14.
 
 - Fixed an issue where the clients-common package was empty by moving the [`hipsparse_clientmatrices.cmake`{.docutils .literal .notranslate}]{.pre} and [`hipsparse_mtx2csr`{.docutils .literal .notranslate}]{.pre} files to it.
+:::
 
-{#id294 .section}
+::: {#id294 .section}
 #### Known issues[\#](#id294 "Link to this heading"){.headerlink}
 
 - In [`hipsparseSpSM_solve()`{.docutils .literal .notranslate}]{.pre}, the external buffer is passed as a parameter. This does not match the CUDA cuSPARSE API. This extra external buffer parameter will be removed in a future release. For now, this extra parameter can be ignored and nullptr passed in because it is unused internally.
+:::
+:::::::
 
-::::
-
-{#hipsparselt-0-2-4 .section}
+:::::: {#hipsparselt-0-2-4 .section}
 ### **hipSPARSELt** (0.2.4)[\#](#hipsparselt-0-2-4 "Link to this heading"){.headerlink}
 
-{#id295 .section}
+::: {#id295 .section}
 #### Added[\#](#id295 "Link to this heading"){.headerlink}
 
 - Support for the LLVM target gfx950.
@@ -4098,26 +6085,29 @@ HIP runtime has the following functional improvements which improves runtime per
 - Support for ROC-TX if [`HIPSPARSELT_ENABLE_MARKER=1`{.docutils .literal .notranslate}]{.pre} is set.
 
 - Support for the cuSPARSELt v0.6.3 backend.
+:::
 
-{#id296 .section}
+::: {#id296 .section}
 #### Removed[\#](#id296 "Link to this heading"){.headerlink}
 
 - Support for LLVM targets gfx940 and gfx941 has been removed.
 
 - [`hipsparseLtDatatype_t`{.docutils .literal .notranslate}]{.pre} has been removed.
+:::
 
-{#id297 .section}
+::: {#id297 .section}
 #### Optimized[\#](#id297 "Link to this heading"){.headerlink}
 
 - Improved the library loading time.
 
 - Provided more kernels for the [`FP16`{.docutils .literal .notranslate}]{.pre} data type.
+:::
+::::::
 
-::
-{#hiptensor-2-0-0 .section}
+::::: {#hiptensor-2-0-0 .section}
 ### **hipTensor** (2.0.0)[\#](#hiptensor-2-0-0 "Link to this heading"){.headerlink}
 
-{#id298 .section}
+::: {#id298 .section}
 #### Added[\#](#id298 "Link to this heading"){.headerlink}
 
 - Element-wise binary operation support.
@@ -4149,8 +6139,9 @@ HIP runtime has the following functional improvements which improves runtime per
 - [`hiptensorCreatePlan`{.docutils .literal .notranslate}]{.pre} to allocate a [`hiptensorPlan_t`{.docutils .literal .notranslate}]{.pre} object, select an appropriate kernel for a given operation and prepare a plan that encodes the execution.
 
 - [`hiptensorDestroyPlan`{.docutils .literal .notranslate}]{.pre} to free all resources related to the provided plan.
+:::
 
-{#id299 .section}
+::: {#id299 .section}
 #### Changed[\#](#id299 "Link to this heading"){.headerlink}
 
 - Removed architecture support for gfx940 and gfx941.
@@ -4192,14 +6183,13 @@ HIP runtime has the following functional improvements which improves runtime per
 - Replaced [`hiptensorElementwiseTrinary`{.docutils .literal .notranslate}]{.pre} with [`hiptensorElementwiseTrinaryExecute`{.docutils .literal .notranslate}]{.pre}.
 
 - Removed function [`hiptensorReductionGetWorkspaceSize`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::
 
-::
-
-::::
-{#llvm-project-20-0-0 .section}
+::::::: {#llvm-project-20-0-0 .section}
 ### **llvm-project** (20.0.0)[\#](#llvm-project-20-0-0 "Link to this heading"){.headerlink}
 
-{#id300 .section}
+::: {#id300 .section}
 #### Added[\#](#id300 "Link to this heading"){.headerlink}
 
 - The compiler [`-gsplit-dwarf`{.docutils .literal .notranslate}]{.pre} option to enable the generation of separate debug information file at compile time. When used, separate debug information files are generated for host and for each offload architecture. For additional information, see [DebugFission](https://gcc.gnu.org/wiki/DebugFission){.reference .external}.
@@ -4211,33 +6201,35 @@ HIP runtime has the following functional improvements which improves runtime per
 - Compiler support of a new target-specific builtin [`__builtin_amdgcn_processor_is`{.docutils .literal .notranslate}]{.pre} for late or deferred queries of the current target processor, and [`__builtin_amdgcn_is_invocable`{.docutils .literal .notranslate}]{.pre} to determine the current target processor ability to invoke a particular builtin.
 
 - HIPIFY support for CUDA 12.9.1 APIs. Added support for all new device and host APIs, including FP4, FP6, and FP128, and support for the corresponding ROCm HIP equivalents.
+:::
 
-{#id301 .section}
+::: {#id301 .section}
 #### Changed[\#](#id301 "Link to this heading"){.headerlink}
 
 - Updated clang/llvm to AMD clang version 20.0.0 (equivalent to LLVM 20.0.0 with additional out-of-tree patches).
 
 - HIPCC Perl scripts ([`hipcc.pl`{.docutils .literal .notranslate}]{.pre} and [`hipconfig.pl`{.docutils .literal .notranslate}]{.pre}) have been removed from this release.
+:::
 
-{#id302 .section}
+::: {#id302 .section}
 #### Optimized[\#](#id302 "Link to this heading"){.headerlink}
 
 - Improved compiler memory load and store instructions.
+:::
 
-{#id303 .section}
+::: {#id303 .section}
 #### Upcoming changes[\#](#id303 "Link to this heading"){.headerlink}
 
 - [`__AMDGCN_WAVEFRONT_SIZE__`{.docutils .literal .notranslate}]{.pre} macro and HIP's [`warpSize`{.docutils .literal .notranslate}]{.pre} variable as [`constexpr`{.docutils .literal .notranslate}]{.pre} are deprecated and will be disabled in a future release. Users are encouraged to update their code if needed to ensure future compatibility. For more information, see [AMDGCN_WAVEFRONT_SIZE deprecation](https://rocm.docs.amd.com/en/docs-7.0.0/about/release-notes.html#amdgpu-wavefront-size-compiler-macro-deprecation){.reference .external}.
 
 - The [`roc-obj-ls`{.docutils .literal .notranslate}]{.pre} and [`roc-obj-extract`{.docutils .literal .notranslate}]{.pre} tools are deprecated. To extract all Clang offload bundles into separate code objects use [`llvm-objdump`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--offloading`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`<file>`{.docutils .literal .notranslate}]{.pre}. For more information, see [Changes to ROCm Object Tooling](https://rocm.docs.amd.com/en/docs-7.0.0/about/release-notes.html#changes-to-rocm-object-tooling){.reference .external}.
+:::
+:::::::
 
-::::
-
-:::::
-{#migraphx-2-13-0 .section}
+:::::::: {#migraphx-2-13-0 .section}
 ### **MIGraphX** (2.13.0)[\#](#migraphx-2-13-0 "Link to this heading"){.headerlink}
 
-{#id304 .section}
+::: {#id304 .section}
 #### Added[\#](#id304 "Link to this heading"){.headerlink}
 
 - Support for OCP [`FP8`{.docutils .literal .notranslate}]{.pre} on AMD Instinct MI350X GPUs.
@@ -4261,8 +6253,9 @@ HIP runtime has the following functional improvements which improves runtime per
 - rocMLIR fusion for kv-cache attention.
 
 - Introduced a check for file-write errors.
+:::
 
-{#id305 .section}
+::: {#id305 .section}
 #### Changed[\#](#id305 "Link to this heading"){.headerlink}
 
 - [`quantize_bf16`{.docutils .literal .notranslate}]{.pre} for quantizing the model to [`BF16`{.docutils .literal .notranslate}]{.pre} has been made visible in the MIGraphX user API.
@@ -4292,15 +6285,17 @@ HIP runtime has the following functional improvements which improves runtime per
 - Update accuracy checker to output test data with the [`--show-test-data`{.docutils .literal .notranslate}]{.pre} flag.
 
 - The [`MIGRAPHX_TRACE_BENCHMARKING`{.docutils .literal .notranslate}]{.pre} option now allows the problem cache file to be updated after finding the best solution.
+:::
 
-{#id306 .section}
+::: {#id306 .section}
 #### Removed[\#](#id306 "Link to this heading"){.headerlink}
 
 - [`ROCM_USE_FLOAT8`{.docutils .literal .notranslate}]{.pre} macro.
 
 - The [`BF16`{.docutils .literal .notranslate}]{.pre} GEMM test was removed for Navi21, as it is unsupported by rocBLAS and hipBLASLt on that platform.
+:::
 
-{#id307 .section}
+::: {#id307 .section}
 #### Optimized[\#](#id307 "Link to this heading"){.headerlink}
 
 - Use common average in [`compile_ops`{.docutils .literal .notranslate}]{.pre} to reduce run-to-run variations when tuning.
@@ -4324,8 +6319,9 @@ HIP runtime has the following functional improvements which improves runtime per
 - Broadcast not fused after convolution or GEMM MLIR kernels.
 
 - Avoid reduction fusion when operator data-types mismatch.
+:::
 
-{#id308 .section}
+::: {#id308 .section}
 #### Resolved issues[\#](#id308 "Link to this heading"){.headerlink}
 
 - Compilation workaround ICE in clang 20 when using [`views::transform`{.docutils .literal .notranslate}]{.pre}.
@@ -4349,14 +6345,13 @@ HIP runtime has the following functional improvements which improves runtime per
 - Fixed check for scales if ROI input is present in Resize operation.
 
 - Einsum: Fixed a crash on empty squeeze operations.
+:::
+::::::::
 
-:::::
-
-::::
-{#miopen-3-5-0 .section}
+::::::: {#miopen-3-5-0 .section}
 ### **MIOpen** (3.5.0)[\#](#miopen-3-5-0 "Link to this heading"){.headerlink}
 
-{#id309 .section}
+::: {#id309 .section}
 #### Added[\#](#id309 "Link to this heading"){.headerlink}
 
 - \[Conv\] Misa kernels for gfx950.
@@ -4372,15 +6367,17 @@ HIP runtime has the following functional improvements which improves runtime per
 - Grouped convolution + bias + activation fusion.
 
 - Composable Kernel (CK) can now be built inline as part of MIOpen.
+:::
 
-{#id310 .section}
+::: {#id310 .section}
 #### Changed[\#](#id310 "Link to this heading"){.headerlink}
 
 - Changed to using the median value with outliers removed when deciding on the best solution to run.
 
 - \[Conv\] Updated the igemm asm solver.
+:::
 
-{#id311 .section}
+::: {#id311 .section}
 #### Optimized[\#](#id311 "Link to this heading"){.headerlink}
 
 - \[BatchNorm\] Optimized NHWC OpenCL kernels and improved heuristics.
@@ -4392,8 +6389,9 @@ HIP runtime has the following functional improvements which improves runtime per
 - \[RNN\] Updated selection heuristics.
 
 - Updated tuning for the AMD Instinct MI300 Series.
+:::
 
-{#id312 .section}
+::: {#id312 .section}
 #### Resolved issues[\#](#id312 "Link to this heading"){.headerlink}
 
 - Fixed a segmentation fault when the user specified a smaller workspace than what was required.
@@ -4407,42 +6405,43 @@ HIP runtime has the following functional improvements which improves runtime per
 - Fixed a memory access fault caused by not allocating enough workspace.
 
 - Fixed a name typo that caused kernel mismatches and long startup times.
+:::
+:::::::
 
-::::
-
-::::
-{#mivisionx-3-3-0 .section}
+::::::: {#mivisionx-3-3-0 .section}
 ### **MIVisionX** (3.3.0)[\#](#mivisionx-3-3-0 "Link to this heading"){.headerlink}
 
-{#id313 .section}
+::: {#id313 .section}
 #### Added[\#](#id313 "Link to this heading"){.headerlink}
 
 - Support to enable/disable BatchPD code in VX_RPP extensions by checking the RPP_LEGACY_SUPPORT flag.
+:::
 
-{#id314 .section}
+::: {#id314 .section}
 #### Changed[\#](#id314 "Link to this heading"){.headerlink}
 
 - VX_RPP extension: Version 3.1.0 release.
 
 - Update the parameters and kernel API of Blur, Fog, Jitter, LensCorrection, Rain, Pixelate, Vignette and ResizeCrop wrt tensor kernels replacing the legacy BatchPD API calls in VX_RPP extensions.
+:::
 
-{#id315 .section}
+::: {#id315 .section}
 #### Known issues[\#](#id315 "Link to this heading"){.headerlink}
 
 - Installation on RHEL and SLES requires the manual installation of the [`FFMPEG`{.docutils .literal .notranslate}]{.pre} and [`OpenCV`{.docutils .literal .notranslate}]{.pre} dev packages.
+:::
 
-{#id316 .section}
+::: {#id316 .section}
 #### Upcoming changes[\#](#id316 "Link to this heading"){.headerlink}
 
 - Optimized audio augmentations support for VX_RPP.
+:::
+:::::::
 
-::::
-
-::::
-{#id317 .section}
+::::::: {#id317 .section}
 ### **RCCL** (2.26.6)[\#](#id317 "Link to this heading"){.headerlink}
 
-{#id318 .section}
+::: {#id318 .section}
 #### Added[\#](#id318 "Link to this heading"){.headerlink}
 
 - Support for the extended fine-grained system memory pool.
@@ -4466,8 +6465,9 @@ HIP runtime has the following functional improvements which improves runtime per
 - LL/LL128 usage ranges for AllReduce, AllGather, and ReduceScatter are part of the tuning models, which enable architecture-specific tuning in conjunction with the existing Rome Models scheme in RCCL.
 
 - Two new APIs are exposed as part of an initiative to separate RCCL code. These APIs are [`rcclGetAlgoInfo`{.docutils .literal .notranslate}]{.pre} and [`rcclFuncMaxSendRecvCount`{.docutils .literal .notranslate}]{.pre}. However, user-level invocation requires that RCCL be built with [`RCCL_EXPOSE_STATIC`{.docutils .literal .notranslate}]{.pre} enabled.
+:::
 
-{#id319 .section}
+::: {#id319 .section}
 #### Changed[\#](#id319 "Link to this heading"){.headerlink}
 
 - Compatibility with NCCL 2.23.4.
@@ -4477,13 +6477,15 @@ HIP runtime has the following functional improvements which improves runtime per
 - Compatibility with NCCL 2.25.1.
 
 - Compatibility with NCCL 2.26.6.
+:::
 
-{#id320 .section}
+::: {#id320 .section}
 #### Optimized[\#](#id320 "Link to this heading"){.headerlink}
 
 - Improved the performance of the [`FP8`{.docutils .literal .notranslate}]{.pre} Sum operation by upcasting to [`FP16`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id321 .section}
+::: {#id321 .section}
 #### Resolved issues[\#](#id321 "Link to this heading"){.headerlink}
 
 - Resolved an issue when using more than 64 channels when multiple collectives are used in the same [`ncclGroup()`{.docutils .literal .notranslate}]{.pre} call.
@@ -4495,14 +6497,13 @@ HIP runtime has the following functional improvements which improves runtime per
 - Fixed broken functionality within the LL protocol on gfx950 by disabling inlining of LLGenericOp kernels.
 
 - Fixed the known issue "When splitting a communicator using [`ncclCommSplit`{.docutils .literal .notranslate}]{.pre} in some GPU configurations, MSCCL initialization can cause a segmentation fault" with a design change to use [`comm`{.docutils .literal .notranslate}]{.pre} instead of [`rank`{.docutils .literal .notranslate}]{.pre} for [`mscclStatus`{.docutils .literal .notranslate}]{.pre}. The global map for [`comm`{.docutils .literal .notranslate}]{.pre} to [`mscclStatus`{.docutils .literal .notranslate}]{.pre} is still not thread safe but should be explicitly handled by mutexes for read-write operations. This is tested for correctness, but there is a plan to use a thread-safe map data structure in an upcoming release.
+:::
+:::::::
 
-::::
-
-::::
-{#rocal-2-3-0 .section}
+::::::: {#rocal-2-3-0 .section}
 ### **rocAL** (2.3.0)[\#](#rocal-2-3-0 "Link to this heading"){.headerlink}
 
-{#id322 .section}
+::: {#id322 .section}
 #### Added[\#](#id322 "Link to this heading"){.headerlink}
 
 - Extended support to rocAL's video decoder to use rocDecode hardware decoder.
@@ -4516,59 +6517,63 @@ HIP runtime has the following functional improvements which improves runtime per
 - Numpy reader support for reading npy files in rocAL.
 
 - Test case for numpy reader in C++ and python tests.
+:::
 
-{#id323 .section}
+::: {#id323 .section}
 #### Resolved issues[\#](#id323 "Link to this heading"){.headerlink}
 
 - [`TurboJPEG`{.docutils .literal .notranslate}]{.pre} no longer needs to be installed manually. It is now installed by the package installer.
 
 - Hardware decode no longer requires that ROCm be installed with the [`graphics`{.docutils .literal .notranslate}]{.pre} usecase.
+:::
 
-{#id324 .section}
+::: {#id324 .section}
 #### Known issues[\#](#id324 "Link to this heading"){.headerlink}
 
 - Package installation on SLES requires manually installing [`TurboJPEG`{.docutils .literal .notranslate}]{.pre}.
 
 - Package installation on RHEL and SLES requires manually installing the [`FFMPEG`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`Dev`{.docutils .literal .notranslate}]{.pre} package.
+:::
 
-{#id325 .section}
+::: {#id325 .section}
 #### Upcoming changes[\#](#id325 "Link to this heading"){.headerlink}
 
 - rocJPEG support for JPEG decode.
+:::
+:::::::
 
-::::
-
-::::
-{#rocalution-4-0-0 .section}
+::::::: {#rocalution-4-0-0 .section}
 ### **rocALUTION** (4.0.0)[\#](#rocalution-4-0-0 "Link to this heading"){.headerlink}
 
-{#id326 .section}
+::: {#id326 .section}
 #### Added[\#](#id326 "Link to this heading"){.headerlink}
 
 - Support for gfx950.
+:::
 
-{#id327 .section}
+::: {#id327 .section}
 #### Changed[\#](#id327 "Link to this heading"){.headerlink}
 
 - Switch to defaulting to C++17 when building rocALUTION from source. Previously rocALUTION was using C++14 by default.
+:::
 
-{#id328 .section}
+::: {#id328 .section}
 #### Optimized[\#](#id328 "Link to this heading"){.headerlink}
 
 - Improved the user documentation.
+:::
 
-{#id329 .section}
+::: {#id329 .section}
 #### Resolved issues[\#](#id329 "Link to this heading"){.headerlink}
 
 - Fix for GPU hashing algorithm when not compiling with -O2/O3.
+:::
+:::::::
 
-::::
-
-::::::
-{#rocblas-5-0-0 .section}
+::::::::: {#rocblas-5-0-0 .section}
 ### **rocBLAS** (5.0.0)[\#](#rocblas-5-0-0 "Link to this heading"){.headerlink}
 
-{#id330 .section}
+::: {#id330 .section}
 #### Added[\#](#id330 "Link to this heading"){.headerlink}
 
 - Support for gfx950.
@@ -4578,15 +6583,17 @@ HIP runtime has the following functional improvements which improves runtime per
 - Support for the AOCL 5.0 gcc build as a client reference library.
 
 - The use of [`PkgConfig`{.docutils .literal .notranslate}]{.pre} for client reference library fallback detection.
+:::
 
-{#id331 .section}
+::: {#id331 .section}
 #### Changed[\#](#id331 "Link to this heading"){.headerlink}
 
 - [`CMAKE_CXX_COMPILER`{.docutils .literal .notranslate}]{.pre} is now passed on during compilation for a Tensile build.
 
 - The default atomics mode is changed from [`allowed`{.docutils .literal .notranslate}]{.pre} to [`not`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`allowed`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id332 .section}
+::: {#id332 .section}
 #### Removed[\#](#id332 "Link to this heading"){.headerlink}
 
 - Support code for non-production gfx targets.
@@ -4600,8 +6607,9 @@ HIP runtime has the following functional improvements which improves runtime per
 - [`rocblas_float8.h`{.docutils .literal .notranslate}]{.pre} and [`rocblas_hip_f8_impl.h`{.docutils .literal .notranslate}]{.pre} files.
 
 - [`rocblas_gemm_ex3`{.docutils .literal .notranslate}]{.pre}, [`rocblas_gemm_batched_ex3`{.docutils .literal .notranslate}]{.pre}, and [`rocblas_gemm_strided_batched_ex3`{.docutils .literal .notranslate}]{.pre} API functions.
+:::
 
-{#id333 .section}
+::: {#id333 .section}
 #### Optimized[\#](#id333 "Link to this heading"){.headerlink}
 
 - Optimized [`gemm`{.docutils .literal .notranslate}]{.pre} by using [`gemv`{.docutils .literal .notranslate}]{.pre} kernels when applicable.
@@ -4615,8 +6623,9 @@ HIP runtime has the following functional improvements which improves runtime per
 - Improved the performance of Level 2 [`sger`{.docutils .literal .notranslate}]{.pre} (single precision) on gfx942.
 
 - Improved the performance of Level 3 [`dgmm`{.docutils .literal .notranslate}]{.pre} for all precisions and variants on gfx942.
+:::
 
-{#id334 .section}
+::: {#id334 .section}
 #### Resolved issues[\#](#id334 "Link to this heading"){.headerlink}
 
 - Fixed environment variable path-based logging to append multiple handle outputs to the same file.
@@ -4632,35 +6641,35 @@ HIP runtime has the following functional improvements which improves runtime per
 - Updated from the deprecated rocm-cmake to ROCmCMakeBuildTools.
 
 - Corrected AlmaLinux GFortran package dependencies.
+:::
 
-{#id335 .section}
+::: {#id335 .section}
 #### Upcoming changes[\#](#id335 "Link to this heading"){.headerlink}
 
 - Deprecated the use of negative indices to indicate the default solution is being used for [`gemm_ex`{.docutils .literal .notranslate}]{.pre} with [`rocblas_gemm_algo_solution_index`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::::::
 
-::::::
-
-::
-{#rocdbgapi-0-77-3 .section}
+::::: {#rocdbgapi-0-77-3 .section}
 ### **ROCdbgapi** (0.77.3)[\#](#rocdbgapi-0-77-3 "Link to this heading"){.headerlink}
 
-{#id336 .section}
+::: {#id336 .section}
 #### Added[\#](#id336 "Link to this heading"){.headerlink}
 
 - Support for the [`gfx950`{.docutils .literal .notranslate}]{.pre} architectures.
+:::
 
-{#id337 .section}
+::: {#id337 .section}
 #### Removed[\#](#id337 "Link to this heading"){.headerlink}
 
 - Support for the [`gfx940`{.docutils .literal .notranslate}]{.pre} and [`gfx941`{.docutils .literal .notranslate}]{.pre} architectures.
-
-::
-
+:::
 :::::
-{#rocdecode-1-0-0 .section}
+
+:::::::: {#rocdecode-1-0-0 .section}
 ### **rocDecode** (1.0.0)[\#](#rocdecode-1-0-0 "Link to this heading"){.headerlink}
 
-{#id338 .section}
+::: {#id338 .section}
 #### Added[\#](#id338 "Link to this heading"){.headerlink}
 
 - VP9 IVF container file parsing support in bitstream reader.
@@ -4674,8 +6683,9 @@ HIP runtime has the following functional improvements which improves runtime per
 - AVC stream DPB buffer size change handling through decoder reconfiguration.
 
 - A new avcodec-based decoder built as a separate [`rocdecode-host`{.docutils .literal .notranslate}]{.pre} library.
+:::
 
-{#id339 .section}
+::: {#id339 .section}
 #### Changed[\#](#id339 "Link to this heading"){.headerlink}
 
 - rocDecode now uses the Cmake [`CMAKE_PREFIX_PATH`{.docutils .literal .notranslate}]{.pre} directive.
@@ -4683,20 +6693,23 @@ HIP runtime has the following functional improvements which improves runtime per
 - Changed asserts in query API calls in RocVideoDecoder utility class to error reports, to avoid hard stop during query in case error occurs and to let the caller decide actions.
 
 - [`libdrm_amdgpu`{.docutils .literal .notranslate}]{.pre} is now explicitly linked with rocdecode.
+:::
 
-{#id340 .section}
+::: {#id340 .section}
 #### Removed[\#](#id340 "Link to this heading"){.headerlink}
 
 - [`GetStream()`{.docutils .literal .notranslate}]{.pre} interface call from RocVideoDecoder utility class.
+:::
 
-{#id341 .section}
+::: {#id341 .section}
 #### Optimized[\#](#id341 "Link to this heading"){.headerlink}
 
 - Decode session starts latency reduction.
 
 - Bitstream type detection optimization in bitstream reader.
+:::
 
-{#id342 .section}
+::: {#id342 .section}
 #### Resolved issues[\#](#id342 "Link to this heading"){.headerlink}
 
 - Fixed a bug in the [`videoDecodePicFiles`{.docutils .literal .notranslate}]{.pre} picture files sample that can results in incorrect output frame count.
@@ -4704,19 +6717,19 @@ HIP runtime has the following functional improvements which improves runtime per
 - Fixed a decoded frame output issue in video size change cases.
 
 - Removed incorrect asserts of [`bitdepth_minus_8`{.docutils .literal .notranslate}]{.pre} in [`GetBitDepth()`{.docutils .literal .notranslate}]{.pre} and [`num_chroma_planes`{.docutils .literal .notranslate}]{.pre} in [`GetNumChromaPlanes()`{.docutils .literal .notranslate}]{.pre} API calls in the RocVideoDecoder utility class.
+:::
+::::::::
 
-:::::
-
-::::
-{#rocfft-1-0-34 .section}
+::::::: {#rocfft-1-0-34 .section}
 ### **rocFFT** (1.0.34)[\#](#rocfft-1-0-34 "Link to this heading"){.headerlink}
 
-{#id343 .section}
+::: {#id343 .section}
 #### Added[\#](#id343 "Link to this heading"){.headerlink}
 
 - Support for gfx950.
+:::
 
-{#id344 .section}
+::: {#id344 .section}
 #### Removed[\#](#id344 "Link to this heading"){.headerlink}
 
 - Removed [`rocfft-rider`{.docutils .literal .notranslate}]{.pre} legacy compatibility from clients.
@@ -4724,8 +6737,9 @@ HIP runtime has the following functional improvements which improves runtime per
 - Removed support for the gfx940 and gfx941 targets from the client programs.
 
 - Removed backward compatibility symlink for include directories.
+:::
 
-{#id345 .section}
+::: {#id345 .section}
 #### Optimized[\#](#id345 "Link to this heading"){.headerlink}
 
 - Removed unnecessary HIP event/stream allocation and synchronization during MPI transforms.
@@ -4743,42 +6757,43 @@ HIP runtime has the following functional improvements which improves runtime per
   - 8192
 
 - Implemented single-kernel plans for some large 1D problem sizes, on devices with at least 160KiB of LDS.
+:::
 
-{#id346 .section}
+::: {#id346 .section}
 #### Resolved issues[\#](#id346 "Link to this heading"){.headerlink}
 
 - Fixed kernel faults on multi-device transforms that gather to a single device, when the input/output bricks are not contiguous.
+:::
+:::::::
 
-::::
-
-::
-{#rocgdb-16-3 .section}
+::::: {#rocgdb-16-3 .section}
 ### **ROCgdb** (16.3)[\#](#rocgdb-16-3 "Link to this heading"){.headerlink}
 
-{#id347 .section}
+::: {#id347 .section}
 #### Added[\#](#id347 "Link to this heading"){.headerlink}
 
 - Support for the [`gfx950`{.docutils .literal .notranslate}]{.pre} architectures.
+:::
 
-{#id348 .section}
+::: {#id348 .section}
 #### Removed[\#](#id348 "Link to this heading"){.headerlink}
 
 - Support for the [`gfx940`{.docutils .literal .notranslate}]{.pre} and [`gfx941`{.docutils .literal .notranslate}]{.pre} architectures.
+:::
+:::::
 
-::
-
-::::
-{#rocjpeg-1-1-0 .section}
+::::::: {#rocjpeg-1-1-0 .section}
 ### **rocJPEG** (1.1.0)[\#](#rocjpeg-1-1-0 "Link to this heading"){.headerlink}
 
-{#id349 .section}
+::: {#id349 .section}
 #### Added[\#](#id349 "Link to this heading"){.headerlink}
 
 - cmake config files.
 
 - CTEST - New tests were introduced for JPEG batch decoding using various output formats, such as yuv_planar, y, rgb, and rgb_planar, both with and without region-of-interest (ROI).
+:::
 
-{#id350 .section}
+::: {#id350 .section}
 #### Changed[\#](#id350 "Link to this heading"){.headerlink}
 
 - Readme - cleanup and updates to pre-reqs.
@@ -4786,13 +6801,15 @@ HIP runtime has the following functional improvements which improves runtime per
 - The [`decode_params`{.docutils .literal .notranslate}]{.pre} argument of the [`rocJpegDecodeBatched`{.docutils .literal .notranslate}]{.pre} API is now an array of [`RocJpegDecodeParams`{.docutils .literal .notranslate}]{.pre} structs representing the decode parameters for the batch of JPEG images.
 
 - [`libdrm_amdgpu`{.docutils .literal .notranslate}]{.pre} is now explicitly linked with rocjpeg.
+:::
 
-{#id351 .section}
+::: {#id351 .section}
 #### Removed[\#](#id351 "Link to this heading"){.headerlink}
 
 - Dev Package - No longer installs pkg-config.
+:::
 
-{#id352 .section}
+::: {#id352 .section}
 #### Resolved issues[\#](#id352 "Link to this heading"){.headerlink}
 
 - Fixed a bug that prevented copying the decoded image into the output buffer when the output buffer is larger than the input image.
@@ -4800,15 +6817,13 @@ HIP runtime has the following functional improvements which improves runtime per
 - Resolved an issue with resizing the internal memory pool by utilizing the explicit constructor of the vector's type during the resizing process.
 
 - Addressed and resolved CMake configuration warnings.
+:::
+:::::::
 
-::::
-
-::::
-{#id353 .section}
+::::::: {#id353 .section}
 ### **ROCm Bandwidth Test** (2.6.0)[\#](#id353 "Link to this heading"){.headerlink}
 
-:
-{#id354 .section}
+:::: {#id354 .section}
 #### Added[\#](#id354 "Link to this heading"){.headerlink}
 
 - Plugin architecture:
@@ -4817,34 +6832,33 @@ HIP runtime has the following functional improvements which improves runtime per
 
   - Individual [`plugins`{.docutils .literal .notranslate}]{.pre}: The [`plugins`{.docutils .literal .notranslate}]{.pre} (shared libraries) are available at: [`/opt/rocm/lib/rocm_bandwidth_test/plugins/`{.docutils .literal .notranslate}]{.pre}
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 Review the [README](https://github.com/ROCm/rocm_bandwidth_test/blob/amd-mainline/README.md){.reference .external} file for details about the new options and outputs.
+:::
+::::
 
-:
-
-{#id355 .section}
+::: {#id355 .section}
 #### Changed[\#](#id355 "Link to this heading"){.headerlink}
 
 - The [`CLI`{.docutils .literal .notranslate}]{.pre} and options/parameters have changed due to the new plugin architecture, where the plugin parameters are parsed by the plugin.
+:::
 
-{#id356 .section}
+::: {#id356 .section}
 #### Removed[\#](#id356 "Link to this heading"){.headerlink}
 
 - The old CLI, parameters, and switches.
+:::
+:::::::
 
-::::
-
-:::::::::::::
-{#rocm-compute-profiler-3-2-3 .section}
+:::::::::::::::: {#rocm-compute-profiler-3-2-3 .section}
 ### **ROCm Compute Profiler** (3.2.3)[\#](#rocm-compute-profiler-3-2-3 "Link to this heading"){.headerlink}
 
-::::::
-{#id357 .section}
+::::::::: {#id357 .section}
 #### Added[\#](#id357 "Link to this heading"){.headerlink}
 
-{#cdna4-amd-instinct-mi350-mi355-support .section}
+::: {#cdna4-amd-instinct-mi350-mi355-support .section}
 ##### CDNA4 (AMD Instinct MI350/MI355) support[\#](#cdna4-amd-instinct-mi350-mi355-support "Link to this heading"){.headerlink}
 
 - Support for AMD Instinct MI350 Series GPUs with the addition of the following counters:
@@ -4884,8 +6898,9 @@ Review the [README](https://github.com/ROCm/rocm_bandwidth_test/blob/amd-mainlin
   - L2 to EA stalls per channel
 
 - Roofline support for AMD Instinct MI350 Series GPUs.
+:::
 
-{#textual-user-interface-tui-beta-version .section}
+::: {#textual-user-interface-tui-beta-version .section}
 ##### Textual User Interface (TUI) (beta version)[\#](#textual-user-interface-tui-beta-version "Link to this heading"){.headerlink}
 
 - Text User Interface (TUI) support for analyze mode
@@ -4893,8 +6908,9 @@ Review the [README](https://github.com/ROCm/rocm_bandwidth_test/blob/amd-mainlin
   - A command line based user interface to support interactive single-run analysis.
 
   - To launch, use [`--tui`{.docutils .literal .notranslate}]{.pre} option in analyze mode. For example, [`rocprof-compute`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`analyze`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--tui`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#pc-sampling-beta-version .section}
+::: {#pc-sampling-beta-version .section}
 ##### PC Sampling (beta version)[\#](#pc-sampling-beta-version "Link to this heading"){.headerlink}
 
 - Stochastic (hardware-based) PC sampling has been enabled for AMD Instinct MI300X Series and later GPUs.
@@ -4904,15 +6920,17 @@ Review the [README](https://github.com/ROCm/rocm_bandwidth_test/blob/amd-mainlin
 - Support for sorting of PC sampling by type: offset or count.
 
 - PC Sampling Support on CLI and TUI analysis.
+:::
 
-{#roofline .section}
+::: {#roofline .section}
 ##### Roofline[\#](#roofline "Link to this heading"){.headerlink}
 
 - Support for Roofline plot on CLI (single run) analysis.
 
 - [`FP4`{.docutils .literal .notranslate}]{.pre} and [`FP6`{.docutils .literal .notranslate}]{.pre} data types have been added for roofline profiling on AMD Instinct MI350 Series.
+:::
 
-{#rocprofv3-support .section}
+::: {#rocprofv3-support .section}
 ##### rocprofv3 support[\#](#rocprofv3-support "Link to this heading"){.headerlink}
 
 - [`rocprofv3`{.docutils .literal .notranslate}]{.pre} is supported as the default backend for profiling.
@@ -4922,8 +6940,9 @@ Review the [README](https://github.com/ROCm/rocm_bandwidth_test/blob/amd-mainlin
 - Support for profiling on AMD Instinct MI 100 using [`rocprofv3`{.docutils .literal .notranslate}]{.pre}.
 
 - Deprecation warning for [`rocprofv3`{.docutils .literal .notranslate}]{.pre} interface in favor of the ROCprofiler-SDK interface, which directly accesses [`rocprofv3`{.docutils .literal .notranslate}]{.pre} C++ tool.
+:::
 
-{#others .section}
+::: {#others .section}
 ##### Others[\#](#others "Link to this heading"){.headerlink}
 
 - Docker files to package the application and dependencies into a single portable and executable standalone binary file.
@@ -4939,10 +6958,10 @@ Review the [README](https://github.com/ROCm/rocm_bandwidth_test/blob/amd-mainlin
 - Support MEM chart on CLI (single run).
 
 - [`--specs-correction`{.docutils .literal .notranslate}]{.pre} option to provide missing system specifications for analysis.
+:::
+:::::::::
 
-::::::
-
-{#id358 .section}
+::: {#id358 .section}
 #### Changed[\#](#id358 "Link to this heading"){.headerlink}
 
 - Changed the default [`rocprof`{.docutils .literal .notranslate}]{.pre} version to [`rocprofv3`{.docutils .literal .notranslate}]{.pre}. This is used when environment variable [`ROCPROF`{.docutils .literal .notranslate}]{.pre} is not set.
@@ -4960,20 +6979,23 @@ Review the [README](https://github.com/ROCm/rocm_bandwidth_test/blob/amd-mainlin
   - Rebuild using latest ROCm stack.
 
   - Minimum OS distribution support minimum for roofline feature is now Ubuntu 22.04, RHEL 8, and SLES15 SP6.
+:::
 
-{#id359 .section}
+::: {#id359 .section}
 #### Removed[\#](#id359 "Link to this heading"){.headerlink}
 
 - Roofline support for Ubuntu 20.04 and SLES below 15.6.
 
 - Removed support for AMD Instinct MI50 and MI60.
+:::
 
-{#id360 .section}
+::: {#id360 .section}
 #### Optimized[\#](#id360 "Link to this heading"){.headerlink}
 
 - ROCm Compute Profiler CLI has been improved to better display the GPU architecture analytics.
+:::
 
-{#id361 .section}
+::: {#id361 .section}
 #### Resolved issues[\#](#id361 "Link to this heading"){.headerlink}
 
 - Fixed kernel name and kernel dispatch filtering when using [`rocprofv3`{.docutils .literal .notranslate}]{.pre}.
@@ -4987,8 +7009,9 @@ Review the [README](https://github.com/ROCm/rocm_bandwidth_test/blob/amd-mainlin
 - Fixed standalone GUI crashing.
 
 - Fixed L2 read/write/atomic bandwidths on AMD Instinct MI350 Series.
+:::
 
-{#id362 .section}
+::: {#id362 .section}
 #### Known issues[\#](#id362 "Link to this heading"){.headerlink}
 
 - On AMD Instinct MI100, accumulation counters are not collected, resulting in the following metrics failing to show up in the analysis: Instruction Fetch Latency, Wavefront Occupancy, LDS Latency.
@@ -5006,8 +7029,9 @@ Review the [README](https://github.com/ROCm/rocm_bandwidth_test/blob/amd-mainlin
 - Memory chart on ROCm Compute Profiler CLI might look corrupted if the CLI width is too narrow.
 
 - Roofline feature is currently not functional on Azure Linux 3.0 and Debian 12.
+:::
 
-{#id363 .section}
+::: {#id363 .section}
 #### Upcoming changes[\#](#id363 "Link to this heading"){.headerlink}
 
 - [`rocprof`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`v1/v2/v3`{.docutils .literal .notranslate}]{.pre} interfaces will be removed in favor of the ROCprofiler-SDK interface, which directly accesses [`rocprofv3`{.docutils .literal .notranslate}]{.pre} C++ tool. Using [`rocprof`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`v1/v2/v3`{.docutils .literal .notranslate}]{.pre} interfaces will trigger a deprecation warning.
@@ -5019,20 +7043,21 @@ Review the [README](https://github.com/ROCm/rocm_bandwidth_test/blob/amd-mainlin
 - MongoDB database support will be removed, and a deprecation warning has been added to the application interface.
 
 - Usage of [`rocm-smi`{.docutils .literal .notranslate}]{.pre} is deprecated in favor of [`amd-smi`{.docutils .literal .notranslate}]{.pre}, and a deprecation warning has been added to the application interface.
+:::
+::::::::::::::::
 
-:::::::::::::
-
-{#rocm-data-center-tool-1-1-0 .section}
+:::::: {#rocm-data-center-tool-1-1-0 .section}
 ### **ROCm Data Center Tool** (1.1.0)[\#](#rocm-data-center-tool-1-1-0 "Link to this heading"){.headerlink}
 
-{#id364 .section}
+::: {#id364 .section}
 #### Added[\#](#id364 "Link to this heading"){.headerlink}
 
 - More profiling and monitoring metrics, especially for AMD Instinct MI300 and newer GPUs.
 
 - Advanced logging and debugging options, including new log levels and troubleshooting guidance.
+:::
 
-{#id365 .section}
+::: {#id365 .section}
 #### Changed[\#](#id365 "Link to this heading"){.headerlink}
 
 - Completed migration from legacy [ROCProfiler](https://rocm.docs.amd.com/projects/rocprofiler/en/latest/){.reference .external} to [ROCprofiler-SDK](https://rocm.docs.amd.com/projects/rocprofiler-sdk/en/latest/){.reference .external}.
@@ -5040,8 +7065,9 @@ Review the [README](https://github.com/ROCm/rocm_bandwidth_test/blob/amd-mainlin
 - Reorganized the configuration files internally and improved [README/installation](https://github.com/ROCm/rdc/blob/release/rocm-rel-7.0/README.md){.reference .external} instructions.
 
 - Updated metrics and monitoring support for the latest AMD data center GPUs.
+:::
 
-{#id366 .section}
+::: {#id366 .section}
 #### Optimized[\#](#id366 "Link to this heading"){.headerlink}
 
 - Integration with [ROCprofiler-SDK](https://rocm.docs.amd.com/projects/rocprofiler-sdk/en/latest/){.reference .external} for performance metrics collection.
@@ -5051,11 +7077,13 @@ Review the [README](https://github.com/ROCm/rocm_bandwidth_test/blob/amd-mainlin
 - Support and documentation for diagnostic commands and GPU group management.
 
 - [RVS](https://rocm.docs.amd.com/projects/ROCmValidationSuite/en/latest/){.reference .external} test integration and reporting.
+:::
+::::::
 
-{#rocm-smi-7-8-0 .section}
+:::::: {#rocm-smi-7-8-0 .section}
 ### **ROCm SMI** (7.8.0)[\#](#rocm-smi-7-8-0 "Link to this heading"){.headerlink}
 
-{#id367 .section}
+::: {#id367 .section}
 #### Added[\#](#id367 "Link to this heading"){.headerlink}
 
 - Support for GPU metrics 1.8.
@@ -5074,9 +7102,9 @@ Review the [README](https://github.com/ROCm/rocm_bandwidth_test/blob/amd-mainlin
 
   - Increasing available JPEG engines to 40.\
     Current ASICs may not support all 40. These will be indicated as UINT16_MAX or N/A in CLI.
+:::
 
-:
-{#id368 .section}
+:::: {#id368 .section}
 #### Removed[\#](#id368 "Link to this heading"){.headerlink}
 
 - Removed backwards compatibility for [`rsmi_dev_gpu_metrics_info_get()`{.docutils .literal .notranslate}]{.pre}'s [`jpeg_activity`{.docutils .literal .notranslate}]{.pre} and [`vcn_activity`{.docutils .literal .notranslate}]{.pre} fields. Alternatively use [`xcp_stats.jpeg_busy`{.docutils .literal .notranslate}]{.pre} and [`xcp_stats.vcn_busy`{.docutils .literal .notranslate}]{.pre}.
@@ -5087,17 +7115,18 @@ Review the [README](https://github.com/ROCm/rocm_bandwidth_test/blob/amd-mainlin
 
     - The [`jpeg_busy`{.docutils .literal .notranslate}]{.pre} field increased in size (for supported ASICs), making backward compatibility unable to fully copy the structure into [`jpeg_activity`{.docutils .literal .notranslate}]{.pre}.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/release/rocm-rel-7.0/CHANGELOG.md){.reference .external} for details, examples, and in-depth descriptions.
+:::
+::::
+::::::
 
-:
-
-{#rocm-systems-profiler-1-1-0 .section}
+:::::: {#rocm-systems-profiler-1-1-0 .section}
 ### **ROCm Systems Profiler** (1.1.0)[\#](#rocm-systems-profiler-1-1-0 "Link to this heading"){.headerlink}
 
-{#id369 .section}
+::: {#id369 .section}
 #### Added[\#](#id369 "Link to this heading"){.headerlink}
 
 - Profiling and metric collection capabilities for VCN engine activity, JPEG engine activity, and API tracing for rocDecode, rocJPEG, and VA-APIs.
@@ -5107,8 +7136,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Support for tracing Fortran applications.
 
 - Support for tracing MPI API in Fortran.
+:::
 
-{#id370 .section}
+::: {#id370 .section}
 #### Changed[\#](#id370 "Link to this heading"){.headerlink}
 
 - Replaced ROCm SMI backend with AMD SMI backend for collecting GPU metrics.
@@ -5120,8 +7150,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Updated the Dyninst submodule to v13.0.
 
 - Set the default value of [`ROCPROFSYS_SAMPLING_CPUS`{.docutils .literal .notranslate}]{.pre} to [`none`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id371 .section}
+::: {#id371 .section}
 #### Resolved issues[\#](#id371 "Link to this heading"){.headerlink}
 
 - Fixed GPU metric collection settings with [`ROCPROFSYS_AMD_SMI_METRICS`{.docutils .literal .notranslate}]{.pre}.
@@ -5131,12 +7162,13 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Fixed incorrect kernel names shown for kernel dispatch tracks in Perfetto.
 
 - Fixed formatting of some output logs.
+:::
+::::::
 
-::
-{#rocm-validation-suite-1-2-0 .section}
+::::: {#rocm-validation-suite-1-2-0 .section}
 ### **ROCm Validation Suite** (1.2.0)[\#](#rocm-validation-suite-1-2-0 "Link to this heading"){.headerlink}
 
-{#id372 .section}
+::: {#id372 .section}
 #### Added[\#](#id372 "Link to this heading"){.headerlink}
 
 - Support for AMD Instinct MI350X and MI355X GPUs.
@@ -5146,21 +7178,21 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Support for read and write tests in Babel.
 
 - Support for AMD Radeon RX9070 and RX9070GRE graphics cards.
+:::
 
-{#id373 .section}
+::: {#id373 .section}
 #### Changed[\#](#id373 "Link to this heading"){.headerlink}
 
 - Migrated SMI API usage from [`rocm-smi`{.docutils .literal .notranslate}]{.pre} to [`amd-smi`{.docutils .literal .notranslate}]{.pre}.
 
 - Updated [`FP8`{.docutils .literal .notranslate}]{.pre} GEMM operations to use hipBLASLt instead of rocBLAS.
+:::
+:::::
 
-::
-
-:::::::
-{#rocprim-4-0-0 .section}
+:::::::::: {#rocprim-4-0-0 .section}
 ### **rocPRIM** (4.0.0)[\#](#rocprim-4-0-0 "Link to this heading"){.headerlink}
 
-{#id374 .section}
+::: {#id374 .section}
 #### Added[\#](#id374 "Link to this heading"){.headerlink}
 
 - Support for gfx950.
@@ -5200,8 +7232,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Support for building tests with device-side random data generation, making them finish faster. This requires rocRAND, and is enabled with the [`WITH_ROCRAND=ON`{.docutils .literal .notranslate}]{.pre} build flag.
 
 - Tests and documentation to [`lookback_scan_state`{.docutils .literal .notranslate}]{.pre}. It is still in the [`detail`{.docutils .literal .notranslate}]{.pre} namespace.
+:::
 
-{#id375 .section}
+::: {#id375 .section}
 #### Changed[\#](#id375 "Link to this heading"){.headerlink}
 
 - Changed the parameters [`long_radix_bits`{.docutils .literal .notranslate}]{.pre} and [`LongRadixBits`{.docutils .literal .notranslate}]{.pre} from [`segmented_radix_sort`{.docutils .literal .notranslate}]{.pre} to [`radix_bits`{.docutils .literal .notranslate}]{.pre} and [`RadixBits`{.docutils .literal .notranslate}]{.pre}, respectively.
@@ -5245,8 +7278,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Renamed [`rocprim::load_cs`{.docutils .literal .notranslate}]{.pre} to [`rocprim::load_nontemporal`{.docutils .literal .notranslate}]{.pre} and [`rocprim::store_cs`{.docutils .literal .notranslate}]{.pre} to [`rocprim::store_nontemporal`{.docutils .literal .notranslate}]{.pre} to express the intent of these load and store methods better.
 
 - All kernels now have hidden symbol visibility. All symbols now have inline namespaces that include the library version, for example, [`rocprim::ROCPRIM_300400_NS::symbol`{.docutils .literal .notranslate}]{.pre} instead of [`rocPRIM::symbol`{.docutils .literal .notranslate}]{.pre}, letting the user link multiple libraries built with different versions of rocPRIM.
+:::
 
-{#id376 .section}
+::: {#id376 .section}
 #### Removed[\#](#id376 "Link to this heading"){.headerlink}
 
 - [`rocprim::detail::float_bit_mask`{.docutils .literal .notranslate}]{.pre} and relative tests, use [`rocprim::traits::float_bit_mask`{.docutils .literal .notranslate}]{.pre} instead.
@@ -5302,13 +7336,15 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
     - This was a fallback define for the compiler's removed symbol, having the same name.
 
 - This release removes support for custom builds on gfx940 and gfx941.
+:::
 
-{#id377 .section}
+::: {#id377 .section}
 #### Optimized[\#](#id377 "Link to this heading"){.headerlink}
 
 - Improved performance of [`rocprim::device_select`{.docutils .literal .notranslate}]{.pre} and [`rocprim::device_partition`{.docutils .literal .notranslate}]{.pre} when using multiple streams on the AMD Instinct MI300 Series.
+:::
 
-{#id378 .section}
+::: {#id378 .section}
 #### Resolved issues[\#](#id378 "Link to this heading"){.headerlink}
 
 - Fixed an issue where [`device_batch_memcpy`{.docutils .literal .notranslate}]{.pre} reported benchmarking throughput being 2x lower than it was in reality.
@@ -5322,24 +7358,25 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Fixed an issue for the comparison operators in [`arg_index_iterator`{.docutils .literal .notranslate}]{.pre} and [`texture_cache_iterator`{.docutils .literal .notranslate}]{.pre}, where [`<`{.docutils .literal .notranslate}]{.pre} and [`>`{.docutils .literal .notranslate}]{.pre} comparators were swapped.
 
 - Fixed an issue for the [`rocprim::thread_reduce`{.docutils .literal .notranslate}]{.pre} not working correctly with a prefix value.
+:::
 
-{#id379 .section}
+::: {#id379 .section}
 #### Known issues[\#](#id379 "Link to this heading"){.headerlink}
 
 - When using [`rocprim::deterministic_inclusive_scan_by_key`{.docutils .literal .notranslate}]{.pre} and [`rocprim::deterministic_exclusive_scan_by_key`{.docutils .literal .notranslate}]{.pre} the intermediate values can change order on Navi3x. However, if a commutative scan operator is used then the final scan value (output array) will still always be consistent between runs.
+:::
 
-{#id380 .section}
+::: {#id380 .section}
 #### Upcoming changes[\#](#id380 "Link to this heading"){.headerlink}
 
 - [`rocprim::invoke_result_binary_op`{.docutils .literal .notranslate}]{.pre} and [`rocprim::invoke_result_binary_op_t`{.docutils .literal .notranslate}]{.pre} are deprecated. Use [`rocprim::accumulator_t`{.docutils .literal .notranslate}]{.pre} instead.
+:::
+::::::::::
 
-:::::::
-
-::::
-{#id381 .section}
+::::::: {#id381 .section}
 ### **ROCprofiler-SDK** (1.0.0)[\#](#id381 "Link to this heading"){.headerlink}
 
-{#id382 .section}
+::: {#id382 .section}
 #### Added[\#](#id382 "Link to this heading"){.headerlink}
 
 - Support for [rocJPEG](https://rocm.docs.amd.com/projects/rocJPEG/en/latest/index.html){.reference .external} API Tracing.
@@ -5405,9 +7442,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Documentation for [`rocprofv3`{.docutils .literal .notranslate}]{.pre} advanced options.
 
 - AQLprofile is now available as open source.
+:::
 
-:
-{#id383 .section}
+:::: {#id383 .section}
 #### Changed[\#](#id383 "Link to this heading"){.headerlink}
 
 - SDK to NOT to create a background thread when every tool returns a nullptr from [`rocprofiler_configure`{.docutils .literal .notranslate}]{.pre}.
@@ -5424,14 +7461,14 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 
 - [`rocprofv3`{.docutils .literal .notranslate}]{.pre} tool to facilitate thread trace and PC sampling on the same agent.
 
-{#id384 .section}
+::: {#id384 .section}
 ##### Removed[\#](#id384 "Link to this heading"){.headerlink}
 
 - Support for compilation of gfx940 and gfx941 targets.
+:::
+::::
 
-:
-
-{#id385 .section}
+::: {#id385 .section}
 #### Resolved issues[\#](#id385 "Link to this heading"){.headerlink}
 
 - Fixed missing callbacks around internal thread creation within counter collection service.
@@ -5455,14 +7492,13 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
   - The correct definition for a null handle is [`.handle`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`=`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`0`{.docutils .literal .notranslate}]{.pre} while some definitions previously used [`UINT64_MAX`{.docutils .literal .notranslate}]{.pre}.
 
 - Fixed kernel trace csv output generated by [`rocpd`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::::
 
-::::
-
-::
-{#rocpydecode-0-6-0 .section}
+::::: {#rocpydecode-0-6-0 .section}
 ### **rocPyDecode** (0.6.0)[\#](#rocpydecode-0-6-0 "Link to this heading"){.headerlink}
 
-{#id386 .section}
+::: {#id386 .section}
 #### Added[\#](#id386 "Link to this heading"){.headerlink}
 
 - [`rocpyjpegdecode`{.docutils .literal .notranslate}]{.pre} package.
@@ -5470,19 +7506,19 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - [`src/rocjpeg`{.docutils .literal .notranslate}]{.pre} source new subfolder.
 
 - [`samples/rocjpeg`{.docutils .literal .notranslate}]{.pre} new subfolder.
+:::
 
-{#id387 .section}
+::: {#id387 .section}
 #### Changed[\#](#id387 "Link to this heading"){.headerlink}
 
 - Minimum version for rocdecode and rocjpeg updated to V1.0.0.
-
-::
-
+:::
 :::::
-{#rocrand-4-0-0 .section}
+
+:::::::: {#rocrand-4-0-0 .section}
 ### **rocRAND** (4.0.0)[\#](#rocrand-4-0-0 "Link to this heading"){.headerlink}
 
-{#id388 .section}
+::: {#id388 .section}
 #### Added[\#](#id388 "Link to this heading"){.headerlink}
 
 - Support for gfx950.
@@ -5490,8 +7526,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Additional unit tests for [`test_log_normal_distribution.cpp`{.docutils .literal .notranslate}]{.pre}, [`test_normal_distribution.cpp`{.docutils .literal .notranslate}]{.pre}, [`test_rocrand_mtgp32_prng.cpp`{.docutils .literal .notranslate}]{.pre}, [`test_rocrand_scrambled_sobol32_qrng.cpp`{.docutils .literal .notranslate}]{.pre}, [`test_rocrand_scrambled_sobol64_qrng.cpp`{.docutils .literal .notranslate}]{.pre}, [`test_rocrand_sobol32_qrng.cpp`{.docutils .literal .notranslate}]{.pre}, [`test_rocrand_sobol64_qrng.cpp`{.docutils .literal .notranslate}]{.pre}, [`test_rocrand_threefry2x32_20_prng.cpp`{.docutils .literal .notranslate}]{.pre}, [`test_rocrand_threefry2x64_20_prng.cpp`{.docutils .literal .notranslate}]{.pre}, [`test_rocrand_threefry4x32_20_prng.cpp`{.docutils .literal .notranslate}]{.pre}, [`test_rocrand_threefry4x64_20_prng.cpp`{.docutils .literal .notranslate}]{.pre}, and [`test_uniform_distribution.cpp`{.docutils .literal .notranslate}]{.pre}.
 
 - New unit tests for [`include/rocrand/rocrand_discrete.h`{.docutils .literal .notranslate}]{.pre} in [`test_rocrand_discrete.cpp`{.docutils .literal .notranslate}]{.pre}, [`include/rocrand/rocrand_mrg31k3p.h`{.docutils .literal .notranslate}]{.pre} in [`test_rocrand_mrg31k3p_prng.cpp`{.docutils .literal .notranslate}]{.pre}, [`include/rocrand/rocrand_mrg32k3a.h`{.docutils .literal .notranslate}]{.pre} in [`test_rocrand_mrg32k3a_prng.cpp`{.docutils .literal .notranslate}]{.pre}, and [`include/rocrand/rocrand_poisson.h`{.docutils .literal .notranslate}]{.pre} in [`test_rocrand_poisson.cpp`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id389 .section}
+::: {#id389 .section}
 #### Changed[\#](#id389 "Link to this heading"){.headerlink}
 
 - Changed the return type for [`rocrand_generate_poisson`{.docutils .literal .notranslate}]{.pre} for the [`SOBOL64`{.docutils .literal .notranslate}]{.pre} and [`SCRAMBLED_SOBOL64`{.docutils .literal .notranslate}]{.pre} engines.
@@ -5501,8 +7538,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Updated several [`gfx942`{.docutils .literal .notranslate}]{.pre} auto tuning parameters.
 
 - Modified error handling and expanded the error information for the case of double-deallocation of the (scrambled) sobol32 and sobol64 constants and direction vectors.
+:::
 
-{#id390 .section}
+::: {#id390 .section}
 #### Removed[\#](#id390 "Link to this heading"){.headerlink}
 
 - Removed inline assembly and the [`ENABLE_INLINE_ASM`{.docutils .literal .notranslate}]{.pre} CMake option. Inline assembly was used to optimize multiplication in the Mrg32k3a and Philox 4x32-10 generators. It is no longer needed because the current HIP compiler is able to produce code with the same or better performance.
@@ -5524,35 +7562,35 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
   - [`rocrand_h_scrambled_sobol32_direction_vectors`{.docutils .literal .notranslate}]{.pre}, use [`rocrand_get_direction_vectors32`{.docutils .literal .notranslate}]{.pre} instead.
 
   - [`rocrand_h_scrambled_sobol64_direction_vectors`{.docutils .literal .notranslate}]{.pre}, use [`rocrand_get_direction_vectors64`{.docutils .literal .notranslate}]{.pre} instead.
+:::
 
-{#id391 .section}
+::: {#id391 .section}
 #### Resolved issues[\#](#id391 "Link to this heading"){.headerlink}
 
 - Fixed an issue where [`mt19937.hpp`{.docutils .literal .notranslate}]{.pre} would cause kernel errors during auto tuning.
+:::
 
-{#id392 .section}
+::: {#id392 .section}
 #### Upcoming changes[\#](#id392 "Link to this heading"){.headerlink}
 
 - Deprecated the rocRAND Fortran API in favor of hipfort.
+:::
+::::::::
 
-:::::
-
-:
-{#rocr-debug-agent-2-1-0 .section}
+:::: {#rocr-debug-agent-2-1-0 .section}
 ### **ROCr Debug Agent** (2.1.0)[\#](#rocr-debug-agent-2-1-0 "Link to this heading"){.headerlink}
 
-{#id393 .section}
+::: {#id393 .section}
 #### Added[\#](#id393 "Link to this heading"){.headerlink}
 
 - The [`-e`{.docutils .literal .notranslate}]{.pre} and [`--precise-alu-exceptions`{.docutils .literal .notranslate}]{.pre} flags to enable precise ALU exceptions reporting on supported configurations.
+:::
+::::
 
-:
-
-:
-{#rocr-runtime-1-18-0 .section}
+:::: {#rocr-runtime-1-18-0 .section}
 ### **ROCr Runtime** (1.18.0)[\#](#rocr-runtime-1-18-0 "Link to this heading"){.headerlink}
 
-{#id394 .section}
+::: {#id394 .section}
 #### Added[\#](#id394 "Link to this heading"){.headerlink}
 
 - New API [`hsa_amd_memory_get_preferred_copy_engine`{.docutils .literal .notranslate}]{.pre} to get preferred copy engine that can be used to when calling [`hsa_amd_memory_async_copy_on_engine`{.docutils .literal .notranslate}]{.pre}.
@@ -5562,13 +7600,13 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - New flag [`HSA_AMD_VMEM_ADDRESS_NO_REGISTER`{.docutils .literal .notranslate}]{.pre} adds support for new [`HSA_AMD_VMEM_ADDRESS_NO_REGISTER`{.docutils .literal .notranslate}]{.pre} when calling [`hsa_amd_vmem_address_reserve`{.docutils .literal .notranslate}]{.pre} API. This allows virtual address range reservations for SVM allocations to be tracked when running in ASAN mode.
 
 - New sub query [`HSA_AMD_AGENT_INFO_CLOCK_COUNTERS`{.docutils .literal .notranslate}]{.pre} returns a snapshot of the underlying driver's clock counters that can be used for profiling.
+:::
+::::
 
-:
-
-{#rocshmem-3-0-0 .section}
+:::::: {#rocshmem-3-0-0 .section}
 ### **rocSHMEM** (3.0.0)[\#](#rocshmem-3-0-0 "Link to this heading"){.headerlink}
 
-{#id395 .section}
+::: {#id395 .section}
 #### Added[\#](#id395 "Link to this heading"){.headerlink}
 
 - Reverse Offload conduit.
@@ -5580,26 +7618,31 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - XNACK support.
 
 - Support for initialization with MPI communicators other than [`MPI_COMM_WORLD`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id396 .section}
+::: {#id396 .section}
 #### Changed[\#](#id396 "Link to this heading"){.headerlink}
 
 - Changed collective APIs to use [`_wg`{.docutils .literal .notranslate}]{.pre} suffix rather than [`_wg_`{.docutils .literal .notranslate}]{.pre} infix.
+:::
 
-{#id397 .section}
+::: {#id397 .section}
 #### Resolved issues[\#](#id397 "Link to this heading"){.headerlink}
 
 - Resolved segfault in [`rocshmem_wg_ctx_create`{.docutils .literal .notranslate}]{.pre}, now provides [`nullptr`{.docutils .literal .notranslate}]{.pre} if [`ctx`{.docutils .literal .notranslate}]{.pre} cannot be created.
+:::
+::::::
 
-{#rocsolver-3-30-0 .section}
+:::::: {#rocsolver-3-30-0 .section}
 ### **rocSOLVER** (3.30.0)[\#](#rocsolver-3-30-0 "Link to this heading"){.headerlink}
 
-{#id398 .section}
+::: {#id398 .section}
 #### Added[\#](#id398 "Link to this heading"){.headerlink}
 
 - Hybrid computation support for existing STEQR routines.
+:::
 
-{#id399 .section}
+::: {#id399 .section}
 #### Optimized[\#](#id399 "Link to this heading"){.headerlink}
 
 - Improved the performance of BDSQR and downstream functions, such as GESVD.
@@ -5607,17 +7650,19 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Improved the performance of STEQR and downstream functions, such as SYEV/HEEV.
 
 - Improved the performance of LARFT and downstream functions, such as GEQR2 and GEQRF.
+:::
 
-{#id400 .section}
+::: {#id400 .section}
 #### Resolved issues[\#](#id400 "Link to this heading"){.headerlink}
 
 - Fixed corner cases that can produce NaNs in SYEVD for valid input matrices.
-
+:::
 ::::::
-{#rocsparse-4-0-2 .section}
+
+::::::::: {#rocsparse-4-0-2 .section}
 ### **rocSPARSE** (4.0.2)[\#](#rocsparse-4-0-2 "Link to this heading"){.headerlink}
 
-{#id401 .section}
+::: {#id401 .section}
 #### Added[\#](#id401 "Link to this heading"){.headerlink}
 
 - The [`SpGEAM`{.docutils .literal .notranslate}]{.pre} generic routine for computing sparse matrix addition in CSR format.
@@ -5645,13 +7690,15 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - ROC-TX instrumentation support in rocSPARSE (not available on Windows or in the static library version on Linux).
 
 - The [`almalinux`{.docutils .literal .notranslate}]{.pre} operating system name to correct the GFortran dependency.
+:::
 
-{#id402 .section}
+::: {#id402 .section}
 #### Changed[\#](#id402 "Link to this heading"){.headerlink}
 
 - Switch to defaulting to C++17 when building rocSPARSE from source. Previously rocSPARSE was using C++14 by default.
+:::
 
-{#id403 .section}
+::: {#id403 .section}
 #### Removed[\#](#id403 "Link to this heading"){.headerlink}
 
 - The deprecated [`rocsparse_spmv_ex`{.docutils .literal .notranslate}]{.pre} routine.
@@ -5659,8 +7706,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - The deprecated [`rocsparse_sbsrmv_ex`{.docutils .literal .notranslate}]{.pre}, [`rocsparse_dbsrmv_ex`{.docutils .literal .notranslate}]{.pre}, [`rocsparse_cbsrmv_ex`{.docutils .literal .notranslate}]{.pre}, and [`rocsparse_zbsrmv_ex`{.docutils .literal .notranslate}]{.pre} routines.
 
 - The deprecated [`rocsparse_sbsrmv_ex_analysis`{.docutils .literal .notranslate}]{.pre}, [`rocsparse_dbsrmv_ex_analysis`{.docutils .literal .notranslate}]{.pre}, [`rocsparse_cbsrmv_ex_analysis`{.docutils .literal .notranslate}]{.pre}, and [`rocsparse_zbsrmv_ex_analysis`{.docutils .literal .notranslate}]{.pre} routines.
+:::
 
-{#id404 .section}
+::: {#id404 .section}
 #### Optimized[\#](#id404 "Link to this heading"){.headerlink}
 
 - Reduced the number of template instantiations in the library to further reduce the shared library binary size and improve compile times.
@@ -5670,8 +7718,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Use of the [`rocsparse_spmv_alg_csr_adaptive`{.docutils .literal .notranslate}]{.pre} or [`rocsparse_spmv_alg_csr_default`{.docutils .literal .notranslate}]{.pre} algorithms in [`rocsparse_spmv`{.docutils .literal .notranslate}]{.pre} to perform transposed sparse matrix multiplication ([`C=alpha*A^T*x+beta*y`{.docutils .literal .notranslate}]{.pre}) resulted in unnecessary analysis on A and needless slowdown during the analysis phase. This has been improved by skipping the analysis when performing the transposed sparse matrix multiplication.
 
 - Improved the user documentation.
+:::
 
-{#id405 .section}
+::: {#id405 .section}
 #### Resolved issues[\#](#id405 "Link to this heading"){.headerlink}
 
 - Fixed an issue in the public headers where [`extern`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`"C"`{.docutils .literal .notranslate}]{.pre} was not wrapped by [`#ifdef`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`__cplusplus`{.docutils .literal .notranslate}]{.pre}, which caused failures when building C programs with rocSPARSE.
@@ -5685,8 +7734,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Fixed a failure that occurred when using const descriptor [`rocsparse_create_const_csr_descr`{.docutils .literal .notranslate}]{.pre} with the generic routine [`rocsparse_sparse_to_sparse`{.docutils .literal .notranslate}]{.pre}. The issue was not observed when using non-const descriptor [`rocsparse_create_csr_descr`{.docutils .literal .notranslate}]{.pre} with [`rocsparse_sparse_to_sparse`{.docutils .literal .notranslate}]{.pre}.
 
 - Fixed a memory leak in the rocSPARSE handle.
+:::
 
-{#id406 .section}
+::: {#id406 .section}
 #### Upcoming changes[\#](#id406 "Link to this heading"){.headerlink}
 
 - Deprecated the [`rocsparse_spmv`{.docutils .literal .notranslate}]{.pre} routine. Use the [`rocsparse_v2_spmv`{.docutils .literal .notranslate}]{.pre} routine instead.
@@ -5694,14 +7744,13 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Deprecated the [`rocsparse_spmv_alg_csr_stream`{.docutils .literal .notranslate}]{.pre} algorithm. Use the [`rocsparse_spmv_alg_csr_rowsplit`{.docutils .literal .notranslate}]{.pre} algorithm instead.
 
 - Deprecated the [`rocsparse_itilu0_alg_sync_split_fusion`{.docutils .literal .notranslate}]{.pre} algorithm. Use one of [`rocsparse_itilu0_alg_async_inplace`{.docutils .literal .notranslate}]{.pre}, [`rocsparse_itilu0_alg_async_split`{.docutils .literal .notranslate}]{.pre}, or [`rocsparse_itilu0_alg_sync_split`{.docutils .literal .notranslate}]{.pre} instead.
+:::
+:::::::::
 
-::::::
-
-::::::
-{#rocthrust-4-0-0 .section}
+::::::::: {#rocthrust-4-0-0 .section}
 ### **rocThrust** (4.0.0)[\#](#rocthrust-4-0-0 "Link to this heading"){.headerlink}
 
-{#id407 .section}
+::: {#id407 .section}
 #### Added[\#](#id407 "Link to this heading"){.headerlink}
 
 - Additional unit tests for: binary_search, complex, c99math, catrig, ccosh, cexp, clog, csin, csqrt, and ctan.
@@ -5717,8 +7766,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Support for gfx950.
 
 - Merged changes from upstream CCCL/thrust 2.6.0.
+:::
 
-{#id408 .section}
+::: {#id408 .section}
 #### Changed[\#](#id408 "Link to this heading"){.headerlink}
 
 - Updated the required version of Google Benchmark from 1.8.0 to 1.9.0.
@@ -5726,8 +7776,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Renamed [`cpp14_required.h`{.docutils .literal .notranslate}]{.pre} to [`cpp_version_check.h`{.docutils .literal .notranslate}]{.pre}.
 
 - Refactored [`test_header.hpp`{.docutils .literal .notranslate}]{.pre} into [`test_param_fixtures.hpp`{.docutils .literal .notranslate}]{.pre}, [`test_real_assertions.hpp`{.docutils .literal .notranslate}]{.pre}, [`test_imag_assertions.hpp`{.docutils .literal .notranslate}]{.pre}, and [`test_utils.hpp`{.docutils .literal .notranslate}]{.pre}. This is done to prevent unit tests from having access to modules that they're not testing. This will improve the accuracy of code coverage reports.
+:::
 
-{#id409 .section}
+::: {#id409 .section}
 #### Removed[\#](#id409 "Link to this heading"){.headerlink}
 
 - [`device_malloc_allocator.h`{.docutils .literal .notranslate}]{.pre} has been removed. This header file was unused and should not impact users.
@@ -5737,29 +7788,31 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - [`test_header.hpp`{.docutils .literal .notranslate}]{.pre} has been removed. The [`HIP_CHECK`{.docutils .literal .notranslate}]{.pre} function, as well as the [`test`{.docutils .literal .notranslate}]{.pre} and [`inter_run_bwr`{.docutils .literal .notranslate}]{.pre} namespaces, have been moved to [`test_utils.hpp`{.docutils .literal .notranslate}]{.pre}.
 
 - [`test_assertions.hpp`{.docutils .literal .notranslate}]{.pre} has been split into [`test_real_assertions.hpp`{.docutils .literal .notranslate}]{.pre} and [`test_imag_assertions.hpp`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id410 .section}
+::: {#id410 .section}
 #### Resolved issues[\#](#id410 "Link to this heading"){.headerlink}
 
 - Fixed an issue with internal calls to unqualified [`distance()`{.docutils .literal .notranslate}]{.pre} which would be ambiguous due to the visible implementation through ADL.
+:::
 
-{#id411 .section}
+::: {#id411 .section}
 #### Known issues[\#](#id411 "Link to this heading"){.headerlink}
 
 - The order of the values being compared by [`thrust::exclusive_scan_by_key`{.docutils .literal .notranslate}]{.pre} and [`thrust::inclusive_scan_by_key`{.docutils .literal .notranslate}]{.pre} can change between runs when integers are being compared. This can cause incorrect output when a non-commutative operator such as division is being used.
+:::
 
-{#id412 .section}
+::: {#id412 .section}
 #### Upcoming changes[\#](#id412 "Link to this heading"){.headerlink}
 
 - [`thrust::device_malloc_allocator`{.docutils .literal .notranslate}]{.pre} is deprecated as of this version. It will be removed in an upcoming version.
+:::
+:::::::::
 
-::::::
-
-:::::
-{#rocwmma-2-0-0 .section}
+:::::::: {#rocwmma-2-0-0 .section}
 ### **rocWMMA** (2.0.0)[\#](#rocwmma-2-0-0 "Link to this heading"){.headerlink}
 
-{#id413 .section}
+::: {#id413 .section}
 #### Added[\#](#id413 "Link to this heading"){.headerlink}
 
 - Internal register layout transforms to support interleaved MMA layouts.
@@ -5769,8 +7822,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Mixed input [`BF8`{.docutils .literal .notranslate}]{.pre}/[`FP8`{.docutils .literal .notranslate}]{.pre} types for MMA support.
 
 - Fragment scheduler API objects to embed thread block cooperation properties in fragments.
+:::
 
-{#id414 .section}
+::: {#id414 .section}
 #### Changed[\#](#id414 "Link to this heading"){.headerlink}
 
 - Augmented load/store/MMA internals with static loop unrolling.
@@ -5786,8 +7840,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - rocWMMA cooperative fragments register usage footprint has been reduced.
 
 - rocWMMA fragments now support partial tile sizes with padding.
+:::
 
-{#id415 .section}
+::: {#id415 .section}
 #### Removed[\#](#id415 "Link to this heading"){.headerlink}
 
 - Support for the gfx940 and gfx941 targets.
@@ -5795,28 +7850,29 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - The rocWMMA cooperative API.
 
 - Wave count template parameters from transforms APIs.
+:::
 
-{#id416 .section}
+::: {#id416 .section}
 #### Optimized[\#](#id416 "Link to this heading"){.headerlink}
 
 - Added internal flow control barriers to improve assembly code generation and overall performance.
 
 - Enabled interleaved layouts by default in MMA to improve overall performance.
+:::
 
-{#id417 .section}
+::: {#id417 .section}
 #### Resolved issues[\#](#id417 "Link to this heading"){.headerlink}
 
 - Fixed a validation issue for small precision compute types [`<`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`B32`{.docutils .literal .notranslate}]{.pre} on gfx9.
 
 - Fixed CMake validation of compiler support for [`BF8`{.docutils .literal .notranslate}]{.pre}/[`FP8`{.docutils .literal .notranslate}]{.pre} types.
+:::
+::::::::
 
-:::::
-
-::::
-{#rpp-2-0-0 .section}
+::::::: {#rpp-2-0-0 .section}
 ### **RPP** (2.0.0)[\#](#rpp-2-0-0 "Link to this heading"){.headerlink}
 
-{#id418 .section}
+::: {#id418 .section}
 #### Added[\#](#id418 "Link to this heading"){.headerlink}
 
 - Bitwise NOT, Bitwise AND, and Bitwise OR augmentations on HOST (CPU) and HIP backends.
@@ -5828,8 +7884,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - [`log1p`{.docutils .literal .notranslate}]{.pre}, defined as [`log`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`(1`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`+`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`x)`{.docutils .literal .notranslate}]{.pre}, tensor augmentation support on HOST (CPU) and HIP backends.
 
 - JPEG Compression Distortion augmentation on HOST (CPU) backend.
+:::
 
-{#id419 .section}
+::: {#id419 .section}
 #### Changed[\#](#id419 "Link to this heading"){.headerlink}
 
 - Handle creation and destruction APIs have been consolidated. Use [`rppCreate()`{.docutils .literal .notranslate}]{.pre} for handle initialization and [`rppDestroy()`{.docutils .literal .notranslate}]{.pre} for handle destruction.
@@ -5845,26 +7902,27 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
   changed to:
 
   [`RppStatus`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`rppt_channel_permute_host(RppPtr_t`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`srcPtr,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`RpptDescPtr`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`srcDescPtr,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`RppPtr_t`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`dstPtr,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`RpptDescPtr`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`dstDescPtr,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`Rpp32u`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`*permutationTensor`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`rppHandle_t`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`rppHandle);`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id420 .section}
+::: {#id420 .section}
 #### Removed[\#](#id420 "Link to this heading"){.headerlink}
 
 - Older versions of RPP handle creation inlcuding [`rppCreateWithBatchSize()`{.docutils .literal .notranslate}]{.pre}, [`rppCreateWithStream()`{.docutils .literal .notranslate}]{.pre}, and [`rppCreateWithStreamAndBatchSize()`{.docutils .literal .notranslate}]{.pre}. These have been replaced with [`rppCreate()`{.docutils .literal .notranslate}]{.pre}.
 
 - Older versions of RPP handle destruction API including [`rppDestroyGPU()`{.docutils .literal .notranslate}]{.pre} and [`rppDestroyHost()`{.docutils .literal .notranslate}]{.pre}. These have been replaced with [`rppDestroy()`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id421 .section}
+::: {#id421 .section}
 #### Resolved issues[\#](#id421 "Link to this heading"){.headerlink}
 
 - Test package - Debian packages will install required dependencies.
+:::
+:::::::
 
-::::
-
-::::
-{#tensile-4-44-0 .section}
+::::::: {#tensile-4-44-0 .section}
 ### **Tensile** (4.44.0)[\#](#tensile-4-44-0 "Link to this heading"){.headerlink}
 
-{#id422 .section}
+::: {#id422 .section}
 #### Added[\#](#id422 "Link to this heading"){.headerlink}
 
 - Support for gfx950.
@@ -5878,8 +7936,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Compiler version-dependent assembler and architecture capabilities.
 
 - Documentation from GitHub Wiki to ROCm docs.
+:::
 
-{#id423 .section}
+::: {#id423 .section}
 #### Changed[\#](#id423 "Link to this heading"){.headerlink}
 
 - Loosened check for CLI compiler choices.
@@ -5895,8 +7954,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Improved default toolchain configuration.
 
 - Ignored f824 flake errors.
+:::
 
-{#id424 .section}
+::: {#id424 .section}
 #### Removed[\#](#id424 "Link to this heading"){.headerlink}
 
 - Support for the gfx940 and gfx941 targets.
@@ -5904,8 +7964,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Unused tuning files.
 
 - Disabled tests.
+:::
 
-{#id425 .section}
+::: {#id425 .section}
 #### Resolved issues[\#](#id425 "Link to this heading"){.headerlink}
 
 - Fixed configure time path not being invoked at build.
@@ -5921,44 +7982,41 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Fixed version typo in 6.3 changelog.
 
 - Fixed improper use of aliases as nested namespace specifiers.
+:::
+:::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-{#rocm-6-4-3 .section}
+:::::: {#rocm-6-4-3 .section}
 ## ROCm 6.4.3[\#](#rocm-6-4-3 "Link to this heading"){.headerlink}
 
 See the [ROCm 6.4.3 release notes](https://rocm.docs.amd.com/en/docs-6.4.3/about/release-notes.html){.reference .external} for a complete overview of this release.
 
-::
-{#rocm-smi-7-7-0 .section}
+::::: {#rocm-smi-7-7-0 .section}
 ### **ROCm SMI** (7.7.0)[\#](#rocm-smi-7-7-0 "Link to this heading"){.headerlink}
 
-:
-{#id426 .section}
+:::: {#id426 .section}
 #### Added[\#](#id426 "Link to this heading"){.headerlink}
 
 - Support for getting the GPU Board voltage.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/release/rocm-rel-6.4/CHANGELOG.md){.reference .external} for details, examples, and in-depth descriptions.
+:::
+::::
+:::::
+::::::
 
-:
-::
-
-:::::::::::::::::::::::::::::::
-{#rocm-6-4-2 .section}
+:::::::::::::::::::::::::::::::::: {#rocm-6-4-2 .section}
 ## ROCm 6.4.2[\#](#rocm-6-4-2 "Link to this heading"){.headerlink}
 
 See the [ROCm 6.4.2 release notes](https://rocm.docs.amd.com/en/docs-6.4.2/about/release-notes.html){.reference .external} for a complete overview of this release.
 
-::::
-{#amd-smi-25-5-1 .section}
+::::::: {#amd-smi-25-5-1 .section}
 ### **AMD SMI** (25.5.1)[\#](#amd-smi-25-5-1 "Link to this heading"){.headerlink}
 
-{#id427 .section}
+::: {#id427 .section}
 #### Added[\#](#id427 "Link to this heading"){.headerlink}
 
 - Compute Unit Occupancy information per process.
@@ -5968,32 +8026,33 @@ See the [ROCm 6.4.2 release notes](https://rocm.docs.amd.com/en/docs-6.4.2/about
 - New firmware PLDM_BUNDLE. [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`firmware`{.docutils .literal .notranslate}]{.pre} can now show the PLDM Bundle on supported systems.
 
 - [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`ras`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--afid`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--cper-file`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`<file_path>`{.docutils .literal .notranslate}]{.pre} to decode CPER records.
+:::
 
-{#id428 .section}
+::: {#id428 .section}
 #### Changed[\#](#id428 "Link to this heading"){.headerlink}
 
 - Padded [`asic_serial`{.docutils .literal .notranslate}]{.pre} in [`amdsmi_get_asic_info`{.docutils .literal .notranslate}]{.pre} with 0s.
 
 - Renamed field [`COMPUTE_PARTITION`{.docutils .literal .notranslate}]{.pre} to [`ACCELERATOR_PARTITION`{.docutils .literal .notranslate}]{.pre} in CLI call [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--partition`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-:
-{#id429 .section}
+:::: {#id429 .section}
 #### Resolved issues[\#](#id429 "Link to this heading"){.headerlink}
 
 - Corrected VRAM memory calculation in [`amdsmi_get_gpu_process_list`{.docutils .literal .notranslate}]{.pre}. Previously, the VRAM memory usage reported by [`amdsmi_get_gpu_process_list`{.docutils .literal .notranslate}]{.pre} was inaccurate and was calculated using KB instead of KiB.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/rocm-rel-6.4/CHANGELOG.md){.reference .external} for details, examples, and in-depth descriptions.
-
-:
+:::
 ::::
+:::::::
 
-{#hip-6-4-2 .section}
+:::::: {#hip-6-4-2 .section}
 ### **HIP** (6.4.2)[\#](#hip-6-4-2 "Link to this heading"){.headerlink}
 
-{#id430 .section}
+::: {#id430 .section}
 #### Added[\#](#id430 "Link to this heading"){.headerlink}
 
 - HIP API implementation for [`hipEventRecordWithFlags`{.docutils .literal .notranslate}]{.pre}, records an event in the specified stream with flags.
@@ -6001,13 +8060,15 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Support for the pointer attribute [`HIP_POINTER_ATTRIBUTE_CONTEXT`{.docutils .literal .notranslate}]{.pre}.
 
 - Support for the flags [`hipEventWaitDefault`{.docutils .literal .notranslate}]{.pre} and [`hipEventWaitExternal`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id431 .section}
+::: {#id431 .section}
 #### Optimized[\#](#id431 "Link to this heading"){.headerlink}
 
 - Improved implementation in [`hipEventSynchronize`{.docutils .literal .notranslate}]{.pre}, HIP runtime now makes internal callbacks as non-blocking operations to improve performance.
+:::
 
-{#id432 .section}
+::: {#id432 .section}
 #### Resolved issues[\#](#id432 "Link to this heading"){.headerlink}
 
 - Issue of dependency on [`libgcc-s1`{.docutils .literal .notranslate}]{.pre} during rocm-dev install on Debian Buster. HIP runtime removed this Debian package dependency, and uses [`libgcc1`{.docutils .literal .notranslate}]{.pre} instead for this distros.
@@ -6027,44 +8088,43 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Support of [`hipDeviceMallocContiguous`{.docutils .literal .notranslate}]{.pre} flags in [`hipExtMallocWithFlags()`{.docutils .literal .notranslate}]{.pre}. It now enables [`HSA_AMD_MEMORY_POOL_CONTIGUOUS_FLAG`{.docutils .literal .notranslate}]{.pre} in the memory pool allocation on GPU device.
 
 - Radom memory segmentation fault in handling [`GraphExec`{.docutils .literal .notranslate}]{.pre} object release and [`hipDeviceSyncronization`{.docutils .literal .notranslate}]{.pre}. HIP runtime now uses internal device synchronize function in [`__hipUnregisterFatBinary`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::::
 
-:
-{#hipblaslt-0-12-1 .section}
+:::: {#hipblaslt-0-12-1 .section}
 ### **hipBLASLt** (0.12.1)[\#](#hipblaslt-0-12-1 "Link to this heading"){.headerlink}
 
-{#id433 .section}
+::: {#id433 .section}
 #### Added[\#](#id433 "Link to this heading"){.headerlink}
 
 - Support for gfx1151 on Linux, complementing the previous support in the HIP SDK for Windows.
+:::
+::::
 
-:
-
-:
-{#rccl-2-22-3 .section}
+:::: {#rccl-2-22-3 .section}
 ### **RCCL** (2.22.3)[\#](#rccl-2-22-3 "Link to this heading"){.headerlink}
 
-{#id434 .section}
+::: {#id434 .section}
 #### Added[\#](#id434 "Link to this heading"){.headerlink}
 
 - Added support for the LL128 protocol on gfx942.
+:::
+::::
 
-:
-
-:
-{#rocblas-4-4-1 .section}
+:::: {#rocblas-4-4-1 .section}
 ### **rocBLAS** (4.4.1)[\#](#rocblas-4-4-1 "Link to this heading"){.headerlink}
 
-{#id435 .section}
+::: {#id435 .section}
 #### Resolved issues[\#](#id435 "Link to this heading"){.headerlink}
 
 - rocBLAS might have failed to produce correct results for cherk/zherk on gfx90a/gfx942 with problem sizes k \> 500 due to the imaginary portion on the C matrix diagonal not being zeros. rocBLAS now zeros the imaginary portion.
+:::
+::::
 
-:
-
-{#rocm-compute-profiler-3-1-1 .section}
+:::::: {#rocm-compute-profiler-3-1-1 .section}
 ### **ROCm Compute Profiler** (3.1.1)[\#](#rocm-compute-profiler-3-1-1 "Link to this heading"){.headerlink}
 
-{#id436 .section}
+::: {#id436 .section}
 #### Added[\#](#id436 "Link to this heading"){.headerlink}
 
 - 8-bit floating point (FP8) metrics support for AMD Instinct MI300 GPUs.
@@ -6072,49 +8132,51 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Additional data types for roofline: FP8, FP16, BF16, FP32, FP64, I8, I32, I64 (dependent on the GPU architecture).
 
 - Data type selection option [`--roofline-data-type`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`/`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-R`{.docutils .literal .notranslate}]{.pre} for roofline profiling. The default data type is FP32.
+:::
 
-{#id437 .section}
+::: {#id437 .section}
 #### Changed[\#](#id437 "Link to this heading"){.headerlink}
 
 - Changed dependency from [`rocm-smi`{.docutils .literal .notranslate}]{.pre} to [`amd-smi`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id438 .section}
+::: {#id438 .section}
 #### Resolved issues[\#](#id438 "Link to this heading"){.headerlink}
 
 - Fixed a crash related to Agent ID caused by the new format of the [`rocprofv3`{.docutils .literal .notranslate}]{.pre} output CSV file.
+:::
+::::::
 
-::
-{#rocm-systems-profiler-1-0-2 .section}
+::::: {#rocm-systems-profiler-1-0-2 .section}
 ### **ROCm Systems Profiler** (1.0.2)[\#](#rocm-systems-profiler-1-0-2 "Link to this heading"){.headerlink}
 
-{#id439 .section}
+::: {#id439 .section}
 #### Optimized[\#](#id439 "Link to this heading"){.headerlink}
 
 - Improved readability of the OpenMP target offload traces by showing on a single Perfetto track.
+:::
 
-{#id440 .section}
+::: {#id440 .section}
 #### Resolved issues[\#](#id440 "Link to this heading"){.headerlink}
 
 - Fixed the file path to the script that merges Perfetto files from multi-process MPI runs. The script has also been renamed from [`merge-multiprocess-output.sh`{.docutils .literal .notranslate}]{.pre} to [`rocprof-sys-merge-output.sh`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::
 
-::
-
-:
-{#rocm-validation-suite-1-1-0 .section}
+:::: {#rocm-validation-suite-1-1-0 .section}
 ### **ROCm Validation Suite** (1.1.0)[\#](#rocm-validation-suite-1-1-0 "Link to this heading"){.headerlink}
 
-{#id441 .section}
+::: {#id441 .section}
 #### Added[\#](#id441 "Link to this heading"){.headerlink}
 
 - NPS2/DPX and NPS4/CPX partition modes support for AMD Instinct MI300X.
+:::
+::::
 
-:
-
-:
-{#rocprim-3-4-1 .section}
+:::: {#rocprim-3-4-1 .section}
 ### **rocPRIM** (3.4.1)[\#](#rocprim-3-4-1 "Link to this heading"){.headerlink}
 
-{#id442 .section}
+::: {#id442 .section}
 #### Upcoming changes[\#](#id442 "Link to this heading"){.headerlink}
 
 - Changes to the template parameters of warp and block algorithms will be made in an upcoming release.
@@ -6156,14 +8218,13 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
     - future default: [`class`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`AccType`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`=`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`rocprim::invoke_result_binary_op_t<rocprim::detail::input_type_t<InitValueType>,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`BinaryFunction>`{.docutils .literal .notranslate}]{.pre}
 
 - [`rocprim::load_cs`{.docutils .literal .notranslate}]{.pre} and [`rocprim::store_cs`{.docutils .literal .notranslate}]{.pre} are deprecated and will be removed in an upcoming release. Alternatively, you can use [`rocprim::load_nontemporal`{.docutils .literal .notranslate}]{.pre} and [`rocprim::store_nontemporal`{.docutils .literal .notranslate}]{.pre} to load and store values in specific conditions (like bypassing the cache) for [`rocprim::thread_load`{.docutils .literal .notranslate}]{.pre} and [`rocprim::thread_store`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::
 
-:
-
-:
-{#rocshmem-2-0-1 .section}
+:::: {#rocshmem-2-0-1 .section}
 ### **rocSHMEM** (2.0.1)[\#](#rocshmem-2-0-1 "Link to this heading"){.headerlink}
 
-{#id443 .section}
+::: {#id443 .section}
 #### Resolved issues[\#](#id443 "Link to this heading"){.headerlink}
 
 - Incorrect output for [`rocshmem_ctx_my_pe`{.docutils .literal .notranslate}]{.pre} and [`rocshmem_ctx_n_pes`{.docutils .literal .notranslate}]{.pre}.
@@ -6171,14 +8232,13 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Multi-team errors by providing team specific buffers in [`rocshmem_ctx_wg_team_sync`{.docutils .literal .notranslate}]{.pre}.
 
 - Missing implementation of [`rocshmem_g`{.docutils .literal .notranslate}]{.pre} for IPC conduit.
+:::
+::::
 
-:
-
-::
-{#rocsolver-3-28-2 .section}
+::::: {#rocsolver-3-28-2 .section}
 ### **rocSOLVER** (3.28.2)[\#](#rocsolver-3-28-2 "Link to this heading"){.headerlink}
 
-{#id444 .section}
+::: {#id444 .section}
 #### Added[\#](#id444 "Link to this heading"){.headerlink}
 
 - Hybrid computation support for existing routines, such as STERF.
@@ -6186,8 +8246,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - SVD for general matrices based on Cuppen's Divide and Conquer algorithm:
 
   - GESDD (with batched and strided_batched versions)
+:::
 
-{#id445 .section}
+::: {#id445 .section}
 #### Optimized[\#](#id445 "Link to this heading"){.headerlink}
 
 - Reduced the device memory requirements for STEDC, SYEVD/HEEVD, and SYGVD/HEGVD.
@@ -6195,21 +8256,19 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Improved the performance of STEDC and divide and conquer Eigensolvers.
 
 - Improved the performance of SYTRD, the initial step of the Eigensolvers that start with the tridiagonalization of the input matrix.
+:::
+:::::
+::::::::::::::::::::::::::::::::::
 
-::
-:::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::
-{#rocm-6-4-1 .section}
+:::::::::::::::::::::::::::::::::::: {#rocm-6-4-1 .section}
 ## ROCm 6.4.1[\#](#rocm-6-4-1 "Link to this heading"){.headerlink}
 
 See the [ROCm 6.4.1 release notes](https://rocm.docs.amd.com/en/docs-6.4.1/about/release-notes.html){.reference .external} for a complete overview of this release.
 
-::::::
-{#amd-smi-25-4-2 .section}
+::::::::: {#amd-smi-25-4-2 .section}
 ### **AMD SMI** (25.4.2)[\#](#amd-smi-25-4-2 "Link to this heading"){.headerlink}
 
-{#id446 .section}
+::: {#id446 .section}
 #### Added[\#](#id446 "Link to this heading"){.headerlink}
 
 - Dumping CPER entries from RAS tool [`amdsmi_get_gpu_cper_entries()`{.docutils .literal .notranslate}]{.pre} to Python and C APIs.
@@ -6219,194 +8278,201 @@ See the [ROCm 6.4.1 release notes](https://rocm.docs.amd.com/en/docs-6.4.1/about
   - Dumping CPER entries is also enabled in the CLI interface through [`sudo`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`ras`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--cper`{.docutils .literal .notranslate}]{.pre}.
 
 - [`amdsmi_get_gpu_busy_percent`{.docutils .literal .notranslate}]{.pre} to the C API.
+:::
 
-{#id447 .section}
+::: {#id447 .section}
 #### Changed[\#](#id447 "Link to this heading"){.headerlink}
 
 - Modified VRAM display for [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-v`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id448 .section}
+::: {#id448 .section}
 #### Optimized[\#](#id448 "Link to this heading"){.headerlink}
 
 - Improved load times for CLI commands when the GPU has multiple partitions.
+:::
 
-{#id449 .section}
+::: {#id449 .section}
 #### Resolved issues[\#](#id449 "Link to this heading"){.headerlink}
 
 - Fixed partition enumeration in [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`list`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-e`{.docutils .literal .notranslate}]{.pre}, [`amdsmi_get_gpu_enumeration_info()`{.docutils .literal .notranslate}]{.pre}, [`amdsmi_enumeration_info_t`{.docutils .literal .notranslate}]{.pre}, [`drm_card`{.docutils .literal .notranslate}]{.pre}, and [`drm_render`{.docutils .literal .notranslate}]{.pre} fields.
+:::
 
-:
-{#id450 .section}
+:::: {#id450 .section}
 #### Known issues[\#](#id450 "Link to this heading"){.headerlink}
 
 - When using the [`--follow`{.docutils .literal .notranslate}]{.pre} flag with [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`ras`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--cper`{.docutils .literal .notranslate}]{.pre}, CPER entries are not streamed continuously as intended. This will be fixed in an upcoming ROCm release.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/rocm-rel-6.4/CHANGELOG.md){.reference .external} for details, examples, and in-depth descriptions.
-
-:
-::::::
-
+:::
 ::::
-{#hip-6-4-1 .section}
+:::::::::
+
+::::::: {#hip-6-4-1 .section}
 ### **HIP** (6.4.1)[\#](#hip-6-4-1 "Link to this heading"){.headerlink}
 
-{#id451 .section}
+::: {#id451 .section}
 #### Added[\#](#id451 "Link to this heading"){.headerlink}
 
 - New log mask enumeration [`LOG_COMGR`{.docutils .literal .notranslate}]{.pre} enables logging precise code object information.
+:::
 
-{#id452 .section}
+::: {#id452 .section}
 #### Changed[\#](#id452 "Link to this heading"){.headerlink}
 
 - HIP runtime uses device bitcode before SPIRV.
 
 - The implementation of preventing [`hipLaunchKernel`{.docutils .literal .notranslate}]{.pre} latency degradation with number of idle streams is reverted or disabled by default.
+:::
 
-{#id453 .section}
+::: {#id453 .section}
 #### Optimized[\#](#id453 "Link to this heading"){.headerlink}
 
 - Improved kernel logging includes de-mangling shader names.
 
 - Refined implementation in HIP APIs [`hipEventRecords`{.docutils .literal .notranslate}]{.pre} and [`hipStreamWaitEvent`{.docutils .literal .notranslate}]{.pre} for performance improvement.
+:::
 
-{#id454 .section}
+::: {#id454 .section}
 #### Resolved issues[\#](#id454 "Link to this heading"){.headerlink}
 
 - Stale state during the graph capture. The return error was fixed, HIP runtime now always uses the latest dependent nodes during [`hipEventRecord`{.docutils .literal .notranslate}]{.pre} capture.
 
 - Segmentation fault during kernel execution. HIP runtime now allows maximum stack size as per ISA on the GPU device.
+:::
+:::::::
 
-::::
-
-:
-{#id455 .section}
+:::: {#id455 .section}
 ### **hipBLASLt** (0.12.1)[\#](#id455 "Link to this heading"){.headerlink}
 
-{#id456 .section}
+::: {#id456 .section}
 #### Resolved issues[\#](#id456 "Link to this heading"){.headerlink}
 
 - Fixed an accuracy issue for some solutions using an [`FP32`{.docutils .literal .notranslate}]{.pre} or [`TF32`{.docutils .literal .notranslate}]{.pre} data type with a TT transpose.
+:::
+::::
 
-:
-
-{#id457 .section}
+:::::: {#id457 .section}
 ### **RCCL** (2.22.3)[\#](#id457 "Link to this heading"){.headerlink}
 
-{#id458 .section}
+::: {#id458 .section}
 #### Changed[\#](#id458 "Link to this heading"){.headerlink}
 
 - MSCCL++ is now disabled by default. To enable it, set [`RCCL_MSCCLPP_ENABLE=1`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id459 .section}
+::: {#id459 .section}
 #### Resolved issues[\#](#id459 "Link to this heading"){.headerlink}
 
 - Fixed an issue where early termination, in rare circumstances, could cause the application to stop responding by adding synchronization before destroying a proxy thread.
 
 - Fixed the accuracy issue for the MSCCLPP [`allreduce7`{.docutils .literal .notranslate}]{.pre} kernel in graph mode.
+:::
 
-{#id460 .section}
+::: {#id460 .section}
 #### Known issues[\#](#id460 "Link to this heading"){.headerlink}
 
 - When splitting a communicator using [`ncclCommSplit`{.docutils .literal .notranslate}]{.pre} in some GPU configurations, MSCCL initialization can cause a segmentation fault. The recommended workaround is to disable MSCCL with [`export`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`RCCL_MSCCL_ENABLE=0`{.docutils .literal .notranslate}]{.pre}. This issue will be fixed in a future ROCm release.
 
 - Within the RCCL-UnitTests test suite, failures occur in tests ending with the [`.ManagedMem`{.docutils .literal .notranslate}]{.pre} and [`.ManagedMemGraph`{.docutils .literal .notranslate}]{.pre} suffixes. These failures only affect the test results and do not affect the RCCL component itself. This issue will be resolved in a future ROCm release.
+:::
+::::::
 
-::
-{#rocalution-3-2-3 .section}
+::::: {#rocalution-3-2-3 .section}
 ### **rocALUTION** (3.2.3)[\#](#rocalution-3-2-3 "Link to this heading"){.headerlink}
 
-{#id461 .section}
+::: {#id461 .section}
 #### Added[\#](#id461 "Link to this heading"){.headerlink}
 
 - The [`-a`{.docutils .literal .notranslate}]{.pre} option has been added to the [`rmake.py`{.docutils .literal .notranslate}]{.pre} build script. This option allows you to select specific architectures when building on Microsoft Windows.
+:::
 
-{#id462 .section}
+::: {#id462 .section}
 #### Resolved issues[\#](#id462 "Link to this heading"){.headerlink}
 
 - Fixed an issue where the [`HIP_PATH`{.docutils .literal .notranslate}]{.pre} environment variable was being ignored when compiling on Microsoft Windows.
+:::
+:::::
 
-::
-
-{#rocm-data-center-tool-0-3-0 .section}
+:::::: {#rocm-data-center-tool-0-3-0 .section}
 ### **ROCm Data Center Tool** (0.3.0)[\#](#rocm-data-center-tool-0-3-0 "Link to this heading"){.headerlink}
 
-{#id463 .section}
+::: {#id463 .section}
 #### Added[\#](#id463 "Link to this heading"){.headerlink}
 
 - Support for GPU partitions.
 
 - [`RDC_FI_GPU_BUSY_PERCENT`{.docutils .literal .notranslate}]{.pre} metric.
+:::
 
-{#id464 .section}
+::: {#id464 .section}
 #### Changed[\#](#id464 "Link to this heading"){.headerlink}
 
 - Updated [`rdc_field`{.docutils .literal .notranslate}]{.pre} to align with [`rdc_bootstrap`{.docutils .literal .notranslate}]{.pre} for current metrics.
+:::
 
-{#id465 .section}
+::: {#id465 .section}
 #### Resolved issues[\#](#id465 "Link to this heading"){.headerlink}
 
 - Fixed [ROCProfiler](https://rocm.docs.amd.com/projects/rocprofiler/en/docs-6.4.0/index.html){.reference .external} eval metrics and memory leaks.
+:::
+::::::
 
-::
-{#rocm-smi-7-5-0 .section}
+::::: {#rocm-smi-7-5-0 .section}
 ### **ROCm SMI** (7.5.0)[\#](#rocm-smi-7-5-0 "Link to this heading"){.headerlink}
 
-:
-{#id466 .section}
+:::: {#id466 .section}
 #### Resolved issues[\#](#id466 "Link to this heading"){.headerlink}
 
 - Fixed partition enumeration. It now refers to the correct DRM Render and Card paths.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/release/rocm-rel-6.4/CHANGELOG.md){.reference .external} for details, examples, and in-depth descriptions.
+:::
+::::
+:::::
 
-:
-::
-
-::
-{#rocm-systems-profiler-1-0-1 .section}
+::::: {#rocm-systems-profiler-1-0-1 .section}
 ### **ROCm Systems Profiler** (1.0.1)[\#](#rocm-systems-profiler-1-0-1 "Link to this heading"){.headerlink}
 
-{#id467 .section}
+::: {#id467 .section}
 #### Added[\#](#id467 "Link to this heading"){.headerlink}
 
 - How-to document for [network performance profiling](https://rocm.docs.amd.com/projects/rocprofiler-systems/en/latest/how-to/nic-profiling.html){.reference .external} for standard Network Interface Cards (NICs).
+:::
 
-{#id468 .section}
+::: {#id468 .section}
 #### Resolved issues[\#](#id468 "Link to this heading"){.headerlink}
 
 - Fixed a build issue with Dyninst on GCC 13.
+:::
+:::::
 
-::
-
-:
-{#rocr-runtime-1-15-0 .section}
+:::: {#rocr-runtime-1-15-0 .section}
 ### **ROCr Runtime** (1.15.0)[\#](#rocr-runtime-1-15-0 "Link to this heading"){.headerlink}
 
-{#id469 .section}
+::: {#id469 .section}
 #### Resolved issues[\#](#id469 "Link to this heading"){.headerlink}
 
 - Fixed a rare occurrence issue on AMD Instinct MI25, MI50, and MI100 GPUs, where the [`SDMA`{.docutils .literal .notranslate}]{.pre} copies might start before the dependent Kernel finishes and could cause memory corruption.
+:::
+::::
+::::::::::::::::::::::::::::::::::::
 
-:
-:::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-{#rocm-6-4-0 .section}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#rocm-6-4-0 .section}
 ## ROCm 6.4.0[\#](#rocm-6-4-0 "Link to this heading"){.headerlink}
 
 See the [ROCm 6.4.0 release notes](https://rocm.docs.amd.com/en/docs-6.4.0/about/release-notes.html){.reference .external} for a complete overview of this release.
 
-::::::::
-{#amd-smi-25-3-0 .section}
+::::::::::: {#amd-smi-25-3-0 .section}
 ### **AMD SMI** (25.3.0)[\#](#amd-smi-25-3-0 "Link to this heading"){.headerlink}
 
-{#id470 .section}
+::: {#id470 .section}
 #### Added[\#](#id470 "Link to this heading"){.headerlink}
 
 - Added enumeration mapping [`amdsmi_get_gpu_enumeration_info()`{.docutils .literal .notranslate}]{.pre} to Python and C APIs. The mapping is also enabled in the CLI interface via [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`list`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-e`{.docutils .literal .notranslate}]{.pre}.
@@ -6428,8 +8494,9 @@ See the [ROCm 6.4.0 release notes](https://rocm.docs.amd.com/en/docs-6.4.0/about
 - Added new command [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`set`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-c/--clock-level`{.docutils .literal .notranslate}]{.pre}.
 
 - Added new command [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`static`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-C/--clock`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id471 .section}
+::: {#id471 .section}
 #### Changed[\#](#id471 "Link to this heading"){.headerlink}
 
 - Updated AMD SMI library version number format to reflect changes in backward compatibility and offer more semantic versioning.
@@ -6481,13 +8548,15 @@ See the [ROCm 6.4.0 release notes](https://rocm.docs.amd.com/en/docs-6.4.0/about
 - Updated API [`amdsmi_get_violation_status()`{.docutils .literal .notranslate}]{.pre} structure and CLI [`amdsmi_violation_status_t`{.docutils .literal .notranslate}]{.pre} to include GFX Clk below host limit.
 
 - Updated API [`amdsmi_get_gpu_vram_info()`{.docutils .literal .notranslate}]{.pre} structure and CLI [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`static`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--vram`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id472 .section}
+::: {#id472 .section}
 #### Removed[\#](#id472 "Link to this heading"){.headerlink}
 
 - Removed [`GFX_BUSY_ACC`{.docutils .literal .notranslate}]{.pre} from [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`metric`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--usage`{.docutils .literal .notranslate}]{.pre} as it did not provide helpful output to users.
+:::
 
-{#id473 .section}
+::: {#id473 .section}
 #### Optimized[\#](#id473 "Link to this heading"){.headerlink}
 
 - Added additional help information to [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`set`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--help`{.docutils .literal .notranslate}]{.pre} command. The subcommands now detail what values are accepted as input.
@@ -6495,13 +8564,15 @@ See the [ROCm 6.4.0 release notes](https://rocm.docs.amd.com/en/docs-6.4.0/about
 - Modified [`amd-smi`{.docutils .literal .notranslate}]{.pre} CLI to allow case insensitive arguments if the argument does not begin with a single dash.
 
 - Converted [`xgmi`{.docutils .literal .notranslate}]{.pre} read and write from KBs to dynamically selected readable units.
+:::
 
-{#id474 .section}
+::: {#id474 .section}
 #### Resolved issues[\#](#id474 "Link to this heading"){.headerlink}
 
 - Fixed [`amdsmi_get_gpu_asic_info`{.docutils .literal .notranslate}]{.pre} and [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`static`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--asic`{.docutils .literal .notranslate}]{.pre} not displaying graphics version correctly for Instinct MI200 Series, Instinct MI100 Series, and RDNA3-based GPUs.
+:::
 
-{#id475 .section}
+::: {#id475 .section}
 #### Known issues[\#](#id475 "Link to this heading"){.headerlink}
 
 - AMD SMI only reports 63 GPU devices when setting CPX on all 8 GPUs. When setting CPX as a partition mode, there is a DRM node limitation of 64.
@@ -6525,28 +8596,27 @@ Some workaround options are as follows:
 - Update your OS kernel.
 
 - Build and install your own kernel.
+:::
 
-:
-{#id476 .section}
+:::: {#id476 .section}
 #### Upcoming changes[\#](#id476 "Link to this heading"){.headerlink}
 
 - The [`AMDSMI_LIB_VERSION_YEAR`{.docutils .literal .notranslate}]{.pre} enum and API fields will be deprecated in a future ROCm release.
 
 - The [`pasid`{.docutils .literal .notranslate}]{.pre} field in struct [`amdsmi_process_info_t`{.docutils .literal .notranslate}]{.pre} will be deprecated in a future ROCm release.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/rocm-rel-6.4/CHANGELOG.md){.reference .external} for details, examples, and in-depth descriptions.
+:::
+::::
+:::::::::::
 
-:
-::::::::
-
-:::::
-{#amdmigraphx-2-12-0 .section}
+:::::::: {#amdmigraphx-2-12-0 .section}
 ### **AMDMIGraphX** (2.12.0)[\#](#amdmigraphx-2-12-0 "Link to this heading"){.headerlink}
 
-{#id477 .section}
+::: {#id477 .section}
 #### Added[\#](#id477 "Link to this heading"){.headerlink}
 
 - Support for gfx1201.
@@ -6572,8 +8642,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Script to convert mxr files to ONNX models.
 
 - The [`MIGRAPHX_SET_GEMM_PROVIDER`{.docutils .literal .notranslate}]{.pre} environment variable to choose between rocBLAS and hipBLASLt. Set [`MIGRAPHX_SET_GEMM_PROVIDER`{.docutils .literal .notranslate}]{.pre} to [`rocblas`{.docutils .literal .notranslate}]{.pre} to use rocBLAS, or to [`hipblaslt`{.docutils .literal .notranslate}]{.pre} to use hipBLASLt.
+:::
 
-{#id478 .section}
+::: {#id478 .section}
 #### Changed[\#](#id478 "Link to this heading"){.headerlink}
 
 - Switched to using hipBLASLt instead of rocBLAS (except for gfx90a GPU architecture).
@@ -6589,8 +8660,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Renamed the [`layout_nhwc`{.docutils .literal .notranslate}]{.pre} to [`layout_convolution`{.docutils .literal .notranslate}]{.pre} and ensured that either the weights are the same layout as the inputs or set the input and weights to NHWC.
 
 - The minimum Cmake version is now 3.27.
+:::
 
-{#id479 .section}
+::: {#id479 .section}
 #### Removed[\#](#id479 "Link to this heading"){.headerlink}
 
 - Removed [`fp8e5m2fnuz`{.docutils .literal .notranslate}]{.pre} rocBLAS support.
@@ -6600,8 +8672,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Removed a warning that printed to stdout when using FP8 types.
 
 - Remove zero-point parameter for dequantizelinear when it is zero.
+:::
 
-{#id480 .section}
+::: {#id480 .section}
 #### Optimized[\#](#id480 "Link to this heading"){.headerlink}
 
 - Prefill buffers when MLIR produces a multioutput buffer.
@@ -6615,8 +8688,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Added [`MIGRAPHX_MLIR_DUMP`{.docutils .literal .notranslate}]{.pre} environment variable to be set to a folder where individual final rocMLIR modules can be saved for investigation.
 
 - Improved the C++ API to allow onnxruntime access to fp8 quantization.
+:::
 
-{#id481 .section}
+::: {#id481 .section}
 #### Resolved issues[\#](#id481 "Link to this heading"){.headerlink}
 
 - Fixed multistream execution with larger models.
@@ -6632,14 +8706,13 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - MatMulNBits could fail with a shape error.
 
 - Fixed an issue where some models might fail to compile with an error [`flatten:`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`Shapes`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`are`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`not`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`in`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`standard`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`layout`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::::::
 
-:::::
-
-:::::
-{#id482 .section}
+:::::::: {#id482 .section}
 ### **Composable Kernel** (1.1.0)[\#](#id482 "Link to this heading"){.headerlink}
 
-{#id483 .section}
+::: {#id483 .section}
 #### Added[\#](#id483 "Link to this heading"){.headerlink}
 
 - Batched CK Tile General Matrix Multiplication (GEMM) with splitK support.
@@ -6703,20 +8776,23 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Test filters to select smoke tests or regression tests.
 
 - Error threshold calculation for CK Tile GEMM examples.
+:::
 
-{#id484 .section}
+::: {#id484 .section}
 #### Changed[\#](#id484 "Link to this heading"){.headerlink}
 
 - Expanded code generation to support dynamic compilation using hipRTC.
 
 - Updated attention forward qs_ks_vs pipeline to support hdim=512.
+:::
 
-{#id485 .section}
+::: {#id485 .section}
 #### Removed[\#](#id485 "Link to this heading"){.headerlink}
 
 - Removed support for gfx40 and gfx41.
+:::
 
-{#id486 .section}
+::: {#id486 .section}
 #### Optimized[\#](#id486 "Link to this heading"){.headerlink}
 
 - Improved accuracy of BFP16 convolution.
@@ -6724,19 +8800,19 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Improved memory access pattern for all CK Tile GEMM layouts.
 
 - Improved CK Tile Layernorm performance and added different quantization methods.
+:::
 
-{#id487 .section}
+::: {#id487 .section}
 #### Resolved issues[\#](#id487 "Link to this heading"){.headerlink}
 
 - Fixed CK Tile GEMM hotloop scheduler to use proper MFMA attributes.
+:::
+::::::::
 
-:::::
-
-:::::
-{#hip-6-4-0 .section}
+:::::::: {#hip-6-4-0 .section}
 ### **HIP** (6.4.0)[\#](#hip-6-4-0 "Link to this heading"){.headerlink}
 
-{#id488 .section}
+::: {#id488 .section}
 #### Added[\#](#id488 "Link to this heading"){.headerlink}
 
 - New HIP APIs
@@ -6762,8 +8838,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
   - [`hipLinkComplete`{.docutils .literal .notranslate}]{.pre} completes linking of program and output linker binary to use with hipModuleLoadData.
 
   - [`hipLinkDestroy`{.docutils .literal .notranslate}]{.pre} deletes linker instance.
+:::
 
-{#id489 .section}
+::: {#id489 .section}
 #### Changed[\#](#id489 "Link to this heading"){.headerlink}
 
 - [`roc-obj`{.docutils .literal .notranslate}]{.pre} tools is deprecated and will be removed in an upcoming release.
@@ -6773,8 +8850,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
   - Support for ROCm Object tooling has moved into [`llvm-objdump`{.docutils .literal .notranslate}]{.pre} provided by package [`rocm-llvm`{.docutils .literal .notranslate}]{.pre}.
 
 - SDMA retainer logic is removed for engine selection in operation of runtime buffer copy.
+:::
 
-{#id490 .section}
+::: {#id490 .section}
 #### Optimized[\#](#id490 "Link to this heading"){.headerlink}
 
 - [`hipGraphLaunch`{.docutils .literal .notranslate}]{.pre} parallelism is improved for complex data-parallel graphs.
@@ -6792,8 +8870,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
   - The default environment variable [`GPU_FORCE_BLIT_COPY_SIZE`{.docutils .literal .notranslate}]{.pre} is set to [`16`{.docutils .literal .notranslate}]{.pre}, which limits the kernel copy to sizes less than 16 KB, while copies larger than that would be handled by [`SDMA`{.docutils .literal .notranslate}]{.pre} engine.
 
   - Blit code is refactored, and ASAN instrumentation is cleaned up.
+:::
 
-{#id491 .section}
+::: {#id491 .section}
 #### Resolved issues[\#](#id491 "Link to this heading"){.headerlink}
 
 - Out-of-memory error on Microsoft Windows. When the user calls [`hipMalloc`{.docutils .literal .notranslate}]{.pre} for device memory allocation while specifying a size larger than the available device memory, the HIP runtime fixes the error in the API implementation, allocating the available device memory plus system memory (shared virtual memory).
@@ -6801,8 +8880,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/release/roc
 - Error of dependency on [`libgcc-s1`{.docutils .literal .notranslate}]{.pre} during rocm-dev install on Debian Buster. HIP runtime now uses [`libgcc1`{.docutils .literal .notranslate}]{.pre} for this distros.
 
 - Stack corruption during kernel execution. HIP runtime now adds a maximum stack size limit based on the GPU device feature.
+:::
 
-{#id492 .section}
+::: {#id492 .section}
 #### Upcoming changes[\#](#id492 "Link to this heading"){.headerlink}
 
 The following lists the backward incompatible changes planned for upcoming major ROCm releases.
@@ -6872,30 +8952,29 @@ The following lists the backward incompatible changes planned for upcoming major
   - This change makes the use of [`hiprtc`{.docutils .literal .notranslate}]{.pre} library on Linux the same as on Windows, and matches the behavior of CUDA [`nvrtc`{.docutils .literal .notranslate}]{.pre}.
 
 - Removal of deprecated struct [`HIP_MEMSET_NODE_PARAMS`{.docutils .literal .notranslate}]{.pre}, Developers can use definition [`hipMemsetParams`{.docutils .literal .notranslate}]{.pre} instead.
+:::
+::::::::
 
-:::::
-
-::
-{#hipblas-2-4-0 .section}
+::::: {#hipblas-2-4-0 .section}
 ### **hipBLAS** (2.4.0)[\#](#hipblas-2-4-0 "Link to this heading"){.headerlink}
 
-{#id493 .section}
+::: {#id493 .section}
 #### Changed[\#](#id493 "Link to this heading"){.headerlink}
 
 - Updated the build dependencies.
+:::
 
-{#id494 .section}
+::: {#id494 .section}
 #### Resolved issues[\#](#id494 "Link to this heading"){.headerlink}
 
 - Fixed the Windows reference library interface for rocSOLVER functions for hipBLAS clients.
+:::
+:::::
 
-::
-
-::::
-{#hipblaslt-0-12-0 .section}
+::::::: {#hipblaslt-0-12-0 .section}
 ### **hipBLASLt** (0.12.0)[\#](#hipblaslt-0-12-0 "Link to this heading"){.headerlink}
 
-{#id495 .section}
+::: {#id495 .section}
 #### Added[\#](#id495 "Link to this heading"){.headerlink}
 
 - Support ROC-TX if [`HIPBLASLT_ENABLE_MARKER=1`{.docutils .literal .notranslate}]{.pre} is set.
@@ -6909,32 +8988,35 @@ The following lists the backward incompatible changes planned for upcoming major
 - Support the user offline tuning mechanism.
 
 - More samples.
+:::
 
-{#id496 .section}
+::: {#id496 .section}
 #### Changed[\#](#id496 "Link to this heading"){.headerlink}
 
 - Output the bench command along with the solution index if [`HIPBLASLT_LOG_MASK=32`{.docutils .literal .notranslate}]{.pre} is set.
+:::
 
-{#id497 .section}
+::: {#id497 .section}
 #### Optimized[\#](#id497 "Link to this heading"){.headerlink}
 
 - Improve the overall performance of the XF32/FP16/BF16/FP8/BF8 data types.
 
 - Reduce the library size.
+:::
 
-{#id498 .section}
+::: {#id498 .section}
 #### Resolved issues[\#](#id498 "Link to this heading"){.headerlink}
 
 - Fixed multi-threads bug.
 
 - Fixed multi-streams bug.
+:::
+:::::::
 
-::::
-
-{#hipcub-3-4-0 .section}
+:::::: {#hipcub-3-4-0 .section}
 ### **hipCUB** (3.4.0)[\#](#hipcub-3-4-0 "Link to this heading"){.headerlink}
 
-{#id499 .section}
+::: {#id499 .section}
 #### Added[\#](#id499 "Link to this heading"){.headerlink}
 
 - Added regression tests to [`rtest.py`{.docutils .literal .notranslate}]{.pre}. These tests recreate scenarios that have caused hardware problems in past emulation environments. Use [`python`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`rtest.py`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`[--emulation|-e|--test|-t]=regression`{.docutils .literal .notranslate}]{.pre} to run these tests.
@@ -6954,8 +9036,9 @@ The following lists the backward incompatible changes planned for upcoming major
 - Added CUB macros missing from hipCUB: [`HIPCUB_MAX`{.docutils .literal .notranslate}]{.pre}, [`HIPCUB_MIN`{.docutils .literal .notranslate}]{.pre}, [`HIPCUB_QUOTIENT_FLOOR`{.docutils .literal .notranslate}]{.pre}, [`HIPCUB_QUOTIENT_CEILING`{.docutils .literal .notranslate}]{.pre}, [`HIPCUB_ROUND_UP_NEAREST`{.docutils .literal .notranslate}]{.pre} and [`HIPCUB_ROUND_DOWN_NEAREST`{.docutils .literal .notranslate}]{.pre}.
 
 - Added [`hipcub::AliasTemporaries`{.docutils .literal .notranslate}]{.pre} function for CUB parity.
+:::
 
-{#id500 .section}
+::: {#id500 .section}
 #### Changed[\#](#id500 "Link to this heading"){.headerlink}
 
 - Removed usage of [`std::unary_function`{.docutils .literal .notranslate}]{.pre} and [`std::binary_function`{.docutils .literal .notranslate}]{.pre} in [`test_hipcub_device_adjacent_difference.cpp`{.docutils .literal .notranslate}]{.pre}.
@@ -6967,23 +9050,27 @@ The following lists the backward incompatible changes planned for upcoming major
 - The NVIDIA backend now requires CUB, Thrust, and libcu++ 2.5.0. If it is not found, it will be downloaded from the NVIDIA CCCL repository.
 
 - Changed the C++ version from 14 to 17. C++14 will be deprecated in the next major release.
+:::
 
-{#id501 .section}
+::: {#id501 .section}
 #### Known issues[\#](#id501 "Link to this heading"){.headerlink}
 
 - When building on Microsoft Windows using HIP SDK for ROCm 6.4, [`hipMalloc`{.docutils .literal .notranslate}]{.pre} returns [`hipSuccess`{.docutils .literal .notranslate}]{.pre} even when the size passed to it is too large and the allocation fails. Because of this, limits have been set for the maximum test case sizes for some unit tests such as HipcubDeviceRadixSort's SortKeysLargeSizes .
+:::
+::::::
 
-{#hipfft-1-0-18 .section}
+:::::: {#hipfft-1-0-18 .section}
 ### **hipFFT** (1.0.18)[\#](#hipfft-1-0-18 "Link to this heading"){.headerlink}
 
-{#id502 .section}
+::: {#id502 .section}
 #### Added[\#](#id502 "Link to this heading"){.headerlink}
 
 - Implemented the [`hipfftMpAttachComm`{.docutils .literal .notranslate}]{.pre}, [`hipfftXtSetDistribution`{.docutils .literal .notranslate}]{.pre}, and [`hipfftXtSetSubformatDefault`{.docutils .literal .notranslate}]{.pre} APIs to allow computing FFTs that are distributed between multiple MPI (Message Passing Interface) processes. These APIs can be enabled with the [`HIPFFT_MPI_ENABLE`{.docutils .literal .notranslate}]{.pre} CMake option, which defaults to [`OFF`{.docutils .literal .notranslate}]{.pre}. The backend FFT library called by hipFFT must support MPI for these APIs to work.
 
   The backend FFT library called by hipFFT must support MPI for these APIs to work.
+:::
 
-{#id503 .section}
+::: {#id503 .section}
 #### Changed[\#](#id503 "Link to this heading"){.headerlink}
 
 - Building with the address sanitizer option sets xnack+ for the relevant GPU architectures.
@@ -6991,27 +9078,29 @@ The following lists the backward incompatible changes planned for upcoming major
 - Use the [`find_package`{.docutils .literal .notranslate}]{.pre} CUDA toolkit instead of CUDA in CMake for modern CMake compatibility.
 
 - The [`AMDGPU_TARGETS`{.docutils .literal .notranslate}]{.pre} build variable should be replaced with [`GPU_TARGETS`{.docutils .literal .notranslate}]{.pre}. [`AMDGPU_TARGETS`{.docutils .literal .notranslate}]{.pre} is deprecated.
+:::
 
-{#id504 .section}
+::: {#id504 .section}
 #### Resolved issues[\#](#id504 "Link to this heading"){.headerlink}
 
 - Fixed the client packages so they depend on hipRAND instead of rocRAND.
+:::
+::::::
 
-:
-{#hipfort-0-6-0 .section}
+:::: {#hipfort-0-6-0 .section}
 ### **hipfort** (0.6.0)[\#](#hipfort-0-6-0 "Link to this heading"){.headerlink}
 
-{#id505 .section}
+::: {#id505 .section}
 #### Upcoming changes[\#](#id505 "Link to this heading"){.headerlink}
 
 - The hipfc compiler wrapper has been deprecated and will be removed in a future release. Users are encouraged to directly invoke their Fortran or HIP compilers as appropriate for each source file.
+:::
+::::
 
-:
-
-{#hipify-19-0-0 .section}
+:::::: {#hipify-19-0-0 .section}
 ### **HIPIFY** (19.0.0)[\#](#hipify-19-0-0 "Link to this heading"){.headerlink}
 
-{#id506 .section}
+::: {#id506 .section}
 #### Added[\#](#id506 "Link to this heading"){.headerlink}
 
 - NVIDIA CUDA 12.6.3 support
@@ -7025,8 +9114,9 @@ The following lists the backward incompatible changes planned for upcoming major
 - Full support for direct hipification of [`cuRAND`{.docutils .literal .notranslate}]{.pre} into [`rocRAND`{.docutils .literal .notranslate}]{.pre} under the [`--roc`{.docutils .literal .notranslate}]{.pre} option.
 
 - Support for [`fp8`{.docutils .literal .notranslate}]{.pre} math device/host API. For more information see [#1617](https://github.com/ROCm/HIPIFY/issues/1617){.reference .external} in the HIPIFY Github repository.
+:::
 
-{#id507 .section}
+::: {#id507 .section}
 #### Resolved issues[\#](#id507 "Link to this heading"){.headerlink}
 
 - [`MIOpen`{.docutils .literal .notranslate}]{.pre} support in hipify-perl under the [`-miopen`{.docutils .literal .notranslate}]{.pre} option
@@ -7036,78 +9126,79 @@ The following lists the backward incompatible changes planned for upcoming major
 - Support for [`fp16`{.docutils .literal .notranslate}]{.pre} device/host API. For more information see [#1769](https://github.com/ROCm/HIPIFY/issues/1769){.reference .external} in the HIPIFY Github repository.
 
 - Fixed instructions on building LLVM for HIPIFY on Linux. For more information see [#1800](https://github.com/ROCm/HIPIFY/issues/1800){.reference .external} in the HIPIFY Github repository.
+:::
 
-{#id508 .section}
+::: {#id508 .section}
 #### Known issues[\#](#id508 "Link to this heading"){.headerlink}
 
 - [`hipify-clang`{.docutils .literal .notranslate}]{.pre} build failure against LLVM 15-18 on [`Ubuntu`{.docutils .literal .notranslate}]{.pre}, [`CentOS`{.docutils .literal .notranslate}]{.pre}, and [`Fedora`{.docutils .literal .notranslate}]{.pre}. For more information see [#833](https://github.com/ROCm/HIPIFY/issues/833){.reference .external} in the HIPIFY Github repository.
+:::
+::::::
 
-::
-{#hiprand-2-12-0 .section}
+::::: {#hiprand-2-12-0 .section}
 ### **hipRAND** (2.12.0)[\#](#hiprand-2-12-0 "Link to this heading"){.headerlink}
 
-{#id509 .section}
+::: {#id509 .section}
 #### Changed[\#](#id509 "Link to this heading"){.headerlink}
 
 - When building hipRAND on Windows, use [`HIP_PATH`{.docutils .literal .notranslate}]{.pre} (instead of the former [`HIP_DIR`{.docutils .literal .notranslate}]{.pre}) to specify the path to the HIP SDK installation.
 
 - When building with the [`rmake.py`{.docutils .literal .notranslate}]{.pre} script, [`HIP_PATH`{.docutils .literal .notranslate}]{.pre} will default to [`C:\hip`{.docutils .literal .notranslate}]{.pre} if it is not set.
+:::
 
-{#id510 .section}
+::: {#id510 .section}
 #### Resolved issues[\#](#id510 "Link to this heading"){.headerlink}
 
 - Fixed an issue causing hipRAND build failures on Windows when the HIP SDK was installed in a location with a path that contains spaces.
+:::
+:::::
 
-::
-
-:
-{#hipsolver-2-4-0 .section}
+:::: {#hipsolver-2-4-0 .section}
 ### **hipSOLVER** (2.4.0)[\#](#hipsolver-2-4-0 "Link to this heading"){.headerlink}
 
-{#id511 .section}
+::: {#id511 .section}
 #### Added[\#](#id511 "Link to this heading"){.headerlink}
 
 - The [`csrlsvqr`{.docutils .literal .notranslate}]{.pre} compatibility-only functions [`hipsolverSpScsrlsvqr`{.docutils .literal .notranslate}]{.pre}, [`hipsolverSpDcsrlsvqr`{.docutils .literal .notranslate}]{.pre}, [`hipsolverSpCcsrlsvqr`{.docutils .literal .notranslate}]{.pre}, [`hipsolverSpZcsrlsvqr`{.docutils .literal .notranslate}]{.pre}
+:::
+::::
 
-:
-
-::
-{#hipsparse-3-2-0 .section}
+::::: {#hipsparse-3-2-0 .section}
 ### **hipSPARSE** (3.2.0)[\#](#hipsparse-3-2-0 "Link to this heading"){.headerlink}
 
-{#id512 .section}
+::: {#id512 .section}
 #### Added[\#](#id512 "Link to this heading"){.headerlink}
 
 - Added the [`azurelinux`{.docutils .literal .notranslate}]{.pre} operating system name to correct the GFortran dependency.
+:::
 
-{#id513 .section}
+::: {#id513 .section}
 #### Optimized[\#](#id513 "Link to this heading"){.headerlink}
 
 - Removed an unused [`GTest`{.docutils .literal .notranslate}]{.pre} dependency from [`hipsparse-bench`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::
 
-::
-
-::
-{#hipsparselt-0-2-3 .section}
+::::: {#hipsparselt-0-2-3 .section}
 ### **hipSPARSELt** (0.2.3)[\#](#hipsparselt-0-2-3 "Link to this heading"){.headerlink}
 
-{#id514 .section}
+::: {#id514 .section}
 #### Added[\#](#id514 "Link to this heading"){.headerlink}
 
 - Support for alpha vector scaling
+:::
 
-{#id515 .section}
+::: {#id515 .section}
 #### Changed[\#](#id515 "Link to this heading"){.headerlink}
 
 - The check mechanism of the inputs when using alpha vector scaling
-
-::
-
+:::
 :::::
-{#hiptensor-1-5-0 .section}
+
+:::::::: {#hiptensor-1-5-0 .section}
 ### **hipTensor** (1.5.0)[\#](#hiptensor-1-5-0 "Link to this heading"){.headerlink}
 
-{#id516 .section}
+::: {#id516 .section}
 #### Added[\#](#id516 "Link to this heading"){.headerlink}
 
 - Added benchmarking suites for contraction, permutation, and reduction. YAML files are categorized into bench and validation folders for organization.
@@ -7115,46 +9206,49 @@ The following lists the backward incompatible changes planned for upcoming major
 - Added emulation test suites for contraction, permutation, and reduction.
 
 - Support has been added for changing the default data layout using the [`HIPTENSOR_DEFAULT_STRIDES_COL_MAJOR`{.docutils .literal .notranslate}]{.pre} environment variable.
+:::
 
-{#id517 .section}
+::: {#id517 .section}
 #### Changed[\#](#id517 "Link to this heading"){.headerlink}
 
 - [`GPU_TARGETS`{.docutils .literal .notranslate}]{.pre} is now used instead of [`AMDGPU_TARGETS`{.docutils .literal .notranslate}]{.pre} in [`cmakelists.txt`{.docutils .literal .notranslate}]{.pre}.
 
 - Binary sizes can be reduced on supported compilers by using the [`--offload-compress`{.docutils .literal .notranslate}]{.pre} compiler flag.
+:::
 
-{#id518 .section}
+::: {#id518 .section}
 #### Optimized[\#](#id518 "Link to this heading"){.headerlink}
 
 - Optimized the hyper-parameter selection algorithm for permutation.
+:::
 
-{#id519 .section}
+::: {#id519 .section}
 #### Resolved issues[\#](#id519 "Link to this heading"){.headerlink}
 
 - For a CMake bug workaround, set [`CMAKE_NO_BUILTIN_CHRPATH`{.docutils .literal .notranslate}]{.pre} when [`BUILD_OFFLOAD_COMPRESS`{.docutils .literal .notranslate}]{.pre} is unset.
+:::
 
-{#id520 .section}
+::: {#id520 .section}
 #### Upcoming changes[\#](#id520 "Link to this heading"){.headerlink}
 
 - hipTensor will enhance performance and usability while unifying the API design across all operations (elementwise, reductions, and tensor contractions), enabling consistent multi-stage execution and plan reuse. As part of this change, the API functions [`hiptensorInitTensorDescriptor`{.docutils .literal .notranslate}]{.pre}, [`hiptensorContractionDescriptor_t`{.docutils .literal .notranslate}]{.pre} , [`hiptensorInitContractionDescriptor`{.docutils .literal .notranslate}]{.pre}, [`hiptensorInitContractionFind`{.docutils .literal .notranslate}]{.pre}, [`hiptensorContractionGetWorkspaceSize`{.docutils .literal .notranslate}]{.pre}, [`hiptensorInitContractionPlan`{.docutils .literal .notranslate}]{.pre}, [`hiptensorContraction`{.docutils .literal .notranslate}]{.pre}, [`hiptensorElementwiseBinary`{.docutils .literal .notranslate}]{.pre}, [`hiptensorElementwiseTrinary`{.docutils .literal .notranslate}]{.pre}, [`hiptensorPermutation`{.docutils .literal .notranslate}]{.pre}, and [`hiptensorReduction`{.docutils .literal .notranslate}]{.pre} will be deprecated in a future ROCm release.
+:::
+::::::::
 
-:::::
-
-:
-{#llvm-project-19-0-0 .section}
+:::: {#llvm-project-19-0-0 .section}
 ### **llvm-project** (19.0.0)[\#](#llvm-project-19-0-0 "Link to this heading"){.headerlink}
 
-{#id521 .section}
+::: {#id521 .section}
 #### Added[\#](#id521 "Link to this heading"){.headerlink}
 
 - Support for [`amdgpu_max_num_work_groups`{.docutils .literal .notranslate}]{.pre} in the compiler. This attribute can be set by end users or library developers. It provides an upper limit for workgroups as described in [AMD GPU Attributes](https://clang.llvm.org/docs/AttributeReference.html#amdgpu-max-num-work-groups){.reference .external}. When set, the AMDGPU target backend might produce better machine code.
+:::
+::::
 
-:
-
-{#miopen-3-4-0 .section}
+:::::: {#miopen-3-4-0 .section}
 ### **MIOpen** (3.4.0)[\#](#miopen-3-4-0 "Link to this heading"){.headerlink}
 
-{#id522 .section}
+::: {#id522 .section}
 #### Added[\#](#id522 "Link to this heading"){.headerlink}
 
 - \[Conv\] Enabled tuning through the [`miopenSetConvolutionFindMode`{.docutils .literal .notranslate}]{.pre} API.
@@ -7162,23 +9256,27 @@ The following lists the backward incompatible changes planned for upcoming major
 - \[RNN\] Added the new algorithm type [`miopenRNNroundedDynamic`{.docutils .literal .notranslate}]{.pre} for LSTM.
 
 - \[TunaNet\] Enabled NHWC for AMD Instinct MI300.
+:::
 
-{#id523 .section}
+::: {#id523 .section}
 #### Optimized[\#](#id523 "Link to this heading"){.headerlink}
 
 - Updated KernelTuningNet for CK solvers.
+:::
 
-{#id524 .section}
+::: {#id524 .section}
 #### Resolved issues[\#](#id524 "Link to this heading"){.headerlink}
 
 - Fixed tuning timing results.
 
 - Accuracy for ASM solvers.
+:::
+::::::
 
-{#mivisionx-3-2-0 .section}
+:::::: {#mivisionx-3-2-0 .section}
 ### **MIVisionX** (3.2.0)[\#](#mivisionx-3-2-0 "Link to this heading"){.headerlink}
 
-{#id525 .section}
+::: {#id525 .section}
 #### Changed[\#](#id525 "Link to this heading"){.headerlink}
 
 - OpenCV is now installed with the package installer on Ubuntu.
@@ -7186,24 +9284,27 @@ The following lists the backward incompatible changes planned for upcoming major
 - AMD Clang is now the default CXX and C compiler.
 
 - The version of OpenMP included in the ROCm LLVM project is now used instead of [`libomp-dev/devel`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id526 .section}
+::: {#id526 .section}
 #### Known issues[\#](#id526 "Link to this heading"){.headerlink}
 
 - Installation on CentOS, RedHat, and SLES requires manually installing the [`FFMPEG`{.docutils .literal .notranslate}]{.pre} and [`OpenCV`{.docutils .literal .notranslate}]{.pre} dev packages.
 
 - Hardware decode requires the ROCm [`graphics`{.docutils .literal .notranslate}]{.pre} use case.
+:::
 
-{#id527 .section}
+::: {#id527 .section}
 #### Upcoming changes[\#](#id527 "Link to this heading"){.headerlink}
 
 - Optimized audio augmentations support for VX_RPP
+:::
+::::::
 
-::
-{#id528 .section}
+::::: {#id528 .section}
 ### **rccl** (2.22.3)[\#](#id528 "Link to this heading"){.headerlink}
 
-{#id529 .section}
+::: {#id529 .section}
 #### Added[\#](#id529 "Link to this heading"){.headerlink}
 
 - Added the [`RCCL_SOCKET_REUSEADDR`{.docutils .literal .notranslate}]{.pre} and [`RCCL_SOCKET_LINGER`{.docutils .literal .notranslate}]{.pre} environment parameters.
@@ -7211,24 +9312,25 @@ The following lists the backward incompatible changes planned for upcoming major
 - Setting [`NCCL_DEBUG=TRACE`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`NCCL_DEBUG_SUBSYS=VERBS`{.docutils .literal .notranslate}]{.pre} will generate traces for fifo and data [`ibv_post_send`{.docutils .literal .notranslate}]{.pre} calls.
 
 - Added the [`--log-trace`{.docutils .literal .notranslate}]{.pre} flag to enable traces through the [`install.sh`{.docutils .literal .notranslate}]{.pre} script (for example, [`./install.sh`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--log-trace`{.docutils .literal .notranslate}]{.pre}).
+:::
 
-{#id530 .section}
+::: {#id530 .section}
 #### Changed[\#](#id530 "Link to this heading"){.headerlink}
 
 - Changed compatibility to include NCCL 2.22.3.
+:::
+:::::
 
-::
-
-::
-{#rocal-2-2-0 .section}
+::::: {#rocal-2-2-0 .section}
 ### **rocAL** (2.2.0)[\#](#rocal-2-2-0 "Link to this heading"){.headerlink}
 
-{#id531 .section}
+::: {#id531 .section}
 #### Changed[\#](#id531 "Link to this heading"){.headerlink}
 
 - AMD Clang is now the default CXX and C compiler.
+:::
 
-{#id532 .section}
+::: {#id532 .section}
 #### Known issues[\#](#id532 "Link to this heading"){.headerlink}
 
 - The package installation requires manually installing [`TurboJPEG`{.docutils .literal .notranslate}]{.pre}.
@@ -7236,25 +9338,23 @@ The following lists the backward incompatible changes planned for upcoming major
 - Installation on CentOS, RedHat, and SLES requires manually installing the [`FFMPEG`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`Dev`{.docutils .literal .notranslate}]{.pre} package.
 
 - Hardware decode requires installing ROCm with the [`graphics`{.docutils .literal .notranslate}]{.pre} use case.
+:::
+:::::
 
-::
-
-:
-{#rocalution-3-2-2 .section}
+:::: {#rocalution-3-2-2 .section}
 ### **rocALUTION** (3.2.2)[\#](#rocalution-3-2-2 "Link to this heading"){.headerlink}
 
-{#id533 .section}
+::: {#id533 .section}
 #### Changed[\#](#id533 "Link to this heading"){.headerlink}
 
 - Improved documentation
+:::
+::::
 
-:
-
-:::::
-{#rocblas-4-4-0 .section}
+:::::::: {#rocblas-4-4-0 .section}
 ### **rocBLAS** (4.4.0)[\#](#rocblas-4-4-0 "Link to this heading"){.headerlink}
 
-{#id534 .section}
+::: {#id534 .section}
 #### Added[\#](#id534 "Link to this heading"){.headerlink}
 
 - Added ROC-TX support in rocBLAS (not available on Windows or in the static library version on Linux).
@@ -7264,8 +9364,9 @@ The following lists the backward incompatible changes planned for upcoming major
 - Added the [`--ninja`{.docutils .literal .notranslate}]{.pre} build option.
 
 - Added support for the [`GPU_TARGETS`{.docutils .literal .notranslate}]{.pre} CMake variable.
+:::
 
-{#id535 .section}
+::: {#id535 .section}
 #### Changed[\#](#id535 "Link to this heading"){.headerlink}
 
 - The rocblas-test client removes the stress tests unless YAML-based testing or [`gtest_filter`{.docutils .literal .notranslate}]{.pre} adds them.
@@ -7275,8 +9376,9 @@ The following lists the backward incompatible changes planned for upcoming major
 - [`gemm_ex`{.docutils .literal .notranslate}]{.pre} testing and timing reuses device memory.
 
 - [`gemm_ex`{.docutils .literal .notranslate}]{.pre} timing initializes matrices on device.
+:::
 
-{#id536 .section}
+::: {#id536 .section}
 #### Optimized[\#](#id536 "Link to this heading"){.headerlink}
 
 - Significantly reduced workspace memory requirements for Level 1 ILP64: [`iamax`{.docutils .literal .notranslate}]{.pre} and [`iamin`{.docutils .literal .notranslate}]{.pre}.
@@ -7286,8 +9388,9 @@ The following lists the backward incompatible changes planned for upcoming major
 - Improved the performance of Level 2 gemv for the problem sizes ([`TransA`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`==`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`N`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`&&`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`m`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`>`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`2*n`{.docutils .literal .notranslate}]{.pre}) and ([`TransA`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`==`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`T`{.docutils .literal .notranslate}]{.pre}).
 
 - Improved the performance of Level 3 syrk and herk for the problem size ([`k`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`>`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`500`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`&&`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`n`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`<`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`4000`{.docutils .literal .notranslate}]{.pre}).
+:::
 
-{#id537 .section}
+::: {#id537 .section}
 #### Resolved issues[\#](#id537 "Link to this heading"){.headerlink}
 
 - gfx12: [`ger`{.docutils .literal .notranslate}]{.pre}, [`geam`{.docutils .literal .notranslate}]{.pre}, [`geam_ex`{.docutils .literal .notranslate}]{.pre}, [`dgmm`{.docutils .literal .notranslate}]{.pre}, [`trmm`{.docutils .literal .notranslate}]{.pre}, [`symm`{.docutils .literal .notranslate}]{.pre}, [`hemm`{.docutils .literal .notranslate}]{.pre}, ILP64 [`gemm`{.docutils .literal .notranslate}]{.pre}, and larger data support.
@@ -7297,19 +9400,19 @@ The following lists the backward incompatible changes planned for upcoming major
 - Resolved outdated SLES operating system package dependencies ([`cxxtools`{.docutils .literal .notranslate}]{.pre} and [`joblib`{.docutils .literal .notranslate}]{.pre}) in [`install.sh`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-d`{.docutils .literal .notranslate}]{.pre}.
 
 - Fixed code object stripping for RPM packages.
+:::
 
-{#id538 .section}
+::: {#id538 .section}
 #### Upcoming changes[\#](#id538 "Link to this heading"){.headerlink}
 
 - CMake variable [`AMDGPU_TARGETS`{.docutils .literal .notranslate}]{.pre} is deprecated. Use [`GPU_TARGETS`{.docutils .literal .notranslate}]{.pre} instead.
+:::
+::::::::
 
-:::::
-
-::
-{#rocdbgapi-0-77-2 .section}
+::::: {#rocdbgapi-0-77-2 .section}
 ### **ROCdbgapi** (0.77.2)[\#](#rocdbgapi-0-77-2 "Link to this heading"){.headerlink}
 
-{#id539 .section}
+::: {#id539 .section}
 #### Added[\#](#id539 "Link to this heading"){.headerlink}
 
 - Support for generic code object targets:
@@ -7325,18 +9428,19 @@ The following lists the backward incompatible changes planned for upcoming major
   - [`gfx11-generic`{.docutils .literal .notranslate}]{.pre}
 
   - [`gfx12-generic`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id540 .section}
+::: {#id540 .section}
 #### Changed[\#](#id540 "Link to this heading"){.headerlink}
 
 - The name reported for detected agents is now based on the [`amdgpu.ids`{.docutils .literal .notranslate}]{.pre} database provided by [`libdrm`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::
 
-::
-
-{#rocdecode-0-10-0 .section}
+:::::: {#rocdecode-0-10-0 .section}
 ### **rocDecode** (0.10.0)[\#](#rocdecode-0-10-0 "Link to this heading"){.headerlink}
 
-{#id541 .section}
+::: {#id541 .section}
 #### Added[\#](#id541 "Link to this heading"){.headerlink}
 
 - The new bitstream reader feature has been added. The bitstream reader contains built-in stream file parsers, including an elementary stream file parser and an IVF container file parser. The reader can parse AVC, HEVC, and AV1 elementary stream files, and AV1 IVF container files. Additional supported formats will be added.
@@ -7346,46 +9450,52 @@ The following lists the backward incompatible changes planned for upcoming major
 - More CTests have been added: VP9 test and tests on video decode raw sample.
 
 - Two new samples, videodecoderaw and videodecodepicfiles, have been added. videodecoderaw uses the bitstream reader instead of the FFMPEG demuxer to get picture data, and videodecodepicfiles shows how to decode an elementary video stream stored in multiple files, with each file containing bitstream data of a coded picture.
+:::
 
-{#id542 .section}
+::: {#id542 .section}
 #### Changed[\#](#id542 "Link to this heading"){.headerlink}
 
 - AMD Clang++ is now the default CXX compiler.
 
 - Moved MD5 code out of the RocVideoDecode utility.
+:::
 
-{#id543 .section}
+::: {#id543 .section}
 #### Removed[\#](#id543 "Link to this heading"){.headerlink}
 
 - FFMPEG executable requirement for the package.
+:::
+::::::
 
-::::
-{#rocfft-1-0-32 .section}
+::::::: {#rocfft-1-0-32 .section}
 ### **rocFFT** (1.0.32)[\#](#rocfft-1-0-32 "Link to this heading"){.headerlink}
 
-{#id544 .section}
+::: {#id544 .section}
 #### Changed[\#](#id544 "Link to this heading"){.headerlink}
 
 - Building with the address sanitizer option sets xnack+ on the relevant GPU architectures and adds address-sanitizer support to runtime-compiled kernels.
 
 - The [`AMDGPU_TARGETS`{.docutils .literal .notranslate}]{.pre} build variable should be replaced with [`GPU_TARGETS`{.docutils .literal .notranslate}]{.pre}. [`AMDGPU_TARGETS`{.docutils .literal .notranslate}]{.pre} is deprecated.
+:::
 
-{#id545 .section}
+::: {#id545 .section}
 #### Removed[\#](#id545 "Link to this heading"){.headerlink}
 
 - Ahead-of-time compiled kernels for the gfx906, gfx940, and gfx941 architectures. These architectures still work the same way, but their kernels are now compiled at runtime.
 
 - Consumer GPU architectures from the precompiled kernel cache that ships with rocFFT. rocFFT continues to ship with a cache of precompiled RTC kernels for data center and workstation architectures. As before, user-level caches can be enabled by setting the environment variable [`ROCFFT_RTC_CACHE_PATH`{.docutils .literal .notranslate}]{.pre} to a writeable file location.
+:::
 
-{#id546 .section}
+::: {#id546 .section}
 #### Optimized[\#](#id546 "Link to this heading"){.headerlink}
 
 - Improved MPI transform performance by using all-to-all communication for global transpose operations.\
   Point-to-point communications are still used when all-to-all is unavailable.
 
 - Improved the performance of unit-strided, complex interleaved, forward, and inverse length (64,64,64) FFTs.
+:::
 
-{#id547 .section}
+::: {#id547 .section}
 #### Resolved issues[\#](#id547 "Link to this heading"){.headerlink}
 
 - Fixed incorrect results from 2-kernel 3D FFT plans that used non-default output strides. For more information, see the [rocFFT GitHub issue](https://github.com/ROCm/rocFFT/issues/507){.reference .external}.
@@ -7395,34 +9505,33 @@ The following lists the backward incompatible changes planned for upcoming major
 - Fixed client packages to depend on hipRAND instead of rocRAND.
 
 - Fixed potential integer overflows during large MPI transforms.
+:::
+:::::::
 
-::::
-
-::
-{#rocm-compute-profiler-3-1-0 .section}
+::::: {#rocm-compute-profiler-3-1-0 .section}
 ### **ROCm Compute Profiler** (3.1.0)[\#](#rocm-compute-profiler-3-1-0 "Link to this heading"){.headerlink}
 
-{#id548 .section}
+::: {#id548 .section}
 #### Added[\#](#id548 "Link to this heading"){.headerlink}
 
 - Roofline support for Ubuntu 24.04.
 
 - Experimental support [`rocprofv3`{.docutils .literal .notranslate}]{.pre} (not enabled as default).
+:::
 
-{#id549 .section}
+::: {#id549 .section}
 #### Resolved issues[\#](#id549 "Link to this heading"){.headerlink}
 
 - Fixed PoP of VALU Active Threads.
 
 - Workaround broken mclk for old version of rocm-smi.
+:::
+:::::
 
-::
-
-:
-{#rocgdb-15-2 .section}
+:::: {#rocgdb-15-2 .section}
 ### **ROCgdb** (15.2)[\#](#rocgdb-15-2 "Link to this heading"){.headerlink}
 
-{#id550 .section}
+::: {#id550 .section}
 #### Added[\#](#id550 "Link to this heading"){.headerlink}
 
 - Support for debugging shaders compiled for the following generic targets:
@@ -7438,13 +9547,13 @@ The following lists the backward incompatible changes planned for upcoming major
   - [`gfx11-generic`{.docutils .literal .notranslate}]{.pre}
 
   - [`gfx12-generic`{.docutils .literal .notranslate}]{.pre}
+:::
+::::
 
-:
-
-{#id551 .section}
+:::::: {#id551 .section}
 ### **ROCm Data Center Tool** (0.3.0)[\#](#id551 "Link to this heading"){.headerlink}
 
-{#id552 .section}
+::: {#id552 .section}
 #### Added[\#](#id552 "Link to this heading"){.headerlink}
 
 - RDC policy feature
@@ -7456,8 +9565,9 @@ The following lists the backward incompatible changes planned for upcoming major
 - Link status
 
 - RDC_FI_PROF_SM_ACTIVE metric
+:::
 
-{#id553 .section}
+::: {#id553 .section}
 #### Changed[\#](#id553 "Link to this heading"){.headerlink}
 
 - Migrated from [ROCProfiler](https://github.com/ROCm/rocprofiler){.reference .external} to [ROCprofiler-SDK](https://github.com/ROCm/rocprofiler-sdk){.reference .external}
@@ -7465,64 +9575,69 @@ The following lists the backward incompatible changes planned for upcoming major
 - Improved README.md for better usability
 
 - Moved [`rdc_options`{.docutils .literal .notranslate}]{.pre} into [`share/rdc/conf/`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id554 .section}
+::: {#id554 .section}
 #### Resolved issues[\#](#id554 "Link to this heading"){.headerlink}
 
 - Fixed ABSL in clang18+
+:::
+::::::
 
-:
-{#rocjpeg-0-8-0 .section}
+:::: {#rocjpeg-0-8-0 .section}
 ### **rocJPEG** (0.8.0)[\#](#rocjpeg-0-8-0 "Link to this heading"){.headerlink}
 
-{#id555 .section}
+::: {#id555 .section}
 #### Changed[\#](#id555 "Link to this heading"){.headerlink}
 
 - AMD Clang++ is now the default CXX compiler.
 
 - The jpegDecodeMultiThreads sample has been renamed to jpegDecodePerf, and batch decoding has been added to this sample instead of single image decoding for improved performance.
+:::
+::::
 
-:
-
-{#id556 .section}
+:::::: {#id556 .section}
 ### **ROCm SMI** (7.5.0)[\#](#id556 "Link to this heading"){.headerlink}
 
-{#id557 .section}
+::: {#id557 .section}
 #### Added[\#](#id557 "Link to this heading"){.headerlink}
 
 - Added support for GPU metrics 1.7 to [`rsmi_dev_gpu_metrics_info_get()`{.docutils .literal .notranslate}]{.pre}.
 
 - Added new GPU metrics 1.7 to [`rocm-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--showmetrics`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-:
-{#id558 .section}
+:::: {#id558 .section}
 #### Resolved issues[\#](#id558 "Link to this heading"){.headerlink}
 
 - Fixed [`rsmi_dev_target_graphics_version_get`{.docutils .literal .notranslate}]{.pre}, [`rocm-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--showhw`{.docutils .literal .notranslate}]{.pre}, and [`rocm-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--showprod`{.docutils .literal .notranslate}]{.pre} not displaying graphics version correctly for Instinct MI200 Series, MI100 Series, and RDNA3-based GPUs.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/release/rocm-rel-6.4/CHANGELOG.md){.reference .external} for details, examples, and in-depth descriptions.
+:::
+::::
+::::::
 
-:
-
-{#rocm-systems-profiler-1-0-0 .section}
+:::::: {#rocm-systems-profiler-1-0-0 .section}
 ### **ROCm Systems Profiler** (1.0.0)[\#](#rocm-systems-profiler-1-0-0 "Link to this heading"){.headerlink}
 
-{#id559 .section}
+::: {#id559 .section}
 #### Added[\#](#id559 "Link to this heading"){.headerlink}
 
 - Support for VA-API and rocDecode tracing.
 
 - Aggregation of MPI data collected across distributed nodes and ranks. The data is concatenated into a single proto file.
+:::
 
-{#id560 .section}
+::: {#id560 .section}
 #### Changed[\#](#id560 "Link to this heading"){.headerlink}
 
 - Backend refactored to use [ROCprofiler-SDK](https://github.com/ROCm/rocprofiler-sdk){.reference .external} rather than [ROCProfiler](https://github.com/ROCm/rocprofiler){.reference .external} and [ROCTracer](https://github.com/ROCm/ROCTracer){.reference .external}.
+:::
 
-{#id561 .section}
+::: {#id561 .section}
 #### Resolved issues[\#](#id561 "Link to this heading"){.headerlink}
 
 - Fixed hardware counter summary files not being generated after profiling.
@@ -7536,12 +9651,13 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Fixed an issue where running [`rocprof-sys-causal`{.docutils .literal .notranslate}]{.pre} or using the [`-I`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`all`{.docutils .literal .notranslate}]{.pre} option with [`rocprof-sys-sample`{.docutils .literal .notranslate}]{.pre} caused the system to become non-responsive.
 
 - Fixed an issue where sampling multi-GPU Python workloads caused the system to stop responding.
+:::
+::::::
 
-::
-{#id562 .section}
+::::: {#id562 .section}
 ### **ROCm Validation Suite** (1.1.0)[\#](#id562 "Link to this heading"){.headerlink}
 
-{#id563 .section}
+::: {#id563 .section}
 #### Added[\#](#id563 "Link to this heading"){.headerlink}
 
 - Configuration files for MI210.
@@ -7549,19 +9665,19 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Support for OCP fp8 data type.
 
 - GPU index-based CLI execution.
+:::
 
-{#id564 .section}
+::: {#id564 .section}
 #### Changed[\#](#id564 "Link to this heading"){.headerlink}
 
 - JSON logging with updated schema.
-
-::
-
+:::
 :::::
-{#rocprim-3-4-0 .section}
+
+:::::::: {#rocprim-3-4-0 .section}
 ### **rocPRIM** (3.4.0)[\#](#rocprim-3-4-0 "Link to this heading"){.headerlink}
 
-{#id565 .section}
+::: {#id565 .section}
 #### Added[\#](#id565 "Link to this heading"){.headerlink}
 
 - The parallel [`find_first_of`{.docutils .literal .notranslate}]{.pre} device function with autotuned configurations has been added. This function is similar to [`std::find_first_of`{.docutils .literal .notranslate}]{.pre}. It searches for the first occurrence of any of the provided elements.
@@ -7593,8 +9709,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Extended and regression tests have been added to [`rtest.py`{.docutils .literal .notranslate}]{.pre}. Extended tests are tests that don't fit the criteria of smoke or regression tests, and take longer than smoke or regression tests to run. Use [`python`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`rtest.py`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`[--emulation|-e|--test|-t]=extended`{.docutils .literal .notranslate}]{.pre} to run extended tests, and [`python`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`rtest.py`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`[--emulation|-e|--test|-t]=regression`{.docutils .literal .notranslate}]{.pre} to run regression tests.
 
 - Added a new type traits interface to enable users to provide additional type trait information to rocPRIM, facilitating better compatibility with custom types.
+:::
 
-{#id566 .section}
+::: {#id566 .section}
 #### Changed[\#](#id566 "Link to this heading"){.headerlink}
 
 - Changed the subset of tests that are run for smoke tests such that the smoke test will complete faster and never exceed 2 GB of VRAM usage. Use [`python`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`rtest.py`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`[--emulation|-e|--test|-t]=smoke`{.docutils .literal .notranslate}]{.pre} to run these tests.
@@ -7608,13 +9725,15 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - The C++ version has changed from 14 to 17. C++14 will be deprecated in the next major release.
 
 - You can use CMake HIP language support with CMake 3.18 and later. To use HIP language support, run [`cmake`{.docutils .literal .notranslate}]{.pre} with [`-DUSE_HIPCXX=ON`{.docutils .literal .notranslate}]{.pre} instead of setting the [`CXX`{.docutils .literal .notranslate}]{.pre} variable to the path to a HIP-aware compiler.
+:::
 
-{#id567 .section}
+::: {#id567 .section}
 #### Removed[\#](#id567 "Link to this heading"){.headerlink}
 
 - HIP-CPU support
+:::
 
-{#id568 .section}
+::: {#id568 .section}
 #### Resolved issues[\#](#id568 "Link to this heading"){.headerlink}
 
 - Fixed an issue where [`rmake.py`{.docutils .literal .notranslate}]{.pre} generated incorrect cmake commands in a Linux environment.
@@ -7628,39 +9747,43 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Fixed the warp-level reduction [`rocprim::warp_reduce.reduce`{.docutils .literal .notranslate}]{.pre} DPP implementation to avoid undefined intermediate values during the reduction.
 
 - Fixed an issue that caused a segmentation fault when [`hipStreamLegacy`{.docutils .literal .notranslate}]{.pre} was passed to certain API functions.
+:::
 
-{#id569 .section}
+::: {#id569 .section}
 #### Upcoming changes[\#](#id569 "Link to this heading"){.headerlink}
 
 - Using the initialization constructor of [`rocprim::reverse_iterator`{.docutils .literal .notranslate}]{.pre} will throw a deprecation warning. It will be marked as explicit in the next major release.
+:::
+::::::::
 
-:::::
-
-{#id570 .section}
+:::::: {#id570 .section}
 ### **ROCProfiler** (2.0.0)[\#](#id570 "Link to this heading"){.headerlink}
 
-{#id571 .section}
+::: {#id571 .section}
 #### Added[\#](#id571 "Link to this heading"){.headerlink}
 
 - Ops 16, 32, and 64 metrics for RDC.
 
 - Tool deprecation message for ROCProfiler and ROCProfilerV2.
+:::
 
-{#id572 .section}
+::: {#id572 .section}
 #### Changed[\#](#id572 "Link to this heading"){.headerlink}
 
 - Updated README for kernel filtration.
+:::
 
-{#id573 .section}
+::: {#id573 .section}
 #### Resolved issues[\#](#id573 "Link to this heading"){.headerlink}
 
 - Fixed the program crash issue due to invalid UTF-8 characters in a trace log.
+:::
+::::::
 
-:
-{#rocprofiler-sdk-0-6-0 .section}
+:::: {#rocprofiler-sdk-0-6-0 .section}
 ### **ROCprofiler-SDK** (0.6.0)[\#](#rocprofiler-sdk-0-6-0 "Link to this heading"){.headerlink}
 
-{#id574 .section}
+::: {#id574 .section}
 #### Added[\#](#id574 "Link to this heading"){.headerlink}
 
 - Support for [`select()`{.docutils .literal .notranslate}]{.pre} operation in counter expression.
@@ -7688,40 +9811,41 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Host-trap based PC sampling support for [`rocprofv3`{.docutils .literal .notranslate}]{.pre}.
 
 - Support for OpenMP tool.
-
-:
-
+:::
 ::::
-{#rocpydecode-0-3-1 .section}
+
+::::::: {#rocpydecode-0-3-1 .section}
 ### **rocPyDecode** (0.3.1)[\#](#rocpydecode-0-3-1 "Link to this heading"){.headerlink}
 
-{#id575 .section}
+::: {#id575 .section}
 #### Added[\#](#id575 "Link to this heading"){.headerlink}
 
 - VP9 support
+:::
 
-{#id576 .section}
+::: {#id576 .section}
 #### Changed[\#](#id576 "Link to this heading"){.headerlink}
 
 - AMD Clang is now the default CXX and C compiler.
+:::
 
-{#id577 .section}
+::: {#id577 .section}
 #### Removed[\#](#id577 "Link to this heading"){.headerlink}
 
 - All MD5 functionality, APIs, and sample code have been removed.
+:::
 
-{#id578 .section}
+::: {#id578 .section}
 #### Resolved issues[\#](#id578 "Link to this heading"){.headerlink}
 
 - Ubuntu 24.04 compile failure with FFmpeg version 5.X and above has been fixed.
+:::
+:::::::
 
-::::
-
-::
-{#rocrand-3-3-0 .section}
+::::: {#rocrand-3-3-0 .section}
 ### **rocRAND** (3.3.0)[\#](#rocrand-3-3-0 "Link to this heading"){.headerlink}
 
-{#id579 .section}
+::: {#id579 .section}
 #### Added[\#](#id579 "Link to this heading"){.headerlink}
 
 - Extended tests to [`rtest.py`{.docutils .literal .notranslate}]{.pre}. These tests are extra tests that did not fit the criteria of smoke and regression tests. They take much longer to run relative to smoke and regression tests. Use [`python`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`rtest.py`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`[--emulation|-e|--test|-t]=extended`{.docutils .literal .notranslate}]{.pre} to run these tests.
@@ -7731,43 +9855,41 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Added smoke test options, which run a subset of the unit tests and ensure that less than 2 GB of VRAM will be used. Use [`python`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`rtest.py`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`[--emulation|-e|--test|-t]=smoke`{.docutils .literal .notranslate}]{.pre} to run these tests.
 
 - The [`--emulation`{.docutils .literal .notranslate}]{.pre} option for [`rtest.py`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id580 .section}
+::: {#id580 .section}
 #### Changed[\#](#id580 "Link to this heading"){.headerlink}
 
 - [`--test|-t`{.docutils .literal .notranslate}]{.pre} is no longer a required flag for [`rtest.py`{.docutils .literal .notranslate}]{.pre}. Instead, the user can use either [`--emulation|-e`{.docutils .literal .notranslate}]{.pre} or [`--test|-t`{.docutils .literal .notranslate}]{.pre}, but not both.
 
 - Removed the TBB dependency for multi-core processing of host-side generation.
+:::
+:::::
 
-::
-
-:
-{#rocr-debug-agent-2-0-4 .section}
+:::: {#rocr-debug-agent-2-0-4 .section}
 ### **ROCr Debug Agent** (2.0.4)[\#](#rocr-debug-agent-2-0-4 "Link to this heading"){.headerlink}
 
-{#id581 .section}
+::: {#id581 .section}
 #### Added[\#](#id581 "Link to this heading"){.headerlink}
 
 - Functionality to print the associated kernel name for each wave.
+:::
+::::
 
-:
-
-:
-{#id582 .section}
+:::: {#id582 .section}
 ### **ROCr Runtime** (1.15.0)[\#](#id582 "Link to this heading"){.headerlink}
 
-{#id583 .section}
+::: {#id583 .section}
 #### Added[\#](#id583 "Link to this heading"){.headerlink}
 
 - Support for asynchronous scratch reclaim on AMD Instinct MI300X GPUs. Asynchronous scratch reclaim allows scratch memory that was assigned to Command Processor(cp) queues to be reclaimed back in case the application runs out of device memory or if the [`hsa_amd_agent_set_async_scratch_limit`{.docutils .literal .notranslate}]{.pre} API is called with the threshold parameter as 0.
+:::
+::::
 
-:
-
-::
-{#rocsolver-3-28-0 .section}
+::::: {#rocsolver-3-28-0 .section}
 ### **rocSOLVER** (3.28.0)[\#](#rocsolver-3-28-0 "Link to this heading"){.headerlink}
 
-{#id584 .section}
+::: {#id584 .section}
 #### Added[\#](#id584 "Link to this heading"){.headerlink}
 
 - Application of a sequence of plane rotations to a given matrix for LASR
@@ -7779,21 +9901,21 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
   - BDSQR
 
   - GESVD
+:::
 
-{#id585 .section}
+::: {#id585 .section}
 #### Optimized[\#](#id585 "Link to this heading"){.headerlink}
 
 - Improved the performance of SYEVJ.
 
 - Improved the performance of GEQRF.
-
-::
-
+:::
 :::::
-{#rocsparse-3-4-0 .section}
+
+:::::::: {#rocsparse-3-4-0 .section}
 ### **rocSPARSE** (3.4.0)[\#](#rocsparse-3-4-0 "Link to this heading"){.headerlink}
 
-{#id586 .section}
+::: {#id586 .section}
 #### Added[\#](#id586 "Link to this heading"){.headerlink}
 
 - Added support for [`rocsparse_matrix_type_triangular`{.docutils .literal .notranslate}]{.pre} in [`rocsparse_spsv`{.docutils .literal .notranslate}]{.pre}.
@@ -7807,13 +9929,15 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Added [`GPU_TARGETS`{.docutils .literal .notranslate}]{.pre} to replace the now deprecated [`AMDGPU_TARGETS`{.docutils .literal .notranslate}]{.pre} in CMake files.
 
 - Added BSR format to the SpMM generic routine [`rocsparse_spmm`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id587 .section}
+::: {#id587 .section}
 #### Changed[\#](#id587 "Link to this heading"){.headerlink}
 
 - By default, the rocSPARSE shared library is built using the [`--offload-compress`{.docutils .literal .notranslate}]{.pre} compiler option which compresses the fat binary. This significantly reduces the shared library binary size.
+:::
 
-{#id588 .section}
+::: {#id588 .section}
 #### Optimized[\#](#id588 "Link to this heading"){.headerlink}
 
 - Improved the performance of [`rocsparse_spmm`{.docutils .literal .notranslate}]{.pre} when used with row order for [`B`{.docutils .literal .notranslate}]{.pre} and [`C`{.docutils .literal .notranslate}]{.pre} dense matrices and the row split algorithm [`rocsparse_spmm_alg_csr_row_split`{.docutils .literal .notranslate}]{.pre}.
@@ -7827,8 +9951,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Compared to [`rocsparse_[s|d|c|z]csritsv_solve`{.docutils .literal .notranslate}]{.pre}, the routines [`rocsparse_[s|d|c|z]csritsv_solve_ex`{.docutils .literal .notranslate}]{.pre} introduce several free iterations. A free iteration is an iteration that does not compute the evaluation of the stopping criteria. This allows the user to tune the algorithm for performance improvements.
 
 - Improved the user documentation.
+:::
 
-{#id589 .section}
+::: {#id589 .section}
 #### Resolved issues[\#](#id589 "Link to this heading"){.headerlink}
 
 - Fixed an issue in [`rocsparse_spgemm`{.docutils .literal .notranslate}]{.pre}, [`rocsparse_[s|d|c|z]csrgemm`{.docutils .literal .notranslate}]{.pre}, and [`rocsparse_[s|d|c|z]bsrgemm`{.docutils .literal .notranslate}]{.pre} where incorrect results could be produced when rocSPARSE was built with optimization level [`O0`{.docutils .literal .notranslate}]{.pre}. This was caused by a bug in the hash tables that could allow keys to be inserted twice.
@@ -7836,8 +9961,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Fixed an issue in the routine [`rocsparse_spgemm`{.docutils .literal .notranslate}]{.pre} when using [`rocsparse_spgemm_stage_symbolic`{.docutils .literal .notranslate}]{.pre} and [`rocsparse_spgemm_stage_numeric`{.docutils .literal .notranslate}]{.pre}, where the routine would crash when [`alpha`{.docutils .literal .notranslate}]{.pre} and [`beta`{.docutils .literal .notranslate}]{.pre} were passed as host pointers and where [`beta`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`!=`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`0`{.docutils .literal .notranslate}]{.pre}.
 
 - Fixed an issue in [`rocsparse_bsrilu0`{.docutils .literal .notranslate}]{.pre}, where the algorithm was running out of bounds of the [`bsr_val`{.docutils .literal .notranslate}]{.pre} array.
+:::
 
-{#id590 .section}
+::: {#id590 .section}
 #### Upcoming changes[\#](#id590 "Link to this heading"){.headerlink}
 
 - Deprecated the [`rocsparse_[s|d|c|z]csritilu0_compute`{.docutils .literal .notranslate}]{.pre} routines. Users should use the newly added [`rocsparse_[s|d|c|z]csritilu0_compute_ex`{.docutils .literal .notranslate}]{.pre} routines going forward.
@@ -7845,24 +9971,23 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Deprecated the [`rocsparse_[s|d|c|z]csritsv_solve`{.docutils .literal .notranslate}]{.pre} routines. Users should use the newly added [`rocsparse_[s|d|c|z]csritsv_solve_ex`{.docutils .literal .notranslate}]{.pre} routines going forward.
 
 - Deprecated the use of [`AMDGPU_TARGETS`{.docutils .literal .notranslate}]{.pre} in CMake files. Users should use [`GPU_TARGETS`{.docutils .literal .notranslate}]{.pre} going forward.
+:::
+::::::::
 
-:::::
-
-:
-{#roctracer-4-1-0 .section}
+:::: {#roctracer-4-1-0 .section}
 ### **ROCTracer** (4.1.0)[\#](#roctracer-4-1-0 "Link to this heading"){.headerlink}
 
-{#id591 .section}
+::: {#id591 .section}
 #### Added[\#](#id591 "Link to this heading"){.headerlink}
 
 - Tool deprecation message for ROCTracer.
+:::
+::::
 
-:
-
-{#rocthrust-3-3-0 .section}
+:::::: {#rocthrust-3-3-0 .section}
 ### **rocThrust** (3.3.0)[\#](#rocthrust-3-3-0 "Link to this heading"){.headerlink}
 
-{#id592 .section}
+::: {#id592 .section}
 #### Added[\#](#id592 "Link to this heading"){.headerlink}
 
 - Added a section to install Thread Building Block (TBB) inside [`cmake/Dependencies.cmake`{.docutils .literal .notranslate}]{.pre} if TBB is not already available.
@@ -7882,8 +10007,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Added [`find_first_of`{.docutils .literal .notranslate}]{.pre}, [`find_end`{.docutils .literal .notranslate}]{.pre}, [`search`{.docutils .literal .notranslate}]{.pre}, and [`search_n`{.docutils .literal .notranslate}]{.pre} to HIPSTDPAR.
 
 - Updated HIPSTDPAR's [`adjacent_find`{.docutils .literal .notranslate}]{.pre} to use the rocPRIM implementation.
+:::
 
-{#id593 .section}
+::: {#id593 .section}
 #### Changed[\#](#id593 "Link to this heading"){.headerlink}
 
 - Changed the C++ version from 14 to 17. C++14 will be deprecated in the next major release.
@@ -7893,46 +10019,51 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Split HIPSTDPAR's forwarding header into several implementation headers.
 
 - Fixed [`copy_if`{.docutils .literal .notranslate}]{.pre} to work with large data types (512 bytes).
+:::
 
-{#id594 .section}
+::: {#id594 .section}
 #### Known issues[\#](#id594 "Link to this heading"){.headerlink}
 
 - [`thrust::inclusive_scan_by_key`{.docutils .literal .notranslate}]{.pre} might produce incorrect results when it's used with -O2 or -O3 optimization. This is caused by a recent compiler change and a fix will be made available at a later date.
+:::
+::::::
 
-::::
-{#rocwmma-1-7-0 .section}
+::::::: {#rocwmma-1-7-0 .section}
 ### **rocWMMA** (1.7.0)[\#](#rocwmma-1-7-0 "Link to this heading"){.headerlink}
 
-{#id595 .section}
+::: {#id595 .section}
 #### Added[\#](#id595 "Link to this heading"){.headerlink}
 
 - Added interleaved layouts that enhance the performance of GEMM operations.
 
 - Emulation test suites. These suites are lightweight and well suited for execution on emulator platforms.
+:::
 
-{#id596 .section}
+::: {#id596 .section}
 #### Changed[\#](#id596 "Link to this heading"){.headerlink}
 
 - Used [`GPU_TARGETS`{.docutils .literal .notranslate}]{.pre} instead of [`AMDGPU_TARGETS`{.docutils .literal .notranslate}]{.pre} in [`cmakelists.txt`{.docutils .literal .notranslate}]{.pre}.
 
 - Binary sizes can be reduced on supported compilers by using the [`--offload-compress`{.docutils .literal .notranslate}]{.pre} compiler flag.
+:::
 
-{#id597 .section}
+::: {#id597 .section}
 #### Resolved issues[\#](#id597 "Link to this heading"){.headerlink}
 
 - For a CMake bug workaround, set [`CMAKE_NO_BUILTIN_CHRPATH`{.docutils .literal .notranslate}]{.pre} when [`BUILD_OFFLOAD_COMPRESS`{.docutils .literal .notranslate}]{.pre} is unset.
+:::
 
-{#id598 .section}
+::: {#id598 .section}
 #### Upcoming changes[\#](#id598 "Link to this heading"){.headerlink}
 
 - rocWMMA will augment the fragment API objects with additional meta-properties that improve API expressiveness and configurability of parameters including multiple-wave cooperation. As part of this change, cooperative rocWMMA API functions [`load_matrix_coop_sync`{.docutils .literal .notranslate}]{.pre} and [`store_matrix_coop_sync`{.docutils .literal .notranslate}]{.pre} will be deprecated in a future ROCm release.
+:::
+:::::::
 
-::::
-
-{#rpp-1-9-10 .section}
+:::::: {#rpp-1-9-10 .section}
 ### **rpp** (1.9.10)[\#](#rpp-1-9-10 "Link to this heading"){.headerlink}
 
-{#id599 .section}
+::: {#id599 .section}
 #### Added[\#](#id599 "Link to this heading"){.headerlink}
 
 - RPP Tensor Gaussian Filter and Tensor Box Filter support on HOST (CPU) backend.
@@ -7946,8 +10077,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - RPP Threshold on HOST (CPU) and HIP backends.
 
 - RPP Audio Support for Spectrogram and Mel Filter Bank on HIP backend.
+:::
 
-{#id600 .section}
+::: {#id600 .section}
 #### Changed[\#](#id600 "Link to this heading"){.headerlink}
 
 - AMD Clang is now the default CXX and C compiler.
@@ -7957,8 +10089,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Test Suite case numbers have been replaced with ENUMs for all augmentations to enhance test suite readability.
 
 - Test suite updated to return error codes from RPP API and display them.
+:::
 
-{#id601 .section}
+::: {#id601 .section}
 #### Resolved issues[\#](#id601 "Link to this heading"){.headerlink}
 
 - CXX Compiler: Fixed HOST (CPU) g++ issues.
@@ -7968,12 +10101,13 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Test suite build fix - RPP Test Suite Pre-requisite instructions updated to lock to a specific [`nifti_clib`{.docutils .literal .notranslate}]{.pre} commit.
 
 - Fixed broken image links for pixelate and jitter.
+:::
+::::::
 
-:::::
-{#tensile-4-43-0 .section}
+:::::::: {#tensile-4-43-0 .section}
 ### **Tensile** (4.43.0)[\#](#tensile-4-43-0 "Link to this heading"){.headerlink}
 
-{#id602 .section}
+::: {#id602 .section}
 #### Added[\#](#id602 "Link to this heading"){.headerlink}
 
 - Nightly builds with performance statistics.
@@ -7991,8 +10125,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Single-threaded support in [`TensileCreateLibrary`{.docutils .literal .notranslate}]{.pre}.
 
 - Logic to remove temporary build artifacts.
+:::
 
-{#id603 .section}
+::: {#id603 .section}
 #### Changed[\#](#id603 "Link to this heading"){.headerlink}
 
 - Disabled ASM cache for tests.
@@ -8014,8 +10149,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Introduced an explicit cast when invoking [`min`{.docutils .literal .notranslate}]{.pre}.
 
 - Introduced cache abbreviations to compute kernel names.
+:::
 
-{#id604 .section}
+::: {#id604 .section}
 #### Removed[\#](#id604 "Link to this heading"){.headerlink}
 
 - OCL backend
@@ -8023,13 +10159,15 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Unsupported tests
 
 - Deep copy in [`TensileCreateLibrary`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id605 .section}
+::: {#id605 .section}
 #### Optimized[\#](#id605 "Link to this heading"){.headerlink}
 
 - Linearized ASM register search to reduce build time.
+:::
 
-{#id606 .section}
+::: {#id606 .section}
 #### Resolved issues[\#](#id606 "Link to this heading"){.headerlink}
 
 - Fixed Stream-K dynamic grid model.
@@ -8041,38 +10179,35 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/rele
 - Fixed test failures in SLES containers when running [`TensileTests`{.docutils .literal .notranslate}]{.pre}.
 
 - Fixed a regression that prevents [`TensileCreateLibrary`{.docutils .literal .notranslate}]{.pre} from completing when fallback logic is not available.
+:::
+::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-::
-{#rocm-6-3-3 .section}
+::::: {#rocm-6-3-3 .section}
 ## ROCm 6.3.3[\#](#rocm-6-3-3 "Link to this heading"){.headerlink}
 
 See the [ROCm 6.3.3 release notes](https://rocm.docs.amd.com/en/docs-6.3.3/about/release-notes.html){.reference .external} for a complete overview of this release.
 
-:
-{#rocm-systems-profiler-0-1-2 .section}
+:::: {#rocm-systems-profiler-0-1-2 .section}
 ### **ROCm Systems Profiler** (0.1.2)[\#](#rocm-systems-profiler-0-1-2 "Link to this heading"){.headerlink}
 
-{#id607 .section}
+::: {#id607 .section}
 #### Resolved issues[\#](#id607 "Link to this heading"){.headerlink}
 
 - Fixed an error that prevented GPU hardware activity from being presented in certain workloads.
+:::
+::::
+:::::
 
-:
-::
-
-:::::::::::::::
-{#rocm-6-3-2 .section}
+:::::::::::::::::: {#rocm-6-3-2 .section}
 ## ROCm 6.3.2[\#](#rocm-6-3-2 "Link to this heading"){.headerlink}
 
 See the [ROCm 6.3.2 release notes](https://rocm.docs.amd.com/en/docs-6.3.2/about/release-notes.html){.reference .external} for a complete overview of this release.
 
-{#hip-6-3-2 .section}
+:::::: {#hip-6-3-2 .section}
 ### **HIP** (6.3.2)[\#](#hip-6-3-2 "Link to this heading"){.headerlink}
 
-{#id608 .section}
+::: {#id608 .section}
 #### Added[\#](#id608 "Link to this heading"){.headerlink}
 
 - Tracking of Heterogeneous System Architecture (HSA) handlers:
@@ -8090,8 +10225,9 @@ See the [ROCm 6.3.2 release notes](https://rocm.docs.amd.com/en/docs-6.3.2/about
 - Runtime control on decrement counter only if the event is popped. There is a new way to restore dead signals cleanup for the old path.
 
 - A new logic in runtime to track the age of events from the kernel mode driver.
+:::
 
-{#id609 .section}
+::: {#id609 .section}
 #### Optimized[\#](#id609 "Link to this heading"){.headerlink}
 
 - HSA callback performance. The HIP runtime creates and submits commands in the queue and interacts with HSA through a callback function. HIP waits for the CPU status from HSA to optimize the handling of events, profiling, commands, and HSA signals for higher performance.
@@ -8105,8 +10241,9 @@ See the [ROCm 6.3.2 release notes](https://rocm.docs.amd.com/en/docs-6.3.2/about
 - Switch to [`std::shared_mutex`{.docutils .literal .notranslate}]{.pre} in book/keep logic in streams from multiple threads simultaneously, for performance improvement in specific customer applications.
 
 - [`std::shared_mutex`{.docutils .literal .notranslate}]{.pre} is used in memory object mapping, for performance improvement.
+:::
 
-{#id610 .section}
+::: {#id610 .section}
 #### Resolved issues[\#](#id610 "Link to this heading"){.headerlink}
 
 - Race condition in multi-threaded producer/consumer scenario with [`hipMallocFromPoolAsync`{.docutils .literal .notranslate}]{.pre}.
@@ -8116,115 +10253,115 @@ See the [ROCm 6.3.2 release notes](https://rocm.docs.amd.com/en/docs-6.3.2/about
 - Usage of [`hipStreamLegacy`{.docutils .literal .notranslate}]{.pre} in HIP event record.
 
 - A soft hang in graph execution process from HIP user object. The fix handles the release of graph execution object properly considering synchronization on the device/stream. The user application now behaves the same with [`hipUserObject`{.docutils .literal .notranslate}]{.pre} on both the AMD ROCm and NVIDIA CUDA platforms.
+:::
+::::::
 
-::
-{#hipfort-0-5-1 .section}
+::::: {#hipfort-0-5-1 .section}
 ### **hipfort** (0.5.1)[\#](#hipfort-0-5-1 "Link to this heading"){.headerlink}
 
-{#id611 .section}
+::: {#id611 .section}
 #### Added[\#](#id611 "Link to this heading"){.headerlink}
 
 - Support for building with LLVM Flang.
+:::
 
-{#id612 .section}
+::: {#id612 .section}
 #### Resolved issues[\#](#id612 "Link to this heading"){.headerlink}
 
 - Fixed the exported [`hipfort::hipsparse`{.docutils .literal .notranslate}]{.pre} CMake target.
+:::
+:::::
 
-::
-
-:
-{#rocm-systems-profiler-0-1-1 .section}
+:::: {#rocm-systems-profiler-0-1-1 .section}
 ### **ROCm Systems Profiler** (0.1.1)[\#](#rocm-systems-profiler-0-1-1 "Link to this heading"){.headerlink}
 
-{#id613 .section}
+::: {#id613 .section}
 #### Resolved issues[\#](#id613 "Link to this heading"){.headerlink}
 
 - Fixed an error when building from source on some SUSE and RHEL systems when using the [`ROCPROFSYS_BUILD_DYNINST`{.docutils .literal .notranslate}]{.pre} option.
+:::
+::::
 
-:
-
-::
-{#id614 .section}
+::::: {#id614 .section}
 ### **ROCProfiler** (2.0.0)[\#](#id614 "Link to this heading"){.headerlink}
 
-{#id615 .section}
+::: {#id615 .section}
 #### Changed[\#](#id615 "Link to this heading"){.headerlink}
 
 - Replaced [`CU_UTILIZATION`{.docutils .literal .notranslate}]{.pre} metric with [`SIMD_UTILIZATION`{.docutils .literal .notranslate}]{.pre} for better accuracy.
+:::
 
-{#id616 .section}
+::: {#id616 .section}
 #### Resolved issues[\#](#id616 "Link to this heading"){.headerlink}
 
 - Fixed the [`VALUBusy`{.docutils .literal .notranslate}]{.pre} and [`SALUBusy`{.docutils .literal .notranslate}]{.pre} activity metrics for accuracy on MI300.
+:::
+:::::
 
-::
-
-::
-{#rocprofiler-sdk-0-5-0 .section}
+::::: {#rocprofiler-sdk-0-5-0 .section}
 ### **ROCprofiler-SDK** (0.5.0)[\#](#rocprofiler-sdk-0-5-0 "Link to this heading"){.headerlink}
 
-{#id617 .section}
+::: {#id617 .section}
 #### Added[\#](#id617 "Link to this heading"){.headerlink}
 
 - Support for system-wide collection of SQ counters across all HSA processes.
+:::
 
-{#id618 .section}
+::: {#id618 .section}
 #### Changed[\#](#id618 "Link to this heading"){.headerlink}
 
 - [`rocprofiler_sample_device_counting_service`{.docutils .literal .notranslate}]{.pre} API updated to return counter output immediately, when called in synchronous mode.
+:::
+:::::
+::::::::::::::::::
 
-::
-:::::::::::::::
-
-:::::::::::::::::::::::::
-{#rocm-6-3-1 .section}
+:::::::::::::::::::::::::::: {#rocm-6-3-1 .section}
 ## ROCm 6.3.1[\#](#rocm-6-3-1 "Link to this heading"){.headerlink}
 
 See the [ROCm 6.3.1 release notes](https://rocm.docs.amd.com/en/docs-6.3.1/about/release-notes.html){.reference .external} for a complete overview of this release.
 
-{#amd-smi-24-7-1 .section}
+:::::: {#amd-smi-24-7-1 .section}
 ### **AMD SMI** (24.7.1)[\#](#amd-smi-24-7-1 "Link to this heading"){.headerlink}
 
-{#id619 .section}
+::: {#id619 .section}
 #### Changed[\#](#id619 "Link to this heading"){.headerlink}
 
 - [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre} displays [`VCLOCK`{.docutils .literal .notranslate}]{.pre} and [`DCLOCK`{.docutils .literal .notranslate}]{.pre} instead of [`ENC_CLOCK`{.docutils .literal .notranslate}]{.pre} and [`DEC_CLOCK`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-:
-{#id620 .section}
+:::: {#id620 .section}
 #### Resolved issues[\#](#id620 "Link to this heading"){.headerlink}
 
 - Fixed [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre}'s reporting of encode and decode information. [`VCLOCK`{.docutils .literal .notranslate}]{.pre} and [`DCLOCK`{.docutils .literal .notranslate}]{.pre} are now associated with both [`ENC_UTIL`{.docutils .literal .notranslate}]{.pre} and [`DEC_UTIL`{.docutils .literal .notranslate}]{.pre}.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/6.3.x/CHANGELOG.md){.reference .external} for more details and examples.
+:::
+::::
+::::::
 
-:
-
-::
-{#hip-6-3-1 .section}
+::::: {#hip-6-3-1 .section}
 ### **HIP** (6.3.1)[\#](#hip-6-3-1 "Link to this heading"){.headerlink}
 
-{#id621 .section}
+::: {#id621 .section}
 #### Added[\#](#id621 "Link to this heading"){.headerlink}
 
 - An activeQueues set that tracks only the queues that have a command submitted to them, which allows fast iteration in [`waitActiveStreams`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id622 .section}
+::: {#id622 .section}
 #### Resolved issues[\#](#id622 "Link to this heading"){.headerlink}
 
 - A deadlock in a specific customer application by preventing hipLaunchKernel latency degradation with number of idle streams.
+:::
+:::::
 
-::
-
-::
-{#hipify-18-0-0 .section}
+::::: {#hipify-18-0-0 .section}
 ### **HIPIFY** (18.0.0)[\#](#hipify-18-0-0 "Link to this heading"){.headerlink}
 
-{#id623 .section}
+::: {#id623 .section}
 #### Added[\#](#id623 "Link to this heading"){.headerlink}
 
 - Support for:
@@ -8238,83 +10375,85 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/6.3.x/CHANG
   - Full [`hipBLAS`{.docutils .literal .notranslate}]{.pre} 64-bit APIs
 
   - Full [`rocBLAS`{.docutils .literal .notranslate}]{.pre} 64-bit APIs
+:::
 
-{#id624 .section}
+::: {#id624 .section}
 #### Resolved issues[\#](#id624 "Link to this heading"){.headerlink}
 
 - Added missing support for device intrinsics and built-ins: [`__all_sync`{.docutils .literal .notranslate}]{.pre}, [`__any_sync`{.docutils .literal .notranslate}]{.pre}, [`__ballot_sync`{.docutils .literal .notranslate}]{.pre}, [`__activemask`{.docutils .literal .notranslate}]{.pre}, [`__match_any_sync`{.docutils .literal .notranslate}]{.pre}, [`__match_all_sync`{.docutils .literal .notranslate}]{.pre}, [`__shfl_sync`{.docutils .literal .notranslate}]{.pre}, [`__shfl_up_sync`{.docutils .literal .notranslate}]{.pre}, [`__shfl_down_sync`{.docutils .literal .notranslate}]{.pre}, and [`__shfl_xor_sync`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::
 
-::
-
-::::
-{#mivisionx-3-1-0 .section}
+::::::: {#mivisionx-3-1-0 .section}
 ### **MIVisionX** (3.1.0)[\#](#mivisionx-3-1-0 "Link to this heading"){.headerlink}
 
-{#id625 .section}
+::: {#id625 .section}
 #### Changed[\#](#id625 "Link to this heading"){.headerlink}
 
 - AMD Clang is now the default CXX and C compiler.
 
 - The dependency on rocDecode has been removed and automatic rocDecode installation is now disabled in the setup script.
+:::
 
-{#id626 .section}
+::: {#id626 .section}
 #### Resolved issues[\#](#id626 "Link to this heading"){.headerlink}
 
 - Canny failure on Instinct MI300 has been fixed.
 
 - Ubuntu 24.04 CTest failures have been fixed.
+:::
 
-{#id627 .section}
+::: {#id627 .section}
 #### Known issues[\#](#id627 "Link to this heading"){.headerlink}
 
 - CentOS, Red Hat, and SLES requires the manual installation of [`OpenCV`{.docutils .literal .notranslate}]{.pre} and [`FFMPEG`{.docutils .literal .notranslate}]{.pre}.
 
 - Hardware decode requires that ROCm is installed with [`--usecase=graphics`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id628 .section}
+::: {#id628 .section}
 #### Upcoming changes[\#](#id628 "Link to this heading"){.headerlink}
 
 - Optimized audio augmentations support for VX_RPP.
+:::
+:::::::
 
-::::
-
-::
-{#rccl-2-21-5 .section}
+::::: {#rccl-2-21-5 .section}
 ### **RCCL** (2.21.5)[\#](#rccl-2-21-5 "Link to this heading"){.headerlink}
 
-{#id629 .section}
+::: {#id629 .section}
 #### Changed[\#](#id629 "Link to this heading"){.headerlink}
 
 - Enhanced the user documentation.
+:::
 
-{#id630 .section}
+::: {#id630 .section}
 #### Resolved Issues[\#](#id630 "Link to this heading"){.headerlink}
 
 - Corrected some user help strings in [`install.sh`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::
 
-::
-
-:
-{#rocm-compute-profiler-3-0-0 .section}
+:::: {#rocm-compute-profiler-3-0-0 .section}
 ### **ROCm Compute Profiler** (3.0.0)[\#](#rocm-compute-profiler-3-0-0 "Link to this heading"){.headerlink}
 
-{#id631 .section}
+::: {#id631 .section}
 #### Resolved issues[\#](#id631 "Link to this heading"){.headerlink}
 
 - Fixed a minor issue for users upgrading to ROCm 6.3 from 6.2 post-rename from [`omniperf`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::
 
-:
-
-::
-{#rocm-systems-profiler-0-1-0 .section}
+::::: {#rocm-systems-profiler-0-1-0 .section}
 ### **ROCm Systems Profiler** (0.1.0)[\#](#rocm-systems-profiler-0-1-0 "Link to this heading"){.headerlink}
 
-{#id632 .section}
+::: {#id632 .section}
 #### Added[\#](#id632 "Link to this heading"){.headerlink}
 
 - Improvements to support OMPT target offload.
+:::
 
-{#id633 .section}
+::: {#id633 .section}
 #### Resolved issues[\#](#id633 "Link to this heading"){.headerlink}
 
 - Fixed an issue with generated Perfetto files. See [issue #3767](https://github.com/ROCm/ROCm/issues/3767){.reference .external} for more information.
@@ -8324,34 +10463,31 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/6.3.x/CHANG
 - Fixed an issue causing GPU resource data to be missing from traces of Instinct MI300A systems.
 
 - Fixed a minor issue for users upgrading to ROCm 6.3 from 6.2 post-rename from [`omnitrace`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::
 
-::
-
-:
-{#id634 .section}
+:::: {#id634 .section}
 ### **ROCprofiler-SDK** (0.5.0)[\#](#id634 "Link to this heading"){.headerlink}
 
-{#id635 .section}
+::: {#id635 .section}
 #### Added[\#](#id635 "Link to this heading"){.headerlink}
 
 - SIMD_UTILIZATION metric.
 
 - New [ROCm Data Center (RDC)](https://rocm.docs.amd.com/projects/rdc/en/docs-6.3.1/index.html) ops metrics.
+:::
+::::
+::::::::::::::::::::::::::::
 
-:
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-{#rocm-6-3-0 .section}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#rocm-6-3-0 .section}
 ## ROCm 6.3.0[\#](#rocm-6-3-0 "Link to this heading"){.headerlink}
 
 See the [ROCm 6.3.0 release notes](https://rocm.docs.amd.com/en/docs-6.3.0/about/release-notes.html){.reference .external} for a complete overview of this release.
 
-::::::::
-{#id636 .section}
+::::::::::: {#id636 .section}
 ### **AMD SMI** (24.7.1)[\#](#id636 "Link to this heading"){.headerlink}
 
-{#id637 .section}
+::: {#id637 .section}
 #### Added[\#](#id637 "Link to this heading"){.headerlink}
 
 - Support for [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`metric`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--ecc`{.docutils .literal .notranslate}]{.pre} & [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`metric`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--ecc-blocks`{.docutils .literal .notranslate}]{.pre} on Guest VMs.
@@ -8389,8 +10525,9 @@ See the [ROCm 6.3.0 release notes](https://rocm.docs.amd.com/en/docs-6.3.0/about
 - Subsystem device ID to [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`static`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--asic`{.docutils .literal .notranslate}]{.pre}. There are no underlying changes to [`amdsmi_get_gpu_asic_info`{.docutils .literal .notranslate}]{.pre}.
 
 - [`Target_Graphics_Version`{.docutils .literal .notranslate}]{.pre} to [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`static`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--asic`{.docutils .literal .notranslate}]{.pre} and [`amdsmi_get_gpu_asic_info()`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id638 .section}
+::: {#id638 .section}
 #### Changed[\#](#id638 "Link to this heading"){.headerlink}
 
 - Updated BDF commands to use KFD SYSFS for BDF: [`amdsmi_get_gpu_device_bdf()`{.docutils .literal .notranslate}]{.pre}. This change aligns BDF output with ROCm SMI.
@@ -8412,8 +10549,9 @@ See the [ROCm 6.3.0 release notes](https://rocm.docs.amd.com/en/docs-6.3.0/about
   - This struct will be filled out by a new API, [`amdsmi_get_gpu_accelerator_partition_profile()`{.docutils .literal .notranslate}]{.pre}.
 
   - Future data from these APIs will eventually be added to [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`partition`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id639 .section}
+::: {#id639 .section}
 #### Removed[\#](#id639 "Link to this heading"){.headerlink}
 
 - [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`reset`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--compute-partition`{.docutils .literal .notranslate}]{.pre} and [`...`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--memory-partition`{.docutils .literal .notranslate}]{.pre} and associated APIs
@@ -8425,20 +10563,23 @@ See the [ROCm 6.3.0 release notes](https://rocm.docs.amd.com/en/docs-6.3.0/about
 - Usage of [`_validate_positive`{.docutils .literal .notranslate}]{.pre} is removed in parser and replaced with [`_positive_int`{.docutils .literal .notranslate}]{.pre} and [`_not_negative_int`{.docutils .literal .notranslate}]{.pre} as appropriate.
 
   - This will allow [`0`{.docutils .literal .notranslate}]{.pre} to be a valid input for several options in setting CPUs where appropriate (for example, as a mode or NBIOID).
+:::
 
-{#id640 .section}
+::: {#id640 .section}
 #### Optimized[\#](#id640 "Link to this heading"){.headerlink}
 
 - Adjusted ordering of [`gpu_metrics`{.docutils .literal .notranslate}]{.pre} calls to ensure that [`pcie_bw`{.docutils .literal .notranslate}]{.pre} values remain stable in [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`metric`{.docutils .literal .notranslate}]{.pre} & [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre}.
 
   - With this change additional padding was added to [`PCIE_BW`{.docutils .literal .notranslate}]{.pre} [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--pcie`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id641 .section}
+::: {#id641 .section}
 #### Known issues[\#](#id641 "Link to this heading"){.headerlink}
 
 - See [AMD SMI manual build issue](https://rocm.docs.amd.com/en/docs-6.3.0/about/release-notes.html#amd-smi-manual-build-issue){.reference .external}.
+:::
 
-{#id642 .section}
+::: {#id642 .section}
 #### Resolved issues[\#](#id642 "Link to this heading"){.headerlink}
 
 - Improved Offline install process and lowered dependency for PyYAML.
@@ -8448,9 +10589,9 @@ See the [ROCm 6.3.0 release notes](https://rocm.docs.amd.com/en/docs-6.3.0/about
 - Fixed incorrect implementation of the Python API [`amdsmi_get_gpu_metrics_header_info()`{.docutils .literal .notranslate}]{.pre}.
 
 - [`amdsmitst`{.docutils .literal .notranslate}]{.pre} [`TestGpuMetricsRead`{.docutils .literal .notranslate}]{.pre} now prints metric in correct units.
+:::
 
-:
-{#id643 .section}
+:::: {#id643 .section}
 #### Upcoming changes[\#](#id643 "Link to this heading"){.headerlink}
 
 - Python API for [`amdsmi_get_energy_count()`{.docutils .literal .notranslate}]{.pre} will deprecate the [`power`{.docutils .literal .notranslate}]{.pre} field in a future ROCm release and use [`energy_accumulator`{.docutils .literal .notranslate}]{.pre} field instead.
@@ -8463,10 +10604,8 @@ See the [ROCm 6.3.0 release notes](https://rocm.docs.amd.com/en/docs-6.3.0/about
 
   - The following APIs will remain:
 
-    :
-{.highlight-C .notranslate}
-    
-highlight
+    :::: {.highlight-C .notranslate}
+    ::: highlight
         amdsmi_status_t
         amdsmi_set_gpu_compute_partition(amdsmi_processor_handle processor_handle,
                                           amdsmi_compute_partition_type_t compute_partition);
@@ -8480,8 +10619,8 @@ highlight
         amdsmi_status_t
         amdsmi_set_gpu_memory_partition(amdsmi_processor_handle processor_handle,
                                           amdsmi_memory_partition_type_t memory_partition);
-    
-    :
+    :::
+    ::::
 
 - [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`set`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--compute-partition`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`"SPX/DPX/CPX..."`{.docutils .literal .notranslate}]{.pre} will no longer be supported in a future ROCm release.
 
@@ -8493,19 +10632,18 @@ highlight
 
   - The command will be at full functionality once additional partition information from [`amdsmi_get_gpu_accelerator_partition_profile()`{.docutils .literal .notranslate}]{.pre} has been implemented.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/6.3.x/CHANGELOG.md){.reference .external} for more details and examples.
-
-:
-::::::::
-
+:::
 ::::
-{#hip-6-3-0 .section}
+:::::::::::
+
+::::::: {#hip-6-3-0 .section}
 ### **HIP** (6.3.0)[\#](#hip-6-3-0 "Link to this heading"){.headerlink}
 
-{#id644 .section}
+::: {#id644 .section}
 #### Added[\#](#id644 "Link to this heading"){.headerlink}
 
 - New HIP APIs:
@@ -8525,8 +10663,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/6.3.x/CHANG
   - [`hipDrvGraphExecMemcpyNodeSetParams`{.docutils .literal .notranslate}]{.pre} sets the parameters for a memcpy node in the given graphExec.
 
   - [`hipDrvGraphExecMemsetNodeSetParams`{.docutils .literal .notranslate}]{.pre} sets the parameters for a memset node in the given graphExec.
+:::
 
-{#id645 .section}
+::: {#id645 .section}
 #### Changed[\#](#id645 "Link to this heading"){.headerlink}
 
 - Un-deprecated HIP APIs:
@@ -8534,8 +10673,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/6.3.x/CHANG
   - [`hipHostAlloc`{.docutils .literal .notranslate}]{.pre}
 
   - [`hipFreeHost`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id646 .section}
+::: {#id646 .section}
 #### Optimized[\#](#id646 "Link to this heading"){.headerlink}
 
 - Disabled CPU wait in device synchronize to avoid idle time in applications such as Hugging Face models and PyTorch.
@@ -8545,8 +10685,9 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/6.3.x/CHANG
 - Limited the software batch size to control the number of command submissions for runtime to handle efficiently.
 
 - Optimizes HSA callback performance when a large number of events are recorded by multiple threads and submitted to multiple GPUs.
+:::
 
-{#id647 .section}
+::: {#id647 .section}
 #### Resolved issues[\#](#id647 "Link to this heading"){.headerlink}
 
 - Soft hang in runtime wait event when run TensorFlow.
@@ -8556,32 +10697,31 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/6.3.x/CHANG
 - Memory leak when the API [`hipGraphAddMemAllocNode`{.docutils .literal .notranslate}]{.pre} is called.
 
 - The [`_sync()`{.docutils .literal .notranslate}]{.pre} version of crosslane builtins such as [`shfl_sync()`{.docutils .literal .notranslate}]{.pre}, [`__all_sync()`{.docutils .literal .notranslate}]{.pre} and [`__any_sync()`{.docutils .literal .notranslate}]{.pre}, continue to be hidden behind the preprocessor macro [`HIP_ENABLE_WARP_SYNC_BUILTINS`{.docutils .literal .notranslate}]{.pre}, and will be enabled unconditionally in the next ROCm release.
+:::
+:::::::
 
-::::
-
-::
-{#hipblas-2-3-0 .section}
+::::: {#hipblas-2-3-0 .section}
 ### **hipBLAS** (2.3.0)[\#](#hipblas-2-3-0 "Link to this heading"){.headerlink}
 
-{#id648 .section}
+::: {#id648 .section}
 #### Added[\#](#id648 "Link to this heading"){.headerlink}
 
 - Level 3 functions have an additional [`ILP64`{.docutils .literal .notranslate}]{.pre} API for both C and Fortran ([`_64`{.docutils .literal .notranslate}]{.pre} name suffix) with [`int64_t`{.docutils .literal .notranslate}]{.pre} function arguments
+:::
 
-{#id649 .section}
+::: {#id649 .section}
 #### Changed[\#](#id649 "Link to this heading"){.headerlink}
 
 - [`amdclang`{.docutils .literal .notranslate}]{.pre} is used as the default compiler instead of [`g++`{.docutils .literal .notranslate}]{.pre}.
 
 - Added a dependency on the [`hipblas-common`{.docutils .literal .notranslate}]{.pre} package.
+:::
+:::::
 
-::
-
-::::
-{#hipblaslt-0-10-0 .section}
+::::::: {#hipblaslt-0-10-0 .section}
 ### **hipBLASLt** (0.10.0)[\#](#hipblaslt-0-10-0 "Link to this heading"){.headerlink}
 
-{#id650 .section}
+::: {#id650 .section}
 #### Added[\#](#id650 "Link to this heading"){.headerlink}
 
 - Support for the V2 CPP extension API for backward compatibility
@@ -8597,15 +10737,17 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/6.3.x/CHANG
 - Output the bench command for the hipblaslt CPP ext API path if [`HIPBLASLT_LOG_MASK=32`{.docutils .literal .notranslate}]{.pre} is set
 
 - Support odd sizes for [`FP8`{.docutils .literal .notranslate}]{.pre}/[`BF8`{.docutils .literal .notranslate}]{.pre} GEMM
+:::
 
-{#id651 .section}
+::: {#id651 .section}
 #### Changed[\#](#id651 "Link to this heading"){.headerlink}
 
 - Reorganized and added more sample code.
 
 - Added a dependency with the [`hipblas-common`{.docutils .literal .notranslate}]{.pre} package and removed the dependency with the [`hipblas`{.docutils .literal .notranslate}]{.pre} package.
+:::
 
-{#id652 .section}
+::: {#id652 .section}
 #### Optimized[\#](#id652 "Link to this heading"){.headerlink}
 
 - Support fused kernel for [`HIPBLASLT_MATMUL_DESC_AMAX_D_POINTER`{.docutils .literal .notranslate}]{.pre} for the [`FP8`{.docutils .literal .notranslate}]{.pre}/[`BF8`{.docutils .literal .notranslate}]{.pre} data type
@@ -8613,41 +10755,45 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/6.3.x/CHANG
 - Improved the library loading time.
 
 - Improved the overall performance of the first returned solution.
+:::
 
-{#id653 .section}
+::: {#id653 .section}
 #### Upcoming changes[\#](#id653 "Link to this heading"){.headerlink}
 
 - The V1 CPP extension API will be deprecated in a future release of hipBLASLt.
+:::
+:::::::
 
-::::
-
-{#hipcub-3-3-0 .section}
+:::::: {#hipcub-3-3-0 .section}
 ### **hipCUB** (3.3.0)[\#](#hipcub-3-3-0 "Link to this heading"){.headerlink}
 
-{#id654 .section}
+::: {#id654 .section}
 #### Added[\#](#id654 "Link to this heading"){.headerlink}
 
 - Support for large indices in [`hipcub::DeviceSegmentedReduce::*`{.docutils .literal .notranslate}]{.pre} has been added, with the exception of [`DeviceSegmentedReduce::Arg*`{.docutils .literal .notranslate}]{.pre}. Although rocPRIM's backend provides support for all reduce variants, CUB does not support large indices in [`DeviceSegmentedReduce::Arg*`{.docutils .literal .notranslate}]{.pre}. For this reason, large index support is not available for [`hipcub::DeviceSegmentedReduce::Arg*`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id655 .section}
+::: {#id655 .section}
 #### Changed[\#](#id655 "Link to this heading"){.headerlink}
 
 - Changed the default value of [`rmake.py`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-a`{.docutils .literal .notranslate}]{.pre} to [`default_gpus`{.docutils .literal .notranslate}]{.pre}. This is equivalent to [`gfx906:xnack-,gfx1030,gfx1100,gfx1101,gfx1102`{.docutils .literal .notranslate}]{.pre}.
 
 - The NVIDIA backend now requires CUB, Thrust, and libcu++ 2.3.2.
+:::
 
-{#id656 .section}
+::: {#id656 .section}
 #### Resolved issues[\#](#id656 "Link to this heading"){.headerlink}
 
 - Fixed an issue in [`rmake.py`{.docutils .literal .notranslate}]{.pre} where the list storing cmake options would contain individual characters instead of a full string of options.
 
 - Fixed an issue where [`config.hpp`{.docutils .literal .notranslate}]{.pre} was not included in all hipCUB headers, resulting in build errors.
+:::
+::::::
 
-:
-{#hipfft-1-0-17 .section}
+:::: {#hipfft-1-0-17 .section}
 ### **hipFFT** (1.0.17)[\#](#hipfft-1-0-17 "Link to this heading"){.headerlink}
 
-{#id657 .section}
+::: {#id657 .section}
 #### Changed[\#](#id657 "Link to this heading"){.headerlink}
 
 - The AMD backend is now compiled using amdclang++ instead of hipcc. The NVIDIA CUDA backend still uses hipcc-nvcc.
@@ -8655,29 +10801,29 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/6.3.x/CHANG
 - CLI11 replaces Boost Program Options as the command line parser for clients.
 
 - Building with the address sanitizer option sets xnack+ for the relevant GPU architectures.
+:::
+::::
 
-:
-
-::
-{#hipfort-0-5-0 .section}
+::::: {#hipfort-0-5-0 .section}
 ### **hipfort** (0.5.0)[\#](#hipfort-0-5-0 "Link to this heading"){.headerlink}
 
-{#id658 .section}
+::: {#id658 .section}
 #### Added[\#](#id658 "Link to this heading"){.headerlink}
 
 - Added ROC-TX to the hipfort interfaces.
+:::
 
-{#id659 .section}
+::: {#id659 .section}
 #### Changed[\#](#id659 "Link to this heading"){.headerlink}
 
 - Updated the hipSOLVER bindings.
+:::
+:::::
 
-::
-
-{#id660 .section}
+:::::: {#id660 .section}
 ### **HIPIFY** (18.0.0)[\#](#id660 "Link to this heading"){.headerlink}
 
-{#id661 .section}
+::: {#id661 .section}
 #### Added[\#](#id661 "Link to this heading"){.headerlink}
 
 - CUDA 12.6.1 support
@@ -8693,39 +10839,47 @@ See the full [AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/6.3.x/CHANG
 - Initial support for direct hipification of cuRAND into rocRAND under the [`--roc`{.docutils .literal .notranslate}]{.pre} option
 
 - Added a filtering ability for the supplementary hipification scripts
+:::
 
-{#id662 .section}
+::: {#id662 .section}
 #### Resolved issues[\#](#id662 "Link to this heading"){.headerlink}
 
 - Correct [`roc`{.docutils .literal .notranslate}]{.pre} header files support
+:::
 
-{#id663 .section}
+::: {#id663 .section}
 #### Known issues[\#](#id663 "Link to this heading"){.headerlink}
 
 - Support for [`fp8`{.docutils .literal .notranslate}]{.pre} data types
+:::
+::::::
 
-{#hiprand-2-11-0 .section}
+:::::: {#hiprand-2-11-0 .section}
 ### **hipRAND** (2.11.0)[\#](#hiprand-2-11-0 "Link to this heading"){.headerlink}
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docutils .literal .notranslate}]{.pre}. In ROCm 6.2.4, the hipRAND package version was [`2.11.1`{.docutils .literal .notranslate}]{.pre}. The hipRAND version number will be corrected in a future ROCm release.
+:::
 
-{#id664 .section}
+::: {#id664 .section}
 #### Changed[\#](#id664 "Link to this heading"){.headerlink}
 
 - Updated the default value for the [`-a`{.docutils .literal .notranslate}]{.pre} argument from [`rmake.py`{.docutils .literal .notranslate}]{.pre} to [`gfx906:xnack-,gfx1030,gfx1100,gfx1101,gfx1102`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id665 .section}
+::: {#id665 .section}
 #### Resolved issues[\#](#id665 "Link to this heading"){.headerlink}
 
 - Fixed an issue in [`rmake.py`{.docutils .literal .notranslate}]{.pre} where the list storing the CMake options would contain individual characters instead of a full string of options.
+:::
+::::::
 
-{#hipsolver-2-3-0 .section}
+:::::: {#hipsolver-2-3-0 .section}
 ### **hipSOLVER** (2.3.0)[\#](#hipsolver-2-3-0 "Link to this heading"){.headerlink}
 
-{#id666 .section}
+::: {#id666 .section}
 #### Added[\#](#id666 "Link to this heading"){.headerlink}
 
 - Auxiliary functions:
@@ -8749,8 +10903,9 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
     - [`hipsolverDnXgeqrf_bufferSize`{.docutils .literal .notranslate}]{.pre}
 
     - [`hipsolverDnXgeqrf`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id667 .section}
+::: {#id667 .section}
 #### Changed[\#](#id667 "Link to this heading"){.headerlink}
 
 - Binaries in debug builds no longer have a [`-d`{.docutils .literal .notranslate}]{.pre} suffix.
@@ -8758,70 +10913,79 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - Changed rocSPARSE and SuiteSparse to be runtime dependencies by default. The [`BUILD_WITH_SPARSE`{.docutils .literal .notranslate}]{.pre} CMake option can still be used to convert them into build-time dependencies (now off by default).
 
 - The [`--no-sparse`{.docutils .literal .notranslate}]{.pre} option for the install script now only affects the hipSOLVER clients and their dependency on hipSPARSE. Use the [`BUILD_HIPSPARSE_TESTS`{.docutils .literal .notranslate}]{.pre} CMake option to enable tests for the [`hipsolverSp`{.docutils .literal .notranslate}]{.pre} API (on by default).
+:::
 
-{#id668 .section}
+::: {#id668 .section}
 #### Upcoming changes[\#](#id668 "Link to this heading"){.headerlink}
 
 - The Fortran bindings provided in [`hipsolver_module.f90`{.docutils .literal .notranslate}]{.pre} have been deprecated. The Fortran bindings provided by the hipfort project are recommended instead.
+:::
+::::::
 
-::::
-{#hipsparse-3-1-2 .section}
+::::::: {#hipsparse-3-1-2 .section}
 ### **hipSPARSE** (3.1.2)[\#](#hipsparse-3-1-2 "Link to this heading"){.headerlink}
 
-{#id669 .section}
+::: {#id669 .section}
 #### Added[\#](#id669 "Link to this heading"){.headerlink}
 
 - Added an alpha version of the [`hipsparse-bench`{.docutils .literal .notranslate}]{.pre} executable to facilitate comparing NVIDIA CUDA cuSPARSE and rocSPARSE backends.
+:::
 
-{#id670 .section}
+::: {#id670 .section}
 #### Changed[\#](#id670 "Link to this heading"){.headerlink}
 
 - Changed the default compiler from hipcc to amdclang in the install script and CMake files.
 
 - Improved the user documentation.
+:::
 
-{#id671 .section}
+::: {#id671 .section}
 #### Resolved issues[\#](#id671 "Link to this heading"){.headerlink}
 
 - Fixed the gfortran dependency for the Azure Linux operating system.
+:::
 
-{#id672 .section}
+::: {#id672 .section}
 #### Known issues[\#](#id672 "Link to this heading"){.headerlink}
 
 - In [`hipsparseSpSM_solve()`{.docutils .literal .notranslate}]{.pre}, the external buffer is passed as a parameter. This does not match the NVIDIA CUDA cuSPARSE API. This extra external buffer parameter will be removed in a future release. For now, this extra parameter can be ignored and [`nullptr`{.docutils .literal .notranslate}]{.pre} passed as it is unused internally by [`hipsparseSpSM_solve()`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::::
 
-::::
-
-{#hipsparselt-0-2-2 .section}
+:::::: {#hipsparselt-0-2-2 .section}
 ### **hipSPARSELt** (0.2.2)[\#](#hipsparselt-0-2-2 "Link to this heading"){.headerlink}
 
-{#id673 .section}
+::: {#id673 .section}
 #### Added[\#](#id673 "Link to this heading"){.headerlink}
 
 - Support for a new data type combination: [`INT8`{.docutils .literal .notranslate}]{.pre} inputs, [`BF16`{.docutils .literal .notranslate}]{.pre} output, and [`INT32`{.docutils .literal .notranslate}]{.pre} Matrix Core accumulation
 
 - Support for row-major memory order ([`HIPSPARSE_ORDER_ROW`{.docutils .literal .notranslate}]{.pre})
+:::
 
-{#id674 .section}
+::: {#id674 .section}
 #### Changed[\#](#id674 "Link to this heading"){.headerlink}
 
 - Changed the default compiler to amdclang++.
+:::
 
-{#id675 .section}
+::: {#id675 .section}
 #### Upcoming changes[\#](#id675 "Link to this heading"){.headerlink}
 
 - [`hipsparseLtDatatype_t`{.docutils .literal .notranslate}]{.pre} is deprecated and will be removed in the next major release of ROCm. [`hipDataType`{.docutils .literal .notranslate}]{.pre} should be used instead.
+:::
+::::::
 
-::::
-{#hiptensor-1-4-0 .section}
+::::::: {#hiptensor-1-4-0 .section}
 ### **hipTensor** (1.4.0)[\#](#hiptensor-1-4-0 "Link to this heading"){.headerlink}
 
-{#id676 .section}
+::: {#id676 .section}
 #### Added[\#](#id676 "Link to this heading"){.headerlink}
 
 - Added support for tensor reduction, including APIs, CPU reference, unit tests, and documentation
+:::
 
-{#id677 .section}
+::: {#id677 .section}
 #### Changed[\#](#id677 "Link to this heading"){.headerlink}
 
 - ASAN builds only support xnack+ targets.
@@ -8833,13 +10997,15 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - Updated the actor-critic implementation.
 
 - Various documentation formatting updates.
+:::
 
-{#id678 .section}
+::: {#id678 .section}
 #### Optimized[\#](#id678 "Link to this heading"){.headerlink}
 
 - Split kernel instances to improve build times.
+:::
 
-{#id679 .section}
+::: {#id679 .section}
 #### Resolved issues[\#](#id679 "Link to this heading"){.headerlink}
 
 - Fixed a bug in randomized tensor input data generation.
@@ -8849,25 +11015,23 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - Fixed a small memory leak by properly destroying HIP event objects in tests.
 
 - Default strides calculations now follow column-major convention.
+:::
+:::::::
 
-::::
-
-:
-{#llvm-project-18-0-0 .section}
+:::: {#llvm-project-18-0-0 .section}
 ### **llvm-project** (18.0.0)[\#](#llvm-project-18-0-0 "Link to this heading"){.headerlink}
 
-{#id680 .section}
+::: {#id680 .section}
 #### Resolved issues[\#](#id680 "Link to this heading"){.headerlink}
 
 - Fixed an issue where the compiler would incorrectly compile a program that used the [`__shfl(var,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`srcLane,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`width)`{.docutils .literal .notranslate}]{.pre} function when one of the parameters to the function is undefined along some path to the function. See [issue #3499](https://github.com/ROCm/ROCm/issues/3499){.reference .external} on GitHub.
+:::
+::::
 
-:
-
-:::::
-{#migraphx-2-11-0 .section}
+:::::::: {#migraphx-2-11-0 .section}
 ### **MIGraphX** (2.11.0)[\#](#migraphx-2-11-0 "Link to this heading"){.headerlink}
 
-{#id681 .section}
+::: {#id681 .section}
 #### Added[\#](#id681 "Link to this heading"){.headerlink}
 
 - Initial code to run on Windows
@@ -8909,8 +11073,9 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - [`reduce_any`{.docutils .literal .notranslate}]{.pre} and [`reduce_all`{.docutils .literal .notranslate}]{.pre} options to the [`Reduce`{.docutils .literal .notranslate}]{.pre} operation via Torch MIGraphX
 
 - Examples for RNNT, and ControlNet
+:::
 
-{#id682 .section}
+::: {#id682 .section}
 #### Changed[\#](#id682 "Link to this heading"){.headerlink}
 
 - Switched to MLIR's 3D Convolution operator.
@@ -8922,8 +11087,9 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - Use random mode for benchmarking GEMMs and convolutions.
 
 - Python version is now printed with an actual version number.
+:::
 
-{#id683 .section}
+::: {#id683 .section}
 #### Removed[\#](#id683 "Link to this heading"){.headerlink}
 
 - Disabled requirements for MIOpen and rocBLAS when running on Windows.
@@ -8931,8 +11097,9 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - Removed inaccurate warning messages when using exhaustive-tune.
 
 - Remove the hard coded path in [`MIGRAPHX_CXX_COMPILER`{.docutils .literal .notranslate}]{.pre} allowing the compiler to be installed in different locations.
+:::
 
-{#id684 .section}
+::: {#id684 .section}
 #### Optimized[\#](#id684 "Link to this heading"){.headerlink}
 
 - Improved:
@@ -8968,8 +11135,9 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - Preloaded tiles into LDS to improve performance of pointwise transposes
 
 - Exposed the [`external_data_path`{.docutils .literal .notranslate}]{.pre} property in [`onnx_options`{.docutils .literal .notranslate}]{.pre} to set the path from [`onnxruntime`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id685 .section}
+::: {#id685 .section}
 #### Resolved issues[\#](#id685 "Link to this heading"){.headerlink}
 
 - Fixed a bug with gfx1030 that overwrote [`dpp_reduce`{.docutils .literal .notranslate}]{.pre}.
@@ -8989,13 +11157,13 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - Fixed a bug that stopped the Vicuna model from compiling.
 
 - Fixed failures with the verify option of migraphx-driver that would cause the application to exit early.
+:::
+::::::::
 
-:::::
-
-{#miopen-3-3-0 .section}
+:::::: {#miopen-3-3-0 .section}
 ### **MIOpen** (3.3.0)[\#](#miopen-3-3-0 "Link to this heading"){.headerlink}
 
-{#id686 .section}
+::: {#id686 .section}
 #### Added[\#](#id686 "Link to this heading"){.headerlink}
 
 - \[RNN\] LSTM forward pass
@@ -9005,13 +11173,15 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - \[GLU\] Gated Linear Unit (this is an experimental feature)
 
 - \[PReLU\] Implemented PReLU backward pass (this is an experimental feature)
+:::
 
-{#id687 .section}
+::: {#id687 .section}
 #### Optimized[\#](#id687 "Link to this heading"){.headerlink}
 
 - MI300 TunaNet Update: CK forward pass and WRW Solvers updated
+:::
 
-{#id688 .section}
+::: {#id688 .section}
 #### Resolved issues[\#](#id688 "Link to this heading"){.headerlink}
 
 - Fixed unset stream when calling [`hipMemsetAsync`{.docutils .literal .notranslate}]{.pre}.
@@ -9019,18 +11189,21 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - Fixed a memory leak issue caused by an incorrect transpose in find 2.0. See PR [#3285](https://github.com/ROCm/MIOpen/pull/3285){.reference .external} on GitHub.
 
 - Fixed a [`memcopy`{.docutils .literal .notranslate}]{.pre} data race by replacing [`hipMemcpy`{.docutils .literal .notranslate}]{.pre} with [`hipMemcpyWithStream`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::::
 
-{#id689 .section}
+:::::: {#id689 .section}
 ### **MIVisionX** (3.1.0)[\#](#id689 "Link to this heading"){.headerlink}
 
-{#id690 .section}
+::: {#id690 .section}
 #### Changed[\#](#id690 "Link to this heading"){.headerlink}
 
 - rocDecode is no longer installed by the setup script.
 
 - The rocDecode dependency has been removed from the package installation.
+:::
 
-{#id691 .section}
+::: {#id691 .section}
 #### Known issues[\#](#id691 "Link to this heading"){.headerlink}
 
 - See [MIVisionX memory access fault in Canny edge detection](https://github.com/ROCm/ROCm/issues/4086){.reference .external}.
@@ -9040,17 +11213,19 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - Installation on CentOS/RedHat/SLES requires the manual installation of the [`FFMPEG`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`Dev`{.docutils .literal .notranslate}]{.pre} package.
 
 - Hardware decode requires installation with [`--usecase=graphics`{.docutils .literal .notranslate}]{.pre} in addition to [`--usecase=rocm`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id692 .section}
+::: {#id692 .section}
 #### Upcoming changes[\#](#id692 "Link to this heading"){.headerlink}
 
 - Optimized audio augmentations support for VX_RPP
+:::
+::::::
 
-::::
-{#id693 .section}
+::::::: {#id693 .section}
 ### **RCCL** (2.21.5)[\#](#id693 "Link to this heading"){.headerlink}
 
-{#id694 .section}
+::: {#id694 .section}
 #### Added[\#](#id694 "Link to this heading"){.headerlink}
 
 - MSCCL++ integration for specific contexts
@@ -9064,8 +11239,9 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - Support for amdclang++
 
 - New Rome model
+:::
 
-{#id695 .section}
+::: {#id695 .section}
 #### Changed[\#](#id695 "Link to this heading"){.headerlink}
 
 - Compatibility with NCCL 2.21.5
@@ -9081,15 +11257,17 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - Improved version reporting
 
 - Enabled GDRDMA for Linux kernel 6.4.0+
+:::
 
-{#id696 .section}
+::: {#id696 .section}
 #### Resolved issues[\#](#id696 "Link to this heading"){.headerlink}
 
 - Fixed an issue where, on systems running Linux kernel 6.8.0 such as Ubuntu 24.04, Direct Memory Access (DMA) transfers between the GPU and NIC were disabled, impacting multi-node RCCL performance. See [issue #3772](https://github.com/ROCm/ROCm/issues/3772){.reference .external} on GitHub.
 
 - Fixed model matching with PXN enable
+:::
 
-{#id697 .section}
+::: {#id697 .section}
 #### Known issues[\#](#id697 "Link to this heading"){.headerlink}
 
 - MSCCL is temporarily disabled for AllGather collectives.
@@ -9103,38 +11281,41 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - Unit tests do not exit gracefully when running on a single GPU.
 
   - This issue will be addressed in a future ROCm release.
+:::
+:::::::
 
-::::
-
-::::::
-{#rocal-2-1-0 .section}
+::::::::: {#rocal-2-1-0 .section}
 ### **rocAL** (2.1.0)[\#](#rocal-2-1-0 "Link to this heading"){.headerlink}
 
-{#id698 .section}
+::: {#id698 .section}
 #### Added[\#](#id698 "Link to this heading"){.headerlink}
 
 - rocAL Pybind support for package installation has been added. To use the rocAL python module, set the [`PYTHONPATH`{.docutils .literal .notranslate}]{.pre}: [`export`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`PYTHONPATH=/opt/rocm/lib:$PYTHONPATH`{.docutils .literal .notranslate}]{.pre}
 
 - Last batch policy, pad last batch, stick to shard, and shard size support have been added for the coco, caffe, caffe2, mxnet, tf, and cifar10 image readers.
+:::
 
-{#id699 .section}
+::: {#id699 .section}
 #### Changed[\#](#id699 "Link to this heading"){.headerlink}
 
 - rocDecode is no longer installed by the setup script.
 
 - The rocDecode dependency has been removed from the package installation.
+:::
 
-{#id700 .section}
+::: {#id700 .section}
 #### Optimized[\#](#id700 "Link to this heading"){.headerlink}
 
 - CTest has been updated.
+:::
 
-{#id701 .section}
+::: {#id701 .section}
 #### Resolved issues[\#](#id701 "Link to this heading"){.headerlink}
 
 - Test failures have been fixed.
+:::
 
-{#id702 .section}
+::: {#id702 .section}
 #### Known issues[\#](#id702 "Link to this heading"){.headerlink}
 
 - The package installation requires the manual installation of [`TurboJPEG`{.docutils .literal .notranslate}]{.pre} and [`RapidJSON`{.docutils .literal .notranslate}]{.pre}.
@@ -9142,84 +11323,87 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - CentOS/RedHat/SLES requires the manual installation of the [`FFMPEG`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`Dev`{.docutils .literal .notranslate}]{.pre} package.
 
 - Hardware decode requires installation with [`--usecase=graphics`{.docutils .literal .notranslate}]{.pre} in addition to [`--usecase=rocm`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id703 .section}
+::: {#id703 .section}
 #### Upcoming changes[\#](#id703 "Link to this heading"){.headerlink}
 
 - Optimized audio augmentations support.
+:::
+:::::::::
 
-::::::
-
-::
-{#rocalution-3-2-1 .section}
+::::: {#rocalution-3-2-1 .section}
 ### **rocALUTION** (3.2.1)[\#](#rocalution-3-2-1 "Link to this heading"){.headerlink}
 
-{#id704 .section}
+::: {#id704 .section}
 #### Changed[\#](#id704 "Link to this heading"){.headerlink}
 
 - The default compiler has been changed from [`hipcc`{.docutils .literal .notranslate}]{.pre} to [`amdclang`{.docutils .literal .notranslate}]{.pre} in the installation script and cmake files.
 
 - Changed the address sanitizer build targets. Now only [`gfx908:xnack+`{.docutils .literal .notranslate}]{.pre}, [`gfx90a:xnack+`{.docutils .literal .notranslate}]{.pre}, [`gfx940:xnack+`{.docutils .literal .notranslate}]{.pre}, [`gfx941:xnack+`{.docutils .literal .notranslate}]{.pre}, and [`gfx942:xnack+`{.docutils .literal .notranslate}]{.pre} are built with [`BUILD_ADDRESS_SANITIZER=ON`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id705 .section}
+::: {#id705 .section}
 #### Resolved issues[\#](#id705 "Link to this heading"){.headerlink}
 
 - Fixed hang in [`RS-AMG`{.docutils .literal .notranslate}]{.pre} for Navi on some specific matrix sparsity patterns.
 
 - Fixed wrong results in [`Apply`{.docutils .literal .notranslate}]{.pre} on multi-GPU setups.
-
-::
-
+:::
 :::::
-{#rocblas-4-3-0 .section}
+
+:::::::: {#rocblas-4-3-0 .section}
 ### **rocBLAS** (4.3.0)[\#](#rocblas-4-3-0 "Link to this heading"){.headerlink}
 
-{#id706 .section}
+::: {#id706 .section}
 #### Added[\#](#id706 "Link to this heading"){.headerlink}
 
 - Level 3 and EX functions have an additional [`ILP64`{.docutils .literal .notranslate}]{.pre} API for both C and Fortran ([`_64`{.docutils .literal .notranslate}]{.pre} name suffix) with [`int64_t`{.docutils .literal .notranslate}]{.pre} function arguments
+:::
 
-{#id707 .section}
+::: {#id707 .section}
 #### Changed[\#](#id707 "Link to this heading"){.headerlink}
 
 - amdclang is used as the default compiler instead of hipcc
 
 - Internal performance scripts use AMD SMI instead of the deprecated ROCm SMI
+:::
 
-{#id708 .section}
+::: {#id708 .section}
 #### Optimized[\#](#id708 "Link to this heading"){.headerlink}
 
 - Improved performance of Level 2 gbmv
 
 - Improved performance of Level 2 gemv for float and double precisions for problem sizes ([`TransA`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`==`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`N`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`&&`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`m==n`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`&&`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`m`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`%`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`128`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`==`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`0`{.docutils .literal .notranslate}]{.pre}) measured on a gfx942 GPU
+:::
 
-{#id709 .section}
+::: {#id709 .section}
 #### Resolved issues[\#](#id709 "Link to this heading"){.headerlink}
 
 - Fixed the [`stbsv_strided_batched_64`{.docutils .literal .notranslate}]{.pre} Fortran binding
+:::
 
-{#id710 .section}
+::: {#id710 .section}
 #### Upcoming changes[\#](#id710 "Link to this heading"){.headerlink}
 
 - [`rocblas_Xgemm_kernel_name`{.docutils .literal .notranslate}]{.pre} APIs are deprecated
+:::
+::::::::
 
-:::::
-
-:
-{#rocdbgapi-0-77-0 .section}
+:::: {#rocdbgapi-0-77-0 .section}
 ### **ROCdbgapi** (0.77.0)[\#](#rocdbgapi-0-77-0 "Link to this heading"){.headerlink}
 
-{#id711 .section}
+::: {#id711 .section}
 #### Added[\#](#id711 "Link to this heading"){.headerlink}
 
 - Support for setting precise ALU exception reporting
+:::
+::::
 
-:
-
-{#rocdecode-0-8-0 .section}
+:::::: {#rocdecode-0-8-0 .section}
 ### **rocDecode** (0.8.0)[\#](#rocdecode-0-8-0 "Link to this heading"){.headerlink}
 
-{#id712 .section}
+::: {#id712 .section}
 #### Changed[\#](#id712 "Link to this heading"){.headerlink}
 
 - Clang is now the default CXX compiler.
@@ -9227,24 +11411,27 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - The new minimum supported version of [`va-api`{.docutils .literal .notranslate}]{.pre} is 1.16.
 
 - New build and runtime options have been added to the [`rocDecode-setup.py`{.docutils .literal .notranslate}]{.pre} setup script.
+:::
 
-{#id713 .section}
+::: {#id713 .section}
 #### Removed[\#](#id713 "Link to this heading"){.headerlink}
 
 - Make tests have been removed. CTEST is now used for both Make tests and package tests.
 
 - [`mesa-amdgpu-dri-drivers`{.docutils .literal .notranslate}]{.pre} has been removed as a dependency on RHEL and SLES.
+:::
 
-{#id714 .section}
+::: {#id714 .section}
 #### Resolved issues[\#](#id714 "Link to this heading"){.headerlink}
 
 - Fixed a bug in the size of output streams in the [`videoDecodeBatch`{.docutils .literal .notranslate}]{.pre} sample.
+:::
+::::::
 
-::
-{#rocfft-1-0-31 .section}
+::::: {#rocfft-1-0-31 .section}
 ### **rocFFT** (1.0.31)[\#](#rocfft-1-0-31 "Link to this heading"){.headerlink}
 
-{#id715 .section}
+::: {#id715 .section}
 #### Added[\#](#id715 "Link to this heading"){.headerlink}
 
 - rocfft-test now includes a [`--smoketest`{.docutils .literal .notranslate}]{.pre} option.
@@ -9256,8 +11443,9 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
   - [`rocfft_plan_description_set_comm`{.docutils .literal .notranslate}]{.pre} can be called to provide an MPI communicator to a plan description, which can then be passed to [`rocfft_plan_create`{.docutils .literal .notranslate}]{.pre}. Each rank calls [`rocfft_field_add_brick`{.docutils .literal .notranslate}]{.pre} to specify the layout of data bricks on that rank.
 
   - An MPI library with ROCm acceleration enabled is required at build time and at runtime.
+:::
 
-{#id716 .section}
+::: {#id716 .section}
 #### Changed[\#](#id716 "Link to this heading"){.headerlink}
 
 - Compilation uses amdclang++ instead of hipcc.
@@ -9265,13 +11453,13 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - CLI11 replaces Boost Program Options as the command line parser for clients and samples.
 
 - Building with the address sanitizer option sets xnack+ on relevant GPU architectures and address-sanitizer support is added to runtime-compiled kernels.
+:::
+:::::
 
-::
-
-{#id717 .section}
+:::::: {#id717 .section}
 ### **ROCgdb** (15.2)[\#](#id717 "Link to this heading"){.headerlink}
 
-{#id718 .section}
+::: {#id718 .section}
 #### Added[\#](#id718 "Link to this heading"){.headerlink}
 
 - Support for precise ALU exception reporting for supported architectures. Precise ALU exceptions reporting is controlled with the following commands:
@@ -9279,24 +11467,27 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
   - [`set`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`amdgpu`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`precise-alu-exceptions`{.docutils .literal .notranslate}]{.pre}
 
   - [`show`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`amdgpu`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`precise-alu-exceptions`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id719 .section}
+::: {#id719 .section}
 #### Changed[\#](#id719 "Link to this heading"){.headerlink}
 
 - The [`sysroot`{.docutils .literal .notranslate}]{.pre} or [`solib-search-path`{.docutils .literal .notranslate}]{.pre} settings can now be used to locate files containing GPU code objects when opening a core dump. This allows opening GPU code objects on systems different from the one where the core dump was generated.
+:::
 
-{#id720 .section}
+::: {#id720 .section}
 #### Resolved issues[\#](#id720 "Link to this heading"){.headerlink}
 
 - Fixed possible hangs when opening some AMDGPU core dumps in ROCgdb.
 
 - Addressed cases where the [`roccoremerge`{.docutils .literal .notranslate}]{.pre} utility improperly handled LOAD segment copy from the host core dump to the combined core dump.
+:::
+::::::
 
-::
-{#id721 .section}
+::::: {#id721 .section}
 ### **ROCm Compute Profiler** (3.0.0)[\#](#id721 "Link to this heading"){.headerlink}
 
-{#id722 .section}
+::: {#id722 .section}
 #### Changed[\#](#id722 "Link to this heading"){.headerlink}
 
 - Renamed to ROCm Compute Profiler from Omniperf.
@@ -9306,21 +11497,21 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
   - New repository: [ROCm/rocprofiler-compute](https://github.com/ROCm/rocprofiler-compute){.github .reference .external}
 
   - New binary name: [`rocprof-compute`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id723 .section}
+::: {#id723 .section}
 #### Known issues[\#](#id723 "Link to this heading"){.headerlink}
 
 - See [ROCm Compute Profiler post-upgrade](https://github.com/ROCm/ROCm/issues/4082){.reference .external}.
 
 - See [ROCm Compute Profiler CTest failure in CI](https://github.com/ROCm/ROCm/issues/4085){.reference .external}.
+:::
+:::::
 
-::
-
-::
-{#id724 .section}
+::::: {#id724 .section}
 ### **ROCm Data Center Tool** (0.3.0)[\#](#id724 "Link to this heading"){.headerlink}
 
-{#id725 .section}
+::: {#id725 .section}
 #### Added[\#](#id725 "Link to this heading"){.headerlink}
 
 - RVS integration
@@ -9330,19 +11521,19 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - [`--version`{.docutils .literal .notranslate}]{.pre} command
 
 - [`XGMI_TOTAL_READ_KB`{.docutils .literal .notranslate}]{.pre} and [`XGMI_TOTAL_WRITE_KB`{.docutils .literal .notranslate}]{.pre} monitoring metrics
+:::
 
-{#id726 .section}
+::: {#id726 .section}
 #### Known issues[\#](#id726 "Link to this heading"){.headerlink}
 
 - See [ROCm Data Center Tool incorrect RHEL9 package version](https://github.com/ROCm/ROCm/issues/4089){.reference .external}.
+:::
+:::::
 
-::
-
-::::::
-{#rocm-smi-7-4-0 .section}
+::::::::: {#rocm-smi-7-4-0 .section}
 ### **ROCm SMI** (7.4.0)[\#](#rocm-smi-7-4-0 "Link to this heading"){.headerlink}
 
-{#id727 .section}
+::: {#id727 .section}
 #### Added[\#](#id727 "Link to this heading"){.headerlink}
 
 - **Added [`rsmi_dev_memory_partition_capabilities_get`{.docutils .literal .notranslate}]{.pre} which returns driver memory partition capablities.**\
@@ -9351,8 +11542,9 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - Support for GPU metrics 1.6 to [`rsmi_dev_gpu_metrics_info_get()`{.docutils .literal .notranslate}]{.pre}. Updated [`rsmi_dev_gpu_metrics_info_get()`{.docutils .literal .notranslate}]{.pre} and structure [`rsmi_gpu_metrics_t`{.docutils .literal .notranslate}]{.pre} to include new fields for PVIOL / TVIOL, XCP (Graphics Compute Partitions) stats, and [`pcie_lc_perf_other_end_recovery`{.docutils .literal .notranslate}]{.pre}.
 
 - Ability to view raw GPU metrics using [`rocm-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--showmetrics`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id728 .section}
+::: {#id728 .section}
 #### Changed[\#](#id728 "Link to this heading"){.headerlink}
 
 - Added back in C++ tests for [`memorypartition_read_write`{.docutils .literal .notranslate}]{.pre}
@@ -9360,8 +11552,9 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
 - Updated [`rsmi_dev_memory_partition_set`{.docutils .literal .notranslate}]{.pre} to not return until a successful restart of AMD GPU Driver.
 
 - All APIs now have the ability to catch driver reporting invalid arguments.
+:::
 
-{#removals .section}
+::: {#removals .section}
 #### Removals[\#](#removals "Link to this heading"){.headerlink}
 
 - Removed [`--resetcomputepartition`{.docutils .literal .notranslate}]{.pre}, and [`--resetmemorypartition`{.docutils .literal .notranslate}]{.pre} options and associated APIs.
@@ -9369,31 +11562,31 @@ In ROCm 6.3.0, the hipRAND package version is incorrectly set to [`2.11.0`{.docu
   - This change is part of the partition feature redesign.
 
   - The related APIs [`rsmi_dev_compute_partition_reset()`{.docutils .literal .notranslate}]{.pre} and [`rsmi_dev_memory_partition_reset()`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id729 .section}
+::: {#id729 .section}
 #### Resolved issues[\#](#id729 "Link to this heading"){.headerlink}
 
 - Fixed [`rsmi_dev_target_graphics_version_get`{.docutils .literal .notranslate}]{.pre}, [`rocm-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--showhw`{.docutils .literal .notranslate}]{.pre}, and [`rocm-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--showprod`{.docutils .literal .notranslate}]{.pre} not displaying properly for MI2x or Navi 3x ASICs.
+:::
 
-:
-{#id730 .section}
+:::: {#id730 .section}
 #### Upcoming changes[\#](#id730 "Link to this heading"){.headerlink}
 
 - C++ tests for [`memorypartition_read_write`{.docutils .literal .notranslate}]{.pre} are to be re-enabled in a future ROCm release.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/6.3.x/CHANGELOG.md){.reference .external} for more details and examples.
+:::
+::::
+:::::::::
 
-:
-::::::
-
-::
-{#id731 .section}
+::::: {#id731 .section}
 ### **ROCm Systems Profiler** (0.1.0)[\#](#id731 "Link to this heading"){.headerlink}
 
-{#id732 .section}
+::: {#id732 .section}
 #### Changed[\#](#id732 "Link to this heading"){.headerlink}
 
 - Renamed to ROCm Systems Profiler from Omnitrace.
@@ -9405,37 +11598,41 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/6.3.
   - Reset the version to [`0.1.0`{.docutils .literal .notranslate}]{.pre}
 
   - New binary prefix: [`rocprof-sys-*`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id733 .section}
+::: {#id733 .section}
 #### Known issues[\#](#id733 "Link to this heading"){.headerlink}
 
 - See [ROCm Systems Profiler post-upgrade](https://github.com/ROCm/ROCm/issues/4083){.reference .external}.
+:::
+:::::
 
-::
-
-{#id734 .section}
+:::::: {#id734 .section}
 ### **ROCm Validation Suite** (1.1.0)[\#](#id734 "Link to this heading"){.headerlink}
 
-{#id735 .section}
+::: {#id735 .section}
 #### Added[\#](#id735 "Link to this heading"){.headerlink}
 
 - Support for hipBLASLT blas library and option to select blas library in [`conf`{.docutils .literal .notranslate}]{.pre} file.
+:::
 
-{#id736 .section}
+::: {#id736 .section}
 #### Changed[\#](#id736 "Link to this heading"){.headerlink}
 
 - Babel parameters made runtime configurable.
+:::
 
-{#id737 .section}
+::: {#id737 .section}
 #### Known issues[\#](#id737 "Link to this heading"){.headerlink}
 
 - See [ROCm Validation Suite needs specified configuration file](https://github.com/ROCm/ROCm/issues/4090){.reference .external}.
+:::
+::::::
 
-::::
-{#rocprim-3-3-0 .section}
+::::::: {#rocprim-3-3-0 .section}
 ### **rocPRIM** (3.3.0)[\#](#rocprim-3-3-0 "Link to this heading"){.headerlink}
 
-{#id738 .section}
+::: {#id738 .section}
 #### Added[\#](#id738 "Link to this heading"){.headerlink}
 
 - The [`--test`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`smoke`{.docutils .literal .notranslate}]{.pre} option has been added to [`rtest.py`{.docutils .literal .notranslate}]{.pre}. When [`rtest.py`{.docutils .literal .notranslate}]{.pre} is called with this option it runs a subset of tests such that the total test time is 5 minutes. Use [`python3`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`./rtest.py`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--test`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`smoke`{.docutils .literal .notranslate}]{.pre} or [`python3`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`./rtest.py`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-t`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`smoke`{.docutils .literal .notranslate}]{.pre} to run the smoke test.
@@ -9453,8 +11650,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/6.3.
 - Added deterministic (bitwise reproducible) algorithm variants [`rocprim::deterministic_inclusive_scan`{.docutils .literal .notranslate}]{.pre}, [`rocprim::deterministic_exclusive_scan`{.docutils .literal .notranslate}]{.pre}, [`rocprim::deterministic_inclusive_scan_by_key`{.docutils .literal .notranslate}]{.pre}, [`rocprim::deterministic_exclusive_scan_by_key`{.docutils .literal .notranslate}]{.pre}, and [`rocprim::deterministic_reduce_by_key`{.docutils .literal .notranslate}]{.pre}. These provide run-to-run stable results with non-associative operators such as float operations, at the cost of reduced performance.
 
 - Added a parallel [`partial_sort`{.docutils .literal .notranslate}]{.pre} and [`partial_sort_copy`{.docutils .literal .notranslate}]{.pre} device functions similar to [`std::partial_sort`{.docutils .literal .notranslate}]{.pre} and [`std::partial_sort_copy`{.docutils .literal .notranslate}]{.pre}. [`partial_sort`{.docutils .literal .notranslate}]{.pre} and [`partial_sort_copy`{.docutils .literal .notranslate}]{.pre} arrange elements such that the elements are in the same order as a sorted list up to and including the middle index.
+:::
 
-{#id739 .section}
+::: {#id739 .section}
 #### Changed[\#](#id739 "Link to this heading"){.headerlink}
 
 - Changed the default value of [`rmake.py`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-a`{.docutils .literal .notranslate}]{.pre} to [`default_gpus`{.docutils .literal .notranslate}]{.pre}. This is equivalent to [`gfx906:xnack-,gfx1030,gfx1100,gfx1101,gfx1102`{.docutils .literal .notranslate}]{.pre}.
@@ -9462,13 +11660,15 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/6.3.
 - Modified the input size in device adjacent difference benchmarks. Observed performance with these benchmarks might be different.
 
 - Changed the default seed for [`device_benchmark_segmented_reduce`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id740 .section}
+::: {#id740 .section}
 #### Removed[\#](#id740 "Link to this heading"){.headerlink}
 
 - [`rocprim::thread_load()`{.docutils .literal .notranslate}]{.pre} and [`rocprim::thread_store()`{.docutils .literal .notranslate}]{.pre} have been deprecated. Use [`dereference()`{.docutils .literal .notranslate}]{.pre} instead.
+:::
 
-{#id741 .section}
+::: {#id741 .section}
 #### Resolved issues[\#](#id741 "Link to this heading"){.headerlink}
 
 - Fixed an issue in [`rmake.py`{.docutils .literal .notranslate}]{.pre} where the list storing cmake options would contain individual characters instead of a full string of options.
@@ -9494,14 +11694,13 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/6.3.
 - Fixed memory leaks in unit tests due to missing calls to [`hipFree()`{.docutils .literal .notranslate}]{.pre} and the incorrect use of hipGraphs.
 
 - Fixed an issue where certain inputs to [`block_sort_merge()`{.docutils .literal .notranslate}]{.pre}, [`device_merge_sort_merge_path()`{.docutils .literal .notranslate}]{.pre}, [`device_merge()`{.docutils .literal .notranslate}]{.pre}, and [`warp_sort_stable()`{.docutils .literal .notranslate}]{.pre} caused an assertion error during the call to [`serial_merge()`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::::
 
-::::
-
-:::::
-{#id742 .section}
+:::::::: {#id742 .section}
 ### **ROCProfiler** (2.0.0)[\#](#id742 "Link to this heading"){.headerlink}
 
-{#id743 .section}
+::: {#id743 .section}
 #### Added[\#](#id743 "Link to this heading"){.headerlink}
 
 - JSON output plugin for [`rocprofv2`{.docutils .literal .notranslate}]{.pre}. The JSON file matches Google Trace Format making it easy to load on Perfetto, Chrome tracing, or Speedscope. For Speedscope, use [`--disable-json-data-flows`{.docutils .literal .notranslate}]{.pre} option as speedscope doesn't work with data flows.
@@ -9517,8 +11716,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/6.3.
 - Support for kernel name filtering in [`rocprofv2`{.docutils .literal .notranslate}]{.pre}
 
 - Barrier bit to read and stop packets
+:::
 
-{#id744 .section}
+::: {#id744 .section}
 #### Changed[\#](#id744 "Link to this heading"){.headerlink}
 
 - Extended lifetime for proxy queues
@@ -9528,20 +11728,23 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/6.3.
 - [`libpciaccess-dev`{.docutils .literal .notranslate}]{.pre} functions now load with [`dlopen`{.docutils .literal .notranslate}]{.pre}
 
 - [`PcieAccessApi*`{.docutils .literal .notranslate}]{.pre} api and [`void*`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`libpciaccess_handle`{.docutils .literal .notranslate}]{.pre} are now initialized to [`nullptr`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id745 .section}
+::: {#id745 .section}
 #### Removed[\#](#id745 "Link to this heading"){.headerlink}
 
 - Obsolete BSD and GPL licenses
 
 - [`libsystemd-dev`{.docutils .literal .notranslate}]{.pre} from [`CMakeLists.txt`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id746 .section}
+::: {#id746 .section}
 #### Optimized[\#](#id746 "Link to this heading"){.headerlink}
 
 - ROCProfiler Performance improved to reduce profiling time for large workloads of counter collection
+:::
 
-{#id747 .section}
+::: {#id747 .section}
 #### Resolved issues[\#](#id747 "Link to this heading"){.headerlink}
 
 - Bandwidth measurement in AMD Instinct MI300 GPU
@@ -9569,14 +11772,13 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/6.3.
 - The hang issue of [`ProfilerAPITest`{.docutils .literal .notranslate}]{.pre} of [`runFeatureTests`{.docutils .literal .notranslate}]{.pre} on AMD Instinct MI300 GPU
 
 - Segmentation fault on Navi32
+:::
+::::::::
 
-:::::
-
-::::
-{#id748 .section}
+::::::: {#id748 .section}
 ### **ROCprofiler-SDK** (0.5.0)[\#](#id748 "Link to this heading"){.headerlink}
 
-{#id749 .section}
+::: {#id749 .section}
 #### Added[\#](#id749 "Link to this heading"){.headerlink}
 
 - Start and end timestamp columns to the counter collection [`csv`{.docutils .literal .notranslate}]{.pre} output
@@ -9584,8 +11786,9 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/6.3.
 - Check to force tools to initialize context id with zero
 
 - Support to specify hardware counters for collection using [`rocprofv3`{.docutils .literal .notranslate}]{.pre} as [`rocprofv3`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--pmc`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`[COUNTER`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`[COUNTER`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`...]]`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id750 .section}
+::: {#id750 .section}
 #### Changed[\#](#id750 "Link to this heading"){.headerlink}
 
 - [`--marker-trace`{.docutils .literal .notranslate}]{.pre} option for [`rocprofv3`{.docutils .literal .notranslate}]{.pre} now supports the legacy ROC-TX library [`libroctx64.so`{.docutils .literal .notranslate}]{.pre} when the application is linked against the new library [`librocprofiler-sdk-roctx.so`{.docutils .literal .notranslate}]{.pre}
@@ -9596,36 +11799,34 @@ See the full [ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/6.3.
 
 - Changed naming of "agent profiling" to a more descriptive "device counting service". To convert existing tool or user code to the new name, use the following sed:
 
-  :
-{.highlight-default .notranslate}
-  
-highlight
+  :::: {.highlight-default .notranslate}
+  ::: highlight
       find . -type f -exec sed -i 's/rocprofiler_agent_profile_callback_t/rocprofiler_device_counting_service_callback_t/g; s/rocprofiler_configure_agent_profile_counting_service/rocprofiler_configure_device_counting_service/g; s/agent_profile.h/device_counting_service.h/g; s/rocprofiler_sample_agent_profile_counting_service/rocprofiler_sample_device_counting_service/g' {} +
-  
-  :
+  :::
+  ::::
 
 - Changed naming of "dispatch profiling service" to a more descriptive "dispatch counting service". To convert existing tool or user code to the new names, the following sed can be used:
 
-  :
-{.highlight-default .notranslate}
-  
-highlight
+  :::: {.highlight-default .notranslate}
+  ::: highlight
       -type f -exec sed -i -e 's/dispatch_profile_counting_service/dispatch_counting_service/g' -e 's/dispatch_profile.h/dispatch_counting_service.h/g' -e 's/rocprofiler_profile_counting_dispatch_callback_t/rocprofiler_dispatch_counting_service_callback_t/g' -e 's/rocprofiler_profile_counting_dispatch_data_t/rocprofiler_dispatch_counting_service_data_t/g'  -e 's/rocprofiler_profile_counting_dispatch_record_t/rocprofiler_dispatch_counting_service_record_t/g' {} +
-  
-  :
+  :::
+  ::::
 
 - [`FETCH_SIZE`{.docutils .literal .notranslate}]{.pre} metric on gfx94x now uses [`TCC_BUBBLE`{.docutils .literal .notranslate}]{.pre} for 128B reads
 
 - PMC dispatch-based counter collection serialization is now per-device instead of being global across all devices
+:::
 
-{#id751 .section}
+::: {#id751 .section}
 #### Removed[\#](#id751 "Link to this heading"){.headerlink}
 
 - [`gfx8`{.docutils .literal .notranslate}]{.pre} metric definitions
 
 - [`rocprofv3`{.docutils .literal .notranslate}]{.pre} installation from [`sbin`{.docutils .literal .notranslate}]{.pre} directory
+:::
 
-{#id752 .section}
+::: {#id752 .section}
 #### Resolved issues[\#](#id752 "Link to this heading"){.headerlink}
 
 - Introduced subdirectory creation when [`rocprofv3`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--output-file`{.docutils .literal .notranslate}]{.pre} used to specify a folder path
@@ -9647,14 +11848,13 @@ highlight
 - Introduced fix to handle a range of values for [`select()`{.docutils .literal .notranslate}]{.pre} dimension in expressions parser
 
 - Fixed Navi3x kernel tracing issues by setting the conditional [`aql::set_profiler_active_on_queue`{.docutils .literal .notranslate}]{.pre} only when counter collection is registered
+:::
+:::::::
 
-::::
-
-:::::
-{#rocpydecode-0-2-0 .section}
+:::::::: {#rocpydecode-0-2-0 .section}
 ### **rocPyDecode** (0.2.0)[\#](#rocpydecode-0-2-0 "Link to this heading"){.headerlink}
 
-{#id753 .section}
+::: {#id753 .section}
 #### Added[\#](#id753 "Link to this heading"){.headerlink}
 
 - RGB and YUV pytorch tensors
@@ -9662,18 +11862,21 @@ highlight
 - Python distribution wheel ([`.whl`{.docutils .literal .notranslate}]{.pre})
 
 - Multiple usecase samples
+:::
 
-{#id754 .section}
+::: {#id754 .section}
 #### Changed[\#](#id754 "Link to this heading"){.headerlink}
 
 - Clang replaces [`hipcc`{.docutils .literal .notranslate}]{.pre} as the default CXX compiler.
+:::
 
-{#id755 .section}
+::: {#id755 .section}
 #### Removed[\#](#id755 "Link to this heading"){.headerlink}
 
 - Make tests have been removed. CTEST is now used for both Make tests and package tests.
+:::
 
-{#id756 .section}
+::: {#id756 .section}
 #### Optimized[\#](#id756 "Link to this heading"){.headerlink}
 
 - Setup script - build and runtime install options
@@ -9681,18 +11884,19 @@ highlight
 - Prerequisite installation helper Python scripts
 
 - Same GPU memory viewed as pytorch tensor
+:::
 
-{#id757 .section}
+::: {#id757 .section}
 #### Resolved issues[\#](#id757 "Link to this heading"){.headerlink}
 
 - Fixed setup issues.
+:::
+::::::::
 
-:::::
-
-{#rocrand-3-2-0 .section}
+:::::: {#rocrand-3-2-0 .section}
 ### **rocRAND** (3.2.0)[\#](#rocrand-3-2-0 "Link to this heading"){.headerlink}
 
-{#id758 .section}
+::: {#id758 .section}
 #### Added[\#](#id758 "Link to this heading"){.headerlink}
 
 - Added host generator for MT19937
@@ -9700,24 +11904,27 @@ highlight
 - Support for [`rocrand_generate_poisson`{.docutils .literal .notranslate}]{.pre} in hipGraphs
 
 - Added [`engine`{.docutils .literal .notranslate}]{.pre}, [`distribution`{.docutils .literal .notranslate}]{.pre}, [`mode`{.docutils .literal .notranslate}]{.pre}, [`throughput_gigabytes_per_second`{.docutils .literal .notranslate}]{.pre}, and [`lambda`{.docutils .literal .notranslate}]{.pre} columns for the csv format in [`benchmark_rocrand_host_api`{.docutils .literal .notranslate}]{.pre} and [`benchmark_rocrand_device_api`{.docutils .literal .notranslate}]{.pre}. To see these new columns, set [`--benchmark_format=csv`{.docutils .literal .notranslate}]{.pre} or [`--benchmark_out_format=csv`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--benchmark_out="outName.csv"`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id759 .section}
+::: {#id759 .section}
 #### Changed[\#](#id759 "Link to this heading"){.headerlink}
 
 - Updated the default value for the [`-a`{.docutils .literal .notranslate}]{.pre} argument from [`rmake.py`{.docutils .literal .notranslate}]{.pre} to [`gfx906:xnack-,gfx1030,gfx1100,gfx1101,gfx1102`{.docutils .literal .notranslate}]{.pre}.
 
 - [`rocrand_discrete`{.docutils .literal .notranslate}]{.pre} for MTGP32, LFSR113 and ThreeFry generators now uses the alias method, which is faster than binary search in CDF.
+:::
 
-{#id760 .section}
+::: {#id760 .section}
 #### Resolved issues[\#](#id760 "Link to this heading"){.headerlink}
 
 - Fixed an issue in [`rmake.py`{.docutils .literal .notranslate}]{.pre} where the list storing the CMake options would contain individual characters instead of a full string of options.
+:::
+::::::
 
-:::::
-{#rocsolver-3-27-0 .section}
+:::::::: {#rocsolver-3-27-0 .section}
 ### **rocSOLVER** (3.27.0)[\#](#rocsolver-3-27-0 "Link to this heading"){.headerlink}
 
-{#id761 .section}
+::: {#id761 .section}
 #### Added[\#](#id761 "Link to this heading"){.headerlink}
 
 - 64-bit APIs for existing functions:
@@ -9737,13 +11944,15 @@ highlight
   - [`POTRF_64`{.docutils .literal .notranslate}]{.pre} (with batched and strided_batched versions)
 
   - [`POTRS_64`{.docutils .literal .notranslate}]{.pre} (with batched and strided_batched versions)
+:::
 
-{#id762 .section}
+::: {#id762 .section}
 #### Changed[\#](#id762 "Link to this heading"){.headerlink}
 
 - The rocSPARSE library is now an optional dependency at runtime. If rocSPARSE is not available, rocSOLVER's sparse refactorization and solvers functions will return [`rocblas_status_not_implemented`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id763 .section}
+::: {#id763 .section}
 #### Optimized[\#](#id763 "Link to this heading"){.headerlink}
 
 - Improved the performance of LARFG, LARF, and downstream functions such as GEQR2 and GEQRF on wave64 architectures
@@ -9751,8 +11960,9 @@ highlight
 - Improved the performance of BDSQR and GESVD
 
 - Improved the performance of STEDC and divide and conquer Eigensolvers
+:::
 
-{#id764 .section}
+::: {#id764 .section}
 #### Resolved issues[\#](#id764 "Link to this heading"){.headerlink}
 
 - Fixed a memory allocation issue in SYEVJ that could cause failures on clients that manage their own memory.
@@ -9762,36 +11972,39 @@ highlight
 - Fixed a convergence issue in STEIN stemming from numerical orthogonality of the initial choice of eigenvectors.
 
 - Fixed a synchronization issue in STEIN.
+:::
 
-{#id765 .section}
+::: {#id765 .section}
 #### Known issues[\#](#id765 "Link to this heading"){.headerlink}
 
 - A known issue in STEBZ can lead to errors in routines based on bisection to compute eigenvalues for symmetric/Hermitian matrices (for example, SYEVX/HEEVX and SYGVX/HEGVX), as well as singular values (for example, BDSVDX and GESVDX).
+:::
+::::::::
 
-:::::
-
-::::
-{#rocsparse-3-3-0 .section}
+::::::: {#rocsparse-3-3-0 .section}
 ### **rocSPARSE** (3.3.0)[\#](#rocsparse-3-3-0 "Link to this heading"){.headerlink}
 
-{#id766 .section}
+::: {#id766 .section}
 #### Added[\#](#id766 "Link to this heading"){.headerlink}
 
 - [`rocsparse_create_extract_descr`{.docutils .literal .notranslate}]{.pre}, [`rocsparse_destroy_extract_descr`{.docutils .literal .notranslate}]{.pre}, [`rocsparse_extract_buffer_size`{.docutils .literal .notranslate}]{.pre}, [`rocsparse_extract_nnz`{.docutils .literal .notranslate}]{.pre}, and [`rocsparse_extract`{.docutils .literal .notranslate}]{.pre} APIs to allow extraction of the upper or lower part of sparse CSR or CSC matrices.
+:::
 
-{#id767 .section}
+::: {#id767 .section}
 #### Changed[\#](#id767 "Link to this heading"){.headerlink}
 
 - Change the default compiler from hipcc to amdclang in install script and CMake files.
 
 - Change address sanitizer build targets so that only gfx908:xnack+, gfx90a:xnack+, gfx940:xnack+, gfx941:xnack+, and gfx942:xnack+ are built when [`BUILD_ADDRESS_SANITIZER=ON`{.docutils .literal .notranslate}]{.pre} is configured.
+:::
 
-{#id768 .section}
+::: {#id768 .section}
 #### Optimized[\#](#id768 "Link to this heading"){.headerlink}
 
 - Improved user documentation
+:::
 
-{#id769 .section}
+::: {#id769 .section}
 #### Resolved issues[\#](#id769 "Link to this heading"){.headerlink}
 
 - Fixed the [`csrmm`{.docutils .literal .notranslate}]{.pre} merge path algorithm so that diagonal is clamped to the correct range.
@@ -9805,13 +12018,13 @@ highlight
 - Fixed [`rocsparse_Xgemmi`{.docutils .literal .notranslate}]{.pre} failures when the y grid dimension is too large. This occurred when [`n`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`>=`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`65536`{.docutils .literal .notranslate}]{.pre}.
 
 - Fixed the gfortran dependency for the Azure Linux operating system.
+:::
+:::::::
 
-::::
-
-{#rocthrust-3-2-0 .section}
+:::::: {#rocthrust-3-2-0 .section}
 ### **rocThrust** (3.2.0)[\#](#rocthrust-3-2-0 "Link to this heading"){.headerlink}
 
-{#id770 .section}
+::: {#id770 .section}
 #### Added[\#](#id770 "Link to this heading"){.headerlink}
 
 - Merged changes from upstream CCCL/thrust 2.3.2
@@ -9819,15 +12032,17 @@ highlight
   - Only the NVIDIA backend uses [`tuple`{.docutils .literal .notranslate}]{.pre} and [`pair`{.docutils .literal .notranslate}]{.pre} types from libcu++, other backends continue to use the original Thrust implementations and hence do not require libcu++ (CCCL) as a dependency.
 
 - Added the [`thrust::hip::par_det`{.docutils .literal .notranslate}]{.pre} execution policy to enable bitwise reproducibility on algorithms that are not bitwise reproducible by default.
+:::
 
-{#id771 .section}
+::: {#id771 .section}
 #### Changed[\#](#id771 "Link to this heading"){.headerlink}
 
 - Changed the default value of [`rmake.py`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-a`{.docutils .literal .notranslate}]{.pre} to [`default_gpus`{.docutils .literal .notranslate}]{.pre}. This is equivalent to [`gfx906:xnack-,gfx1030,gfx1100,gfx1101,gfx1102`{.docutils .literal .notranslate}]{.pre}.
 
 - Enabled the upstream (thrust) test suite for execution by default. It can be disabled by using the [`-DENABLE_UPSTREAM_TESTS=OFF`{.docutils .literal .notranslate}]{.pre} cmake option.
+:::
 
-{#id772 .section}
+::: {#id772 .section}
 #### Resolved issues[\#](#id772 "Link to this heading"){.headerlink}
 
 - Fixed an issue in [`rmake.py`{.docutils .literal .notranslate}]{.pre} where the list storing cmake options would contain individual characters instead of a full string of options.
@@ -9835,16 +12050,19 @@ highlight
 - Fixed the HIP backend not passing [`TestCopyIfNonTrivial`{.docutils .literal .notranslate}]{.pre} from the upstream (thrust) test suite.
 
 - Fixed tests failing when compiled with [`-D_GLIBCXX_ASSERTIONS=ON`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::::
 
-{#rocwmma-1-6-0 .section}
+:::::: {#rocwmma-1-6-0 .section}
 ### **rocWMMA** (1.6.0)[\#](#rocwmma-1-6-0 "Link to this heading"){.headerlink}
 
-{#id773 .section}
+::: {#id773 .section}
 #### Added[\#](#id773 "Link to this heading"){.headerlink}
 
 - Added OCP [`F8`{.docutils .literal .notranslate}]{.pre}/[`BF8`{.docutils .literal .notranslate}]{.pre} datatype support
+:::
 
-{#id774 .section}
+::: {#id774 .section}
 #### Changed[\#](#id774 "Link to this heading"){.headerlink}
 
 - Optimized some aos\<-\>soa transforms with half-rotation offsets
@@ -9856,8 +12074,9 @@ highlight
 - Updated the default architecture targets for ASAN builds
 
 - Updated the actor-critic implementation
+:::
 
-{#id775 .section}
+::: {#id775 .section}
 #### Resolved issues[\#](#id775 "Link to this heading"){.headerlink}
 
 - Fixed a bug in [`F64`{.docutils .literal .notranslate}]{.pre} validation due to faulty typecasting
@@ -9865,12 +12084,13 @@ highlight
 - Fixed a bug causing runtime compilation errors with hipRTC
 
 - Various documentation updates and fixes
+:::
+::::::
 
-:::::::
-{#rpp-1-9-1 .section}
+:::::::::: {#rpp-1-9-1 .section}
 ### **RPP** (1.9.1)[\#](#rpp-1-9-1 "Link to this heading"){.headerlink}
 
-{#id776 .section}
+::: {#id776 .section}
 #### Added[\#](#id776 "Link to this heading"){.headerlink}
 
 - RPP Glitch and RPP Pixelate have been added to the HOST and HIP backend.
@@ -9886,25 +12106,29 @@ highlight
   - To Decibels
 
   - Non-silent region
+:::
 
-{#id777 .section}
+::: {#id777 .section}
 #### Changed[\#](#id777 "Link to this heading"){.headerlink}
 
 - Test prerequisites have been updated.
 
 - AMD advanced build flag.
+:::
 
-{#id778 .section}
+::: {#id778 .section}
 #### Removed[\#](#id778 "Link to this heading"){.headerlink}
 
 - Older versions of TurboJPEG have been removed.
+:::
 
-{#id779 .section}
+::: {#id779 .section}
 #### Optimized[\#](#id779 "Link to this heading"){.headerlink}
 
 - Updated the test suite.
+:::
 
-{#id780 .section}
+::: {#id780 .section}
 #### Resolved issues[\#](#id780 "Link to this heading"){.headerlink}
 
 - macOS build
@@ -9914,24 +12138,25 @@ highlight
 - Copy: bugfix for [`NCDHW`{.docutils .literal .notranslate}]{.pre} layout
 
 - MIVisionX compatibility fix: Resample and pre-emphasis filter
+:::
 
-{#id781 .section}
+::: {#id781 .section}
 #### Known issues[\#](#id781 "Link to this heading"){.headerlink}
 
 - Package installation only supports the HIP backend.
+:::
 
-{#id782 .section}
+::: {#id782 .section}
 #### Upcoming changes[\#](#id782 "Link to this heading"){.headerlink}
 
 - Optimized audio augmentations
+:::
+::::::::::
 
-:::::::
-
-:::::
-{#tensile-4-42-0 .section}
+:::::::: {#tensile-4-42-0 .section}
 ### **Tensile** (4.42.0)[\#](#tensile-4-42-0 "Link to this heading"){.headerlink}
 
-{#id783 .section}
+::: {#id783 .section}
 #### Added[\#](#id783 "Link to this heading"){.headerlink}
 
 - Testing and documentation for [`MasterSolutionLibrary.ArchitectureIndexMap`{.docutils .literal .notranslate}]{.pre} and [`remapSolutionIndicesStartingFrom`{.docutils .literal .notranslate}]{.pre}
@@ -9969,8 +12194,9 @@ highlight
   - Using glob to find logic files in [`TensileCreateLibrary`{.docutils .literal .notranslate}]{.pre}
 
   - Function to confirm supported compiler rather than raw logic
+:::
 
-{#id784 .section}
+::: {#id784 .section}
 #### Changed[\#](#id784 "Link to this heading"){.headerlink}
 
 - Improved rocBLAS build output by allowing warning suppression, ignoring developer warnings, displaying progress bar and quiet printing
@@ -10020,8 +12246,9 @@ highlight
 - Cleaned up CMake to avoid redundant work during client builds
 
 - Updated Stream-K debug settings
+:::
 
-{#id785 .section}
+::: {#id785 .section}
 #### Removed[\#](#id785 "Link to this heading"){.headerlink}
 
 - Deprecated flag from CI profiling job
@@ -10033,8 +12260,9 @@ highlight
 - Deprecated [`package-library`{.docutils .literal .notranslate}]{.pre} option
 
 - Duplicate [`which`{.docutils .literal .notranslate}]{.pre} function and minor cleanup
+:::
 
-{#id786 .section}
+::: {#id786 .section}
 #### Optimized[\#](#id786 "Link to this heading"){.headerlink}
 
 - To optimize the performance of Stream-K kernels:
@@ -10042,8 +12270,9 @@ highlight
   - Introduced analytical grid size prediction model
 
   - Remapped XCC-based workgroup
+:::
 
-{#id787 .section}
+::: {#id787 .section}
 #### Resolved issues[\#](#id787 "Link to this heading"){.headerlink}
 
 - Fixed stream-K XCC configs for gfx942
@@ -10067,73 +12296,71 @@ highlight
 - Used conditional imports for new dependencies to fix yaml [`CSafe`{.docutils .literal .notranslate}]{.pre} load and dump import and rich terminal print import
 
 - Fixed comments on [`scalarStaticDivideAndRemainder`{.docutils .literal .notranslate}]{.pre}
+:::
+::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::
-{#rocm-6-2-4 .section}
+:::::::::: {#rocm-6-2-4 .section}
 ## ROCm 6.2.4[\#](#rocm-6-2-4 "Link to this heading"){.headerlink}
 
 See the [ROCm 6.2.4 release notes](https://rocm.docs.amd.com/en/docs-6.2.4/about/release-notes.html){.reference .external} for a complete overview of this release.
 
-:
-{#amd-smi-24-6-3 .section}
+:::: {#amd-smi-24-6-3 .section}
 ### **AMD SMI** (24.6.3)[\#](#amd-smi-24-6-3 "Link to this heading"){.headerlink}
 
-{#id788 .section}
+::: {#id788 .section}
 #### Resolved issues[\#](#id788 "Link to this heading"){.headerlink}
 
 - Fixed support for the API calls [`amdsmi_get_gpu_process_isolation`{.docutils .literal .notranslate}]{.pre} and [`amdsmi_clean_gpu_local_data`{.docutils .literal .notranslate}]{.pre}, along with the [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`set`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--process-isolation`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`<0`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`or`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`1>`{.docutils .literal .notranslate}]{.pre} command. See issue [#3500](https://github.com/ROCm/ROCm/issues/3500){.reference .external} on GitHub.
+:::
+::::
 
-:
-
-::
-{#rocfft-1-0-30 .section}
+::::: {#rocfft-1-0-30 .section}
 ### **rocFFT** (1.0.30)[\#](#rocfft-1-0-30 "Link to this heading"){.headerlink}
 
-{#id789 .section}
+::: {#id789 .section}
 #### Optimized[\#](#id789 "Link to this heading"){.headerlink}
 
 - Implemented 1D kernels for factorizable sizes greater than 1024 and less than 2048.
+:::
 
-{#id790 .section}
+::: {#id790 .section}
 #### Resolved issues[\#](#id790 "Link to this heading"){.headerlink}
 
 - Fixed plan creation failure on some even-length real-complex transforms that use Bluestein's algorithm.
+:::
+:::::
 
-::
-
-:
-{#rocsolver-3-26-2 .section}
+:::: {#rocsolver-3-26-2 .section}
 ### **rocSOLVER** (3.26.2)[\#](#rocsolver-3-26-2 "Link to this heading"){.headerlink}
 
-{#id791 .section}
+::: {#id791 .section}
 #### Resolved issues[\#](#id791 "Link to this heading"){.headerlink}
 
 - Fixed synchronization issue in STEIN.
+:::
+::::
+::::::::::
 
-:
-:::::::
-
-::::::::::::::::::::::::::
-{#rocm-6-2-2 .section}
+::::::::::::::::::::::::::::: {#rocm-6-2-2 .section}
 ## ROCm 6.2.2[\#](#rocm-6-2-2 "Link to this heading"){.headerlink}
 
-{#id792 .section}
+:::::: {#id792 .section}
 ### **AMD SMI** (24.6.3)[\#](#id792 "Link to this heading"){.headerlink}
 
-{#id793 .section}
+::: {#id793 .section}
 #### Changed[\#](#id793 "Link to this heading"){.headerlink}
 
 - Added [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`static`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--ras`{.docutils .literal .notranslate}]{.pre} on Guest VMs. Guest VMs can view enabled/disabled RAS features on Host cards.
+:::
 
-{#id794 .section}
+::: {#id794 .section}
 #### Removed[\#](#id794 "Link to this heading"){.headerlink}
 
 - Removed [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`metric`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--ecc`{.docutils .literal .notranslate}]{.pre} & [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`metric`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--ecc-blocks`{.docutils .literal .notranslate}]{.pre} on Guest VMs. Guest VMs do not support getting current ECC counts from the Host cards.
+:::
 
-{#id795 .section}
+::: {#id795 .section}
 #### Resolved issues[\#](#id795 "Link to this heading"){.headerlink}
 
 - Fixed TypeError in [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`process`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-G`{.docutils .literal .notranslate}]{.pre}.
@@ -10143,25 +12370,25 @@ See the [ROCm 6.2.4 release notes](https://rocm.docs.amd.com/en/docs-6.2.4/about
 - Fixed Guest VM showing passthrough options.
 
 - Fixed firmware formatting where leading 0s were missing.
+:::
+::::::
 
-:
-{#hip-6-2-1 .section}
+:::: {#hip-6-2-1 .section}
 ### **HIP** (6.2.1)[\#](#hip-6-2-1 "Link to this heading"){.headerlink}
 
-{#id796 .section}
+::: {#id796 .section}
 #### Resolved issues[\#](#id796 "Link to this heading"){.headerlink}
 
 - Soft hang when using [`AMD_SERIALIZE_KERNEL`{.docutils .literal .notranslate}]{.pre}
 
 - Memory leak in [`hipIpcCloseMemHandle`{.docutils .literal .notranslate}]{.pre}
+:::
+::::
 
-:
-
-:
-{#id797 .section}
+:::: {#id797 .section}
 ### **HIPIFY** (18.0.0)[\#](#id797 "Link to this heading"){.headerlink}
 
-{#id798 .section}
+::: {#id798 .section}
 #### Added[\#](#id798 "Link to this heading"){.headerlink}
 
 - Added CUDA 12.5.1 support
@@ -10173,27 +12400,25 @@ See the [ROCm 6.2.4 release notes](https://rocm.docs.amd.com/en/docs-6.2.4/about
 - Added [`hipBLAS`{.docutils .literal .notranslate}]{.pre} 64-bit APIs support
 
 - Added Support for math constants [`math_constants.h`{.docutils .literal .notranslate}]{.pre}
+:::
+::::
 
-:
-
-:
-{#omnitrace-1-11-2 .section}
+:::: {#omnitrace-1-11-2 .section}
 ### **Omnitrace** (1.11.2)[\#](#omnitrace-1-11-2 "Link to this heading"){.headerlink}
 
-{#id799 .section}
+::: {#id799 .section}
 #### Known issues[\#](#id799 "Link to this heading"){.headerlink}
 
 Perfetto can no longer open Omnitrace proto files. Loading Perfetto trace output [`.proto`{.docutils .literal .notranslate}]{.pre} files in the latest version of [`ui.perfetto.dev`{.docutils .literal .notranslate}]{.pre} can result in a dialog with the message, "Oops, something went wrong! Please file a bug." The information in the dialog will refer to an "Unknown field type." The workaround is to open the files with the previous version of the Perfetto UI found at [https://ui.perfetto.dev/v46.0-35b3d9845/#!/](https://ui.perfetto.dev/v46.0-35b3d9845/#!/){.reference .external}.
 
 See [issue #3767](https://github.com/ROCm/ROCm/issues/3767){.reference .external} on GitHub.
+:::
+::::
 
-:
-
-:
-{#rccl-2-20-5 .section}
+:::: {#rccl-2-20-5 .section}
 ### **RCCL** (2.20.5)[\#](#rccl-2-20-5 "Link to this heading"){.headerlink}
 
-{#id800 .section}
+::: {#id800 .section}
 #### Known issues[\#](#id800 "Link to this heading"){.headerlink}
 
 On systems running Linux kernel 6.8.0, such as Ubuntu 24.04, Direct Memory Access (DMA) transfers between the GPU and NIC are disabled and impacts multi-node RCCL performance. This issue was reproduced with RCCL 2.20.5 (ROCm 6.2.0 and 6.2.1) on systems with Broadcom Thor-2 NICs and affects other systems with RoCE networks using Linux 6.8.0 or newer. Older RCCL versions are also impacted.
@@ -10201,14 +12426,13 @@ On systems running Linux kernel 6.8.0, such as Ubuntu 24.04, Direct Memory Acces
 This issue will be addressed in a future ROCm release.
 
 See [issue #3772](https://github.com/ROCm/ROCm/issues/3772){.reference .external} on GitHub.
+:::
+::::
 
-:
-
-::
-{#rocal-2-0-0 .section}
+::::: {#rocal-2-0-0 .section}
 ### **rocAL** (2.0.0)[\#](#rocal-2-0-0 "Link to this heading"){.headerlink}
 
-{#id801 .section}
+::: {#id801 .section}
 #### Changed[\#](#id801 "Link to this heading"){.headerlink}
 
 - The new version of rocAL introduces many new features, but does not modify any of the existing public API functions.However, the version number was incremented from 1.3 to 2.0. Applications linked to version 1.3 must be recompiled to link against version 2.0.
@@ -10244,55 +12468,57 @@ See [issue #3772](https://github.com/ROCm/ROCm/issues/3772){.reference .external
 - Image to tensor updates
 
 - ROCm install - use case graphics removed
+:::
 
-{#id802 .section}
+::: {#id802 .section}
 #### Known issues[\#](#id802 "Link to this heading"){.headerlink}
 
 - Dependencies are not installed with the rocAL package installer. Dependencies must be installed with the prerequisite setup script provided. See the [rocAL README on GitHub](https://github.com/ROCm/rocAL/blob/docs/6.2.1/README.md#prerequisites-setup-script){.reference .external} for details.
+:::
+:::::
 
-::
-
-::
-{#rocblas-4-2-1 .section}
+::::: {#rocblas-4-2-1 .section}
 ### **rocBLAS** (4.2.1)[\#](#rocblas-4-2-1 "Link to this heading"){.headerlink}
 
-{#id803 .section}
+::: {#id803 .section}
 #### Removed[\#](#id803 "Link to this heading"){.headerlink}
 
 - Removed Device_Memory_Allocation.pdf link in documentation.
+:::
 
-{#id804 .section}
+::: {#id804 .section}
 #### Resolved issues[\#](#id804 "Link to this heading"){.headerlink}
 
 - Fixed error/warning message during [`rocblas_set_stream()`{.docutils .literal .notranslate}]{.pre} call.
+:::
+:::::
 
-::
-
-:
-{#rocfft-1-0-29 .section}
+:::: {#rocfft-1-0-29 .section}
 ### **rocFFT** (1.0.29)[\#](#rocfft-1-0-29 "Link to this heading"){.headerlink}
 
-{#id805 .section}
+::: {#id805 .section}
 #### Optimized[\#](#id805 "Link to this heading"){.headerlink}
 
 - Implemented 1D kernels for factorizable sizes less than 1024.
+:::
+::::
 
-:
-
-{#rocm-smi-7-3-0 .section}
+:::::: {#rocm-smi-7-3-0 .section}
 ### **ROCm SMI** (7.3.0)[\#](#rocm-smi-7-3-0 "Link to this heading"){.headerlink}
 
-{#id806 .section}
+::: {#id806 .section}
 #### Optimized[\#](#id806 "Link to this heading"){.headerlink}
 
 - Improved handling of UnicodeEncodeErrors with non UTF-8 locales. Non UTF-8 locales were causing crashes on UTF-8 special characters.
+:::
 
-{#id807 .section}
+::: {#id807 .section}
 #### Resolved issues[\#](#id807 "Link to this heading"){.headerlink}
 
 - Fixed an issue where the Compute Partition tests segfaulted when AMDGPU was loaded with optional parameters.
+:::
 
-{#id808 .section}
+::: {#id808 .section}
 #### Known issues[\#](#id808 "Link to this heading"){.headerlink}
 
 - When setting CPX as a partition mode, there is a DRM node limit of 64. This is a known limitation when multiple drivers are using the DRM nodes. The [`ls`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`/sys/class/drm`{.docutils .literal .notranslate}]{.pre} command can be used to see the number of DRM nodes, and the following steps can be used to remove unnecessary drivers:
@@ -10302,39 +12528,41 @@ See [issue #3772](https://github.com/ROCm/ROCm/issues/3772){.reference .external
   2.  Remove any unnecessary drivers using [`rmmod`{.docutils .literal .notranslate}]{.pre}. For example, to remove an AST driver, run [`sudo`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`rmmod`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`ast`{.docutils .literal .notranslate}]{.pre}.
 
   3.  Reload AMDGPU using [`modprobe`{.docutils .literal .notranslate}]{.pre}: [`sudo`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`modprobe`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`amdgpu`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::::
 
-:
-{#rocprim-3-2-1 .section}
+:::: {#rocprim-3-2-1 .section}
 ### **rocPRIM** (3.2.1)[\#](#rocprim-3-2-1 "Link to this heading"){.headerlink}
 
-{#id809 .section}
+::: {#id809 .section}
 #### Optimized[\#](#id809 "Link to this heading"){.headerlink}
 
 - Improved performance of [`block_reduce_warp_reduce`{.docutils .literal .notranslate}]{.pre} when warp size equals block size.
+:::
+::::
+:::::::::::::::::::::::::::::
 
-:
-::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::
-{#rocm-6-2-1 .section}
+::::::::::::::::::::::::::::::::: {#rocm-6-2-1 .section}
 ## ROCm 6.2.1[\#](#rocm-6-2-1 "Link to this heading"){.headerlink}
 
 See the [ROCm 6.2.1 release notes](https://rocm.docs.amd.com/en/docs-6.2.1/about/release-notes.html){.reference .external} for a complete overview of this release.
 
-{#id810 .section}
+:::::: {#id810 .section}
 ### **AMD SMI** (24.6.3)[\#](#id810 "Link to this heading"){.headerlink}
 
-{#changes .section}
+::: {#changes .section}
 #### Changes[\#](#changes "Link to this heading"){.headerlink}
 
 - Added [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`static`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--ras`{.docutils .literal .notranslate}]{.pre} on Guest VMs. Guest VMs can view enabled/disabled RAS features on Host cards.
+:::
 
-{#id811 .section}
+::: {#id811 .section}
 #### Removals[\#](#id811 "Link to this heading"){.headerlink}
 
 - Removed [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`metric`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--ecc`{.docutils .literal .notranslate}]{.pre} & [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`metric`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--ecc-blocks`{.docutils .literal .notranslate}]{.pre} on Guest VMs. Guest VMs do not support getting current ECC counts from the Host cards.
+:::
 
-{#id812 .section}
+::: {#id812 .section}
 #### Resolved issues[\#](#id812 "Link to this heading"){.headerlink}
 
 - Fixed TypeError in [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`process`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-G`{.docutils .literal .notranslate}]{.pre}.
@@ -10344,25 +12572,25 @@ See the [ROCm 6.2.1 release notes](https://rocm.docs.amd.com/en/docs-6.2.1/about
 - Fixed Guest VM showing passthrough options.
 
 - Fixed firmware formatting where leading 0s were missing.
+:::
+::::::
 
-:
-{#id813 .section}
+:::: {#id813 .section}
 ### **HIP** (6.2.1)[\#](#id813 "Link to this heading"){.headerlink}
 
-{#id814 .section}
+::: {#id814 .section}
 #### Resolved issues[\#](#id814 "Link to this heading"){.headerlink}
 
 - Soft hang when using [`AMD_SERIALIZE_KERNEL`{.docutils .literal .notranslate}]{.pre}
 
 - Memory leak in [`hipIpcCloseMemHandle`{.docutils .literal .notranslate}]{.pre}
+:::
+::::
 
-:
-
-:
-{#id815 .section}
+:::: {#id815 .section}
 ### **HIPIFY** (18.0.0)[\#](#id815 "Link to this heading"){.headerlink}
 
-{#id816 .section}
+::: {#id816 .section}
 #### Changes[\#](#id816 "Link to this heading"){.headerlink}
 
 - Added CUDA 12.5.1 support.
@@ -10374,13 +12602,13 @@ See the [ROCm 6.2.1 release notes](https://rocm.docs.amd.com/en/docs-6.2.1/about
 - Added [`hipBLAS`{.docutils .literal .notranslate}]{.pre} 64-bit APIs support.
 
 - Added Support for math constants [`math_constants.h`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::
 
-:
-
-{#omniperf-2-0-1 .section}
+:::::: {#omniperf-2-0-1 .section}
 ### **Omniperf** (2.0.1)[\#](#omniperf-2-0-1 "Link to this heading"){.headerlink}
 
-{#id817 .section}
+::: {#id817 .section}
 #### Changes[\#](#id817 "Link to this heading"){.headerlink}
 
 - Enabled rocprofv1 for MI300 hardware.
@@ -10394,39 +12622,41 @@ See the [ROCm 6.2.1 release notes](https://rocm.docs.amd.com/en/docs-6.2.1/about
 - Added GPU model distinction for MI300 systems.
 
 - Refactored and updated documemtation.
+:::
 
-{#id818 .section}
+::: {#id818 .section}
 #### Resolved issues[\#](#id818 "Link to this heading"){.headerlink}
 
 - Fixed an issue with analysis output.
 
 - Fixed issues with profiling multi-process and multi-GPU applications.
+:::
 
-{#optimizations .section}
+::: {#optimizations .section}
 #### Optimizations[\#](#optimizations "Link to this heading"){.headerlink}
 
 - Reduced running time of Omniperf when profiling.
 
 - Improved console logging.
+:::
+::::::
 
-:
-{#id819 .section}
+:::: {#id819 .section}
 ### **Omnitrace** (1.11.2)[\#](#id819 "Link to this heading"){.headerlink}
 
-{#id820 .section}
+::: {#id820 .section}
 #### Known issues[\#](#id820 "Link to this heading"){.headerlink}
 
 Perfetto can no longer open Omnitrace proto files. Loading Perfetto trace output [`.proto`{.docutils .literal .notranslate}]{.pre} files in the latest version of [`ui.perfetto.dev`{.docutils .literal .notranslate}]{.pre} can result in a dialog with the message, "Oops, something went wrong! Please file a bug." The information in the dialog will refer to an "Unknown field type." The workaround is to open the files with the previous version of the Perfetto UI found at [https://ui.perfetto.dev/v46.0-35b3d9845/#!/](https://ui.perfetto.dev/v46.0-35b3d9845/#!/){.reference .external}.
 
 See [issue #3767](https://github.com/ROCm/ROCm/issues/3767){.reference .external} on GitHub.
+:::
+::::
 
-:
-
-:
-{#id821 .section}
+:::: {#id821 .section}
 ### **RCCL** (2.20.5)[\#](#id821 "Link to this heading"){.headerlink}
 
-{#id822 .section}
+::: {#id822 .section}
 #### Known issues[\#](#id822 "Link to this heading"){.headerlink}
 
 On systems running Linux kernel 6.8.0, such as Ubuntu 24.04, Direct Memory Access (DMA) transfers between the GPU and NIC are disabled and impacts multi-node RCCL performance. This issue was reproduced with RCCL 2.20.5 (ROCm 6.2.0 and 6.2.1) on systems with Broadcom Thor-2 NICs and affects other systems with RoCE networks using Linux 6.8.0 or newer. Older RCCL versions are also impacted.
@@ -10434,14 +12664,13 @@ On systems running Linux kernel 6.8.0, such as Ubuntu 24.04, Direct Memory Acces
 This issue will be addressed in a future ROCm release.
 
 See [issue #3772](https://github.com/ROCm/ROCm/issues/3772){.reference .external} on GitHub.
+:::
+::::
 
-:
-
-::
-{#id823 .section}
+::::: {#id823 .section}
 ### **rocAL** (2.0.0)[\#](#id823 "Link to this heading"){.headerlink}
 
-{#id824 .section}
+::: {#id824 .section}
 #### Changed[\#](#id824 "Link to this heading"){.headerlink}
 
 - The new version of rocAL introduces many new features, but does not modify any of the existing public API functions.However, the version number was incremented from 1.3 to 2.0. Applications linked to version 1.3 must be recompiled to link against version 2.0.
@@ -10477,55 +12706,57 @@ See [issue #3772](https://github.com/ROCm/ROCm/issues/3772){.reference .external
 - Image to tensor updates
 
 - ROCm install - use case graphics removed
+:::
 
-{#id825 .section}
+::: {#id825 .section}
 #### Known issues[\#](#id825 "Link to this heading"){.headerlink}
 
 - Dependencies are not installed with the rocAL package installer. Dependencies must be installed with the prerequisite setup script provided. See the [rocAL README on GitHub](https://github.com/ROCm/rocAL/blob/docs/6.2.1/README.md#prerequisites-setup-script){.reference .external} for details.
+:::
+:::::
 
-::
-
-::
-{#id826 .section}
+::::: {#id826 .section}
 ### **rocBLAS** (4.2.1)[\#](#id826 "Link to this heading"){.headerlink}
 
-{#id827 .section}
+::: {#id827 .section}
 #### Removed[\#](#id827 "Link to this heading"){.headerlink}
 
 - Removed Device_Memory_Allocation.pdf link in documentation.
+:::
 
-{#id828 .section}
+::: {#id828 .section}
 #### Resolved issues[\#](#id828 "Link to this heading"){.headerlink}
 
 - Fixed error/warning message during [`rocblas_set_stream()`{.docutils .literal .notranslate}]{.pre} call.
+:::
+:::::
 
-::
-
-:
-{#id829 .section}
+:::: {#id829 .section}
 ### **rocFFT** (1.0.29)[\#](#id829 "Link to this heading"){.headerlink}
 
-{#id830 .section}
+::: {#id830 .section}
 #### Optimized[\#](#id830 "Link to this heading"){.headerlink}
 
 - Implemented 1D kernels for factorizable sizes less than 1024.
+:::
+::::
 
-:
-
-{#id831 .section}
+:::::: {#id831 .section}
 ### **ROCm SMI** (7.3.0)[\#](#id831 "Link to this heading"){.headerlink}
 
-{#id832 .section}
+::: {#id832 .section}
 #### Optimized[\#](#id832 "Link to this heading"){.headerlink}
 
 - Improved handling of UnicodeEncodeErrors with non UTF-8 locales. Non UTF-8 locales were causing crashes on UTF-8 special characters.
+:::
 
-{#id833 .section}
+::: {#id833 .section}
 #### Resolved issues[\#](#id833 "Link to this heading"){.headerlink}
 
 - Fixed an issue where the Compute Partition tests segfaulted when AMDGPU was loaded with optional parameters.
+:::
 
-{#id834 .section}
+::: {#id834 .section}
 #### Known issues[\#](#id834 "Link to this heading"){.headerlink}
 
 - When setting CPX as a partition mode, there is a DRM node limit of 64. This is a known limitation when multiple drivers are using the DRM nodes. The [`ls`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`/sys/class/drm`{.docutils .literal .notranslate}]{.pre} command can be used to see the number of DRM nodes, and the following steps can be used to remove unnecessary drivers:
@@ -10535,30 +12766,29 @@ See [issue #3772](https://github.com/ROCm/ROCm/issues/3772){.reference .external
   2.  Remove any unnecessary drivers using [`rmmod`{.docutils .literal .notranslate}]{.pre}. For example, to remove an AST driver, run [`sudo`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`rmmod`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`ast`{.docutils .literal .notranslate}]{.pre}.
 
   3.  Reload AMDGPU using [`modprobe`{.docutils .literal .notranslate}]{.pre}: [`sudo`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`modprobe`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`amdgpu`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::::
 
-:
-{#id835 .section}
+:::: {#id835 .section}
 ### **rocPRIM** (3.2.1)[\#](#id835 "Link to this heading"){.headerlink}
 
-{#id836 .section}
+::: {#id836 .section}
 #### Optimized[\#](#id836 "Link to this heading"){.headerlink}
 
 - Improved performance of [`block_reduce_warp_reduce`{.docutils .literal .notranslate}]{.pre} when warp size equals block size.
+:::
+::::
+:::::::::::::::::::::::::::::::::
 
-:
-::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-{#rocm-6-2-0 .section}
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#rocm-6-2-0 .section}
 ## ROCm 6.2.0[\#](#rocm-6-2-0 "Link to this heading"){.headerlink}
 
 See the [ROCm 6.2.0 release notes](https://rocm.docs.amd.com/en/docs-6.2.0/about/release-notes.html){.reference .external} for a complete overview of this release.
 
-::::::
-{#amd-smi-24-6-2 .section}
+::::::::: {#amd-smi-24-6-2 .section}
 ### **AMD SMI** (24.6.2)[\#](#amd-smi-24-6-2 "Link to this heading"){.headerlink}
 
-{#id837 .section}
+::: {#id837 .section}
 #### Changed[\#](#id837 "Link to this heading"){.headerlink}
 
 - Added the following functionality:
@@ -10576,15 +12806,17 @@ See the [ROCm 6.2.0 release notes](https://rocm.docs.amd.com/en/docs-6.2.0/about
 - Added macros that were in [`amdsmi.h`{.docutils .literal .notranslate}]{.pre} to the AMD SMI Python library [`amdsmi_interface.py`{.docutils .literal .notranslate}]{.pre}.
 
 - Renamed [`amdsmi_set_gpu_clear_sram_data()`{.docutils .literal .notranslate}]{.pre} to [`amdsmi_clean_gpu_local_data()`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id838 .section}
+::: {#id838 .section}
 #### Removed[\#](#id838 "Link to this heading"){.headerlink}
 
 - Removed [`throttle-status`{.docutils .literal .notranslate}]{.pre} from [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre} as it is no longer reliably supported.
 
 - Removed elevated permission requirements for [`amdsmi_get_gpu_process_list()`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id839 .section}
+::: {#id839 .section}
 #### Optimized[\#](#id839 "Link to this heading"){.headerlink}
 
 - Updated CLI error strings to specify invalid device type queried.
@@ -10604,8 +12836,9 @@ See the [ROCm 6.2.0 release notes](https://rocm.docs.amd.com/en/docs-6.2.0/about
 - Updated [`amdsmi_get_gpu_board_info()`{.docutils .literal .notranslate}]{.pre} now has larger structure sizes for [`amdsmi_board_info_t`{.docutils .literal .notranslate}]{.pre}.
 
 - Updated CLI voltage curve command output.
+:::
 
-{#id840 .section}
+::: {#id840 .section}
 #### Resolved issues[\#](#id840 "Link to this heading"){.headerlink}
 
 - Fixed multiple processes not being registered in [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`process`{.docutils .literal .notranslate}]{.pre} with JSON and CSV format.
@@ -10615,28 +12848,27 @@ See the [ROCm 6.2.0 release notes](https://rocm.docs.amd.com/en/docs-6.2.0/about
 - Fixed parsing of [`pp_od_clk_voltage`{.docutils .literal .notranslate}]{.pre} within [`amdsmi_get_gpu_od_volt_info`{.docutils .literal .notranslate}]{.pre}.
 
 - Fixed Leftover Mutex deadlock when running multiple instances of the CLI tool. When running [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`reset`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--gpureset`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--gpu`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`all`{.docutils .literal .notranslate}]{.pre} and then running an instance of [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`static`{.docutils .literal .notranslate}]{.pre} (or any other subcommand that access the GPUs) a mutex would lock and not return requiring either a clear of the mutex in [`/dev/shm`{.docutils .literal .notranslate}]{.pre} or rebooting the machine.
+:::
 
-:
-{#id841 .section}
+:::: {#id841 .section}
 #### Known issues[\#](#id841 "Link to this heading"){.headerlink}
 
 - [`amdsmi_get_gpu_process_isolation`{.docutils .literal .notranslate}]{.pre} and [`amdsmi_clean_gpu_local_data`{.docutils .literal .notranslate}]{.pre} commands do not work. They will be supported in a future release.
 
 See [issue #3500](https://github.com/ROCm/ROCm/issues/3500){.reference .external} on GitHub.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.2.0/CHANGELOG.md){.reference .external} on GitHub for more information.
+:::
+::::
+:::::::::
 
-:
-::::::
-
-::
-{#id842 .section}
+::::: {#id842 .section}
 ### **Composable Kernel** (1.1.0)[\#](#id842 "Link to this heading"){.headerlink}
 
-{#id843 .section}
+::: {#id843 .section}
 #### Changed[\#](#id843 "Link to this heading"){.headerlink}
 
 - Added support for:
@@ -10654,8 +12886,9 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
 - Added [`CK_TILE`{.docutils .literal .notranslate}]{.pre} layernorm example (#1339).
 
 - [`CK_TILE`{.docutils .literal .notranslate}]{.pre}-based Flash Attention 2 kernel is now merged into the upstream repository as ROCm backend.
+:::
 
-{#id844 .section}
+::: {#id844 .section}
 #### Optimized[\#](#id844 "Link to this heading"){.headerlink}
 
 - Support universal GEMM in grouped convolution forward (#1320).
@@ -10667,13 +12900,13 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
 - [`FP8`{.docutils .literal .notranslate}]{.pre} GEMM performance optimization and tuning (#1384).
 
 - Added FlashAttention backward pass performance optimization (#1397).
+:::
+:::::
 
-::
-
-{#hip-6-2-0 .section}
+:::::: {#hip-6-2-0 .section}
 ### **HIP** (6.2.0)[\#](#hip-6-2-0 "Link to this heading"){.headerlink}
 
-{#id845 .section}
+::: {#id845 .section}
 #### Changed[\#](#id845 "Link to this heading"){.headerlink}
 
 - Added the [`_sync()`{.docutils .literal .notranslate}]{.pre} version of crosslane builtins such as [`shfl_sync()`{.docutils .literal .notranslate}]{.pre}, [`__all_sync()`{.docutils .literal .notranslate}]{.pre} and [`__any_sync()`{.docutils .literal .notranslate}]{.pre}. These take a 64-bit integer as an explicit mask argument.
@@ -10697,24 +12930,27 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
 - Added initial support for 8-bit floating point datatype in [`amd_hip_fp8.h`{.docutils .literal .notranslate}]{.pre}. These are accessible via [`#include`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`<hip/hip_fp8.h>`{.docutils .literal .notranslate}]{.pre}.
 
 - Added UUID support for environment variable [`HIP_VISIBLE_DEVICES`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id846 .section}
+::: {#id846 .section}
 #### Resolved issues[\#](#id846 "Link to this heading"){.headerlink}
 
 - Fixed stream capture support in HIP graphs. Prohibited and unhandled operations are fixed during stream capture in the HIP runtime.
 
 - Fixed undefined symbol error for [`hipTexRefGetArray`{.docutils .literal .notranslate}]{.pre} and [`hipTexRefGetBorderColor`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id847 .section}
+::: {#id847 .section}
 #### Upcoming changes[\#](#id847 "Link to this heading"){.headerlink}
 
 - The [`_sync()`{.docutils .literal .notranslate}]{.pre} version of crosslane builtins such as [`shfl_sync()`{.docutils .literal .notranslate}]{.pre}, [`__all_sync()`{.docutils .literal .notranslate}]{.pre}, and [`__any_sync()`{.docutils .literal .notranslate}]{.pre} will be enabled unconditionally in a future HIP release.
+:::
+::::::
 
-:
-{#hipblas-2-2-0 .section}
+:::: {#hipblas-2-2-0 .section}
 ### **hipBLAS** (2.2.0)[\#](#hipblas-2-2-0 "Link to this heading"){.headerlink}
 
-{#id848 .section}
+::: {#id848 .section}
 #### Changed[\#](#id848 "Link to this heading"){.headerlink}
 
 - Added a new ILP64 API for level 2 functions for both C and FORTRAN ([`_64`{.docutils .literal .notranslate}]{.pre} name suffix) with [`int64_t`{.docutils .literal .notranslate}]{.pre} function arguments.
@@ -10728,14 +12964,13 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
 - Updated Linux AOCL dependency to release 4.2 [`gcc`{.docutils .literal .notranslate}]{.pre} build.
 
 - Updated Windows [`vcpkg`{.docutils .literal .notranslate}]{.pre} dependencies to release 2024.02.14.
+:::
+::::
 
-:
-
-::
-{#hipblaslt-0-8-0 .section}
+::::: {#hipblaslt-0-8-0 .section}
 ### **hipBLASLt** (0.8.0)[\#](#hipblaslt-0-8-0 "Link to this heading"){.headerlink}
 
-{#id849 .section}
+::: {#id849 .section}
 #### Changed[\#](#id849 "Link to this heading"){.headerlink}
 
 - Added extension APIs: \*[`hipblasltExtAMaxWithScale`{.docutils .literal .notranslate}]{.pre}.
@@ -10751,19 +12986,19 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
   - [`HIPBLASLT_MATMUL_DESC_COMPUTE_INPUT_TYPE_A_EXT`{.docutils .literal .notranslate}]{.pre} and [`HIPBLASLT_MATMUL_DESC_COMPUTE_INPUT_TYPE_B_EXT`{.docutils .literal .notranslate}]{.pre} for [`FP16`{.docutils .literal .notranslate}]{.pre} input data type to use [`FP8`{.docutils .literal .notranslate}]{.pre}/[`BF8`{.docutils .literal .notranslate}]{.pre} MFMA.
 
 - Added support for gfx110x.
+:::
 
-{#id850 .section}
+::: {#id850 .section}
 #### Optimized[\#](#id850 "Link to this heading"){.headerlink}
 
 - Improved library loading time.
+:::
+:::::
 
-::
-
-::
-{#hipcc-1-1-1 .section}
+::::: {#hipcc-1-1-1 .section}
 ### **HIPCC** (1.1.1)[\#](#hipcc-1-1-1 "Link to this heading"){.headerlink}
 
-{#id851 .section}
+::: {#id851 .section}
 #### Changed[\#](#id851 "Link to this heading"){.headerlink}
 
 - Split [`hipcc`{.docutils .literal .notranslate}]{.pre} package into two packages for different hardware platforms.
@@ -10775,18 +13010,19 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
 - Enabled function calls.
 
 - Added support for generating packages for ROCm stack targeting static libraries.
+:::
 
-{#id852 .section}
+::: {#id852 .section}
 #### Resolved issues[\#](#id852 "Link to this heading"){.headerlink}
 
 - Implemented numerous bug fixes and quality improvements.
+:::
+:::::
 
-::
-
-{#hipcub-3-2-0 .section}
+:::::: {#hipcub-3-2-0 .section}
 ### **hipCUB** (3.2.0)[\#](#hipcub-3-2-0 "Link to this heading"){.headerlink}
 
-{#id853 .section}
+::: {#id853 .section}
 #### Changed[\#](#id853 "Link to this heading"){.headerlink}
 
 - Added [`DeviceCopy`{.docutils .literal .notranslate}]{.pre} function for parity with CUB.
@@ -10812,8 +13048,9 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
   - [`DeviceSegmentedRadixSort`{.docutils .literal .notranslate}]{.pre}
 
   - [`DeviceRunLengthEncode`{.docutils .literal .notranslate}]{.pre} Currently, these classes rely on one or more synchronous calls to function correctly. Because of this, they cannot be used inside of HIP graphs.
+:::
 
-{#id854 .section}
+::: {#id854 .section}
 #### Removed[\#](#id854 "Link to this heading"){.headerlink}
 
 - Deprecated [`debug_synchronous`{.docutils .literal .notranslate}]{.pre} in hipCUB-2.13.2, and it no longer has any effect. With this release, passing [`debug_synchronous`{.docutils .literal .notranslate}]{.pre} to the device functions results in a deprecation warning both at runtime and at compile time.
@@ -10821,17 +13058,19 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
   - The synchronization that was previously achievable by passing [`debug_synchronous=true`{.docutils .literal .notranslate}]{.pre} can now be achieved at compile time by setting the [`CUB_DEBUG_SYNC`{.docutils .literal .notranslate}]{.pre} (or higher debug level) or the [`HIPCUB_DEBUG_SYNC`{.docutils .literal .notranslate}]{.pre} preprocessor definition.
 
   - The compile time deprecation warnings can be disabled by defining the [`HIPCUB_IGNORE_DEPRECATED_API`{.docutils .literal .notranslate}]{.pre} preprocessor definition.
+:::
 
-{#id855 .section}
+::: {#id855 .section}
 #### Resolved issues[\#](#id855 "Link to this heading"){.headerlink}
 
 - Fixed the derivation for the accumulator type for device scan algorithms in the rocPRIM backend being different compared to CUB. It now derives the accumulator type as the result of the binary operator.
+:::
+::::::
 
-:
-{#hipfft-1-0-15 .section}
+:::: {#hipfft-1-0-15 .section}
 ### **hipFFT** (1.0.15)[\#](#hipfft-1-0-15 "Link to this heading"){.headerlink}
 
-{#id856 .section}
+::: {#id856 .section}
 #### Resolved issues[\#](#id856 "Link to this heading"){.headerlink}
 
 - Added [`hip::host`{.docutils .literal .notranslate}]{.pre} as a public link library, as [`hipfft.h`{.docutils .literal .notranslate}]{.pre} includes HIP runtime headers.
@@ -10839,14 +13078,13 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
 - Prevented C++ exceptions leaking from public API functions.
 
 - Made output of [`hipfftXt`{.docutils .literal .notranslate}]{.pre} match [`cufftXt`{.docutils .literal .notranslate}]{.pre} in geometry and alignment for 2D and 3D FFTs.
+:::
+::::
 
-:
-
-::
-{#id857 .section}
+::::: {#id857 .section}
 ### **HIPIFY** (18.0.0)[\#](#id857 "Link to this heading"){.headerlink}
 
-{#id858 .section}
+::: {#id858 .section}
 #### Changed[\#](#id858 "Link to this heading"){.headerlink}
 
 - Added support for:
@@ -10858,18 +13096,19 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
   - LLVM 18.1.6
 
 - Added full hipBLASLt support.
+:::
 
-{#id859 .section}
+::: {#id859 .section}
 #### Resolved issues[\#](#id859 "Link to this heading"){.headerlink}
 
 - HIPIFY now applies [`reinterpret_cast`{.docutils .literal .notranslate}]{.pre} for an explicit conversion between pointer-to-function and pointer-to-object; affected functions: [`hipFuncGetAttributes`{.docutils .literal .notranslate}]{.pre}, [`hipFuncSetAttribute`{.docutils .literal .notranslate}]{.pre}, [`hipFuncSetCacheConfig`{.docutils .literal .notranslate}]{.pre}, [`hipFuncSetSharedMemConfig`{.docutils .literal .notranslate}]{.pre}, [`hipLaunchKernel`{.docutils .literal .notranslate}]{.pre}, and [`hipLaunchCooperativeKernel`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::
 
-::
-
-{#id860 .section}
+:::::: {#id860 .section}
 ### **hipRAND** (2.11.0)[\#](#id860 "Link to this heading"){.headerlink}
 
-{#id861 .section}
+::: {#id861 .section}
 #### Changed[\#](#id861 "Link to this heading"){.headerlink}
 
 - Added support for setting generator output ordering in C and C++ API.
@@ -10887,8 +13126,9 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
 - Static library -- moved all internal symbols to namespaces to avoid potential symbol name collisions when linking.
 
 - Device API documentation is improved in this version.
+:::
 
-{#id862 .section}
+::: {#id862 .section}
 #### Removed[\#](#id862 "Link to this heading"){.headerlink}
 
 - Removed the option to build hipRAND as a submodule to rocRAND.
@@ -10896,17 +13136,19 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
 - Removed references to, and workarounds for, the deprecated [`hcc`{.docutils .literal .notranslate}]{.pre}.
 
 - Removed support for finding rocRAND based on the environment variable [`ROCRAND_DIR`{.docutils .literal .notranslate}]{.pre}. Use [`ROCRAND_PATH`{.docutils .literal .notranslate}]{.pre} instead.
+:::
 
-{#id863 .section}
+::: {#id863 .section}
 #### Resolved issues[\#](#id863 "Link to this heading"){.headerlink}
 
 - Fixed a build error when using Clang++ directly due to unsupported references to [`amdgpu-target`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::::
 
-::
-{#hipsolver-2-2-0 .section}
+::::: {#hipsolver-2-2-0 .section}
 ### **hipSOLVER** (2.2.0)[\#](#hipsolver-2-2-0 "Link to this heading"){.headerlink}
 
-{#id864 .section}
+::: {#id864 .section}
 #### Changed[\#](#id864 "Link to this heading"){.headerlink}
 
 - Added compatibility-only functions:
@@ -10946,18 +13188,19 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
 - Updated [`csrlsvchol`{.docutils .literal .notranslate}]{.pre} to perform numerical factorization on the GPU. The symbolic factorization is still performed on the CPU.
 
 - Renamed [`hipsolver-compat.h`{.docutils .literal .notranslate}]{.pre} to [`hipsolver-dense.h`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id865 .section}
+::: {#id865 .section}
 #### Removed[\#](#id865 "Link to this heading"){.headerlink}
 
 - Removed dependency on [`cblas`{.docutils .literal .notranslate}]{.pre} from the hipSOLVER test and benchmark clients.
+:::
+:::::
 
-::
-
-{#hipsparse-3-1-1 .section}
+:::::: {#hipsparse-3-1-1 .section}
 ### **hipSPARSE** (3.1.1)[\#](#hipsparse-3-1-1 "Link to this heading"){.headerlink}
 
-{#id866 .section}
+::: {#id866 .section}
 #### Changed[\#](#id866 "Link to this heading"){.headerlink}
 
 - Added the missing [`hipsparseCscGet()`{.docutils .literal .notranslate}]{.pre} routine.
@@ -10967,33 +13210,35 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
 - Match deprecations found in cuSPARSE 12.x.x when using cuSPARSE backend.
 
 - Improved the user manual and contribution guidelines.
+:::
 
-{#id867 .section}
+::: {#id867 .section}
 #### Resolved issues[\#](#id867 "Link to this heading"){.headerlink}
 
 - Fixed [`SpGEMM`{.docutils .literal .notranslate}]{.pre} and [`SpGEMM_reuse`{.docutils .literal .notranslate}]{.pre} routines that were not matching cuSPARSE behavior.
+:::
 
-{#id868 .section}
+::: {#id868 .section}
 #### Known issues[\#](#id868 "Link to this heading"){.headerlink}
 
 - In [`hipsparseSpSM_solve()`{.docutils .literal .notranslate}]{.pre}, the external buffer is currently passed as a parameter. This does not match the cuSPARSE API and this extra external buffer parameter will be removed in a future release. For now this extra parameter can be ignored and passed a [`nullptr`{.docutils .literal .notranslate}]{.pre} as it is unused internally by [`hipsparseSpSM_solve()`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::::
 
-:
-{#hipsparselt-0-2-1 .section}
+:::: {#hipsparselt-0-2-1 .section}
 ### **hipSPARSELt** (0.2.1)[\#](#hipsparselt-0-2-1 "Link to this heading"){.headerlink}
 
-{#id869 .section}
+::: {#id869 .section}
 #### Optimized[\#](#id869 "Link to this heading"){.headerlink}
 
 - Refined test cases.
+:::
+::::
 
-:
-
-::
-{#hiptensor-1-3-0 .section}
+::::: {#hiptensor-1-3-0 .section}
 ### **hipTensor** (1.3.0)[\#](#hiptensor-1-3-0 "Link to this heading"){.headerlink}
 
-{#id870 .section}
+::: {#id870 .section}
 #### Changed[\#](#id870 "Link to this heading"){.headerlink}
 
 - Added support for:
@@ -11017,8 +13262,9 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
 - Updated actor-critic selection for new contraction kernel additions.
 
 - Updated installation, programmer's guide, and API reference documentation.
+:::
 
-{#id871 .section}
+::: {#id871 .section}
 #### Resolved issues[\#](#id871 "Link to this heading"){.headerlink}
 
 - Fixed LLVM parsing crash.
@@ -11028,14 +13274,13 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
 - Workaround implemented for compiler crash during debug build.
 
 - Allow random modes ordering for tensor contractions.
+:::
+:::::
 
-::
-
-:::::::
-{#id872 .section}
+:::::::::: {#id872 .section}
 ### **llvm-project** (18.0.0)[\#](#id872 "Link to this heading"){.headerlink}
 
-{#id873 .section}
+::: {#id873 .section}
 #### Changed[\#](#id873 "Link to this heading"){.headerlink}
 
 - LLVM IR
@@ -11211,8 +13456,9 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
 - Sanitizers
 
   - HWASan now defaults to detecting use-after-scope bugs.
+:::
 
-{#id874 .section}
+::: {#id874 .section}
 #### Removals[\#](#id874 "Link to this heading"){.headerlink}
 
 - LLVM IR
@@ -11298,8 +13544,9 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
   - [`SBWatchpoint::GetHardwareIndex`{.docutils .literal .notranslate}]{.pre} is deprecated and now returns [`-1`{.docutils .literal .notranslate}]{.pre} to indicate the index is unavailable.
 
   - Methods in [`SBHostOS`{.docutils .literal .notranslate}]{.pre} related to threads have had their implementations removed. These methods will return a value indicating failure.
+:::
 
-{#id875 .section}
+::: {#id875 .section}
 #### Resolved issues[\#](#id875 "Link to this heading"){.headerlink}
 
 - AArch64 backend
@@ -11309,37 +13556,36 @@ See the [detailed AMD SMI changelog](https://github.com/ROCm/amdsmi/blob/docs/6.
 - Windows target
 
   - The LLVM filesystem class [`UniqueID`{.docutils .literal .notranslate}]{.pre} and function [`equivalent`{.docutils .literal .notranslate}]{.pre}() no longer determine that distinct different path names for the same hard linked file actually are equal. This is an intentional tradeoff in a bug fix, where the bug used to cause distinct files to be considered equivalent on some file systems. This change fixed the GitHub issues [#61401](https://github.com/llvm/llvm-project/issues/61401){.reference .external} and [#22079](https://github.com/llvm/llvm-project/issues/22079){.reference .external}.
+:::
 
-{#id876 .section}
+:::::: {#id876 .section}
 #### Known issues[\#](#id876 "Link to this heading"){.headerlink}
 
 The compiler may incorrectly compile a program that uses the [`__shfl(var,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`srcLane,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`width)`{.docutils .literal .notranslate}]{.pre} function when one of the parameters to the function is undefined along some path to the function. For most functions, uninitialized inputs cause undefined behavior.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 The [`-Wall`{.docutils .literal .notranslate}]{.pre} compilation flag prompts the compiler to generate a warning if a variable is uninitialized along some path.
+:::
 
 As a workaround, initialize the parameters to [`__shfl`{.docutils .literal .notranslate}]{.pre}. For example:
 
-:
-{.highlight-cpp .notranslate}
-
-highlight
+:::: {.highlight-cpp .notranslate}
+::: highlight
     unsigned long istring = 0 // Initialize the input to __shfl
     return __shfl(istring, 0, 64)
-
-:
+:::
+::::
 
 See [issue #3499](https://github.com/ROCm/ROCm/issues/3499){.reference .external} on GitHub.
+::::::
+::::::::::
 
-:::::::
-
-::::
-{#migraphx-2-10-0 .section}
+::::::: {#migraphx-2-10-0 .section}
 ### **MIGraphX** (2.10.0)[\#](#migraphx-2-10-0 "Link to this heading"){.headerlink}
 
-{#id877 .section}
+::: {#id877 .section}
 #### Changed[\#](#id877 "Link to this heading"){.headerlink}
 
 - Added support for ONNX Runtime MIGraphX EP on Windows.
@@ -11367,13 +13613,15 @@ See [issue #3499](https://github.com/ROCm/ROCm/issues/3499){.reference .external
 - Changed default location of libraries with release specific ABI changes.
 
 - Reorganized documentation in GitHub.
+:::
 
-{#id878 .section}
+::: {#id878 .section}
 #### Removed[\#](#id878 "Link to this heading"){.headerlink}
 
 - Removed the [`--model`{.docutils .literal .notranslate}]{.pre} flag with [`migraphx-driver`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id879 .section}
+::: {#id879 .section}
 #### Optimized[\#](#id879 "Link to this heading"){.headerlink}
 
 - Improved ONNX Model Zoo coverage.
@@ -11425,8 +13673,9 @@ See [issue #3499](https://github.com/ROCm/ROCm/issues/3499){.reference .external
 - Use the quantized output when an operator is used again.
 
 - Enabled Split-k GEMM perf configs for rocMLIR based GEMM kernels for better performance on all Hardware.
+:::
 
-{#id880 .section}
+::: {#id880 .section}
 #### Resolved issues[\#](#id880 "Link to this heading"){.headerlink}
 
 - Fixed Super Resolution model verification failed with [`FP16`{.docutils .literal .notranslate}]{.pre}.
@@ -11454,13 +13703,13 @@ See [issue #3499](https://github.com/ROCm/ROCm/issues/3499){.reference .external
 - Fixed an issues during compilation caused by the incorrect constructor being used at compile time. Removed list initializer of [`prefix_scan_sum`{.docutils .literal .notranslate}]{.pre} which was causing issues during compilation.
 
 - Fixed the [`MIGRAPHX_GPU_COMPILE_PARALLEL`{.docutils .literal .notranslate}]{.pre} flag to enable users to control number of threads used for parallel compilation.
+:::
+:::::::
 
-::::
-
-{#miopen-3-2-0 .section}
+:::::: {#miopen-3-2-0 .section}
 ### **MIOpen** (3.2.0)[\#](#miopen-3-2-0 "Link to this heading"){.headerlink}
 
-{#id881 .section}
+::: {#id881 .section}
 #### Changed[\#](#id881 "Link to this heading"){.headerlink}
 
 - Added:
@@ -11478,8 +13727,9 @@ See [issue #3499](https://github.com/ROCm/ROCm/issues/3499){.reference .external
 - Added TunaNetv2.0 for MI300.
 
 - Added Adam and AMP Adam optimizer.
+:::
 
-{#id882 .section}
+::: {#id882 .section}
 #### Resolved issues[\#](#id882 "Link to this heading"){.headerlink}
 
 - Memory access fault caused by [`GemmBwdRest`{.docutils .literal .notranslate}]{.pre}.
@@ -11487,17 +13737,19 @@ See [issue #3499](https://github.com/ROCm/ROCm/issues/3499){.reference .external
 - Context configuration in [`GetWorkSpaceSize`{.docutils .literal .notranslate}]{.pre}.
 
 - Fixes to support huge tensors.
+:::
 
-{#id883 .section}
+::: {#id883 .section}
 #### Optimized[\#](#id883 "Link to this heading"){.headerlink}
 
 - Find: improved precision of benchmarking.
+:::
+::::::
 
-::::
-{#mivisionx-3-0-0 .section}
+::::::: {#mivisionx-3-0-0 .section}
 ### **MIVisionX** (3.0.0)[\#](#mivisionx-3-0-0 "Link to this heading"){.headerlink}
 
-{#id884 .section}
+::: {#id884 .section}
 #### Changed[\#](#id884 "Link to this heading"){.headerlink}
 
 - Added support for:
@@ -11515,29 +13767,31 @@ See [issue #3499](https://github.com/ROCm/ROCm/issues/3499){.reference .external
   - NonSilentRegion and Slice augmentations in openVX extensions
 
   - Mel-Filter bank and Normalize augmentations in openVX extensions
+:::
 
-{#id885 .section}
+::: {#id885 .section}
 #### Removed[\#](#id885 "Link to this heading"){.headerlink}
 
 - Deprecated the use of rocAL for processing. rocAL is available at [ROCm/rocAL](https://github.com/ROCm/rocAL){.github .reference .external}.
+:::
 
-{#id886 .section}
+::: {#id886 .section}
 #### Resolved issues[\#](#id886 "Link to this heading"){.headerlink}
 
 - Fixed issues with dependencies.
+:::
 
-{#id887 .section}
+::: {#id887 .section}
 #### Known issues[\#](#id887 "Link to this heading"){.headerlink}
 
 - MIVisionX package install requires manual prerequisites installation.
+:::
+:::::::
 
-::::
-
-:
-{#id888 .section}
+:::: {#id888 .section}
 ### **Omniperf** (2.0.1)[\#](#id888 "Link to this heading"){.headerlink}
 
-{#id889 .section}
+::: {#id889 .section}
 #### Known issues[\#](#id889 "Link to this heading"){.headerlink}
 
 - Error when running Omniperf with an application with command line arguments. As a workaround, create an intermediary script to call the application with the necessary arguments, then call the script with Omniperf. This issue is fixed in a future release of Omniperf. See [#347](https://github.com/ROCm/rocprofiler-compute/issues/347){.reference .external}.
@@ -11557,13 +13811,13 @@ See [issue #3499](https://github.com/ROCm/ROCm/issues/3499){.reference .external
   As a workaround, install these Python requirements manually: [`pip`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`install`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`/opt/rocm-6.2.0/libexec/omniperf/requirements.txt`{.docutils .literal .notranslate}]{.pre}.
 
 See [issue #3498](https://github.com/ROCm/ROCm/issues/3498){.reference .external} on GitHub.
+:::
+::::
 
-:
-
-{#openmp-17-0-0 .section}
+:::::: {#openmp-17-0-0 .section}
 ### **OpenMP** (17.0.0)[\#](#openmp-17-0-0 "Link to this heading"){.headerlink}
 
-{#id890 .section}
+::: {#id890 .section}
 #### Changed[\#](#id890 "Link to this heading"){.headerlink}
 
 - Added basic experimental support for [`libc`{.docutils .literal .notranslate}]{.pre} functions on the GPU via the LLVM C Library for GPUs.
@@ -11571,22 +13825,25 @@ See [issue #3498](https://github.com/ROCm/ROCm/issues/3498){.reference .external
 - Added minimal support for calling host functions from the device using the [`libc`{.docutils .literal .notranslate}]{.pre} interface.
 
 - Added vendor agnostic OMPT callback support for OpenMP-based device offload.
+:::
 
-{#id891 .section}
+::: {#id891 .section}
 #### Removed[\#](#id891 "Link to this heading"){.headerlink}
 
 - Removed the "old" device plugins along with support for the [`remote`{.docutils .literal .notranslate}]{.pre} and [`ve`{.docutils .literal .notranslate}]{.pre} plugins.
+:::
 
-{#id892 .section}
+::: {#id892 .section}
 #### Resolved issues[\#](#id892 "Link to this heading"){.headerlink}
 
 - Fixed the implementation of [`omp_get_wtime`{.docutils .literal .notranslate}]{.pre} for AMDGPU targets.
+:::
+::::::
 
-::
-{#id893 .section}
+::::: {#id893 .section}
 ### **RCCL** (2.20.5)[\#](#id893 "Link to this heading"){.headerlink}
 
-{#id894 .section}
+::: {#id894 .section}
 #### Changed[\#](#id894 "Link to this heading"){.headerlink}
 
 - Added support for [`fp8`{.docutils .literal .notranslate}]{.pre} and [`rccl_bfloat8`{.docutils .literal .notranslate}]{.pre}.
@@ -11626,54 +13883,57 @@ See [issue #3498](https://github.com/ROCm/ROCm/issues/3498){.reference .external
   - Doubled the size of buffers to accommodate for more channels.
 
 - Modified rings to be rail-optimized topology friendly.
+:::
 
-{#id895 .section}
+::: {#id895 .section}
 #### Resolved issues[\#](#id895 "Link to this heading"){.headerlink}
 
 - Fixed a bug when configuring RCCL for only LL128 protocol.
 
 - Fixed scratch memory allocation after API change for MSCCL.
+:::
+:::::
 
-::
-
-::::
-{#rocal-1-0-0 .section}
+::::::: {#rocal-1-0-0 .section}
 ### **rocAL** (1.0.0)[\#](#rocal-1-0-0 "Link to this heading"){.headerlink}
 
-{#id896 .section}
+::: {#id896 .section}
 #### Changed[\#](#id896 "Link to this heading"){.headerlink}
 
 - Added tests and samples.
+:::
 
-{#id897 .section}
+::: {#id897 .section}
 #### Removed[\#](#id897 "Link to this heading"){.headerlink}
 
 - Removed CuPy from [`setup.py`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id898 .section}
+::: {#id898 .section}
 #### Optimized[\#](#id898 "Link to this heading"){.headerlink}
 
 - Added setup and install updates.
+:::
 
-{#id899 .section}
+::: {#id899 .section}
 #### Resolved issues[\#](#id899 "Link to this heading"){.headerlink}
 
 - Minor bug fixes.
+:::
+:::::::
 
-::::
-
-::
-{#rocalution-3-2-0 .section}
+::::: {#rocalution-3-2-0 .section}
 ### **rocALUTION** (3.2.0)[\#](#rocalution-3-2-0 "Link to this heading"){.headerlink}
 
-{#id900 .section}
+::: {#id900 .section}
 #### Changed[\#](#id900 "Link to this heading"){.headerlink}
 
 - Added new file I/O based on rocSPARSE I/O format.
 
 - Added [`GetConvergenceHistory`{.docutils .literal .notranslate}]{.pre} for ItILU0 preconditioner.
+:::
 
-{#id901 .section}
+::: {#id901 .section}
 #### Removed[\#](#id901 "Link to this heading"){.headerlink}
 
 - Deprecated the following:
@@ -11685,13 +13945,13 @@ See [issue #3498](https://github.com/ROCm/ROCm/issues/3498){.reference .external
   - [`GlobalMatrix::ReadFileCSR`{.docutils .literal .notranslate}]{.pre}
 
   - [`GlobalMatrix::WriteFileCSR`{.docutils .literal .notranslate}]{.pre}
+:::
+:::::
 
-::
-
-{#rocblas-4-2-0 .section}
+:::::: {#rocblas-4-2-0 .section}
 ### **rocBLAS** (4.2.0)[\#](#rocblas-4-2-0 "Link to this heading"){.headerlink}
 
-{#id902 .section}
+::: {#id902 .section}
 #### Changed[\#](#id902 "Link to this heading"){.headerlink}
 
 - Added Level 2 functions and level 3 [`trsm`{.docutils .literal .notranslate}]{.pre} have additional ILP64 API for both C and FORTRAN ([`_64`{.docutils .literal .notranslate}]{.pre} name suffix) with [`int64_t`{.docutils .literal .notranslate}]{.pre} function arguments.
@@ -11709,60 +13969,61 @@ See [issue #3498](https://github.com/ROCm/ROCm/issues/3498){.reference .external
 - Updated Windows vcpkg dependencies to release 2024.02.14.
 
 - Increased default device workspace from 32 to 128 MiB for architecture gfx9xx with xx \>= 40.
+:::
 
-{#id903 .section}
+::: {#id903 .section}
 #### Optimized[\#](#id903 "Link to this heading"){.headerlink}
 
 - Improved performance of Level 1 [`dot_batched`{.docutils .literal .notranslate}]{.pre} and [`dot_strided_batched`{.docutils .literal .notranslate}]{.pre} for all precisions. Performance enhanced by 6 times for bigger problem sizes, as measured on an Instinct MI210 GPU.
+:::
 
-{#id904 .section}
+::: {#id904 .section}
 #### Removed[\#](#id904 "Link to this heading"){.headerlink}
 
 - Deprecated [`rocblas_gemm_ex3`{.docutils .literal .notranslate}]{.pre}, [`gemm_batched_ex3`{.docutils .literal .notranslate}]{.pre} and [`gemm_strided_batched_ex3`{.docutils .literal .notranslate}]{.pre}. They will be removed in the next major release of rocBLAS. Refer to [hipBLASLt](https://github.com/ROCm/hipBLASLt){.reference .external} for future 8-bit float usage.
+:::
+::::::
 
-:
-{#rocdbgapi-0-76-0 .section}
+:::: {#rocdbgapi-0-76-0 .section}
 ### **ROCdbgapi** (0.76.0)[\#](#rocdbgapi-0-76-0 "Link to this heading"){.headerlink}
 
-{#id905 .section}
+::: {#id905 .section}
 #### Removed[\#](#id905 "Link to this heading"){.headerlink}
 
 - Renamed [`(AMD_DBGAPI_EXCEPTION_WAVE,AMD_DBGAPI_WAVE_STOP_REASON)_APERTURE_VIOLATION`{.docutils .literal .notranslate}]{.pre} to [`(AMD_DBGAPI_EXCEPTION_WAVE,AMD_DBGAPI_WAVE_STOP_REASON)_ADDRESS_ERROR`{.docutils .literal .notranslate}]{.pre}. The old names are still accessible but deprecated.
+:::
+::::
 
-:
-
-:
-{#rocdecode-0-6-0 .section}
+:::: {#rocdecode-0-6-0 .section}
 ### **rocDecode** (0.6.0)[\#](#rocdecode-0-6-0 "Link to this heading"){.headerlink}
 
-{#id906 .section}
+::: {#id906 .section}
 #### Changed[\#](#id906 "Link to this heading"){.headerlink}
 
 - Added full H.264 support and bug fixes.
+:::
+::::
 
-:
-
-::
-{#rocfft-1-0-28 .section}
+::::: {#rocfft-1-0-28 .section}
 ### **rocFFT** (1.0.28)[\#](#rocfft-1-0-28 "Link to this heading"){.headerlink}
 
-{#id907 .section}
+::: {#id907 .section}
 #### Changed[\#](#id907 "Link to this heading"){.headerlink}
 
 - Randomly generated accuracy tests are now disabled by default. They can be enabled using the [`--nrand`{.docutils .literal .notranslate}]{.pre} option (which defaults to 0).
+:::
 
-{#id908 .section}
+::: {#id908 .section}
 #### Optimized[\#](#id908 "Link to this heading"){.headerlink}
 
 - Implemented multi-device transform for 3D pencil decomposition. Contiguous dimensions on input and output bricks are transformed locally, with global transposes to make remaining dimensions contiguous.
+:::
+:::::
 
-::
-
-:
-{#rocm-cmake-0-13-0 .section}
+:::: {#rocm-cmake-0-13-0 .section}
 ### **rocm-cmake** (0.13.0)[\#](#rocm-cmake-0-13-0 "Link to this heading"){.headerlink}
 
-{#id909 .section}
+::: {#id909 .section}
 #### Changed[\#](#id909 "Link to this heading"){.headerlink}
 
 - [`ROCmCreatePackage`{.docutils .literal .notranslate}]{.pre} now accepts a suffix parameter, automatically generating it for static or ASAN builds.
@@ -11770,14 +14031,13 @@ See [issue #3498](https://github.com/ROCm/ROCm/issues/3498){.reference .external
   - Package names are no longer pulled from [`CPACK_<GEN>_PACKAGE_NAME`{.docutils .literal .notranslate}]{.pre}.
 
   - Runtime packages will no longer be generated for static builds.
+:::
+::::
 
-:
-
-::
-{#rocm-data-center-tool-1-0-0 .section}
+::::: {#rocm-data-center-tool-1-0-0 .section}
 ### **ROCm Data Center Tool** (1.0.0)[\#](#rocm-data-center-tool-1-0-0 "Link to this heading"){.headerlink}
 
-{#id910 .section}
+::: {#id910 .section}
 #### Changed[\#](#id910 "Link to this heading"){.headerlink}
 
 - Added ROCProfiler [`dmon`{.docutils .literal .notranslate}]{.pre} metrics.
@@ -11787,55 +14047,55 @@ See [issue #3498](https://github.com/ROCm/ROCm/issues/3498){.reference .external
 - Added ROCm Validation Suite diagnostic command.
 
 - Fully migrated to AMD SMI.
+:::
 
-{#id911 .section}
+::: {#id911 .section}
 #### Removed[\#](#id911 "Link to this heading"){.headerlink}
 
 - Removed RASLIB dependency and blobs.
 
 - Removed [`rocm_smi_lib`{.docutils .literal .notranslate}]{.pre} dependency due to migration to AMD SMI.
+:::
+:::::
 
-::
-
-:
-{#rocm-debugger-rocgdb-14-2 .section}
+:::: {#rocm-debugger-rocgdb-14-2 .section}
 ### **ROCm Debugger (ROCgdb)** (14.2)[\#](#rocm-debugger-rocgdb-14-2 "Link to this heading"){.headerlink}
 
-{#id912 .section}
+::: {#id912 .section}
 #### Changed[\#](#id912 "Link to this heading"){.headerlink}
 
 - Introduce the coremerge utility to merge a host core dump and a GPU-only AMDGPU core dump into a unified AMDGPU corefile.
 
 - Added support for generating and opening core files for heterogeneous processes.
+:::
+::::
 
-:
-
-{#id913 .section}
+:::::: {#id913 .section}
 ### **ROCm SMI** (7.3.0)[\#](#id913 "Link to this heading"){.headerlink}
 
-{#id914 .section}
+::: {#id914 .section}
 #### Changed[\#](#id914 "Link to this heading"){.headerlink}
 
 - Added Partition ID API ([`rsmi_dev_partition_id_get(..)`{.docutils .literal .notranslate}]{.pre}).
+:::
 
-:
-{#id915 .section}
+:::: {#id915 .section}
 #### Resolved issues[\#](#id915 "Link to this heading"){.headerlink}
 
 - Fixed Partition ID CLI output.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 See the [detailed ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/docs/6.2.0/CHANGELOG.md){.reference .external} on GitHub for more information.
+:::
+::::
+::::::
 
-:
-
-:
-{#rocm-validation-suite-1-0-0 .section}
+:::: {#rocm-validation-suite-1-0-0 .section}
 ### **ROCm Validation Suite** (1.0.0)[\#](#rocm-validation-suite-1-0-0 "Link to this heading"){.headerlink}
 
-{#id916 .section}
+::: {#id916 .section}
 #### Changed[\#](#id916 "Link to this heading"){.headerlink}
 
 - Added stress tests:
@@ -11851,14 +14111,13 @@ See the [detailed ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/
   - Trignometric float and random integer matrix data initialization support.
 
 - Updated GST performance benchmark test for better numbers.
-
-:
-
+:::
 ::::
-{#rocprim-3-2-0 .section}
+
+::::::: {#rocprim-3-2-0 .section}
 ### **rocPRIM** (3.2.0)[\#](#rocprim-3-2-0 "Link to this heading"){.headerlink}
 
-{#id917 .section}
+::: {#id917 .section}
 #### Changed[\#](#id917 "Link to this heading"){.headerlink}
 
 - Added new overloads for [`warp_scan::exclusive_scan`{.docutils .literal .notranslate}]{.pre} that take no initial value. These new overloads will write an unspecified result to the first value of each warp.
@@ -11896,8 +14155,9 @@ See the [detailed ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/
 - Added [`rocprim::radix_key_codec`{.docutils .literal .notranslate}]{.pre}, which allows the encoding/decoding of keys for radix-based sorts. For user-defined key types, a decomposer functor should be passed.
 
 - Updated some tests to work with supported data types.
+:::
 
-{#id918 .section}
+::: {#id918 .section}
 #### Removed[\#](#id918 "Link to this heading"){.headerlink}
 
 - Deprecated the internal header [`detail/match_result_type.hpp`{.docutils .literal .notranslate}]{.pre}.
@@ -11905,15 +14165,17 @@ See the [detailed ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/
 - Deprecated [`TwiddleIn`{.docutils .literal .notranslate}]{.pre} and [`TwiddleOut`{.docutils .literal .notranslate}]{.pre} in favor of [`radix_key_codec`{.docutils .literal .notranslate}]{.pre}.
 
 - Deprecated the internal [`::rocprim::detail::radix_key_codec`{.docutils .literal .notranslate}]{.pre} in favor of a new public utility with the same name.
+:::
 
-{#id919 .section}
+::: {#id919 .section}
 #### Optimized[\#](#id919 "Link to this heading"){.headerlink}
 
 - Improved the performance of [`warp_sort_shuffle`{.docutils .literal .notranslate}]{.pre} and [`block_sort_bitonic`{.docutils .literal .notranslate}]{.pre}.
 
 - Created an optimized version of the [`warp_exchange`{.docutils .literal .notranslate}]{.pre} functions [`blocked_to_striped_shuffle`{.docutils .literal .notranslate}]{.pre} and [`striped_to_blocked_shuffle`{.docutils .literal .notranslate}]{.pre} when the warpsize is equal to the items per thread.
+:::
 
-{#id920 .section}
+::: {#id920 .section}
 #### Resolved issues[\#](#id920 "Link to this heading"){.headerlink}
 
 - Fixed incorrect results of [`warp_exchange::blocked_to_striped_shuffle`{.docutils .literal .notranslate}]{.pre} and [`warp_exchange::striped_to_blocked_shuffle`{.docutils .literal .notranslate}]{.pre} when the block size is larger than the logical warp size. The test suite has been updated with such cases.
@@ -11929,24 +14191,23 @@ See the [detailed ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/
 - Fixed incorrect data being loaded with [`rocprim::thread_load`{.docutils .literal .notranslate}]{.pre} when compiling with [`-O0`{.docutils .literal .notranslate}]{.pre}.
 
 - Fixed a compilation failure in the host compiler when instantiating various block and device algorithms with block sizes not divisible by 64.
+:::
+:::::::
 
-::::
-
-:
-{#id921 .section}
+:::: {#id921 .section}
 ### **ROCProfiler** (2.0.0)[\#](#id921 "Link to this heading"){.headerlink}
 
-{#id922 .section}
+::: {#id922 .section}
 #### Removed[\#](#id922 "Link to this heading"){.headerlink}
 
 - Removed [`pcsampler`{.docutils .literal .notranslate}]{.pre} sample code due to deprecation from version 2.
+:::
+::::
 
-:
-
-{#rocrand-3-1-0 .section}
+:::::: {#rocrand-3-1-0 .section}
 ### **rocRAND** (3.1.0)[\#](#rocrand-3-1-0 "Link to this heading"){.headerlink}
 
-{#id923 .section}
+::: {#id923 .section}
 #### Changed[\#](#id923 "Link to this heading"){.headerlink}
 
 - Added [`rocrand_create_generator_host`{.docutils .literal .notranslate}]{.pre}.
@@ -12038,8 +14299,9 @@ See the [detailed ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/
 - Renamed and unified the existing [`ROCRAND_DETAIL_.*_BM_NOT_IN_STATE`{.docutils .literal .notranslate}]{.pre} to [`ROCRAND_DETAIL_BM_NOT_IN_STATE`{.docutils .literal .notranslate}]{.pre}
 
 - Static and dynamic library: moved all internal symbols to namespaces to avoid potential symbol name collisions when linking.
+:::
 
-{#id924 .section}
+::: {#id924 .section}
 #### Removed[\#](#id924 "Link to this heading"){.headerlink}
 
 - Deprecated the following typedefs. Please use the unified [`state_type`{.docutils .literal .notranslate}]{.pre} alias instead.
@@ -12061,27 +14323,29 @@ See the [detailed ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/
 - Removed references to and workarounds for deprecated hcc.
 
 - Removed support for HIP-CPU.
+:::
 
-{#id925 .section}
+::: {#id925 .section}
 #### Known issues[\#](#id925 "Link to this heading"){.headerlink}
 
 - [`SOBOL64`{.docutils .literal .notranslate}]{.pre} and [`SCRAMBLED_SOBOL64`{.docutils .literal .notranslate}]{.pre} generate poisson-distributed [`unsigned`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`long`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`long`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`int`{.docutils .literal .notranslate}]{.pre} numbers instead of [`unsigned`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`int`{.docutils .literal .notranslate}]{.pre}. This will be fixed in a future release.
+:::
+::::::
 
-:
-{#rocr-runtime-1-14-0 .section}
+:::: {#rocr-runtime-1-14-0 .section}
 ### **ROCr Runtime** (1.14.0)[\#](#rocr-runtime-1-14-0 "Link to this heading"){.headerlink}
 
-{#id926 .section}
+::: {#id926 .section}
 #### Changed[\#](#id926 "Link to this heading"){.headerlink}
 
 - Added PC sampling feature (experimental feature).
+:::
+::::
 
-:
-
-{#rocsolver-3-26-0 .section}
+:::::: {#rocsolver-3-26-0 .section}
 ### **rocSOLVER** (3.26.0)[\#](#rocsolver-3-26-0 "Link to this heading"){.headerlink}
 
-{#id927 .section}
+::: {#id927 .section}
 #### Changed[\#](#id927 "Link to this heading"){.headerlink}
 
 - Added 64-bit APIs for existing functions:
@@ -12109,23 +14373,27 @@ See the [detailed ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/
 - Renamed install script arguments of the form [`*_dir`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`to`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`*-path`{.docutils .literal .notranslate}]{.pre}. Arguments of the form [`*_dir`{.docutils .literal .notranslate}]{.pre} remain functional for backwards compatibility.
 
 - Functions working with arrays of size n - 1 can now accept null pointers when n = 1.
+:::
 
-{#id928 .section}
+::: {#id928 .section}
 #### Optimized[\#](#id928 "Link to this heading"){.headerlink}
 
 - Improved performance of Cholesky factorization.
 
 - Improved performance of [`splitlu`{.docutils .literal .notranslate}]{.pre} to extract the L and U triangular matrices from the result of sparse factorization matrix M, where M = (L - eye) + U.
+:::
 
-{#id929 .section}
+::: {#id929 .section}
 #### Resolved issues[\#](#id929 "Link to this heading"){.headerlink}
 
 - Fixed potential accuracy degradation in SYEVJ/HEEVJ for inputs with small eigenvalues.
+:::
+::::::
 
-{#rocsparse-3-2-0 .section}
+:::::: {#rocsparse-3-2-0 .section}
 ### **rocSPARSE** (3.2.0)[\#](#rocsparse-3-2-0 "Link to this heading"){.headerlink}
 
-{#id930 .section}
+::: {#id930 .section}
 #### Changed[\#](#id930 "Link to this heading"){.headerlink}
 
 - Added a new Merge-Path algorithm to SpMM, supporting CSR format.
@@ -12145,8 +14413,9 @@ See the [detailed ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/
 - [`rocsparse_csr_set_pointers`{.docutils .literal .notranslate}]{.pre}, [`rocsparse_csc_set_pointers`{.docutils .literal .notranslate}]{.pre}, and [`rocsparse_bsr_set_pointers`{.docutils .literal .notranslate}]{.pre} now allow the column indices and values arrays to be nullptr if [`nnz`{.docutils .literal .notranslate}]{.pre} is 0.
 
 - gfx803 target has been removed from address sanitizer builds.
+:::
 
-{#id931 .section}
+::: {#id931 .section}
 #### Optimized[\#](#id931 "Link to this heading"){.headerlink}
 
 - SpMV adaptive and LRB algorithms have been further optimized on CSR format
@@ -12154,17 +14423,19 @@ See the [detailed ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/
 - Improved performance of SpMV adaptive with symmetrically stored matrices on CSR format
 
 - Improved documentation and contribution guidelines.
+:::
 
-{#id932 .section}
+::: {#id932 .section}
 #### Resolved issues[\#](#id932 "Link to this heading"){.headerlink}
 
 - Fixed compilation errors with [`BUILD_ROCSPARSE_ILP64=ON`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::::
 
-::
-{#rocthrust-3-1-0 .section}
+::::: {#rocthrust-3-1-0 .section}
 ### **rocThrust** (3.1.0)[\#](#rocthrust-3-1-0 "Link to this heading"){.headerlink}
 
-{#id933 .section}
+::: {#id933 .section}
 #### Changed[\#](#id933 "Link to this heading"){.headerlink}
 
 - Added changes from upstream CCCL/thrust 2.2.0.
@@ -12178,21 +14449,21 @@ See the [detailed ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/
 - Updated internal use of custom iterator in [`thrust::detail::unique_by_key`{.docutils .literal .notranslate}]{.pre} to use rocPRIM's [`rocprim::unique_by_key`{.docutils .literal .notranslate}]{.pre}.
 
 - Updated [`adjecent_difference`{.docutils .literal .notranslate}]{.pre} to make use of [`rocprim:adjecent_difference`{.docutils .literal .notranslate}]{.pre} when iterators are comparable and not equal otherwise use [`rocprim:adjacent_difference_inplace`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id934 .section}
+::: {#id934 .section}
 #### Known issues[\#](#id934 "Link to this heading"){.headerlink}
 
 - [`thrust::reduce_by_key`{.docutils .literal .notranslate}]{.pre} outputs are not bit-wise reproducible, as run-to-run results for pseudo-associative reduction operators (e.g. floating-point arithmetic operators) are not deterministic on the same device.
 
 - Note that currently, rocThrust memory allocation is performed in such a way that most algorithmic API functions cannot be called from within hipGraphs.
+:::
+:::::
 
-::
-
-::
-{#rocwmma-1-5-0 .section}
+::::: {#rocwmma-1-5-0 .section}
 ### **rocWMMA** (1.5.0)[\#](#rocwmma-1-5-0 "Link to this heading"){.headerlink}
 
-{#id935 .section}
+::: {#id935 .section}
 #### Changed[\#](#id935 "Link to this heading"){.headerlink}
 
 - Added internal utilities for:
@@ -12214,19 +14485,19 @@ See the [detailed ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/
 - Refactored entry-point of std library usage to improve hipRTC support.
 
 - Updated installation, programmer's guide and API reference documentation.
+:::
 
-{#id936 .section}
+::: {#id936 .section}
 #### Resolved issues[\#](#id936 "Link to this heading"){.headerlink}
 
 - Fixed the ordering of some header includes to improve portability.
+:::
+:::::
 
-::
-
-:
-{#rpp-1-8-0 .section}
+:::: {#rpp-1-8-0 .section}
 ### **RPP** (1.8.0)[\#](#rpp-1-8-0 "Link to this heading"){.headerlink}
 
-{#id937 .section}
+::: {#id937 .section}
 #### Changed[\#](#id937 "Link to this heading"){.headerlink}
 
 - Prerequisites - ROCm install requires only [`--usecase=rocm`{.docutils .literal .notranslate}]{.pre}.
@@ -12242,13 +14513,13 @@ See the [detailed ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/
 - RPP Tensor Audio support on HOST for Mel Filter Bank.
 
 - RPP Tensor Normalize ND support on HOST and [`HIP`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::
 
-:
-
-{#tensile-4-41-0 .section}
+:::::: {#tensile-4-41-0 .section}
 ### **Tensile** (4.41.0)[\#](#tensile-4-41-0 "Link to this heading"){.headerlink}
 
-{#id938 .section}
+::: {#id938 .section}
 #### Changed[\#](#id938 "Link to this heading"){.headerlink}
 
 - New tuning script to summarize rocBLAS log file
@@ -12340,8 +14611,9 @@ See the [detailed ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/
 - Pre-apply offsets for strided batch kernels
 
 - Update tensile build with 16 threads
+:::
 
-{#id939 .section}
+::: {#id939 .section}
 #### Optimized[\#](#id939 "Link to this heading"){.headerlink}
 
 - Made initialization optimizations (reordered init code for PreloadKernelArguments opt, used s_mov_b64 for 64 bit address copy, used v_mov_b64/ds_read_b64 for C register initialization, added undefine AddressC/D with PreloadKernelArguments, optimized waitcnt for prefetch global read with DirectToVgpr, refactored waitcnt code for DTV and moved all asm related code to KernelWriterAssembly.py).
@@ -12353,8 +14625,9 @@ See the [detailed ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/
 - Optimized waitcnt lgkmcnt for 1LDSBuffer + PGR\>1 (removed redundant waitcnt lgkmcnt after 1LDSBuffer sync)
 
 - Enhanced maximum value of DepthU to 1024 (used globalParameters MaxDepthU to define maximum value of DepthU)
+:::
 
-{#id940 .section}
+::: {#id940 .section}
 #### Resolved issues[\#](#id940 "Link to this heading"){.headerlink}
 
 - Fixed [`WorkspaceCheck`{.docutils .literal .notranslate}]{.pre} implementation when used in rocBLAS.
@@ -12388,20 +14661,19 @@ See the [detailed ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/
 - Fixed an error with DisableKernelPieces + 32bit ShadowLimit.
 
 - Ignore asm cap check for kernel arg preload for rocm6.0 and older.
+:::
+::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::
-{#rocm-6-1-2 .section}
+::::::::::::::::::::::: {#rocm-6-1-2 .section}
 ## ROCm 6.1.2[\#](#rocm-6-1-2 "Link to this heading"){.headerlink}
 
 See the [ROCm 6.1.2 release notes](https://rocm.docs.amd.com/en/docs-6.1.2/about/release-notes.html){.reference .external} for a complete overview of this release.
 
-::::::
-{#amd-smi-24-5-1 .section}
+::::::::: {#amd-smi-24-5-1 .section}
 ### **AMD SMI** (24.5.1)[\#](#amd-smi-24-5-1 "Link to this heading"){.headerlink}
 
-{#id941 .section}
+::: {#id941 .section}
 #### Added[\#](#id941 "Link to this heading"){.headerlink}
 
 - Added process isolation and clean shader APIs and CLI commands.
@@ -12413,8 +14685,9 @@ See the [ROCm 6.1.2 release notes](https://rocm.docs.amd.com/en/docs-6.1.2/about
   - [`amdsmi_set_gpu_clear_sram_data()`{.docutils .literal .notranslate}]{.pre}
 
 - Added the [`MIN_POWER`{.docutils .literal .notranslate}]{.pre} metric to output provided by [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`static`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--limit`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id942 .section}
+::: {#id942 .section}
 #### Changed[\#](#id942 "Link to this heading"){.headerlink}
 
 - Updated [`amismi_get_power_cap_info`{.docutils .literal .notranslate}]{.pre} to return values in uW instead of W.
@@ -12422,19 +14695,21 @@ See the [ROCm 6.1.2 release notes](https://rocm.docs.amd.com/en/docs-6.1.2/about
 - Updated Python library return types for [`amdsmi_get_gpu_memory_reserved_pages`{.docutils .literal .notranslate}]{.pre} and [`amdsmi_get_gpu_bad_page_info`{.docutils .literal .notranslate}]{.pre}.
 
 - Updated the output of [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`metric`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--ecc-blocks`{.docutils .literal .notranslate}]{.pre} to show counters available from blocks.
+:::
 
-{#id943 .section}
+::: {#id943 .section}
 #### Removed[\#](#id943 "Link to this heading"){.headerlink}
 
 - Removed the [`amdsmi_get_gpu_process_info`{.docutils .literal .notranslate}]{.pre} API from the Python library. It was removed from the C library in an earlier release.
+:::
 
-{#id944 .section}
+::: {#id944 .section}
 #### Optimized[\#](#id944 "Link to this heading"){.headerlink}
 
 - Updated the [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`monitor`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--pcie`{.docutils .literal .notranslate}]{.pre} output to prevent delays with the [`monitor`{.docutils .literal .notranslate}]{.pre} command.
+:::
 
-:
-{#id945 .section}
+:::: {#id945 .section}
 #### Resolved issues[\#](#id945 "Link to this heading"){.headerlink}
 
 - [`amdsmi_get_gpu_board_info()`{.docutils .literal .notranslate}]{.pre} no longer returns junk character strings.
@@ -12445,104 +14720,104 @@ See the [ROCm 6.1.2 release notes](https://rocm.docs.amd.com/en/docs-6.1.2/about
 
 - Fixed an issue with the [`amdsmi_get_gpu_memory_reserved_pages`{.docutils .literal .notranslate}]{.pre} and [`amdsmi_get_gpu_bad_page_info`{.docutils .literal .notranslate}]{.pre} Python interface calls.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 See the AMD SMI [detailed changelog](https://github.com/ROCm/amdsmi/blob/rocm-6.1.x/CHANGELOG.md){.reference .external} with code samples for more information.
+:::
+::::
+:::::::::
 
-:
-::::::
-
-:
-{#rccl-2-18-6 .section}
+:::: {#rccl-2-18-6 .section}
 ### **RCCL** (2.18.6)[\#](#rccl-2-18-6 "Link to this heading"){.headerlink}
 
-{#id946 .section}
+::: {#id946 .section}
 #### Changed[\#](#id946 "Link to this heading"){.headerlink}
 
 - Reduced [`NCCL_TOPO_MAX_NODES`{.docutils .literal .notranslate}]{.pre} to limit stack usage and avoid stack overflow.
+:::
+::::
 
-:
-
-::
-{#rocblas-4-1-2 .section}
+::::: {#rocblas-4-1-2 .section}
 ### **rocBLAS** (4.1.2)[\#](#rocblas-4-1-2 "Link to this heading"){.headerlink}
 
-{#id947 .section}
+::: {#id947 .section}
 #### Optimized[\#](#id947 "Link to this heading"){.headerlink}
 
 - Tuned BBS TN and TT operations on the CDNA3 architecture.
+:::
 
-{#id948 .section}
+::: {#id948 .section}
 #### Resolved issues[\#](#id948 "Link to this heading"){.headerlink}
 
 - Fixed an issue related to obtaining solutions for BF16 TT operations.
+:::
+:::::
 
-::
-
-::::
-{#id949 .section}
+::::::: {#id949 .section}
 ### **rocDecode** (0.6.0)[\#](#id949 "Link to this heading"){.headerlink}
 
-{#id950 .section}
+::: {#id950 .section}
 #### Added[\#](#id950 "Link to this heading"){.headerlink}
 
 - Added support for FFmpeg v5.x.
+:::
 
-{#id951 .section}
+::: {#id951 .section}
 #### Changed[\#](#id951 "Link to this heading"){.headerlink}
 
 - Updated core dependencies.
 
 - Updated to support the use of public LibVA headers.
+:::
 
-{#id952 .section}
+::: {#id952 .section}
 #### Optimized[\#](#id952 "Link to this heading"){.headerlink}
 
 - Updated error checking in the [`rocDecode-setup.py`{.docutils .literal .notranslate}]{.pre} script.
+:::
 
-{#id953 .section}
+::: {#id953 .section}
 #### Resolved issues[\#](#id953 "Link to this heading"){.headerlink}
 
 - Fixed some package dependencies.
+:::
+:::::::
 
-::::
-
-::
-{#rocm-smi-7-2-0 .section}
+::::: {#rocm-smi-7-2-0 .section}
 ### **ROCm SMI** (7.2.0)[\#](#rocm-smi-7-2-0 "Link to this heading"){.headerlink}
 
-{#id954 .section}
+::: {#id954 .section}
 #### Added[\#](#id954 "Link to this heading"){.headerlink}
 
 - Added the ring hang event to the [`amdsmi_evt_notification_type_t`{.docutils .literal .notranslate}]{.pre} enum.
+:::
 
-{#id955 .section}
+::: {#id955 .section}
 #### Resolved issues[\#](#id955 "Link to this heading"){.headerlink}
 
 - Fixed an issue causing ROCm SMI to incorrectly report GPU utilization for RDNA3 GPUs. See the issue on [GitHub](https://github.com/ROCm/ROCm/issues/3112){.reference .external}.
 
 - Fixed the parsing of [`pp_od_clk_voltage`{.docutils .literal .notranslate}]{.pre} in [`get_od_clk_volt_info`{.docutils .literal .notranslate}]{.pre} to work better with MI-Series hardware.
+:::
+:::::
+:::::::::::::::::::::::
 
-::
-::::::::::::::::::::
-
-::::::::::::::::::::::::
-{#rocm-6-1-1 .section}
+::::::::::::::::::::::::::: {#rocm-6-1-1 .section}
 ## ROCm 6.1.1[\#](#rocm-6-1-1 "Link to this heading"){.headerlink}
 
 See the [ROCm 6.1.1 release notes](https://rocm.docs.amd.com/en/docs-6.1.1/about/release-notes.html){.reference .external} for a complete overview of this release.
 
-::::::
-{#id956 .section}
+::::::::: {#id956 .section}
 ### **AMD SMI** (24.5.1)[\#](#id956 "Link to this heading"){.headerlink}
 
-{#id957 .section}
+::: {#id957 .section}
 #### Added[\#](#id957 "Link to this heading"){.headerlink}
 
 - Added deferred error correctable counts to [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`metric`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-ecc`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-ecc-blocks`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id958 .section}
+::: {#id958 .section}
 #### Changed[\#](#id958 "Link to this heading"){.headerlink}
 
 - Updated the output of [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`metric`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--ecc-blocks`{.docutils .literal .notranslate}]{.pre} to show counters available from blocks.
@@ -12550,13 +14825,15 @@ See the [ROCm 6.1.1 release notes](https://rocm.docs.amd.com/en/docs-6.1.1/about
 - Updated the output of [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`metric`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--clock`{.docutils .literal .notranslate}]{.pre} to reflect each engine.
 
 - Updated the output of [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`topology`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--json`{.docutils .literal .notranslate}]{.pre} to align with output reported by host and guest systems.
+:::
 
-{#id959 .section}
+::: {#id959 .section}
 #### Removed[\#](#id959 "Link to this heading"){.headerlink}
 
 - Removed the [`amdsmi_get_gpu_process_info`{.docutils .literal .notranslate}]{.pre} API from the Python library. It was removed from the C library in an earlier release.
+:::
 
-{#id960 .section}
+::: {#id960 .section}
 #### Resolved issues[\#](#id960 "Link to this heading"){.headerlink}
 
 - Fixed [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`metric`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--clock`{.docutils .literal .notranslate}]{.pre}'s clock lock and deep sleep status.
@@ -12566,26 +14843,25 @@ See the [ROCm 6.1.1 release notes](https://rocm.docs.amd.com/en/docs-6.1.1/about
 - Fixed [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`metric`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--pcie`{.docutils .literal .notranslate}]{.pre} and [`amdsmi_get_pcie_info()`{.docutils .literal .notranslate}]{.pre} when using RDNA3 (Navi 32 and Navi 31) hardware to prevent "UNKNOWN" reports.
 
 - Fixed the output results of [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`process`{.docutils .literal .notranslate}]{.pre} when getting processes running on a device.
+:::
 
-:
-{#id961 .section}
+:::: {#id961 .section}
 #### Known issues[\#](#id961 "Link to this heading"){.headerlink}
 
 - [`amd-smi`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`bad-pages`{.docutils .literal .notranslate}]{.pre} can result in a [`ValueError:`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`Null`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`pointer`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`access`{.docutils .literal .notranslate}]{.pre} error when using some PMU firmware versions.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 See the [detailed changelog](https://github.com/ROCm/amdsmi/blob/docs/6.1.1/CHANGELOG.md){.reference .external} with code samples for more information.
+:::
+::::
+:::::::::
 
-:
-::::::
-
-::
-{#hipblaslt-0-7-0 .section}
+::::: {#hipblaslt-0-7-0 .section}
 ### **hipBLASLt** (0.7.0)[\#](#hipblaslt-0-7-0 "Link to this heading"){.headerlink}
 
-{#id962 .section}
+::: {#id962 .section}
 #### Added[\#](#id962 "Link to this heading"){.headerlink}
 
 - Added [`hipblasltExtSoftmax`{.docutils .literal .notranslate}]{.pre} extension API.
@@ -12597,19 +14873,19 @@ See the [detailed changelog](https://github.com/ROCm/amdsmi/blob/docs/6.1.1/CHAN
 - Added [`GemmTuning`{.docutils .literal .notranslate}]{.pre} extension parameter to set split-k by user.
 
 - Added support for mixed precision datatype: fp16/fp8 in with fp16 outk.
+:::
 
-{#id963 .section}
+::: {#id963 .section}
 #### Upcoming changes[\#](#id963 "Link to this heading"){.headerlink}
 
 - [`algoGetHeuristic()`{.docutils .literal .notranslate}]{.pre} ext API for GroupGemm will be deprecated in a future release of hipBLASLt.
+:::
+:::::
 
-::
-
-:
-{#hipcc-1-0-0 .section}
+:::: {#hipcc-1-0-0 .section}
 ### **HIPCC** (1.0.0)[\#](#hipcc-1-0-0 "Link to this heading"){.headerlink}
 
-{#id964 .section}
+::: {#id964 .section}
 #### Changed[\#](#id964 "Link to this heading"){.headerlink}
 
 - **Upcoming:** a future release will enable use of compiled binaries [`hipcc.bin`{.docutils .literal .notranslate}]{.pre} and [`hipconfig.bin`{.docutils .literal .notranslate}]{.pre} by default. No action is needed by users. You can continue calling high-level Perl scripts [`hipcc`{.docutils .literal .notranslate}]{.pre} and [`hipconfig`{.docutils .literal .notranslate}]{.pre}. [`hipcc.bin`{.docutils .literal .notranslate}]{.pre} and [`hipconfig.bin`{.docutils .literal .notranslate}]{.pre} will be invoked by the high-level Perl scripts. To revert to the previous behavior and invoke [`hipcc.pl`{.docutils .literal .notranslate}]{.pre} and [`hipconfig.pl`{.docutils .literal .notranslate}]{.pre}, set the [`HIP_USE_PERL_SCRIPTS`{.docutils .literal .notranslate}]{.pre} environment variable to [`1`{.docutils .literal .notranslate}]{.pre}.
@@ -12617,46 +14893,45 @@ See the [detailed changelog](https://github.com/ROCm/amdsmi/blob/docs/6.1.1/CHAN
 - **Upcoming:** a subsequent release will remove high-level Perl scripts [`hipcc`{.docutils .literal .notranslate}]{.pre} and [`hipconfig`{.docutils .literal .notranslate}]{.pre}. This release will remove the [`HIP_USE_PERL_SCRIPTS`{.docutils .literal .notranslate}]{.pre} environment variable. It will rename [`hipcc.bin`{.docutils .literal .notranslate}]{.pre} and [`hipconfig.bin`{.docutils .literal .notranslate}]{.pre} to [`hipcc`{.docutils .literal .notranslate}]{.pre} and [`hipconfig`{.docutils .literal .notranslate}]{.pre} respectively. No action is needed by the users. To revert to the previous behavior, invoke [`hipcc.pl`{.docutils .literal .notranslate}]{.pre} and [`hipconfig.pl`{.docutils .literal .notranslate}]{.pre} explicitly.
 
 - **Upcoming:** a subsequent release will remove [`hipcc.pl`{.docutils .literal .notranslate}]{.pre} and [`hipconfig.pl`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::
 
-:
-
-::
-{#hipsolver-2-1-1 .section}
+::::: {#hipsolver-2-1-1 .section}
 ### **hipSOLVER** (2.1.1)[\#](#hipsolver-2-1-1 "Link to this heading"){.headerlink}
 
-{#id965 .section}
+::: {#id965 .section}
 #### Changed[\#](#id965 "Link to this heading"){.headerlink}
 
 - By default, [`BUILD_WITH_SPARSE`{.docutils .literal .notranslate}]{.pre} is now set to OFF on Microsoft Windows.
+:::
 
-{#id966 .section}
+::: {#id966 .section}
 #### Resolved issues[\#](#id966 "Link to this heading"){.headerlink}
 
 - Fixed benchmark client build when [`BUILD_WITH_SPARSE`{.docutils .literal .notranslate}]{.pre} is OFF.
+:::
+:::::
 
-::
-
-::
-{#rocfft-1-0-27 .section}
+::::: {#rocfft-1-0-27 .section}
 ### **rocFFT** (1.0.27)[\#](#rocfft-1-0-27 "Link to this heading"){.headerlink}
 
-{#id967 .section}
+::: {#id967 .section}
 #### Added[\#](#id967 "Link to this heading"){.headerlink}
 
 - Enable multi-GPU testing on systems without direct GPU-interconnects.
+:::
 
-{#id968 .section}
+::: {#id968 .section}
 #### Resolved issues[\#](#id968 "Link to this heading"){.headerlink}
 
 - Fixed kernel launch failure on execute of very large odd-length real-complex transforms.
-
-::
-
+:::
 :::::
-{#rocm-smi-7-0-0 .section}
+
+:::::::: {#rocm-smi-7-0-0 .section}
 ### **ROCm SMI** (7.0.0)[\#](#rocm-smi-7-0-0 "Link to this heading"){.headerlink}
 
-{#id969 .section}
+::: {#id969 .section}
 #### Added[\#](#id969 "Link to this heading"){.headerlink}
 
 - Added the capability to unlock mutex when a process is dead. Added related debug output.
@@ -12666,15 +14941,17 @@ See the [detailed changelog](https://github.com/ROCm/amdsmi/blob/docs/6.1.1/CHAN
 - Added [`NODE`{.docutils .literal .notranslate}]{.pre}, [`GUID`{.docutils .literal .notranslate}]{.pre}, and [`GFX`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`Version`{.docutils .literal .notranslate}]{.pre} fields to the CLI.
 
 - Documentation now includes C++ and Python tutorials, API guides, and reference material.
+:::
 
-{#id970 .section}
+::: {#id970 .section}
 #### Changed[\#](#id970 "Link to this heading"){.headerlink}
 
 - Some [`rocm-smi`{.docutils .literal .notranslate}]{.pre} fields now display [`N/A`{.docutils .literal .notranslate}]{.pre} instead of [`unknown/unsupported`{.docutils .literal .notranslate}]{.pre} for consistency.
 
 - Changed stacked ID formatting in the [`rocm-smi`{.docutils .literal .notranslate}]{.pre} CLI to make it easier to spot identifiers.
+:::
 
-{#id971 .section}
+::: {#id971 .section}
 #### Resolved issues[\#](#id971 "Link to this heading"){.headerlink}
 
 - Fixed HIP and ROCm SMI mismatch on GPU bus assignments.
@@ -12684,128 +14961,119 @@ See the [detailed changelog](https://github.com/ROCm/amdsmi/blob/docs/6.1.1/CHAN
 - Fixed initializing calls which reuse [`rocmsmi.initializeRsmi()`{.docutils .literal .notranslate}]{.pre} bindings in the [`rocmsmi`{.docutils .literal .notranslate}]{.pre} Python API.
 
 - Fixed an issue causing [`rsmi_dev_activity_metric_get`{.docutils .literal .notranslate}]{.pre} gfx/memory to not update with GPU activity.
+:::
 
-:
-{#id972 .section}
+:::: {#id972 .section}
 #### Known issues[\#](#id972 "Link to this heading"){.headerlink}
 
 - ROCm SMI reports GPU utilization incorrectly for RDNA3 GPUs in some situations. See the issue on [GitHub](https://github.com/ROCm/ROCm/issues/3112){.reference .external}.
 
-{.admonition .note}
+::: {.admonition .note}
 Note
 
 See the [detailed ROCm SMI changelog](https://github.com/ROCm/rocm_smi_lib/blob/docs/6.1.1/CHANGELOG.md){.reference .external} with code samples for more information.
+:::
+::::
+::::::::
+:::::::::::::::::::::::::::
 
-:
-:::::
-::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::
-{#rocm-6-1-0 .section}
+::::::::::::::::::::::::::::::::::::::::::::: {#rocm-6-1-0 .section}
 ## ROCm 6.1.0[\#](#rocm-6-1-0 "Link to this heading"){.headerlink}
 
 See the [ROCm 6.1.0 release notes](https://rocm.docs.amd.com/en/docs-6.1.0/about/release-notes.html){.reference .external} for a complete overview of this release.
 
-:
-{#amd-smi-24-4-1 .section}
+:::: {#amd-smi-24-4-1 .section}
 ### **AMD SMI** (24.4.1)[\#](#amd-smi-24-4-1 "Link to this heading"){.headerlink}
 
-{#id973 .section}
+::: {#id973 .section}
 #### Added[\#](#id973 "Link to this heading"){.headerlink}
 
 - New monitor command for GPU metrics. Use the monitor command to customize, capture, collect, and observe GPU metrics on target devices.
 
 - Integration with E-SMI. The EPYC™ System Management Interface In-band Library is a Linux C-library that provides in-band user space software APIs to monitor and control your CPU's power, energy, performance, and other system management functionality. This integration enables access to CPU metrics and telemetry through the AMD SMI API and CLI tools.
+:::
+::::
 
-:
-
-::
-{#id974 .section}
+::::: {#id974 .section}
 ### **Composable Kernel** (1.1.0)[\#](#id974 "Link to this heading"){.headerlink}
 
-{#id975 .section}
+::: {#id975 .section}
 #### Added[\#](#id975 "Link to this heading"){.headerlink}
 
 - New architecture support. CK now supports to the following architectures to enable efficient image denoising on the following AMD GPUs: gfx1030, gfx1100, gfx1031, gfx1101, gfx1032, gfx1102, gfx1034, gfx1103, gfx1035, gfx1036
+:::
 
-{#id976 .section}
+::: {#id976 .section}
 #### Changed[\#](#id976 "Link to this heading"){.headerlink}
 
 - FP8 rounding logic is replaced with stochastic rounding. Stochastic rounding mimics a more realistic data behavior and improves model convergence.
+:::
+:::::
 
-::
-
-:
-{#hip-6-1 .section}
+:::: {#hip-6-1 .section}
 ### **HIP** (6.1)[\#](#hip-6-1 "Link to this heading"){.headerlink}
 
-{#id977 .section}
+::: {#id977 .section}
 #### Added[\#](#id977 "Link to this heading"){.headerlink}
 
 - New environment variable to enable kernel run serialization. The default [`HIP_LAUNCH_BLOCKING`{.docutils .literal .notranslate}]{.pre} value is [`0`{.docutils .literal .notranslate}]{.pre} (disable); which causes kernels to run as defined in the queue. When set to [`1`{.docutils .literal .notranslate}]{.pre} (enable), the HIP runtime serializes the kernel queue, which behaves the same as [`AMD_SERIALIZE_KERNEL`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::
 
-:
-
-:
-{#id978 .section}
+:::: {#id978 .section}
 ### **hipBLASLt** (0.7.0)[\#](#id978 "Link to this heading"){.headerlink}
 
-{#id979 .section}
+::: {#id979 .section}
 #### Added[\#](#id979 "Link to this heading"){.headerlink}
 
 - New GemmTuning extension parameter. GemmTuning allows you to set a split-k value for each solution, which is more feasible for performance tuning.
+:::
+::::
 
-:
-
-:
-{#hipfft-1-0-14 .section}
+:::: {#hipfft-1-0-14 .section}
 ### **hipFFT** (1.0.14)[\#](#hipfft-1-0-14 "Link to this heading"){.headerlink}
 
-{#id980 .section}
+::: {#id980 .section}
 #### Added[\#](#id980 "Link to this heading"){.headerlink}
 
 - New multi-GPU support for single-process transforms. Multiple GPUs can be used to perform a transform in a single process. Note that this initial implementation is a functional preview.
+:::
+::::
 
-:
-
-:
-{#hipify-17-0-0 .section}
+:::: {#hipify-17-0-0 .section}
 ### **HIPIFY** (17.0.0)[\#](#hipify-17-0-0 "Link to this heading"){.headerlink}
 
-{#id981 .section}
+::: {#id981 .section}
 #### Changed[\#](#id981 "Link to this heading"){.headerlink}
 
 - Skipped code blocks: Code blocks that are skipped by the preprocessor are no longer hipified under the [`--default-preprocessor`{.docutils .literal .notranslate}]{.pre} option. To hipify everything, despite conditional preprocessor directives ([`#if`{.docutils .literal .notranslate}]{.pre}, [`#ifdef`{.docutils .literal .notranslate}]{.pre}, [`#ifndef`{.docutils .literal .notranslate}]{.pre}, [`#elif`{.docutils .literal .notranslate}]{.pre}, or [`#else`{.docutils .literal .notranslate}]{.pre}), don't use the [`--default-preprocessor`{.docutils .literal .notranslate}]{.pre} or [`--amap`{.docutils .literal .notranslate}]{.pre} options.
+:::
+::::
 
-:
-
-:
-{#hipsparselt-0-1-0 .section}
+:::: {#hipsparselt-0-1-0 .section}
 ### **hipSPARSELt** (0.1.0)[\#](#hipsparselt-0-1-0 "Link to this heading"){.headerlink}
 
-{#id982 .section}
+::: {#id982 .section}
 #### Added[\#](#id982 "Link to this heading"){.headerlink}
 
 - Structured sparsity matrix support extensions. Structured sparsity matrices help speed up deep-learning workloads. We now support [`B`{.docutils .literal .notranslate}]{.pre} as the sparse matrix and [`A`{.docutils .literal .notranslate}]{.pre} as the dense matrix in Sparse Matrix-Matrix Multiplication (SPMM). Prior to this release, we only supported sparse (matrix A) x dense (matrix B) matrix multiplication. Structured sparsity matrices help speed up deep learning workloads.
+:::
+::::
 
-:
-
-:
-{#hiptensor-1-2-0 .section}
+:::: {#hiptensor-1-2-0 .section}
 ### **hipTensor** (1.2.0)[\#](#hiptensor-1-2-0 "Link to this heading"){.headerlink}
 
-{#id983 .section}
+::: {#id983 .section}
 #### Added[\#](#id983 "Link to this heading"){.headerlink}
 
 - 4D tensor permutation and contraction support. You can now perform tensor permutation on 4D tensors and 4D contractions for F16, BF16, and Complex F32/F64 datatypes.
+:::
+::::
 
-:
-
-:
-{#llvm-project-17-0-0 .section}
+:::: {#llvm-project-17-0-0 .section}
 ### **llvm-project** (17.0.0)[\#](#llvm-project-17-0-0 "Link to this heading"){.headerlink}
 
-{#id984 .section}
+::: {#id984 .section}
 #### Changed[\#](#id984 "Link to this heading"){.headerlink}
 
 - Combined projects. ROCm Device-Libs, ROCm Compiler Support, and hipCC are now located in the [`llvm-project/amd`{.docutils .literal .notranslate}]{.pre} subdirectory of AMD's fork of the LLVM project. Previously, these projects were maintained in separate repositories. Note that the projects themselves will continue to be packaged separately.
@@ -12815,14 +15083,13 @@ See the [ROCm 6.1.0 release notes](https://rocm.docs.amd.com/en/docs-6.1.0/about
   - **rocm-llvm(required)**: A package containing the essential binaries needed for compilation.
 
   - **rocm-llvm-dev(optional)**: A package containing binaries for compiler and application developers.
+:::
+::::
 
-:
-
-:
-{#migraphx-2-9-0 .section}
+:::: {#migraphx-2-9-0 .section}
 ### **MIGraphX** (2.9.0)[\#](#migraphx-2-9-0 "Link to this heading"){.headerlink}
 
-{#id985 .section}
+::: {#id985 .section}
 #### Added[\#](#id985 "Link to this heading"){.headerlink}
 
 - Improved performance for transformer-based models. We added support for FlashAttention, which benefits models like BERT, GPT, and Stable Diffusion.
@@ -12830,169 +15097,155 @@ See the [ROCm 6.1.0 release notes](https://rocm.docs.amd.com/en/docs-6.1.0/about
 - New Torch-MIGraphX driver. This driver calls MIGraphX directly from PyTorch. It provides an [`mgx_module`{.docutils .literal .notranslate}]{.pre} object that you can invoke like any other Torch module, but which utilizes the MIGraphX inference engine internally. Torch-MIGraphX supports FP32, FP16, and INT8 datatypes.
 
 - FP8 support. We now offer functional support for inference in the FP8E4M3FNUZ datatype. You can load an ONNX model in FP8E4M3FNUZ using C++ or Python APIs, or [`migraphx-driver`{.docutils .literal .notranslate}]{.pre}. You can quantize a floating point model to FP8 format by using the [`--fp8`{.docutils .literal .notranslate}]{.pre} flag with [`migraphx-driver`{.docutils .literal .notranslate}]{.pre}. To accelerate inference, MIGraphX uses hardware acceleration on MI300 for FP8 by leveraging FP8 support in various backend kernel libraries.
+:::
+::::
 
-:
-
-:
-{#miopen-3-1-0 .section}
+:::: {#miopen-3-1-0 .section}
 ### **MIOpen** (3.1.0)[\#](#miopen-3-1-0 "Link to this heading"){.headerlink}
 
-{#id986 .section}
+::: {#id986 .section}
 #### Added[\#](#id986 "Link to this heading"){.headerlink}
 
 - Improved performance for inference and convolutions. Inference support now provided for Find 2.0 fusion plans. Additionally, we've enhanced the Number of samples, Height, Width, and Channels (NHWC) convolution kernels for heuristics. NHWC stores data in a format where the height and width dimensions come first, followed by channels.
+:::
+::::
 
-:
-
-::
-{#openmp-17-60-0 .section}
+::::: {#openmp-17-60-0 .section}
 ### **OpenMP** (17.60.0)[\#](#openmp-17-60-0 "Link to this heading"){.headerlink}
 
-{#id987 .section}
+::: {#id987 .section}
 #### Added[\#](#id987 "Link to this heading"){.headerlink}
 
 - New MI300 FP atomics. Application performance can now improve by leveraging fast floating-point atomics on MI300 (gfx942).
+:::
 
-{#id988 .section}
+::: {#id988 .section}
 #### Changed[\#](#id988 "Link to this heading"){.headerlink}
 
 - Implicit Zero-copy is triggered automatically in XNACK-enabled MI300A systems. Implicit Zero-copy behavior in [`non`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`unified_shared_memory`{.docutils .literal .notranslate}]{.pre} programs is triggered automatically in XNACK-enabled MI300A systems (for example, when using the [`HSA_XNACK=1`{.docutils .literal .notranslate}]{.pre} environment variable). OpenMP supports the 'requires [`unified_shared_memory`{.docutils .literal .notranslate}]{.pre}' directive to support programs that don't want to copy data explicitly between the CPU and GPU. However, this requires that you add these directives to every translation unit of the program.
+:::
+:::::
 
-::
-
-:
-{#id989 .section}
+:::: {#id989 .section}
 ### **RCCL** (2.18.6)[\#](#id989 "Link to this heading"){.headerlink}
 
-{#id990 .section}
+::: {#id990 .section}
 #### Changed[\#](#id990 "Link to this heading"){.headerlink}
 
 - NCCL 2.18.6 compatibility. RCCL is now compatible with NCCL 2.18.6, which includes increasing the maximum IB network interfaces to 32 and fixing network device ordering when creating communicators with only one GPU per node.
 
 - Doubled simultaneous communication channels. We improved MI300X performance by increasing the maximum number of simultaneous communication channels from 32 to 64.
+:::
+::::
 
-:
-
-:
-{#rocalution-3-1-1 .section}
+:::: {#rocalution-3-1-1 .section}
 ### **rocALUTION** (3.1.1)[\#](#rocalution-3-1-1 "Link to this heading"){.headerlink}
 
-{#id991 .section}
+::: {#id991 .section}
 #### Added[\#](#id991 "Link to this heading"){.headerlink}
 
 - New multiple node and GPU support. Unsmoothed and smoothed aggregations and Ruge-Stueben AMG now work with multiple nodes and GPUs. For more information, refer to the [API documentation](https://rocm.docs.amd.com/projects/rocALUTION/en/docs-6.1.0/usermanual/solvers.html#unsmoothed-aggregation-amg){.reference .external}.
+:::
+::::
 
-:
-
-:
-{#rocdecode-0-5-0 .section}
+:::: {#rocdecode-0-5-0 .section}
 ### **rocDecode** (0.5.0)[\#](#rocdecode-0-5-0 "Link to this heading"){.headerlink}
 
-{#id992 .section}
+::: {#id992 .section}
 #### Added[\#](#id992 "Link to this heading"){.headerlink}
 
 - New ROCm component. rocDecode ROCm's newest component, providing high-performance video decode support for AMD GPUs. To learn more, refer to the [documentation](https://rocm.docs.amd.com/projects/rocDecode/en/latest/){.reference .external}.
+:::
+::::
 
-:
-
-:
-{#id993 .section}
+:::: {#id993 .section}
 ### **ROCm Data Center Tool** (0.3.0)[\#](#id993 "Link to this heading"){.headerlink}
 
-{#id994 .section}
+::: {#id994 .section}
 #### Changed[\#](#id994 "Link to this heading"){.headerlink}
 
 - C++ upgrades. RDC was upgraded from C++11 to C++17 to enable a more modern C++ standard when writing RDC plugins.
+:::
+::::
 
-:
-
-:
-{#rpp-1-5-0 .section}
+:::: {#rpp-1-5-0 .section}
 ### **RPP** (1.5.0)[\#](#rpp-1-5-0 "Link to this heading"){.headerlink}
 
-{#id995 .section}
+::: {#id995 .section}
 #### Added[\#](#id995 "Link to this heading"){.headerlink}
 
 - New backend support. Audio processing support added for the [`HOST`{.docutils .literal .notranslate}]{.pre} backend and 3D Voxel kernels support for the [`HOST`{.docutils .literal .notranslate}]{.pre} and [`HIP`{.docutils .literal .notranslate}]{.pre} backends.
+:::
+::::
 
-:
-
-:
-{#rocm-validation-suite-1-0 .section}
+:::: {#rocm-validation-suite-1-0 .section}
 ### **ROCm Validation Suite** (1.0)[\#](#rocm-validation-suite-1-0 "Link to this heading"){.headerlink}
 
-{#id996 .section}
+::: {#id996 .section}
 #### Added[\#](#id996 "Link to this heading"){.headerlink}
 
 - New datatype support. Added BF16 and FP8 datatypes based on General Matrix Multiply(GEMM) operations in the GPU Stress Test (GST) module. This provides additional performance benchmarking and stress testing based on the newly supported datatypes.
+:::
+::::
 
-:
-
-:
-{#rocsolver-3-25-0 .section}
+:::: {#rocsolver-3-25-0 .section}
 ### **rocSOLVER** (3.25.0)[\#](#rocsolver-3-25-0 "Link to this heading"){.headerlink}
 
-{#id997 .section}
+::: {#id997 .section}
 #### Added[\#](#id997 "Link to this heading"){.headerlink}
 
 - New EigenSolver routine. Based on the Jacobi algorithm, a new EigenSolver routine was added to the library. This routine computes the eigenvalues and eigenvectors of a matrix with improved performance.
+:::
+::::
 
-:
-
-:
-{#roctracer-4-1 .section}
+:::: {#roctracer-4-1 .section}
 ### **ROCTracer** (4.1)[\#](#roctracer-4-1 "Link to this heading"){.headerlink}
 
-{#id998 .section}
+::: {#id998 .section}
 #### Changed[\#](#id998 "Link to this heading"){.headerlink}
 
 - New versioning and callback enhancements. Improved to match versioning changes in HIP Runtime and supports runtime API callbacks and activity record logging. The APIs of different runtimes at different levels are considered different API domains with assigned domain IDs.
+:::
+::::
+:::::::::::::::::::::::::::::::::::::::::::::
 
-:
-::::::::::::::::::::::::::::::::::::::::::
-
-::
-{#rocm-6-0-2 .section}
+::::: {#rocm-6-0-2 .section}
 ## ROCm 6.0.2[\#](#rocm-6-0-2 "Link to this heading"){.headerlink}
 
 See the [ROCm 6.0.2 release notes](https://rocm.docs.amd.com/en/docs-6.0.2/about/release-notes.html){.reference .external} for a complete overview of this release.
 
-:
-{#hipfft-1-0-13 .section}
+:::: {#hipfft-1-0-13 .section}
 ### **hipFFT** (1.0.13)[\#](#hipfft-1-0-13 "Link to this heading"){.headerlink}
 
-{#id999 .section}
+::: {#id999 .section}
 #### Changed[\#](#id999 "Link to this heading"){.headerlink}
 
 - Removed the Git submodule for shared files between rocFFT and hipFFT; instead, just copy the files over (this should help simplify downstream builds and packaging)
+:::
+::::
+:::::
 
-:
-::
-
-:::::::::::::::::::::::::::::::::::::
-{#rocm-6-0-0 .section}
+:::::::::::::::::::::::::::::::::::::::: {#rocm-6-0-0 .section}
 ## ROCm 6.0.0[\#](#rocm-6-0-0 "Link to this heading"){.headerlink}
 
 See the [ROCm 6.0.0 release notes](https://rocm.docs.amd.com/en/docs-6.0.0/about/release-notes.html){.reference .external} for a complete overview of this release.
 
-:
-{#amd-smi-23-4-2 .section}
+:::: {#amd-smi-23-4-2 .section}
 ### **AMD SMI** (23.4.2)[\#](#amd-smi-23-4-2 "Link to this heading"){.headerlink}
 
-{#id1000 .section}
+::: {#id1000 .section}
 #### Added[\#](#id1000 "Link to this heading"){.headerlink}
 
 - Integrated the E-SMI (EPYC-SMI) library. You can now query CPU-related information directly through AMD SMI. Metrics include power, energy, performance, and other system details.
 
 - Added support for gfx942 metrics. You can now query MI300 device metrics to get real-time information. Metrics include power, temperature, energy, and performance.
+:::
+::::
 
-:
-
-::
-{#hip-6-0-0 .section}
+::::: {#hip-6-0-0 .section}
 ### **HIP** (6.0.0)[\#](#hip-6-0-0 "Link to this heading"){.headerlink}
 
-{#id1001 .section}
+::: {#id1001 .section}
 #### Added[\#](#id1001 "Link to this heading"){.headerlink}
 
 - New features to improve resource interoperability.
@@ -13000,85 +15253,85 @@ See the [ROCm 6.0.0 release notes](https://rocm.docs.amd.com/en/docs-6.0.0/about
   - For external resource interoperability, we've added new structs and enums.
 
   - We've added new members to HIP struct [`hipDeviceProp_t`{.docutils .literal .notranslate}]{.pre} for surfaces, textures, and device identifiers.
+:::
 
-{#id1002 .section}
+::: {#id1002 .section}
 #### Changed[\#](#id1002 "Link to this heading"){.headerlink}
 
 - Changes impacting backward compatibility. There are several changes impacting backward compatibility: we changed some struct members and some enum values, and removed some deprecated flags. For additional information, please refer to the Changelog.
+:::
+:::::
 
-::
-
-:
-{#hipcub-3-0-0 .section}
+:::: {#hipcub-3-0-0 .section}
 ### **hipCUB** (3.0.0)[\#](#hipcub-3-0-0 "Link to this heading"){.headerlink}
 
-{#id1003 .section}
+::: {#id1003 .section}
 #### Changed[\#](#id1003 "Link to this heading"){.headerlink}
 
 - Additional CUB API support. The hipCUB backend is updated to CUB and Thrust 2.1.
+:::
+::::
 
-:
-
-::
-{#id1004 .section}
+::::: {#id1004 .section}
 ### **HIPIFY** (17.0.0)[\#](#id1004 "Link to this heading"){.headerlink}
 
-{#id1005 .section}
+::: {#id1005 .section}
 #### Added[\#](#id1005 "Link to this heading"){.headerlink}
 
 - Hipified rocSPARSE. We've implemented support for the direct hipification of additional cuSPARSE APIs into rocSPARSE APIs under the [`--roc`{.docutils .literal .notranslate}]{.pre} option. This covers a major milestone in the roadmap towards complete cuSPARSE-to-rocSPARSE hipification.
+:::
 
-{#id1006 .section}
+::: {#id1006 .section}
 #### Optimized[\#](#id1006 "Link to this heading"){.headerlink}
 
 - Enhanced CUDA2HIP document generation. API versions are now listed in the CUDA2HIP documentation. To see if the application binary interface (ABI) has changed, refer to the [*C* column](https://rocm.docs.amd.com/projects/HIPIFY/en/latest/tables/CUDA_Runtime_API_functions_supported_by_HIP.html){.reference .external} in our API documentation.
+:::
+:::::
 
-::
-
-{#hiprand-2-10-16 .section}
+::: {#hiprand-2-10-16 .section}
 ### **hipRAND** (2.10.16)[\#](#hiprand-2-10-16 "Link to this heading"){.headerlink}
 
 - Official release. hipRAND is now a *standalone project*--it's no longer available as a submodule for rocRAND.
+:::
 
-::
-{#hiptensor-1-1-0 .section}
+::::: {#hiptensor-1-1-0 .section}
 ### **hipTensor** (1.1.0)[\#](#hiptensor-1-1-0 "Link to this heading"){.headerlink}
 
-{#id1007 .section}
+::: {#id1007 .section}
 #### Added[\#](#id1007 "Link to this heading"){.headerlink}
 
 - Added architecture support. We've added contraction support for gfx942 architectures, and f32 and f64 data types.
+:::
 
-{#id1008 .section}
+::: {#id1008 .section}
 #### Optimized[\#](#id1008 "Link to this heading"){.headerlink}
 
 - Upgraded testing infrastructure. hipTensor will now support dynamic parameter configuration with input YAML config.
+:::
+:::::
 
-::
-
-::
-{#id1009 .section}
+::::: {#id1009 .section}
 ### **llvm-project** (17.0.0)[\#](#id1009 "Link to this heading"){.headerlink}
 
-{#id1010 .section}
+::: {#id1010 .section}
 #### Added[\#](#id1010 "Link to this heading"){.headerlink}
 
 - Added kernel argument optimization on gfx942. With the new feature, you can preload kernel arguments into Scalar General-Purpose Registers (SGPRs) rather than pass them in memory. This feature is enabled with a compiler option, which also controls the number of arguments to pass in SGPRs. For more information, see: [https://llvm.org/docs/AMDGPUUsage.html#preloaded-kernel-arguments](https://llvm.org/docs/AMDGPUUsage.html#preloaded-kernel-arguments){.reference .external}
+:::
 
-{#id1011 .section}
+::: {#id1011 .section}
 #### Optimized[\#](#id1011 "Link to this heading"){.headerlink}
 
 - Improved register allocation at -O0. We've improved the register allocator used at -O0 to avoid compiler crashes (when the signature is 'ran out of registers during register allocation').
 
 - Improved generation of debug information. We've improved compile time when generating debug information for certain corner cases. We've also improved the compiler to eliminate compiler crashes when generating debug information.
+:::
+:::::
 
-::
-
-:
-{#migraphx-2-8-0 .section}
+:::: {#migraphx-2-8-0 .section}
 ### **MIGraphX** (2.8.0)[\#](#migraphx-2-8-0 "Link to this heading"){.headerlink}
 
-{#id1012 .section}
+::: {#id1012 .section}
 #### Added[\#](#id1012 "Link to this heading"){.headerlink}
 
 - Added TorchMIGraphX. We introduced a Dynamo backend for Torch, which allows PyTorch to use MIGraphX directly without first requiring a model to be converted to the ONNX model format. With a single line of code, PyTorch users can utilize the performance and quantization benefits provided by MIGraphX.
@@ -13086,14 +15339,13 @@ See the [ROCm 6.0.0 release notes](https://rocm.docs.amd.com/en/docs-6.0.0/about
 - Added INT8 support across the MIGraphX portfolio. We now support the INT8 data type. MIGraphX can perform the quantization or ingest prequantized models. INT8 support extends to the MIGraphX execution provider for ONNX Runtime.
 
 - Boosted overall performance with rocMLIR. We've integrated the rocMLIR library for ROCm-supported RDNA and CDNA GPUs. This technology provides MLIR-based convolution and GEMM kernel generation.
+:::
+::::
 
-:
-
-:
-{#rocgdb-13-2 .section}
+:::: {#rocgdb-13-2 .section}
 ### **ROCgdb** (13.2)[\#](#rocgdb-13-2 "Link to this heading"){.headerlink}
 
-{#id1013 .section}
+::: {#id1013 .section}
 #### Added[\#](#id1013 "Link to this heading"){.headerlink}
 
 - Added support for additional GPU architectures.
@@ -13101,83 +15353,79 @@ See the [ROCm 6.0.0 release notes](https://rocm.docs.amd.com/en/docs-6.0.0/about
   - Navi 3 Series: gfx1100, gfx1101, and gfx1102.
 
   - MI300 Series: gfx942.
+:::
+::::
 
-:
-
-::
-{#rocm-smi-6-0-0 .section}
+::::: {#rocm-smi-6-0-0 .section}
 ### **ROCm SMI** (6.0.0)[\#](#rocm-smi-6-0-0 "Link to this heading"){.headerlink}
 
-{#id1014 .section}
+::: {#id1014 .section}
 #### Added[\#](#id1014 "Link to this heading"){.headerlink}
 
 - Improved accessibility to GPU partition nodes. You can now view, set, and reset the compute and memory partitions. You'll also get notifications of a GPU busy state, which helps you avoid partition set or reset failure.
+:::
 
-{#id1015 .section}
+::: {#id1015 .section}
 #### Optimized[\#](#id1015 "Link to this heading"){.headerlink}
 
 - Upgraded GPU metrics version 1.4. The upgraded GPU metrics binary has an improved metric version format with a content version appended to it. You can read each metric within the binary without the full [`rsmi_gpu_metric_t`{.docutils .literal .notranslate}]{.pre} data structure.
 
 - Updated GPU index sorting. We made GPU index sorting consistent with other ROCm software tools by optimizing it to use [`Bus:Device.Function`{.docutils .literal .notranslate}]{.pre} (BDF) instead of the card number.
+:::
+:::::
 
-::
-
-:
-{#id1016 .section}
+:::: {#id1016 .section}
 ### **ROCm Validation Suite** (1.0)[\#](#id1016 "Link to this heading"){.headerlink}
 
-{#id1017 .section}
+::: {#id1017 .section}
 #### Added[\#](#id1017 "Link to this heading"){.headerlink}
 
 - Added GPU and operating system support. We added support for MI300X GPU in GPU Stress Test (GST).
+:::
+::::
 
-:
-
-::
-{#rocprofiler-2-0 .section}
+::::: {#rocprofiler-2-0 .section}
 ### **ROCProfiler** (2.0)[\#](#rocprofiler-2-0 "Link to this heading"){.headerlink}
 
-{#id1018 .section}
+::: {#id1018 .section}
 #### Added[\#](#id1018 "Link to this heading"){.headerlink}
 
 - Added option to specify desired ROCProfiler version. You can now use rocProfV1 or rocProfV2 by specifying your desired version, as the legacy rocProf ([`rocprofv1`{.docutils .literal .notranslate}]{.pre}) provides the option to use the latest version ([`rocprofv2`{.docutils .literal .notranslate}]{.pre}).
 
 - Added ATT support for parallel kernels. The automatic ISA dumping process also helps ATT successfully parse multiple kernels running in parallel, and provide cycle-accurate occupancy information for multiple kernels at the same time.
+:::
 
-{#id1019 .section}
+::: {#id1019 .section}
 #### Changed[\#](#id1019 "Link to this heading"){.headerlink}
 
 - Automated the ISA dumping process by Advance Thread Tracer. Advance Thread Tracer (ATT) no longer depends on user-supplied Instruction Set Architecture (ISA) and compilation process (using [`hipcc`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--save-temps`{.docutils .literal .notranslate}]{.pre}) to dump ISA from the running kernels.
+:::
+:::::
 
-::
-
-:
-{#rocr-runtime-1-12-0 .section}
+:::: {#rocr-runtime-1-12-0 .section}
 ### **ROCr Runtime** (1.12.0)[\#](#rocr-runtime-1-12-0 "Link to this heading"){.headerlink}
 
-{#id1020 .section}
+::: {#id1020 .section}
 #### Added[\#](#id1020 "Link to this heading"){.headerlink}
 
 - Support for SDMA link aggregation. If multiple XGMI links are available when making SDMA copies between GPUs, the copy is distributed over multiple links to increase peak bandwidth.
+:::
+::::
 
-:
-
-:
-{#rocthrust-3-0-0 .section}
+:::: {#rocthrust-3-0-0 .section}
 ### **rocThrust** (3.0.0)[\#](#rocthrust-3-0-0 "Link to this heading"){.headerlink}
 
-{#id1021 .section}
+::: {#id1021 .section}
 #### Added[\#](#id1021 "Link to this heading"){.headerlink}
 
 - Added Thrust 2.1 API support. rocThrust backend is updated to Thrust and CUB 2.1.
+:::
+::::
 
-:
-
-:
-{#rocwmma-1-3-0 .section}
+:::: {#rocwmma-1-3-0 .section}
 ### **rocWMMA** (1.3.0)[\#](#rocwmma-1-3-0 "Link to this heading"){.headerlink}
 
-{#id1022 .section}
+::: {#id1022 .section}
 #### Added[\#](#id1022 "Link to this heading"){.headerlink}
 
 - **Added new architecture support**. We added support for gfx942 architectures.
@@ -13185,14 +15433,13 @@ See the [ROCm 6.0.0 release notes](https://rocm.docs.amd.com/en/docs-6.0.0/about
 - **Added data type support**. We added support for f8, bf8, xf32 data types on supporting architectures, and for bf16 in the HIP RTC environment.
 
 - **Added support for the PyTorch kernel plugin**. We added awareness of [`__HIP_NO_HALF_CONVERSIONS__`{.docutils .literal .notranslate}]{.pre} to support PyTorch users.
+:::
+::::
 
-:
-
-:
-{#transferbench-beta .section}
+:::: {#transferbench-beta .section}
 ### **TransferBench** (beta)[\#](#transferbench-beta "Link to this heading"){.headerlink}
 
-{#id1023 .section}
+::: {#id1023 .section}
 #### Optimized[\#](#id1023 "Link to this heading"){.headerlink}
 
 - Improved ordering control. You can now set the thread block size ([`BLOCK_SIZE`{.docutils .literal .notranslate}]{.pre}) and the thread block order ([`BLOCK_ORDER`{.docutils .literal .notranslate}]{.pre}) in which thread blocks from different transfers are run when using a single stream.
@@ -13200,60 +15447,55 @@ See the [ROCm 6.0.0 release notes](https://rocm.docs.amd.com/en/docs-6.0.0/about
 - Added comprehensive reports. We modified individual transfers to report X Compute Clusters (XCC) ID when [`SHOW_ITERATIONS`{.docutils .literal .notranslate}]{.pre} is set to 1.
 
 - Improved accuracy in result validation. You can now validate results for each iteration instead of just once for all iterations.
+:::
+::::
+::::::::::::::::::::::::::::::::::::::::
 
-:
-:::::::::::::::::::::::::::::::::::::
-
-::::::
-{#rocm-5-7-1 .section}
+::::::::: {#rocm-5-7-1 .section}
 ## ROCm 5.7.1[\#](#rocm-5-7-1 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.7.1 release notes](https://github.com/ROCm/ROCm/blob/docs/5.7.1/RELEASE.md){.reference .external} on GitHub for a complete overview of this release.
 
-:
-{#hip-5-7-1 .section}
+:::: {#hip-5-7-1 .section}
 ### **HIP** (5.7.1)[\#](#hip-5-7-1 "Link to this heading"){.headerlink}
 
-{#id1024 .section}
+::: {#id1024 .section}
 #### Resolved issues[\#](#id1024 "Link to this heading"){.headerlink}
 
 - The *hipPointerGetAttributes* API returns the correct HIP memory type as *hipMemoryTypeManaged* for managed memory.
+:::
+::::
 
-:
-
-:
-{#hipsolver-1-8-2 .section}
+:::: {#hipsolver-1-8-2 .section}
 ### **hipSOLVER** (1.8.2)[\#](#hipsolver-1-8-2 "Link to this heading"){.headerlink}
 
-{#id1025 .section}
+::: {#id1025 .section}
 #### Resolved issues[\#](#id1025 "Link to this heading"){.headerlink}
 
 - Fixed conflicts between the hipsolver-dev and -asan packages by excluding hipsolver_module.f90 from the latter
+:::
+::::
 
-:
-
-:
-{#rocblas-3-1-0 .section}
+:::: {#rocblas-3-1-0 .section}
 ### **rocBLAS** (3.1.0)[\#](#rocblas-3-1-0 "Link to this heading"){.headerlink}
 
-{#id1026 .section}
+::: {#id1026 .section}
 #### Added[\#](#id1026 "Link to this heading"){.headerlink}
 
 - A new functionality [`rocblas-gemm-tune`{.docutils .literal .notranslate}]{.pre} and an environment variable [`ROCBLAS_TENSILE_GEMM_OVERRIDE_PATH`{.docutils .literal .notranslate}]{.pre}. For more details, refer to the [rocBLAS Programmer's Guide.](https://rocm.docs.amd.com/projects/rocBLAS/en/latest/Programmers_Guide.html#rocblas-gemm-tune){.reference .external}
+:::
+::::
+:::::::::
 
-:
-::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-{#rocm-5-7-0 .section}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#rocm-5-7-0 .section}
 ## ROCm 5.7.0[\#](#rocm-5-7-0 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.7.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.7.0/RELEASE.md){.reference .external} on GitHub for a complete overview of this release.
 
-{#hip-5-7-0 .section}
+:::::: {#hip-5-7-0 .section}
 ### **HIP** (5.7.0)[\#](#hip-5-7-0 "Link to this heading"){.headerlink}
 
-{#id1027 .section}
+::: {#id1027 .section}
 #### Added[\#](#id1027 "Link to this heading"){.headerlink}
 
 - Added [`meta_group_size`{.docutils .literal .notranslate}]{.pre}/[`rank`{.docutils .literal .notranslate}]{.pre} for getting the number of tiles and rank of a tile in the partition
@@ -13271,15 +15513,17 @@ See the [ROCm 5.7.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.7.0/
   - [`hipMipmappedArrayDestroy`{.docutils .literal .notranslate}]{.pre} for destroy a mipmapped array
 
   - [`hipMipmappedArrayGetLevel`{.docutils .literal .notranslate}]{.pre} for getting a mipmapped array on a mipmapped level
+:::
 
-{#id1028 .section}
+::: {#id1028 .section}
 #### Known issues[\#](#id1028 "Link to this heading"){.headerlink}
 
 - HIP memory type enum values currently don't support equivalent value to [`cudaMemoryTypeUnregistered`{.docutils .literal .notranslate}]{.pre}, due to HIP functionality backward compatibility.
 
 - HIP API [`hipPointerGetAttributes`{.docutils .literal .notranslate}]{.pre} could return invalid value in case the input memory pointer was not allocated through any HIP API on device or host.
+:::
 
-{#id1029 .section}
+::: {#id1029 .section}
 #### Upcoming changes[\#](#id1029 "Link to this heading"){.headerlink}
 
 - Removal of gcnarch from hipDeviceProp_t structure
@@ -13325,25 +15569,25 @@ See the [ROCm 5.7.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.7.0/
 - Correct handling of flag values in hipIpcOpenMemHandle for hipIpcMemLazyEnablePeerAccess
 
 - Remove hiparray\* and make it opaque with hipArray_t
+:::
+::::::
 
-:
-{#hipblas-1-1-0 .section}
+:::: {#hipblas-1-1-0 .section}
 ### **hipBLAS** (1.1.0)[\#](#hipblas-1-1-0 "Link to this heading"){.headerlink}
 
-{#id1030 .section}
+::: {#id1030 .section}
 #### Changed[\#](#id1030 "Link to this heading"){.headerlink}
 
 - updated documentation requirements
 
 - dependency rocSOLVER now depends on rocSPARSE
+:::
+::::
 
-:
-
-::
-{#hipcub-2-13-1 .section}
+::::: {#hipcub-2-13-1 .section}
 ### **hipCUB** (2.13.1)[\#](#hipcub-2-13-1 "Link to this heading"){.headerlink}
 
-{#id1031 .section}
+::: {#id1031 .section}
 #### Changed[\#](#id1031 "Link to this heading"){.headerlink}
 
 - CUB backend references CUB and Thrust version 2.0.1.
@@ -13351,8 +15595,9 @@ See the [ROCm 5.7.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.7.0/
 - Fixed [`DeviceSegmentedReduce::ArgMin`{.docutils .literal .notranslate}]{.pre} and [`DeviceSegmentedReduce::ArgMax`{.docutils .literal .notranslate}]{.pre} by returning the segment-relative index instead of the absolute one.
 
 - Fixed [`DeviceSegmentedReduce::ArgMin`{.docutils .literal .notranslate}]{.pre} for inputs where the segment minimum is smaller than the value returned for empty segments. An equivalent fix is applied to [`DeviceSegmentedReduce::ArgMax`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id1032 .section}
+::: {#id1032 .section}
 #### Known issues[\#](#id1032 "Link to this heading"){.headerlink}
 
 - [`debug_synchronous`{.docutils .literal .notranslate}]{.pre} no longer works on CUDA platform. [`CUB_DEBUG_SYNC`{.docutils .literal .notranslate}]{.pre} should be used to enable those checks.
@@ -13362,41 +15607,39 @@ See the [ROCm 5.7.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.7.0/
 - [`DeviceHistogram::HistogramEven`{.docutils .literal .notranslate}]{.pre} fails on CUDA platform for [`[LevelT,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`SampleIteratorT]`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`=`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`[int,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`int]`{.docutils .literal .notranslate}]{.pre}.
 
 - [`DeviceHistogram::MultiHistogramEven`{.docutils .literal .notranslate}]{.pre} fails on CUDA platform for [`[LevelT,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`SampleIteratorT]`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`=`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`[int,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`int/unsigned`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`short/float/double]`{.docutils .literal .notranslate}]{.pre} and [`[LevelT,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`SampleIteratorT]`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`=`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`[float,`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`double]`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::
 
-::
-
-::
-{#hipfft-1-0-12 .section}
+::::: {#hipfft-1-0-12 .section}
 ### **hipFFT** (1.0.12)[\#](#hipfft-1-0-12 "Link to this heading"){.headerlink}
 
-{#id1033 .section}
+::: {#id1033 .section}
 #### Added[\#](#id1033 "Link to this heading"){.headerlink}
 
 - Implemented the hipfftXtMakePlanMany, hipfftXtGetSizeMany, hipfftXtExec APIs, to allow requesting half-precision transforms.
+:::
 
-{#id1034 .section}
+::: {#id1034 .section}
 #### Changed[\#](#id1034 "Link to this heading"){.headerlink}
 
 - Added --precision argument to benchmark/test clients. --double is still accepted but is deprecated as a method to request a double-precision transform.
+:::
+:::::
 
-::
-
-:
-{#hipsolver-1-8-1 .section}
+:::: {#hipsolver-1-8-1 .section}
 ### **hipSOLVER** (1.8.1)[\#](#hipsolver-1-8-1 "Link to this heading"){.headerlink}
 
-{#id1035 .section}
+::: {#id1035 .section}
 #### Changed[\#](#id1035 "Link to this heading"){.headerlink}
 
 - Changed hipsolver-test sparse input data search paths to be relative to the test executable
+:::
+::::
 
-:
-
-:
-{#hipsparse-2-3-8 .section}
+:::: {#hipsparse-2-3-8 .section}
 ### **hipSPARSE** (2.3.8)[\#](#hipsparse-2-3-8 "Link to this heading"){.headerlink}
 
-{#id1036 .section}
+::: {#id1036 .section}
 #### Optimized[\#](#id1036 "Link to this heading"){.headerlink}
 
 - Fix compilation failures when using cusparse 12.1.0 backend
@@ -13406,35 +15649,39 @@ See the [ROCm 5.7.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.7.0/
 - Fix compilation failures when using cusparse 10.1 (non-update versions) as backend
 
 - Minor improvements
+:::
+::::
 
-:
-
-{#miopen-2-19-0 .section}
+:::::: {#miopen-2-19-0 .section}
 ### **MIOpen** (2.19.0)[\#](#miopen-2-19-0 "Link to this heading"){.headerlink}
 
-{#id1037 .section}
+::: {#id1037 .section}
 #### Added[\#](#id1037 "Link to this heading"){.headerlink}
 
 - ROCm 5.5 support for gfx1101 (Navi32)
+:::
 
-{#id1038 .section}
+::: {#id1038 .section}
 #### Changed[\#](#id1038 "Link to this heading"){.headerlink}
 
 - Tuning results for MLIR on ROCm 5.5
 
 - Bumping MLIR commit to 5.5.0 release tag
+:::
 
-{#id1039 .section}
+::: {#id1039 .section}
 #### Resolved issues[\#](#id1039 "Link to this heading"){.headerlink}
 
 - Fix 3d convolution Host API bug
 
 - \[HOTFIX\]\[MI200\]\[FP16\] Disabled ConvHipImplicitGemmBwdXdlops when FP16_ALT is required.
+:::
+::::::
 
-{#rccl-2-17-1-1 .section}
+:::::: {#rccl-2-17-1-1 .section}
 ### **RCCL** (2.17.1-1)[\#](#rccl-2-17-1-1 "Link to this heading"){.headerlink}
 
-{#id1040 .section}
+::: {#id1040 .section}
 #### Added[\#](#id1040 "Link to this heading"){.headerlink}
 
 - Minor improvements to MSCCL codepath
@@ -13444,47 +15691,51 @@ See the [ROCm 5.7.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.7.0/
 - Improved compilation performance
 
 - Support for gfx94x
+:::
 
-{#id1041 .section}
+::: {#id1041 .section}
 #### Changed[\#](#id1041 "Link to this heading"){.headerlink}
 
 - Compatibility with NCCL 2.17.1-1
 
 - Performance tuning for some collective operations
+:::
 
-{#id1042 .section}
+::: {#id1042 .section}
 #### Resolved issues[\#](#id1042 "Link to this heading"){.headerlink}
 
 - Potential race-condition during ncclSocketClose()
+:::
+::::::
 
-::
-{#rocalution-2-1-11 .section}
+::::: {#rocalution-2-1-11 .section}
 ### **rocALUTION** (2.1.11)[\#](#rocalution-2-1-11 "Link to this heading"){.headerlink}
 
-{#id1043 .section}
+::: {#id1043 .section}
 #### Added[\#](#id1043 "Link to this heading"){.headerlink}
 
 - Added support for gfx940, gfx941 and gfx942
+:::
 
-{#id1044 .section}
+::: {#id1044 .section}
 #### Optimized[\#](#id1044 "Link to this heading"){.headerlink}
 
 - Fixed OpenMP runtime issue with Windows toolchain
+:::
+:::::
 
-::
-
-::::
-{#id1045 .section}
+::::::: {#id1045 .section}
 ### **rocBLAS** (3.1.0)[\#](#id1045 "Link to this heading"){.headerlink}
 
-{#id1046 .section}
+::: {#id1046 .section}
 #### Added[\#](#id1046 "Link to this heading"){.headerlink}
 
 - yaml lock step argument scanning for rocblas-bench and rocblas-test clients. See Programmers Guide for details.
 
 - rocblas-gemm-tune is used to find the best performing GEMM kernel for each of a given set of GEMM problems.
+:::
 
-{#id1047 .section}
+::: {#id1047 .section}
 #### Changed[\#](#id1047 "Link to this heading"){.headerlink}
 
 - dot when using rocblas_pointer_mode_host is now synchronous to match legacy BLAS as it stores results in host memory
@@ -13498,8 +15749,9 @@ See the [ROCm 5.7.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.7.0/
   - optional use of AOCL BLIS 4.0 on Linux for clients
 
   - optional build tool only dependency on python psutil
+:::
 
-{#id1048 .section}
+::: {#id1048 .section}
 #### Resolved issues[\#](#id1048 "Link to this heading"){.headerlink}
 
 - make offset calculations for rocBLAS functions 64 bit safe. Fixes for very large leading dimensions or increments potentially causing overflow:
@@ -13515,52 +15767,55 @@ See the [ROCm 5.7.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.7.0/
   - Related fixes: internal scalar loads with \> 32bit offsets
 
   - fix in-place functionality for all trtri sizes
+:::
 
-{#id1049 .section}
+::: {#id1049 .section}
 #### Upcoming changes[\#](#id1049 "Link to this heading"){.headerlink}
 
 - Removal of **STDC_WANT_IEC_60559_TYPES_EXT** define in future release
+:::
+:::::::
 
-::::
-
-{#rocfft-1-0-24 .section}
+:::::: {#rocfft-1-0-24 .section}
 ### **rocFFT** (1.0.24)[\#](#rocfft-1-0-24 "Link to this heading"){.headerlink}
 
-{#id1050 .section}
+::: {#id1050 .section}
 #### Added[\#](#id1050 "Link to this heading"){.headerlink}
 
 - Implemented a solution map version converter and finish the first conversion from ver.0 to ver.1. Where version 1 removes some incorrect kernels (sbrc/sbcr using half_lds)
+:::
 
-{#id1051 .section}
+::: {#id1051 .section}
 #### Changed[\#](#id1051 "Link to this heading"){.headerlink}
 
 - Moved rocfft_rtc_helper executable to lib/rocFFT directory on Linux.
 
 - Moved library kernel cache to lib/rocFFT directory.
+:::
 
-{#id1052 .section}
+::: {#id1052 .section}
 #### Optimized[\#](#id1052 "Link to this heading"){.headerlink}
 
 - Improved performance of complex forward/inverse 1D FFTs (2049 \<= length \<= 131071) that use Bluestein's algorithm.
+:::
+::::::
 
-:
-{#rocm-cmake-0-10-0 .section}
+:::: {#rocm-cmake-0-10-0 .section}
 ### **rocm-cmake** (0.10.0)[\#](#rocm-cmake-0-10-0 "Link to this heading"){.headerlink}
 
-{#id1053 .section}
+::: {#id1053 .section}
 #### Added[\#](#id1053 "Link to this heading"){.headerlink}
 
 - Added ROCMTest module
 
 - ROCMCreatePackage: Added support for ASAN packages
+:::
+::::
 
-:
-
-::
-{#rocprim-2-13-1 .section}
+::::: {#rocprim-2-13-1 .section}
 ### **rocPRIM** (2.13.1)[\#](#rocprim-2-13-1 "Link to this heading"){.headerlink}
 
-{#id1054 .section}
+::: {#id1054 .section}
 #### Changed[\#](#id1054 "Link to this heading"){.headerlink}
 
 - Deprecated configuration [`radix_sort_config`{.docutils .literal .notranslate}]{.pre} for device-level radix sort as it no longer matches the algorithm's parameters. New configuration [`radix_sort_config_v2`{.docutils .literal .notranslate}]{.pre} is preferred instead.
@@ -13570,19 +15825,19 @@ See the [ROCm 5.7.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.7.0/
 - The benchmark metric indicating the bytes processed for [`exclusive_scan_by_key`{.docutils .literal .notranslate}]{.pre} and [`inclusive_scan_by_key`{.docutils .literal .notranslate}]{.pre} has been changed to incorporate the key type. Furthermore, the benchmark log has been changed such that these algorithms are reported as [`scan`{.docutils .literal .notranslate}]{.pre} and [`scan_by_key`{.docutils .literal .notranslate}]{.pre} instead of [`scan_exclusive`{.docutils .literal .notranslate}]{.pre} and [`scan_inclusive`{.docutils .literal .notranslate}]{.pre}.
 
 - Deprecated configurations [`scan_config`{.docutils .literal .notranslate}]{.pre} and [`scan_by_key_config`{.docutils .literal .notranslate}]{.pre} for device-level scans, as they no longer match the algorithm's parameters. New configurations [`scan_config_v2`{.docutils .literal .notranslate}]{.pre} and [`scan_by_key_config_v2`{.docutils .literal .notranslate}]{.pre} are preferred instead.
+:::
 
-{#id1055 .section}
+::: {#id1055 .section}
 #### Resolved issues[\#](#id1055 "Link to this heading"){.headerlink}
 
 - Fixed build issue caused by missing header in [`thread/thread_search.hpp`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::
 
-::
-
-::
-{#rocrand-2-10-17 .section}
+::::: {#rocrand-2-10-17 .section}
 ### **rocRAND** (2.10.17)[\#](#rocrand-2-10-17 "Link to this heading"){.headerlink}
 
-{#id1056 .section}
+::: {#id1056 .section}
 #### Added[\#](#id1056 "Link to this heading"){.headerlink}
 
 - MT19937 pseudo random number generator based on M. Matsumoto and T. Nishimura, 1998, Mersenne Twister: A 623-dimensionally equidistributed uniform pseudorandom number generator.
@@ -13592,18 +15847,19 @@ See the [ROCm 5.7.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.7.0/
 - experimental HIP-CPU feature
 
 - ThreeFry pseudorandom number generator based on Salmon et al., 2011, "Parallel random numbers: as easy as 1, 2, 3".
+:::
 
-{#id1057 .section}
+::: {#id1057 .section}
 #### Changed[\#](#id1057 "Link to this heading"){.headerlink}
 
 - Python 2.7 is no longer officially supported.
+:::
+:::::
 
-::
-
-{#rocsolver-3-23-0 .section}
+:::::: {#rocsolver-3-23-0 .section}
 ### **rocSOLVER** (3.23.0)[\#](#rocsolver-3-23-0 "Link to this heading"){.headerlink}
 
-{#id1058 .section}
+::: {#id1058 .section}
 #### Added[\#](#id1058 "Link to this heading"){.headerlink}
 
 - LU factorization without pivoting for block tridiagonal matrices:
@@ -13613,84 +15869,91 @@ See the [ROCm 5.7.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.7.0/
 - Linear system solver without pivoting for block tridiagonal matrices:
 
   - GEBLTTRS_NPVT now supports interleaved_batched format
+:::
 
-{#id1059 .section}
+::: {#id1059 .section}
 #### Changed[\#](#id1059 "Link to this heading"){.headerlink}
 
 - Changed rocsolver-test sparse input data search paths to be relative to the test executable
 
 - Changed build scripts to default to compressed debug symbols in Debug builds
+:::
 
-{#id1060 .section}
+::: {#id1060 .section}
 #### Resolved issues[\#](#id1060 "Link to this heading"){.headerlink}
 
 - Fixed stack overflow in sparse tests on Windows
+:::
+::::::
 
-{#rocsparse-2-5-4 .section}
+:::::: {#rocsparse-2-5-4 .section}
 ### **rocSPARSE** (2.5.4)[\#](#rocsparse-2-5-4 "Link to this heading"){.headerlink}
 
-{#id1061 .section}
+::: {#id1061 .section}
 #### Added[\#](#id1061 "Link to this heading"){.headerlink}
 
 - Added more mixed precisions for SpMV, (matrix: float, vectors: double, calculation: double) and (matrix: rocsparse_float_complex, vectors: rocsparse_double_complex, calculation: rocsparse_double_complex)
 
 - Added support for gfx940, gfx941 and gfx942
+:::
 
-{#id1062 .section}
+::: {#id1062 .section}
 #### Optimized[\#](#id1062 "Link to this heading"){.headerlink}
 
 - Fixed a bug in csrsm and bsrsm
+:::
 
-{#id1063 .section}
+::: {#id1063 .section}
 #### Known issues[\#](#id1063 "Link to this heading"){.headerlink}
 
 In csritlu0, the algorithm rocsparse_itilu0_alg_sync_split_fusion has some accuracy issues to investigate with XNACK enabled. The fallback is rocsparse_itilu0_alg_sync_split.
+:::
+::::::
 
-::
-{#rocthrust-2-18-0 .section}
+::::: {#rocthrust-2-18-0 .section}
 ### **rocThrust** (2.18.0)[\#](#rocthrust-2-18-0 "Link to this heading"){.headerlink}
 
-{#id1064 .section}
+::: {#id1064 .section}
 #### Changed[\#](#id1064 "Link to this heading"){.headerlink}
 
 - Updated [`docs`{.docutils .literal .notranslate}]{.pre} directory structure to match the standard of [rocm-docs-core](https://github.com/RadeonOpenCompute/rocm-docs-core){.reference .external}.
 
 - Removed references to and workarounds for deprecated hcc
+:::
 
-{#id1065 .section}
+::: {#id1065 .section}
 #### Resolved issues[\#](#id1065 "Link to this heading"){.headerlink}
 
 - [`lower_bound`{.docutils .literal .notranslate}]{.pre}, [`upper_bound`{.docutils .literal .notranslate}]{.pre}, and [`binary_search`{.docutils .literal .notranslate}]{.pre} failed to compile for certain types.
 
 - Fixed issue where [`transform_iterator`{.docutils .literal .notranslate}]{.pre} would not compile with [`__device__`{.docutils .literal .notranslate}]{.pre}-only operators.
+:::
+:::::
 
-::
-
-:
-{#rocwmma-1-2-0 .section}
+:::: {#rocwmma-1-2-0 .section}
 ### **rocWMMA** (1.2.0)[\#](#rocwmma-1-2-0 "Link to this heading"){.headerlink}
 
-{#id1066 .section}
+::: {#id1066 .section}
 #### Changed[\#](#id1066 "Link to this heading"){.headerlink}
 
 - Fixed a bug with synchronization
 
 - Updated rocWMMA cmake versioning
-
-:
-
+:::
 ::::
-{#tensile-4-38-0 .section}
+
+::::::: {#tensile-4-38-0 .section}
 ### **Tensile** (4.38.0)[\#](#tensile-4-38-0 "Link to this heading"){.headerlink}
 
-{#id1067 .section}
+::: {#id1067 .section}
 #### Added[\#](#id1067 "Link to this heading"){.headerlink}
 
 - Added support for FP16 Alt Round Near Zero Mode (this feature allows the generation of alternate kernels with intermediate rounding instead of truncation)
 
 - Added user-driven solution selection feature
+:::
 
-{#id1068 .section}
+::: {#id1068 .section}
 #### Changed[\#](#id1068 "Link to this heading"){.headerlink}
 
 - Removed DGEMM NT custom kernels and related test cases
@@ -13700,8 +15963,9 @@ In csritlu0, the algorithm rocsparse_itilu0_alg_sync_split_fusion has some accur
 - Changed the range of AssertFree0ElementMultiple and Free1
 
 - Unified aStr, bStr generation code in mfmaIter
+:::
 
-{#id1069 .section}
+::: {#id1069 .section}
 #### Optimized[\#](#id1069 "Link to this heading"){.headerlink}
 
 - Enabled LocalSplitU with MFMA for I8 data type
@@ -13713,8 +15977,9 @@ In csritlu0, the algorithm rocsparse_itilu0_alg_sync_split_fusion has some accur
 - Enabled DirectToVgpr in TailLoop for NN, TN, and TT matrix orientations
 
 - Optimized DirectToLds test cases to reduce the test duration
+:::
 
-{#id1070 .section}
+::: {#id1070 .section}
 #### Resolved issues[\#](#id1070 "Link to this heading"){.headerlink}
 
 - Fixed LocalSplitU mismatch issue for SGEMM
@@ -13722,21 +15987,19 @@ In csritlu0, the algorithm rocsparse_itilu0_alg_sync_split_fusion has some accur
 - Fixed BufferStore=0 and Ldc != Ldd case
 
 - Fixed mismatch issue with TailLoop + MatrixInstB \> 1
+:::
+:::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-::
-{#rocm-5-6-1 .section}
+::::: {#rocm-5-6-1 .section}
 ## ROCm 5.6.1[\#](#rocm-5-6-1 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.6.1 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.1/RELEASE.md){.reference .external} on GitHub for a complete overview of this release.
 
-:
-{#hip-5-6-1 .section}
+:::: {#hip-5-6-1 .section}
 ### **HIP** (5.6.1)[\#](#hip-5-6-1 "Link to this heading"){.headerlink}
 
-{#id1071 .section}
+::: {#id1071 .section}
 #### Resolved issues[\#](#id1071 "Link to this heading"){.headerlink}
 
 - *hipMemcpy* device-to-device (intra device) is now asynchronous with respect to the host
@@ -13746,41 +16009,39 @@ See the [ROCm 5.6.1 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.1/
 - Memory leak when code object files are loaded/unloaded via hipModuleLoad/hipModuleUnload APIs
 
 - Using *hipGraphAddMemFreeNode* no longer results in a crash
+:::
+::::
+:::::
 
-:
-::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-{#rocm-5-6-0 .section}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#rocm-5-6-0 .section}
 ## ROCm 5.6.0[\#](#rocm-5-6-0 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.6.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.0/RELEASE.md){.reference .external} on GitHub for a complete overview of this release.
 
-::
-{#amd-smi-1-0-0 .section}
+::::: {#amd-smi-1-0-0 .section}
 ### **AMD SMI** (1.0.0)[\#](#amd-smi-1-0-0 "Link to this heading"){.headerlink}
 
-{#id1072 .section}
+::: {#id1072 .section}
 #### Added[\#](#id1072 "Link to this heading"){.headerlink}
 
 - AMDSMI CLI tool enabled for Linux Bare Metal & Guest
 
 - Package: amd-smi-lib
+:::
 
-{#id1073 .section}
+::: {#id1073 .section}
 #### Known issues[\#](#id1073 "Link to this heading"){.headerlink}
 
 - not all Error Correction Code (ECC) fields are currently supported
 
 - RHEL 8 & SLES 15 have extra install steps
+:::
+:::::
 
-::
-
-::::::
-{#hip-5-6-0 .section}
+::::::::: {#hip-5-6-0 .section}
 ### **HIP** (5.6.0)[\#](#hip-5-6-0 "Link to this heading"){.headerlink}
 
-{#id1074 .section}
+::: {#id1074 .section}
 #### Added[\#](#id1074 "Link to this heading"){.headerlink}
 
 - Added hipRTC support for amd_hip_fp16
@@ -13794,8 +16055,9 @@ See the [ROCm 5.6.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.0/
 - hipArrayGetDescriptor for getting 1D or 2D array descriptor
 
 - hipArray3DGetDescriptor to get 3D array descriptor
+:::
 
-{#id1075 .section}
+::: {#id1075 .section}
 #### Changed[\#](#id1075 "Link to this heading"){.headerlink}
 
 - hipMallocAsync to return success for zero size allocation to match hipMalloc
@@ -13805,20 +16067,23 @@ See the [ROCm 5.6.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.0/
 - Consolidation of hipamd, ROCclr, and OpenCL repositories into a single repository called clr. Instructions are updated to build HIP from sources in the HIP Installation guide
 
 - Removed hipBusBandwidth and hipCommander samples from hip-tests
+:::
 
-{#id1076 .section}
+::: {#id1076 .section}
 #### Optimized[\#](#id1076 "Link to this heading"){.headerlink}
 
 - Consolidation of hipamd, rocclr and OpenCL projects in clr
 
 - Optimized lock for graph global capture mode
+:::
 
-{#id1077 .section}
+::: {#id1077 .section}
 #### Resolved issues[\#](#id1077 "Link to this heading"){.headerlink}
 
 - Fixed regression in hipMemCpyParam3D when offset is applied
+:::
 
-{#id1078 .section}
+::: {#id1078 .section}
 #### Known issues[\#](#id1078 "Link to this heading"){.headerlink}
 
 - Limited testing on xnack+ configuration
@@ -13828,8 +16093,9 @@ See the [ROCm 5.6.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.0/
 - hipSetDevice and hipSetDeviceFlags APIs return hipErrorInvalidDevice instead of hipErrorNoDevice, on a system without GPU
 
 - Known memory leak when code object files are loaded/unloaded via hipModuleLoad/hipModuleUnload APIs. Issue will be fixed in a future ROCm release
+:::
 
-{#id1079 .section}
+::: {#id1079 .section}
 #### Upcoming changes[\#](#id1079 "Link to this heading"){.headerlink}
 
 - Removal of gcnarch from hipDeviceProp_t structure
@@ -13867,19 +16133,19 @@ See the [ROCm 5.6.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.0/
 - HIPMEMCPY_3D fields correction (unsigned int -\> size_t)
 
 - Renaming of 'memoryType' in hipPointerAttribute_t structure to 'type'
+:::
+:::::::::
 
-::::::
-
-::
-{#rocgdb-13-1 .section}
+::::: {#rocgdb-13-1 .section}
 ### **ROCgdb** (13.1)[\#](#rocgdb-13-1 "Link to this heading"){.headerlink}
 
-{#id1080 .section}
+::: {#id1080 .section}
 #### Optimized[\#](#id1080 "Link to this heading"){.headerlink}
 
 - Improved performances when handling the end of a process with a large number of threads.
+:::
 
-{#id1081 .section}
+::: {#id1081 .section}
 #### Known issues[\#](#id1081 "Link to this heading"){.headerlink}
 
 - On certain configurations, ROCgdb can show the following warning message:
@@ -13887,19 +16153,19 @@ See the [ROCm 5.6.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.0/
   [`warning:`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`Probes-based`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`dynamic`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`linker`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`interface`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`failed.`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`Reverting`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`to`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`original`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`interface.`{.docutils .literal .notranslate}]{.pre}
 
   This does not affect ROCgdb's functionalities.
+:::
+:::::
 
-::
-
-::
-{#hipblas-1-0-0 .section}
+::::: {#hipblas-1-0-0 .section}
 ### **hipBLAS** (1.0.0)[\#](#hipblas-1-0-0 "Link to this heading"){.headerlink}
 
-{#id1082 .section}
+::: {#id1082 .section}
 #### Changed[\#](#id1082 "Link to this heading"){.headerlink}
 
 - added const qualifier to hipBLAS functions (swap, sbmv, spmv, symv, trsm) where missing
+:::
 
-{#id1083 .section}
+::: {#id1083 .section}
 #### Removed[\#](#id1083 "Link to this heading"){.headerlink}
 
 - removed support for deprecated hipblasInt8Datatype_t enum
@@ -13907,18 +16173,19 @@ See the [ROCm 5.6.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.0/
 - removed support for deprecated hipblasSetInt8Datatype and hipblasGetInt8Datatype functions
 
 - in-place trmm is deprecated. It will be replaced by trmm which includes both in-place and out-of-place functionality
+:::
+:::::
 
-::
-
-{#id1084 .section}
+:::::: {#id1084 .section}
 ### **hipCUB** (2.13.1)[\#](#id1084 "Link to this heading"){.headerlink}
 
-{#id1085 .section}
+::: {#id1085 .section}
 #### Added[\#](#id1085 "Link to this heading"){.headerlink}
 
 - Benchmarks for [`BlockShuffle`{.docutils .literal .notranslate}]{.pre}, [`BlockLoad`{.docutils .literal .notranslate}]{.pre}, and [`BlockStore`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id1086 .section}
+::: {#id1086 .section}
 #### Changed[\#](#id1086 "Link to this heading"){.headerlink}
 
 - CUB backend references CUB and Thrust version 1.17.2.
@@ -13926,84 +16193,89 @@ See the [ROCm 5.6.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.0/
 - Improved benchmark coverage of [`BlockScan`{.docutils .literal .notranslate}]{.pre} by adding [`ExclusiveScan`{.docutils .literal .notranslate}]{.pre}, benchmark coverage of [`BlockRadixSort`{.docutils .literal .notranslate}]{.pre} by adding [`SortBlockedToStriped`{.docutils .literal .notranslate}]{.pre}, and benchmark coverage of [`WarpScan`{.docutils .literal .notranslate}]{.pre} by adding [`Broadcast`{.docutils .literal .notranslate}]{.pre}.
 
 - Updated [`docs`{.docutils .literal .notranslate}]{.pre} directory structure to match the standard of [rocm-docs-core](https://github.com/RadeonOpenCompute/rocm-docs-core){.reference .external}.
+:::
 
-{#id1087 .section}
+::: {#id1087 .section}
 #### Known issues[\#](#id1087 "Link to this heading"){.headerlink}
 
 - [`BlockRadixRankMatch`{.docutils .literal .notranslate}]{.pre} is currently broken under the rocPRIM backend.
 
 - [`BlockRadixRankMatch`{.docutils .literal .notranslate}]{.pre} with a warp size that does not exactly divide the block size is broken under the CUB backend.
+:::
+::::::
 
-::
-{#id1088 .section}
+::::: {#id1088 .section}
 ### **hipFFT** (1.0.12)[\#](#id1088 "Link to this heading"){.headerlink}
 
-{#id1089 .section}
+::: {#id1089 .section}
 #### Added[\#](#id1089 "Link to this heading"){.headerlink}
 
 - Implemented the hipfftXtMakePlanMany, hipfftXtGetSizeMany, hipfftXtExec APIs, to allow requesting half-precision transforms.
+:::
 
-{#id1090 .section}
+::: {#id1090 .section}
 #### Changed[\#](#id1090 "Link to this heading"){.headerlink}
 
 - Added --precision argument to benchmark/test clients. --double is still accepted but is deprecated as a method to request a double-precision transform.
+:::
+:::::
 
-::
-
-:
-{#hipsolver-1-8-0 .section}
+:::: {#hipsolver-1-8-0 .section}
 ### **hipSOLVER** (1.8.0)[\#](#hipsolver-1-8-0 "Link to this heading"){.headerlink}
 
-{#id1091 .section}
+::: {#id1091 .section}
 #### Added[\#](#id1091 "Link to this heading"){.headerlink}
 
 - Added compatibility API with hipsolverRf prefix
+:::
+::::
 
-:
-
-::
-{#hipsparse-2-3-6 .section}
+::::: {#hipsparse-2-3-6 .section}
 ### **hipSPARSE** (2.3.6)[\#](#hipsparse-2-3-6 "Link to this heading"){.headerlink}
 
-{#id1092 .section}
+::: {#id1092 .section}
 #### Added[\#](#id1092 "Link to this heading"){.headerlink}
 
 - Added SpGEMM algorithms
+:::
 
-{#id1093 .section}
+::: {#id1093 .section}
 #### Changed[\#](#id1093 "Link to this heading"){.headerlink}
 
 - For hipsparseXbsr2csr and hipsparseXcsr2bsr, blockDim == 0 now returns HIPSPARSE_STATUS_INVALID_SIZE
+:::
+:::::
 
-::
-
-{#id1094 .section}
+:::::: {#id1094 .section}
 ### **MIOpen** (2.19.0)[\#](#id1094 "Link to this heading"){.headerlink}
 
-{#id1095 .section}
+::: {#id1095 .section}
 #### Added[\#](#id1095 "Link to this heading"){.headerlink}
 
 - ROCm 5.5 support for gfx1101 (Navi32)
+:::
 
-{#id1096 .section}
+::: {#id1096 .section}
 #### Changed[\#](#id1096 "Link to this heading"){.headerlink}
 
 - Tuning results for MLIR on ROCm 5.5
 
 - Bumping MLIR commit to 5.5.0 release tag
+:::
 
-{#id1097 .section}
+::: {#id1097 .section}
 #### Resolved issues[\#](#id1097 "Link to this heading"){.headerlink}
 
 - Fix 3d convolution Host API bug
 
 - \[HOTFIX\]\[MI200\]\[FP16\] Disabled ConvHipImplicitGemmBwdXdlops when FP16_ALT is required.
+:::
+::::::
 
-::::
-{#rccl-2-15-5 .section}
+::::::: {#rccl-2-15-5 .section}
 ### **RCCL** (2.15.5)[\#](#rccl-2-15-5 "Link to this heading"){.headerlink}
 
-{#id1098 .section}
+::: {#id1098 .section}
 #### Added[\#](#id1098 "Link to this heading"){.headerlink}
 
 - HW-topology aware binary tree implementation
@@ -14013,20 +16285,23 @@ See the [ROCm 5.6.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.0/
 - New unit tests for hipGraph support
 
 - NPKit integration
+:::
 
-{#id1099 .section}
+::: {#id1099 .section}
 #### Changed[\#](#id1099 "Link to this heading"){.headerlink}
 
 - Compatibility with NCCL 2.15.5
 
 - Unit test executable renamed to rccl-UnitTests
+:::
 
-{#id1100 .section}
+::: {#id1100 .section}
 #### Removed[\#](#id1100 "Link to this heading"){.headerlink}
 
 - Removed TransferBench from tools. Exists in standalone repo: https://github.com/ROCmSoftwarePlatform/TransferBench
+:::
 
-{#id1101 .section}
+::: {#id1101 .section}
 #### Resolved issues[\#](#id1101 "Link to this heading"){.headerlink}
 
 - rocm-smi ID conversion
@@ -14034,30 +16309,29 @@ See the [ROCm 5.6.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.0/
 - Support for HIP_VISIBLE_DEVICES for unit tests
 
 - Support for p2p transfers to non (HIP) visible devices
+:::
+:::::::
 
-::::
-
-:
-{#rocalution-2-1-9 .section}
+:::: {#rocalution-2-1-9 .section}
 ### **rocALUTION** (2.1.9)[\#](#rocalution-2-1-9 "Link to this heading"){.headerlink}
 
-{#id1102 .section}
+::: {#id1102 .section}
 #### Optimized[\#](#id1102 "Link to this heading"){.headerlink}
 
 - Fixed synchronization issues in level 1 routines
+:::
+::::
 
-:
-
-:::::
-{#rocblas-3-0-0 .section}
+:::::::: {#rocblas-3-0-0 .section}
 ### **rocBLAS** (3.0.0)[\#](#rocblas-3-0-0 "Link to this heading"){.headerlink}
 
-{#id1103 .section}
+::: {#id1103 .section}
 #### Added[\#](#id1103 "Link to this heading"){.headerlink}
 
 - Added bf16 inputs and f32 compute support to Level 1 rocBLAS Extension functions axpy_ex, scal_ex and nrm2_ex.
+:::
 
-{#id1104 .section}
+::: {#id1104 .section}
 #### Changed[\#](#id1104 "Link to this heading"){.headerlink}
 
 - refactor rotg test code
@@ -14067,8 +16341,9 @@ See the [ROCm 5.6.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.0/
   - build only dependency on python joblib added as used by Tensile build
 
   - fix for cmake install on some OS when performed by install.sh -d --cmake_install
+:::
 
-{#id1105 .section}
+::: {#id1105 .section}
 #### Removed[\#](#id1105 "Link to this heading"){.headerlink}
 
 - is_complex helper was deprecated and now removed. Use rocblas_is_complex instead.
@@ -14088,25 +16363,27 @@ See the [ROCm 5.6.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.0/
 - rocblas_set_device_memory_size() is deprecated and will be replaced by a future function rocblas_increase_device_memory_size()
 
 - rocblas_is_user_managing_device_memory() is deprecated and will be removed in a future release
+:::
 
-{#id1106 .section}
+::: {#id1106 .section}
 #### Optimized[\#](#id1106 "Link to this heading"){.headerlink}
 
 - Improved performance of Level 2 rocBLAS GEMV on gfx90a GPU for non-transposed problems having small matrices and larger batch counts. Performance enhanced for problem sizes when m and n \<= 32 and batch_count \>= 256.
 
 - Improved performance of rocBLAS syr2k for single, double, and double-complex precision, and her2k for double-complex precision. Slightly improved performance for general sizes on gfx90a.
+:::
 
-{#id1107 .section}
+::: {#id1107 .section}
 #### Resolved issues[\#](#id1107 "Link to this heading"){.headerlink}
 
 - make trsm offset calculations 64 bit safe
+:::
+::::::::
 
-:::::
-
-{#rocfft-1-0-23 .section}
+:::::: {#rocfft-1-0-23 .section}
 ### **rocFFT** (1.0.23)[\#](#rocfft-1-0-23 "Link to this heading"){.headerlink}
 
-{#id1108 .section}
+::: {#id1108 .section}
 #### Added[\#](#id1108 "Link to this heading"){.headerlink}
 
 - Implemented half-precision transforms, which can be requested by passing rocfft_precision_half to rocfft_plan_create.
@@ -14114,8 +16391,9 @@ See the [ROCm 5.6.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.0/
 - Implemented a hierarchical solution map which saves how to decompose a problem and the kernels to be used.
 
 - Implemented a first version of offline-tuner to support tuning kernels for C2C/Z2Z problems.
+:::
 
-{#id1109 .section}
+::: {#id1109 .section}
 #### Changed[\#](#id1109 "Link to this heading"){.headerlink}
 
 - Replaced std::complex with hipComplex data types for data generator.
@@ -14123,17 +16401,19 @@ See the [ROCm 5.6.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.0/
 - FFT plan dimensions are now sorted to be row-major internally where possible, which produces better plans if the dimensions were accidentally specified in a different order (column-major, for example).
 
 - Added --precision argument to benchmark/test clients. --double is still accepted but is deprecated as a method to request a double-precision transform.
+:::
 
-{#id1110 .section}
+::: {#id1110 .section}
 #### Resolved issues[\#](#id1110 "Link to this heading"){.headerlink}
 
 - Fixed over-allocation of LDS in some real-complex kernels, which was resulting in kernel launch failure.
+:::
+::::::
 
-:
-{#rocm-cmake-0-9-0 .section}
+:::: {#rocm-cmake-0-9-0 .section}
 ### **rocm-cmake** (0.9.0)[\#](#rocm-cmake-0-9-0 "Link to this heading"){.headerlink}
 
-{#id1111 .section}
+::: {#id1111 .section}
 #### Added[\#](#id1111 "Link to this heading"){.headerlink}
 
 - Added the option ROCM_HEADER_WRAPPER_WERROR
@@ -14141,13 +16421,13 @@ See the [ROCm 5.6.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.0/
   - Compile-time C macro in the wrapper headers causes errors to be emitted instead of warnings.
 
   - Configure-time CMake option sets the default for the C macro.
+:::
+::::
 
-:
-
-{#rocprim-2-13-0 .section}
+:::::: {#rocprim-2-13-0 .section}
 ### **rocPRIM** (2.13.0)[\#](#rocprim-2-13-0 "Link to this heading"){.headerlink}
 
-{#id1112 .section}
+::: {#id1112 .section}
 #### Added[\#](#id1112 "Link to this heading"){.headerlink}
 
 - New block level [`radix_rank`{.docutils .literal .notranslate}]{.pre} primitive.
@@ -14155,8 +16435,9 @@ See the [ROCm 5.6.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.0/
 - New block level [`radix_rank_match`{.docutils .literal .notranslate}]{.pre} primitive.
 
 - Added a stable block sorting implementation. This be used with [`block_sort`{.docutils .literal .notranslate}]{.pre} by using the [`block_sort_algorithm::stable_merge_sort`{.docutils .literal .notranslate}]{.pre} algorithm.
+:::
 
-{#id1113 .section}
+::: {#id1113 .section}
 #### Changed[\#](#id1113 "Link to this heading"){.headerlink}
 
 - Improved the performance of [`block_radix_sort`{.docutils .literal .notranslate}]{.pre} and [`device_radix_sort`{.docutils .literal .notranslate}]{.pre}.
@@ -14164,112 +16445,105 @@ See the [ROCm 5.6.0 release notes](https://github.com/ROCm/ROCm/blob/docs/5.6.0/
 - Improved the performance of [`device_merge_sort`{.docutils .literal .notranslate}]{.pre}.
 
 - Updated [`docs`{.docutils .literal .notranslate}]{.pre} directory structure to match the standard of [rocm-docs-core](https://github.com/RadeonOpenCompute/rocm-docs-core){.reference .external}. Contributed by: [v01dXYZ](https://github.com/v01dXYZ){.reference .external}.
+:::
 
-{#id1114 .section}
+::: {#id1114 .section}
 #### Known issues[\#](#id1114 "Link to this heading"){.headerlink}
 
 - Disabled GPU error messages relating to incorrect warp operation usage with Navi GPUs on Windows, due to GPU printf performance issues on Windows.
 
 - When [`ROCPRIM_DISABLE_LOOKBACK_SCAN`{.docutils .literal .notranslate}]{.pre} is set, [`device_scan`{.docutils .literal .notranslate}]{.pre} fails for input sizes bigger than [`scan_config::size_limit`{.docutils .literal .notranslate}]{.pre}, which defaults to [`std::numeric_limits&lt;unsigned`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`int&gt;::max()`{.docutils .literal .notranslate}]{.pre}.
+:::
+::::::
 
-::::::::::::::::
-{#rocprofiler .section}
+::::::::::::::::::: {#rocprofiler .section}
 ### **ROCprofiler**[\#](#rocprofiler "Link to this heading"){.headerlink}
 
 In ROCm 5.6 the [`rocprofilerv1`{.docutils .literal .notranslate}]{.pre} and [`rocprofilerv2`{.docutils .literal .notranslate}]{.pre} include and library files of ROCm 5.5 are split into separate files. The [`rocmtools`{.docutils .literal .notranslate}]{.pre} files that were deprecated in ROCm 5.5 have been removed.
 
-pst-scrollable-table-container
+::: pst-scrollable-table-container
   ROCm 5.6          rocprofilerv1                                                                  rocprofilerv2
   ----------------- ------------------------------------------------------------------------------ ---------------------------------------------------------------------------------
   **Tool script**   [`bin/rocprof`{.docutils .literal .notranslate}]{.pre}                         [`bin/rocprofv2`{.docutils .literal .notranslate}]{.pre}
   **API include**   [`include/rocprofiler/rocprofiler.h`{.docutils .literal .notranslate}]{.pre}   [`include/rocprofiler/v2/rocprofiler.h`{.docutils .literal .notranslate}]{.pre}
   **API library**   [`lib/librocprofiler.so.1`{.docutils .literal .notranslate}]{.pre}             [`lib/librocprofiler.so.2`{.docutils .literal .notranslate}]{.pre}
+:::
 
 The ROCm Profiler Tool that uses [`rocprofilerV1`{.docutils .literal .notranslate}]{.pre} can be invoked using the following command:
 
-:
-{.highlight-sh .notranslate}
-
-highlight
+:::: {.highlight-sh .notranslate}
+::: highlight
     $ rocprof …
-
-:
+:::
+::::
 
 To write a custom tool based on the [`rocprofilerV1`{.docutils .literal .notranslate}]{.pre} API do the following:
 
-:
-{.highlight-C .notranslate}
-
-highlight
+:::: {.highlight-C .notranslate}
+::: highlight
     main.c:
     #include <rocprofiler/rocprofiler.h> // Use the rocprofilerV1 API
     int main() {
       // Use the rocprofilerV1 API
       return 0;
     }
-
-:
+:::
+::::
 
 This can be built in the following manner:
 
-:
-{.highlight-sh .notranslate}
-
-highlight
+:::: {.highlight-sh .notranslate}
+::: highlight
     $ gcc main.c -I/opt/rocm-5.6.0/include -L/opt/rocm-5.6.0/lib -lrocprofiler64
-
-:
+:::
+::::
 
 The resulting [`a.out`{.docutils .literal .notranslate}]{.pre} will depend on [`/opt/rocm-5.6.0/lib/librocprofiler64.so.1`{.docutils .literal .notranslate}]{.pre}.
 
 The ROCm Profiler that uses [`rocprofilerV2`{.docutils .literal .notranslate}]{.pre} API can be invoked using the following command:
 
-:
-{.highlight-sh .notranslate}
-
-highlight
+:::: {.highlight-sh .notranslate}
+::: highlight
     $ rocprofv2 …
-
-:
+:::
+::::
 
 To write a custom tool based on the [`rocprofilerV2`{.docutils .literal .notranslate}]{.pre} API do the following:
 
-:
-{.highlight-C .notranslate}
-
-highlight
+:::: {.highlight-C .notranslate}
+::: highlight
     main.c:
     #include <rocprofiler/v2/rocprofiler.h> // Use the rocprofilerV2 API
     int main() {
       // Use the rocprofilerV2 API
       return 0;
     }
-
-:
+:::
+::::
 
 This can be built in the following manner:
 
-:
-{.highlight-sh .notranslate}
-
-highlight
+:::: {.highlight-sh .notranslate}
+::: highlight
     $ gcc main.c -I/opt/rocm-5.6.0/include -L/opt/rocm-5.6.0/lib -lrocprofiler64-v2
-
-:
+:::
+::::
 
 The resulting [`a.out`{.docutils .literal .notranslate}]{.pre} will depend on [`/opt/rocm-5.6.0/lib/librocprofiler64.so.2`{.docutils .literal .notranslate}]{.pre}.
 
-{#id1115 .section}
+::: {#id1115 .section}
 #### Added[\#](#id1115 "Link to this heading"){.headerlink}
 
 - 'end_time' need to be disabled in roctx_trace.txt
+:::
 
-{#id1116 .section}
+::: {#id1116 .section}
 #### Optimized[\#](#id1116 "Link to this heading"){.headerlink}
 
 - Improved Test Suite
+:::
 
-{#id1117 .section}
+::: {#id1117 .section}
 #### Resolved issues[\#](#id1117 "Link to this heading"){.headerlink}
 
 - rocprof in ROcm/5.4.0 gpu selector broken.
@@ -14277,14 +16551,13 @@ The resulting [`a.out`{.docutils .literal .notranslate}]{.pre} will depend on [`
 - rocprof in ROCm/5.4.1 fails to generate kernel info.
 
 - rocprof clobbers LD_PRELOAD.
+:::
+:::::::::::::::::::
 
-::::::::::::::::
-
-::
-{#id1118 .section}
+::::: {#id1118 .section}
 ### **rocRAND** (2.10.17)[\#](#id1118 "Link to this heading"){.headerlink}
 
-{#id1119 .section}
+::: {#id1119 .section}
 #### Added[\#](#id1119 "Link to this heading"){.headerlink}
 
 - MT19937 pseudo random number generator based on M. Matsumoto and T. Nishimura, 1998, Mersenne Twister: A 623-dimensionally equidistributed uniform pseudorandom number generator.
@@ -14294,18 +16567,19 @@ The resulting [`a.out`{.docutils .literal .notranslate}]{.pre} will depend on [`
 - experimental HIP-CPU feature
 
 - ThreeFry pseudorandom number generator based on Salmon et al., 2011, "Parallel random numbers: as easy as 1, 2, 3".
+:::
 
-{#id1120 .section}
+::: {#id1120 .section}
 #### Changed[\#](#id1120 "Link to this heading"){.headerlink}
 
 - Python 2.7 is no longer officially supported.
+:::
+:::::
 
-::
-
-{#rocsolver-3-22-0 .section}
+:::::: {#rocsolver-3-22-0 .section}
 ### **rocSOLVER** (3.22.0)[\#](#rocsolver-3-22-0 "Link to this heading"){.headerlink}
 
-{#id1121 .section}
+::: {#id1121 .section}
 #### Added[\#](#id1121 "Link to this heading"){.headerlink}
 
 - LU refactorization for sparse matrices
@@ -14323,51 +16597,53 @@ The resulting [`a.out`{.docutils .literal .notranslate}]{.pre} will depend on [`
   - CSRRF_SOLVE
 
 - Added type [`rocsolver_rfinfo`{.docutils .literal .notranslate}]{.pre} for use with sparse matrix routines
+:::
 
-{#id1122 .section}
+::: {#id1122 .section}
 #### Optimized[\#](#id1122 "Link to this heading"){.headerlink}
 
 - Improved the performance of BDSQR and GESVD when singular vectors are requested
+:::
 
-{#id1123 .section}
+::: {#id1123 .section}
 #### Resolved issues[\#](#id1123 "Link to this heading"){.headerlink}
 
 - BDSQR and GESVD should no longer hang when the input contains [`NaN`{.docutils .literal .notranslate}]{.pre} or [`Inf`{.docutils .literal .notranslate}]{.pre}
+:::
+::::::
 
-:
-{#rocsparse-2-5-2 .section}
+:::: {#rocsparse-2-5-2 .section}
 ### **rocSPARSE** (2.5.2)[\#](#rocsparse-2-5-2 "Link to this heading"){.headerlink}
 
-{#id1124 .section}
+::: {#id1124 .section}
 #### Optimized[\#](#id1124 "Link to this heading"){.headerlink}
 
 - Fixed a memory leak in csritsv
 
 - Fixed a bug in csrsm and bsrsm
+:::
+::::
 
-:
-
-::
-{#id1125 .section}
+::::: {#id1125 .section}
 ### **rocThrust** (2.18.0)[\#](#id1125 "Link to this heading"){.headerlink}
 
-{#id1126 .section}
+::: {#id1126 .section}
 #### Changed[\#](#id1126 "Link to this heading"){.headerlink}
 
 - Updated [`docs`{.docutils .literal .notranslate}]{.pre} directory structure to match the standard of [rocm-docs-core](https://github.com/RadeonOpenCompute/rocm-docs-core){.reference .external}.
+:::
 
-{#id1127 .section}
+::: {#id1127 .section}
 #### Resolved issues[\#](#id1127 "Link to this heading"){.headerlink}
 
 - [`lower_bound`{.docutils .literal .notranslate}]{.pre}, [`upper_bound`{.docutils .literal .notranslate}]{.pre}, and [`binary_search`{.docutils .literal .notranslate}]{.pre} failed to compile for certain types.
+:::
+:::::
 
-::
-
-::
-{#rocwmma-1-1-0 .section}
+::::: {#rocwmma-1-1-0 .section}
 ### **rocWMMA** (1.1.0)[\#](#rocwmma-1-1-0 "Link to this heading"){.headerlink}
 
-{#id1128 .section}
+::: {#id1128 .section}
 #### Added[\#](#id1128 "Link to this heading"){.headerlink}
 
 - Added cross-lane operation backends (Blend, Permute, Swizzle and Dpp)
@@ -14383,8 +16659,9 @@ The resulting [`a.out`{.docutils .literal .notranslate}]{.pre} will depend on [`
 - Included ROCm smi for runtime clock rate detection
 
 - Added fragment transforms for transpose and change data layout
+:::
 
-{#id1129 .section}
+::: {#id1129 .section}
 #### Changed[\#](#id1129 "Link to this heading"){.headerlink}
 
 - Default to GPU rocBLAS validation against rocWMMA
@@ -14396,14 +16673,13 @@ The resulting [`a.out`{.docutils .literal .notranslate}]{.pre} will depend on [`
 - Restructured unit test folder for consistency
 
 - Consolidated rocWMMA samples common code
+:::
+:::::
 
-::
-
-::::
-{#tensile-4-37-0 .section}
+::::::: {#tensile-4-37-0 .section}
 ### **Tensile** (4.37.0)[\#](#tensile-4-37-0 "Link to this heading"){.headerlink}
 
-{#id1130 .section}
+::: {#id1130 .section}
 #### Added[\#](#id1130 "Link to this heading"){.headerlink}
 
 - Added user driven tuning API
@@ -14427,8 +16703,9 @@ The resulting [`a.out`{.docutils .literal .notranslate}]{.pre} will depend on [`
 - Added support for MFMA + LocalSplitU
 
 - Added frequency, power, and temperature data to the output
+:::
 
-{#id1131 .section}
+::: {#id1131 .section}
 #### Changed[\#](#id1131 "Link to this heading"){.headerlink}
 
 - Updated custom kernels with 64-bit offsets
@@ -14452,8 +16729,9 @@ The resulting [`a.out`{.docutils .literal .notranslate}]{.pre} will depend on [`
 - Removed tmpVgpr parameter from vectorStaticRemainder/Divide/DivideAndReminder
 
 - Removed qReg parameter from vectorStaticRemainder
+:::
 
-{#id1132 .section}
+::: {#id1132 .section}
 #### Optimized[\#](#id1132 "Link to this heading"){.headerlink}
 
 - Improved the performance of GlobalSplitU with SingleBuffer algorithm
@@ -14465,8 +16743,9 @@ The resulting [`a.out`{.docutils .literal .notranslate}]{.pre} will depend on [`
 - Optimized complex GEMM (fixed vgpr allocation, unified CGEMM and ZGEMM code in MulMIoutAlphaToArch)
 
 - Improved the performance of the second kernel of MultipleBuffer algorithm
+:::
 
-{#id1133 .section}
+::: {#id1133 .section}
 #### Resolved issues[\#](#id1133 "Link to this heading"){.headerlink}
 
 - Fixed tmp sgpr allocation to avoid over-writing values (alpha)
@@ -14494,25 +16773,25 @@ The resulting [`a.out`{.docutils .literal .notranslate}]{.pre} will depend on [`
 - Fixed AssertSummationElementMultiple + GlobalSplitU issues
 
 - Fixed ASEM + GSU + TailLoop inner unroll
+:::
+:::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-{#rocm-5-5-1 .section}
+::: {#rocm-5-5-1 .section}
 ## ROCm 5.5.1[\#](#rocm-5-5-1 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.5.1 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.1/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
+:::
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-{#rocm-5-5-0 .section}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#rocm-5-5-0 .section}
 ## ROCm 5.5.0[\#](#rocm-5-5-0 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
 
-{#hipblas-0-54-0 .section}
+:::::: {#hipblas-0-54-0 .section}
 ### **hipBLAS** (0.54.0)[\#](#hipblas-0-54-0 "Link to this heading"){.headerlink}
 
-{#id1134 .section}
+::: {#id1134 .section}
 #### Added[\#](#id1134 "Link to this heading"){.headerlink}
 
 - added option to opt-in to use \_\_half for hipblasHalf type in the API for c++ users who define HIPBLAS_USE_HIP_HALF
@@ -14522,15 +16801,17 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - data driven hipblas-bench and hipblas-test execution via external yaml format data files
 
 - client smoke test added for quick validation using command hipblas-test --yaml hipblas_smoke.yaml
+:::
 
-{#id1135 .section}
+::: {#id1135 .section}
 #### Changed[\#](#id1135 "Link to this heading"){.headerlink}
 
 - changed reference code for Windows to OpenBLAS
 
 - hipblas client executables all now begin with hipblas- prefix
+:::
 
-{#id1136 .section}
+::: {#id1136 .section}
 #### Resolved issues[\#](#id1136 "Link to this heading"){.headerlink}
 
 - fixed datatype conversion functions to support more rocBLAS/cuBLAS datatypes
@@ -14544,53 +16825,55 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - fixed gels to return successfully when given nullptrs with corresponding size = 0
 
 - fixed gels to give info = -1 when transpose is not in ('N', 'T') for real cases or not in ('N', 'C') for complex cases
+:::
+::::::
 
-::::
-{#id1137 .section}
+::::::: {#id1137 .section}
 ### **hipCUB** (2.13.1)[\#](#id1137 "Link to this heading"){.headerlink}
 
-{#id1138 .section}
+::: {#id1138 .section}
 #### Added[\#](#id1138 "Link to this heading"){.headerlink}
 
 - Benchmarks for [`BlockShuffle`{.docutils .literal .notranslate}]{.pre}, [`BlockLoad`{.docutils .literal .notranslate}]{.pre}, and [`BlockStore`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id1139 .section}
+::: {#id1139 .section}
 #### Changed[\#](#id1139 "Link to this heading"){.headerlink}
 
 - CUB backend references CUB and Thrust version 1.17.2.
 
 - Improved benchmark coverage of [`BlockScan`{.docutils .literal .notranslate}]{.pre} by adding [`ExclusiveScan`{.docutils .literal .notranslate}]{.pre}, benchmark coverage of [`BlockRadixSort`{.docutils .literal .notranslate}]{.pre} by adding [`SortBlockedToStriped`{.docutils .literal .notranslate}]{.pre}, and benchmark coverage of [`WarpScan`{.docutils .literal .notranslate}]{.pre} by adding [`Broadcast`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id1140 .section}
+::: {#id1140 .section}
 #### Resolved issues[\#](#id1140 "Link to this heading"){.headerlink}
 
 - Windows HIP SDK support
+:::
 
-{#id1141 .section}
+::: {#id1141 .section}
 #### Known Issues[\#](#id1141 "Link to this heading"){.headerlink}
 
 - [`BlockRadixRankMatch`{.docutils .literal .notranslate}]{.pre} is currently broken under the rocPRIM backend.
 
 - [`BlockRadixRankMatch`{.docutils .literal .notranslate}]{.pre} with a warp size that does not exactly divide the block size is broken under the CUB backend.
+:::
+:::::::
 
-::::
-
-:
-{#hipfft-1-0-11 .section}
+:::: {#hipfft-1-0-11 .section}
 ### **hipFFT** (1.0.11)[\#](#hipfft-1-0-11 "Link to this heading"){.headerlink}
 
-{#id1142 .section}
+::: {#id1142 .section}
 #### Resolved issues[\#](#id1142 "Link to this heading"){.headerlink}
 
 - Fixed old version rocm include/lib folders not removed on upgrade.
+:::
+::::
 
-:
-
-:
-{#hipsolver-1-7-0 .section}
+:::: {#hipsolver-1-7-0 .section}
 ### **hipSOLVER** (1.7.0)[\#](#hipsolver-1-7-0 "Link to this heading"){.headerlink}
 
-{#id1143 .section}
+::: {#id1143 .section}
 #### Added[\#](#id1143 "Link to this heading"){.headerlink}
 
 - Added functions
@@ -14606,14 +16889,13 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
     - hipsolverSgesvdjBatched_bufferSize, hipsolverDgesvdjBatched_bufferSize, hipsolverCgesvdjBatched_bufferSize, hipsolverZgesvdjBatched_bufferSize
 
     - hipsolverSgesvdjBatched, hipsolverDgesvdjBatched, hipsolverCgesvdjBatched, hipsolverZgesvdjBatched
+:::
+::::
 
-:
-
-:
-{#hipsparse-2-3-5 .section}
+:::: {#hipsparse-2-3-5 .section}
 ### **hipSPARSE** (2.3.5)[\#](#hipsparse-2-3-5 "Link to this heading"){.headerlink}
 
-{#id1144 .section}
+::: {#id1144 .section}
 #### Optimized[\#](#id1144 "Link to this heading"){.headerlink}
 
 - Fixed an issue, where the rocm folder was not removed on upgrade of meta packages
@@ -14625,36 +16907,39 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - Improved documentation
 
 - Fixed a bug with deprecation messages when using gcc9 (Thanks \@Maetveis)
+:::
+::::
 
-:
-
-{#id1145 .section}
+:::::: {#id1145 .section}
 ### **MIOpen** (2.19.0)[\#](#id1145 "Link to this heading"){.headerlink}
 
-{#id1146 .section}
+::: {#id1146 .section}
 #### Added[\#](#id1146 "Link to this heading"){.headerlink}
 
 - ROCm 5.5 support for gfx1101 (Navi32)
+:::
 
-{#id1147 .section}
+::: {#id1147 .section}
 #### Changed[\#](#id1147 "Link to this heading"){.headerlink}
 
 - Tuning results for MLIR on ROCm 5.5
 
 - Bumping MLIR commit to 5.5.0 release tag
+:::
 
-{#id1148 .section}
+::: {#id1148 .section}
 #### Resolved issues[\#](#id1148 "Link to this heading"){.headerlink}
 
 - Fix 3d convolution Host API bug
 
 - \[HOTFIX\]\[MI200\]\[FP16\] Disabled ConvHipImplicitGemmBwdXdlops when FP16_ALT is required.
+:::
+::::::
 
-::::
-{#id1149 .section}
+::::::: {#id1149 .section}
 ### **RCCL** (2.15.5)[\#](#id1149 "Link to this heading"){.headerlink}
 
-{#id1150 .section}
+::: {#id1150 .section}
 #### Added[\#](#id1150 "Link to this heading"){.headerlink}
 
 - HW-topology aware binary tree implementation
@@ -14664,20 +16949,23 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - New unit tests for hipGraph support
 
 - NPKit integration
+:::
 
-{#id1151 .section}
+::: {#id1151 .section}
 #### Changed[\#](#id1151 "Link to this heading"){.headerlink}
 
 - Compatibility with NCCL 2.15.5
 
 - Unit test executable renamed to rccl-UnitTests
+:::
 
-{#id1152 .section}
+::: {#id1152 .section}
 #### Removed[\#](#id1152 "Link to this heading"){.headerlink}
 
 - Removed TransferBench from tools. Exists in standalone repo: https://github.com/ROCmSoftwarePlatform/TransferBench
+:::
 
-{#id1153 .section}
+::: {#id1153 .section}
 #### Resolved issues[\#](#id1153 "Link to this heading"){.headerlink}
 
 - rocm-smi ID conversion
@@ -14685,18 +16973,19 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - Support for HIP_VISIBLE_DEVICES for unit tests
 
 - Support for p2p transfers to non (HIP) visible devices
+:::
+:::::::
 
-::::
-
-{#rocalution-2-1-8 .section}
+:::::: {#rocalution-2-1-8 .section}
 ### **rocALUTION** (2.1.8)[\#](#rocalution-2-1-8 "Link to this heading"){.headerlink}
 
-{#id1154 .section}
+::: {#id1154 .section}
 #### Added[\#](#id1154 "Link to this heading"){.headerlink}
 
 - Added build support for Navi32
+:::
 
-{#id1155 .section}
+::: {#id1155 .section}
 #### Changed[\#](#id1155 "Link to this heading"){.headerlink}
 
 - LocalVector::GetIndexValues(ValueType\*) is deprecated, use LocalVector::GetIndexValues(const LocalVector&, LocalVector\*) instead
@@ -14712,8 +17001,9 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - LocalMatrix::AMGSmoothedAggregation(ValueType, const LocalVector&, const LocalVector&, LocalMatrix\*, LocalMatrix\*, int) is deprecated, use LocalMatrix::AMGAggregation(ValueType, const LocalVector&, const LocalVector&, LocalMatrix\*, int) instead
 
 - LocalMatrix::AMGAggregation(const LocalVector&, LocalMatrix\*, LocalMatrix\*) is deprecated, use LocalMatrix::AMGAggregation(const LocalVector&, LocalMatrix\*) instead
+:::
 
-{#id1156 .section}
+::: {#id1156 .section}
 #### Optimized[\#](#id1156 "Link to this heading"){.headerlink}
 
 - Fixed a typo in MPI backend
@@ -14723,12 +17013,13 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - Fixed a bug in SAAMG hierarchy building on HIP backend
 
 - Improved SAAMG hierarchy build performance on HIP backend
+:::
+::::::
 
-:::::
-{#rocblas-2-47-0 .section}
+:::::::: {#rocblas-2-47-0 .section}
 ### **rocBLAS** (2.47.0)[\#](#rocblas-2-47-0 "Link to this heading"){.headerlink}
 
-{#id1157 .section}
+::: {#id1157 .section}
 #### Added[\#](#id1157 "Link to this heading"){.headerlink}
 
 - added functionality rocblas_geam_ex for matrix-matrix minimum operations
@@ -14742,20 +17033,23 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - added windows build documentation for forthcoming support using ROCm HIP SDK
 
 - added scripts to plot performance for multiple functions
+:::
 
-{#id1158 .section}
+::: {#id1158 .section}
 #### Changed[\#](#id1158 "Link to this heading"){.headerlink}
 
 - install.sh internally runs rmake.py (also used on windows) and rmake.py may be used directly by developers on linux (use --help)
 
 - rocblas client executables all now begin with rocblas- prefix
+:::
 
-{#id1159 .section}
+::: {#id1159 .section}
 #### Removed[\#](#id1159 "Link to this heading"){.headerlink}
 
 - install.sh removed options -o --cov as now Tensile will use the default COV format, set by cmake define Tensile_CODE_OBJECT_VERSION=default
+:::
 
-{#id1160 .section}
+::: {#id1160 .section}
 #### Optimized[\#](#id1160 "Link to this heading"){.headerlink}
 
 - improved performance of Level 2 rocBLAS GEMV for float and double precision. Performance enhanced by 150-200% for certain problem sizes when (m==n) measured on a gfx90a GPU.
@@ -14763,8 +17057,9 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - improved performance of Level 2 rocBLAS GER for float, double and complex float precisions. Performance enhanced by 5-7% for certain problem sizes measured on a gfx90a GPU.
 
 - improved performance of Level 2 rocBLAS SYMV for float and double precisions. Performance enhanced by 120-150% for certain problem sizes measured on both gfx908 and gfx90a GPUs.
+:::
 
-{#id1161 .section}
+::: {#id1161 .section}
 #### Resolved issues[\#](#id1161 "Link to this heading"){.headerlink}
 
 - fixed setting of executable mode on client script rocblas_gentest.py to avoid potential permission errors with clients rocblas-test and rocblas-bench
@@ -14772,19 +17067,19 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - fixed deprecated API compatibility with Visual Studio compiler
 
 - fixed test framework memory exception handling for Level 2 functions when the host memory allocation exceeds the available memory
+:::
+::::::::
 
-:::::
-
-::::
-{#rocfft-1-0-22 .section}
+::::::: {#rocfft-1-0-22 .section}
 ### **rocFFT** (1.0.22)[\#](#rocfft-1-0-22 "Link to this heading"){.headerlink}
 
-{#id1162 .section}
+::: {#id1162 .section}
 #### Added[\#](#id1162 "Link to this heading"){.headerlink}
 
 - Added gfx1101 to default AMDGPU_TARGETS.
+:::
 
-{#id1163 .section}
+::: {#id1163 .section}
 #### Changed[\#](#id1163 "Link to this heading"){.headerlink}
 
 - Moved client programs to C++17.
@@ -14792,8 +17087,9 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - Moved planar kernels and infrequently used Stockham kernels to be runtime-compiled.
 
 - Moved transpose, real-complex, Bluestein, and Stockham kernels to library kernel cache.
+:::
 
-{#id1164 .section}
+::: {#id1164 .section}
 #### Optimized[\#](#id1164 "Link to this heading"){.headerlink}
 
 - Improved performance of 1D lengths \< 2048 that use Bluestein's algorithm.
@@ -14803,64 +17099,67 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - Optimized 3D R2C/C2R lengths 32, 84, 128.
 
 - Optimized batched small 1D R2C/C2R cases.
+:::
 
-{#id1165 .section}
+::: {#id1165 .section}
 #### Resolved issues[\#](#id1165 "Link to this heading"){.headerlink}
 
 - Removed zero-length twiddle table allocations, which fixes errors from hipMallocManaged.
 
 - Fixed incorrect freeing of HIP stream handles during twiddle computation when multiple devices are present.
+:::
+:::::::
 
-::::
-
-::
-{#rocm-cmake-0-8-1 .section}
+::::: {#rocm-cmake-0-8-1 .section}
 ### **rocm-cmake** (0.8.1)[\#](#rocm-cmake-0-8-1 "Link to this heading"){.headerlink}
 
-{#id1166 .section}
+::: {#id1166 .section}
 #### Changed[\#](#id1166 "Link to this heading"){.headerlink}
 
 - ROCMHeaderWrapper: The wrapper header deprecation message is now a deprecation warning.
+:::
 
-{#id1167 .section}
+::: {#id1167 .section}
 #### Resolved issues[\#](#id1167 "Link to this heading"){.headerlink}
 
 - ROCMInstallTargets: Added compatibility symlinks for included cmake files in [`&lt;ROCM&gt;/lib/cmake/&lt;PACKAGE&gt;`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::
 
-::
-
-::::
-{#id1168 .section}
+::::::: {#id1168 .section}
 ### **rocPRIM** (2.13.0)[\#](#id1168 "Link to this heading"){.headerlink}
 
-{#id1169 .section}
+::: {#id1169 .section}
 #### Added[\#](#id1169 "Link to this heading"){.headerlink}
 
 - New block level [`radix_rank`{.docutils .literal .notranslate}]{.pre} primitive.
 
 - New block level [`radix_rank_match`{.docutils .literal .notranslate}]{.pre} primitive.
+:::
 
-{#id1170 .section}
+::: {#id1170 .section}
 #### Changed[\#](#id1170 "Link to this heading"){.headerlink}
 
 - Improved the performance of [`block_radix_sort`{.docutils .literal .notranslate}]{.pre} and [`device_radix_sort`{.docutils .literal .notranslate}]{.pre}.
+:::
 
-{#id1171 .section}
+::: {#id1171 .section}
 #### Resolved issues[\#](#id1171 "Link to this heading"){.headerlink}
 
 - Fixed benchmark build on Windows
+:::
 
-{#id1172 .section}
+::: {#id1172 .section}
 #### Known issues[\#](#id1172 "Link to this heading"){.headerlink}
 
 - Disabled GPU error messages relating to incorrect warp operation usage with Navi GPUs on Windows, due to GPU printf performance issues on Windows.
+:::
+:::::::
 
-::::
-
-{#id1173 .section}
+:::::: {#id1173 .section}
 ### **rocRAND** (2.10.17)[\#](#id1173 "Link to this heading"){.headerlink}
 
-{#id1174 .section}
+::: {#id1174 .section}
 #### Added[\#](#id1174 "Link to this heading"){.headerlink}
 
 - MT19937 pseudo random number generator based on M. Matsumoto and T. Nishimura, 1998, Mersenne Twister: A 623-dimensionally equidistributed uniform pseudorandom number generator.
@@ -14870,22 +17169,25 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - experimental HIP-CPU feature
 
 - ThreeFry pseudorandom number generator based on Salmon et al., 2011, "Parallel random numbers: as easy as 1, 2, 3".
+:::
 
-{#id1175 .section}
+::: {#id1175 .section}
 #### Changed[\#](#id1175 "Link to this heading"){.headerlink}
 
 - Python 2.7 is no longer officially supported.
+:::
 
-{#fixed .section}
+::: {#fixed .section}
 #### Fixed[\#](#fixed "Link to this heading"){.headerlink}
 
 - Windows HIP SDK support
+:::
+::::::
 
-::::
-{#rocsolver-3-21-0 .section}
+::::::: {#rocsolver-3-21-0 .section}
 ### **rocSOLVER** (3.21.0)[\#](#rocsolver-3-21-0 "Link to this heading"){.headerlink}
 
-{#id1176 .section}
+::: {#id1176 .section}
 #### Added[\#](#id1176 "Link to this heading"){.headerlink}
 
 - SVD for general matrices using Jacobi algorithm:
@@ -14905,18 +17207,21 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
   - LAUUM
 
 - Added experimental hipGraph support for rocSOLVER functions
+:::
 
-{#id1177 .section}
+::: {#id1177 .section}
 #### Optimized[\#](#id1177 "Link to this heading"){.headerlink}
 
 - Improved the performance of SYEVJ/HEEVJ.
+:::
 
-{#id1178 .section}
+::: {#id1178 .section}
 #### Changed[\#](#id1178 "Link to this heading"){.headerlink}
 
 - STEDC, SYEVD/HEEVD and SYGVD/HEGVD now use fully implemented Divide and Conquer approach.
+:::
 
-{#id1179 .section}
+::: {#id1179 .section}
 #### Fixed[\#](#id1179 "Link to this heading"){.headerlink}
 
 - SYEVJ/HEEVJ should now be invariant under matrix scaling.
@@ -14926,13 +17231,13 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - Fixed GETF2_NPVT and GETRF_NPVT input data initialization in tests and benchmarks.
 
 - Fixed rocblas missing from the dependency list of the rocsolver deb and rpm packages.
+:::
+:::::::
 
-::::
-
-{#rocsparse-2-5-1 .section}
+:::::: {#rocsparse-2-5-1 .section}
 ### **rocSPARSE** (2.5.1)[\#](#rocsparse-2-5-1 "Link to this heading"){.headerlink}
 
-{#id1180 .section}
+::: {#id1180 .section}
 #### Added[\#](#id1180 "Link to this heading"){.headerlink}
 
 - Added bsrgemm and spgemm for BSR format
@@ -14948,8 +17253,9 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - Added mixed precisions for SpMV
 
 - Added batched SpMM for transpose A in COO format with atomic atomic algorithm
+:::
 
-{#improved .section}
+::: {#improved .section}
 #### Improved[\#](#improved "Link to this heading"){.headerlink}
 
 - Optimization to csr2bsr
@@ -14967,17 +17273,19 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - Fixes a bug in COO SpMV gridsize
 
 - Fixes a bug in SpMM gridsize when using very large matrices
+:::
 
-{#id1181 .section}
+::: {#id1181 .section}
 #### Known issues[\#](#id1181 "Link to this heading"){.headerlink}
 
 - In csritlu0, the algorithm rocsparse_itilu0_alg_sync_split_fusion has some accuracy issues to investigate with XNACK enabled. The fallback is rocsparse_itilu0_alg_sync_split.
+:::
+::::::
 
-::
-{#rocwmma-1-0 .section}
+::::: {#rocwmma-1-0 .section}
 ### **rocWMMA** (1.0)[\#](#rocwmma-1-0 "Link to this heading"){.headerlink}
 
-{#id1182 .section}
+::: {#id1182 .section}
 #### Added[\#](#id1182 "Link to this heading"){.headerlink}
 
 - Added support for wave32 on gfx11+
@@ -14985,8 +17293,9 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - Added infrastructure changes to support hipRTC
 
 - Added performance tracking system
+:::
 
-{#id1183 .section}
+::: {#id1183 .section}
 #### Changed[\#](#id1183 "Link to this heading"){.headerlink}
 
 - Modified the assignment of hardware information
@@ -14994,14 +17303,13 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - Modified the data access for unsigned datatypes
 
 - Added library config to support multiple architectures
+:::
+:::::
 
-::
-
-::::
-{#tensile-4-36-0 .section}
+::::::: {#tensile-4-36-0 .section}
 ### **Tensile** (4.36.0)[\#](#tensile-4-36-0 "Link to this heading"){.headerlink}
 
-{#id1184 .section}
+::: {#id1184 .section}
 #### Added[\#](#id1184 "Link to this heading"){.headerlink}
 
 - Add functions for user-driven tuning
@@ -15021,8 +17329,9 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - Add gfx900:xnack-, gfx1032, gfx1034, gfx1035
 
 - Enable gfx1031 support
+:::
 
-{#id1185 .section}
+::: {#id1185 .section}
 #### Changed[\#](#id1185 "Link to this heading"){.headerlink}
 
 - Use global_atomic for GSU instead of flat and global_store for debug code
@@ -15050,15 +17359,17 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - Update ThreadSeparateGlobalRead test cases for PrefetchGlobalRead=2
 
 - Update sgemm/hgemm test cases for DirectToLds and ThreadSepareteGlobalRead
+:::
 
-{#id1186 .section}
+::: {#id1186 .section}
 #### Optimized[\#](#id1186 "Link to this heading"){.headerlink}
 
 - Use AssertSizeLessThan for BufferStoreOffsetLimitCheck if it is smaller than MT1
 
 - Improve InitAccVgprOpt
+:::
 
-{#id1187 .section}
+::: {#id1187 .section}
 #### Resolved issues[\#](#id1187 "Link to this heading"){.headerlink}
 
 - Add build-id to header of compiled source kernels
@@ -15100,62 +17411,57 @@ See the [ROCm 5.5.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.5.0/CHAN
 - Remove the reject condition for ThreadSeparateGlobalRead and DirectToLds (HGEMM, SGEMM only)
 
 - Modify reject condition for minimum lanes of ThreadSeparateGlobalRead (SGEMM or larger data type only)
+:::
+:::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-::
-{#rocm-5-4-3 .section}
+::::: {#rocm-5-4-3 .section}
 ## ROCm 5.4.3[\#](#rocm-5-4-3 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.4.3 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.3/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
 
-:
-{#rocfft-1-0-21 .section}
+:::: {#rocfft-1-0-21 .section}
 ### **rocFFT** (1.0.21)[\#](#rocfft-1-0-21 "Link to this heading"){.headerlink}
 
-{#id1188 .section}
+::: {#id1188 .section}
 #### Resolved issues[\#](#id1188 "Link to this heading"){.headerlink}
 
 - Removed source directory from rocm_install_targets call to prevent installation of rocfft.h in an unintended location.
+:::
+::::
+:::::
 
-:
-::
-
-{#rocm-5-4-2 .section}
+::: {#rocm-5-4-2 .section}
 ## ROCm 5.4.2[\#](#rocm-5-4-2 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.4.2 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.2/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
+:::
 
-::
-{#rocm-5-4-1 .section}
+::::: {#rocm-5-4-1 .section}
 ## ROCm 5.4.1[\#](#rocm-5-4-1 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.4.1 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.1/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
 
-:
-{#rocfft-1-0-20 .section}
+:::: {#rocfft-1-0-20 .section}
 ### **rocFFT** (1.0.20)[\#](#rocfft-1-0-20 "Link to this heading"){.headerlink}
 
-{#id1189 .section}
+::: {#id1189 .section}
 #### Fixed[\#](#id1189 "Link to this heading"){.headerlink}
 
 - Fixed incorrect results on strided large 1D FFTs where batch size does not equal the stride.
+:::
+::::
+:::::
 
-:
-::
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::
-{#rocm-5-4-0 .section}
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#rocm-5-4-0 .section}
 ## ROCm 5.4.0[\#](#rocm-5-4-0 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.4.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.0/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
 
-:
-{#hipblas-0-53-0 .section}
+:::: {#hipblas-0-53-0 .section}
 ### **hipBLAS** (0.53.0)[\#](#hipblas-0-53-0 "Link to this heading"){.headerlink}
 
-{#id1190 .section}
+::: {#id1190 .section}
 #### Added[\#](#id1190 "Link to this heading"){.headerlink}
 
 - Allow for selection of int8 datatype
@@ -15163,50 +17469,49 @@ See the [ROCm 5.4.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.0/CHAN
 - Added support for hipblasXgels and hipblasXgelsStridedBatched operations (with s,d,c,z precisions), only supported with rocBLAS backend
 
 - Added support for hipblasXgelsBatched operations (with s,d,c,z precisions)
+:::
+::::
 
-:
-
-::
-{#hipcub-2-13-0 .section}
+::::: {#hipcub-2-13-0 .section}
 ### **hipCUB** (2.13.0)[\#](#hipcub-2-13-0 "Link to this heading"){.headerlink}
 
-{#id1191 .section}
+::: {#id1191 .section}
 #### Added[\#](#id1191 "Link to this heading"){.headerlink}
 
 - CMake functionality to improve build parallelism of the test suite that splits compilation units by function or by parameters.
 
 - New overload for [`BlockAdjacentDifference::SubtractLeftPartialTile`{.docutils .literal .notranslate}]{.pre} that takes a predecessor item.
+:::
 
-{#id1192 .section}
+::: {#id1192 .section}
 #### Changed[\#](#id1192 "Link to this heading"){.headerlink}
 
 - Improved build parallelism of the test suite by splitting up large compilation units for [`DeviceRadixSort`{.docutils .literal .notranslate}]{.pre}, [`DeviceSegmentedRadixSort`{.docutils .literal .notranslate}]{.pre} and [`DeviceSegmentedSort`{.docutils .literal .notranslate}]{.pre}.
 
 - CUB backend references CUB and thrust version 1.17.1.
+:::
+:::::
 
-::
-
-::
-{#hipfft-1-0-10 .section}
+::::: {#hipfft-1-0-10 .section}
 ### **hipFFT** (1.0.10)[\#](#hipfft-1-0-10 "Link to this heading"){.headerlink}
 
-{#id1193 .section}
+::: {#id1193 .section}
 #### Added[\#](#id1193 "Link to this heading"){.headerlink}
 
 - Added hipfftExtPlanScaleFactor API to efficiently multiply each output element of a FFT by a given scaling factor. Result scaling must be supported in the backend FFT library.
+:::
 
-{#id1194 .section}
+::: {#id1194 .section}
 #### Changed[\#](#id1194 "Link to this heading"){.headerlink}
 
 - When hipFFT is built against the rocFFT backend, rocFFT 1.0.19 or higher is now required.
+:::
+:::::
 
-::
-
-:
-{#hipsolver-1-6-0 .section}
+:::: {#hipsolver-1-6-0 .section}
 ### **hipSOLVER** (1.6.0)[\#](#hipsolver-1-6-0 "Link to this heading"){.headerlink}
 
-{#id1195 .section}
+::: {#id1195 .section}
 #### Added[\#](#id1195 "Link to this heading"){.headerlink}
 
 - Added compatibility-only functions
@@ -15216,30 +17521,29 @@ See the [ROCm 5.4.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.0/CHAN
     - hipsolverDnSgesvdaStridedBatched_bufferSize, hipsolverDnDgesvdaStridedBatched_bufferSize, hipsolverDnCgesvdaStridedBatched_bufferSize, hipsolverDnZgesvdaStridedBatched_bufferSize
 
     - hipsolverDnSgesvdaStridedBatched, hipsolverDnDgesvdaStridedBatched, hipsolverDnCgesvdaStridedBatched, hipsolverDnZgesvdaStridedBatched
+:::
+::::
 
-:
-
-::
-{#hipsparse-2-3-3 .section}
+::::: {#hipsparse-2-3-3 .section}
 ### **hipSPARSE** (2.3.3)[\#](#hipsparse-2-3-3 "Link to this heading"){.headerlink}
 
-{#id1196 .section}
+::: {#id1196 .section}
 #### Added[\#](#id1196 "Link to this heading"){.headerlink}
 
 - Added hipsparseCsr2cscEx2_bufferSize and hipsparseCsr2cscEx2 routines
+:::
 
-{#id1197 .section}
+::: {#id1197 .section}
 #### Changed[\#](#id1197 "Link to this heading"){.headerlink}
 
 - HIPSPARSE_ORDER_COLUMN has been renamed to HIPSPARSE_ORDER_COL to match cusparse
+:::
+:::::
 
-::
-
-::
-{#rccl-2-13-4 .section}
+::::: {#rccl-2-13-4 .section}
 ### **RCCL** (2.13.4)[\#](#rccl-2-13-4 "Link to this heading"){.headerlink}
 
-{#id1198 .section}
+::: {#id1198 .section}
 #### Changed[\#](#id1198 "Link to this heading"){.headerlink}
 
 - Compatibility with NCCL 2.13.4
@@ -15249,25 +17553,27 @@ See the [ROCm 5.4.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.0/CHAN
 - RCCL_ENABLE_HIPGRAPH environment variable is no longer necessary to enable hipGraph support
 
 - Minor latency improvements
+:::
 
-{#id1199 .section}
+::: {#id1199 .section}
 #### Resolved issues[\#](#id1199 "Link to this heading"){.headerlink}
 
 - Resolved potential memory access error due to asynchronous memset
+:::
+:::::
 
-::
-
-{#rocalution-2-1-3 .section}
+:::::: {#rocalution-2-1-3 .section}
 ### **rocALUTION** (2.1.3)[\#](#rocalution-2-1-3 "Link to this heading"){.headerlink}
 
-{#id1200 .section}
+::: {#id1200 .section}
 #### Added[\#](#id1200 "Link to this heading"){.headerlink}
 
 - Added build support for Navi31 and Navi33
 
 - Added support for non-squared global matrices
+:::
 
-{#id1201 .section}
+::: {#id1201 .section}
 #### Changed[\#](#id1201 "Link to this heading"){.headerlink}
 
 - Switched GTest death test style to 'threadsafe'
@@ -15281,26 +17587,29 @@ See the [ROCm 5.4.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.0/CHAN
 - Multigrid::SetOperatorFormat(unsigned int) is deprecated and will be removed, use Multigrid::SetOperatorFormat(unsigned int, int) instead
 
 - RugeStuebenAMG::SetCouplingStrength(ValueType) is deprecated and will be removed, use SetStrengthThreshold(float) instead
+:::
 
-{#id1202 .section}
+::: {#id1202 .section}
 #### Optimized[\#](#id1202 "Link to this heading"){.headerlink}
 
 - Fixed a memory leak in MatrixMult on HIP backend
 
 - Global structures can now be used with a single process
+:::
+::::::
 
-::::
-{#rocblas-2-46-0 .section}
+::::::: {#rocblas-2-46-0 .section}
 ### **rocBLAS** (2.46.0)[\#](#rocblas-2-46-0 "Link to this heading"){.headerlink}
 
-{#id1203 .section}
+::: {#id1203 .section}
 #### Added[\#](#id1203 "Link to this heading"){.headerlink}
 
 - client smoke test dataset added for quick validation using command rocblas-test --yaml rocblas_smoke.yaml
 
 - Added stream order device memory allocation as a non-default beta option.
+:::
 
-{#id1204 .section}
+::: {#id1204 .section}
 #### Changed[\#](#id1204 "Link to this heading"){.headerlink}
 
 - Level 2, Level 1, and Extension functions: argument checking when the handle is set to rocblas_pointer_mode_host now returns the status of rocblas_status_invalid_pointer only for pointers that must be dereferenced based on the alpha and beta argument values. With handle mode rocblas_pointer_mode_device only pointers that are always dereferenced regardless of alpha and beta values are checked and so may lead to a return status of rocblas_status_invalid_pointer. This improves consistency with legacy BLAS behaviour.
@@ -15310,15 +17619,17 @@ See the [ROCm 5.4.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.0/CHAN
 - Allow hipBLAS to select int8 datatype
 
 - Disallow B == C && ldb != ldc in rocblas_xtrmm_outofplace
+:::
 
-{#id1205 .section}
+::: {#id1205 .section}
 #### Optimized[\#](#id1205 "Link to this heading"){.headerlink}
 
 - Improved trsm performance for small sizes by using a substitution method technique
 
 - Improved syr2k and her2k performance significantly by using a block-recursive algorithm
+:::
 
-{#id1206 .section}
+::: {#id1206 .section}
 #### Fixed[\#](#id1206 "Link to this heading"){.headerlink}
 
 - FORTRAN interfaces generalized for FORTRAN compilers other than gfortran
@@ -15326,13 +17637,13 @@ See the [ROCm 5.4.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.0/CHAN
 - fix for trsm_strided_batched rocblas-bench performance gathering
 
 - Fix for rocm-smi path in commandrunner.py script to match ROCm 5.2 and above
+:::
+:::::::
 
-::::
-
-{#rocfft-1-0-19 .section}
+:::::: {#rocfft-1-0-19 .section}
 ### **rocFFT** (1.0.19)[\#](#rocfft-1-0-19 "Link to this heading"){.headerlink}
 
-{#id1207 .section}
+::: {#id1207 .section}
 #### Added[\#](#id1207 "Link to this heading"){.headerlink}
 
 - Added rocfft_plan_description_set_scale_factor API to efficiently multiply each output element of a FFT by a given scaling factor.
@@ -15340,39 +17651,47 @@ See the [ROCm 5.4.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.0/CHAN
 - Created a rocfft_kernel_cache.db file next to the installed library. SBCC kernels are moved to this file when built with the library, and are runtime-compiled for new GPU architectures.
 
 - Added gfx1100 and gfx1102 to default AMDGPU_TARGETS.
+:::
 
-{#id1208 .section}
+::: {#id1208 .section}
 #### Changed[\#](#id1208 "Link to this heading"){.headerlink}
 
 - Moved runtime compilation cache to in-memory by default. A default on-disk cache can encounter contention problems on multi-node clusters with a shared filesystem. rocFFT can still be told to use an on-disk cache by setting the ROCFFT_RTC_CACHE_PATH environment variable.
+:::
 
-{#id1209 .section}
+::: {#id1209 .section}
 #### Optimized[\#](#id1209 "Link to this heading"){.headerlink}
 
 - Optimized some strided large 1D plans.
+:::
+::::::
 
-{#rocprim-2-12-0 .section}
+:::::: {#rocprim-2-12-0 .section}
 ### **rocPRIM** (2.12.0)[\#](#rocprim-2-12-0 "Link to this heading"){.headerlink}
 
-{#id1210 .section}
+::: {#id1210 .section}
 #### Changed[\#](#id1210 "Link to this heading"){.headerlink}
 
 - [`device_partition`{.docutils .literal .notranslate}]{.pre}, [`device_unique`{.docutils .literal .notranslate}]{.pre}, and [`device_reduce_by_key`{.docutils .literal .notranslate}]{.pre} now support problem sizes larger than 2\^32 items.
+:::
 
-{#id1211 .section}
+::: {#id1211 .section}
 #### Removed[\#](#id1211 "Link to this heading"){.headerlink}
 
 - [`block_sort::sort()`{.docutils .literal .notranslate}]{.pre} overload for keys and values with a dynamic size. This overload was documented but the implementation is missing. To avoid further confusion the documentation is removed until a decision is made on implementing the function.
+:::
 
-{#id1212 .section}
+::: {#id1212 .section}
 #### Resolved issues[\#](#id1212 "Link to this heading"){.headerlink}
 
 - Fixed the compilation failure in [`device_merge`{.docutils .literal .notranslate}]{.pre} if the two key iterators don't match.
+:::
+::::::
 
-{#rocrand-2-10-16 .section}
+:::::: {#rocrand-2-10-16 .section}
 ### **rocRAND** (2.10.16)[\#](#rocrand-2-10-16 "Link to this heading"){.headerlink}
 
-{#id1213 .section}
+::: {#id1213 .section}
 #### Added[\#](#id1213 "Link to this heading"){.headerlink}
 
 - MRG31K3P pseudorandom number generator based on L'Ecuyer and Touzin, 2000, "Fast combined multiple recursive generators with multipliers of the form a = ±2q ±2r".
@@ -15380,24 +17699,27 @@ See the [ROCm 5.4.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.0/CHAN
 - LFSR113 pseudorandom number generator based on L'Ecuyer, 1999, "Tables of maximally equidistributed combined LFSR generators".
 
 - SCRAMBLED_SOBOL32 and SCRAMBLED_SOBOL64 quasirandom number generators. The Scrambled Sobol sequences are generated by scrambling the output of a Sobol sequence.
+:::
 
-{#id1214 .section}
+::: {#id1214 .section}
 #### Changed[\#](#id1214 "Link to this heading"){.headerlink}
 
 - The [`mrg_&lt;distribution&gt;_distribution`{.docutils .literal .notranslate}]{.pre} structures, which provided numbers based on MRG32K3A, are now replaced by [`mrg_engine_&lt;distribution&gt;_distribution`{.docutils .literal .notranslate}]{.pre}, where [`&lt;distribution&gt;`{.docutils .literal .notranslate}]{.pre} is [`log_normal`{.docutils .literal .notranslate}]{.pre}, [`normal`{.docutils .literal .notranslate}]{.pre}, [`poisson`{.docutils .literal .notranslate}]{.pre}, or [`uniform`{.docutils .literal .notranslate}]{.pre}. These structures provide numbers for MRG31K3P (with template type [`rocrand_state_mrg31k3p`{.docutils .literal .notranslate}]{.pre}) and MRG32K3A (with template type [`rocrand_state_mrg32k3a`{.docutils .literal .notranslate}]{.pre}).
+:::
 
-{#id1215 .section}
+::: {#id1215 .section}
 #### Resolved issues[\#](#id1215 "Link to this heading"){.headerlink}
 
 - Sobol64 now returns 64 bits random numbers, instead of 32 bits random numbers. As a result, the performance of this generator has regressed.
 
 - Fixed a bug that prevented compiling code in C++ mode (with a host compiler) when it included the rocRAND headers on Windows.
+:::
+::::::
 
-::
-{#rocsolver-3-20-0 .section}
+::::: {#rocsolver-3-20-0 .section}
 ### **rocSOLVER** (3.20.0)[\#](#rocsolver-3-20-0 "Link to this heading"){.headerlink}
 
-{#id1216 .section}
+::: {#id1216 .section}
 #### Added[\#](#id1216 "Link to this heading"){.headerlink}
 
 - Partial SVD for bidiagonal matrices:
@@ -15407,19 +17729,19 @@ See the [ROCm 5.4.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.0/CHAN
 - Partial SVD for general matrices:
 
   - GESVDX (with batched and strided_batched versions)
+:::
 
-{#id1217 .section}
+::: {#id1217 .section}
 #### Changed[\#](#id1217 "Link to this heading"){.headerlink}
 
 - Changed [`ROCSOLVER_EMBED_FMT`{.docutils .literal .notranslate}]{.pre} default to [`ON`{.docutils .literal .notranslate}]{.pre} for users building directly with CMake. This matches the existing default when building with install.sh or rmake.py.
+:::
+:::::
 
-::
-
-::
-{#rocsparse-2-4-0 .section}
+::::: {#rocsparse-2-4-0 .section}
 ### **rocSPARSE** (2.4.0)[\#](#rocsparse-2-4-0 "Link to this heading"){.headerlink}
 
-{#id1218 .section}
+::: {#id1218 .section}
 #### Added[\#](#id1218 "Link to this heading"){.headerlink}
 
 - Added rocsparse_spmv_ex routine
@@ -15429,8 +17751,9 @@ See the [ROCm 5.4.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.0/CHAN
 - Added csritilu0 routine
 
 - Added build support for Navi31 and Navi 33
+:::
 
-{#id1219 .section}
+::: {#id1219 .section}
 #### Optimized[\#](#id1219 "Link to this heading"){.headerlink}
 
 - Optimization to segmented algorithm for COO SpMV by performing analysis
@@ -15442,25 +17765,23 @@ See the [ROCm 5.4.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.0/CHAN
 - Optimized bsr2csr routine
 
 - Fixed integer overflow bugs
+:::
+:::::
 
-::
-
-:
-{#rocthrust-2-17-0 .section}
+:::: {#rocthrust-2-17-0 .section}
 ### **rocThrust** (2.17.0)[\#](#rocthrust-2-17-0 "Link to this heading"){.headerlink}
 
-{#id1220 .section}
+::: {#id1220 .section}
 #### Added[\#](#id1220 "Link to this heading"){.headerlink}
 
 - Updated to match upstream Thrust 1.17.0
+:::
+::::
 
-:
-
-::
-{#rocwmma-0-9 .section}
+::::: {#rocwmma-0-9 .section}
 ### **rocWMMA** (0.9)[\#](#rocwmma-0-9 "Link to this heading"){.headerlink}
 
-{#id1221 .section}
+::: {#id1221 .section}
 #### Added[\#](#id1221 "Link to this heading"){.headerlink}
 
 - Added gemm driver APIs for flow control builtins
@@ -15468,8 +17789,9 @@ See the [ROCm 5.4.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.0/CHAN
 - Added benchmark logging systems
 
 - Restructured tests to follow naming convention. Added macros for test generation
+:::
 
-{#id1222 .section}
+::: {#id1222 .section}
 #### Changed[\#](#id1222 "Link to this heading"){.headerlink}
 
 - Changed CMake to accomodate the modified test infrastructure
@@ -15487,14 +17809,13 @@ See the [ROCm 5.4.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.0/CHAN
 - Modified the output validation to use CPU-based implementation against rocWMMA
 
 - Modified the extended vector test to return error codes for memory allocation failures
+:::
+:::::
 
-::
-
-::::
-{#tensile-4-35-0 .section}
+::::::: {#tensile-4-35-0 .section}
 ### **Tensile** (4.35.0)[\#](#tensile-4-35-0 "Link to this heading"){.headerlink}
 
-{#id1223 .section}
+::: {#id1223 .section}
 #### Added[\#](#id1223 "Link to this heading"){.headerlink}
 
 - Async DMA support for Transpose Data Layout (ThreadSeparateGlobalReadA/B)
@@ -15520,22 +17841,25 @@ See the [ROCm 5.4.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.0/CHAN
 - DirectToVgpr support for CGEMM
 
 - TensileLibLogicToYaml for creating tuning configs from library logic solutions
+:::
 
-{#id1224 .section}
+::: {#id1224 .section}
 #### Changed[\#](#id1224 "Link to this heading"){.headerlink}
 
 - Re-enable HardwareMonitor for gfx90a
 
 - Decision trees use MLFeatures instead of Properties
+:::
 
-{#id1225 .section}
+::: {#id1225 .section}
 #### Optimized[\#](#id1225 "Link to this heading"){.headerlink}
 
 - Put beta code and store separately if StoreCInUnroll = x4 store
 
 - Improved performance for StoreCInUnroll + b128 store
+:::
 
-{#id1226 .section}
+::: {#id1226 .section}
 #### Resolved issues[\#](#id1226 "Link to this heading"){.headerlink}
 
 - Reject DirectToVgpr + MatrixInstBM/BN \> 1
@@ -15551,51 +17875,51 @@ See the [ROCm 5.4.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.4.0/CHAN
 - Fix reject condition for DirectToVgpr + MIWaveTile \< VectorWidth
 
 - Fix incorrect instruction generation with StoreCInUnroll
+:::
+:::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::
-:::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-{#rocm-5-3-3 .section}
+::: {#rocm-5-3-3 .section}
 ## ROCm 5.3.3[\#](#rocm-5-3-3 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.3.3 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.3/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
+:::
 
-{#rocm-5-3-2 .section}
+::: {#rocm-5-3-2 .section}
 ## ROCm 5.3.2[\#](#rocm-5-3-2 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.3.2 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.2/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
+:::
 
-::::::::::::::::::::::::::::::::::::::::::::::
-{#rocm-5-3-0 .section}
+::::::::::::::::::::::::::::::::::::::::::::::::: {#rocm-5-3-0 .section}
 ## ROCm 5.3.0[\#](#rocm-5-3-0 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
 
-::
-{#hipblas-0-52-0 .section}
+::::: {#hipblas-0-52-0 .section}
 ### **hipBLAS** (0.52.0)[\#](#hipblas-0-52-0 "Link to this heading"){.headerlink}
 
-{#id1227 .section}
+::: {#id1227 .section}
 #### Added[\#](#id1227 "Link to this heading"){.headerlink}
 
 - Added --cudapath option to install.sh to allow user to specify which cuda build they would like to use.
 
 - Added --installcuda option to install.sh to install cuda via a package manager. Can be used with new --installcudaversion option to specify which version of cuda to install.
+:::
 
-{#id1228 .section}
+::: {#id1228 .section}
 #### Resolved issues[\#](#id1228 "Link to this heading"){.headerlink}
 
 - Fixed #includes to support a compiler version.
 
 - Fixed client dependency support in install.sh
+:::
+:::::
 
-::
-
-::
-{#hipcub-2-12-0 .section}
+::::: {#hipcub-2-12-0 .section}
 ### **hipCUB** (2.12.0)[\#](#hipcub-2-12-0 "Link to this heading"){.headerlink}
 
-{#id1229 .section}
+::: {#id1229 .section}
 #### Added[\#](#id1229 "Link to this heading"){.headerlink}
 
 - UniqueByKey device algorithm
@@ -15607,8 +17931,9 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
 - DeviceAdjacentDifference algorithm.
 
 - Extended benchmark suite of [`DeviceHistogram`{.docutils .literal .notranslate}]{.pre}, [`DeviceScan`{.docutils .literal .notranslate}]{.pre}, [`DevicePartition`{.docutils .literal .notranslate}]{.pre}, [`DeviceReduce`{.docutils .literal .notranslate}]{.pre}, [`DeviceSegmentedReduce`{.docutils .literal .notranslate}]{.pre}, [`DeviceSegmentedRadixSort`{.docutils .literal .notranslate}]{.pre}, [`DeviceRadixSort`{.docutils .literal .notranslate}]{.pre}, [`DeviceSpmv`{.docutils .literal .notranslate}]{.pre}, [`DeviceMergeSort`{.docutils .literal .notranslate}]{.pre}, [`DeviceSegmentedSort`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id1230 .section}
+::: {#id1230 .section}
 #### Changed[\#](#id1230 "Link to this heading"){.headerlink}
 
 - Obsolated type traits defined in util_type.hpp. Use the standard library equivalents instead.
@@ -15622,14 +17947,13 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
   - Otherwise the algorithm uses a larger indexing type that makes it possible to sort input data over 2\*\*32 elements.
 
 - Improved build parallelism of the test suite by splitting up large compilation units
+:::
+:::::
 
-::
-
-:
-{#hipfft-1-0-9 .section}
+:::: {#hipfft-1-0-9 .section}
 ### **hipFFT** (1.0.9)[\#](#hipfft-1-0-9 "Link to this heading"){.headerlink}
 
-{#id1231 .section}
+::: {#id1231 .section}
 #### Changed[\#](#id1231 "Link to this heading"){.headerlink}
 
 - Clean up build warnings.
@@ -15637,13 +17961,13 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
 - GNUInstall Dir enhancements.
 
 - Requires gtest 1.11.
+:::
+::::
 
-:
-
-{#hipsolver-1-5-0 .section}
+:::::: {#hipsolver-1-5-0 .section}
 ### **hipSOLVER** (1.5.0)[\#](#hipsolver-1-5-0 "Link to this heading"){.headerlink}
 
-{#id1232 .section}
+::: {#id1232 .section}
 #### Added[\#](#id1232 "Link to this heading"){.headerlink}
 
 - Added functions
@@ -15681,15 +18005,17 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
     - hipsolverDnSsygvdx, hipsolverDnDsygvdx, hipsolverDnChegvdx, hipsolverDnZhegvdx
 
 - Added --mem_query option to hipsolver-bench, which will print the amount of device memory workspace required by the function.
+:::
 
-{#id1233 .section}
+::: {#id1233 .section}
 #### Changed[\#](#id1233 "Link to this heading"){.headerlink}
 
 - The rocSOLVER backend will now set [`info`{.docutils .literal .notranslate}]{.pre} to zero if rocSOLVER does not reference [`info`{.docutils .literal .notranslate}]{.pre}. (Applies to orgbr/ungbr, orgqr/ungqr, orgtr/ungtr, ormqr/unmqr, ormtr/unmtr, gebrd, geqrf, getrs, potrs, and sytrd/hetrd).
 
 - gesvdj will no longer require extra workspace to transpose [`V`{.docutils .literal .notranslate}]{.pre} when [`jobz`{.docutils .literal .notranslate}]{.pre} is [`HIPSOLVER_EIG_MODE_VECTOR`{.docutils .literal .notranslate}]{.pre} and [`econ`{.docutils .literal .notranslate}]{.pre} is 1.
+:::
 
-{#id1234 .section}
+::: {#id1234 .section}
 #### Fixed[\#](#id1234 "Link to this heading"){.headerlink}
 
 - Fixed Fortran return value declarations within hipsolver_module.f90
@@ -15697,41 +18023,41 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
 - Fixed gesvdj_bufferSize returning [`HIPSOLVER_STATUS_INVALID_VALUE`{.docutils .literal .notranslate}]{.pre} when [`jobz`{.docutils .literal .notranslate}]{.pre} is [`HIPSOLVER_EIG_MODE_NOVECTOR`{.docutils .literal .notranslate}]{.pre} and 1 \<= [`ldv`{.docutils .literal .notranslate}]{.pre} \< [`n`{.docutils .literal .notranslate}]{.pre}
 
 - Fixed gesvdj returning [`HIPSOLVER_STATUS_INVALID_VALUE`{.docutils .literal .notranslate}]{.pre} when [`jobz`{.docutils .literal .notranslate}]{.pre} is [`HIPSOLVER_EIG_MODE_VECTOR`{.docutils .literal .notranslate}]{.pre}, [`econ`{.docutils .literal .notranslate}]{.pre} is 1, and [`m`{.docutils .literal .notranslate}]{.pre} \< [`n`{.docutils .literal .notranslate}]{.pre}
+:::
+::::::
 
-:
-{#hipsparse-2-3-1 .section}
+:::: {#hipsparse-2-3-1 .section}
 ### **hipSPARSE** (2.3.1)[\#](#hipsparse-2-3-1 "Link to this heading"){.headerlink}
 
-{#id1235 .section}
+::: {#id1235 .section}
 #### Added[\#](#id1235 "Link to this heading"){.headerlink}
 
 - Add SpMM and SpMM batched for CSC format
+:::
+::::
 
-:
-
-::
-{#rocalution-2-1-0 .section}
+::::: {#rocalution-2-1-0 .section}
 ### **rocALUTION** (2.1.0)[\#](#rocalution-2-1-0 "Link to this heading"){.headerlink}
 
-{#id1236 .section}
+::: {#id1236 .section}
 #### Added[\#](#id1236 "Link to this heading"){.headerlink}
 
 - Benchmarking tool
 
 - Ext+I Interpolation with sparsify strategies added for RS-AMG
+:::
 
-{#id1237 .section}
+::: {#id1237 .section}
 #### Optimized[\#](#id1237 "Link to this heading"){.headerlink}
 
 - ParallelManager
-
-::
-
+:::
 :::::
-{#rocblas-2-45-0 .section}
+
+:::::::: {#rocblas-2-45-0 .section}
 ### **rocBLAS** (2.45.0)[\#](#rocblas-2-45-0 "Link to this heading"){.headerlink}
 
-{#id1238 .section}
+::: {#id1238 .section}
 #### Added[\#](#id1238 "Link to this heading"){.headerlink}
 
 - install.sh option --upgrade_tensile_venv_pip to upgrade Pip in Tensile Virtual Environment. The corresponding CMake option is TENSILE_VENV_UPGRADE_PIP.
@@ -15743,8 +18069,9 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
 - Support for RHEL9 and CS9.
 
 - Added Numerical checking routine for symmetric, Hermitian, and triangular matrices, so that they could be checked for any numerical abnormalities such as NaN, Zero, infinity and denormal value.
+:::
 
-{#id1239 .section}
+::: {#id1239 .section}
 #### Changed[\#](#id1239 "Link to this heading"){.headerlink}
 
 - Unifying library logic file names: affects HBH (-\>HHS_BH), BBH (-\>BBS_BH), 4xi8BH (-\>4xi8II_BH). All HPA types are using the new naming convention now.
@@ -15764,8 +18091,9 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
 - Added specific initialization for symmetric, Hermitian, and triangular matrix types in our test infrastructure.
 
 - Added NaN tests to the test infrastructure for the rest of Level 3, BLAS_EX functions.
+:::
 
-{#id1240 .section}
+::: {#id1240 .section}
 #### Removed[\#](#id1240 "Link to this heading"){.headerlink}
 
 - install.sh options --hip-clang , --no-hip-clang, --merge-files, --no-merge-files are removed.
@@ -15773,8 +18101,9 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
 - is_complex helper is now deprecated. Use rocblas_is_complex instead.
 
 - The enum truncate_t and the value truncate is now deprecated and will removed from the ROCm release 6.0. It is replaced by rocblas_truncate_t and rocblas_truncate, respectively. The new enum rocblas_truncate_t and the value rocblas_truncate could be used from this ROCm release for an easy transition.
+:::
 
-{#id1241 .section}
+::: {#id1241 .section}
 #### Optimized[\#](#id1241 "Link to this heading"){.headerlink}
 
 - trmm_outofplace performance improvements for all sizes and data types using block-recursive algorithm.
@@ -15784,8 +18113,9 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
 - syrk/herk performance improvements by utilising optimised syrkx/herkx code.
 
 - symm/hemm performance improvements for all sizes and datatypes using block-recursive algorithm.
+:::
 
-{#id1242 .section}
+::: {#id1242 .section}
 #### Resolved issues[\#](#id1242 "Link to this heading"){.headerlink}
 
 - Improved logic to #include \<filesystem\> vs \<experimental/filesystem\>.
@@ -15793,18 +18123,19 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
 - install.sh -s option to build rocblas as a static library.
 
 - dot function now sets the device results asynchronously for N \<= 0
+:::
+::::::::
 
-:::::
-
-{#rocfft-1-0-18 .section}
+:::::: {#rocfft-1-0-18 .section}
 ### **rocFFT** (1.0.18)[\#](#rocfft-1-0-18 "Link to this heading"){.headerlink}
 
-{#id1243 .section}
+::: {#id1243 .section}
 #### Changed[\#](#id1243 "Link to this heading"){.headerlink}
 
 - Runtime compilation cache now looks for environment variables XDG_CACHE_HOME (on Linux) and LOCALAPPDATA (on Windows) before falling back to HOME.
+:::
 
-{#id1244 .section}
+::: {#id1244 .section}
 #### Optimized[\#](#id1244 "Link to this heading"){.headerlink}
 
 - Optimized 2D R2C/C2R to use 2-kernel plans where possible.
@@ -15812,8 +18143,9 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
 - Improved performance of the Bluestein algorithm.
 
 - Optimized sbcc-168 and 100 by using half-lds.
+:::
 
-{#id1245 .section}
+::: {#id1245 .section}
 #### Resolved issues[\#](#id1245 "Link to this heading"){.headerlink}
 
 - Fixed occasional failures to parallelize runtime compilation of kernels. Failures would be retried serially and ultimately succeed, but this would take extra time.
@@ -15821,12 +18153,13 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
 - Fixed failures of some R2C 3D transforms that use the unsupported TILE_UNALGNED SBRC kernels. An example is 98\^3 R2C out-of-place.
 
 - Fixed bugs in SBRC_ERC type.
+:::
+::::::
 
-::
-{#rocm-cmake-0-8-0 .section}
+::::: {#rocm-cmake-0-8-0 .section}
 ### **rocm-cmake** (0.8.0)[\#](#rocm-cmake-0-8-0 "Link to this heading"){.headerlink}
 
-{#id1246 .section}
+::: {#id1246 .section}
 #### Changed[\#](#id1246 "Link to this heading"){.headerlink}
 
 - [`ROCM_USE_DEV_COMPONENT`{.docutils .literal .notranslate}]{.pre} set to on by default for all platforms. This means that Windows will now generate runtime and devel packages by default
@@ -15836,19 +18169,19 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
 - Changed default Debian compression type to xz and enabled multi-threaded package compression.
 
 - [`rocm_create_package`{.docutils .literal .notranslate}]{.pre} will no longer warn upon failure to determine version of program rpmbuild.
+:::
 
-{#id1247 .section}
+::: {#id1247 .section}
 #### Resolved issues[\#](#id1247 "Link to this heading"){.headerlink}
 
 - Fixed error in prerm scripts created by [`rocm_create_package`{.docutils .literal .notranslate}]{.pre} that could break uninstall for packages using the [`PTH`{.docutils .literal .notranslate}]{.pre} option.
+:::
+:::::
 
-::
-
-:
-{#rocprim-2-11-0 .section}
+:::: {#rocprim-2-11-0 .section}
 ### **rocPRIM** (2.11.0)[\#](#rocprim-2-11-0 "Link to this heading"){.headerlink}
 
-{#id1248 .section}
+::: {#id1248 .section}
 #### Added[\#](#id1248 "Link to this heading"){.headerlink}
 
 - New functions [`subtract_left`{.docutils .literal .notranslate}]{.pre} and [`subtract_right`{.docutils .literal .notranslate}]{.pre} in [`block_adjacent_difference`{.docutils .literal .notranslate}]{.pre} to apply functions on pairs of adjacent items distributed between threads in a block.
@@ -15862,25 +18195,23 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
 - CMake functionality to improve build parallelism of the test suite that splits compilation units by function or by parameters.
 
 - Reverse iterator.
+:::
+::::
 
-:
-
-:
-{#rocrand-2-10-15 .section}
+:::: {#rocrand-2-10-15 .section}
 ### **rocRAND** (2.10.15)[\#](#rocrand-2-10-15 "Link to this heading"){.headerlink}
 
-{#id1249 .section}
+::: {#id1249 .section}
 #### Changed[\#](#id1249 "Link to this heading"){.headerlink}
 
 - Increased number of warmup iterations for rocrand_benchmark_generate from 5 to 15 to eliminate corner cases that would generate artificially high benchmark scores.
-
-:
-
+:::
 ::::
-{#rocsolver-3-19-0 .section}
+
+::::::: {#rocsolver-3-19-0 .section}
 ### **rocSOLVER** (3.19.0)[\#](#rocsolver-3-19-0 "Link to this heading"){.headerlink}
 
-{#id1250 .section}
+::: {#id1250 .section}
 #### Added[\#](#id1250 "Link to this heading"){.headerlink}
 
 - Partial eigensolver routines for symmetric/hermitian matrices:
@@ -15908,18 +18239,21 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
   - HEGVJ (with batched and strided_batched versions)
 
 - Added --profile_kernels option to rocsolver-bench, which will include kernel calls in the profile log (if profile logging is enabled with --profile).
+:::
 
-{#id1251 .section}
+::: {#id1251 .section}
 #### Changed[\#](#id1251 "Link to this heading"){.headerlink}
 
 - Changed rocsolver-bench result labels [`cpu_time`{.docutils .literal .notranslate}]{.pre} and [`gpu_time`{.docutils .literal .notranslate}]{.pre} to [`cpu_time_us`{.docutils .literal .notranslate}]{.pre} and [`gpu_time_us`{.docutils .literal .notranslate}]{.pre}, respectively.
+:::
 
-{#id1252 .section}
+::: {#id1252 .section}
 #### Removed[\#](#id1252 "Link to this heading"){.headerlink}
 
 - Removed dependency on cblas from the rocsolver test and benchmark clients.
+:::
 
-{#id1253 .section}
+::: {#id1253 .section}
 #### Resolved issues[\#](#id1253 "Link to this heading"){.headerlink}
 
 - Fixed incorrect SYGS2/HEGS2, SYGST/HEGST, SYGV/HEGV, and SYGVD/HEGVD results for batch counts larger than 32.
@@ -15929,25 +18263,23 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
 - Fixed incorrect STEBZ results for close eigenvalues when range = index.
 
 - Fixed git unsafe repository error when building with [`./install.sh`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`-cd`{.docutils .literal .notranslate}]{.pre} as a non-root user.
+:::
+:::::::
 
-::::
-
-:
-{#rocthrust-2-16-0 .section}
+:::: {#rocthrust-2-16-0 .section}
 ### **rocThrust** (2.16.0)[\#](#rocthrust-2-16-0 "Link to this heading"){.headerlink}
 
-{#id1254 .section}
+::: {#id1254 .section}
 #### Changed[\#](#id1254 "Link to this heading"){.headerlink}
 
 - rocThrust functionality dependent on device malloc works is functional as ROCm 5.2 reneabled device malloc. Device launched [`thrust::sort`{.docutils .literal .notranslate}]{.pre} and [`thrust::sort_by_key`{.docutils .literal .notranslate}]{.pre} are available for use.
-
-:
-
+:::
 ::::
-{#tensile-4-34-0 .section}
+
+::::::: {#tensile-4-34-0 .section}
 ### **Tensile** (4.34.0)[\#](#tensile-4-34-0 "Link to this heading"){.headerlink}
 
-{#id1255 .section}
+::: {#id1255 .section}
 #### Added[\#](#id1255 "Link to this heading"){.headerlink}
 
 - Lazy loading of solution libraries and code object files
@@ -15975,18 +18307,21 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
 - TensileClientConfig for generating Tensile client config files
 
 - Options for TensileCreateLibrary to build client and create client config file
+:::
 
-{#id1256 .section}
+::: {#id1256 .section}
 #### Changed[\#](#id1256 "Link to this heading"){.headerlink}
 
 - Default MACInstruction to FMA
+:::
 
-{#id1257 .section}
+::: {#id1257 .section}
 #### Optimized[\#](#id1257 "Link to this heading"){.headerlink}
 
 - Solution generation is now cached and is not repeated if solution parameters are unchanged
+:::
 
-{#id1258 .section}
+::: {#id1258 .section}
 #### Resolved issues[\#](#id1258 "Link to this heading"){.headerlink}
 
 - Accept StaggerUStride=0 as valid
@@ -16000,20 +18335,19 @@ See the [ROCm 5.3.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.3.0/CHAN
 - Fix performance drop for NN ZGEMM with 96x64 macro tile
 
 - Fix memory violation for general batched kernels when alpha/beta/K = 0
+:::
+:::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::
-::::::::::::::::::::::::::::::::::::::::::::::
-
-{#rocm-5-2-3 .section}
+:::::: {#rocm-5-2-3 .section}
 ## ROCm 5.2.3[\#](#rocm-5-2-3 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.2.3 changelog](https://github.com/ROCm/ROCm/blob/docs/5.2.3/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
 
-::
-{#rccl-2-12-10 .section}
+::::: {#rccl-2-12-10 .section}
 ### **RCCL** (2.12.10)[\#](#rccl-2-12-10 "Link to this heading"){.headerlink}
 
-{#id1259 .section}
+::: {#id1259 .section}
 #### Added[\#](#id1259 "Link to this heading"){.headerlink}
 
 - Compatibility with NCCL 2.12.10
@@ -16031,30 +18365,31 @@ See the [ROCm 5.2.3 changelog](https://github.com/ROCm/ROCm/blob/docs/5.2.3/CHAN
   - When "Call to bind failed : Address already in use" error happens in large-scale AlltoAll (e.g., \>=64 MI200 nodes), users are suggested to opt-in either one or both of the options to resolve the massive port usage issue
 
   - Avoid using NCCL_IB_SOCK_SERVER_PORT_REUSE when NCCL_NCHANNELS_PER_NET_PEER is tuned \>1
+:::
 
-{#id1260 .section}
+::: {#id1260 .section}
 #### Removed[\#](#id1260 "Link to this heading"){.headerlink}
 
 - Removed experimental clique-based kernels
+:::
+:::::
+::::::
 
-::
-
-{#rocm-5-2-1 .section}
+::: {#rocm-5-2-1 .section}
 ## ROCm 5.2.1[\#](#rocm-5-2-1 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.2.1 changelog](https://github.com/ROCm/ROCm/blob/docs/5.2.1/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
+:::
 
-::::::::::::::::::::::::::::::::::::::::::::::
-{#rocm-5-2-0 .section}
+::::::::::::::::::::::::::::::::::::::::::::::::: {#rocm-5-2-0 .section}
 ## ROCm 5.2.0[\#](#rocm-5-2-0 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.2.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.2.0/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
 
-::
-{#hipblas-0-51-0 .section}
+::::: {#hipblas-0-51-0 .section}
 ### **hipBLAS** (0.51.0)[\#](#hipblas-0-51-0 "Link to this heading"){.headerlink}
 
-{#id1261 .section}
+::: {#id1261 .section}
 #### Added[\#](#id1261 "Link to this heading"){.headerlink}
 
 - Packages for test and benchmark executables on all supported OSes using CPack.
@@ -16062,43 +18397,41 @@ See the [ROCm 5.2.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.2.0/CHAN
 - Added File/Folder Reorg Changes with backward compatibility support enabled using ROCM-CMAKE wrapper functions
 
 - Added user-specified initialization option to hipblas-bench
+:::
 
-{#id1262 .section}
+::: {#id1262 .section}
 #### Resolved issues[\#](#id1262 "Link to this heading"){.headerlink}
 
 - Fixed version gathering in performance measuring script
+:::
+:::::
 
-::
-
-:
-{#hipcub-2-11-1 .section}
+:::: {#hipcub-2-11-1 .section}
 ### **hipCUB** (2.11.1)[\#](#hipcub-2-11-1 "Link to this heading"){.headerlink}
 
-{#id1263 .section}
+::: {#id1263 .section}
 #### Added[\#](#id1263 "Link to this heading"){.headerlink}
 
 - Packages for tests and benchmark executable on all supported OSes using CPack.
+:::
+::::
 
-:
-
-:
-{#hipfft-1-0-8 .section}
+:::: {#hipfft-1-0-8 .section}
 ### **hipFFT** (1.0.8)[\#](#hipfft-1-0-8 "Link to this heading"){.headerlink}
 
-{#id1264 .section}
+::: {#id1264 .section}
 #### Added[\#](#id1264 "Link to this heading"){.headerlink}
 
 - Added File/Folder Reorg Changes with backward compatibility support using ROCM-CMAKE wrapper functions.
 
 - Packages for test and benchmark executables on all supported OSes using CPack.
+:::
+::::
 
-:
-
-::
-{#hipsolver-1-4-0 .section}
+::::: {#hipsolver-1-4-0 .section}
 ### **hipSOLVER** (1.4.0)[\#](#hipsolver-1-4-0 "Link to this heading"){.headerlink}
 
-{#id1265 .section}
+::: {#id1265 .section}
 #### Added[\#](#id1265 "Link to this heading"){.headerlink}
 
 - Package generation for test and benchmark executables on all supported OSes using CPack.
@@ -16106,41 +18439,39 @@ See the [ROCm 5.2.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.2.0/CHAN
 - File/Folder Reorg
 
   - Added File/Folder Reorg Changes with backward compatibility support using ROCM-CMAKE wrapper functions.
+:::
 
-{#id1266 .section}
+::: {#id1266 .section}
 #### Resolved issues[\#](#id1266 "Link to this heading"){.headerlink}
 
 - Fixed the ReadTheDocs documentation generation.
+:::
+:::::
 
-::
-
-:
-{#hipsparse-2-2-0 .section}
+:::: {#hipsparse-2-2-0 .section}
 ### **hipSPARSE** (2.2.0)[\#](#hipsparse-2-2-0 "Link to this heading"){.headerlink}
 
-{#id1267 .section}
+::: {#id1267 .section}
 #### Added[\#](#id1267 "Link to this heading"){.headerlink}
 
 - Packages for test and benchmark executables on all supported OSes using CPack.
+:::
+::::
 
-:
-
-:
-{#rocalution-2-0-3 .section}
+:::: {#rocalution-2-0-3 .section}
 ### **rocALUTION** (2.0.3)[\#](#rocalution-2-0-3 "Link to this heading"){.headerlink}
 
-{#id1268 .section}
+::: {#id1268 .section}
 #### Added[\#](#id1268 "Link to this heading"){.headerlink}
 
 - Packages for test and benchmark executables on all supported OSes using CPack.
+:::
+::::
 
-:
-
-:::::
-{#rocblas-2-44-0 .section}
+:::::::: {#rocblas-2-44-0 .section}
 ### **rocBLAS** (2.44.0)[\#](#rocblas-2-44-0 "Link to this heading"){.headerlink}
 
-{#id1269 .section}
+::: {#id1269 .section}
 #### Added[\#](#id1269 "Link to this heading"){.headerlink}
 
 - Packages for test and benchmark executables on all supported OSes using CPack.
@@ -16152,8 +18483,9 @@ See the [ROCm 5.2.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.2.0/CHAN
 - Added NaN initialization tests to the yaml files of Level 2 rocBLAS batched and strided-batched functions for testing purposes.
 
 - Added memory allocation check to avoid disk swapping during rocblas-test runs by skipping tests.
+:::
 
-{#id1270 .section}
+::: {#id1270 .section}
 #### Changed[\#](#id1270 "Link to this heading"){.headerlink}
 
 - Modifying gemm_ex for HBH (High-precision F16). The alpha/beta data type remains as F32 without narrowing to F16 and expanding back to F32 in the kernel. This change prevents rounding errors due to alpha/beta conversion in situations where alpha/beta are not exactly represented as an F16.
@@ -16167,13 +18499,15 @@ See the [ROCm 5.2.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.2.0/CHAN
 - AMD copyright year for all rocBLAS files.
 
 - For gemv (transpose-case), typecasted the 'lda'(offset) datatype to size_t during offset calculation to avoid overflow and remove duplicate template functions.
+:::
 
-{#id1271 .section}
+::: {#id1271 .section}
 #### Removed[\#](#id1271 "Link to this heading"){.headerlink}
 
 - Remove Navi12 (gfx1011) from fat binary.
+:::
 
-{#id1272 .section}
+::: {#id1272 .section}
 #### Optimized[\#](#id1272 "Link to this heading"){.headerlink}
 
 - Improved performance of non-batched and batched her2 for all sizes and data types.
@@ -16183,8 +18517,9 @@ See the [ROCm 5.2.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.2.0/CHAN
 - Improved performance of non-batched and batched amax for all data types using shuffle reductions.
 
 - Improved performance of trsv for all sizes and data types.
+:::
 
-{#id1273 .section}
+::: {#id1273 .section}
 #### Resolved issues[\#](#id1273 "Link to this heading"){.headerlink}
 
 - For function her2 avoid overflow in offset calculation.
@@ -16200,70 +18535,69 @@ See the [ROCm 5.2.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.2.0/CHAN
 - For functions ssyr2k and dsyr2k allow trans == rocblas_operation_conjugate_transpose.
 
 - Fixed compilation error for clients-only build.
+:::
+::::::::
 
-:::::
-
-::::
-{#rocfft-1-0-17 .section}
+::::::: {#rocfft-1-0-17 .section}
 ### **rocFFT** (1.0.17)[\#](#rocfft-1-0-17 "Link to this heading"){.headerlink}
 
-{#id1274 .section}
+::: {#id1274 .section}
 #### Added[\#](#id1274 "Link to this heading"){.headerlink}
 
 - Packages for test and benchmark executables on all supported OSes using CPack.
 
 - Added File/Folder Reorg Changes with backward compatibility support using ROCM-CMAKE wrapper functions.
+:::
 
-{#id1275 .section}
+::: {#id1275 .section}
 #### Changed[\#](#id1275 "Link to this heading"){.headerlink}
 
 - Improved reuse of twiddle memory between plans.
 
 - Set a default load/store callback when only one callback type is set via the API for improved performance.
+:::
 
-{#id1276 .section}
+::: {#id1276 .section}
 #### Optimized[\#](#id1276 "Link to this heading"){.headerlink}
 
 - Introduced a new access pattern of lds (non-linear) and applied it on sbcc kernels len 64 to get performance improvement.
+:::
 
-{#id1277 .section}
+::: {#id1277 .section}
 #### Resolved issues[\#](#id1277 "Link to this heading"){.headerlink}
 
 - Fixed plan creation failure in cases where SBCC kernels would need to write to non-unit-stride buffers.
+:::
+:::::::
 
-::::
-
-:
-{#rocprim-2-10-14 .section}
+:::: {#rocprim-2-10-14 .section}
 ### **rocPRIM** (2.10.14)[\#](#rocprim-2-10-14 "Link to this heading"){.headerlink}
 
-{#id1278 .section}
+::: {#id1278 .section}
 #### Added[\#](#id1278 "Link to this heading"){.headerlink}
 
 - Packages for tests and benchmark executable on all supported OSes using CPack.
 
 - Added File/Folder Reorg Changes and Enabled Backward compatibility support using wrapper headers.
+:::
+::::
 
-:
-
-:
-{#rocrand-2-10-14 .section}
+:::: {#rocrand-2-10-14 .section}
 ### **rocRAND** (2.10.14)[\#](#rocrand-2-10-14 "Link to this heading"){.headerlink}
 
-{#id1279 .section}
+::: {#id1279 .section}
 #### Added[\#](#id1279 "Link to this heading"){.headerlink}
 
 - Backward compatibility for deprecated [`#include`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`&lt;rocrand.h&gt;`{.docutils .literal .notranslate}]{.pre} using wrapper header files.
 
 - Packages for test and benchmark executables on all supported OSes using CPack.
+:::
+::::
 
-:
-
-::
-{#rocsolver-3-18-0 .section}
+::::: {#rocsolver-3-18-0 .section}
 ### **rocSOLVER** (3.18.0)[\#](#rocsolver-3-18-0 "Link to this heading"){.headerlink}
 
-{#id1280 .section}
+::: {#id1280 .section}
 #### Added[\#](#id1280 "Link to this heading"){.headerlink}
 
 - Partial eigenvalue decomposition routines:
@@ -16281,18 +18615,19 @@ See the [ROCm 5.2.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.2.0/CHAN
 - File/Folder Reorg
 
   - Added File/Folder Reorg Changes with backward compatibility support using ROCM-CMAKE wrapper functions.
+:::
 
-{#id1281 .section}
+::: {#id1281 .section}
 #### Resolved issues[\#](#id1281 "Link to this heading"){.headerlink}
 
 - Fixed compatibility with libfmt 8.1
+:::
+:::::
 
-::
-
-{#rocsparse-2-2-0 .section}
+:::::: {#rocsparse-2-2-0 .section}
 ### **rocSPARSE** (2.2.0)[\#](#rocsparse-2-2-0 "Link to this heading"){.headerlink}
 
-{#id1282 .section}
+::: {#id1282 .section}
 #### Added[\#](#id1282 "Link to this heading"){.headerlink}
 
 - batched SpMM for CSR, COO and Blocked ELL formats.
@@ -16300,15 +18635,17 @@ See the [ROCm 5.2.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.2.0/CHAN
 - Packages for test and benchmark executables on all supported OSes using CPack.
 
 - Clients file importers and exporters.
+:::
 
-{#id1283 .section}
+::: {#id1283 .section}
 #### Changed[\#](#id1283 "Link to this heading"){.headerlink}
 
 - Test adjustments due to roundoff errors.
 
 - Fixing API calls compatiblity with rocPRIM.
+:::
 
-{#id1284 .section}
+::: {#id1284 .section}
 #### Optimized[\#](#id1284 "Link to this heading"){.headerlink}
 
 - Clients code size reduction.
@@ -16316,23 +18653,23 @@ See the [ROCm 5.2.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.2.0/CHAN
 - Clients error handling.
 
 - Clients benchmarking for performance tracking.
+:::
+::::::
 
-:
-{#rocthrust-2-15-0 .section}
+:::: {#rocthrust-2-15-0 .section}
 ### **rocThrust** (2.15.0)[\#](#rocthrust-2-15-0 "Link to this heading"){.headerlink}
 
-{#id1285 .section}
+::: {#id1285 .section}
 #### Added[\#](#id1285 "Link to this heading"){.headerlink}
 
 - Packages for tests and benchmark executable on all supported OSes using CPack.
+:::
+::::
 
-:
-
-::
-{#rocwmma-0-7 .section}
+::::: {#rocwmma-0-7 .section}
 ### **rocWMMA** (0.7)[\#](#rocwmma-0-7 "Link to this heading"){.headerlink}
 
-{#id1286 .section}
+::: {#id1286 .section}
 #### Added[\#](#id1286 "Link to this heading"){.headerlink}
 
 - Added unit tests for DLRM kernels
@@ -16358,8 +18695,9 @@ See the [ROCm 5.2.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.2.0/CHAN
 - Added IOShape structure to define the attributes of mapping and layouts for all wmma matrix types
 
 - Added CI testing for rocWMMA
+:::
 
-{#id1287 .section}
+::: {#id1287 .section}
 #### Changed[\#](#id1287 "Link to this heading"){.headerlink}
 
 - Renamed wmma to rocwmma in cmake, header files and documentation
@@ -16377,14 +18715,13 @@ See the [ROCm 5.2.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.2.0/CHAN
 - Moved all the wmma definitions, API headers to rocwmma namespace
 
 - Modified wmma fill unit tests to validate all matrix types (A, B, Accumulator)
+:::
+:::::
 
-::
-
-::::
-{#tensile-4-33-0 .section}
+::::::: {#tensile-4-33-0 .section}
 ### **Tensile** (4.33.0)[\#](#tensile-4-33-0 "Link to this heading"){.headerlink}
 
-{#id1288 .section}
+::: {#id1288 .section}
 #### Added[\#](#id1288 "Link to this heading"){.headerlink}
 
 - TensileUpdateLibrary for updating old library logic files
@@ -16396,15 +18733,17 @@ See the [ROCm 5.2.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.2.0/CHAN
 - Tests for denorm correctness
 
 - Option to write different architectures to different TensileLibrary files
+:::
 
-{#id1289 .section}
+::: {#id1289 .section}
 #### Optimizations[\#](#id1289 "Link to this heading"){.headerlink}
 
 - Optimize MessagePackLoadLibraryFile by switching to fread
 
 - DGEMM tail loop optimization for PrefetchAcrossPersistentMode=1/DirectToVgpr
+:::
 
-{#id1290 .section}
+::: {#id1290 .section}
 #### Changed[\#](#id1290 "Link to this heading"){.headerlink}
 
 - Alpha/beta datatype remains as F32 for HPA HGEMM
@@ -16412,35 +18751,37 @@ See the [ROCm 5.2.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.2.0/CHAN
 - Force assembly kernels to not flush denorms
 
 - Use hipDeviceAttributePhysicalMultiProcessorCount as multiProcessorCount
+:::
 
-{#id1291 .section}
+::: {#id1291 .section}
 #### Resolved issues[\#](#id1291 "Link to this heading"){.headerlink}
 
 - Fix segmentation fault when run i8 datatype with TENSILE_DB=0x80
+:::
+:::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::
-::::::::::::::::::::::::::::::::::::::::::::::
-
-{#rocm-5-1-3 .section}
+::: {#rocm-5-1-3 .section}
 ## ROCm 5.1.3[\#](#rocm-5-1-3 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.1.3 changelog](https://github.com/ROCm/ROCm/blob/docs/5.1.3/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
+:::
 
-{#rocm-5-1-1 .section}
+::: {#rocm-5-1-1 .section}
 ## ROCm 5.1.1[\#](#rocm-5-1-1 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.1.1 changelog](https://github.com/ROCm/ROCm/blob/docs/5.1.1/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
+:::
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-{#rocm-5-1-0 .section}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#rocm-5-1-0 .section}
 ## ROCm 5.1.0[\#](#rocm-5-1-0 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.1.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.1.0/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
 
-{#hipblas-0-50-0 .section}
+:::::: {#hipblas-0-50-0 .section}
 ### **hipBLAS** (0.50.0)[\#](#hipblas-0-50-0 "Link to this heading"){.headerlink}
 
-{#id1292 .section}
+::: {#id1292 .section}
 #### Added[\#](#id1292 "Link to this heading"){.headerlink}
 
 - Added library version and device information to hipblas-test output
@@ -16452,15 +18793,17 @@ See the [ROCm 5.1.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.1.0/CHAN
 - Added cmake-arg parameter to pass in cmake arguments while building
 
 - Added infrastructure to support readthedocs hipBLAS documentation.
+:::
 
-{#id1293 .section}
+::: {#id1293 .section}
 #### Fixed[\#](#id1293 "Link to this heading"){.headerlink}
 
 - Added hipblasVersionMinor define. hipblaseVersionMinor remains defined for backwards compatibility.
 
 - Doxygen warnings in hipblas.h header file.
+:::
 
-{#id1294 .section}
+::: {#id1294 .section}
 #### Changed[\#](#id1294 "Link to this heading"){.headerlink}
 
 - rocblas-path command line option can be specified as either absolute or relative path
@@ -16468,12 +18811,13 @@ See the [ROCm 5.1.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.1.0/CHAN
 - Help message improvements in install.sh and rmake.py
 
 - Updated googletest dependency from 1.10.0 to 1.11.0
+:::
+::::::
 
-::
-{#hipcub-2-11-0 .section}
+::::: {#hipcub-2-11-0 .section}
 ### **hipCUB** (2.11.0)[\#](#hipcub-2-11-0 "Link to this heading"){.headerlink}
 
-{#id1295 .section}
+::: {#id1295 .section}
 #### Added[\#](#id1295 "Link to this heading"){.headerlink}
 
 - Device segmented sort
@@ -16481,8 +18825,9 @@ See the [ROCm 5.1.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.1.0/CHAN
 - Warp merge sort, WarpMask and thread sort from cub 1.15.0 supported in hipCUB
 
 - Device three way partition
+:::
 
-{#id1296 .section}
+::: {#id1296 .section}
 #### Changed[\#](#id1296 "Link to this heading"){.headerlink}
 
 - Device_scan and device_segmented_scan: inclusive_scan now uses the input-type as accumulator-type, exclusive_scan uses initial-value-type.
@@ -16492,24 +18837,23 @@ See the [ROCm 5.1.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.1.0/CHAN
   - And low-res input with high-res output (e.g. float input, double output)
 
   - Block merge sort no longer supports non power of two blocksizes
+:::
+:::::
 
-::
-
-:
-{#hipfft-1-0-7 .section}
+:::: {#hipfft-1-0-7 .section}
 ### **hipFFT** (1.0.7)[\#](#hipfft-1-0-7 "Link to this heading"){.headerlink}
 
-{#id1297 .section}
+::: {#id1297 .section}
 #### Changed[\#](#id1297 "Link to this heading"){.headerlink}
 
 - Use fft_params struct for accuracy and benchmark clients.
+:::
+::::
 
-:
-
-{#hipsolver-1-3-0 .section}
+:::::: {#hipsolver-1-3-0 .section}
 ### **hipSOLVER** (1.3.0)[\#](#hipsolver-1-3-0 "Link to this heading"){.headerlink}
 
-{#id1298 .section}
+::: {#id1298 .section}
 #### Added[\#](#id1298 "Link to this heading"){.headerlink}
 
 - Added functions
@@ -16555,77 +18899,83 @@ See the [ROCm 5.1.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.1.0/CHAN
     - hipsolverDnSsygvj_bufferSize, hipsolverDnDsygvj_bufferSize, hipsolverDnChegvj_bufferSize, hipsolverDnZhegvj_bufferSize
 
     - hipsolverDnSsygvj, hipsolverDnDsygvj, hipsolverDnChegvj, hipsolverDnZhegvj
+:::
 
-{#id1299 .section}
+::: {#id1299 .section}
 #### Changed[\#](#id1299 "Link to this heading"){.headerlink}
 
 - The rocSOLVER backend now allows hipsolverXXgels and hipsolverXXgesv to be called in-place when B == X.
 
 - The rocSOLVER backend now allows rwork to be passed as a null pointer to hipsolverXgesvd.
+:::
 
-{#id1300 .section}
+::: {#id1300 .section}
 #### Resolved issues[\#](#id1300 "Link to this heading"){.headerlink}
 
 - bufferSize functions will now return HIPSOLVER_STATUS_NOT_INITIALIZED instead of HIPSOLVER_STATUS_INVALID_VALUE when both handle and lwork are null.
 
 - Fixed rare memory allocation failure in syevd/heevd and sygvd/hegvd caused by improper workspace array allocation outside of rocSOLVER.
+:::
+::::::
 
-{#hipsparse-2-1-0 .section}
+:::::: {#hipsparse-2-1-0 .section}
 ### **hipSPARSE** (2.1.0)[\#](#hipsparse-2-1-0 "Link to this heading"){.headerlink}
 
-{#id1301 .section}
+::: {#id1301 .section}
 #### Added[\#](#id1301 "Link to this heading"){.headerlink}
 
 - Added gtsv_interleaved_batch and gpsv_interleaved_batch routines
 
 - Add SpGEMM_reuse
+:::
 
-{#id1302 .section}
+::: {#id1302 .section}
 #### Changed[\#](#id1302 "Link to this heading"){.headerlink}
 
 - Changed BUILD_CUDA with USE_CUDA in install script and cmake files
 
 - Update googletest to 11.1
+:::
 
-{#id1303 .section}
+::: {#id1303 .section}
 #### Resolved issues[\#](#id1303 "Link to this heading"){.headerlink}
 
 - Fixed a bug in SpMM Alg versioning
+:::
+::::::
 
-::
-{#rccl-2-11-4 .section}
+::::: {#rccl-2-11-4 .section}
 ### **RCCL** (2.11.4)[\#](#rccl-2-11-4 "Link to this heading"){.headerlink}
 
-{#id1304 .section}
+::: {#id1304 .section}
 #### Added[\#](#id1304 "Link to this heading"){.headerlink}
 
 - Compatibility with NCCL 2.11.4
+:::
 
-{#id1305 .section}
+::: {#id1305 .section}
 #### Known issues[\#](#id1305 "Link to this heading"){.headerlink}
 
 - Managed memory is not currently supported for clique-based kernels
+:::
+:::::
 
-::
-
-:
-{#rocalution-2-0-2 .section}
+:::: {#rocalution-2-0-2 .section}
 ### **rocALUTION** (2.0.2)[\#](#rocalution-2-0-2 "Link to this heading"){.headerlink}
 
-{#id1306 .section}
+::: {#id1306 .section}
 #### Added[\#](#id1306 "Link to this heading"){.headerlink}
 
 - Added out-of-place matrix transpose functionality
 
 - Added LocalVector\<bool\>
-
-:
-
+:::
 ::::
-{#rocblas-2-43-0 .section}
+
+::::::: {#rocblas-2-43-0 .section}
 ### **rocBLAS** (2.43.0)[\#](#rocblas-2-43-0 "Link to this heading"){.headerlink}
 
-{#id1307 .section}
+::: {#id1307 .section}
 #### Added[\#](#id1307 "Link to this heading"){.headerlink}
 
 - Option to install script for number of jobs to use for rocBLAS and Tensile compilation (-j, --jobs)
@@ -16637,8 +18987,9 @@ See the [ROCm 5.1.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.1.0/CHAN
 - Added tests for output of reduction functions when given bad input
 
 - Added user specified initialization (rand_int/trig_float/hpl) for initializing matrices and vectors in rocblas-bench
+:::
 
-{#id1308 .section}
+::: {#id1308 .section}
 #### Changed[\#](#id1308 "Link to this heading"){.headerlink}
 
 - For syrkx and trmm internal API use rocblas_stride datatype for offset
@@ -16654,15 +19005,17 @@ See the [ROCm 5.1.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.1.0/CHAN
 - For ger function, typecast the 'lda'(offset) datatype to size_t during offset calculation to avoid overflow and remove duplicate template functions.
 
 - Modified default initialization from rand_int to hpl for initializing matrices and vectors in rocblas-bench
+:::
 
-{#id1309 .section}
+::: {#id1309 .section}
 #### Optimized[\#](#id1309 "Link to this heading"){.headerlink}
 
 - Improved performance of trsm with side == left and n == 1
 
 - Improved perforamnce of trsm with side == left and m \<= 32 along with side == right and n \<= 32
+:::
 
-{#id1310 .section}
+::: {#id1310 .section}
 #### Resolved issues[\#](#id1310 "Link to this heading"){.headerlink}
 
 - For function trmv (non-transposed cases) avoid overflow in offset calculation
@@ -16670,14 +19023,13 @@ See the [ROCm 5.1.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.1.0/CHAN
 - Fixed cppcheck errors/warnings
 
 - Fixed doxygen warnings
+:::
+:::::::
 
-::::
-
-::::
-{#rocfft-1-0-16 .section}
+::::::: {#rocfft-1-0-16 .section}
 ### **rocFFT** (1.0.16)[\#](#rocfft-1-0-16 "Link to this heading"){.headerlink}
 
-{#id1311 .section}
+::: {#id1311 .section}
 #### Changed[\#](#id1311 "Link to this heading"){.headerlink}
 
 - Supported unaligned tile dimension for SBRC_2D kernels.
@@ -16685,13 +19037,15 @@ See the [ROCm 5.1.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.1.0/CHAN
 - Improved (more RAII) test and benchmark infrastructure.
 
 - Enabled runtime compilation of length-2304 FFT kernel during plan creation.
+:::
 
-{#id1312 .section}
+::: {#id1312 .section}
 #### Removed[\#](#id1312 "Link to this heading"){.headerlink}
 
 - The hipFFT API (header) has been removed from after a long deprecation period. Please use the [hipFFT](https://github.com/ROCmSoftwarePlatform/hipFFT){.reference .external} package/repository to obtain the hipFFT API.
+:::
 
-{#id1313 .section}
+::: {#id1313 .section}
 #### Optimized[\#](#id1313 "Link to this heading"){.headerlink}
 
 - Optimized more large 1D cases by using L1D_CC plan.
@@ -16699,47 +19053,49 @@ See the [ROCm 5.1.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.1.0/CHAN
 - Optimized 3D 200\^3 C2R case.
 
 - Optimized 1D 2\^30 double precision on MI200.
+:::
 
-{#id1314 .section}
+::: {#id1314 .section}
 #### Resolved issues[\#](#id1314 "Link to this heading"){.headerlink}
 
 - Fixed correctness of some R2C transforms with unusual strides.
+:::
+:::::::
 
-::::
-
-::::
-{#rocprim-2-10-13 .section}
+::::::: {#rocprim-2-10-13 .section}
 ### **rocPRIM** (2.10.13)[\#](#rocprim-2-10-13 "Link to this heading"){.headerlink}
 
-{#id1315 .section}
+::: {#id1315 .section}
 #### Added[\#](#id1315 "Link to this heading"){.headerlink}
 
 - Future value
 
 - Added device partition_three_way to partition input to three output iterators based on two predicates
+:::
 
-{#id1316 .section}
+::: {#id1316 .section}
 #### Changed[\#](#id1316 "Link to this heading"){.headerlink}
 
 - The reduce/scan algorithm precision issues in the tests has been resolved for half types.
+:::
 
-{#id1317 .section}
+::: {#id1317 .section}
 #### Resolved issues[\#](#id1317 "Link to this heading"){.headerlink}
 
 - Fixed radix sort int64_t bug introduced in \[2.10.11\]
+:::
 
-{#id1318 .section}
+::: {#id1318 .section}
 #### Known issues[\#](#id1318 "Link to this heading"){.headerlink}
 
 - device_segmented_radix_sort unit test failing for HIP on Windows
+:::
+:::::::
 
-::::
-
-::::
-{#rocrand-2-10-13 .section}
+::::::: {#rocrand-2-10-13 .section}
 ### **rocRAND** (2.10.13)[\#](#rocrand-2-10-13 "Link to this heading"){.headerlink}
 
-{#id1319 .section}
+::: {#id1319 .section}
 #### Added[\#](#id1319 "Link to this heading"){.headerlink}
 
 - Generating a random sequence different sizes now produces the same sequence without gaps indepent of how many values are generated per call.
@@ -16749,8 +19105,9 @@ See the [ROCm 5.1.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.1.0/CHAN
   - This only holds true if the size in each call is a divisor of the distributions [`output_width`{.docutils .literal .notranslate}]{.pre} due to performance
 
   - Similarly the output pointer has to be aligned to [`output_width`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`*`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`sizeof(output_type)`{.docutils .literal .notranslate}]{.pre}
+:::
 
-{#id1320 .section}
+::: {#id1320 .section}
 #### Changed[\#](#id1320 "Link to this heading"){.headerlink}
 
 - [hipRAND](https://github.com/ROCmSoftwarePlatform/hipRAND.git){.reference .external} split into a separate package
@@ -16762,31 +19119,33 @@ See the [ROCm 5.1.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.1.0/CHAN
 - rocRAND still includes hipRAND using a submodule
 
   - The rocRAND package also sets the provides field with hipRAND, so projects which require hipRAND can begin to specify it.
+:::
 
-{#id1321 .section}
+::: {#id1321 .section}
 #### Resolved issues[\#](#id1321 "Link to this heading"){.headerlink}
 
 - Fix offset behaviour for XORWOW, MRG32K3A and PHILOX4X32_10 generator, setting offset now correctly generates the same sequence starting from the offset.
 
   - Only uniform int and float will work as these can be generated with a single call to the generator
+:::
 
-{#id1322 .section}
+::: {#id1322 .section}
 #### Known issues[\#](#id1322 "Link to this heading"){.headerlink}
 
 - kernel_xorwow unit test is failing for certain GPU architectures.
+:::
+:::::::
 
-::::
-
-::
-{#rocsolver-3-17-0 .section}
+::::: {#rocsolver-3-17-0 .section}
 ### **rocSOLVER** (3.17.0)[\#](#rocsolver-3-17-0 "Link to this heading"){.headerlink}
 
-{#id1323 .section}
+::: {#id1323 .section}
 #### Optimized[\#](#id1323 "Link to this heading"){.headerlink}
 
 - Optimized non-pivoting and batch cases of the LU factorization
+:::
 
-{#id1324 .section}
+::: {#id1324 .section}
 #### Resolved issues[\#](#id1324 "Link to this heading"){.headerlink}
 
 - Fixed missing synchronization in SYTRF with [`rocblas_fill_lower`{.docutils .literal .notranslate}]{.pre} that could potentially result in incorrect pivot values.
@@ -16794,14 +19153,13 @@ See the [ROCm 5.1.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.1.0/CHAN
 - Fixed multi-level logging output to file with the [`ROCSOLVER_LOG_PATH`{.docutils .literal .notranslate}]{.pre}, [`ROCSOLVER_LOG_TRACE_PATH`{.docutils .literal .notranslate}]{.pre}, [`ROCSOLVER_LOG_BENCH_PATH`{.docutils .literal .notranslate}]{.pre} and [`ROCSOLVER_LOG_PROFILE_PATH`{.docutils .literal .notranslate}]{.pre} environment variables.
 
 - Fixed performance regression in the batched LU factorization of tiny matrices
+:::
+:::::
 
-::
-
-::
-{#rocsparse-2-1-0 .section}
+::::: {#rocsparse-2-1-0 .section}
 ### **rocSPARSE** (2.1.0)[\#](#rocsparse-2-1-0 "Link to this heading"){.headerlink}
 
-{#id1325 .section}
+::: {#id1325 .section}
 #### Added[\#](#id1325 "Link to this heading"){.headerlink}
 
 - gtsv_interleaved_batch
@@ -16811,41 +19169,41 @@ See the [ROCm 5.1.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.1.0/CHAN
 - SpGEMM_reuse
 
 - Allow copying of mat info struct
+:::
 
-{#id1326 .section}
+::: {#id1326 .section}
 #### Optimized[\#](#id1326 "Link to this heading"){.headerlink}
 
 - Optimization for SDDMM
 
 - Allow unsorted matrices in csrgemm multipass algorithm
+:::
+:::::
 
-::
-
-::
-{#rocthrust-2-14-0 .section}
+::::: {#rocthrust-2-14-0 .section}
 ### **rocThrust** (2.14.0)[\#](#rocthrust-2-14-0 "Link to this heading"){.headerlink}
 
 rocThrust 2.14.0 for ROCm 5.1.0
 
-{#id1327 .section}
+::: {#id1327 .section}
 #### Added[\#](#id1327 "Link to this heading"){.headerlink}
 
 - Updated to match upstream Thrust 1.15.0
+:::
 
-{#id1328 .section}
+::: {#id1328 .section}
 #### Known issues[\#](#id1328 "Link to this heading"){.headerlink}
 
 - async_copy, partition, and stable_sort_by_key unit tests are failing on HIP on Windows.
+:::
+:::::
 
-::
-
-::::
-{#tensile-4-32-0 .section}
+::::::: {#tensile-4-32-0 .section}
 ### **Tensile** (4.32.0)[\#](#tensile-4-32-0 "Link to this heading"){.headerlink}
 
 Tensile 4.32.0 for ROCm 5.1.0
 
-{#id1329 .section}
+::: {#id1329 .section}
 #### Added[\#](#id1329 "Link to this heading"){.headerlink}
 
 - Better control of parallelism to control memory usage
@@ -16855,21 +19213,21 @@ Tensile 4.32.0 for ROCm 5.1.0
 - New JSD metric and metric selection functionality
 
 - Initial changes to support two-tier solution selection
+:::
 
-:
-{#id1330 .section}
+:::: {#id1330 .section}
 #### Changed[\#](#id1330 "Link to this heading"){.headerlink}
 
 - Update Googletest to 1.11.0
 
-{#id1331 .section}
+::: {#id1331 .section}
 ##### Removed[\#](#id1331 "Link to this heading"){.headerlink}
 
 - Removed no longer supported benchmarking steps
+:::
+::::
 
-:
-
-{#id1332 .section}
+::: {#id1332 .section}
 #### Optimized[\#](#id1332 "Link to this heading"){.headerlink}
 
 - Optimized runtime of TensileCreateLibraries by reducing max RAM usage
@@ -16877,31 +19235,31 @@ Tensile 4.32.0 for ROCm 5.1.0
 - StoreCInUnroll additional optimizations plus adaptive K support
 
 - DGEMM NN optimizations with PrefetchGlobalRead(PGR)=2 support
+:::
+:::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-{#rocm-5-0-2 .section}
+::: {#rocm-5-0-2 .section}
 ## ROCm 5.0.2[\#](#rocm-5-0-2 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.0.2 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.2/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
+:::
 
-{#rocm-5-0-1 .section}
+::: {#rocm-5-0-1 .section}
 ## ROCm 5.0.1[\#](#rocm-5-0-1 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.0.1 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.1/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
+:::
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::
-{#rocm-5-0-0 .section}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#rocm-5-0-0 .section}
 ## ROCm 5.0.0[\#](#rocm-5-0-0 "Link to this heading"){.headerlink}
 
 See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHANGELOG.md){.reference .external} on GitHub for a complete overview of this release.
 
-::
-{#hipblas-0-49-0 .section}
+::::: {#hipblas-0-49-0 .section}
 ### **hipBLAS** (0.49.0)[\#](#hipblas-0-49-0 "Link to this heading"){.headerlink}
 
-{#id1333 .section}
+::: {#id1333 .section}
 #### Added[\#](#id1333 "Link to this heading"){.headerlink}
 
 - Added rocSOLVER functions to hipblas-bench
@@ -16915,8 +19273,9 @@ See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHAN
 - Added option to forgo pivoting for getrf and getri when ipiv is nullptr
 
 - Added code coverage option
+:::
 
-{#id1334 .section}
+::: {#id1334 .section}
 #### Resolved issues[\#](#id1334 "Link to this heading"){.headerlink}
 
 - Fixed use of incorrect 'HIP_PATH' when building from source.
@@ -16926,13 +19285,13 @@ See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHAN
 - Allowing negative increments in hipblas-bench
 
 - Removed boost dependency
+:::
+:::::
 
-::
-
-{#hipcub-2-10-13 .section}
+:::::: {#hipcub-2-10-13 .section}
 ### **hipCUB** (2.10.13)[\#](#hipcub-2-10-13 "Link to this heading"){.headerlink}
 
-{#id1335 .section}
+::: {#id1335 .section}
 #### Added[\#](#id1335 "Link to this heading"){.headerlink}
 
 - Bfloat16 support to test cases (device_reduce & device_radix_sort)
@@ -16942,40 +19301,43 @@ See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHAN
 - Block merge sort
 
 - API update to CUB 1.14.0
+:::
 
-{#id1336 .section}
+::: {#id1336 .section}
 #### Changed[\#](#id1336 "Link to this heading"){.headerlink}
 
 - The SetupNVCC.cmake automatic target selector select all of the capabalities of all available card for NVIDIA backend.
+:::
 
-{#id1337 .section}
+::: {#id1337 .section}
 #### Resolved issues[\#](#id1337 "Link to this heading"){.headerlink}
 
 - Added missing includes to hipcub.hpp
+:::
+::::::
 
-::
-{#hipfft-1-0-4 .section}
+::::: {#hipfft-1-0-4 .section}
 ### **hipFFT** (1.0.4)[\#](#hipfft-1-0-4 "Link to this heading"){.headerlink}
 
-{#id1338 .section}
+::: {#id1338 .section}
 #### Fixed[\#](#id1338 "Link to this heading"){.headerlink}
 
 - Add calls to rocFFT setup/cleanup.
 
 - Cmake fixes for clients and backend support.
+:::
 
-{#id1339 .section}
+::: {#id1339 .section}
 #### Added[\#](#id1339 "Link to this heading"){.headerlink}
 
 - Added support for Windows 10 as a build target.
+:::
+:::::
 
-::
-
-::
-{#hipsolver-1-2-0 .section}
+::::: {#hipsolver-1-2-0 .section}
 ### **hipSOLVER** (1.2.0)[\#](#hipsolver-1-2-0 "Link to this heading"){.headerlink}
 
-{#id1340 .section}
+::: {#id1340 .section}
 #### Added[\#](#id1340 "Link to this heading"){.headerlink}
 
 - Added functions
@@ -16985,66 +19347,65 @@ See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHAN
     - hipsolverSsytrf_bufferSize, hipsolverDsytrf_bufferSize, hipsolverCsytrf_bufferSize, hipsolverZsytrf_bufferSize
 
     - hipsolverSsytrf, hipsolverDsytrf, hipsolverCsytrf, hipsolverZsytrf
+:::
 
-{#id1341 .section}
+::: {#id1341 .section}
 #### Resolved issues[\#](#id1341 "Link to this heading"){.headerlink}
 
 - Fixed use of incorrect [`HIP_PATH`{.docutils .literal .notranslate}]{.pre} when building from source (#40).
+:::
+:::::
 
-::
-
-:
-{#hipsparse-2-0-0 .section}
+:::: {#hipsparse-2-0-0 .section}
 ### **hipSPARSE** (2.0.0)[\#](#hipsparse-2-0-0 "Link to this heading"){.headerlink}
 
-{#id1342 .section}
+::: {#id1342 .section}
 #### Added[\#](#id1342 "Link to this heading"){.headerlink}
 
 - Added (conjugate) transpose support for csrmv, hybmv and spmv routines
+:::
+::::
 
-:
-
-::
-{#rccl-2-10-3 .section}
+::::: {#rccl-2-10-3 .section}
 ### **RCCL** (2.10.3)[\#](#rccl-2-10-3 "Link to this heading"){.headerlink}
 
-{#id1343 .section}
+::: {#id1343 .section}
 #### Added[\#](#id1343 "Link to this heading"){.headerlink}
 
 - Compatibility with NCCL 2.10.3
+:::
 
-{#id1344 .section}
+::: {#id1344 .section}
 #### Known issues[\#](#id1344 "Link to this heading"){.headerlink}
 
 - Managed memory is not currently supported for clique-based kernels
+:::
+:::::
 
-::
-
-::
-{#rocalution-2-0-1 .section}
+::::: {#rocalution-2-0-1 .section}
 ### **rocALUTION** (2.0.1)[\#](#rocalution-2-0-1 "Link to this heading"){.headerlink}
 
-{#id1345 .section}
+::: {#id1345 .section}
 #### Changed[\#](#id1345 "Link to this heading"){.headerlink}
 
 - Removed deprecated GlobalPairwiseAMG class, please use PairwiseAMG instead.
 
 - Changed to C++ 14 Standard
+:::
 
-{#id1346 .section}
+::: {#id1346 .section}
 #### Optimized[\#](#id1346 "Link to this heading"){.headerlink}
 
 - Added sanitizer option
 
 - Improved documentation
+:::
+:::::
 
-::
-
-::::
-{#rocblas-2-42-0 .section}
+::::::: {#rocblas-2-42-0 .section}
 ### **rocBLAS** (2.42.0)[\#](#rocblas-2-42-0 "Link to this heading"){.headerlink}
 
-{#id1347 .section}
+::: {#id1347 .section}
 #### Added[\#](#id1347 "Link to this heading"){.headerlink}
 
 - Added rocblas_get_version_string_size convenience function
@@ -17056,8 +19417,9 @@ See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHAN
 - Added source code gemm. It can be used as an alternative to Tensile for debugging and development
 
 - Added option ROCM_MATHLIBS_API_USE_HIP_COMPLEX to opt-in to use hipFloatComplex and hipDoubleComplex
+:::
 
-{#id1348 .section}
+::: {#id1348 .section}
 #### Changed[\#](#id1348 "Link to this heading"){.headerlink}
 
 - Instantiate templated rocBLAS functions to reduce size of librocblas.so
@@ -17065,15 +19427,17 @@ See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHAN
 - Removed static library dependency on msgpack
 
 - Removed boost dependencies for clients
+:::
 
-{#id1349 .section}
+::: {#id1349 .section}
 #### Optimized[\#](#id1349 "Link to this heading"){.headerlink}
 
 - Improved performance of non-batched and batched single-precision GER for size m \> 1024. Performance enhanced by 5-10% measured on a MI100 (gfx908) GPU.
 
 - Improved performance of non-batched and batched HER for all sizes and data types. Performance enhanced by 2-17% measured on a MI100 (gfx908) GPU.
+:::
 
-{#id1350 .section}
+::: {#id1350 .section}
 #### Resolved issues[\#](#id1350 "Link to this heading"){.headerlink}
 
 - Option to install script to build only rocBLAS clients with a pre-built rocBLAS library
@@ -17085,18 +19449,19 @@ See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHAN
 - Fixed out-of-bounds read for small trsm
 
 - Fixed numerical checking for tbmv_strided_batched
+:::
+:::::::
 
-::::
-
-{#rocfft-1-0-13 .section}
+:::::: {#rocfft-1-0-13 .section}
 ### **rocFFT** (1.0.13)[\#](#rocfft-1-0-13 "Link to this heading"){.headerlink}
 
-{#id1351 .section}
+::: {#id1351 .section}
 #### Added[\#](#id1351 "Link to this heading"){.headerlink}
 
 - Added new kernel generator for select fused-2D transforms.
+:::
 
-{#id1352 .section}
+::: {#id1352 .section}
 #### Optimized[\#](#id1352 "Link to this heading"){.headerlink}
 
 - Improved many plans by removing unnecessary transpose steps.
@@ -17112,17 +19477,19 @@ See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHAN
 - Optimized some even-length R2C/C2R cases by doing more operations in-place and combining pre/post processing into Stockham kernels.
 
 - Added radix-17.
+:::
 
-{#id1353 .section}
+::: {#id1353 .section}
 #### Resolved issues[\#](#id1353 "Link to this heading"){.headerlink}
 
 - Improved large 1D transform decompositions.
+:::
+::::::
 
-::::
-{#rocprim-2-10-12 .section}
+::::::: {#rocprim-2-10-12 .section}
 ### **rocPRIM** (2.10.12)[\#](#rocprim-2-10-12 "Link to this heading"){.headerlink}
 
-{#id1354 .section}
+::: {#id1354 .section}
 #### Added[\#](#id1354 "Link to this heading"){.headerlink}
 
 - Added scan size limit feature
@@ -17138,8 +19505,9 @@ See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHAN
 - The block sizes for device merge sorts initial block sort and its merge steps are now separate in its kernel config
 
   - the block sort step supports multiple items per thread
+:::
 
-{#id1355 .section}
+::: {#id1355 .section}
 #### Changed[\#](#id1355 "Link to this heading"){.headerlink}
 
 - size_limit for scan, reduce and transform can now be set in the config struct instead of a parameter
@@ -17159,8 +19527,9 @@ See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHAN
   - currently only powers of two block sizes, and items per threads are supported and only for full blocks
 
 - Bumped the minimum required version of CMake to 3.16
+:::
 
-{#id1356 .section}
+::: {#id1356 .section}
 #### Resolved issues[\#](#id1356 "Link to this heading"){.headerlink}
 
 - Enable bfloat16 tests and reduce threshold for bfloat16
@@ -17168,8 +19537,9 @@ See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHAN
 - Fix device scan limit_size feature
 
 - Non-optimized builds no longer trigger local memory limit errors
+:::
 
-{#id1357 .section}
+::: {#id1357 .section}
 #### Known issues[\#](#id1357 "Link to this heading"){.headerlink}
 
 - Unit tests may soft hang on MI200 when running in hipMallocManaged mode.
@@ -17177,14 +19547,13 @@ See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHAN
 - device_segmented_radix_sort, device_scan unit tests failing for HIP on Windows
 
 - ReduceEmptyInput cause random faulire with bfloat16
+:::
+:::::::
 
-::::
-
-::::
-{#rocsolver-3-16-0 .section}
+::::::: {#rocsolver-3-16-0 .section}
 ### **rocSOLVER** (3.16.0)[\#](#rocsolver-3-16-0 "Link to this heading"){.headerlink}
 
-{#id1358 .section}
+::: {#id1358 .section}
 #### Added[\#](#id1358 "Link to this heading"){.headerlink}
 
 - Symmetric matrix factorizations:
@@ -17198,53 +19567,55 @@ See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHAN
 - Added [`rocblas_layer_mode_ex`{.docutils .literal .notranslate}]{.pre} and the ability to print kernel calls in the trace and profile logs
 
 - Expanded batched and strided_batched sample programs.
+:::
 
-{#id1359 .section}
+::: {#id1359 .section}
 #### Changed[\#](#id1359 "Link to this heading"){.headerlink}
 
 - The rocsolver-test client now prints the rocSOLVER version used to run the tests, rather than the version used to build them
 
 - The rocsolver-bench client now prints the rocSOLVER version used in the benchmark
+:::
 
-{#id1360 .section}
+::: {#id1360 .section}
 #### Optimized[\#](#id1360 "Link to this heading"){.headerlink}
 
 - Improved general performance of LU factorization
 
 - Increased parallelism of specialized kernels when compiling from source, reducing build times on multi-core systems.
+:::
 
-{#id1361 .section}
+::: {#id1361 .section}
 #### Resolved issues[\#](#id1361 "Link to this heading"){.headerlink}
 
 - Added missing [`stdint.h`{.docutils .literal .notranslate}]{.pre} include to [`rocsolver.h`{.docutils .literal .notranslate}]{.pre}
+:::
+:::::::
 
-::::
-
-::
-{#rocsparse-2-0-0 .section}
+::::: {#rocsparse-2-0-0 .section}
 ### **rocSPARSE** (2.0.0)[\#](#rocsparse-2-0-0 "Link to this heading"){.headerlink}
 
-{#id1362 .section}
+::: {#id1362 .section}
 #### Added[\#](#id1362 "Link to this heading"){.headerlink}
 
 - csrmv, coomv, ellmv, hybmv for (conjugate) transposed matrices
 
 - csrmv for symmetric matrices
+:::
 
-{#id1363 .section}
+::: {#id1363 .section}
 #### Changed[\#](#id1363 "Link to this heading"){.headerlink}
 
 - spmm_ex is now deprecated and will be removed in the next major release
 
 - Optimization for gtsv
+:::
+:::::
 
-::
-
-::
-{#rocthrust-2-13-0 .section}
+::::: {#rocthrust-2-13-0 .section}
 ### **rocThrust** (2.13.0)[\#](#rocthrust-2-13-0 "Link to this heading"){.headerlink}
 
-{#id1364 .section}
+::: {#id1364 .section}
 #### Added[\#](#id1364 "Link to this heading"){.headerlink}
 
 - Updated to match upstream Thrust 1.13.0
@@ -17252,8 +19623,9 @@ See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHAN
 - Updated to match upstream Thrust 1.14.0
 
 - Added async scan
+:::
 
-{#id1365 .section}
+::: {#id1365 .section}
 #### Changed[\#](#id1365 "Link to this heading"){.headerlink}
 
 - Scan algorithms: [`inclusive_scan`{.docutils .literal .notranslate}]{.pre} now uses the input-type as accumulator-type, [`exclusive_scan`{.docutils .literal .notranslate}]{.pre} uses initial-value-type.
@@ -17261,14 +19633,13 @@ See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHAN
   - This particularly changes behaviour of small-size input types with large-size output types (e.g. [`short`{.docutils .literal .notranslate}]{.pre} input, [`int`{.docutils .literal .notranslate}]{.pre} output).
 
   - And low-res input with high-res output (e.g. [`float`{.docutils .literal .notranslate}]{.pre} input, [`double`{.docutils .literal .notranslate}]{.pre} output)
-
-::
-
+:::
 :::::
-{#tensile-4-31-0 .section}
+
+:::::::: {#tensile-4-31-0 .section}
 ### **Tensile** (4.31.0)[\#](#tensile-4-31-0 "Link to this heading"){.headerlink}
 
-{#id1366 .section}
+::: {#id1366 .section}
 #### Added[\#](#id1366 "Link to this heading"){.headerlink}
 
 - DirectToLds support (x2/x4)
@@ -17278,23 +19649,27 @@ See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHAN
 - Parameter to control number of files kernels are merged into to better parallelize kernel compilation
 
 - FP16 alternate implementation for HPA HGEMM on aldebaran
+:::
 
-{#id1367 .section}
+::: {#id1367 .section}
 #### Changed[\#](#id1367 "Link to this heading"){.headerlink}
 
 - Update tensile_client executable to std=c++14
+:::
 
-{#id1368 .section}
+::: {#id1368 .section}
 #### Removed[\#](#id1368 "Link to this heading"){.headerlink}
 
 - Remove unused old Tensile client code
+:::
 
-{#id1369 .section}
+::: {#id1369 .section}
 #### Optimized[\#](#id1369 "Link to this heading"){.headerlink}
 
 - Add DGEMM NN custom kernel for HPL on aldebaran
+:::
 
-{#id1370 .section}
+::: {#id1370 .section}
 #### Resolved issues[\#](#id1370 "Link to this heading"){.headerlink}
 
 - Fixed [`hipErrorInvalidHandle`{.docutils .literal .notranslate}]{.pre} during benchmarks
@@ -17308,23 +19683,1907 @@ See the [ROCm 5.0.0 changelog](https://github.com/ROCm/ROCm/blob/docs/5.0.0/CHAN
 - Fixed [`PrintSolutionRejectionReason`{.docutils .literal .notranslate}]{.pre} verbiage in [`KernelWriter.py`{.docutils .literal .notranslate}]{.pre}
 
 - Fixed vgpr alignment problem when enabling flat buffer load
+:::
+::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::
-::::::::::::::::::::::::::::::::::::::::::::::::::::
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::: prev-next-area
+:::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-{.bd-sidebar-secondary .bd-toc}
-::
-{.sidebar-secondary-items .sidebar-secondary__inner}
-:
-sidebar-secondary-item
-
-{.page-toc .tocsection .onthispage}
+:::::: {.bd-sidebar-secondary .bd-toc}
+::::: {.sidebar-secondary-items .sidebar-secondary__inner}
+:::: sidebar-secondary-item
+::: {.page-toc .tocsection .onthispage}
 Contents
+:::
 
-:
-::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+- [ROCm 7.2.1](#rocm-7-2-1){.reference .internal .nav-link}
+  - [**AMD SMI** (26.2.2)](#amd-smi-26-2-2){.reference .internal .nav-link}
+    - [Added](#added){.reference .internal .nav-link}
+    - [Resolved issues](#resolved-issues){.reference .internal .nav-link}
+  - [**HIP** (7.2.1)](#hip-7-2-1){.reference .internal .nav-link}
+    - [Resolved issues](#id1){.reference .internal .nav-link}
+    - [Changed](#changed){.reference .internal .nav-link}
+  - [**hipBLASLt** (1.2.2)](#hipblaslt-1-2-2){.reference .internal .nav-link}
+    - [Changed](#id2){.reference .internal .nav-link}
+  - [**rocDecode** (1.7.0)](#rocdecode-1-7-0){.reference .internal .nav-link}
+    - [Upcoming changes](#upcoming-changes){.reference .internal .nav-link}
+  - [**rocJPEG** (1.4.0)](#rocjpeg-1-4-0){.reference .internal .nav-link}
+    - [Changed](#id3){.reference .internal .nav-link}
+    - [Upcoming changes](#id4){.reference .internal .nav-link}
+  - [**rocSHMEM** (3.2.0)](#rocshmem-3-2-0){.reference .internal .nav-link}
+    - [Added](#id5){.reference .internal .nav-link}
+    - [Resolved issues](#id6){.reference .internal .nav-link}
+    - [Known issues](#known-issues){.reference .internal .nav-link}
+  - [**RPP** (2.2.1)](#rpp-2-2-1){.reference .internal .nav-link}
+    - [Added](#id7){.reference .internal .nav-link}
+    - [Optimized](#optimized){.reference .internal .nav-link}
+- [ROCm 7.2.0](#rocm-7-2-0){.reference .internal .nav-link}
+  - [**AMD SMI** (26.2.1)](#amd-smi-26-2-1){.reference .internal .nav-link}
+    - [Added](#id8){.reference .internal .nav-link}
+    - [Changed](#id9){.reference .internal .nav-link}
+    - [Resolved Issues](#id10){.reference .internal .nav-link}
+  - [**Composable Kernel** (1.2.0)](#composable-kernel-1-2-0){.reference .internal .nav-link}
+    - [Added](#id11){.reference .internal .nav-link}
+    - [Changed](#id12){.reference .internal .nav-link}
+    - [Upcoming changes](#id13){.reference .internal .nav-link}
+  - [**HIP** (7.2.0)](#hip-7-2-0){.reference .internal .nav-link}
+    - [Added](#id14){.reference .internal .nav-link}
+    - [Optimized](#id15){.reference .internal .nav-link}
+    - [Resolved issues](#id16){.reference .internal .nav-link}
+  - [**hipBLAS** (3.2.0)](#hipblas-3-2-0){.reference .internal .nav-link}
+    - [Resolved issues](#id17){.reference .internal .nav-link}
+  - [**hipBLASLt** (1.2.1)](#hipblaslt-1-2-1){.reference .internal .nav-link}
+    - [Added](#id18){.reference .internal .nav-link}
+    - [Resolved issues](#id19){.reference .internal .nav-link}
+  - [**hipCUB** (4.2.0)](#hipcub-4-2-0){.reference .internal .nav-link}
+    - [Added](#id20){.reference .internal .nav-link}
+    - [Resolved issues](#id21){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.22)](#hipfft-1-0-22){.reference .internal .nav-link}
+    - [Added](#id22){.reference .internal .nav-link}
+  - [**HIPIFY** (22.0.0)](#hipify-22-0-0){.reference .internal .nav-link}
+    - [Added](#id23){.reference .internal .nav-link}
+    - [Resolved issues](#id24){.reference .internal .nav-link}
+  - [**hipSOLVER** (3.2.0)](#hipsolver-3-2-0){.reference .internal .nav-link}
+    - [Added](#id25){.reference .internal .nav-link}
+  - [**hipSPARSE** (4.2.0)](#hipsparse-4-2-0){.reference .internal .nav-link}
+    - [Added](#id26){.reference .internal .nav-link}
+    - [Optimized](#id27){.reference .internal .nav-link}
+    - [Resolved Issues](#id28){.reference .internal .nav-link}
+  - [**hipSPARSELt** (0.2.6)](#hipsparselt-0-2-6){.reference .internal .nav-link}
+    - [Optimized](#id29){.reference .internal .nav-link}
+  - [**hipTensor** (2.2.0)](#hiptensor-2-2-0){.reference .internal .nav-link}
+    - [Added](#id30){.reference .internal .nav-link}
+    - [Changed](#id31){.reference .internal .nav-link}
+    - [Resolved issues](#id32){.reference .internal .nav-link}
+  - [**llvm-project** (22.0.0)](#llvm-project-22-0-0){.reference .internal .nav-link}
+    - [Added](#id33){.reference .internal .nav-link}
+    - [Changed](#id34){.reference .internal .nav-link}
+    - [Upcoming changes](#id35){.reference .internal .nav-link}
+  - [**MIGraphX** (2.15.0)](#migraphx-2-15-0){.reference .internal .nav-link}
+    - [Added](#id36){.reference .internal .nav-link}
+    - [Changed](#id37){.reference .internal .nav-link}
+    - [Optimized](#id38){.reference .internal .nav-link}
+    - [Resolved issues](#id39){.reference .internal .nav-link}
+  - [**MIOpen** (3.5.1)](#miopen-3-5-1){.reference .internal .nav-link}
+    - [Added](#id40){.reference .internal .nav-link}
+    - [Changed](#id41){.reference .internal .nav-link}
+    - [Optimized](#id42){.reference .internal .nav-link}
+    - [Resolved issues](#id43){.reference .internal .nav-link}
+  - [**MIVisionX** (3.5.0)](#mivisionx-3-5-0){.reference .internal .nav-link}
+    - [Changed](#id44){.reference .internal .nav-link}
+    - [Resolved issues](#id45){.reference .internal .nav-link}
+    - [Known issues](#id46){.reference .internal .nav-link}
+    - [Upcoming changes](#id47){.reference .internal .nav-link}
+  - [**RCCL** (2.27.7)](#rccl-2-27-7){.reference .internal .nav-link}
+    - [Changed](#id48){.reference .internal .nav-link}
+  - [**rocAL** (2.5.0)](#rocal-2-5-0){.reference .internal .nav-link}
+    - [Added](#id49){.reference .internal .nav-link}
+    - [Changed](#id50){.reference .internal .nav-link}
+    - [Resolved issues](#id51){.reference .internal .nav-link}
+    - [Known issues](#id52){.reference .internal .nav-link}
+  - [**rocALUTION** (4.1.0)](#rocalution-4-1-0){.reference .internal .nav-link}
+    - [Added](#id53){.reference .internal .nav-link}
+  - [**rocBLAS** (5.2.0)](#rocblas-5-2-0){.reference .internal .nav-link}
+    - [Added](#id54){.reference .internal .nav-link}
+    - [Optimized](#id55){.reference .internal .nav-link}
+    - [Resolved issues](#id56){.reference .internal .nav-link}
+  - [**rocDecode** (1.5.0)](#rocdecode-1-5-0){.reference .internal .nav-link}
+    - [Added](#id57){.reference .internal .nav-link}
+    - [Changed](#id58){.reference .internal .nav-link}
+    - [Resolved issues](#id59){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.36)](#rocfft-1-0-36){.reference .internal .nav-link}
+    - [Optimized](#id60){.reference .internal .nav-link}
+    - [Resolved issues](#id61){.reference .internal .nav-link}
+  - [**rocJPEG** (1.3.0)](#rocjpeg-1-3-0){.reference .internal .nav-link}
+    - [Changed](#id62){.reference .internal .nav-link}
+  - [**ROCm Bandwidth Test** (2.6.0)](#rocm-bandwidth-test-2-6-0){.reference .internal .nav-link}
+    - [Resolved issues](#id63){.reference .internal .nav-link}
+  - [**ROCm Compute Profiler** (3.4.0)](#rocm-compute-profiler-3-4-0){.reference .internal .nav-link}
+    - [Added](#id64){.reference .internal .nav-link}
+    - [Changed](#id65){.reference .internal .nav-link}
+    - [Removed](#removed){.reference .internal .nav-link}
+    - [Resolved issues](#id66){.reference .internal .nav-link}
+    - [Upcoming changes](#id67){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (1.3.0)](#rocm-systems-profiler-1-3-0){.reference .internal .nav-link}
+    - [Added](#id68){.reference .internal .nav-link}
+    - [Changed](#id69){.reference .internal .nav-link}
+    - [Resolved issues](#id70){.reference .internal .nav-link}
+  - [**rocPRIM** (4.2.0)](#rocprim-4-2-0){.reference .internal .nav-link}
+    - [Added](#id71){.reference .internal .nav-link}
+    - [Optimized](#id72){.reference .internal .nav-link}
+    - [Resolved issues](#id73){.reference .internal .nav-link}
+    - [Known issues](#id74){.reference .internal .nav-link}
+  - [**ROCprofiler-SDK** (1.1.0)](#rocprofiler-sdk-1-1-0){.reference .internal .nav-link}
+    - [Added](#id75){.reference .internal .nav-link}
+    - [Optimized](#id76){.reference .internal .nav-link}
+    - [Resolved issues](#id77){.reference .internal .nav-link}
+  - [**rocPyDecode** (0.8.0)](#rocpydecode-0-8-0){.reference .internal .nav-link}
+    - [Changed](#id78){.reference .internal .nav-link}
+  - [**rocRAND** (4.2.0)](#rocrand-4-2-0){.reference .internal .nav-link}
+    - [Added](#id79){.reference .internal .nav-link}
+    - [Changed](#id80){.reference .internal .nav-link}
+    - [Removed](#id81){.reference .internal .nav-link}
+  - [**rocSHMEM** (3.2.0)](#id82){.reference .internal .nav-link}
+    - [Added](#id83){.reference .internal .nav-link}
+    - [Changed](#id84){.reference .internal .nav-link}
+    - [Known issues](#id85){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.32.0)](#rocsolver-3-32-0){.reference .internal .nav-link}
+    - [Optimized](#id86){.reference .internal .nav-link}
+  - [**rocSPARSE** (4.2.0)](#rocsparse-4-2-0){.reference .internal .nav-link}
+    - [Added](#id87){.reference .internal .nav-link}
+    - [Changed](#id88){.reference .internal .nav-link}
+    - [Optimized](#id89){.reference .internal .nav-link}
+    - [Resolved issues](#id90){.reference .internal .nav-link}
+  - [**rocThrust** (4.2.0)](#rocthrust-4-2-0){.reference .internal .nav-link}
+    - [Added](#id91){.reference .internal .nav-link}
+  - [**rocWMMA** (2.2.0)](#rocwmma-2-2-0){.reference .internal .nav-link}
+    - [Added](#id92){.reference .internal .nav-link}
+    - [Changed](#id93){.reference .internal .nav-link}
+    - [Resolved issues](#id94){.reference .internal .nav-link}
+  - [**RPP** (2.2.0)](#rpp-2-2-0){.reference .internal .nav-link}
+    - [Added](#id95){.reference .internal .nav-link}
+    - [Changed](#id96){.reference .internal .nav-link}
+    - [Removed](#id97){.reference .internal .nav-link}
+    - [Resolved issues](#id98){.reference .internal .nav-link}
+  - [**Tensile** (4.45.0)](#tensile-4-45-0){.reference .internal .nav-link}
+    - [Removed](#id99){.reference .internal .nav-link}
+- [ROCm 7.1.1](#rocm-7-1-1){.reference .internal .nav-link}
+  - [**AMD SMI** (26.2.0)](#amd-smi-26-2-0){.reference .internal .nav-link}
+    - [Added](#id100){.reference .internal .nav-link}
+    - [Changed](#id101){.reference .internal .nav-link}
+    - [Resolved issues](#id102){.reference .internal .nav-link}
+  - [**Composable Kernel** (1.1.0)](#composable-kernel-1-1-0){.reference .internal .nav-link}
+    - [Upcoming changes](#id103){.reference .internal .nav-link}
+  - [**HIP** (7.1.1)](#hip-7-1-1){.reference .internal .nav-link}
+    - [Added](#id104){.reference .internal .nav-link}
+    - [Resolved issues](#id105){.reference .internal .nav-link}
+  - [**MIGraphX** (2.14.0)](#migraphx-2-14-0){.reference .internal .nav-link}
+    - [Resolved issues](#id106){.reference .internal .nav-link}
+  - [**RCCL** (2.27.7)](#id107){.reference .internal .nav-link}
+    - [Resolved issues](#id108){.reference .internal .nav-link}
+  - [**rocBLAS** (5.1.1)](#rocblas-5-1-1){.reference .internal .nav-link}
+    - [Changed](#id109){.reference .internal .nav-link}
+  - [**ROCm Bandwidth Test** (2.6.0)](#id110){.reference .internal .nav-link}
+    - [Resolved issues](#id111){.reference .internal .nav-link}
+    - [Known issues](#id112){.reference .internal .nav-link}
+  - [**ROCm Compute Profiler** (3.3.1)](#rocm-compute-profiler-3-3-1){.reference .internal .nav-link}
+    - [Added](#id113){.reference .internal .nav-link}
+    - [Changed](#id114){.reference .internal .nav-link}
+    - [Optimized](#id115){.reference .internal .nav-link}
+    - [Resolved issues](#id116){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (1.2.1)](#rocm-systems-profiler-1-2-1){.reference .internal .nav-link}
+    - [Resolved issues](#id117){.reference .internal .nav-link}
+  - [**ROCm Validation Suite** (1.3.0)](#rocm-validation-suite-1-3-0){.reference .internal .nav-link}
+    - [Added](#id118){.reference .internal .nav-link}
+  - [**rocSHMEM** (3.1.0)](#rocshmem-3-1-0){.reference .internal .nav-link}
+    - [Added](#id119){.reference .internal .nav-link}
+    - [Changed](#id120){.reference .internal .nav-link}
+    - [Removed](#id121){.reference .internal .nav-link}
+    - [Known issues](#id122){.reference .internal .nav-link}
+  - [**rocWMMA** (2.1.0)](#rocwmma-2-1-0){.reference .internal .nav-link}
+    - [Added](#id123){.reference .internal .nav-link}
+    - [Changed](#id124){.reference .internal .nav-link}
+    - [Removed](#id125){.reference .internal .nav-link}
+    - [Resolved issues](#id126){.reference .internal .nav-link}
+- [ROCm 7.1.0](#rocm-7-1-0){.reference .internal .nav-link}
+  - [**AMD SMI** (26.1.0)](#amd-smi-26-1-0){.reference .internal .nav-link}
+    - [Added](#id127){.reference .internal .nav-link}
+    - [Changed](#id128){.reference .internal .nav-link}
+    - [Optimized](#id129){.reference .internal .nav-link}
+    - [Resolved issues](#id130){.reference .internal .nav-link}
+  - [**Composable Kernel** (1.1.0)](#id131){.reference .internal .nav-link}
+    - [Added](#id132){.reference .internal .nav-link}
+    - [Upcoming changes](#id133){.reference .internal .nav-link}
+  - [**HIP** (7.1.0)](#hip-7-1-0){.reference .internal .nav-link}
+    - [Added](#id134){.reference .internal .nav-link}
+    - [Optimized](#id135){.reference .internal .nav-link}
+    - [Resolved issues](#id136){.reference .internal .nav-link}
+    - [Known issues](#id137){.reference .internal .nav-link}
+  - [**hipBLAS** (3.1.0)](#hipblas-3-1-0){.reference .internal .nav-link}
+    - [Added](#id138){.reference .internal .nav-link}
+    - [Changed](#id139){.reference .internal .nav-link}
+  - [**hipBLASLt** (1.1.0)](#hipblaslt-1-1-0){.reference .internal .nav-link}
+    - [Added](#id140){.reference .internal .nav-link}
+    - [Changed](#id141){.reference .internal .nav-link}
+    - [Optimized](#id142){.reference .internal .nav-link}
+    - [Resolved issues](#id143){.reference .internal .nav-link}
+  - [**hipCUB** (4.1.0)](#hipcub-4-1-0){.reference .internal .nav-link}
+    - [Added](#id144){.reference .internal .nav-link}
+    - [Changed](#id145){.reference .internal .nav-link}
+    - [Removed](#id146){.reference .internal .nav-link}
+    - [Known issues](#id147){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.21)](#hipfft-1-0-21){.reference .internal .nav-link}
+    - [Added](#id148){.reference .internal .nav-link}
+  - [**hipfort** (0.7.1)](#hipfort-0-7-1){.reference .internal .nav-link}
+    - [Added](#id149){.reference .internal .nav-link}
+    - [Resolved issues](#id150){.reference .internal .nav-link}
+  - [**hipRAND** (3.1.0)](#hiprand-3-1-0){.reference .internal .nav-link}
+    - [Resolved issues](#id151){.reference .internal .nav-link}
+  - [**hipSOLVER** (3.1.0)](#hipsolver-3-1-0){.reference .internal .nav-link}
+    - [Added](#id152){.reference .internal .nav-link}
+    - [Changed](#id153){.reference .internal .nav-link}
+  - [**hipSPARSE** (4.1.0)](#hipsparse-4-1-0){.reference .internal .nav-link}
+    - [Added](#id154){.reference .internal .nav-link}
+  - [**hipSPARSELt** (0.2.5)](#hipsparselt-0-2-5){.reference .internal .nav-link}
+    - [Changed](#id155){.reference .internal .nav-link}
+    - [Optimized](#id156){.reference .internal .nav-link}
+  - [**MIGraphX** (2.14.0)](#id157){.reference .internal .nav-link}
+    - [Added](#id158){.reference .internal .nav-link}
+    - [Changed](#id159){.reference .internal .nav-link}
+    - [Removed](#id160){.reference .internal .nav-link}
+    - [Optimized](#id161){.reference .internal .nav-link}
+    - [Resolved issues](#id162){.reference .internal .nav-link}
+  - [**MIOpen** (3.5.1)](#id163){.reference .internal .nav-link}
+    - [Added](#id164){.reference .internal .nav-link}
+    - [Changed](#id165){.reference .internal .nav-link}
+    - [Optimized](#id166){.reference .internal .nav-link}
+    - [Resolved issues](#id167){.reference .internal .nav-link}
+  - [**MIVisionX** (3.4.0)](#mivisionx-3-4-0){.reference .internal .nav-link}
+    - [Added](#id168){.reference .internal .nav-link}
+    - [Changed](#id169){.reference .internal .nav-link}
+    - [Resolved issues](#id170){.reference .internal .nav-link}
+    - [Known issues](#id171){.reference .internal .nav-link}
+    - [Upcoming changes](#id172){.reference .internal .nav-link}
+  - [**RCCL** (2.27.7)](#id173){.reference .internal .nav-link}
+    - [Added](#id174){.reference .internal .nav-link}
+    - [Changed](#id175){.reference .internal .nav-link}
+    - [Optimized](#id176){.reference .internal .nav-link}
+    - [Known issues](#id177){.reference .internal .nav-link}
+  - [**rocAL** (2.4.0)](#rocal-2-4-0){.reference .internal .nav-link}
+    - [Added](#id178){.reference .internal .nav-link}
+    - [Changed](#id179){.reference .internal .nav-link}
+    - [Resolved issues](#id180){.reference .internal .nav-link}
+    - [Known issues](#id181){.reference .internal .nav-link}
+  - [**rocALUTION** (4.0.1)](#rocalution-4-0-1){.reference .internal .nav-link}
+    - [Added](#id182){.reference .internal .nav-link}
+    - [Changed](#id183){.reference .internal .nav-link}
+    - [Optimized](#id184){.reference .internal .nav-link}
+    - [Resolved issues](#id185){.reference .internal .nav-link}
+  - [**rocBLAS** (5.1.0)](#rocblas-5-1-0){.reference .internal .nav-link}
+    - [Added](#id186){.reference .internal .nav-link}
+    - [Changed](#id187){.reference .internal .nav-link}
+    - [Optimized](#id188){.reference .internal .nav-link}
+  - [**ROCdbgapi** (0.77.4)](#rocdbgapi-0-77-4){.reference .internal .nav-link}
+    - [Added](#id189){.reference .internal .nav-link}
+  - [**rocDecode** (1.4.0)](#rocdecode-1-4-0){.reference .internal .nav-link}
+    - [Added](#id190){.reference .internal .nav-link}
+    - [Resolved issues](#id191){.reference .internal .nav-link}
+    - [Changed](#id192){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.35)](#rocfft-1-0-35){.reference .internal .nav-link}
+    - [Optimized](#id193){.reference .internal .nav-link}
+  - [**rocJPEG** (1.2.0)](#rocjpeg-1-2-0){.reference .internal .nav-link}
+    - [Changed](#id194){.reference .internal .nav-link}
+    - [Resolved issues](#id195){.reference .internal .nav-link}
+  - [**ROCm Compute Profiler** (3.3.0)](#rocm-compute-profiler-3-3-0){.reference .internal .nav-link}
+    - [Added](#id196){.reference .internal .nav-link}
+    - [Changed](#id197){.reference .internal .nav-link}
+    - [Removed](#id198){.reference .internal .nav-link}
+    - [Optimized](#id199){.reference .internal .nav-link}
+    - [Resolved issues](#id200){.reference .internal .nav-link}
+    - [Known issues](#id201){.reference .internal .nav-link}
+  - [**ROCm Data Center Tool** (1.2.0)](#rocm-data-center-tool-1-2-0){.reference .internal .nav-link}
+    - [Added](#id202){.reference .internal .nav-link}
+    - [Optimized](#id203){.reference .internal .nav-link}
+    - [Resolved issues](#id204){.reference .internal .nav-link}
+  - [**ROCm Debugger (ROCgdb)** (16.3)](#rocm-debugger-rocgdb-16-3){.reference .internal .nav-link}
+    - [Added](#id205){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (1.2.0)](#rocm-systems-profiler-1-2-0){.reference .internal .nav-link}
+    - [Added](#id206){.reference .internal .nav-link}
+    - [Changed](#id207){.reference .internal .nav-link}
+    - [Known issues](#id208){.reference .internal .nav-link}
+  - [**rocPRIM** (4.1.0)](#rocprim-4-1-0){.reference .internal .nav-link}
+    - [Added](#id209){.reference .internal .nav-link}
+    - [Changed](#id210){.reference .internal .nav-link}
+    - [Optimized](#id211){.reference .internal .nav-link}
+    - [Resolved issues](#id212){.reference .internal .nav-link}
+    - [Upcoming changes](#id213){.reference .internal .nav-link}
+  - [**ROCProfiler** (2.0.0)](#rocprofiler-2-0-0){.reference .internal .nav-link}
+    - [Removed](#id214){.reference .internal .nav-link}
+  - [**ROCprofiler-SDK** (1.0.0)](#rocprofiler-sdk-1-0-0){.reference .internal .nav-link}
+    - [Added](#id215){.reference .internal .nav-link}
+    - [Optimized](#id216){.reference .internal .nav-link}
+  - [**rocPyDecode** (0.7.0)](#rocpydecode-0-7-0){.reference .internal .nav-link}
+    - [Added](#id217){.reference .internal .nav-link}
+    - [Changed](#id218){.reference .internal .nav-link}
+    - [Resolved issues](#id219){.reference .internal .nav-link}
+  - [**rocRAND** (4.1.0)](#rocrand-4-1-0){.reference .internal .nav-link}
+    - [Changed](#id220){.reference .internal .nav-link}
+    - [Resolved issues](#id221){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.31.0)](#rocsolver-3-31-0){.reference .internal .nav-link}
+    - [Optimized](#id222){.reference .internal .nav-link}
+  - [**rocSPARSE** (4.1.0)](#rocsparse-4-1-0){.reference .internal .nav-link}
+    - [Added](#id223){.reference .internal .nav-link}
+    - [Optimized](#id224){.reference .internal .nav-link}
+    - [Upcoming changes](#id225){.reference .internal .nav-link}
+  - [**rocThrust** (4.1.0)](#rocthrust-4-1-0){.reference .internal .nav-link}
+    - [Added](#id226){.reference .internal .nav-link}
+    - [Changed](#id227){.reference .internal .nav-link}
+    - [Removed](#id228){.reference .internal .nav-link}
+    - [Known issues](#id229){.reference .internal .nav-link}
+  - [**RPP** (2.1.0)](#rpp-2-1-0){.reference .internal .nav-link}
+    - [Added](#id230){.reference .internal .nav-link}
+    - [Changed](#id231){.reference .internal .nav-link}
+    - [Removed](#id232){.reference .internal .nav-link}
+    - [Resolved issues](#id233){.reference .internal .nav-link}
+- [ROCm 7.0.2](#rocm-7-0-2){.reference .internal .nav-link}
+  - [**AMD SMI** (26.0.2)](#amd-smi-26-0-2){.reference .internal .nav-link}
+    - [Added](#id234){.reference .internal .nav-link}
+    - [Removed](#id235){.reference .internal .nav-link}
+    - [Resolved Issues](#id236){.reference .internal .nav-link}
+  - [**HIP** (7.0.2)](#hip-7-0-2){.reference .internal .nav-link}
+    - [Added](#id237){.reference .internal .nav-link}
+    - [Resolved issues](#id238){.reference .internal .nav-link}
+  - [**hipBLAS** (3.0.2)](#hipblas-3-0-2){.reference .internal .nav-link}
+    - [Added](#id239){.reference .internal .nav-link}
+  - [**RCCL** (2.26.6)](#rccl-2-26-6){.reference .internal .nav-link}
+    - [Added](#id240){.reference .internal .nav-link}
+  - [**rocBLAS** (5.0.2)](#rocblas-5-0-2){.reference .internal .nav-link}
+    - [Added](#id241){.reference .internal .nav-link}
+    - [Resolved issues](#id242){.reference .internal .nav-link}
+  - [**ROCdbgapi** (0.77.4)](#id243){.reference .internal .nav-link}
+    - [Added](#id244){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (1.1.1)](#rocm-systems-profiler-1-1-1){.reference .internal .nav-link}
+    - [Resolved issues](#id245){.reference .internal .nav-link}
+  - [**rocPRIM** (4.0.1)](#rocprim-4-0-1){.reference .internal .nav-link}
+    - [Resolved issues](#id246){.reference .internal .nav-link}
+  - [**rocSPARSE** (4.0.3)](#rocsparse-4-0-3){.reference .internal .nav-link}
+    - [Resolved issues](#id247){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.30.1)](#rocsolver-3-30-1){.reference .internal .nav-link}
+    - [Optimized](#id248){.reference .internal .nav-link}
+- [ROCm 7.0.1](#rocm-7-0-1){.reference .internal .nav-link}
+- [ROCm 7.0.0](#rocm-7-0-0){.reference .internal .nav-link}
+  - [**AMD SMI** (26.0.0)](#amd-smi-26-0-0){.reference .internal .nav-link}
+    - [Added](#id249){.reference .internal .nav-link}
+    - [Changed](#id250){.reference .internal .nav-link}
+    - [Removed](#id251){.reference .internal .nav-link}
+    - [Optimized](#id252){.reference .internal .nav-link}
+    - [Resolved issues](#id253){.reference .internal .nav-link}
+    - [Known issues](#id254){.reference .internal .nav-link}
+  - [**Composable Kernel** (1.1.0)](#id255){.reference .internal .nav-link}
+    - [Added](#id256){.reference .internal .nav-link}
+    - [Changed](#id257){.reference .internal .nav-link}
+    - [Removed](#id258){.reference .internal .nav-link}
+    - [Optimized](#id259){.reference .internal .nav-link}
+  - [**HIP** 7.0.0](#hip-7-0-0){.reference .internal .nav-link}
+    - [Added](#id260){.reference .internal .nav-link}
+    - [Changed](#id261){.reference .internal .nav-link}
+    - [Optimized](#id262){.reference .internal .nav-link}
+    - [Resolved issues](#id263){.reference .internal .nav-link}
+    - [Known issues](#id264){.reference .internal .nav-link}
+  - [**hipBLAS** (3.0.0)](#hipblas-3-0-0){.reference .internal .nav-link}
+    - [Added](#id265){.reference .internal .nav-link}
+    - [Changed](#id266){.reference .internal .nav-link}
+    - [Removed](#id267){.reference .internal .nav-link}
+    - [Resolved issues](#id268){.reference .internal .nav-link}
+  - [**hipBLASLt** (1.0.0)](#hipblaslt-1-0-0){.reference .internal .nav-link}
+    - [Added](#id269){.reference .internal .nav-link}
+    - [Changed](#id270){.reference .internal .nav-link}
+    - [Removed](#id271){.reference .internal .nav-link}
+    - [Optimized](#id272){.reference .internal .nav-link}
+    - [Upcoming changes](#id273){.reference .internal .nav-link}
+  - [**hipCUB** (4.0.0)](#hipcub-4-0-0){.reference .internal .nav-link}
+    - [Added](#id274){.reference .internal .nav-link}
+    - [Changed](#id275){.reference .internal .nav-link}
+    - [Removed](#id276){.reference .internal .nav-link}
+    - [Resolved issues](#id277){.reference .internal .nav-link}
+    - [Known issues](#id278){.reference .internal .nav-link}
+    - [Upcoming changes](#id279){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.20)](#hipfft-1-0-20){.reference .internal .nav-link}
+    - [Added](#id280){.reference .internal .nav-link}
+    - [Removed](#id281){.reference .internal .nav-link}
+  - [**hipfort** (0.7.0)](#hipfort-0-7-0){.reference .internal .nav-link}
+    - [Added](#id282){.reference .internal .nav-link}
+    - [Changed](#id283){.reference .internal .nav-link}
+  - [**HIPIFY** (20.0.0)](#hipify-20-0-0){.reference .internal .nav-link}
+    - [Added](#id284){.reference .internal .nav-link}
+    - [Resolved issues](#id285){.reference .internal .nav-link}
+  - [**hipRAND** (3.0.0)](#hiprand-3-0-0){.reference .internal .nav-link}
+    - [Added](#id286){.reference .internal .nav-link}
+    - [Changed](#id287){.reference .internal .nav-link}
+    - [Removed](#id288){.reference .internal .nav-link}
+  - [**hipSOLVER** (3.0.0)](#hipsolver-3-0-0){.reference .internal .nav-link}
+    - [Added](#id289){.reference .internal .nav-link}
+    - [Resolved issues](#id290){.reference .internal .nav-link}
+  - [**hipSPARSE** (4.0.1)](#hipsparse-4-0-1){.reference .internal .nav-link}
+    - [Added](#id291){.reference .internal .nav-link}
+    - [Changed](#id292){.reference .internal .nav-link}
+    - [Resolved issues](#id293){.reference .internal .nav-link}
+    - [Known issues](#id294){.reference .internal .nav-link}
+  - [**hipSPARSELt** (0.2.4)](#hipsparselt-0-2-4){.reference .internal .nav-link}
+    - [Added](#id295){.reference .internal .nav-link}
+    - [Removed](#id296){.reference .internal .nav-link}
+    - [Optimized](#id297){.reference .internal .nav-link}
+  - [**hipTensor** (2.0.0)](#hiptensor-2-0-0){.reference .internal .nav-link}
+    - [Added](#id298){.reference .internal .nav-link}
+    - [Changed](#id299){.reference .internal .nav-link}
+  - [**llvm-project** (20.0.0)](#llvm-project-20-0-0){.reference .internal .nav-link}
+    - [Added](#id300){.reference .internal .nav-link}
+    - [Changed](#id301){.reference .internal .nav-link}
+    - [Optimized](#id302){.reference .internal .nav-link}
+    - [Upcoming changes](#id303){.reference .internal .nav-link}
+  - [**MIGraphX** (2.13.0)](#migraphx-2-13-0){.reference .internal .nav-link}
+    - [Added](#id304){.reference .internal .nav-link}
+    - [Changed](#id305){.reference .internal .nav-link}
+    - [Removed](#id306){.reference .internal .nav-link}
+    - [Optimized](#id307){.reference .internal .nav-link}
+    - [Resolved issues](#id308){.reference .internal .nav-link}
+  - [**MIOpen** (3.5.0)](#miopen-3-5-0){.reference .internal .nav-link}
+    - [Added](#id309){.reference .internal .nav-link}
+    - [Changed](#id310){.reference .internal .nav-link}
+    - [Optimized](#id311){.reference .internal .nav-link}
+    - [Resolved issues](#id312){.reference .internal .nav-link}
+  - [**MIVisionX** (3.3.0)](#mivisionx-3-3-0){.reference .internal .nav-link}
+    - [Added](#id313){.reference .internal .nav-link}
+    - [Changed](#id314){.reference .internal .nav-link}
+    - [Known issues](#id315){.reference .internal .nav-link}
+    - [Upcoming changes](#id316){.reference .internal .nav-link}
+  - [**RCCL** (2.26.6)](#id317){.reference .internal .nav-link}
+    - [Added](#id318){.reference .internal .nav-link}
+    - [Changed](#id319){.reference .internal .nav-link}
+    - [Optimized](#id320){.reference .internal .nav-link}
+    - [Resolved issues](#id321){.reference .internal .nav-link}
+  - [**rocAL** (2.3.0)](#rocal-2-3-0){.reference .internal .nav-link}
+    - [Added](#id322){.reference .internal .nav-link}
+    - [Resolved issues](#id323){.reference .internal .nav-link}
+    - [Known issues](#id324){.reference .internal .nav-link}
+    - [Upcoming changes](#id325){.reference .internal .nav-link}
+  - [**rocALUTION** (4.0.0)](#rocalution-4-0-0){.reference .internal .nav-link}
+    - [Added](#id326){.reference .internal .nav-link}
+    - [Changed](#id327){.reference .internal .nav-link}
+    - [Optimized](#id328){.reference .internal .nav-link}
+    - [Resolved issues](#id329){.reference .internal .nav-link}
+  - [**rocBLAS** (5.0.0)](#rocblas-5-0-0){.reference .internal .nav-link}
+    - [Added](#id330){.reference .internal .nav-link}
+    - [Changed](#id331){.reference .internal .nav-link}
+    - [Removed](#id332){.reference .internal .nav-link}
+    - [Optimized](#id333){.reference .internal .nav-link}
+    - [Resolved issues](#id334){.reference .internal .nav-link}
+    - [Upcoming changes](#id335){.reference .internal .nav-link}
+  - [**ROCdbgapi** (0.77.3)](#rocdbgapi-0-77-3){.reference .internal .nav-link}
+    - [Added](#id336){.reference .internal .nav-link}
+    - [Removed](#id337){.reference .internal .nav-link}
+  - [**rocDecode** (1.0.0)](#rocdecode-1-0-0){.reference .internal .nav-link}
+    - [Added](#id338){.reference .internal .nav-link}
+    - [Changed](#id339){.reference .internal .nav-link}
+    - [Removed](#id340){.reference .internal .nav-link}
+    - [Optimized](#id341){.reference .internal .nav-link}
+    - [Resolved issues](#id342){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.34)](#rocfft-1-0-34){.reference .internal .nav-link}
+    - [Added](#id343){.reference .internal .nav-link}
+    - [Removed](#id344){.reference .internal .nav-link}
+    - [Optimized](#id345){.reference .internal .nav-link}
+    - [Resolved issues](#id346){.reference .internal .nav-link}
+  - [**ROCgdb** (16.3)](#rocgdb-16-3){.reference .internal .nav-link}
+    - [Added](#id347){.reference .internal .nav-link}
+    - [Removed](#id348){.reference .internal .nav-link}
+  - [**rocJPEG** (1.1.0)](#rocjpeg-1-1-0){.reference .internal .nav-link}
+    - [Added](#id349){.reference .internal .nav-link}
+    - [Changed](#id350){.reference .internal .nav-link}
+    - [Removed](#id351){.reference .internal .nav-link}
+    - [Resolved issues](#id352){.reference .internal .nav-link}
+  - [**ROCm Bandwidth Test** (2.6.0)](#id353){.reference .internal .nav-link}
+    - [Added](#id354){.reference .internal .nav-link}
+    - [Changed](#id355){.reference .internal .nav-link}
+    - [Removed](#id356){.reference .internal .nav-link}
+  - [**ROCm Compute Profiler** (3.2.3)](#rocm-compute-profiler-3-2-3){.reference .internal .nav-link}
+    - [Added](#id357){.reference .internal .nav-link}
+      - [CDNA4 (AMD Instinct MI350/MI355) support](#cdna4-amd-instinct-mi350-mi355-support){.reference .internal .nav-link}
+      - [Textual User Interface (TUI) (beta version)](#textual-user-interface-tui-beta-version){.reference .internal .nav-link}
+      - [PC Sampling (beta version)](#pc-sampling-beta-version){.reference .internal .nav-link}
+      - [Roofline](#roofline){.reference .internal .nav-link}
+      - [rocprofv3 support](#rocprofv3-support){.reference .internal .nav-link}
+      - [Others](#others){.reference .internal .nav-link}
+    - [Changed](#id358){.reference .internal .nav-link}
+    - [Removed](#id359){.reference .internal .nav-link}
+    - [Optimized](#id360){.reference .internal .nav-link}
+    - [Resolved issues](#id361){.reference .internal .nav-link}
+    - [Known issues](#id362){.reference .internal .nav-link}
+    - [Upcoming changes](#id363){.reference .internal .nav-link}
+  - [**ROCm Data Center Tool** (1.1.0)](#rocm-data-center-tool-1-1-0){.reference .internal .nav-link}
+    - [Added](#id364){.reference .internal .nav-link}
+    - [Changed](#id365){.reference .internal .nav-link}
+    - [Optimized](#id366){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.8.0)](#rocm-smi-7-8-0){.reference .internal .nav-link}
+    - [Added](#id367){.reference .internal .nav-link}
+    - [Removed](#id368){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (1.1.0)](#rocm-systems-profiler-1-1-0){.reference .internal .nav-link}
+    - [Added](#id369){.reference .internal .nav-link}
+    - [Changed](#id370){.reference .internal .nav-link}
+    - [Resolved issues](#id371){.reference .internal .nav-link}
+  - [**ROCm Validation Suite** (1.2.0)](#rocm-validation-suite-1-2-0){.reference .internal .nav-link}
+    - [Added](#id372){.reference .internal .nav-link}
+    - [Changed](#id373){.reference .internal .nav-link}
+  - [**rocPRIM** (4.0.0)](#rocprim-4-0-0){.reference .internal .nav-link}
+    - [Added](#id374){.reference .internal .nav-link}
+    - [Changed](#id375){.reference .internal .nav-link}
+    - [Removed](#id376){.reference .internal .nav-link}
+    - [Optimized](#id377){.reference .internal .nav-link}
+    - [Resolved issues](#id378){.reference .internal .nav-link}
+    - [Known issues](#id379){.reference .internal .nav-link}
+    - [Upcoming changes](#id380){.reference .internal .nav-link}
+  - [**ROCprofiler-SDK** (1.0.0)](#id381){.reference .internal .nav-link}
+    - [Added](#id382){.reference .internal .nav-link}
+    - [Changed](#id383){.reference .internal .nav-link}
+      - [Removed](#id384){.reference .internal .nav-link}
+    - [Resolved issues](#id385){.reference .internal .nav-link}
+  - [**rocPyDecode** (0.6.0)](#rocpydecode-0-6-0){.reference .internal .nav-link}
+    - [Added](#id386){.reference .internal .nav-link}
+    - [Changed](#id387){.reference .internal .nav-link}
+  - [**rocRAND** (4.0.0)](#rocrand-4-0-0){.reference .internal .nav-link}
+    - [Added](#id388){.reference .internal .nav-link}
+    - [Changed](#id389){.reference .internal .nav-link}
+    - [Removed](#id390){.reference .internal .nav-link}
+    - [Resolved issues](#id391){.reference .internal .nav-link}
+    - [Upcoming changes](#id392){.reference .internal .nav-link}
+  - [**ROCr Debug Agent** (2.1.0)](#rocr-debug-agent-2-1-0){.reference .internal .nav-link}
+    - [Added](#id393){.reference .internal .nav-link}
+  - [**ROCr Runtime** (1.18.0)](#rocr-runtime-1-18-0){.reference .internal .nav-link}
+    - [Added](#id394){.reference .internal .nav-link}
+  - [**rocSHMEM** (3.0.0)](#rocshmem-3-0-0){.reference .internal .nav-link}
+    - [Added](#id395){.reference .internal .nav-link}
+    - [Changed](#id396){.reference .internal .nav-link}
+    - [Resolved issues](#id397){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.30.0)](#rocsolver-3-30-0){.reference .internal .nav-link}
+    - [Added](#id398){.reference .internal .nav-link}
+    - [Optimized](#id399){.reference .internal .nav-link}
+    - [Resolved issues](#id400){.reference .internal .nav-link}
+  - [**rocSPARSE** (4.0.2)](#rocsparse-4-0-2){.reference .internal .nav-link}
+    - [Added](#id401){.reference .internal .nav-link}
+    - [Changed](#id402){.reference .internal .nav-link}
+    - [Removed](#id403){.reference .internal .nav-link}
+    - [Optimized](#id404){.reference .internal .nav-link}
+    - [Resolved issues](#id405){.reference .internal .nav-link}
+    - [Upcoming changes](#id406){.reference .internal .nav-link}
+  - [**rocThrust** (4.0.0)](#rocthrust-4-0-0){.reference .internal .nav-link}
+    - [Added](#id407){.reference .internal .nav-link}
+    - [Changed](#id408){.reference .internal .nav-link}
+    - [Removed](#id409){.reference .internal .nav-link}
+    - [Resolved issues](#id410){.reference .internal .nav-link}
+    - [Known issues](#id411){.reference .internal .nav-link}
+    - [Upcoming changes](#id412){.reference .internal .nav-link}
+  - [**rocWMMA** (2.0.0)](#rocwmma-2-0-0){.reference .internal .nav-link}
+    - [Added](#id413){.reference .internal .nav-link}
+    - [Changed](#id414){.reference .internal .nav-link}
+    - [Removed](#id415){.reference .internal .nav-link}
+    - [Optimized](#id416){.reference .internal .nav-link}
+    - [Resolved issues](#id417){.reference .internal .nav-link}
+  - [**RPP** (2.0.0)](#rpp-2-0-0){.reference .internal .nav-link}
+    - [Added](#id418){.reference .internal .nav-link}
+    - [Changed](#id419){.reference .internal .nav-link}
+    - [Removed](#id420){.reference .internal .nav-link}
+    - [Resolved issues](#id421){.reference .internal .nav-link}
+  - [**Tensile** (4.44.0)](#tensile-4-44-0){.reference .internal .nav-link}
+    - [Added](#id422){.reference .internal .nav-link}
+    - [Changed](#id423){.reference .internal .nav-link}
+    - [Removed](#id424){.reference .internal .nav-link}
+    - [Resolved issues](#id425){.reference .internal .nav-link}
+- [ROCm 6.4.3](#rocm-6-4-3){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.7.0)](#rocm-smi-7-7-0){.reference .internal .nav-link}
+    - [Added](#id426){.reference .internal .nav-link}
+- [ROCm 6.4.2](#rocm-6-4-2){.reference .internal .nav-link}
+  - [**AMD SMI** (25.5.1)](#amd-smi-25-5-1){.reference .internal .nav-link}
+    - [Added](#id427){.reference .internal .nav-link}
+    - [Changed](#id428){.reference .internal .nav-link}
+    - [Resolved issues](#id429){.reference .internal .nav-link}
+  - [**HIP** (6.4.2)](#hip-6-4-2){.reference .internal .nav-link}
+    - [Added](#id430){.reference .internal .nav-link}
+    - [Optimized](#id431){.reference .internal .nav-link}
+    - [Resolved issues](#id432){.reference .internal .nav-link}
+  - [**hipBLASLt** (0.12.1)](#hipblaslt-0-12-1){.reference .internal .nav-link}
+    - [Added](#id433){.reference .internal .nav-link}
+  - [**RCCL** (2.22.3)](#rccl-2-22-3){.reference .internal .nav-link}
+    - [Added](#id434){.reference .internal .nav-link}
+  - [**rocBLAS** (4.4.1)](#rocblas-4-4-1){.reference .internal .nav-link}
+    - [Resolved issues](#id435){.reference .internal .nav-link}
+  - [**ROCm Compute Profiler** (3.1.1)](#rocm-compute-profiler-3-1-1){.reference .internal .nav-link}
+    - [Added](#id436){.reference .internal .nav-link}
+    - [Changed](#id437){.reference .internal .nav-link}
+    - [Resolved issues](#id438){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (1.0.2)](#rocm-systems-profiler-1-0-2){.reference .internal .nav-link}
+    - [Optimized](#id439){.reference .internal .nav-link}
+    - [Resolved issues](#id440){.reference .internal .nav-link}
+  - [**ROCm Validation Suite** (1.1.0)](#rocm-validation-suite-1-1-0){.reference .internal .nav-link}
+    - [Added](#id441){.reference .internal .nav-link}
+  - [**rocPRIM** (3.4.1)](#rocprim-3-4-1){.reference .internal .nav-link}
+    - [Upcoming changes](#id442){.reference .internal .nav-link}
+  - [**rocSHMEM** (2.0.1)](#rocshmem-2-0-1){.reference .internal .nav-link}
+    - [Resolved issues](#id443){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.28.2)](#rocsolver-3-28-2){.reference .internal .nav-link}
+    - [Added](#id444){.reference .internal .nav-link}
+    - [Optimized](#id445){.reference .internal .nav-link}
+- [ROCm 6.4.1](#rocm-6-4-1){.reference .internal .nav-link}
+  - [**AMD SMI** (25.4.2)](#amd-smi-25-4-2){.reference .internal .nav-link}
+    - [Added](#id446){.reference .internal .nav-link}
+    - [Changed](#id447){.reference .internal .nav-link}
+    - [Optimized](#id448){.reference .internal .nav-link}
+    - [Resolved issues](#id449){.reference .internal .nav-link}
+    - [Known issues](#id450){.reference .internal .nav-link}
+  - [**HIP** (6.4.1)](#hip-6-4-1){.reference .internal .nav-link}
+    - [Added](#id451){.reference .internal .nav-link}
+    - [Changed](#id452){.reference .internal .nav-link}
+    - [Optimized](#id453){.reference .internal .nav-link}
+    - [Resolved issues](#id454){.reference .internal .nav-link}
+  - [**hipBLASLt** (0.12.1)](#id455){.reference .internal .nav-link}
+    - [Resolved issues](#id456){.reference .internal .nav-link}
+  - [**RCCL** (2.22.3)](#id457){.reference .internal .nav-link}
+    - [Changed](#id458){.reference .internal .nav-link}
+    - [Resolved issues](#id459){.reference .internal .nav-link}
+    - [Known issues](#id460){.reference .internal .nav-link}
+  - [**rocALUTION** (3.2.3)](#rocalution-3-2-3){.reference .internal .nav-link}
+    - [Added](#id461){.reference .internal .nav-link}
+    - [Resolved issues](#id462){.reference .internal .nav-link}
+  - [**ROCm Data Center Tool** (0.3.0)](#rocm-data-center-tool-0-3-0){.reference .internal .nav-link}
+    - [Added](#id463){.reference .internal .nav-link}
+    - [Changed](#id464){.reference .internal .nav-link}
+    - [Resolved issues](#id465){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.5.0)](#rocm-smi-7-5-0){.reference .internal .nav-link}
+    - [Resolved issues](#id466){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (1.0.1)](#rocm-systems-profiler-1-0-1){.reference .internal .nav-link}
+    - [Added](#id467){.reference .internal .nav-link}
+    - [Resolved issues](#id468){.reference .internal .nav-link}
+  - [**ROCr Runtime** (1.15.0)](#rocr-runtime-1-15-0){.reference .internal .nav-link}
+    - [Resolved issues](#id469){.reference .internal .nav-link}
+- [ROCm 6.4.0](#rocm-6-4-0){.reference .internal .nav-link}
+  - [**AMD SMI** (25.3.0)](#amd-smi-25-3-0){.reference .internal .nav-link}
+    - [Added](#id470){.reference .internal .nav-link}
+    - [Changed](#id471){.reference .internal .nav-link}
+    - [Removed](#id472){.reference .internal .nav-link}
+    - [Optimized](#id473){.reference .internal .nav-link}
+    - [Resolved issues](#id474){.reference .internal .nav-link}
+    - [Known issues](#id475){.reference .internal .nav-link}
+    - [Upcoming changes](#id476){.reference .internal .nav-link}
+  - [**AMDMIGraphX** (2.12.0)](#amdmigraphx-2-12-0){.reference .internal .nav-link}
+    - [Added](#id477){.reference .internal .nav-link}
+    - [Changed](#id478){.reference .internal .nav-link}
+    - [Removed](#id479){.reference .internal .nav-link}
+    - [Optimized](#id480){.reference .internal .nav-link}
+    - [Resolved issues](#id481){.reference .internal .nav-link}
+  - [**Composable Kernel** (1.1.0)](#id482){.reference .internal .nav-link}
+    - [Added](#id483){.reference .internal .nav-link}
+    - [Changed](#id484){.reference .internal .nav-link}
+    - [Removed](#id485){.reference .internal .nav-link}
+    - [Optimized](#id486){.reference .internal .nav-link}
+    - [Resolved issues](#id487){.reference .internal .nav-link}
+  - [**HIP** (6.4.0)](#hip-6-4-0){.reference .internal .nav-link}
+    - [Added](#id488){.reference .internal .nav-link}
+    - [Changed](#id489){.reference .internal .nav-link}
+    - [Optimized](#id490){.reference .internal .nav-link}
+    - [Resolved issues](#id491){.reference .internal .nav-link}
+    - [Upcoming changes](#id492){.reference .internal .nav-link}
+  - [**hipBLAS** (2.4.0)](#hipblas-2-4-0){.reference .internal .nav-link}
+    - [Changed](#id493){.reference .internal .nav-link}
+    - [Resolved issues](#id494){.reference .internal .nav-link}
+  - [**hipBLASLt** (0.12.0)](#hipblaslt-0-12-0){.reference .internal .nav-link}
+    - [Added](#id495){.reference .internal .nav-link}
+    - [Changed](#id496){.reference .internal .nav-link}
+    - [Optimized](#id497){.reference .internal .nav-link}
+    - [Resolved issues](#id498){.reference .internal .nav-link}
+  - [**hipCUB** (3.4.0)](#hipcub-3-4-0){.reference .internal .nav-link}
+    - [Added](#id499){.reference .internal .nav-link}
+    - [Changed](#id500){.reference .internal .nav-link}
+    - [Known issues](#id501){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.18)](#hipfft-1-0-18){.reference .internal .nav-link}
+    - [Added](#id502){.reference .internal .nav-link}
+    - [Changed](#id503){.reference .internal .nav-link}
+    - [Resolved issues](#id504){.reference .internal .nav-link}
+  - [**hipfort** (0.6.0)](#hipfort-0-6-0){.reference .internal .nav-link}
+    - [Upcoming changes](#id505){.reference .internal .nav-link}
+  - [**HIPIFY** (19.0.0)](#hipify-19-0-0){.reference .internal .nav-link}
+    - [Added](#id506){.reference .internal .nav-link}
+    - [Resolved issues](#id507){.reference .internal .nav-link}
+    - [Known issues](#id508){.reference .internal .nav-link}
+  - [**hipRAND** (2.12.0)](#hiprand-2-12-0){.reference .internal .nav-link}
+    - [Changed](#id509){.reference .internal .nav-link}
+    - [Resolved issues](#id510){.reference .internal .nav-link}
+  - [**hipSOLVER** (2.4.0)](#hipsolver-2-4-0){.reference .internal .nav-link}
+    - [Added](#id511){.reference .internal .nav-link}
+  - [**hipSPARSE** (3.2.0)](#hipsparse-3-2-0){.reference .internal .nav-link}
+    - [Added](#id512){.reference .internal .nav-link}
+    - [Optimized](#id513){.reference .internal .nav-link}
+  - [**hipSPARSELt** (0.2.3)](#hipsparselt-0-2-3){.reference .internal .nav-link}
+    - [Added](#id514){.reference .internal .nav-link}
+    - [Changed](#id515){.reference .internal .nav-link}
+  - [**hipTensor** (1.5.0)](#hiptensor-1-5-0){.reference .internal .nav-link}
+    - [Added](#id516){.reference .internal .nav-link}
+    - [Changed](#id517){.reference .internal .nav-link}
+    - [Optimized](#id518){.reference .internal .nav-link}
+    - [Resolved issues](#id519){.reference .internal .nav-link}
+    - [Upcoming changes](#id520){.reference .internal .nav-link}
+  - [**llvm-project** (19.0.0)](#llvm-project-19-0-0){.reference .internal .nav-link}
+    - [Added](#id521){.reference .internal .nav-link}
+  - [**MIOpen** (3.4.0)](#miopen-3-4-0){.reference .internal .nav-link}
+    - [Added](#id522){.reference .internal .nav-link}
+    - [Optimized](#id523){.reference .internal .nav-link}
+    - [Resolved issues](#id524){.reference .internal .nav-link}
+  - [**MIVisionX** (3.2.0)](#mivisionx-3-2-0){.reference .internal .nav-link}
+    - [Changed](#id525){.reference .internal .nav-link}
+    - [Known issues](#id526){.reference .internal .nav-link}
+    - [Upcoming changes](#id527){.reference .internal .nav-link}
+  - [**rccl** (2.22.3)](#id528){.reference .internal .nav-link}
+    - [Added](#id529){.reference .internal .nav-link}
+    - [Changed](#id530){.reference .internal .nav-link}
+  - [**rocAL** (2.2.0)](#rocal-2-2-0){.reference .internal .nav-link}
+    - [Changed](#id531){.reference .internal .nav-link}
+    - [Known issues](#id532){.reference .internal .nav-link}
+  - [**rocALUTION** (3.2.2)](#rocalution-3-2-2){.reference .internal .nav-link}
+    - [Changed](#id533){.reference .internal .nav-link}
+  - [**rocBLAS** (4.4.0)](#rocblas-4-4-0){.reference .internal .nav-link}
+    - [Added](#id534){.reference .internal .nav-link}
+    - [Changed](#id535){.reference .internal .nav-link}
+    - [Optimized](#id536){.reference .internal .nav-link}
+    - [Resolved issues](#id537){.reference .internal .nav-link}
+    - [Upcoming changes](#id538){.reference .internal .nav-link}
+  - [**ROCdbgapi** (0.77.2)](#rocdbgapi-0-77-2){.reference .internal .nav-link}
+    - [Added](#id539){.reference .internal .nav-link}
+    - [Changed](#id540){.reference .internal .nav-link}
+  - [**rocDecode** (0.10.0)](#rocdecode-0-10-0){.reference .internal .nav-link}
+    - [Added](#id541){.reference .internal .nav-link}
+    - [Changed](#id542){.reference .internal .nav-link}
+    - [Removed](#id543){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.32)](#rocfft-1-0-32){.reference .internal .nav-link}
+    - [Changed](#id544){.reference .internal .nav-link}
+    - [Removed](#id545){.reference .internal .nav-link}
+    - [Optimized](#id546){.reference .internal .nav-link}
+    - [Resolved issues](#id547){.reference .internal .nav-link}
+  - [**ROCm Compute Profiler** (3.1.0)](#rocm-compute-profiler-3-1-0){.reference .internal .nav-link}
+    - [Added](#id548){.reference .internal .nav-link}
+    - [Resolved issues](#id549){.reference .internal .nav-link}
+  - [**ROCgdb** (15.2)](#rocgdb-15-2){.reference .internal .nav-link}
+    - [Added](#id550){.reference .internal .nav-link}
+  - [**ROCm Data Center Tool** (0.3.0)](#id551){.reference .internal .nav-link}
+    - [Added](#id552){.reference .internal .nav-link}
+    - [Changed](#id553){.reference .internal .nav-link}
+    - [Resolved issues](#id554){.reference .internal .nav-link}
+  - [**rocJPEG** (0.8.0)](#rocjpeg-0-8-0){.reference .internal .nav-link}
+    - [Changed](#id555){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.5.0)](#id556){.reference .internal .nav-link}
+    - [Added](#id557){.reference .internal .nav-link}
+    - [Resolved issues](#id558){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (1.0.0)](#rocm-systems-profiler-1-0-0){.reference .internal .nav-link}
+    - [Added](#id559){.reference .internal .nav-link}
+    - [Changed](#id560){.reference .internal .nav-link}
+    - [Resolved issues](#id561){.reference .internal .nav-link}
+  - [**ROCm Validation Suite** (1.1.0)](#id562){.reference .internal .nav-link}
+    - [Added](#id563){.reference .internal .nav-link}
+    - [Changed](#id564){.reference .internal .nav-link}
+  - [**rocPRIM** (3.4.0)](#rocprim-3-4-0){.reference .internal .nav-link}
+    - [Added](#id565){.reference .internal .nav-link}
+    - [Changed](#id566){.reference .internal .nav-link}
+    - [Removed](#id567){.reference .internal .nav-link}
+    - [Resolved issues](#id568){.reference .internal .nav-link}
+    - [Upcoming changes](#id569){.reference .internal .nav-link}
+  - [**ROCProfiler** (2.0.0)](#id570){.reference .internal .nav-link}
+    - [Added](#id571){.reference .internal .nav-link}
+    - [Changed](#id572){.reference .internal .nav-link}
+    - [Resolved issues](#id573){.reference .internal .nav-link}
+  - [**ROCprofiler-SDK** (0.6.0)](#rocprofiler-sdk-0-6-0){.reference .internal .nav-link}
+    - [Added](#id574){.reference .internal .nav-link}
+  - [**rocPyDecode** (0.3.1)](#rocpydecode-0-3-1){.reference .internal .nav-link}
+    - [Added](#id575){.reference .internal .nav-link}
+    - [Changed](#id576){.reference .internal .nav-link}
+    - [Removed](#id577){.reference .internal .nav-link}
+    - [Resolved issues](#id578){.reference .internal .nav-link}
+  - [**rocRAND** (3.3.0)](#rocrand-3-3-0){.reference .internal .nav-link}
+    - [Added](#id579){.reference .internal .nav-link}
+    - [Changed](#id580){.reference .internal .nav-link}
+  - [**ROCr Debug Agent** (2.0.4)](#rocr-debug-agent-2-0-4){.reference .internal .nav-link}
+    - [Added](#id581){.reference .internal .nav-link}
+  - [**ROCr Runtime** (1.15.0)](#id582){.reference .internal .nav-link}
+    - [Added](#id583){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.28.0)](#rocsolver-3-28-0){.reference .internal .nav-link}
+    - [Added](#id584){.reference .internal .nav-link}
+    - [Optimized](#id585){.reference .internal .nav-link}
+  - [**rocSPARSE** (3.4.0)](#rocsparse-3-4-0){.reference .internal .nav-link}
+    - [Added](#id586){.reference .internal .nav-link}
+    - [Changed](#id587){.reference .internal .nav-link}
+    - [Optimized](#id588){.reference .internal .nav-link}
+    - [Resolved issues](#id589){.reference .internal .nav-link}
+    - [Upcoming changes](#id590){.reference .internal .nav-link}
+  - [**ROCTracer** (4.1.0)](#roctracer-4-1-0){.reference .internal .nav-link}
+    - [Added](#id591){.reference .internal .nav-link}
+  - [**rocThrust** (3.3.0)](#rocthrust-3-3-0){.reference .internal .nav-link}
+    - [Added](#id592){.reference .internal .nav-link}
+    - [Changed](#id593){.reference .internal .nav-link}
+    - [Known issues](#id594){.reference .internal .nav-link}
+  - [**rocWMMA** (1.7.0)](#rocwmma-1-7-0){.reference .internal .nav-link}
+    - [Added](#id595){.reference .internal .nav-link}
+    - [Changed](#id596){.reference .internal .nav-link}
+    - [Resolved issues](#id597){.reference .internal .nav-link}
+    - [Upcoming changes](#id598){.reference .internal .nav-link}
+  - [**rpp** (1.9.10)](#rpp-1-9-10){.reference .internal .nav-link}
+    - [Added](#id599){.reference .internal .nav-link}
+    - [Changed](#id600){.reference .internal .nav-link}
+    - [Resolved issues](#id601){.reference .internal .nav-link}
+  - [**Tensile** (4.43.0)](#tensile-4-43-0){.reference .internal .nav-link}
+    - [Added](#id602){.reference .internal .nav-link}
+    - [Changed](#id603){.reference .internal .nav-link}
+    - [Removed](#id604){.reference .internal .nav-link}
+    - [Optimized](#id605){.reference .internal .nav-link}
+    - [Resolved issues](#id606){.reference .internal .nav-link}
+- [ROCm 6.3.3](#rocm-6-3-3){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (0.1.2)](#rocm-systems-profiler-0-1-2){.reference .internal .nav-link}
+    - [Resolved issues](#id607){.reference .internal .nav-link}
+- [ROCm 6.3.2](#rocm-6-3-2){.reference .internal .nav-link}
+  - [**HIP** (6.3.2)](#hip-6-3-2){.reference .internal .nav-link}
+    - [Added](#id608){.reference .internal .nav-link}
+    - [Optimized](#id609){.reference .internal .nav-link}
+    - [Resolved issues](#id610){.reference .internal .nav-link}
+  - [**hipfort** (0.5.1)](#hipfort-0-5-1){.reference .internal .nav-link}
+    - [Added](#id611){.reference .internal .nav-link}
+    - [Resolved issues](#id612){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (0.1.1)](#rocm-systems-profiler-0-1-1){.reference .internal .nav-link}
+    - [Resolved issues](#id613){.reference .internal .nav-link}
+  - [**ROCProfiler** (2.0.0)](#id614){.reference .internal .nav-link}
+    - [Changed](#id615){.reference .internal .nav-link}
+    - [Resolved issues](#id616){.reference .internal .nav-link}
+  - [**ROCprofiler-SDK** (0.5.0)](#rocprofiler-sdk-0-5-0){.reference .internal .nav-link}
+    - [Added](#id617){.reference .internal .nav-link}
+    - [Changed](#id618){.reference .internal .nav-link}
+- [ROCm 6.3.1](#rocm-6-3-1){.reference .internal .nav-link}
+  - [**AMD SMI** (24.7.1)](#amd-smi-24-7-1){.reference .internal .nav-link}
+    - [Changed](#id619){.reference .internal .nav-link}
+    - [Resolved issues](#id620){.reference .internal .nav-link}
+  - [**HIP** (6.3.1)](#hip-6-3-1){.reference .internal .nav-link}
+    - [Added](#id621){.reference .internal .nav-link}
+    - [Resolved issues](#id622){.reference .internal .nav-link}
+  - [**HIPIFY** (18.0.0)](#hipify-18-0-0){.reference .internal .nav-link}
+    - [Added](#id623){.reference .internal .nav-link}
+    - [Resolved issues](#id624){.reference .internal .nav-link}
+  - [**MIVisionX** (3.1.0)](#mivisionx-3-1-0){.reference .internal .nav-link}
+    - [Changed](#id625){.reference .internal .nav-link}
+    - [Resolved issues](#id626){.reference .internal .nav-link}
+    - [Known issues](#id627){.reference .internal .nav-link}
+    - [Upcoming changes](#id628){.reference .internal .nav-link}
+  - [**RCCL** (2.21.5)](#rccl-2-21-5){.reference .internal .nav-link}
+    - [Changed](#id629){.reference .internal .nav-link}
+    - [Resolved Issues](#id630){.reference .internal .nav-link}
+  - [**ROCm Compute Profiler** (3.0.0)](#rocm-compute-profiler-3-0-0){.reference .internal .nav-link}
+    - [Resolved issues](#id631){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (0.1.0)](#rocm-systems-profiler-0-1-0){.reference .internal .nav-link}
+    - [Added](#id632){.reference .internal .nav-link}
+    - [Resolved issues](#id633){.reference .internal .nav-link}
+  - [**ROCprofiler-SDK** (0.5.0)](#id634){.reference .internal .nav-link}
+    - [Added](#id635){.reference .internal .nav-link}
+- [ROCm 6.3.0](#rocm-6-3-0){.reference .internal .nav-link}
+  - [**AMD SMI** (24.7.1)](#id636){.reference .internal .nav-link}
+    - [Added](#id637){.reference .internal .nav-link}
+    - [Changed](#id638){.reference .internal .nav-link}
+    - [Removed](#id639){.reference .internal .nav-link}
+    - [Optimized](#id640){.reference .internal .nav-link}
+    - [Known issues](#id641){.reference .internal .nav-link}
+    - [Resolved issues](#id642){.reference .internal .nav-link}
+    - [Upcoming changes](#id643){.reference .internal .nav-link}
+  - [**HIP** (6.3.0)](#hip-6-3-0){.reference .internal .nav-link}
+    - [Added](#id644){.reference .internal .nav-link}
+    - [Changed](#id645){.reference .internal .nav-link}
+    - [Optimized](#id646){.reference .internal .nav-link}
+    - [Resolved issues](#id647){.reference .internal .nav-link}
+  - [**hipBLAS** (2.3.0)](#hipblas-2-3-0){.reference .internal .nav-link}
+    - [Added](#id648){.reference .internal .nav-link}
+    - [Changed](#id649){.reference .internal .nav-link}
+  - [**hipBLASLt** (0.10.0)](#hipblaslt-0-10-0){.reference .internal .nav-link}
+    - [Added](#id650){.reference .internal .nav-link}
+    - [Changed](#id651){.reference .internal .nav-link}
+    - [Optimized](#id652){.reference .internal .nav-link}
+    - [Upcoming changes](#id653){.reference .internal .nav-link}
+  - [**hipCUB** (3.3.0)](#hipcub-3-3-0){.reference .internal .nav-link}
+    - [Added](#id654){.reference .internal .nav-link}
+    - [Changed](#id655){.reference .internal .nav-link}
+    - [Resolved issues](#id656){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.17)](#hipfft-1-0-17){.reference .internal .nav-link}
+    - [Changed](#id657){.reference .internal .nav-link}
+  - [**hipfort** (0.5.0)](#hipfort-0-5-0){.reference .internal .nav-link}
+    - [Added](#id658){.reference .internal .nav-link}
+    - [Changed](#id659){.reference .internal .nav-link}
+  - [**HIPIFY** (18.0.0)](#id660){.reference .internal .nav-link}
+    - [Added](#id661){.reference .internal .nav-link}
+    - [Resolved issues](#id662){.reference .internal .nav-link}
+    - [Known issues](#id663){.reference .internal .nav-link}
+  - [**hipRAND** (2.11.0)](#hiprand-2-11-0){.reference .internal .nav-link}
+    - [Changed](#id664){.reference .internal .nav-link}
+    - [Resolved issues](#id665){.reference .internal .nav-link}
+  - [**hipSOLVER** (2.3.0)](#hipsolver-2-3-0){.reference .internal .nav-link}
+    - [Added](#id666){.reference .internal .nav-link}
+    - [Changed](#id667){.reference .internal .nav-link}
+    - [Upcoming changes](#id668){.reference .internal .nav-link}
+  - [**hipSPARSE** (3.1.2)](#hipsparse-3-1-2){.reference .internal .nav-link}
+    - [Added](#id669){.reference .internal .nav-link}
+    - [Changed](#id670){.reference .internal .nav-link}
+    - [Resolved issues](#id671){.reference .internal .nav-link}
+    - [Known issues](#id672){.reference .internal .nav-link}
+  - [**hipSPARSELt** (0.2.2)](#hipsparselt-0-2-2){.reference .internal .nav-link}
+    - [Added](#id673){.reference .internal .nav-link}
+    - [Changed](#id674){.reference .internal .nav-link}
+    - [Upcoming changes](#id675){.reference .internal .nav-link}
+  - [**hipTensor** (1.4.0)](#hiptensor-1-4-0){.reference .internal .nav-link}
+    - [Added](#id676){.reference .internal .nav-link}
+    - [Changed](#id677){.reference .internal .nav-link}
+    - [Optimized](#id678){.reference .internal .nav-link}
+    - [Resolved issues](#id679){.reference .internal .nav-link}
+  - [**llvm-project** (18.0.0)](#llvm-project-18-0-0){.reference .internal .nav-link}
+    - [Resolved issues](#id680){.reference .internal .nav-link}
+  - [**MIGraphX** (2.11.0)](#migraphx-2-11-0){.reference .internal .nav-link}
+    - [Added](#id681){.reference .internal .nav-link}
+    - [Changed](#id682){.reference .internal .nav-link}
+    - [Removed](#id683){.reference .internal .nav-link}
+    - [Optimized](#id684){.reference .internal .nav-link}
+    - [Resolved issues](#id685){.reference .internal .nav-link}
+  - [**MIOpen** (3.3.0)](#miopen-3-3-0){.reference .internal .nav-link}
+    - [Added](#id686){.reference .internal .nav-link}
+    - [Optimized](#id687){.reference .internal .nav-link}
+    - [Resolved issues](#id688){.reference .internal .nav-link}
+  - [**MIVisionX** (3.1.0)](#id689){.reference .internal .nav-link}
+    - [Changed](#id690){.reference .internal .nav-link}
+    - [Known issues](#id691){.reference .internal .nav-link}
+    - [Upcoming changes](#id692){.reference .internal .nav-link}
+  - [**RCCL** (2.21.5)](#id693){.reference .internal .nav-link}
+    - [Added](#id694){.reference .internal .nav-link}
+    - [Changed](#id695){.reference .internal .nav-link}
+    - [Resolved issues](#id696){.reference .internal .nav-link}
+    - [Known issues](#id697){.reference .internal .nav-link}
+  - [**rocAL** (2.1.0)](#rocal-2-1-0){.reference .internal .nav-link}
+    - [Added](#id698){.reference .internal .nav-link}
+    - [Changed](#id699){.reference .internal .nav-link}
+    - [Optimized](#id700){.reference .internal .nav-link}
+    - [Resolved issues](#id701){.reference .internal .nav-link}
+    - [Known issues](#id702){.reference .internal .nav-link}
+    - [Upcoming changes](#id703){.reference .internal .nav-link}
+  - [**rocALUTION** (3.2.1)](#rocalution-3-2-1){.reference .internal .nav-link}
+    - [Changed](#id704){.reference .internal .nav-link}
+    - [Resolved issues](#id705){.reference .internal .nav-link}
+  - [**rocBLAS** (4.3.0)](#rocblas-4-3-0){.reference .internal .nav-link}
+    - [Added](#id706){.reference .internal .nav-link}
+    - [Changed](#id707){.reference .internal .nav-link}
+    - [Optimized](#id708){.reference .internal .nav-link}
+    - [Resolved issues](#id709){.reference .internal .nav-link}
+    - [Upcoming changes](#id710){.reference .internal .nav-link}
+  - [**ROCdbgapi** (0.77.0)](#rocdbgapi-0-77-0){.reference .internal .nav-link}
+    - [Added](#id711){.reference .internal .nav-link}
+  - [**rocDecode** (0.8.0)](#rocdecode-0-8-0){.reference .internal .nav-link}
+    - [Changed](#id712){.reference .internal .nav-link}
+    - [Removed](#id713){.reference .internal .nav-link}
+    - [Resolved issues](#id714){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.31)](#rocfft-1-0-31){.reference .internal .nav-link}
+    - [Added](#id715){.reference .internal .nav-link}
+    - [Changed](#id716){.reference .internal .nav-link}
+  - [**ROCgdb** (15.2)](#id717){.reference .internal .nav-link}
+    - [Added](#id718){.reference .internal .nav-link}
+    - [Changed](#id719){.reference .internal .nav-link}
+    - [Resolved issues](#id720){.reference .internal .nav-link}
+  - [**ROCm Compute Profiler** (3.0.0)](#id721){.reference .internal .nav-link}
+    - [Changed](#id722){.reference .internal .nav-link}
+    - [Known issues](#id723){.reference .internal .nav-link}
+  - [**ROCm Data Center Tool** (0.3.0)](#id724){.reference .internal .nav-link}
+    - [Added](#id725){.reference .internal .nav-link}
+    - [Known issues](#id726){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.4.0)](#rocm-smi-7-4-0){.reference .internal .nav-link}
+    - [Added](#id727){.reference .internal .nav-link}
+    - [Changed](#id728){.reference .internal .nav-link}
+    - [Removals](#removals){.reference .internal .nav-link}
+    - [Resolved issues](#id729){.reference .internal .nav-link}
+    - [Upcoming changes](#id730){.reference .internal .nav-link}
+  - [**ROCm Systems Profiler** (0.1.0)](#id731){.reference .internal .nav-link}
+    - [Changed](#id732){.reference .internal .nav-link}
+    - [Known issues](#id733){.reference .internal .nav-link}
+  - [**ROCm Validation Suite** (1.1.0)](#id734){.reference .internal .nav-link}
+    - [Added](#id735){.reference .internal .nav-link}
+    - [Changed](#id736){.reference .internal .nav-link}
+    - [Known issues](#id737){.reference .internal .nav-link}
+  - [**rocPRIM** (3.3.0)](#rocprim-3-3-0){.reference .internal .nav-link}
+    - [Added](#id738){.reference .internal .nav-link}
+    - [Changed](#id739){.reference .internal .nav-link}
+    - [Removed](#id740){.reference .internal .nav-link}
+    - [Resolved issues](#id741){.reference .internal .nav-link}
+  - [**ROCProfiler** (2.0.0)](#id742){.reference .internal .nav-link}
+    - [Added](#id743){.reference .internal .nav-link}
+    - [Changed](#id744){.reference .internal .nav-link}
+    - [Removed](#id745){.reference .internal .nav-link}
+    - [Optimized](#id746){.reference .internal .nav-link}
+    - [Resolved issues](#id747){.reference .internal .nav-link}
+  - [**ROCprofiler-SDK** (0.5.0)](#id748){.reference .internal .nav-link}
+    - [Added](#id749){.reference .internal .nav-link}
+    - [Changed](#id750){.reference .internal .nav-link}
+    - [Removed](#id751){.reference .internal .nav-link}
+    - [Resolved issues](#id752){.reference .internal .nav-link}
+  - [**rocPyDecode** (0.2.0)](#rocpydecode-0-2-0){.reference .internal .nav-link}
+    - [Added](#id753){.reference .internal .nav-link}
+    - [Changed](#id754){.reference .internal .nav-link}
+    - [Removed](#id755){.reference .internal .nav-link}
+    - [Optimized](#id756){.reference .internal .nav-link}
+    - [Resolved issues](#id757){.reference .internal .nav-link}
+  - [**rocRAND** (3.2.0)](#rocrand-3-2-0){.reference .internal .nav-link}
+    - [Added](#id758){.reference .internal .nav-link}
+    - [Changed](#id759){.reference .internal .nav-link}
+    - [Resolved issues](#id760){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.27.0)](#rocsolver-3-27-0){.reference .internal .nav-link}
+    - [Added](#id761){.reference .internal .nav-link}
+    - [Changed](#id762){.reference .internal .nav-link}
+    - [Optimized](#id763){.reference .internal .nav-link}
+    - [Resolved issues](#id764){.reference .internal .nav-link}
+    - [Known issues](#id765){.reference .internal .nav-link}
+  - [**rocSPARSE** (3.3.0)](#rocsparse-3-3-0){.reference .internal .nav-link}
+    - [Added](#id766){.reference .internal .nav-link}
+    - [Changed](#id767){.reference .internal .nav-link}
+    - [Optimized](#id768){.reference .internal .nav-link}
+    - [Resolved issues](#id769){.reference .internal .nav-link}
+  - [**rocThrust** (3.2.0)](#rocthrust-3-2-0){.reference .internal .nav-link}
+    - [Added](#id770){.reference .internal .nav-link}
+    - [Changed](#id771){.reference .internal .nav-link}
+    - [Resolved issues](#id772){.reference .internal .nav-link}
+  - [**rocWMMA** (1.6.0)](#rocwmma-1-6-0){.reference .internal .nav-link}
+    - [Added](#id773){.reference .internal .nav-link}
+    - [Changed](#id774){.reference .internal .nav-link}
+    - [Resolved issues](#id775){.reference .internal .nav-link}
+  - [**RPP** (1.9.1)](#rpp-1-9-1){.reference .internal .nav-link}
+    - [Added](#id776){.reference .internal .nav-link}
+    - [Changed](#id777){.reference .internal .nav-link}
+    - [Removed](#id778){.reference .internal .nav-link}
+    - [Optimized](#id779){.reference .internal .nav-link}
+    - [Resolved issues](#id780){.reference .internal .nav-link}
+    - [Known issues](#id781){.reference .internal .nav-link}
+    - [Upcoming changes](#id782){.reference .internal .nav-link}
+  - [**Tensile** (4.42.0)](#tensile-4-42-0){.reference .internal .nav-link}
+    - [Added](#id783){.reference .internal .nav-link}
+    - [Changed](#id784){.reference .internal .nav-link}
+    - [Removed](#id785){.reference .internal .nav-link}
+    - [Optimized](#id786){.reference .internal .nav-link}
+    - [Resolved issues](#id787){.reference .internal .nav-link}
+- [ROCm 6.2.4](#rocm-6-2-4){.reference .internal .nav-link}
+  - [**AMD SMI** (24.6.3)](#amd-smi-24-6-3){.reference .internal .nav-link}
+    - [Resolved issues](#id788){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.30)](#rocfft-1-0-30){.reference .internal .nav-link}
+    - [Optimized](#id789){.reference .internal .nav-link}
+    - [Resolved issues](#id790){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.26.2)](#rocsolver-3-26-2){.reference .internal .nav-link}
+    - [Resolved issues](#id791){.reference .internal .nav-link}
+- [ROCm 6.2.2](#rocm-6-2-2){.reference .internal .nav-link}
+  - [**AMD SMI** (24.6.3)](#id792){.reference .internal .nav-link}
+    - [Changed](#id793){.reference .internal .nav-link}
+    - [Removed](#id794){.reference .internal .nav-link}
+    - [Resolved issues](#id795){.reference .internal .nav-link}
+  - [**HIP** (6.2.1)](#hip-6-2-1){.reference .internal .nav-link}
+    - [Resolved issues](#id796){.reference .internal .nav-link}
+  - [**HIPIFY** (18.0.0)](#id797){.reference .internal .nav-link}
+    - [Added](#id798){.reference .internal .nav-link}
+  - [**Omnitrace** (1.11.2)](#omnitrace-1-11-2){.reference .internal .nav-link}
+    - [Known issues](#id799){.reference .internal .nav-link}
+  - [**RCCL** (2.20.5)](#rccl-2-20-5){.reference .internal .nav-link}
+    - [Known issues](#id800){.reference .internal .nav-link}
+  - [**rocAL** (2.0.0)](#rocal-2-0-0){.reference .internal .nav-link}
+    - [Changed](#id801){.reference .internal .nav-link}
+    - [Known issues](#id802){.reference .internal .nav-link}
+  - [**rocBLAS** (4.2.1)](#rocblas-4-2-1){.reference .internal .nav-link}
+    - [Removed](#id803){.reference .internal .nav-link}
+    - [Resolved issues](#id804){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.29)](#rocfft-1-0-29){.reference .internal .nav-link}
+    - [Optimized](#id805){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.3.0)](#rocm-smi-7-3-0){.reference .internal .nav-link}
+    - [Optimized](#id806){.reference .internal .nav-link}
+    - [Resolved issues](#id807){.reference .internal .nav-link}
+    - [Known issues](#id808){.reference .internal .nav-link}
+  - [**rocPRIM** (3.2.1)](#rocprim-3-2-1){.reference .internal .nav-link}
+    - [Optimized](#id809){.reference .internal .nav-link}
+- [ROCm 6.2.1](#rocm-6-2-1){.reference .internal .nav-link}
+  - [**AMD SMI** (24.6.3)](#id810){.reference .internal .nav-link}
+    - [Changes](#changes){.reference .internal .nav-link}
+    - [Removals](#id811){.reference .internal .nav-link}
+    - [Resolved issues](#id812){.reference .internal .nav-link}
+  - [**HIP** (6.2.1)](#id813){.reference .internal .nav-link}
+    - [Resolved issues](#id814){.reference .internal .nav-link}
+  - [**HIPIFY** (18.0.0)](#id815){.reference .internal .nav-link}
+    - [Changes](#id816){.reference .internal .nav-link}
+  - [**Omniperf** (2.0.1)](#omniperf-2-0-1){.reference .internal .nav-link}
+    - [Changes](#id817){.reference .internal .nav-link}
+    - [Resolved issues](#id818){.reference .internal .nav-link}
+    - [Optimizations](#optimizations){.reference .internal .nav-link}
+  - [**Omnitrace** (1.11.2)](#id819){.reference .internal .nav-link}
+    - [Known issues](#id820){.reference .internal .nav-link}
+  - [**RCCL** (2.20.5)](#id821){.reference .internal .nav-link}
+    - [Known issues](#id822){.reference .internal .nav-link}
+  - [**rocAL** (2.0.0)](#id823){.reference .internal .nav-link}
+    - [Changed](#id824){.reference .internal .nav-link}
+    - [Known issues](#id825){.reference .internal .nav-link}
+  - [**rocBLAS** (4.2.1)](#id826){.reference .internal .nav-link}
+    - [Removed](#id827){.reference .internal .nav-link}
+    - [Resolved issues](#id828){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.29)](#id829){.reference .internal .nav-link}
+    - [Optimized](#id830){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.3.0)](#id831){.reference .internal .nav-link}
+    - [Optimized](#id832){.reference .internal .nav-link}
+    - [Resolved issues](#id833){.reference .internal .nav-link}
+    - [Known issues](#id834){.reference .internal .nav-link}
+  - [**rocPRIM** (3.2.1)](#id835){.reference .internal .nav-link}
+    - [Optimized](#id836){.reference .internal .nav-link}
+- [ROCm 6.2.0](#rocm-6-2-0){.reference .internal .nav-link}
+  - [**AMD SMI** (24.6.2)](#amd-smi-24-6-2){.reference .internal .nav-link}
+    - [Changed](#id837){.reference .internal .nav-link}
+    - [Removed](#id838){.reference .internal .nav-link}
+    - [Optimized](#id839){.reference .internal .nav-link}
+    - [Resolved issues](#id840){.reference .internal .nav-link}
+    - [Known issues](#id841){.reference .internal .nav-link}
+  - [**Composable Kernel** (1.1.0)](#id842){.reference .internal .nav-link}
+    - [Changed](#id843){.reference .internal .nav-link}
+    - [Optimized](#id844){.reference .internal .nav-link}
+  - [**HIP** (6.2.0)](#hip-6-2-0){.reference .internal .nav-link}
+    - [Changed](#id845){.reference .internal .nav-link}
+    - [Resolved issues](#id846){.reference .internal .nav-link}
+    - [Upcoming changes](#id847){.reference .internal .nav-link}
+  - [**hipBLAS** (2.2.0)](#hipblas-2-2-0){.reference .internal .nav-link}
+    - [Changed](#id848){.reference .internal .nav-link}
+  - [**hipBLASLt** (0.8.0)](#hipblaslt-0-8-0){.reference .internal .nav-link}
+    - [Changed](#id849){.reference .internal .nav-link}
+    - [Optimized](#id850){.reference .internal .nav-link}
+  - [**HIPCC** (1.1.1)](#hipcc-1-1-1){.reference .internal .nav-link}
+    - [Changed](#id851){.reference .internal .nav-link}
+    - [Resolved issues](#id852){.reference .internal .nav-link}
+  - [**hipCUB** (3.2.0)](#hipcub-3-2-0){.reference .internal .nav-link}
+    - [Changed](#id853){.reference .internal .nav-link}
+    - [Removed](#id854){.reference .internal .nav-link}
+    - [Resolved issues](#id855){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.15)](#hipfft-1-0-15){.reference .internal .nav-link}
+    - [Resolved issues](#id856){.reference .internal .nav-link}
+  - [**HIPIFY** (18.0.0)](#id857){.reference .internal .nav-link}
+    - [Changed](#id858){.reference .internal .nav-link}
+    - [Resolved issues](#id859){.reference .internal .nav-link}
+  - [**hipRAND** (2.11.0)](#id860){.reference .internal .nav-link}
+    - [Changed](#id861){.reference .internal .nav-link}
+    - [Removed](#id862){.reference .internal .nav-link}
+    - [Resolved issues](#id863){.reference .internal .nav-link}
+  - [**hipSOLVER** (2.2.0)](#hipsolver-2-2-0){.reference .internal .nav-link}
+    - [Changed](#id864){.reference .internal .nav-link}
+    - [Removed](#id865){.reference .internal .nav-link}
+  - [**hipSPARSE** (3.1.1)](#hipsparse-3-1-1){.reference .internal .nav-link}
+    - [Changed](#id866){.reference .internal .nav-link}
+    - [Resolved issues](#id867){.reference .internal .nav-link}
+    - [Known issues](#id868){.reference .internal .nav-link}
+  - [**hipSPARSELt** (0.2.1)](#hipsparselt-0-2-1){.reference .internal .nav-link}
+    - [Optimized](#id869){.reference .internal .nav-link}
+  - [**hipTensor** (1.3.0)](#hiptensor-1-3-0){.reference .internal .nav-link}
+    - [Changed](#id870){.reference .internal .nav-link}
+    - [Resolved issues](#id871){.reference .internal .nav-link}
+  - [**llvm-project** (18.0.0)](#id872){.reference .internal .nav-link}
+    - [Changed](#id873){.reference .internal .nav-link}
+    - [Removals](#id874){.reference .internal .nav-link}
+    - [Resolved issues](#id875){.reference .internal .nav-link}
+    - [Known issues](#id876){.reference .internal .nav-link}
+  - [**MIGraphX** (2.10.0)](#migraphx-2-10-0){.reference .internal .nav-link}
+    - [Changed](#id877){.reference .internal .nav-link}
+    - [Removed](#id878){.reference .internal .nav-link}
+    - [Optimized](#id879){.reference .internal .nav-link}
+    - [Resolved issues](#id880){.reference .internal .nav-link}
+  - [**MIOpen** (3.2.0)](#miopen-3-2-0){.reference .internal .nav-link}
+    - [Changed](#id881){.reference .internal .nav-link}
+    - [Resolved issues](#id882){.reference .internal .nav-link}
+    - [Optimized](#id883){.reference .internal .nav-link}
+  - [**MIVisionX** (3.0.0)](#mivisionx-3-0-0){.reference .internal .nav-link}
+    - [Changed](#id884){.reference .internal .nav-link}
+    - [Removed](#id885){.reference .internal .nav-link}
+    - [Resolved issues](#id886){.reference .internal .nav-link}
+    - [Known issues](#id887){.reference .internal .nav-link}
+  - [**Omniperf** (2.0.1)](#id888){.reference .internal .nav-link}
+    - [Known issues](#id889){.reference .internal .nav-link}
+  - [**OpenMP** (17.0.0)](#openmp-17-0-0){.reference .internal .nav-link}
+    - [Changed](#id890){.reference .internal .nav-link}
+    - [Removed](#id891){.reference .internal .nav-link}
+    - [Resolved issues](#id892){.reference .internal .nav-link}
+  - [**RCCL** (2.20.5)](#id893){.reference .internal .nav-link}
+    - [Changed](#id894){.reference .internal .nav-link}
+    - [Resolved issues](#id895){.reference .internal .nav-link}
+  - [**rocAL** (1.0.0)](#rocal-1-0-0){.reference .internal .nav-link}
+    - [Changed](#id896){.reference .internal .nav-link}
+    - [Removed](#id897){.reference .internal .nav-link}
+    - [Optimized](#id898){.reference .internal .nav-link}
+    - [Resolved issues](#id899){.reference .internal .nav-link}
+  - [**rocALUTION** (3.2.0)](#rocalution-3-2-0){.reference .internal .nav-link}
+    - [Changed](#id900){.reference .internal .nav-link}
+    - [Removed](#id901){.reference .internal .nav-link}
+  - [**rocBLAS** (4.2.0)](#rocblas-4-2-0){.reference .internal .nav-link}
+    - [Changed](#id902){.reference .internal .nav-link}
+    - [Optimized](#id903){.reference .internal .nav-link}
+    - [Removed](#id904){.reference .internal .nav-link}
+  - [**ROCdbgapi** (0.76.0)](#rocdbgapi-0-76-0){.reference .internal .nav-link}
+    - [Removed](#id905){.reference .internal .nav-link}
+  - [**rocDecode** (0.6.0)](#rocdecode-0-6-0){.reference .internal .nav-link}
+    - [Changed](#id906){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.28)](#rocfft-1-0-28){.reference .internal .nav-link}
+    - [Changed](#id907){.reference .internal .nav-link}
+    - [Optimized](#id908){.reference .internal .nav-link}
+  - [**rocm-cmake** (0.13.0)](#rocm-cmake-0-13-0){.reference .internal .nav-link}
+    - [Changed](#id909){.reference .internal .nav-link}
+  - [**ROCm Data Center Tool** (1.0.0)](#rocm-data-center-tool-1-0-0){.reference .internal .nav-link}
+    - [Changed](#id910){.reference .internal .nav-link}
+    - [Removed](#id911){.reference .internal .nav-link}
+  - [**ROCm Debugger (ROCgdb)** (14.2)](#rocm-debugger-rocgdb-14-2){.reference .internal .nav-link}
+    - [Changed](#id912){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.3.0)](#id913){.reference .internal .nav-link}
+    - [Changed](#id914){.reference .internal .nav-link}
+    - [Resolved issues](#id915){.reference .internal .nav-link}
+  - [**ROCm Validation Suite** (1.0.0)](#rocm-validation-suite-1-0-0){.reference .internal .nav-link}
+    - [Changed](#id916){.reference .internal .nav-link}
+  - [**rocPRIM** (3.2.0)](#rocprim-3-2-0){.reference .internal .nav-link}
+    - [Changed](#id917){.reference .internal .nav-link}
+    - [Removed](#id918){.reference .internal .nav-link}
+    - [Optimized](#id919){.reference .internal .nav-link}
+    - [Resolved issues](#id920){.reference .internal .nav-link}
+  - [**ROCProfiler** (2.0.0)](#id921){.reference .internal .nav-link}
+    - [Removed](#id922){.reference .internal .nav-link}
+  - [**rocRAND** (3.1.0)](#rocrand-3-1-0){.reference .internal .nav-link}
+    - [Changed](#id923){.reference .internal .nav-link}
+    - [Removed](#id924){.reference .internal .nav-link}
+    - [Known issues](#id925){.reference .internal .nav-link}
+  - [**ROCr Runtime** (1.14.0)](#rocr-runtime-1-14-0){.reference .internal .nav-link}
+    - [Changed](#id926){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.26.0)](#rocsolver-3-26-0){.reference .internal .nav-link}
+    - [Changed](#id927){.reference .internal .nav-link}
+    - [Optimized](#id928){.reference .internal .nav-link}
+    - [Resolved issues](#id929){.reference .internal .nav-link}
+  - [**rocSPARSE** (3.2.0)](#rocsparse-3-2-0){.reference .internal .nav-link}
+    - [Changed](#id930){.reference .internal .nav-link}
+    - [Optimized](#id931){.reference .internal .nav-link}
+    - [Resolved issues](#id932){.reference .internal .nav-link}
+  - [**rocThrust** (3.1.0)](#rocthrust-3-1-0){.reference .internal .nav-link}
+    - [Changed](#id933){.reference .internal .nav-link}
+    - [Known issues](#id934){.reference .internal .nav-link}
+  - [**rocWMMA** (1.5.0)](#rocwmma-1-5-0){.reference .internal .nav-link}
+    - [Changed](#id935){.reference .internal .nav-link}
+    - [Resolved issues](#id936){.reference .internal .nav-link}
+  - [**RPP** (1.8.0)](#rpp-1-8-0){.reference .internal .nav-link}
+    - [Changed](#id937){.reference .internal .nav-link}
+  - [**Tensile** (4.41.0)](#tensile-4-41-0){.reference .internal .nav-link}
+    - [Changed](#id938){.reference .internal .nav-link}
+    - [Optimized](#id939){.reference .internal .nav-link}
+    - [Resolved issues](#id940){.reference .internal .nav-link}
+- [ROCm 6.1.2](#rocm-6-1-2){.reference .internal .nav-link}
+  - [**AMD SMI** (24.5.1)](#amd-smi-24-5-1){.reference .internal .nav-link}
+    - [Added](#id941){.reference .internal .nav-link}
+    - [Changed](#id942){.reference .internal .nav-link}
+    - [Removed](#id943){.reference .internal .nav-link}
+    - [Optimized](#id944){.reference .internal .nav-link}
+    - [Resolved issues](#id945){.reference .internal .nav-link}
+  - [**RCCL** (2.18.6)](#rccl-2-18-6){.reference .internal .nav-link}
+    - [Changed](#id946){.reference .internal .nav-link}
+  - [**rocBLAS** (4.1.2)](#rocblas-4-1-2){.reference .internal .nav-link}
+    - [Optimized](#id947){.reference .internal .nav-link}
+    - [Resolved issues](#id948){.reference .internal .nav-link}
+  - [**rocDecode** (0.6.0)](#id949){.reference .internal .nav-link}
+    - [Added](#id950){.reference .internal .nav-link}
+    - [Changed](#id951){.reference .internal .nav-link}
+    - [Optimized](#id952){.reference .internal .nav-link}
+    - [Resolved issues](#id953){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.2.0)](#rocm-smi-7-2-0){.reference .internal .nav-link}
+    - [Added](#id954){.reference .internal .nav-link}
+    - [Resolved issues](#id955){.reference .internal .nav-link}
+- [ROCm 6.1.1](#rocm-6-1-1){.reference .internal .nav-link}
+  - [**AMD SMI** (24.5.1)](#id956){.reference .internal .nav-link}
+    - [Added](#id957){.reference .internal .nav-link}
+    - [Changed](#id958){.reference .internal .nav-link}
+    - [Removed](#id959){.reference .internal .nav-link}
+    - [Resolved issues](#id960){.reference .internal .nav-link}
+    - [Known issues](#id961){.reference .internal .nav-link}
+  - [**hipBLASLt** (0.7.0)](#hipblaslt-0-7-0){.reference .internal .nav-link}
+    - [Added](#id962){.reference .internal .nav-link}
+    - [Upcoming changes](#id963){.reference .internal .nav-link}
+  - [**HIPCC** (1.0.0)](#hipcc-1-0-0){.reference .internal .nav-link}
+    - [Changed](#id964){.reference .internal .nav-link}
+  - [**hipSOLVER** (2.1.1)](#hipsolver-2-1-1){.reference .internal .nav-link}
+    - [Changed](#id965){.reference .internal .nav-link}
+    - [Resolved issues](#id966){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.27)](#rocfft-1-0-27){.reference .internal .nav-link}
+    - [Added](#id967){.reference .internal .nav-link}
+    - [Resolved issues](#id968){.reference .internal .nav-link}
+  - [**ROCm SMI** (7.0.0)](#rocm-smi-7-0-0){.reference .internal .nav-link}
+    - [Added](#id969){.reference .internal .nav-link}
+    - [Changed](#id970){.reference .internal .nav-link}
+    - [Resolved issues](#id971){.reference .internal .nav-link}
+    - [Known issues](#id972){.reference .internal .nav-link}
+- [ROCm 6.1.0](#rocm-6-1-0){.reference .internal .nav-link}
+  - [**AMD SMI** (24.4.1)](#amd-smi-24-4-1){.reference .internal .nav-link}
+    - [Added](#id973){.reference .internal .nav-link}
+  - [**Composable Kernel** (1.1.0)](#id974){.reference .internal .nav-link}
+    - [Added](#id975){.reference .internal .nav-link}
+    - [Changed](#id976){.reference .internal .nav-link}
+  - [**HIP** (6.1)](#hip-6-1){.reference .internal .nav-link}
+    - [Added](#id977){.reference .internal .nav-link}
+  - [**hipBLASLt** (0.7.0)](#id978){.reference .internal .nav-link}
+    - [Added](#id979){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.14)](#hipfft-1-0-14){.reference .internal .nav-link}
+    - [Added](#id980){.reference .internal .nav-link}
+  - [**HIPIFY** (17.0.0)](#hipify-17-0-0){.reference .internal .nav-link}
+    - [Changed](#id981){.reference .internal .nav-link}
+  - [**hipSPARSELt** (0.1.0)](#hipsparselt-0-1-0){.reference .internal .nav-link}
+    - [Added](#id982){.reference .internal .nav-link}
+  - [**hipTensor** (1.2.0)](#hiptensor-1-2-0){.reference .internal .nav-link}
+    - [Added](#id983){.reference .internal .nav-link}
+  - [**llvm-project** (17.0.0)](#llvm-project-17-0-0){.reference .internal .nav-link}
+    - [Changed](#id984){.reference .internal .nav-link}
+  - [**MIGraphX** (2.9.0)](#migraphx-2-9-0){.reference .internal .nav-link}
+    - [Added](#id985){.reference .internal .nav-link}
+  - [**MIOpen** (3.1.0)](#miopen-3-1-0){.reference .internal .nav-link}
+    - [Added](#id986){.reference .internal .nav-link}
+  - [**OpenMP** (17.60.0)](#openmp-17-60-0){.reference .internal .nav-link}
+    - [Added](#id987){.reference .internal .nav-link}
+    - [Changed](#id988){.reference .internal .nav-link}
+  - [**RCCL** (2.18.6)](#id989){.reference .internal .nav-link}
+    - [Changed](#id990){.reference .internal .nav-link}
+  - [**rocALUTION** (3.1.1)](#rocalution-3-1-1){.reference .internal .nav-link}
+    - [Added](#id991){.reference .internal .nav-link}
+  - [**rocDecode** (0.5.0)](#rocdecode-0-5-0){.reference .internal .nav-link}
+    - [Added](#id992){.reference .internal .nav-link}
+  - [**ROCm Data Center Tool** (0.3.0)](#id993){.reference .internal .nav-link}
+    - [Changed](#id994){.reference .internal .nav-link}
+  - [**RPP** (1.5.0)](#rpp-1-5-0){.reference .internal .nav-link}
+    - [Added](#id995){.reference .internal .nav-link}
+  - [**ROCm Validation Suite** (1.0)](#rocm-validation-suite-1-0){.reference .internal .nav-link}
+    - [Added](#id996){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.25.0)](#rocsolver-3-25-0){.reference .internal .nav-link}
+    - [Added](#id997){.reference .internal .nav-link}
+  - [**ROCTracer** (4.1)](#roctracer-4-1){.reference .internal .nav-link}
+    - [Changed](#id998){.reference .internal .nav-link}
+- [ROCm 6.0.2](#rocm-6-0-2){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.13)](#hipfft-1-0-13){.reference .internal .nav-link}
+    - [Changed](#id999){.reference .internal .nav-link}
+- [ROCm 6.0.0](#rocm-6-0-0){.reference .internal .nav-link}
+  - [**AMD SMI** (23.4.2)](#amd-smi-23-4-2){.reference .internal .nav-link}
+    - [Added](#id1000){.reference .internal .nav-link}
+  - [**HIP** (6.0.0)](#hip-6-0-0){.reference .internal .nav-link}
+    - [Added](#id1001){.reference .internal .nav-link}
+    - [Changed](#id1002){.reference .internal .nav-link}
+  - [**hipCUB** (3.0.0)](#hipcub-3-0-0){.reference .internal .nav-link}
+    - [Changed](#id1003){.reference .internal .nav-link}
+  - [**HIPIFY** (17.0.0)](#id1004){.reference .internal .nav-link}
+    - [Added](#id1005){.reference .internal .nav-link}
+    - [Optimized](#id1006){.reference .internal .nav-link}
+  - [**hipRAND** (2.10.16)](#hiprand-2-10-16){.reference .internal .nav-link}
+  - [**hipTensor** (1.1.0)](#hiptensor-1-1-0){.reference .internal .nav-link}
+    - [Added](#id1007){.reference .internal .nav-link}
+    - [Optimized](#id1008){.reference .internal .nav-link}
+  - [**llvm-project** (17.0.0)](#id1009){.reference .internal .nav-link}
+    - [Added](#id1010){.reference .internal .nav-link}
+    - [Optimized](#id1011){.reference .internal .nav-link}
+  - [**MIGraphX** (2.8.0)](#migraphx-2-8-0){.reference .internal .nav-link}
+    - [Added](#id1012){.reference .internal .nav-link}
+  - [**ROCgdb** (13.2)](#rocgdb-13-2){.reference .internal .nav-link}
+    - [Added](#id1013){.reference .internal .nav-link}
+  - [**ROCm SMI** (6.0.0)](#rocm-smi-6-0-0){.reference .internal .nav-link}
+    - [Added](#id1014){.reference .internal .nav-link}
+    - [Optimized](#id1015){.reference .internal .nav-link}
+  - [**ROCm Validation Suite** (1.0)](#id1016){.reference .internal .nav-link}
+    - [Added](#id1017){.reference .internal .nav-link}
+  - [**ROCProfiler** (2.0)](#rocprofiler-2-0){.reference .internal .nav-link}
+    - [Added](#id1018){.reference .internal .nav-link}
+    - [Changed](#id1019){.reference .internal .nav-link}
+  - [**ROCr Runtime** (1.12.0)](#rocr-runtime-1-12-0){.reference .internal .nav-link}
+    - [Added](#id1020){.reference .internal .nav-link}
+  - [**rocThrust** (3.0.0)](#rocthrust-3-0-0){.reference .internal .nav-link}
+    - [Added](#id1021){.reference .internal .nav-link}
+  - [**rocWMMA** (1.3.0)](#rocwmma-1-3-0){.reference .internal .nav-link}
+    - [Added](#id1022){.reference .internal .nav-link}
+  - [**TransferBench** (beta)](#transferbench-beta){.reference .internal .nav-link}
+    - [Optimized](#id1023){.reference .internal .nav-link}
+- [ROCm 5.7.1](#rocm-5-7-1){.reference .internal .nav-link}
+  - [**HIP** (5.7.1)](#hip-5-7-1){.reference .internal .nav-link}
+    - [Resolved issues](#id1024){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.8.2)](#hipsolver-1-8-2){.reference .internal .nav-link}
+    - [Resolved issues](#id1025){.reference .internal .nav-link}
+  - [**rocBLAS** (3.1.0)](#rocblas-3-1-0){.reference .internal .nav-link}
+    - [Added](#id1026){.reference .internal .nav-link}
+- [ROCm 5.7.0](#rocm-5-7-0){.reference .internal .nav-link}
+  - [**HIP** (5.7.0)](#hip-5-7-0){.reference .internal .nav-link}
+    - [Added](#id1027){.reference .internal .nav-link}
+    - [Known issues](#id1028){.reference .internal .nav-link}
+    - [Upcoming changes](#id1029){.reference .internal .nav-link}
+  - [**hipBLAS** (1.1.0)](#hipblas-1-1-0){.reference .internal .nav-link}
+    - [Changed](#id1030){.reference .internal .nav-link}
+  - [**hipCUB** (2.13.1)](#hipcub-2-13-1){.reference .internal .nav-link}
+    - [Changed](#id1031){.reference .internal .nav-link}
+    - [Known issues](#id1032){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.12)](#hipfft-1-0-12){.reference .internal .nav-link}
+    - [Added](#id1033){.reference .internal .nav-link}
+    - [Changed](#id1034){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.8.1)](#hipsolver-1-8-1){.reference .internal .nav-link}
+    - [Changed](#id1035){.reference .internal .nav-link}
+  - [**hipSPARSE** (2.3.8)](#hipsparse-2-3-8){.reference .internal .nav-link}
+    - [Optimized](#id1036){.reference .internal .nav-link}
+  - [**MIOpen** (2.19.0)](#miopen-2-19-0){.reference .internal .nav-link}
+    - [Added](#id1037){.reference .internal .nav-link}
+    - [Changed](#id1038){.reference .internal .nav-link}
+    - [Resolved issues](#id1039){.reference .internal .nav-link}
+  - [**RCCL** (2.17.1-1)](#rccl-2-17-1-1){.reference .internal .nav-link}
+    - [Added](#id1040){.reference .internal .nav-link}
+    - [Changed](#id1041){.reference .internal .nav-link}
+    - [Resolved issues](#id1042){.reference .internal .nav-link}
+  - [**rocALUTION** (2.1.11)](#rocalution-2-1-11){.reference .internal .nav-link}
+    - [Added](#id1043){.reference .internal .nav-link}
+    - [Optimized](#id1044){.reference .internal .nav-link}
+  - [**rocBLAS** (3.1.0)](#id1045){.reference .internal .nav-link}
+    - [Added](#id1046){.reference .internal .nav-link}
+    - [Changed](#id1047){.reference .internal .nav-link}
+    - [Resolved issues](#id1048){.reference .internal .nav-link}
+    - [Upcoming changes](#id1049){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.24)](#rocfft-1-0-24){.reference .internal .nav-link}
+    - [Added](#id1050){.reference .internal .nav-link}
+    - [Changed](#id1051){.reference .internal .nav-link}
+    - [Optimized](#id1052){.reference .internal .nav-link}
+  - [**rocm-cmake** (0.10.0)](#rocm-cmake-0-10-0){.reference .internal .nav-link}
+    - [Added](#id1053){.reference .internal .nav-link}
+  - [**rocPRIM** (2.13.1)](#rocprim-2-13-1){.reference .internal .nav-link}
+    - [Changed](#id1054){.reference .internal .nav-link}
+    - [Resolved issues](#id1055){.reference .internal .nav-link}
+  - [**rocRAND** (2.10.17)](#rocrand-2-10-17){.reference .internal .nav-link}
+    - [Added](#id1056){.reference .internal .nav-link}
+    - [Changed](#id1057){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.23.0)](#rocsolver-3-23-0){.reference .internal .nav-link}
+    - [Added](#id1058){.reference .internal .nav-link}
+    - [Changed](#id1059){.reference .internal .nav-link}
+    - [Resolved issues](#id1060){.reference .internal .nav-link}
+  - [**rocSPARSE** (2.5.4)](#rocsparse-2-5-4){.reference .internal .nav-link}
+    - [Added](#id1061){.reference .internal .nav-link}
+    - [Optimized](#id1062){.reference .internal .nav-link}
+    - [Known issues](#id1063){.reference .internal .nav-link}
+  - [**rocThrust** (2.18.0)](#rocthrust-2-18-0){.reference .internal .nav-link}
+    - [Changed](#id1064){.reference .internal .nav-link}
+    - [Resolved issues](#id1065){.reference .internal .nav-link}
+  - [**rocWMMA** (1.2.0)](#rocwmma-1-2-0){.reference .internal .nav-link}
+    - [Changed](#id1066){.reference .internal .nav-link}
+  - [**Tensile** (4.38.0)](#tensile-4-38-0){.reference .internal .nav-link}
+    - [Added](#id1067){.reference .internal .nav-link}
+    - [Changed](#id1068){.reference .internal .nav-link}
+    - [Optimized](#id1069){.reference .internal .nav-link}
+    - [Resolved issues](#id1070){.reference .internal .nav-link}
+- [ROCm 5.6.1](#rocm-5-6-1){.reference .internal .nav-link}
+  - [**HIP** (5.6.1)](#hip-5-6-1){.reference .internal .nav-link}
+    - [Resolved issues](#id1071){.reference .internal .nav-link}
+- [ROCm 5.6.0](#rocm-5-6-0){.reference .internal .nav-link}
+  - [**AMD SMI** (1.0.0)](#amd-smi-1-0-0){.reference .internal .nav-link}
+    - [Added](#id1072){.reference .internal .nav-link}
+    - [Known issues](#id1073){.reference .internal .nav-link}
+  - [**HIP** (5.6.0)](#hip-5-6-0){.reference .internal .nav-link}
+    - [Added](#id1074){.reference .internal .nav-link}
+    - [Changed](#id1075){.reference .internal .nav-link}
+    - [Optimized](#id1076){.reference .internal .nav-link}
+    - [Resolved issues](#id1077){.reference .internal .nav-link}
+    - [Known issues](#id1078){.reference .internal .nav-link}
+    - [Upcoming changes](#id1079){.reference .internal .nav-link}
+  - [**ROCgdb** (13.1)](#rocgdb-13-1){.reference .internal .nav-link}
+    - [Optimized](#id1080){.reference .internal .nav-link}
+    - [Known issues](#id1081){.reference .internal .nav-link}
+  - [**hipBLAS** (1.0.0)](#hipblas-1-0-0){.reference .internal .nav-link}
+    - [Changed](#id1082){.reference .internal .nav-link}
+    - [Removed](#id1083){.reference .internal .nav-link}
+  - [**hipCUB** (2.13.1)](#id1084){.reference .internal .nav-link}
+    - [Added](#id1085){.reference .internal .nav-link}
+    - [Changed](#id1086){.reference .internal .nav-link}
+    - [Known issues](#id1087){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.12)](#id1088){.reference .internal .nav-link}
+    - [Added](#id1089){.reference .internal .nav-link}
+    - [Changed](#id1090){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.8.0)](#hipsolver-1-8-0){.reference .internal .nav-link}
+    - [Added](#id1091){.reference .internal .nav-link}
+  - [**hipSPARSE** (2.3.6)](#hipsparse-2-3-6){.reference .internal .nav-link}
+    - [Added](#id1092){.reference .internal .nav-link}
+    - [Changed](#id1093){.reference .internal .nav-link}
+  - [**MIOpen** (2.19.0)](#id1094){.reference .internal .nav-link}
+    - [Added](#id1095){.reference .internal .nav-link}
+    - [Changed](#id1096){.reference .internal .nav-link}
+    - [Resolved issues](#id1097){.reference .internal .nav-link}
+  - [**RCCL** (2.15.5)](#rccl-2-15-5){.reference .internal .nav-link}
+    - [Added](#id1098){.reference .internal .nav-link}
+    - [Changed](#id1099){.reference .internal .nav-link}
+    - [Removed](#id1100){.reference .internal .nav-link}
+    - [Resolved issues](#id1101){.reference .internal .nav-link}
+  - [**rocALUTION** (2.1.9)](#rocalution-2-1-9){.reference .internal .nav-link}
+    - [Optimized](#id1102){.reference .internal .nav-link}
+  - [**rocBLAS** (3.0.0)](#rocblas-3-0-0){.reference .internal .nav-link}
+    - [Added](#id1103){.reference .internal .nav-link}
+    - [Changed](#id1104){.reference .internal .nav-link}
+    - [Removed](#id1105){.reference .internal .nav-link}
+    - [Optimized](#id1106){.reference .internal .nav-link}
+    - [Resolved issues](#id1107){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.23)](#rocfft-1-0-23){.reference .internal .nav-link}
+    - [Added](#id1108){.reference .internal .nav-link}
+    - [Changed](#id1109){.reference .internal .nav-link}
+    - [Resolved issues](#id1110){.reference .internal .nav-link}
+  - [**rocm-cmake** (0.9.0)](#rocm-cmake-0-9-0){.reference .internal .nav-link}
+    - [Added](#id1111){.reference .internal .nav-link}
+  - [**rocPRIM** (2.13.0)](#rocprim-2-13-0){.reference .internal .nav-link}
+    - [Added](#id1112){.reference .internal .nav-link}
+    - [Changed](#id1113){.reference .internal .nav-link}
+    - [Known issues](#id1114){.reference .internal .nav-link}
+  - [**ROCprofiler**](#rocprofiler){.reference .internal .nav-link}
+    - [Added](#id1115){.reference .internal .nav-link}
+    - [Optimized](#id1116){.reference .internal .nav-link}
+    - [Resolved issues](#id1117){.reference .internal .nav-link}
+  - [**rocRAND** (2.10.17)](#id1118){.reference .internal .nav-link}
+    - [Added](#id1119){.reference .internal .nav-link}
+    - [Changed](#id1120){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.22.0)](#rocsolver-3-22-0){.reference .internal .nav-link}
+    - [Added](#id1121){.reference .internal .nav-link}
+    - [Optimized](#id1122){.reference .internal .nav-link}
+    - [Resolved issues](#id1123){.reference .internal .nav-link}
+  - [**rocSPARSE** (2.5.2)](#rocsparse-2-5-2){.reference .internal .nav-link}
+    - [Optimized](#id1124){.reference .internal .nav-link}
+  - [**rocThrust** (2.18.0)](#id1125){.reference .internal .nav-link}
+    - [Changed](#id1126){.reference .internal .nav-link}
+    - [Resolved issues](#id1127){.reference .internal .nav-link}
+  - [**rocWMMA** (1.1.0)](#rocwmma-1-1-0){.reference .internal .nav-link}
+    - [Added](#id1128){.reference .internal .nav-link}
+    - [Changed](#id1129){.reference .internal .nav-link}
+  - [**Tensile** (4.37.0)](#tensile-4-37-0){.reference .internal .nav-link}
+    - [Added](#id1130){.reference .internal .nav-link}
+    - [Changed](#id1131){.reference .internal .nav-link}
+    - [Optimized](#id1132){.reference .internal .nav-link}
+    - [Resolved issues](#id1133){.reference .internal .nav-link}
+- [ROCm 5.5.1](#rocm-5-5-1){.reference .internal .nav-link}
+- [ROCm 5.5.0](#rocm-5-5-0){.reference .internal .nav-link}
+  - [**hipBLAS** (0.54.0)](#hipblas-0-54-0){.reference .internal .nav-link}
+    - [Added](#id1134){.reference .internal .nav-link}
+    - [Changed](#id1135){.reference .internal .nav-link}
+    - [Resolved issues](#id1136){.reference .internal .nav-link}
+  - [**hipCUB** (2.13.1)](#id1137){.reference .internal .nav-link}
+    - [Added](#id1138){.reference .internal .nav-link}
+    - [Changed](#id1139){.reference .internal .nav-link}
+    - [Resolved issues](#id1140){.reference .internal .nav-link}
+    - [Known Issues](#id1141){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.11)](#hipfft-1-0-11){.reference .internal .nav-link}
+    - [Resolved issues](#id1142){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.7.0)](#hipsolver-1-7-0){.reference .internal .nav-link}
+    - [Added](#id1143){.reference .internal .nav-link}
+  - [**hipSPARSE** (2.3.5)](#hipsparse-2-3-5){.reference .internal .nav-link}
+    - [Optimized](#id1144){.reference .internal .nav-link}
+  - [**MIOpen** (2.19.0)](#id1145){.reference .internal .nav-link}
+    - [Added](#id1146){.reference .internal .nav-link}
+    - [Changed](#id1147){.reference .internal .nav-link}
+    - [Resolved issues](#id1148){.reference .internal .nav-link}
+  - [**RCCL** (2.15.5)](#id1149){.reference .internal .nav-link}
+    - [Added](#id1150){.reference .internal .nav-link}
+    - [Changed](#id1151){.reference .internal .nav-link}
+    - [Removed](#id1152){.reference .internal .nav-link}
+    - [Resolved issues](#id1153){.reference .internal .nav-link}
+  - [**rocALUTION** (2.1.8)](#rocalution-2-1-8){.reference .internal .nav-link}
+    - [Added](#id1154){.reference .internal .nav-link}
+    - [Changed](#id1155){.reference .internal .nav-link}
+    - [Optimized](#id1156){.reference .internal .nav-link}
+  - [**rocBLAS** (2.47.0)](#rocblas-2-47-0){.reference .internal .nav-link}
+    - [Added](#id1157){.reference .internal .nav-link}
+    - [Changed](#id1158){.reference .internal .nav-link}
+    - [Removed](#id1159){.reference .internal .nav-link}
+    - [Optimized](#id1160){.reference .internal .nav-link}
+    - [Resolved issues](#id1161){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.22)](#rocfft-1-0-22){.reference .internal .nav-link}
+    - [Added](#id1162){.reference .internal .nav-link}
+    - [Changed](#id1163){.reference .internal .nav-link}
+    - [Optimized](#id1164){.reference .internal .nav-link}
+    - [Resolved issues](#id1165){.reference .internal .nav-link}
+  - [**rocm-cmake** (0.8.1)](#rocm-cmake-0-8-1){.reference .internal .nav-link}
+    - [Changed](#id1166){.reference .internal .nav-link}
+    - [Resolved issues](#id1167){.reference .internal .nav-link}
+  - [**rocPRIM** (2.13.0)](#id1168){.reference .internal .nav-link}
+    - [Added](#id1169){.reference .internal .nav-link}
+    - [Changed](#id1170){.reference .internal .nav-link}
+    - [Resolved issues](#id1171){.reference .internal .nav-link}
+    - [Known issues](#id1172){.reference .internal .nav-link}
+  - [**rocRAND** (2.10.17)](#id1173){.reference .internal .nav-link}
+    - [Added](#id1174){.reference .internal .nav-link}
+    - [Changed](#id1175){.reference .internal .nav-link}
+    - [Fixed](#fixed){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.21.0)](#rocsolver-3-21-0){.reference .internal .nav-link}
+    - [Added](#id1176){.reference .internal .nav-link}
+    - [Optimized](#id1177){.reference .internal .nav-link}
+    - [Changed](#id1178){.reference .internal .nav-link}
+    - [Fixed](#id1179){.reference .internal .nav-link}
+  - [**rocSPARSE** (2.5.1)](#rocsparse-2-5-1){.reference .internal .nav-link}
+    - [Added](#id1180){.reference .internal .nav-link}
+    - [Improved](#improved){.reference .internal .nav-link}
+    - [Known issues](#id1181){.reference .internal .nav-link}
+  - [**rocWMMA** (1.0)](#rocwmma-1-0){.reference .internal .nav-link}
+    - [Added](#id1182){.reference .internal .nav-link}
+    - [Changed](#id1183){.reference .internal .nav-link}
+  - [**Tensile** (4.36.0)](#tensile-4-36-0){.reference .internal .nav-link}
+    - [Added](#id1184){.reference .internal .nav-link}
+    - [Changed](#id1185){.reference .internal .nav-link}
+    - [Optimized](#id1186){.reference .internal .nav-link}
+    - [Resolved issues](#id1187){.reference .internal .nav-link}
+- [ROCm 5.4.3](#rocm-5-4-3){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.21)](#rocfft-1-0-21){.reference .internal .nav-link}
+    - [Resolved issues](#id1188){.reference .internal .nav-link}
+- [ROCm 5.4.2](#rocm-5-4-2){.reference .internal .nav-link}
+- [ROCm 5.4.1](#rocm-5-4-1){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.20)](#rocfft-1-0-20){.reference .internal .nav-link}
+    - [Fixed](#id1189){.reference .internal .nav-link}
+- [ROCm 5.4.0](#rocm-5-4-0){.reference .internal .nav-link}
+  - [**hipBLAS** (0.53.0)](#hipblas-0-53-0){.reference .internal .nav-link}
+    - [Added](#id1190){.reference .internal .nav-link}
+  - [**hipCUB** (2.13.0)](#hipcub-2-13-0){.reference .internal .nav-link}
+    - [Added](#id1191){.reference .internal .nav-link}
+    - [Changed](#id1192){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.10)](#hipfft-1-0-10){.reference .internal .nav-link}
+    - [Added](#id1193){.reference .internal .nav-link}
+    - [Changed](#id1194){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.6.0)](#hipsolver-1-6-0){.reference .internal .nav-link}
+    - [Added](#id1195){.reference .internal .nav-link}
+  - [**hipSPARSE** (2.3.3)](#hipsparse-2-3-3){.reference .internal .nav-link}
+    - [Added](#id1196){.reference .internal .nav-link}
+    - [Changed](#id1197){.reference .internal .nav-link}
+  - [**RCCL** (2.13.4)](#rccl-2-13-4){.reference .internal .nav-link}
+    - [Changed](#id1198){.reference .internal .nav-link}
+    - [Resolved issues](#id1199){.reference .internal .nav-link}
+  - [**rocALUTION** (2.1.3)](#rocalution-2-1-3){.reference .internal .nav-link}
+    - [Added](#id1200){.reference .internal .nav-link}
+    - [Changed](#id1201){.reference .internal .nav-link}
+    - [Optimized](#id1202){.reference .internal .nav-link}
+  - [**rocBLAS** (2.46.0)](#rocblas-2-46-0){.reference .internal .nav-link}
+    - [Added](#id1203){.reference .internal .nav-link}
+    - [Changed](#id1204){.reference .internal .nav-link}
+    - [Optimized](#id1205){.reference .internal .nav-link}
+    - [Fixed](#id1206){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.19)](#rocfft-1-0-19){.reference .internal .nav-link}
+    - [Added](#id1207){.reference .internal .nav-link}
+    - [Changed](#id1208){.reference .internal .nav-link}
+    - [Optimized](#id1209){.reference .internal .nav-link}
+  - [**rocPRIM** (2.12.0)](#rocprim-2-12-0){.reference .internal .nav-link}
+    - [Changed](#id1210){.reference .internal .nav-link}
+    - [Removed](#id1211){.reference .internal .nav-link}
+    - [Resolved issues](#id1212){.reference .internal .nav-link}
+  - [**rocRAND** (2.10.16)](#rocrand-2-10-16){.reference .internal .nav-link}
+    - [Added](#id1213){.reference .internal .nav-link}
+    - [Changed](#id1214){.reference .internal .nav-link}
+    - [Resolved issues](#id1215){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.20.0)](#rocsolver-3-20-0){.reference .internal .nav-link}
+    - [Added](#id1216){.reference .internal .nav-link}
+    - [Changed](#id1217){.reference .internal .nav-link}
+  - [**rocSPARSE** (2.4.0)](#rocsparse-2-4-0){.reference .internal .nav-link}
+    - [Added](#id1218){.reference .internal .nav-link}
+    - [Optimized](#id1219){.reference .internal .nav-link}
+  - [**rocThrust** (2.17.0)](#rocthrust-2-17-0){.reference .internal .nav-link}
+    - [Added](#id1220){.reference .internal .nav-link}
+  - [**rocWMMA** (0.9)](#rocwmma-0-9){.reference .internal .nav-link}
+    - [Added](#id1221){.reference .internal .nav-link}
+    - [Changed](#id1222){.reference .internal .nav-link}
+  - [**Tensile** (4.35.0)](#tensile-4-35-0){.reference .internal .nav-link}
+    - [Added](#id1223){.reference .internal .nav-link}
+    - [Changed](#id1224){.reference .internal .nav-link}
+    - [Optimized](#id1225){.reference .internal .nav-link}
+    - [Resolved issues](#id1226){.reference .internal .nav-link}
+- [ROCm 5.3.3](#rocm-5-3-3){.reference .internal .nav-link}
+- [ROCm 5.3.2](#rocm-5-3-2){.reference .internal .nav-link}
+- [ROCm 5.3.0](#rocm-5-3-0){.reference .internal .nav-link}
+  - [**hipBLAS** (0.52.0)](#hipblas-0-52-0){.reference .internal .nav-link}
+    - [Added](#id1227){.reference .internal .nav-link}
+    - [Resolved issues](#id1228){.reference .internal .nav-link}
+  - [**hipCUB** (2.12.0)](#hipcub-2-12-0){.reference .internal .nav-link}
+    - [Added](#id1229){.reference .internal .nav-link}
+    - [Changed](#id1230){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.9)](#hipfft-1-0-9){.reference .internal .nav-link}
+    - [Changed](#id1231){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.5.0)](#hipsolver-1-5-0){.reference .internal .nav-link}
+    - [Added](#id1232){.reference .internal .nav-link}
+    - [Changed](#id1233){.reference .internal .nav-link}
+    - [Fixed](#id1234){.reference .internal .nav-link}
+  - [**hipSPARSE** (2.3.1)](#hipsparse-2-3-1){.reference .internal .nav-link}
+    - [Added](#id1235){.reference .internal .nav-link}
+  - [**rocALUTION** (2.1.0)](#rocalution-2-1-0){.reference .internal .nav-link}
+    - [Added](#id1236){.reference .internal .nav-link}
+    - [Optimized](#id1237){.reference .internal .nav-link}
+  - [**rocBLAS** (2.45.0)](#rocblas-2-45-0){.reference .internal .nav-link}
+    - [Added](#id1238){.reference .internal .nav-link}
+    - [Changed](#id1239){.reference .internal .nav-link}
+    - [Removed](#id1240){.reference .internal .nav-link}
+    - [Optimized](#id1241){.reference .internal .nav-link}
+    - [Resolved issues](#id1242){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.18)](#rocfft-1-0-18){.reference .internal .nav-link}
+    - [Changed](#id1243){.reference .internal .nav-link}
+    - [Optimized](#id1244){.reference .internal .nav-link}
+    - [Resolved issues](#id1245){.reference .internal .nav-link}
+  - [**rocm-cmake** (0.8.0)](#rocm-cmake-0-8-0){.reference .internal .nav-link}
+    - [Changed](#id1246){.reference .internal .nav-link}
+    - [Resolved issues](#id1247){.reference .internal .nav-link}
+  - [**rocPRIM** (2.11.0)](#rocprim-2-11-0){.reference .internal .nav-link}
+    - [Added](#id1248){.reference .internal .nav-link}
+  - [**rocRAND** (2.10.15)](#rocrand-2-10-15){.reference .internal .nav-link}
+    - [Changed](#id1249){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.19.0)](#rocsolver-3-19-0){.reference .internal .nav-link}
+    - [Added](#id1250){.reference .internal .nav-link}
+    - [Changed](#id1251){.reference .internal .nav-link}
+    - [Removed](#id1252){.reference .internal .nav-link}
+    - [Resolved issues](#id1253){.reference .internal .nav-link}
+  - [**rocThrust** (2.16.0)](#rocthrust-2-16-0){.reference .internal .nav-link}
+    - [Changed](#id1254){.reference .internal .nav-link}
+  - [**Tensile** (4.34.0)](#tensile-4-34-0){.reference .internal .nav-link}
+    - [Added](#id1255){.reference .internal .nav-link}
+    - [Changed](#id1256){.reference .internal .nav-link}
+    - [Optimized](#id1257){.reference .internal .nav-link}
+    - [Resolved issues](#id1258){.reference .internal .nav-link}
+- [ROCm 5.2.3](#rocm-5-2-3){.reference .internal .nav-link}
+  - [**RCCL** (2.12.10)](#rccl-2-12-10){.reference .internal .nav-link}
+    - [Added](#id1259){.reference .internal .nav-link}
+    - [Removed](#id1260){.reference .internal .nav-link}
+- [ROCm 5.2.1](#rocm-5-2-1){.reference .internal .nav-link}
+- [ROCm 5.2.0](#rocm-5-2-0){.reference .internal .nav-link}
+  - [**hipBLAS** (0.51.0)](#hipblas-0-51-0){.reference .internal .nav-link}
+    - [Added](#id1261){.reference .internal .nav-link}
+    - [Resolved issues](#id1262){.reference .internal .nav-link}
+  - [**hipCUB** (2.11.1)](#hipcub-2-11-1){.reference .internal .nav-link}
+    - [Added](#id1263){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.8)](#hipfft-1-0-8){.reference .internal .nav-link}
+    - [Added](#id1264){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.4.0)](#hipsolver-1-4-0){.reference .internal .nav-link}
+    - [Added](#id1265){.reference .internal .nav-link}
+    - [Resolved issues](#id1266){.reference .internal .nav-link}
+  - [**hipSPARSE** (2.2.0)](#hipsparse-2-2-0){.reference .internal .nav-link}
+    - [Added](#id1267){.reference .internal .nav-link}
+  - [**rocALUTION** (2.0.3)](#rocalution-2-0-3){.reference .internal .nav-link}
+    - [Added](#id1268){.reference .internal .nav-link}
+  - [**rocBLAS** (2.44.0)](#rocblas-2-44-0){.reference .internal .nav-link}
+    - [Added](#id1269){.reference .internal .nav-link}
+    - [Changed](#id1270){.reference .internal .nav-link}
+    - [Removed](#id1271){.reference .internal .nav-link}
+    - [Optimized](#id1272){.reference .internal .nav-link}
+    - [Resolved issues](#id1273){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.17)](#rocfft-1-0-17){.reference .internal .nav-link}
+    - [Added](#id1274){.reference .internal .nav-link}
+    - [Changed](#id1275){.reference .internal .nav-link}
+    - [Optimized](#id1276){.reference .internal .nav-link}
+    - [Resolved issues](#id1277){.reference .internal .nav-link}
+  - [**rocPRIM** (2.10.14)](#rocprim-2-10-14){.reference .internal .nav-link}
+    - [Added](#id1278){.reference .internal .nav-link}
+  - [**rocRAND** (2.10.14)](#rocrand-2-10-14){.reference .internal .nav-link}
+    - [Added](#id1279){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.18.0)](#rocsolver-3-18-0){.reference .internal .nav-link}
+    - [Added](#id1280){.reference .internal .nav-link}
+    - [Resolved issues](#id1281){.reference .internal .nav-link}
+  - [**rocSPARSE** (2.2.0)](#rocsparse-2-2-0){.reference .internal .nav-link}
+    - [Added](#id1282){.reference .internal .nav-link}
+    - [Changed](#id1283){.reference .internal .nav-link}
+    - [Optimized](#id1284){.reference .internal .nav-link}
+  - [**rocThrust** (2.15.0)](#rocthrust-2-15-0){.reference .internal .nav-link}
+    - [Added](#id1285){.reference .internal .nav-link}
+  - [**rocWMMA** (0.7)](#rocwmma-0-7){.reference .internal .nav-link}
+    - [Added](#id1286){.reference .internal .nav-link}
+    - [Changed](#id1287){.reference .internal .nav-link}
+  - [**Tensile** (4.33.0)](#tensile-4-33-0){.reference .internal .nav-link}
+    - [Added](#id1288){.reference .internal .nav-link}
+    - [Optimizations](#id1289){.reference .internal .nav-link}
+    - [Changed](#id1290){.reference .internal .nav-link}
+    - [Resolved issues](#id1291){.reference .internal .nav-link}
+- [ROCm 5.1.3](#rocm-5-1-3){.reference .internal .nav-link}
+- [ROCm 5.1.1](#rocm-5-1-1){.reference .internal .nav-link}
+- [ROCm 5.1.0](#rocm-5-1-0){.reference .internal .nav-link}
+  - [**hipBLAS** (0.50.0)](#hipblas-0-50-0){.reference .internal .nav-link}
+    - [Added](#id1292){.reference .internal .nav-link}
+    - [Fixed](#id1293){.reference .internal .nav-link}
+    - [Changed](#id1294){.reference .internal .nav-link}
+  - [**hipCUB** (2.11.0)](#hipcub-2-11-0){.reference .internal .nav-link}
+    - [Added](#id1295){.reference .internal .nav-link}
+    - [Changed](#id1296){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.7)](#hipfft-1-0-7){.reference .internal .nav-link}
+    - [Changed](#id1297){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.3.0)](#hipsolver-1-3-0){.reference .internal .nav-link}
+    - [Added](#id1298){.reference .internal .nav-link}
+    - [Changed](#id1299){.reference .internal .nav-link}
+    - [Resolved issues](#id1300){.reference .internal .nav-link}
+  - [**hipSPARSE** (2.1.0)](#hipsparse-2-1-0){.reference .internal .nav-link}
+    - [Added](#id1301){.reference .internal .nav-link}
+    - [Changed](#id1302){.reference .internal .nav-link}
+    - [Resolved issues](#id1303){.reference .internal .nav-link}
+  - [**RCCL** (2.11.4)](#rccl-2-11-4){.reference .internal .nav-link}
+    - [Added](#id1304){.reference .internal .nav-link}
+    - [Known issues](#id1305){.reference .internal .nav-link}
+  - [**rocALUTION** (2.0.2)](#rocalution-2-0-2){.reference .internal .nav-link}
+    - [Added](#id1306){.reference .internal .nav-link}
+  - [**rocBLAS** (2.43.0)](#rocblas-2-43-0){.reference .internal .nav-link}
+    - [Added](#id1307){.reference .internal .nav-link}
+    - [Changed](#id1308){.reference .internal .nav-link}
+    - [Optimized](#id1309){.reference .internal .nav-link}
+    - [Resolved issues](#id1310){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.16)](#rocfft-1-0-16){.reference .internal .nav-link}
+    - [Changed](#id1311){.reference .internal .nav-link}
+    - [Removed](#id1312){.reference .internal .nav-link}
+    - [Optimized](#id1313){.reference .internal .nav-link}
+    - [Resolved issues](#id1314){.reference .internal .nav-link}
+  - [**rocPRIM** (2.10.13)](#rocprim-2-10-13){.reference .internal .nav-link}
+    - [Added](#id1315){.reference .internal .nav-link}
+    - [Changed](#id1316){.reference .internal .nav-link}
+    - [Resolved issues](#id1317){.reference .internal .nav-link}
+    - [Known issues](#id1318){.reference .internal .nav-link}
+  - [**rocRAND** (2.10.13)](#rocrand-2-10-13){.reference .internal .nav-link}
+    - [Added](#id1319){.reference .internal .nav-link}
+    - [Changed](#id1320){.reference .internal .nav-link}
+    - [Resolved issues](#id1321){.reference .internal .nav-link}
+    - [Known issues](#id1322){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.17.0)](#rocsolver-3-17-0){.reference .internal .nav-link}
+    - [Optimized](#id1323){.reference .internal .nav-link}
+    - [Resolved issues](#id1324){.reference .internal .nav-link}
+  - [**rocSPARSE** (2.1.0)](#rocsparse-2-1-0){.reference .internal .nav-link}
+    - [Added](#id1325){.reference .internal .nav-link}
+    - [Optimized](#id1326){.reference .internal .nav-link}
+  - [**rocThrust** (2.14.0)](#rocthrust-2-14-0){.reference .internal .nav-link}
+    - [Added](#id1327){.reference .internal .nav-link}
+    - [Known issues](#id1328){.reference .internal .nav-link}
+  - [**Tensile** (4.32.0)](#tensile-4-32-0){.reference .internal .nav-link}
+    - [Added](#id1329){.reference .internal .nav-link}
+    - [Changed](#id1330){.reference .internal .nav-link}
+      - [Removed](#id1331){.reference .internal .nav-link}
+    - [Optimized](#id1332){.reference .internal .nav-link}
+- [ROCm 5.0.2](#rocm-5-0-2){.reference .internal .nav-link}
+- [ROCm 5.0.1](#rocm-5-0-1){.reference .internal .nav-link}
+- [ROCm 5.0.0](#rocm-5-0-0){.reference .internal .nav-link}
+  - [**hipBLAS** (0.49.0)](#hipblas-0-49-0){.reference .internal .nav-link}
+    - [Added](#id1333){.reference .internal .nav-link}
+    - [Resolved issues](#id1334){.reference .internal .nav-link}
+  - [**hipCUB** (2.10.13)](#hipcub-2-10-13){.reference .internal .nav-link}
+    - [Added](#id1335){.reference .internal .nav-link}
+    - [Changed](#id1336){.reference .internal .nav-link}
+    - [Resolved issues](#id1337){.reference .internal .nav-link}
+  - [**hipFFT** (1.0.4)](#hipfft-1-0-4){.reference .internal .nav-link}
+    - [Fixed](#id1338){.reference .internal .nav-link}
+    - [Added](#id1339){.reference .internal .nav-link}
+  - [**hipSOLVER** (1.2.0)](#hipsolver-1-2-0){.reference .internal .nav-link}
+    - [Added](#id1340){.reference .internal .nav-link}
+    - [Resolved issues](#id1341){.reference .internal .nav-link}
+  - [**hipSPARSE** (2.0.0)](#hipsparse-2-0-0){.reference .internal .nav-link}
+    - [Added](#id1342){.reference .internal .nav-link}
+  - [**RCCL** (2.10.3)](#rccl-2-10-3){.reference .internal .nav-link}
+    - [Added](#id1343){.reference .internal .nav-link}
+    - [Known issues](#id1344){.reference .internal .nav-link}
+  - [**rocALUTION** (2.0.1)](#rocalution-2-0-1){.reference .internal .nav-link}
+    - [Changed](#id1345){.reference .internal .nav-link}
+    - [Optimized](#id1346){.reference .internal .nav-link}
+  - [**rocBLAS** (2.42.0)](#rocblas-2-42-0){.reference .internal .nav-link}
+    - [Added](#id1347){.reference .internal .nav-link}
+    - [Changed](#id1348){.reference .internal .nav-link}
+    - [Optimized](#id1349){.reference .internal .nav-link}
+    - [Resolved issues](#id1350){.reference .internal .nav-link}
+  - [**rocFFT** (1.0.13)](#rocfft-1-0-13){.reference .internal .nav-link}
+    - [Added](#id1351){.reference .internal .nav-link}
+    - [Optimized](#id1352){.reference .internal .nav-link}
+    - [Resolved issues](#id1353){.reference .internal .nav-link}
+  - [**rocPRIM** (2.10.12)](#rocprim-2-10-12){.reference .internal .nav-link}
+    - [Added](#id1354){.reference .internal .nav-link}
+    - [Changed](#id1355){.reference .internal .nav-link}
+    - [Resolved issues](#id1356){.reference .internal .nav-link}
+    - [Known issues](#id1357){.reference .internal .nav-link}
+  - [**rocSOLVER** (3.16.0)](#rocsolver-3-16-0){.reference .internal .nav-link}
+    - [Added](#id1358){.reference .internal .nav-link}
+    - [Changed](#id1359){.reference .internal .nav-link}
+    - [Optimized](#id1360){.reference .internal .nav-link}
+    - [Resolved issues](#id1361){.reference .internal .nav-link}
+  - [**rocSPARSE** (2.0.0)](#rocsparse-2-0-0){.reference .internal .nav-link}
+    - [Added](#id1362){.reference .internal .nav-link}
+    - [Changed](#id1363){.reference .internal .nav-link}
+  - [**rocThrust** (2.13.0)](#rocthrust-2-13-0){.reference .internal .nav-link}
+    - [Added](#id1364){.reference .internal .nav-link}
+    - [Changed](#id1365){.reference .internal .nav-link}
+  - [**Tensile** (4.31.0)](#tensile-4-31-0){.reference .internal .nav-link}
+    - [Added](#id1366){.reference .internal .nav-link}
+    - [Changed](#id1367){.reference .internal .nav-link}
+    - [Removed](#id1368){.reference .internal .nav-link}
+    - [Optimized](#id1369){.reference .internal .nav-link}
+    - [Resolved issues](#id1370){.reference .internal .nav-link}
+::::
+:::::
+::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

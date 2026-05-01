@@ -1,97 +1,88 @@
 ---
-title: "AMD Instinct™ MI300 Series microarchitecture"
+title: "AMD Instinct\u2122 MI300 Series microarchitecture"
 source_url: "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi300.html"
-source_type: official
-source_org: amd
+source_type: "official"
+source_org: "amd"
+original_lang: "en"
 credibility: 5
-lifecycle: latest
-fetched_at: 2026-05-01T06:57:58.359815+00:00
-content_hash: "dcd7dcf8805e6d27"
+lifecycle: "latest"
+synced_date: 2026-05-01
 ---
 
-:::::::::::::::::::::::::::::::::
-{#main-content .bd-main role="main"}
+::::::::::::::::::::::::::::::::::::::: {#main-content .bd-main role="main"}
+::: sbt-scroll-pixel-helper
+:::
 
-sbt-scroll-pixel-helper
-
-:::::::::::::::::::::::::::::::
-bd-content
-::::::::::::::::::::::::::
-bd-article-container
-:::::::
-{.bd-header-article .d-print-none}
-::::::
-{.header-article-items .header-article__inner}
-::
-header-article-items__start
-
-header-article-item
+::::::::::::::::::::::::::::::::::::: bd-content
+:::::::::::::::::::::::::::::::: bd-article-container
+:::::::::: {.bd-header-article .d-print-none}
+::::::::: {.header-article-items .header-article__inner}
+::::: header-article-items__start
+::: header-article-item
 []{.fa-solid .fa-angle-right}
+:::
 
-header-article-item
+::: header-article-item
+- [](../../index.html){.nav-link aria-label="Home"}
+- [GPU architecture documentation](../gpu-arch.html){.nav-link}
+- AMD\...
+:::
+:::::
 
-::
-
-::
-header-article-items__end
-:
-header-article-item
-
-article-header-buttons
+::::: header-article-items__end
+:::: header-article-item
+::: article-header-buttons
 []{.fa-solid .fa-list}
+:::
+::::
+:::::
+:::::::::
+::::::::::
 
-:
-::
-::::::
-:::::::
-
-{#jb-print-docs-body .onlyprint}
+:::::: {#jb-print-docs-body .onlyprint}
 # AMD Instinct™ MI300 Series microarchitecture
 
-::
-{#print-main-content}
-:
-{#jb-print-toc}
-
-{}
+::::: {#print-main-content}
+:::: {#jb-print-toc}
+::: {}
 ## Contents
+:::
 
-:
-::
+- [Node-level architecture](#node-level-architecture){.reference .internal .nav-link}
+::::
+:::::
+::::::
 
-{#searchbox}
+::: {#searchbox}
+:::
 
-::::::::::::
-{#amd-instinct-mi300-series-microarchitecture .section .tex2jax_ignore .mathjax_ignore}
+::::::::::::::: {#amd-instinct-mi300-series-microarchitecture .section .tex2jax_ignore .mathjax_ignore}
 # AMD Instinct™ MI300 Series microarchitecture[\#](#amd-instinct-mi300-series-microarchitecture "Link to this heading"){.headerlink}
 
-::::::::
-{#rocm-docs-core-article-info .sd-container-fluid .sd-sphinx-override .sd-p-0 .sd-mt-2 .sd-mb-4 .sd-p-2 .sd-rounded-1 .docutils}
-:::::::
-{.sd-row .sd-row-cols-2 .sd-gx-2 .sd-gy-1 .docutils}
-::::::
-{.sd-col .sd-d-flex-row .sd-align-minor-center .docutils}
-:::::
-{.sd-container-fluid .sd-sphinx-override .docutils}
-::::
-{.sd-row .sd-row-cols-2 .sd-row-cols-xs-2 .sd-row-cols-sm-3 .sd-row-cols-md-3 .sd-row-cols-lg-3 .sd-gx-3 .sd-gy-1 .docutils}
-
-{.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+::::::::::: {#rocm-docs-core-article-info .sd-container-fluid .sd-sphinx-override .sd-p-0 .sd-mt-2 .sd-mb-4 .sd-p-2 .sd-rounded-1 .docutils}
+:::::::::: {.sd-row .sd-row-cols-2 .sd-gx-2 .sd-gy-1 .docutils}
+::::::::: {.sd-col .sd-d-flex-row .sd-align-minor-center .docutils}
+:::::::: {.sd-container-fluid .sd-sphinx-override .docutils}
+::::::: {.sd-row .sd-row-cols-2 .sd-row-cols-xs-2 .sd-row-cols-sm-3 .sd-row-cols-md-3 .sd-row-cols-lg-3 .sd-gx-3 .sd-gy-1 .docutils}
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==){.sd-octicon .sd-octicon-calendar} ]{.sd-pr-2 .article-info-date-svg} 2026-01-23
+:::
 
-{.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=){.sd-octicon .sd-octicon-clock} ]{.sd-pr-2 .article-info-read-time-svg} 6 min read time
+:::
 
-{.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils style="color:gray;"}
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils style="color:gray;"}
 Applies to Linux and Windows
+:::
 
-{.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
-
-::::
-:::::
-::::::
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+:::
 :::::::
 ::::::::
+:::::::::
+::::::::::
+:::::::::::
 
 The AMD Instinct MI300 Series GPUs are based on the AMD CDNA 3 architecture which was designed to deliver leadership performance for HPC, artificial intelligence (AI), and machine learning (ML) workloads. The AMD Instinct MI300 Series GPUs are well-suited for extreme scalability and compute performance, running on everything from individual servers to the world's largest exascale supercomputers.
 
@@ -110,7 +101,7 @@ The MI300 Series integrate up to 8 vertically stacked XCDs, 8 stacks of High-Ban
 
 The Matrix Cores inside the CDNA 3 CUs have significant improvements, emphasizing AI and machine learning, enhancing throughput of existing data types while adding support for new data types. CDNA 2 Matrix Cores support FP16 and BF16, while offering INT8 for inference. Compared to MI250X GPUs, CDNA 3 Matrix Cores triple the performance for FP16 and BF16, while providing a performance gain of 6.8 times for INT8. FP8 has a performance gain of 16 times compared to FP32, while TF32 has a gain of 4 times compared to FP32.
 
-pst-scrollable-table-container
+::: pst-scrollable-table-container
   Computation and Data Type   FLOPS/CLOCK/CU   Peak TFLOPS
   --------------------------- ---------------- -------------
   Matrix FP64                 256              163.4
@@ -124,6 +115,7 @@ pst-scrollable-table-container
   Matrix INT8                 4096             2614.9
 
   : [Peak-performance capabilities of the MI300X for different data types.]{.caption-text}[\#](#mi300x-perf-table "Link to this table"){.headerlink} {#mi300x-perf-table .table}
+:::
 
 The above table summarizes the aggregated peak performance of the AMD Instinct MI300X Open Compute Platform (OCP) Open Accelerator Modules (OAMs) for different data types and command processors. The middle column lists the peak performance (number of data elements processed in a single instruction) of a single compute unit if a SIMD (or matrix) instruction is submitted in each clock cycle. The third column lists the theoretical peak performance of the OAM. The theoretical aggregated peak memory bandwidth of the GPU is 5.3 TB per second.
 
@@ -134,7 +126,7 @@ The following image shows the block diagram of the APU (left) and the OAM packag
 <figcaption><p><span class="caption-text">MI300 Series system architecture showing MI300A (left) with 6 XCDs and 3 CCDs, while the MI300X (right) has 8 XCDs.</span><a href="#mi300-arch" class="headerlink" title="Link to this image">#</a></p></figcaption>
 </figure>
 
-{#node-level-architecture .section}
+::: {#node-level-architecture .section}
 ## Node-level architecture[\#](#node-level-architecture "Link to this heading"){.headerlink}
 
 <figure id="mi300-node" class="align-center">
@@ -143,23 +135,41 @@ The following image shows the block diagram of the APU (left) and the OAM packag
 </figure>
 
 The image above shows the node-level architecture of a system with AMD EPYC processors in a dual-socket configuration and eight AMD Instinct MI300X GPUs. The MI300X OAMs attach to the host system via PCIe Gen 5 x16 links (yellow lines). The GPUs are using seven high-bandwidth, low-latency AMD Infinity Fabric™ links (red lines) to form a fully connected 8-GPU system.
+:::
 
-{.toctree-wrapper .compound}
+::: {.toctree-wrapper .compound}
+:::
+:::::::::::::::
 
-::::::::::::
-::::::::::::::::::::::::::
+::::: prev-next-area
+[](../gpu-arch.html "previous page"){.left-prev}
 
-{.bd-sidebar-secondary .bd-toc}
-::
-{.sidebar-secondary-items .sidebar-secondary__inner}
-:
-sidebar-secondary-item
+::: prev-next-info
+previous
 
-{.page-toc .tocsection .onthispage}
+GPU architecture documentation
+:::
+
+[](mi300-mi200-performance-counters.html "next page"){.right-next}
+
+::: prev-next-info
+next
+
+MI300 and MI200 Series performance counters and metrics
+:::
+:::::
+::::::::::::::::::::::::::::::::
+
+:::::: {.bd-sidebar-secondary .bd-toc}
+::::: {.sidebar-secondary-items .sidebar-secondary__inner}
+:::: sidebar-secondary-item
+::: {.page-toc .tocsection .onthispage}
 Contents
+:::
 
-:
-::
-
-:::::::::::::::::::::::::::::::
-:::::::::::::::::::::::::::::::::
+- [Node-level architecture](#node-level-architecture){.reference .internal .nav-link}
+::::
+:::::
+::::::
+:::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::
