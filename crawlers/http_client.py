@@ -1,104 +1,102 @@
 """
-rocm-hip-map/crawlers/http_client.py
-Phase 2.1.1 — HTTP 客户端（httpx + 重试 + ETag）
+HTTP 客户端 (Phase 2.1)
+支持速率限制、ETag 缓存、重试
 """
-from __future__ import annotations
-
-import time
-from dataclasses import dataclass, field
-from typing import Optional
 
 import httpx
+import time
+import hashlib
+from typing import Optional, Dict
+from pathlib import Path
+import logging
 
-from .base import RawDoc
+logger = logging.getLogger(__name__)
 
 
-_USER_AGENTS = [
-    "Mozilla/5.0 (compatible; rocm-hip-map/2.0; +https://github.com/dodoqumy/rocm-hip-map)",
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36",
-]
+class DomainRateLimiter:
+    """按域名全局限速"""
+    _limiters: Dict[str, float] = {}
+    
+    @classmethod
+    def wait(cls, domain: str, rate_limit: float = 1.0):
+        """等待直到允许发送请求"""
+        now = time.time()
+        last_request = cls._limiters.get(domain, 0)
+        elapsed = now - last_request
+        
+        if elapsed < rate_limit:
+            time.sleep(rate_limit - elapsed)
+        
+        cls._limiters[domain] = time.time()
 
 
-@dataclass
-class HttpClient:
-    """
-    线程安全的 HTTP 客户端。
-
-    - 连接池（httpx）
-    - ETag / Last-Modified 缓存
-    - 指数退避重试
-    - User-Agent 轮换
-    """
-    timeout: float = 15.0
-    max_retries: int = 3
-    retry_delay: float = 1.0
-
-    # ETag 缓存
-    _etag_cache: dict = field(default_factory=dict)
-    _ua_index: int = 0
-
-    def _headers(self, url: str) -> dict[str, str]:
-        """构造请求头（带条件请求）。"""
-        ua = _USER_AGENTS[self._ua_index % len(_USER_AGENTS)]
+class HTTPClient:
+    """HTTP 客户端封装"""
+    
+    def __init__(self, rate_limit: float = 1.0, user_agent: str = "rocm-hip-map/0.2"):
+        self.rate_limit = rate_limit
+        self.user_agent = user_agent
+        self._etag_cache: Dict[str, str] = {}
+        self._last_modified: Dict[str, str] = {}
+        self._last_response: str = ""
+        
+    def get(self, url: str, check_etag: bool = True) -> Optional[str]:
+        """GET 请求"""
         headers = {
-            "User-Agent": ua,
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-            "Accept-Language": "en-US,en;q=0.5",
+            "User-Agent": self.user_agent,
         }
-        cached = self._etag_cache.get(url)
-        if cached:
-            if cached.get("etag"):
-                headers["If-None-Match"] = cached["etag"]
-            if cached.get("last_modified"):
-                headers["If-Modified-Since"] = cached["last_modified"]
-        return headers
+        
+        # ETag 检查
+        if check_etag and url in self._etag_cache:
+            headers["If-None-Match"] = self._etag_cache[url]
+        if check_etag and url in self._last_modified:
+            headers["If-Modified-Since"] = self._last_modified[url]
+        
+        try:
+            resp = httpx.get(url, headers=headers, timeout=30, follow_redirects=True)
+            
+            # 保存响应文本 (用于 sitemap 解析)
+            self._last_response = resp.text
+            
+            if resp.status_code == 304:
+                logger.debug(f"  ⏭ ETag 304: {url}")
+                return None  # 未变
+            
+            if resp.status_code != 200:
+                logger.warning(f"  ⚠ HTTP {resp.status_code}: {url}")
+                return None
+            
+            # 缓存 ETag / Last-Modified
+            etag = resp.headers.get("ETag")
+            if etag:
+                self._etag_cache[url] = etag
+            
+            last_modified = resp.headers.get("Last-Modified")
+            if last_modified:
+                self._last_modified[url] = last_modified
+            
+            return resp.text
+            
+        except httpx.Timeout:
+            logger.warning(f"  ⚠ Timeout: {url}")
+            return None
+        except Exception as e:
+            logger.error(f"  ⚠ Error: {url} - {e}")
+            return None
+    
+    def head(self, url: str) -> Optional[Dict]:
+        """HEAD 请求 (探测)"""
+        try:
+            resp = httpx.head(url, timeout=10)
+            return {"status": resp.status_code, "headers": dict(resp.headers)}
+        except:
+            return None
+    
+    def rate_limit_per_domain(self, domain: str):
+        """按域名限速"""
+        DomainRateLimiter.wait(domain, self.rate_limit)
 
-    def fetch(self, url: str) -> RawDoc:
-        """同步 fetch（支持重试）。"""
-        headers = self._headers(url)
 
-        for attempt in range(self.max_retries):
-            try:
-                response = httpx.get(
-                    url,
-                    headers=headers,
-                    timeout=self.timeout,
-                    follow_redirects=True,
-                )
-
-                # 更新 ETag 缓存
-                etag = response.headers.get("etag", "").strip('"') or None
-                lm = response.headers.get("last-modified") or None
-                if etag or lm:
-                    self._etag_cache[url] = {"etag": etag, "last_modified": lm}
-
-                return RawDoc(
-                    url=url,
-                    status_code=response.status_code,
-                    content=response.content,
-                    headers=dict(response.headers),
-                    etag=etag,
-                    last_modified=lm,
-                )
-
-            except (httpx.TimeoutException, httpx.ConnectError,
-                    httpx.NetworkError) as e:
-                if attempt < self.max_retries - 1:
-                    delay = self.retry_delay * (2 ** attempt)
-                    time.sleep(delay)
-                else:
-                    raise
-
-        raise RuntimeError(f"Failed after {self.max_retries} retries: {url}")
-
-    def fetch_all(self, urls: list[str]) -> list[RawDoc]:
-        """串行批量 fetch。"""
-        results = []
-        for url in urls:
-            try:
-                results.append(self.fetch(url))
-            except Exception:
-                results.append(
-                    RawDoc(url=url, status_code=0, content=b"", headers={})
-                )
-        return results
+def compute_content_hash(content: str) -> str:
+    """计算内容 SHA256 前 16 位"""
+    return hashlib.sha256(content.encode()).hexdigest()[:16]

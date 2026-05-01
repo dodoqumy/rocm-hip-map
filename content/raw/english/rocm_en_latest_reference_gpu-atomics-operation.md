@@ -6,25 +6,46 @@ source_org: "amd"
 original_lang: "en"
 credibility: 5
 lifecycle: "latest"
-synced_date: 2026-04-28
+synced_date: 2026-05-01
 ---
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#main-content .bd-main role="main"}
+::: sbt-scroll-pixel-helper
+:::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: bd-content
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: bd-article-container
+:::::::::: {.bd-header-article .d-print-none}
+::::::::: {.header-article-items .header-article__inner}
 ::::: header-article-items__start
 ::: header-article-item
 []{.fa-solid .fa-angle-right}
+:::
 
 ::: header-article-item
 - [](../index.html){.nav-link aria-label="Home"}
 - Hardware\...
+:::
+:::::
 
 ::::: header-article-items__end
 :::: header-article-item
 ::: article-header-buttons
 []{.fa-solid .fa-list}
+:::
+::::
+:::::
+:::::::::
+::::::::::
 
+:::::: {#jb-print-docs-body .onlyprint}
 # Hardware atomics operation support
 
+::::: {#print-main-content}
+:::: {#jb-print-toc}
+::: {}
 ## Contents
+:::
 
 - [Hardware atomics operation support](#){.reference .internal .nav-link}
 - [Support summary](#support-summary){.reference .internal .nav-link}
@@ -40,17 +61,42 @@ synced_date: 2026-04-28
   - [Float atomics operations](#float-atomics-operations){.reference .internal .nav-link}
     - [AMD Instinct GPUs](#id5){.reference .internal .nav-link}
     - [AMD gfx generic targets](#id6){.reference .internal .nav-link}
+::::
+:::::
+::::::
 
+::: {#searchbox}
+:::
 
+:::::::::::: {#hardware-atomics-operation-support .section}
+[]{#hw-atomics-operation-support}
 
 # Hardware atomics operation support[\#](#hardware-atomics-operation-support "Link to this heading"){.headerlink}
 
+::::::::::: {#rocm-docs-core-article-info .sd-container-fluid .sd-sphinx-override .sd-p-0 .sd-mt-2 .sd-mb-4 .sd-p-2 .sd-rounded-1 .docutils}
+:::::::::: {.sd-row .sd-row-cols-2 .sd-gx-2 .sd-gy-1 .docutils}
+::::::::: {.sd-col .sd-d-flex-row .sd-align-minor-center .docutils}
+:::::::: {.sd-container-fluid .sd-sphinx-override .docutils}
+::::::: {.sd-row .sd-row-cols-2 .sd-row-cols-xs-2 .sd-row-cols-sm-3 .sd-row-cols-md-3 .sd-row-cols-lg-3 .sd-gx-3 .sd-gy-1 .docutils}
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==){.sd-octicon .sd-octicon-calendar} ]{.sd-pr-2 .article-info-date-svg} 2026-01-23
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=){.sd-octicon .sd-octicon-clock} ]{.sd-pr-2 .article-info-read-time-svg} 158 min read time
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils style="color:gray;"}
 Applies to Linux and Windows
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+:::
+:::::::
+::::::::
+:::::::::
+::::::::::
+:::::::::::
 
 [[Atomic operations]{.xref .std .std-ref}](https://rocm.docs.amd.com/projects/HIP/en/latest/how-to/hip_cpp_language_extensions.html#atomic-functions "(in HIP Documentation v7.2.53211)"){.reference .external} guarantee that the operation is completed as an indivisible unit, preventing race conditions where simultaneous access to the same memory location could lead to incorrect or undefined behavior.
 
@@ -97,9 +143,12 @@ Scopes of operations:
 - System-scope
 
   - This atomic should happen atomically from the point of view of every thread in all devices and in the CPUs.
+::::::::::::
 
+::::: {#support-summary .section}
 # Support summary[\#](#support-summary "Link to this heading"){.headerlink}
 
+::: {#amd-instinct-gpus .section}
 ## AMD Instinct GPUs[\#](#amd-instinct-gpus "Link to this heading"){.headerlink}
 
 **MI300 and MI350 Series**
@@ -149,7 +198,9 @@ Scopes of operations:
 - If the uncached data is stored in host memory, the atomic will be forwarded from Infinity Fabric to PCIe. Any atomic not supported by the PCIe bus will be a NOP and give incorrect result.
 
 - If an float atomic add hits uncached memory, it cannot be forwarded to the Infinity Fabric so it will NOP and give incorrect result.
+:::
 
+::: {#amd-gfx-generic-targets .section}
 ## AMD gfx generic targets[\#](#amd-gfx-generic-targets "Link to this heading"){.headerlink}
 
 **gfx9**
@@ -223,7 +274,10 @@ Scopes of operations:
 - In dGPUs, if the data is stored in host memory, the atomic will be forwarded from the Infinity Fabric to PCIe.
 
 - If the PCIe bus does not support the requested atomic, the GPU's PCIe controller changes it into a load-op-store sequence. All waves on the chip submitting atomics to that address will stall waiting for the load-op-store. It will seem like atomics to the wave, but the CPU sees it as a non-atomic load-op-store sequence. This downgrades system-scope atomics to device-scope.
+:::
+:::::
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#gpus-atomics-support .section}
 # GPUs atomics support[\#](#gpus-atomics-support "Link to this heading"){.headerlink}
 
 This section presents a series of tables that show the level of atomic operations support for the different hardware devices described above, and different datatypes, different operations and different scopes.
@@ -274,6 +328,7 @@ The tables selectors or options are the following:
 
 - The final option is the scope of atomic access.
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#integer-atomics-operations .section}
 ## Integer atomics operations[\#](#integer-atomics-operations "Link to this heading"){.headerlink}
 
 The integer type atomic operations that are supported by different hardware.
@@ -298,20 +353,31 @@ The integer type atomic operations that are supported by different hardware.
 
   - Max
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#id1 .section}
 ### AMD Instinct GPUs[\#](#id1 "Link to this heading"){.headerlink}
 
 The integer type atomic operations that are supported by different AMD Instinct GPUs listed in the following table.
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 HW atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 No PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -354,9 +420,12 @@ Device
 | 64 bit atomicMax | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -399,11 +468,18 @@ System
 | 64 bit atomicMax | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -446,9 +522,12 @@ Device
 | 64 bit atomicMax | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -491,13 +570,24 @@ System
 | 64 bit atomicMax | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -540,9 +630,12 @@ Device
 | 64 bit atomicMax | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -585,11 +678,18 @@ System
 | 64 bit atomicMax | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -632,9 +732,12 @@ Device
 | 64 bit atomicMax | ❌ NOP   | ❌ NOP     | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::      | :::        | :::       | :::           | :::       | :::           |
 +------------------+----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+--------------------+-----------+--------------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line           | ::: line  | ::: line           |
@@ -677,13 +780,24 @@ System
 | 64 bit atomicMax | ❌ NOP   | ❌ NOP     | ✅ Native | ⚠️ Scope Downgrade | ✅ Native | ⚠️ Scope Downgrade |
 | :::              | :::      | :::        | :::       | :::                | :::       | :::                |
 +------------------+----------+------------+-----------+--------------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -726,9 +840,12 @@ Device
 | 64 bit atomicMax | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -771,11 +888,18 @@ System
 | 64 bit atomicMax | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -818,9 +942,12 @@ Device
 | 64 bit atomicMax | ❌ NOP   | ❌ NOP     | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::      | :::        | :::       | :::           | :::       | :::           |
 +------------------+----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+--------------------+-----------+--------------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line           | ::: line  | ::: line           |
@@ -863,15 +990,30 @@ System
 | 64 bit atomicMax | ❌ NOP   | ❌ NOP     | ✅ Native | ⚠️ Scope Downgrade | ✅ Native | ⚠️ Scope Downgrade |
 | :::              | :::      | :::        | :::       | :::                | :::       | :::                |
 +------------------+----------+------------+-----------+--------------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
 
 PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -914,9 +1056,12 @@ Device
 | 64 bit atomicMax | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -959,11 +1104,18 @@ System
 | 64 bit atomicMax | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -1006,9 +1158,12 @@ Device
 | 64 bit atomicMax | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -1051,13 +1206,24 @@ System
 | 64 bit atomicMax | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -1100,9 +1266,12 @@ Device
 | 64 bit atomicMax | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -1145,11 +1314,18 @@ System
 | 64 bit atomicMax | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -1192,9 +1368,12 @@ Device
 | 64 bit atomicMax | ❌ NOP    | ❌ NOP     | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+--------------------+-----------+--------------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line           | ::: line  | ::: line           |
@@ -1237,13 +1416,24 @@ System
 | 64 bit atomicMax | ❌ NOP    | ❌ NOP     | ✅ Native | ⚠️ Scope Downgrade | ✅ Native | ⚠️ Scope Downgrade |
 | :::              | :::       | :::        | :::       | :::                | :::       | :::                |
 +------------------+-----------+------------+-----------+--------------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -1286,9 +1476,12 @@ Device
 | 64 bit atomicMax | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -1331,11 +1524,18 @@ System
 | 64 bit atomicMax | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -1378,9 +1578,12 @@ Device
 | 64 bit atomicMax | ❌ NOP    | ❌ NOP     | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::              | :::       | :::        | :::       | :::           | :::       | :::           |
 +------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+------------+-----------+--------------------+-----------+--------------------+
 | ::: line         | ::: line  | ::: line   | ::: line  | ::: line           | ::: line  | ::: line           |
@@ -1423,17 +1626,36 @@ System
 | 64 bit atomicMax | ❌ NOP    | ❌ NOP     | ✅ Native | ⚠️ Scope Downgrade | ✅ Native | ⚠️ Scope Downgrade |
 | :::              | :::       | :::        | :::       | :::                | :::       | :::                |
 +------------------+-----------+------------+-----------+--------------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 CAS emulation
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 No PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -1476,9 +1698,12 @@ Device
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -1521,11 +1746,18 @@ System
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -1568,9 +1800,12 @@ Device
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -1613,13 +1848,24 @@ System
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -1662,9 +1908,12 @@ Device
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -1707,11 +1956,18 @@ System
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -1754,9 +2010,12 @@ Device
 | 64 bit atomicMax | ❌ NOP   | ❌ NOP     | ❌ NOP    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+--------------------------+----------+--------------------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line                 | ::: line | ::: line                 |
@@ -1799,13 +2058,24 @@ System
 | 64 bit atomicMax | ❌ NOP   | ❌ NOP     | ❌ NOP    | ⚠️ Scope Downgrade - CAS | ✅ CAS   | ⚠️ Scope Downgrade - CAS |
 | :::              | :::      | :::        | :::       | :::                      | :::      | :::                      |
 +------------------+----------+------------+-----------+--------------------------+----------+--------------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -1848,9 +2118,12 @@ Device
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -1893,11 +2166,18 @@ System
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -1940,9 +2220,12 @@ Device
 | 64 bit atomicMax | ❌ NOP   | ❌ NOP     | ❌ NOP    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+--------------------------+----------+--------------------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line                 | ::: line | ::: line                 |
@@ -1985,15 +2268,30 @@ System
 | 64 bit atomicMax | ❌ NOP   | ❌ NOP     | ❌ NOP    | ⚠️ Scope Downgrade - CAS | ✅ CAS   | ⚠️ Scope Downgrade - CAS |
 | :::              | :::      | :::        | :::       | :::                      | :::      | :::                      |
 +------------------+----------+------------+-----------+--------------------------+----------+--------------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
 
 PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -2036,9 +2334,12 @@ Device
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -2081,11 +2382,18 @@ System
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -2128,9 +2436,12 @@ Device
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -2173,13 +2484,24 @@ System
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -2222,9 +2544,12 @@ Device
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -2267,11 +2592,18 @@ System
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -2314,9 +2646,12 @@ Device
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -2359,13 +2694,24 @@ System
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -2408,9 +2754,12 @@ Device
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -2453,11 +2802,18 @@ System
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -2500,9 +2856,12 @@ Device
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line         | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -2545,21 +2904,44 @@ System
 | 64 bit atomicMax | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::              | :::      | :::        | :::       | :::           | :::      | :::           |
 +------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#id2 .section}
 ### AMD gfx generic targets[\#](#id2 "Link to this heading"){.headerlink}
 
 The integer type atomic operations that are supported by different gfx generic targets listed in the following table.
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 HW atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 No PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -2602,9 +2984,12 @@ Device
 | 64 bit atomicMax | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -2647,11 +3032,18 @@ System
 | 64 bit atomicMax | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -2694,9 +3086,12 @@ Device
 | 64 bit atomicMax | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -2739,13 +3134,24 @@ System
 | 64 bit atomicMax | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -2788,9 +3194,12 @@ Device
 | 64 bit atomicMax | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -2833,11 +3242,18 @@ System
 | 64 bit atomicMax | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -2880,9 +3296,12 @@ Device
 | 64 bit atomicMax | ❌ NOP    | ✅ Native | ❌ NOP     | ❌ NOP     | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+--------------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line           |
@@ -2925,13 +3344,24 @@ System
 | 64 bit atomicMax | ❌ NOP    | ✅ Native | ❌ NOP     | ❌ NOP     | ✅ Native | ⚠️ Scope Downgrade |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::                |
 +------------------+-----------+-----------+------------+------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -2974,9 +3404,12 @@ Device
 | 64 bit atomicMax | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3019,11 +3452,18 @@ System
 | 64 bit atomicMax | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3066,9 +3506,12 @@ Device
 | 64 bit atomicMax | ❌ NOP    | ✅ Native | ❌ NOP     | ❌ NOP     | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+--------------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line           |
@@ -3111,15 +3554,30 @@ System
 | 64 bit atomicMax | ❌ NOP    | ✅ Native | ❌ NOP     | ❌ NOP     | ✅ Native | ⚠️ Scope Downgrade |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::                |
 +------------------+-----------+-----------+------------+------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
 
 PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3162,9 +3620,12 @@ Device
 | 64 bit atomicMax | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3207,11 +3668,18 @@ System
 | 64 bit atomicMax | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3254,9 +3722,12 @@ Device
 | 64 bit atomicMax | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3299,13 +3770,24 @@ System
 | 64 bit atomicMax | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3348,9 +3830,12 @@ Device
 | 64 bit atomicMax | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3393,11 +3878,18 @@ System
 | 64 bit atomicMax | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3440,9 +3932,12 @@ Device
 | 64 bit atomicMax | ❌ NOP    | ✅ Native | ❌ NOP     | ❌ NOP     | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+--------------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line           |
@@ -3485,13 +3980,24 @@ System
 | 64 bit atomicMax | ❌ NOP    | ✅ Native | ❌ NOP     | ❌ NOP     | ✅ Native | ⚠️ Scope Downgrade |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::                |
 +------------------+-----------+-----------+------------+------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3534,9 +4040,12 @@ Device
 | 64 bit atomicMax | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3579,11 +4088,18 @@ System
 | 64 bit atomicMax | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3626,9 +4142,12 @@ Device
 | 64 bit atomicMax | ❌ NOP    | ✅ Native | ❌ NOP     | ❌ NOP     | ✅ Native | ✅ Native  |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::        |
 +------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+-----------+------------+------------+-----------+--------------------+
 | ::: line         | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line           |
@@ -3671,17 +4190,36 @@ System
 | 64 bit atomicMax | ❌ NOP    | ✅ Native | ❌ NOP     | ❌ NOP     | ✅ Native | ⚠️ Scope Downgrade |
 | :::              | :::       | :::       | :::        | :::        | :::       | :::                |
 +------------------+-----------+-----------+------------+------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 CAS emulation
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 No PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3724,9 +4262,12 @@ Device
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3769,11 +4310,18 @@ System
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3816,9 +4364,12 @@ Device
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3861,13 +4412,24 @@ System
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3910,9 +4472,12 @@ Device
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -3955,11 +4520,18 @@ System
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -4002,9 +4574,12 @@ Device
 | 64 bit atomicMax | ❌ NOP    | ✅ CAS   | ❌ NOP     | ❌ NOP     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+--------------------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line                 |
@@ -4047,13 +4622,24 @@ System
 | 64 bit atomicMax | ❌ NOP    | ✅ CAS   | ❌ NOP     | ❌ NOP     | ✅ CAS    | ⚠️ Scope Downgrade - CAS |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::                      |
 +------------------+-----------+----------+------------+------------+-----------+--------------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -4096,9 +4682,12 @@ Device
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -4141,11 +4730,18 @@ System
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -4188,9 +4784,12 @@ Device
 | 64 bit atomicMax | ❌ NOP    | ✅ CAS   | ❌ NOP     | ❌ NOP     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+--------------------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line                 |
@@ -4233,15 +4832,30 @@ System
 | 64 bit atomicMax | ❌ NOP    | ✅ CAS   | ❌ NOP     | ❌ NOP     | ✅ CAS    | ⚠️ Scope Downgrade - CAS |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::                      |
 +------------------+-----------+----------+------------+------------+-----------+--------------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
 
 PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -4284,9 +4898,12 @@ Device
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -4329,11 +4946,18 @@ System
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -4376,9 +5000,12 @@ Device
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -4421,13 +5048,24 @@ System
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -4470,9 +5108,12 @@ Device
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -4515,11 +5156,18 @@ System
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -4562,9 +5210,12 @@ Device
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -4607,13 +5258,24 @@ System
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -4656,9 +5318,12 @@ Device
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -4701,11 +5366,18 @@ System
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -4748,9 +5420,12 @@ Device
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line         | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -4793,7 +5468,21 @@ System
 | 64 bit atomicMax | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::              | :::       | :::      | :::        | :::        | :::       | :::        |
 +------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#bitwise-atomics-operations .section}
 ## Bitwise atomics operations[\#](#bitwise-atomics-operations "Link to this heading"){.headerlink}
 
 The bitwise atomic operations that are supported by different hardware.
@@ -4822,24 +5511,37 @@ The bitwise atomic operations that are supported by different hardware.
 
   - XOR
 
+::: {.admonition .note}
 Note
 
 128-bit bitwise Exchange and CAS are not supported on AMD GPUs
+:::
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#id3 .section}
 ### AMD Instinct GPUs[\#](#id3 "Link to this heading"){.headerlink}
 
 The bitwise atomic operations that are supported by different AMD Instinct GPUs listed in the following table.
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 HW atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 No PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -4886,9 +5588,12 @@ Device
 | 64 bit atomicXor  | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -4935,11 +5640,18 @@ System
 | 64 bit atomicXor  | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -4986,9 +5698,12 @@ Device
 | 64 bit atomicXor  | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -5035,13 +5750,24 @@ System
 | 64 bit atomicXor  | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -5088,9 +5814,12 @@ Device
 | 64 bit atomicXor  | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -5137,11 +5866,18 @@ System
 | 64 bit atomicXor  | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -5188,9 +5924,12 @@ Device
 | 64 bit atomicXor  | ❌ NOP   | ❌ NOP     | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::      | :::        | :::       | :::           | :::       | :::           |
 +-------------------+----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+----------+------------+-----------+--------------------+-----------+--------------------+
 | ::: line          | ::: line | ::: line   | ::: line  | ::: line           | ::: line  | ::: line           |
@@ -5237,13 +5976,24 @@ System
 | 64 bit atomicXor  | ❌ NOP   | ❌ NOP     | ✅ Native | ⚠️ Scope Downgrade | ✅ Native | ⚠️ Scope Downgrade |
 | :::               | :::      | :::        | :::       | :::                | :::       | :::                |
 +-------------------+----------+------------+-----------+--------------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -5290,9 +6040,12 @@ Device
 | 64 bit atomicXor  | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -5339,11 +6092,18 @@ System
 | 64 bit atomicXor  | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -5390,9 +6150,12 @@ Device
 | 64 bit atomicXor  | ❌ NOP   | ❌ NOP     | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::      | :::        | :::       | :::           | :::       | :::           |
 +-------------------+----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+----------+------------+-----------+--------------------+-----------+--------------------+
 | ::: line          | ::: line | ::: line   | ::: line  | ::: line           | ::: line  | ::: line           |
@@ -5439,15 +6202,30 @@ System
 | 64 bit atomicXor  | ❌ NOP   | ❌ NOP     | ✅ Native | ⚠️ Scope Downgrade | ✅ Native | ⚠️ Scope Downgrade |
 | :::               | :::      | :::        | :::       | :::                | :::       | :::                |
 +-------------------+----------+------------+-----------+--------------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
 
 PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -5494,9 +6272,12 @@ Device
 | 64 bit atomicXor  | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -5543,11 +6324,18 @@ System
 | 64 bit atomicXor  | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -5594,9 +6382,12 @@ Device
 | 64 bit atomicXor  | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -5643,13 +6434,24 @@ System
 | 64 bit atomicXor  | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -5696,9 +6498,12 @@ Device
 | 64 bit atomicXor  | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -5745,11 +6550,18 @@ System
 | 64 bit atomicXor  | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -5796,9 +6608,12 @@ Device
 | 64 bit atomicXor  | ❌ NOP    | ❌ NOP     | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+--------------------+-----------+--------------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line           | ::: line  | ::: line           |
@@ -5845,13 +6660,24 @@ System
 | 64 bit atomicXor  | ❌ NOP    | ❌ NOP     | ✅ Native | ⚠️ Scope Downgrade | ✅ Native | ⚠️ Scope Downgrade |
 | :::               | :::       | :::        | :::       | :::                | :::       | :::                |
 +-------------------+-----------+------------+-----------+--------------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -5898,9 +6724,12 @@ Device
 | 64 bit atomicXor  | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -5947,11 +6776,18 @@ System
 | 64 bit atomicXor  | ✅ Native | ✅ Native  | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -5998,9 +6834,12 @@ Device
 | 64 bit atomicXor  | ❌ NOP    | ❌ NOP     | ✅ Native | ✅ Native     | ✅ Native | ✅ Native     |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+--------------------+-----------+--------------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line           | ::: line  | ::: line           |
@@ -6047,17 +6886,36 @@ System
 | 64 bit atomicXor  | ❌ NOP    | ❌ NOP     | ✅ Native | ⚠️ Scope Downgrade | ✅ Native | ⚠️ Scope Downgrade |
 | :::               | :::       | :::        | :::       | :::                | :::       | :::                |
 +-------------------+-----------+------------+-----------+--------------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 CAS emulation
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 No PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -6104,9 +6962,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -6153,11 +7014,18 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -6204,9 +7072,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -6253,13 +7124,24 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -6306,9 +7188,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -6355,11 +7240,18 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -6406,9 +7298,12 @@ Device
 | 64 bit atomicXor  | ❌ NOP   | ❌ NOP     | ❌ NOP    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::      | :::        | :::       | :::           | :::       | :::           |
 +-------------------+----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+----------+------------+-----------+--------------------------+-----------+--------------------------+
 | ::: line          | ::: line | ::: line   | ::: line  | ::: line                 | ::: line  | ::: line                 |
@@ -6455,13 +7350,24 @@ System
 | 64 bit atomicXor  | ❌ NOP   | ❌ NOP     | ❌ NOP    | ⚠️ Scope Downgrade - CAS | ✅ CAS    | ⚠️ Scope Downgrade - CAS |
 | :::               | :::      | :::        | :::       | :::                      | :::       | :::                      |
 +-------------------+----------+------------+-----------+--------------------------+-----------+--------------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -6508,9 +7414,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -6557,11 +7466,18 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line          | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -6608,9 +7524,12 @@ Device
 | 64 bit atomicXor  | ❌ NOP   | ❌ NOP     | ❌ NOP    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::               | :::      | :::        | :::       | :::           | :::      | :::           |
 +-------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+----------+------------+-----------+--------------------------+-----------+--------------------------+
 | ::: line          | ::: line | ::: line   | ::: line  | ::: line                 | ::: line  | ::: line                 |
@@ -6657,15 +7576,30 @@ System
 | 64 bit atomicXor  | ❌ NOP   | ❌ NOP     | ❌ NOP    | ⚠️ Scope Downgrade - CAS | ✅ CAS    | ⚠️ Scope Downgrade - CAS |
 | :::               | :::      | :::        | :::       | :::                      | :::       | :::                      |
 +-------------------+----------+------------+-----------+--------------------------+-----------+--------------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
 
 PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -6712,9 +7646,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -6761,11 +7698,18 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -6812,9 +7756,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -6861,13 +7808,24 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -6914,9 +7872,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -6963,11 +7924,18 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -7014,9 +7982,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -7063,13 +8034,24 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -7116,9 +8098,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -7165,11 +8150,18 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -7216,9 +8208,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
 | ::: line          | ::: line  | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -7265,21 +8260,44 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS    | ✅ CAS        |
 | :::               | :::       | :::        | :::       | :::           | :::       | :::           |
 +-------------------+-----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#id4 .section}
 ### AMD gfx generic targets[\#](#id4 "Link to this heading"){.headerlink}
 
 The bitwise atomic operations that are supported by different AMD gfx generic targets listed in the following table.
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 HW atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 No PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -7326,9 +8344,12 @@ Device
 | 64 bit atomicXor  | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -7375,11 +8396,18 @@ System
 | 64 bit atomicXor  | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -7426,9 +8454,12 @@ Device
 | 64 bit atomicXor  | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -7475,13 +8506,24 @@ System
 | 64 bit atomicXor  | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -7528,9 +8570,12 @@ Device
 | 64 bit atomicXor  | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -7577,11 +8622,18 @@ System
 | 64 bit atomicXor  | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -7628,9 +8680,12 @@ Device
 | 64 bit atomicXor  | ❌ NOP    | ✅ Native | ❌ NOP     | ❌ NOP     | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+--------------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line           |
@@ -7677,13 +8732,24 @@ System
 | 64 bit atomicXor  | ❌ NOP    | ✅ Native | ❌ NOP     | ❌ NOP     | ✅ Native | ⚠️ Scope Downgrade |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::                |
 +-------------------+-----------+-----------+------------+------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -7730,9 +8796,12 @@ Device
 | 64 bit atomicXor  | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -7779,11 +8848,18 @@ System
 | 64 bit atomicXor  | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -7830,9 +8906,12 @@ Device
 | 64 bit atomicXor  | ❌ NOP    | ✅ Native | ❌ NOP     | ❌ NOP     | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+--------------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line           |
@@ -7879,15 +8958,30 @@ System
 | 64 bit atomicXor  | ❌ NOP    | ✅ Native | ❌ NOP     | ❌ NOP     | ✅ Native | ⚠️ Scope Downgrade |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::                |
 +-------------------+-----------+-----------+------------+------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
 
 PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -7934,9 +9028,12 @@ Device
 | 64 bit atomicXor  | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -7983,11 +9080,18 @@ System
 | 64 bit atomicXor  | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -8034,9 +9138,12 @@ Device
 | 64 bit atomicXor  | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -8083,13 +9190,24 @@ System
 | 64 bit atomicXor  | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -8136,9 +9254,12 @@ Device
 | 64 bit atomicXor  | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -8185,11 +9306,18 @@ System
 | 64 bit atomicXor  | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -8236,9 +9364,12 @@ Device
 | 64 bit atomicXor  | ❌ NOP    | ✅ Native | ❌ NOP     | ❌ NOP     | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+--------------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line           |
@@ -8285,13 +9416,24 @@ System
 | 64 bit atomicXor  | ❌ NOP    | ✅ Native | ❌ NOP     | ❌ NOP     | ✅ Native | ⚠️ Scope Downgrade |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::                |
 +-------------------+-----------+-----------+------------+------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -8338,9 +9480,12 @@ Device
 | 64 bit atomicXor  | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -8387,11 +9532,18 @@ System
 | 64 bit atomicXor  | ✅ Native | ✅ Native | ✅ Native  | ✅ Native  | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -8438,9 +9590,12 @@ Device
 | 64 bit atomicXor  | ❌ NOP    | ✅ Native | ❌ NOP     | ❌ NOP     | ✅ Native | ✅ Native  |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+--------------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line           |
@@ -8487,17 +9642,36 @@ System
 | 64 bit atomicXor  | ❌ NOP    | ✅ Native | ❌ NOP     | ❌ NOP     | ✅ Native | ⚠️ Scope Downgrade |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::                |
 +-------------------+-----------+-----------+------------+------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 CAS emulation
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 No PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -8544,9 +9718,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -8593,11 +9770,18 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -8644,9 +9828,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -8693,13 +9880,24 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -8746,9 +9944,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -8795,11 +9996,18 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -8846,9 +10054,12 @@ Device
 | 64 bit atomicXor  | ❌ NOP    | ✅ CAS    | ❌ NOP     | ❌ NOP     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+--------------------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line                 |
@@ -8895,13 +10106,24 @@ System
 | 64 bit atomicXor  | ❌ NOP    | ✅ CAS    | ❌ NOP     | ❌ NOP     | ✅ CAS    | ⚠️ Scope Downgrade - CAS |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::                      |
 +-------------------+-----------+-----------+------------+------------+-----------+--------------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -8948,9 +10170,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -8997,11 +10222,18 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -9048,9 +10280,12 @@ Device
 | 64 bit atomicXor  | ❌ NOP    | ✅ CAS    | ❌ NOP     | ❌ NOP     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+--------------------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line                 |
@@ -9097,15 +10332,30 @@ System
 | 64 bit atomicXor  | ❌ NOP    | ✅ CAS    | ❌ NOP     | ❌ NOP     | ✅ CAS    | ⚠️ Scope Downgrade - CAS |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::                      |
 +-------------------+-----------+-----------+------------+------------+-----------+--------------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
 
 PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -9152,9 +10402,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -9201,11 +10454,18 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -9252,9 +10512,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -9301,13 +10564,24 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -9354,9 +10628,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -9403,11 +10680,18 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -9454,9 +10738,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -9503,13 +10790,24 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -9556,9 +10854,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -9605,11 +10906,18 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -9656,9 +10964,12 @@ Device
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
 | ::: line          | ::: line  | ::: line  | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -9705,7 +11016,21 @@ System
 | 64 bit atomicXor  | ✅ CAS    | ✅ CAS    | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::               | :::       | :::       | :::        | :::        | :::       | :::        |
 +-------------------+-----------+-----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#float-atomics-operations .section}
 ## Float atomics operations[\#](#float-atomics-operations "Link to this heading"){.headerlink}
 
 The float types atomic operations that are supported by different hardware.
@@ -9742,20 +11067,31 @@ The float types atomic operations that are supported by different hardware.
 
   - Add
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#id5 .section}
 ### AMD Instinct GPUs[\#](#id5 "Link to this heading"){.headerlink}
 
 The float type atomic operations that are supported by different AMD Instinct GPUs listed in the following table.
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 HW atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 No PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line    | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -9794,9 +11130,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS      | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::         | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line    | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -9835,11 +11174,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS      | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::         | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -9878,9 +11224,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::      | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -9919,13 +11268,24 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::      | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line    | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -9964,9 +11324,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS      | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::         | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line    | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -10005,11 +11368,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS      | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::         | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -10048,9 +11418,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ❌ NOP   | ❌ NOP     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::      | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+--------------------------+-----------+--------------------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line                 | ::: line  | ::: line                 |
@@ -10089,13 +11462,24 @@ System
 | 16bx2 bfloat162 atomicAdd | ❌ NOP   | ❌ NOP     | ✅ CAS    | ⚠️ Scope Downgrade       | ✅ Native | ⚠️ Scope Downgrade       |
 | :::                       | :::      | :::        | :::       | :::                      | :::       | :::                      |
 +---------------------------+----------+------------+-----------+--------------------------+-----------+--------------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line    | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -10134,9 +11518,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS      | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::         | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line    | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -10175,11 +11562,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS      | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::         | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -10218,9 +11612,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ❌ NOP   | ❌ NOP     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::      | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+--------------------------+-----------+--------------------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line                 | ::: line  | ::: line                 |
@@ -10259,15 +11656,30 @@ System
 | 16bx2 bfloat162 atomicAdd | ❌ NOP   | ❌ NOP     | ✅ CAS    | ⚠️ Scope Downgrade       | ✅ Native | ⚠️ Scope Downgrade       |
 | :::                       | :::      | :::        | :::       | :::                      | :::       | :::                      |
 +---------------------------+----------+------------+-----------+--------------------------+-----------+--------------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
 
 PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line    | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -10306,9 +11718,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS      | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::         | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line    | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -10347,11 +11762,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS      | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::         | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -10390,9 +11812,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::      | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -10431,13 +11856,24 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::      | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line    | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -10476,9 +11912,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS      | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::         | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line    | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -10517,11 +11956,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS      | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::         | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -10560,9 +12006,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::      | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+--------------------+-----------+--------------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line           | ::: line  | ::: line           |
@@ -10601,13 +12050,24 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ⚠️ Scope Downgrade | ✅ Native | ⚠️ Scope Downgrade |
 | :::                       | :::      | :::        | :::       | :::                | :::       | :::                |
 +---------------------------+----------+------------+-----------+--------------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line    | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -10646,9 +12106,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS      | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::         | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line    | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -10687,11 +12150,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS      | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::         | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+-------------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+-----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line  | ::: line      |
@@ -10730,9 +12200,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ Native     | ✅ Native | ✅ Native     |
 | :::                       | :::      | :::        | :::       | :::           | :::       | :::           |
 +---------------------------+----------+------------+-----------+---------------+-----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+--------------------+-----------+--------------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line           | ::: line  | ::: line           |
@@ -10771,17 +12244,36 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ⚠️ Scope Downgrade | ✅ Native | ⚠️ Scope Downgrade |
 | :::                       | :::      | :::        | :::       | :::                | :::       | :::                |
 +---------------------------+----------+------------+-----------+--------------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 CAS emulation
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 No PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -10820,9 +12312,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -10861,11 +12356,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -10904,9 +12406,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -10945,13 +12450,24 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -10990,9 +12506,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -11031,11 +12550,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -11074,9 +12600,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ❌ NOP   | ❌ NOP     | ❌ NOP    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+--------------------------+----------+--------------------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line                 | ::: line | ::: line                 |
@@ -11115,13 +12644,24 @@ System
 | 16bx2 bfloat162 atomicAdd | ❌ NOP   | ❌ NOP     | ❌ NOP    | ⚠️ Scope Downgrade - CAS | ✅ CAS   | ⚠️ Scope Downgrade - CAS |
 | :::                       | :::      | :::        | :::       | :::                      | :::      | :::                      |
 +---------------------------+----------+------------+-----------+--------------------------+----------+--------------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -11160,9 +12700,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -11201,11 +12744,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -11244,9 +12794,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ❌ NOP   | ❌ NOP     | ❌ NOP    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+--------------------------+----------+--------------------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line                 | ::: line | ::: line                 |
@@ -11285,15 +12838,30 @@ System
 | 16bx2 bfloat162 atomicAdd | ❌ NOP   | ❌ NOP     | ❌ NOP    | ⚠️ Scope Downgrade - CAS | ✅ CAS   | ⚠️ Scope Downgrade - CAS |
 | :::                       | :::      | :::        | :::       | :::                      | :::      | :::                      |
 +---------------------------+----------+------------+-----------+--------------------------+----------+--------------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
 
 PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -11332,9 +12900,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -11373,11 +12944,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -11416,9 +12994,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -11457,13 +13038,24 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -11502,9 +13094,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -11543,11 +13138,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -11586,9 +13188,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -11627,13 +13232,24 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -11672,9 +13288,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -11713,11 +13332,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -11756,9 +13382,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
 | ::: line                  | ::: line | ::: line   | ::: line  | ::: line      | ::: line | ::: line      |
@@ -11797,21 +13426,44 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS   | ✅ CAS     | ✅ CAS    | ✅ CAS        | ✅ CAS   | ✅ CAS        |
 | :::                       | :::      | :::        | :::       | :::           | :::      | :::           |
 +---------------------------+----------+------------+-----------+---------------+----------+---------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#id6 .section}
 ### AMD gfx generic targets[\#](#id6 "Link to this heading"){.headerlink}
 
 The float types atomic operations that are supported by different AMD gfx generic targets listed in the following table.
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 HW atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 No PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -11850,9 +13502,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -11891,11 +13546,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -11934,9 +13596,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -11975,13 +13640,24 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12020,9 +13696,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12061,11 +13740,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12104,9 +13790,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ❌ NOP    | ✅ CAS   | ❌ NOP     | ❌ NOP     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+--------------------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line                 |
@@ -12145,13 +13834,24 @@ System
 | 16bx2 bfloat162 atomicAdd | ❌ NOP    | ✅ CAS   | ❌ NOP     | ❌ NOP     | ✅ CAS    | ⚠️ Scope Downgrade       |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::                      |
 +---------------------------+-----------+----------+------------+------------+-----------+--------------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12190,9 +13890,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12231,11 +13934,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12274,9 +13984,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ❌ NOP    | ✅ CAS   | ❌ NOP     | ❌ NOP     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+--------------------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line                 |
@@ -12315,15 +14028,30 @@ System
 | 16bx2 bfloat162 atomicAdd | ❌ NOP    | ✅ CAS   | ❌ NOP     | ❌ NOP     | ✅ CAS    | ⚠️ Scope Downgrade       |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::                      |
 +---------------------------+-----------+----------+------------+------------+-----------+--------------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
 
 PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12362,9 +14090,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12403,11 +14134,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12446,9 +14184,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12487,13 +14228,24 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12532,9 +14284,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12573,11 +14328,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12616,9 +14378,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+--------------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line           |
@@ -12657,13 +14422,24 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ⚠️ Scope Downgrade |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::                |
 +---------------------------+-----------+----------+------------+------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12702,9 +14478,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12743,11 +14522,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12786,9 +14572,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ Native  |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+--------------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line           |
@@ -12827,17 +14616,36 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ⚠️ Scope Downgrade |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::                |
 +---------------------------+-----------+----------+------------+------------+-----------+--------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 CAS emulation
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 No PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12876,9 +14684,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12917,11 +14728,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -12960,9 +14778,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13001,13 +14822,24 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13046,9 +14878,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13087,11 +14922,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13130,9 +14972,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ❌ NOP    | ✅ CAS   | ❌ NOP     | ❌ NOP     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+--------------------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line                 |
@@ -13171,13 +15016,24 @@ System
 | 16bx2 bfloat162 atomicAdd | ❌ NOP    | ✅ CAS   | ❌ NOP     | ❌ NOP     | ✅ CAS    | ⚠️ Scope Downgrade - CAS |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::                      |
 +---------------------------+-----------+----------+------------+------------+-----------+--------------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13216,9 +15072,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13257,11 +15116,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13300,9 +15166,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ❌ NOP    | ✅ CAS   | ❌ NOP     | ❌ NOP     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+--------------------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line                 |
@@ -13341,15 +15210,30 @@ System
 | 16bx2 bfloat162 atomicAdd | ❌ NOP    | ✅ CAS   | ❌ NOP     | ❌ NOP     | ✅ CAS    | ⚠️ Scope Downgrade - CAS |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::                      |
 +---------------------------+-----------+----------+------------+------------+-----------+--------------------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
 
 PCIe atomics
 
+:::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::::::::::::::::::::::::::::::::: {.sd-tab-set .docutils}
 Device DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13388,9 +15272,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13429,11 +15316,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13472,9 +15366,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13513,13 +15410,24 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Migratable Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13558,9 +15466,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13599,11 +15510,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13642,9 +15560,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13683,13 +15604,24 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
 
 Pinned Host DRAM
 
+:::::::::::::::: {.sd-tab-content .docutils}
+::::::::::::::: {.sd-tab-set .docutils}
 Coarse-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13728,9 +15660,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13769,11 +15704,18 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
 
 Fine-grained
 
+:::::::: {.sd-tab-content .docutils}
+::::::: {.sd-tab-set .docutils}
 Device
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13812,9 +15754,12 @@ Device
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
 
 System
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
 | ::: line                  | ::: line  | ::: line | ::: line   | ::: line   | ::: line  | ::: line   |
@@ -13853,6 +15798,20 @@ System
 | 16bx2 bfloat162 atomicAdd | ✅ CAS    | ✅ CAS   | ✅ CAS     | ✅ CAS     | ✅ CAS    | ✅ CAS     |
 | :::                       | :::       | :::      | :::        | :::        | :::       | :::        |
 +---------------------------+-----------+----------+------------+------------+-----------+------------+
+:::
+::::
+:::::::
+::::::::
+:::::::::::::::
+::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::: prev-next-area
 [](gpu-arch-specs.html "previous page"){.left-prev}
@@ -13861,6 +15820,7 @@ System
 previous
 
 GPU hardware specifications
+:::
 
 [](env-variables.html "next page"){.right-next}
 
@@ -13868,9 +15828,16 @@ GPU hardware specifications
 next
 
 ROCm environment variables
+:::
+:::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::: {.bd-sidebar-secondary .bd-toc}
+::::: {.sidebar-secondary-items .sidebar-secondary__inner}
 :::: sidebar-secondary-item
+::: {.page-toc .tocsection .onthispage}
 Contents
+:::
 
 - [Hardware atomics operation support](#){.reference .internal .nav-link}
 - [Support summary](#support-summary){.reference .internal .nav-link}
@@ -13886,3 +15853,8 @@ Contents
   - [Float atomics operations](#float-atomics-operations){.reference .internal .nav-link}
     - [AMD Instinct GPUs](#id5){.reference .internal .nav-link}
     - [AMD gfx generic targets](#id6){.reference .internal .nav-link}
+::::
+:::::
+::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

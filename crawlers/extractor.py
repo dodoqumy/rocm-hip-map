@@ -1,197 +1,206 @@
 """
-rocm-hip-map/crawlers/extractor.py
-Phase 2.1.1 — 正文提取器
-
-策略（按优先级）：
-1. trafilatura（最佳正文 + 元信息）
-2. selectolax（快速 HTML 解析）
-3. stdlib html.parser（兜底）
+正文提取器 + HTML→Markdown 转换 (Phase 2.1)
 """
-from __future__ import annotations
 
 import re
-from dataclasses import dataclass
+import subprocess
 from typing import Optional
+import logging
 
-try:
-    import trafilatura
-    _HAS_TRAFILATURA = True
-except ImportError:
-    _HAS_TRAFILATURA = False
-
-try:
-    from selectolax.parser import HTMLParser
-    from selectolax.tree import Node
-    _HAS_SELECTOLAX = True
-except ImportError:
-    _HAS_SELECTOLAX = False
+logger = logging.getLogger(__name__)
 
 
-@dataclass
-class ExtractedContent:
-    """提取结果。"""
-    title: str
-    body: str
-    excerpt: str
-    author: str
-    published_at: str
-    language: str
+def is_doxygen_page(html: str) -> bool:
+    """识别 doxygen 页面"""
+    markers = [
+        '<meta name="generator" content="Doxygen',
+        'class="doxygen"',
+        '<div class="memitem">',
+    ]
+    return any(marker in html for marker in markers)
 
 
-def extract(html: bytes | str, url: str = "") -> ExtractedContent:
-    """
-    从 HTML 中提取正文 + 元信息。
+def is_js_rendered(html: str) -> bool:
+    """识别 JS 渲染页面"""
+    if len(html) < 5000 and "noscript" in html:
+        return True
+    if "Loading application" in html or "Please enable JavaScript" in html:
+        return True
+    return False
 
-    使用最佳可用库。
-    """
-    if isinstance(html, bytes):
-        html = html.decode("utf-8", errors="replace")
 
-    # 策略 1：trafilatura（最好效果）
-    if _HAS_TRAFILATURA:
-        result = trafilatura.extract(
-            html,
-            url=url,
-            include_comments=False,
-            include_tables=True,
-            include_images=False,
-            output_format="json",
-            with_metadata=True,
+def extract_title(html: str) -> str:
+    """从 HTML 提取标题"""
+    # <title>
+    match = re.search(r"<title>([^<]+)</title>", html, re.IGNORECASE)
+    if match:
+        title = match.group(1).split("—")[0].split("|")[0].strip()
+        return title
+    
+    # <h1>
+    match = re.search(r"<h1[^>]*>([^<]+)</h1>", html, re.IGNORECASE)
+    if match:
+        return match.group(1).strip()
+    
+    return ""
+
+
+def html_to_markdown(html: str, url: str = "") -> Optional[str]:
+    """HTML 转 Markdown (使用 pandoc)"""
+    # 清理 HTML
+    html = clean_html(html)
+    
+    if not html:
+        return None
+    
+    # 使用 pandoc 转换
+    try:
+        proc = subprocess.run(
+            ["pandoc", "-f", "html", "-t", "markdown", "--wrap=none"],
+            input=html,
+            capture_output=True,
+            text=True,
+            timeout=30,
         )
-        if result:
-            import json
-            meta = json.loads(result)
-            return ExtractedContent(
-                title=meta.get("title", ""),
-                body=meta.get("text", ""),
-                excerpt=meta.get("description", "") or _make_excerpt(meta.get("text", "")),
-                author=meta.get("author", "") or meta.get("authors", ""),
-                published_at=meta.get("date", "") or meta.get("published", ""),
-                language=meta.get("language", "en"),
-            )
-
-    # 策略 2：selectolax（快速提取 title + 正文）
-    if _HAS_SELECTOLAX:
-        return _extract_selectolax(html)
-
-    # 策略 3：stdlib（兜底）
-    return _extract_stdlib(html)
+        
+        if proc.returncode == 0 and proc.stdout:
+            return clean_markdown(proc.stdout)
+    except Exception as e:
+        logger.warning(f"  ⚠ pandoc failed: {e}")
+    
+    # Fallback: 简单提取
+    return simple_extract(html)
 
 
-def _extract_selectolax(html: str) -> ExtractedContent:
-    """用 selectolax 提取 title + 正文段落。"""
-    tree = HTMLParser(html)
-
-    title = ""
-    title_el = tree.css_first("title")
-    if title_el:
-        title = title_el.text()
-
-    # 常见正文容器
-    for sel in ["article", "main", '[role="main"]', ".content", "#content"]:
-        el = tree.css_first(sel)
-        if el and len(el.text()) > 200:
-            body = _extract_paragraphs(el)
-            if body:
-                return ExtractedContent(
-                    title=title,
-                    body=body,
-                    excerpt=_make_excerpt(body),
-                    author="",
-                    published_at="",
-                    language=_detect_lang(body),
-                )
-
-    # 最后兜底：整个 body
-    body_el = tree.css_first("body")
-    if body_el:
-        return ExtractedContent(
-            title=title,
-            body=_extract_paragraphs(body_el),
-            excerpt=_make_excerpt(body),
-            author="",
-            published_at="",
-            language=_detect_lang(body),
-        )
-
-    return ExtractedContent(title=title, body="", excerpt="",
-                           author="", published_at="", language="en")
+def clean_html(html: str) -> str:
+    """清理 HTML"""
+    # 移除脚本
+    html = re.sub(r"<script[^>]*>.*?</script>", "", html, flags=re.DOTALL)
+    html = re.sub(r"<style[^>]*>.*?</style>", "", html, flags=re.DOTALL)
+    
+    # 移除导航栏
+    html = re.sub(r"<nav[^>]*>.*?</nav>", "", html, flags=re.DOTALL)
+    
+    # 移除 footer
+    html = re.sub(r"<footer[^>]*>.*?</footer>", "", html, flags=re.DOTALL)
+    
+    # 移除 version warning
+    html = re.sub(r'<div class="[^"]*version-warning[^"]*".*?</div>', "", html, flags=re.DOTALL)
+    
+    return html
 
 
-def _extract_paragraphs(node: "Node") -> str:
-    """从节点提取可读段落。"""
-    lines = []
-    for el in node.css("p, h1, h2, h3, h4, li, pre, blockquote"):
-        text = el.text().strip()
-        if len(text) > 30:  # 过滤噪音
-            lines.append(text)
+def simple_extract(html: str) -> Optional[str]:
+    """简单提取 (fallback)"""
+    # 提取 main 内容
+    match = re.search(r"<main[^>]*>(.*?)</main>", html, re.DOTALL)
+    if match:
+        content = match.group(1)
+    else:
+        # 提取 body
+        match = re.search(r"<body[^>]*>(.*?)</body>", html, re.DOTALL)
+        if match:
+            content = match.group(1)
+        else:
+            content = html
+    
+    # 移除 HTML 标签
+    content = re.sub(r"<[^>]+>", "", content)
+    
+    # 解码 HTML 实体
+    content = content.replace("&nbsp;", " ")
+    content = content.replace("&lt;", "<")
+    content = content.replace("&gt;", ">")
+    content = content.replace("&amp;", "&")
+    
+    # 清理空白
+    lines = [line.strip() for line in content.split("\n") if line.strip()]
+    
     return "\n\n".join(lines)
 
 
-def _extract_stdlib(html: str) -> ExtractedContent:
-    """纯 stdlib 提取（无任何外部依赖）。"""
-    from html.parser import HTMLParser
-    import html as html_module
-
-    class TextExtractor(HTMLParser):
-        def __init__(self):
-            super().__init__()
-            self.title = ""
-            self.body_parts = []
-            self.in_title = False
-            self.in_body = False
-            self._skip_tags = {"script", "style", "nav", "header", "footer", "aside"}
-
-        def handle_starttag(self, tag, attrs):
-            if tag == "title":
-                self.in_title = True
-            elif tag == "body":
-                self.in_body = True
-            elif tag in self._skip_tags:
-                pass
-
-        def handle_endtag(self, tag):
-            if tag == "title":
-                self.in_title = False
-            elif tag == "body":
-                self.in_body = False
-
-        def handle_data(self, data: str):
-            text = data.strip()
-            if not text:
-                return
-            if self.in_title:
-                self.title = text
-            elif self.in_body:
-                self.body_parts.append(text)
-
-    parser = TextExtractor()
-    try:
-        parser.feed(html)
-    except Exception:
-        pass
-
-    body = "\n\n".join(parser.body_parts)
-    return ExtractedContent(
-        title=parser.title or "",
-        body=body,
-        excerpt=_make_excerpt(body),
-        author="",
-        published_at="",
-        language=_detect_lang(body),
-    )
+def clean_markdown(md: str) -> str:
+    """清理 Markdown"""
+    if not md:
+        return ""
+    
+    # 移除版本切换器
+    md = re.sub(r"##\s*Other versions.*", "", md)
+    md = re.sub(r"##\s*Download.*", "", md)
+    md = re.sub(r"##\s*Table of contents.*", "", md)
+    md = re.sub(r"##\s*On this page.*", "", md)
+    
+    # 移除 pandoc 块标记
+    md = re.sub(r":::\{[^}]+\}", "", md)
+    md = re.sub(r":::(\s|$)", "\n", md)
+    md = re.sub(r"^:::\s*$", "", md, flags=re.MULTILINE)
+    
+    # 移除导航链接
+    md = re.sub(r"\[Skip to main content\]\([^)]+\)", "", md)
+    md = re.sub(r"\[¶\].*?Skip to main content", "", md)
+    md = re.sub(r"Skip to main content", "", md)
+    
+    # 移除空行
+    while "\n\n\n" in md:
+        md = md.replace("\n\n\n", "\n\n")
+    
+    # 移除开头空行
+    md = md.strip()
+    
+    return md
 
 
-def _make_excerpt(text: str, length: int = 200) -> str:
-    """生成摘要。"""
-    text = re.sub(r"\s+", " ", text).strip()
-    if len(text) <= length:
-        return text
-    return text[:length].rsplit(" ", 1)[0] + "…"
-
-
-def _detect_lang(text: str) -> str:
-    """简单语言检测（中/英）。"""
-    if re.search(r"[\u4e00-\u9fff]", text):
-        return "zh"
-    return "en"
+class ContentExtractor:
+    """正文提取器"""
+    
+    def __init__(self):
+        self._trafilatura_available = self._check_trafilatura()
+        self._pandoc_available = self._check_pandoc()
+    
+    def _check_trafilatura(self) -> bool:
+        try:
+            import trafilatura
+            return True
+        except ImportError:
+            return False
+    
+    def _check_pandoc(self) -> bool:
+        try:
+            subprocess.run(["pandoc", "--version"], capture_output=True, timeout=5)
+            return True
+        except:
+            return False
+    
+    def extract(self, html: str, url: str = "") -> Optional[str]:
+        """提取正文"""
+        if is_doxygen_page(html):
+            logger.debug(f"  🔧 Doxygen page: {url}")
+            return None
+        
+        if is_js_rendered(html):
+            logger.warning(f"  ⚠ JS rendered: {url}")
+            return None
+        
+        # 使用 pandoc
+        if self._pandoc_available:
+            md = html_to_markdown(html, url)
+            if md and len(md) > 200:
+                return md
+        
+        # 使用 trafilatura
+        if self._trafilatura_available:
+            try:
+                import trafilatura
+                result = trafilatura.extract(
+                    html,
+                    output_format="markdown",
+                    include_links=True,
+                    include_tables=True,
+                )
+                if result and len(result) > 200:
+                    return clean_markdown(result)
+            except Exception as e:
+                logger.warning(f"  ⚠ trafilatura failed: {e}")
+        
+        # Fallback: 简单提取
+        return simple_extract(html)

@@ -6,33 +6,76 @@ source_org: "amd"
 original_lang: "en"
 credibility: 5
 lifecycle: "latest"
-synced_date: 2026-04-28
+synced_date: 2026-05-01
 ---
 
+:::::::::::::::::::::::::::::::::::::::: {#main-content .bd-main role="main"}
+::: sbt-scroll-pixel-helper
+:::
+
+:::::::::::::::::::::::::::::::::::::: bd-content
+::::::::::::::::::::::::::::::::::::: bd-article-container
+:::::::::: {.bd-header-article .d-print-none}
+::::::::: {.header-article-items .header-article__inner}
 ::::: header-article-items__start
 ::: header-article-item
 []{.fa-solid .fa-angle-right}
+:::
 
 ::: header-article-item
 - [](../index.html){.nav-link aria-label="Home"}
 - GPU\...
+:::
+:::::
 
 ::::: header-article-items__end
 :::: header-article-item
 ::: article-header-buttons
+:::
+::::
+:::::
+:::::::::
+::::::::::
 
+::::: {#jb-print-docs-body .onlyprint}
 # GPU hardware specifications
 
+:::: {#print-main-content}
+::: {#jb-print-toc}
+:::
+::::
+:::::
 
+::: {#searchbox}
+:::
 
+::::::::::::::::::::: {#gpu-hardware-specifications .section}
 # GPU hardware specifications[\#](#gpu-hardware-specifications "Link to this heading"){.headerlink}
 
+::::::::::: {#rocm-docs-core-article-info .sd-container-fluid .sd-sphinx-override .sd-p-0 .sd-mt-2 .sd-mb-4 .sd-p-2 .sd-rounded-1 .docutils}
+:::::::::: {.sd-row .sd-row-cols-2 .sd-gx-2 .sd-gy-1 .docutils}
+::::::::: {.sd-col .sd-d-flex-row .sd-align-minor-center .docutils}
+:::::::: {.sd-container-fluid .sd-sphinx-override .docutils}
+::::::: {.sd-row .sd-row-cols-2 .sd-row-cols-xs-2 .sd-row-cols-sm-3 .sd-row-cols-md-3 .sd-row-cols-lg-3 .sd-gx-3 .sd-gy-1 .docutils}
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==){.sd-octicon .sd-octicon-calendar} ]{.sd-pr-2 .article-info-date-svg} 2026-02-20
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=){.sd-octicon .sd-octicon-clock} ]{.sd-pr-2 .article-info-read-time-svg} 10 min read time
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils style="color:gray;"}
 Applies to Linux and Windows
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+:::
+:::::::
+::::::::
+:::::::::
+::::::::::
+:::::::::::
 
 The following tables provide an overview of the hardware specifications for AMD Instinct™ GPUs, AMD Radeon™ PRO and Radeon™ GPUs, and AMD Ryzen™ APUs.
 
@@ -40,8 +83,10 @@ For more information about ROCm hardware compatibility, see the ROCm [Compatibil
 
 For a description of the terms used in the table, see the [[ROCm glossary]{.std .std-ref}](glossary.html#glossary){.reference .internal}, or for more detailed information about GPU architecture and programming models, see the [[specific documents and guides]{.std .std-ref}](../conceptual/gpu-arch.html#gpu-arch-documentation){.reference .internal}, or [[Understanding the HIP programming model]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/HIP/en/latest/understand/programming_model.html "(in HIP Documentation v7.2.53211)"){.reference .external}.
 
+::::::::::: {.sd-tab-set .docutils}
 AMD Instinct GPUs
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
   Name          Architecture   LLVM target name   VRAM (GiB)   Compute Units       Wavefront Size   LDS (KiB)   L3 Cache (MiB)   L2 Cache (MiB)   L1 Vector Cache (KiB)   L1 Scalar Cache (KiB)   L1 Instruction Cache (KiB)   VGPR File (KiB)            SGPR File (KiB)   GFXIP Major version   GFXIP Minor version
   ------------- -------------- ------------------ ------------ ------------------- ---------------- ----------- ---------------- ---------------- ----------------------- ----------------------- ---------------------------- -------------------------- ----------------- --------------------- ---------------------
@@ -60,9 +105,12 @@ AMD Instinct GPUs
   MI25          GCN5.0         gfx900             16           64                  64               64                           4                16                      16 per 3 CUs            32 per 3 CUs                 256                        12.5              9                     0
   MI8           GCN3.0         gfx803             4            64                  64               64                           2                16                      16 per 4 CUs            32 per 4 CUs                 256                        12.5              8                     0
   MI6           GCN4.0         gfx803             16           36                  64               64                           2                16                      16 per 4 CUs            32 per 4 CUs                 256                        12.5              8                     0
+:::
+::::
 
 AMD Radeon PRO GPUs
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
   Name                         Architecture   LLVM target name   VRAM (GiB)   Compute Units   Wavefront Size   LDS (KiB)   Infinity Cache (MiB)   L2 Cache (MiB)   Graphics L1 Cache (KiB)   L0 Vector Cache (KiB)   L0 Scalar Cache (KiB)   L0 Instruction Cache (KiB)   VGPR File (KiB)   SGPR File (KiB)   GFXIP Major version   GFXIP Minor version
   ---------------------------- -------------- ------------------ ------------ --------------- ---------------- ----------- ---------------------- ---------------- ------------------------- ----------------------- ----------------------- ---------------------------- ----------------- ----------------- --------------------- ---------------------
@@ -79,9 +127,12 @@ AMD Radeon PRO GPUs
   Radeon PRO V620              RDNA2          gfx1030            32           72              32 or 64         128         128                    4                128                       16                      16                      32                           512               32                10                    3
   Radeon Pro W5500             RDNA           gfx1012            8            22              32 or 64         128                                4                128                       16                      16                      32                           512               20                10                    1
   Radeon Pro VII               GCN5.1         gfx906             16           60              64               64                                 4                                          16                      16 per 3 CUs            32 per 3 CUs                 256               12.5              9                     0
+:::
+::::
 
 AMD Radeon GPUs
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
   Name                   Architecture   LLVM target name   VRAM (GiB)   Compute Units   Wavefront Size   LDS (KiB)   Infinity Cache (MiB)   L2 Cache (MiB)   Graphics L1 Cache (KiB)   L0 Vector Cache (KiB)   L0 Scalar Cache (KiB)   L0 Instruction Cache (KiB)   VGPR File (KiB)   SGPR File (KiB)   GFXIP Major version   GFXIP Minor version
   ---------------------- -------------- ------------------ ------------ --------------- ---------------- ----------- ---------------------- ---------------- ------------------------- ----------------------- ----------------------- ---------------------------- ----------------- ----------------- --------------------- ---------------------
@@ -109,9 +160,12 @@ AMD Radeon GPUs
   Radeon RX 6600 XT      RDNA2          gfx1032            8            32              32 or 64         128         32                     2                128                       16                      16                      32                           512               32                10                    3
   Radeon RX 6600         RDNA2          gfx1032            8            28              32 or 64         128         32                     2                128                       16                      16                      32                           512               32                10                    3
   Radeon VII             GCN5.1         gfx906             16           60              64               64 per CU                          4                                          16                      16 per 3 CUs            32 per 3 CUs                 256               12.5              9                     0
+:::
+::::
 
 AMD Ryzen APUs
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
   Name                        Graphics model   Architecture   LLVM target name   VRAM (GiB)           Compute Units   Wavefront Size   LDS (KiB)   Infinity Cache (MiB)   L2 Cache (MiB)   Graphics L1 Cache (KiB)   L0 Vector Cache (KiB)   L0 Scalar Cache (KiB)   L0 Instruction Cache (KiB)   VGPR File (KiB)   SGPR File (KiB)   GFXIP Major version   GFXIP Minor version
   --------------------------- ---------------- -------------- ------------------ -------------------- --------------- ---------------- ----------- ---------------------- ---------------- ------------------------- ----------------------- ----------------------- ---------------------------- ----------------- ----------------- --------------------- ---------------------
@@ -120,6 +174,10 @@ AMD Ryzen APUs
   AMD Ryzen AI 9 HX 375       Radeon 890M      RDNA3.5        gfx1150            Dynamic + carveout   16              32 or 64         128         N/A                    2                256                       32                      16                      32                           512               32                11                    5
   AMD Ryzen AI Max+ PRO 395   Radeon 8060S     RDNA3.5        gfx1151            Dynamic + carveout   40              32 or 64         128         32                     2                256                       32                      16                      32                           768               32                11                    5
   AMD Ryzen Al 7 350          Radeon 860M      RDNA3.5        gfx1152            Dynamic + carveout   8               32 or 64         128         N/A                    1                256                       32                      16                      32                           512               32                11                    5
+:::
+::::
+:::::::::::
+:::::::::::::::::::::
 
 ::::: prev-next-area
 [](rocm-tools.html "previous page"){.left-prev}
@@ -128,6 +186,7 @@ AMD Ryzen APUs
 previous
 
 ROCm tools, compilers, and runtime API
+:::
 
 [](gpu-atomics-operation.html "next page"){.right-next}
 
@@ -135,3 +194,8 @@ ROCm tools, compilers, and runtime API
 next
 
 Hardware atomics operation support
+:::
+:::::
+:::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::

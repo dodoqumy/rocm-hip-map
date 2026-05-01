@@ -6,38 +6,83 @@ source_org: "amd"
 original_lang: "en"
 credibility: 5
 lifecycle: "latest"
-synced_date: 2026-04-28
+synced_date: 2026-05-01
 ---
 
+::::::::::::::::::::::::::::::::::::::::: {#main-content .bd-main role="main"}
+::: sbt-scroll-pixel-helper
+:::
+
+::::::::::::::::::::::::::::::::::::::: bd-content
+:::::::::::::::::::::::::::::::::: bd-article-container
+:::::::::: {.bd-header-article .d-print-none}
+::::::::: {.header-article-items .header-article__inner}
 ::::: header-article-items__start
 ::: header-article-item
 []{.fa-solid .fa-angle-right}
+:::
 
 ::: header-article-item
 - [](../index.html){.nav-link aria-label="Home"}
 - ROCm license
+:::
+:::::
 
 ::::: header-article-items__end
 :::: header-article-item
 ::: article-header-buttons
 []{.fa-solid .fa-list}
+:::
+::::
+:::::
+:::::::::
+::::::::::
 
+:::::: {#jb-print-docs-body .onlyprint}
 # ROCm license
 
+::::: {#print-main-content}
+:::: {#jb-print-toc}
+::: {}
 ## Contents
+:::
 
 - [ROCm component licenses](#rocm-component-licenses){.reference .internal .nav-link}
   - [Package licensing](#package-licensing){.reference .internal .nav-link}
+::::
+:::::
+::::::
 
+::: {#searchbox}
+:::
 
+:::::::::::::::::: {#rocm-license .section .tex2jax_ignore .mathjax_ignore}
 # ROCm license[\#](#rocm-license "Link to this heading"){.headerlink}
 
+::::::::::: {#rocm-docs-core-article-info .sd-container-fluid .sd-sphinx-override .sd-p-0 .sd-mt-2 .sd-mb-4 .sd-p-2 .sd-rounded-1 .docutils}
+:::::::::: {.sd-row .sd-row-cols-2 .sd-gx-2 .sd-gy-1 .docutils}
+::::::::: {.sd-col .sd-d-flex-row .sd-align-minor-center .docutils}
+:::::::: {.sd-container-fluid .sd-sphinx-override .docutils}
+::::::: {.sd-row .sd-row-cols-2 .sd-row-cols-xs-2 .sd-row-cols-sm-3 .sd-row-cols-md-3 .sd-row-cols-lg-3 .sd-gx-3 .sd-gy-1 .docutils}
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==){.sd-octicon .sd-octicon-calendar} ]{.sd-pr-2 .article-info-date-svg} 2026-03-03
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=){.sd-octicon .sd-octicon-clock} ]{.sd-pr-2 .article-info-read-time-svg} 7 min read time
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils style="color:gray;"}
 Applies to Linux and Windows
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+:::
+:::::::
+::::::::
+:::::::::
+::::::::::
+:::::::::::
 
 MIT License
 
@@ -49,10 +94,13 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+::: {.admonition .note}
 Note
 
 The preceding license applies to the [ROCm repository](https://github.com/ROCm/ROCm){.reference .external}, which primarily contains documentation. For licenses related to other ROCm components, refer to the following section.
+:::
 
+::::::: {#rocm-component-licenses .section}
 ## ROCm component licenses[\#](#rocm-component-licenses "Link to this heading"){.headerlink}
 
 ROCm is released by Advanced Micro Devices, Inc. (AMD) and is licensed per component separately. The following table is a list of ROCm components with links to their respective license terms. These components may include third party components subject to additional licenses. Please review individual repositories for more information.
@@ -124,12 +172,15 @@ ROCm is released by Advanced Micro Devices, Inc. (AMD) and is licensed per compo
   [rocWMMA](https://github.com/ROCm/rocm-libraries/tree/develop/projects/rocwmma/){.reference .external}                           [MIT](https://github.com/ROCm/rocm-libraries/blob/develop/projects/rocwmma/LICENSE.md){.reference .external}
   [Tensile](https://github.com/ROCm/rocm-libraries/tree/develop/shared/tensile/){.reference .external}                             [MIT](https://github.com/ROCm/rocm-libraries/blob/develop/shared/tensile/LICENSE.md){.reference .external}
   [TransferBench](https://github.com/ROCm/TransferBench){.reference .external}                                                     [MIT](https://github.com/ROCm/TransferBench/blob/develop/LICENSE.md){.reference .external}
+:::
 
 Open sourced ROCm components are released via public GitHub repositories, packages on [https://repo.radeon.com](https://repo.radeon.com){.reference .external} and other distribution channels. Proprietary products are only available on [https://repo.radeon.com](https://repo.radeon.com){.reference .external}. Proprietary components are organized in a proprietary subdirectory in the package repositories to distinguish from open sourced packages.
 
+::: {.admonition .note}
 Note
 
 The following additional terms and conditions apply to your use of ROCm technical documentation.
+:::
 
 ©2023 - 2025 Advanced Micro Devices, Inc. All rights reserved.
 
@@ -139,15 +190,21 @@ THIS INFORMATION IS PROVIDED "AS IS." AMD MAKES NO REPRESENTATIONS OR WARRANTIES
 
 AMD, the AMD Arrow logo, ROCm, and combinations thereof are trademarks of Advanced Micro Devices, Inc. Other product names used in this publication are for identification purposes only and may be trademarks of their respective companies.
 
+:::: {#package-licensing .section}
 ### Package licensing[\#](#package-licensing "Link to this heading"){.headerlink}
 
+::: {.admonition .attention}
 Attention
 
 ROCprof Trace Decoder and AOCC CPU optimizations are provided in binary form, subject to the license agreement enclosed on [GitHub](https://github.com/ROCm/rocprof-trace-decoder/blob/amd-mainline/LICENSE){.reference .external} for ROCprof Trace Decoder, and [Developer Central](https://www.amd.com/en/developer/aocc.html){.reference .external} for AOCC. By using, installing, copying or distributing ROCprof Trace Decoder or AOCC CPU Optimizations, you agree to the terms and conditions of this license agreement. If you do not agree to the terms of this agreement, do not install, copy or use ROCprof Trace Decoder or the AOCC CPU Optimizations.
+:::
 
 For the rest of the ROCm packages, you can find the licensing information at the following location: [`/opt/rocm/share/doc/<component-name>/`{.docutils .literal .notranslate}]{.pre} or in the locations specified in the preceding table.
 
 For example, you can fetch the licensing information of the [`amd_comgr`{.docutils .literal .notranslate}]{.pre} component (Code Object Manager) from the [`/opt/rocm/share/doc/amd_comgr/LICENSE.txt`{.docutils .literal .notranslate}]{.pre} file.
+::::
+:::::::
+::::::::::::::::::
 
 :::: prev-next-area
 [](../contribute/feedback.html "previous page"){.left-prev}
@@ -156,9 +213,21 @@ For example, you can fetch the licensing information of the [`amd_comgr`{.docuti
 previous
 
 Providing feedback about the ROCm documentation
+:::
+::::
+::::::::::::::::::::::::::::::::::
 
+:::::: {.bd-sidebar-secondary .bd-toc}
+::::: {.sidebar-secondary-items .sidebar-secondary__inner}
 :::: sidebar-secondary-item
+::: {.page-toc .tocsection .onthispage}
 Contents
+:::
 
 - [ROCm component licenses](#rocm-component-licenses){.reference .internal .nav-link}
   - [Package licensing](#package-licensing){.reference .internal .nav-link}
+::::
+:::::
+::::::
+:::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::

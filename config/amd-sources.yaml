@@ -1,0 +1,382 @@
+# AMD ROCm 文档源配置 (Phase 2.1)
+# 定义全部 35-40 个文档站点的抓取规则
+
+sources:
+  # === 主站 ===
+  - slug: rocm-docs-latest
+    name: "ROCm 主站 (latest)"
+    base_url: "https://rocm.docs.amd.com/en/latest/"
+    sitemap: "https://rocm.docs.amd.com/sitemap.xml"
+    crawler: sitemap
+    credibility: 5
+    rate_limit: 1.0
+    interval_hours: 6
+    skip_patterns:
+      - "/404."
+      - "/search.html"
+      - "/genindex."
+      - "/_static/"
+      - "/_images/"
+      - "."
+
+  # === 历史版本 (5 个 LTS) ===
+  - slug: rocm-docs-7.2.0
+    name: "ROCm 7.2.0"
+    base_url: "https://rocm.docs.amd.com/en/docs-7.2.0/"
+    crawler: sphinx_nav
+    credibility: 4
+    interval_hours: 720
+    is_archive: true
+
+  - slug: rocm-docs-7.0.0
+    name: "ROCm 7.0.0"
+    base_url: "https://rocm.docs.amd.com/en/docs-7.0.0/"
+    crawler: sphinx_nav
+    credibility: 4
+    interval_hours: 720
+    is_archive: true
+
+  - slug: rocm-docs-6.4.0
+    name: "ROCm 6.4.0"
+    base_url: "https://rocm.docs.amd.com/en_docs-6.4.0/"
+    crawler: sphinx_nav
+    credibility: 4
+    interval_hours: 720
+    is_archive: true
+
+  - slug: rocm-docs-6.2.0
+    name: "ROCm 6.2.0"
+    base_url: "https://rocm.docs.amd.com/en_docs-6.2.0/"
+    crawler: sphinx_nav
+    credibility: 4
+    interval_hours: 720
+    is_archive: true
+
+  - slug: rocm-docs-6.0.0
+    name: "ROCm 6.0.0"
+    base_url: "https://rocm.docs.amd.com/en_docs-6.0.0/"
+    crawler: sphinx_nav
+    credibility: 4
+    interval_hours: 720
+    is_archive: true
+
+  # === HIP 系列 (~80 页) ===
+  - slug: hip-latest
+    name: "HIP 编程指南"
+    base_url: "https://rocm.docs.amd.com/projects/HIP/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    rate_limit: 1.0
+    interval_hours: 12
+
+  # === BLAS 库三件套 (~280 页) ===
+  - slug: rocblas-latest
+    name: "rocBLAS"
+    base_url: "https://rocm.docs.amd.com/projects/rocBLAS/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  - slug: hipblas-latest
+    name: "hipBLAS"
+    base_url: "https://rocm.docs.amd.com/projects/hipBLAS/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  - slug: hipblaslt-latest
+    name: "hipBLASLt"
+    base_url: "https://rocm.docs.amd.com/projects/hipBLASLt/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  # === FFT ===
+  - slug: rocfft-latest
+    name: "rocFFT"
+    base_url: "https://rocm.docs.amd.com/projects/rocFFT/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  - slug: hipfft-latest
+    name: "hipFFT"
+    base_url: "https://rocm.docs.amd.com/projects/hipFFT/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  # === 线性方程求解 ===
+  - slug: rocsolver-latest
+    name: "rocSOLVER"
+    base_url: "https://rocm.docs.amd.com/projects/rocSOLVER/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  - slug: hipsolver-latest
+    name: "hipSOLVER"
+    base_url: "https://rocm.docs.amd.com/projects/hipSOLVER/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  # === 稀疏矩阵 (~150 页) ===
+  - slug: rocsparse-latest
+    name: "rocSPARSE"
+    base_url: "https://rocm.docs.amd.com/projects/rocSPARSE/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  - slug: hipsparse-latest
+    name: "hipSPARSE"
+    base_url: "https://rocm.docs.amd.com/projects/hipSPARSE/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  - slug: hipsparsert-latest
+    name: "hipSPARSELt"
+    base_url: "https://rocm.docs.amd.com/projects/hipSPARSELt/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  # === 随机数 ===
+  - slug: rocrand-latest
+    name: "rocRAND"
+    base_url: "https://rocm.docs.amd.com/projects/rocRAND/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  - slug: hiprand-latest
+    name: "hipRAND"
+    base_url: "https://rocm.docs.amd.com/projects/hipRAND/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  # === MIOpen (~120 页) ===
+  - slug: miopen-latest
+    name: "MIOpen"
+    base_url: "https://rocm.docs.amd.com/projects/MIOpen/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  # === Composable Kernel (~200 页) ===
+  - slug: composable-kernel-latest
+    name: "Composable Kernel"
+    base_url: "https://rocm.docs.amd.com/projects/composable_kernel/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  # === MIGraphX (~110 页) ===
+  - slug: migraphx-latest
+    name: "MIGraphX"
+    base_url: "https://rocm.docs.amd.com/projects/MIGraphX/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+
+  # === RCCL (~50 页) ===
+  - slug: rccl-latest
+    name: "RCCL"
+    base_url: "https://rocm.docs.amd.com/projects/RCCL/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  # === 视觉/数据加载 ===
+  - slug: rocvisionx-latest
+    name: "MIVisionX"
+    base_url: "https://rocm.docs.amd.com/projects/MIVisionX/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+
+  - slug: rocal-latest
+    name: "rocAL"
+    base_url: "https://rocm.docs.amd.com/projects/rocAL/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+
+  # === HIPIFY ===
+  - slug: hipify-latest
+    name: "HIPIFY"
+    base_url: "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+
+  # === 系统管理 ===
+  - slug: amdsmi-latest
+    name: "AMD SMI"
+    base_url: "https://rocm.docs.amd.com/projects/amdsmi/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+
+  # === 安装文档 ===
+  - slug: install-linux-latest
+    name: "ROCm Install (Linux)"
+    base_url: "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 12
+
+  - slug: install-windows-latest
+    name: "ROCm Install (Windows)"
+    base_url: "https://rocm.docs.amd.com/projects/install-on-windows/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 12
+
+  # === 性能分析/调试 ===
+  - slug: rocprofiler-sdk-latest
+    name: "rocprofiler SDK"
+    base_url: "https://rocm.docs.amd.com/projects/rocprofiler-sdk/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+
+  - slug: rocgdb-latest
+    name: "rocgdb"
+    base_url: "https://rocm.docs.amd.com/projects/rocgdb/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+
+  # === ROCm 新 SDK (2025) ===
+  - slug: rocm-ds-latest
+    name: "ROCm-DS (数据科学)"
+    base_url: "https://rocm.docs.amd.com/projects/ROCm-DS/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+
+  - slug: rocm-ls-latest
+    name: "ROCm-LS (生命科学)"
+    base_url: "https://rocm.docs.amd.com/projects/ROCm-LS/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+
+  # === AI Developer Hub (2025 新增, ~150 页 notebooks) ===
+  - slug: ai-developer-hub-latest
+    name: "AI Developer Hub"
+    base_url: "https://rocm.docs.amd.com/projects/AI-Developer-Hub/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    rate_limit: 0.5
+    interval_hours: 24
+
+  # === LLVM ===
+  - slug: llvm-project-latest
+    name: "LLVM Project"
+    base_url: "https://rocm.docs.amd.com/projects/llvm-project/en/latest/"
+    crawler: sphinx_nav
+    credibility: 4
+    interval_hours: 168
+
+  # === ROCm Blog ===
+  - slug: rocm-blog
+    name: "ROCm Blog"
+    base_url: "https://rocm.blogs.amd.com/"
+    crawler: rss
+    credibility: 5
+    rate_limit: 1.0
+    interval_hours: 24
+
+  # === 其他的常用子项目 (预留) ===
+  - slug: rocprim-latest
+    name: "rocPRIM"
+    base_url: "https://rocm.docs.amd.com/projects/rocPRIM/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  - slug: hipcub-latest
+    name: "hipCUB"
+    base_url: "https://rocm.docs.amd.com/projects/hipCUB/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+
+  - slug: rocthunk-latest
+    name: "rocThrust"
+    base_url: "https://rocm.docs.amd.com/projects/rocThrust/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+
+  - slug: rocwmma-latest
+    name: "rocWMMA"
+    base_url: "https://rocm.docs.amd.com/projects/rocWMMA/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  - slug: hipfft-ext-latest
+    name: "hipFFT Ext"
+    base_url: "https://rocm.docs.amd.com/projects/hipFFT_Ext/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+    extract_api: true
+
+  - slug: rocm-validation-suite-latest
+    name: "ROCm Validation Suite"
+    base_url: "https://rocm.docs.amd.com/projects/ROCm-Validation-Suite/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 168
+
+# === 全局配置 ===
+settings:
+  user_agent: "rocm-hip-map/0.2 (+https://github.com/{your-repo}; contact: {your-email})"
+  
+  # 速率限制 (每域名每秒请求数)
+  rate_limit: 1.0
+  
+  # 重试配置
+  max_retries: 3
+  retry_delay: 60
+  
+  # 发现策略优先级
+  discovery_order:
+    - sitemap
+    - sphinx_nav
+    - github_docs
+    - rss
+  
+  # 跳过模式
+  skip_path_patterns:
+    - "/_images/"
+    - "/_static/"
+    - "/_sources/"
+    - "/genindex"
+    - "/search.html"
+    - "/404."
+    - ".(?:png|jpg|jpeg|gif|svg|webp|css|js|woff2?|ttf)$"

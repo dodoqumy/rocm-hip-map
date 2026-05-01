@@ -6,46 +6,93 @@ source_org: "amd"
 original_lang: "en"
 credibility: 5
 lifecycle: "latest"
-synced_date: 2026-04-28
+synced_date: 2026-05-01
 ---
 
+::::::::::::::::::::::::::::::::::::::::: {#main-content .bd-main role="main"}
+::: sbt-scroll-pixel-helper
+:::
+
+::::::::::::::::::::::::::::::::::::::: bd-content
+:::::::::::::::::::::::::::::::::: bd-article-container
+:::::::::: {.bd-header-article .d-print-none}
+::::::::: {.header-article-items .header-article__inner}
 ::::: header-article-items__start
 ::: header-article-item
 []{.fa-solid .fa-angle-right}
+:::
 
 ::: header-article-item
 - [](../../../index.html){.nav-link aria-label="Home"}
 - [Use ROCm for AI](../index.html){.nav-link}
 - [Use ROCm for training](index.html){.nav-link}
 - Scaling\...
+:::
+:::::
 
 ::::: header-article-items__end
 :::: header-article-item
 ::: article-header-buttons
 []{.fa-solid .fa-list}
+:::
+::::
+:::::
+:::::::::
+::::::::::
 
+:::::: {#jb-print-docs-body .onlyprint}
 # Scaling model training
 
+::::: {#print-main-content}
+:::: {#jb-print-toc}
+::: {}
 ## Contents
+:::
 
 - [PyTorch distributed](#pytorch-distributed){.reference .internal .nav-link}
   - [PyTorch FSDP](#pytorch-fsdp){.reference .internal .nav-link}
   - [DeepSpeed](#deepspeed){.reference .internal .nav-link}
   - [Automatic mixed precision (AMP)](#automatic-mixed-precision-amp){.reference .internal .nav-link}
 - [Fine-tuning your model](#fine-tuning-your-model){.reference .internal .nav-link}
+::::
+:::::
+::::::
 
+::: {#searchbox}
+:::
 
+::::::::::::::::: {#scaling-model-training .section}
 # Scaling model training[\#](#scaling-model-training "Link to this heading"){.headerlink}
 
+::::::::::: {#rocm-docs-core-article-info .sd-container-fluid .sd-sphinx-override .sd-p-0 .sd-mt-2 .sd-mb-4 .sd-p-2 .sd-rounded-1 .docutils}
+:::::::::: {.sd-row .sd-row-cols-2 .sd-gx-2 .sd-gy-1 .docutils}
+::::::::: {.sd-col .sd-d-flex-row .sd-align-minor-center .docutils}
+:::::::: {.sd-container-fluid .sd-sphinx-override .docutils}
+::::::: {.sd-row .sd-row-cols-2 .sd-row-cols-xs-2 .sd-row-cols-sm-3 .sd-row-cols-md-3 .sd-row-cols-lg-3 .sd-gx-3 .sd-gy-1 .docutils}
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==){.sd-octicon .sd-octicon-calendar} ]{.sd-pr-2 .article-info-date-svg} 2026-01-23
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=){.sd-octicon .sd-octicon-clock} ]{.sd-pr-2 .article-info-read-time-svg} 6 min read time
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils style="color:gray;"}
 Applies to Linux
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+:::
+:::::::
+::::::::
+:::::::::
+::::::::::
+:::::::::::
 
 To train a large-scale model like OpenAI GPT-2 or Meta Llama 2 70B, a single GPU cannot store all the model parameters required for training. This immense scale presents a fundamental challenge: no single GPU can simultaneously store and process the entire model's parameters during training. PyTorch provides an answer to this computational constraint through its distributed training frameworks.
 
+:::::: {#pytorch-distributed .section}
+[]{#rocm-for-ai-pytorch-distributed}
 
 ## PyTorch distributed[\#](#pytorch-distributed "Link to this heading"){.headerlink}
 
@@ -77,6 +124,8 @@ See the following developer blogs for more in-depth explanations and examples.
 
 - [Building a decoder transformer model on AMD GPUs --- ROCm Blogs](https://rocm.blogs.amd.com/artificial-intelligence/decoder-transformer/README.html#distributed-training-on-multiple-gpus){.reference .external}
 
+::: {#pytorch-fsdp .section}
+[]{#rocm-for-ai-pytorch-fsdp}
 
 ### PyTorch FSDP[\#](#pytorch-fsdp "Link to this heading"){.headerlink}
 
@@ -87,21 +136,31 @@ When training with FSDP, the GPU memory footprint is smaller than when training 
 For a high-level overview of how FSDP works, review [Getting started with Fully Sharded Data Parallel](https://pytorch.org/tutorials/intermediate/FSDP_tutorial.html#how-fsdp-works){.reference .external}.
 
 For detailed training steps, see [PyTorch FSDP examples](https://github.com/pytorch/examples/tree/main/distributed/FSDP){.reference .external}.
+:::
 
+::: {#deepspeed .section}
+[]{#rocm-for-ai-deepspeed}
 
 ### DeepSpeed[\#](#deepspeed "Link to this heading"){.headerlink}
 
 [DeepSpeed](https://deepspeed.ai){.reference .external} offers system innovations that make large-scale deep learning training effective, efficient, and easy to use. Innovations such as ZeRO, 3D-Parallelism, DeepSpeed-MoE, ZeRO-Infinity, and so on fall under the training pillar.
 
 See [Pre-training a large language model with Megatron-DeepSpeed on multiple AMD GPUs](https://rocm.blogs.amd.com/artificial-intelligence/megatron-deepspeed-pretrain/README.html){.reference .external} for a detailed example of training with DeepSpeed on an AMD GPU.
+:::
 
+::: {#automatic-mixed-precision-amp .section}
+[]{#rocm-for-ai-automatic-mixed-precision}
 
 ### Automatic mixed precision (AMP)[\#](#automatic-mixed-precision-amp "Link to this heading"){.headerlink}
 
 As models increase in size, so do the time and memory needed to train them; their cost also increases. Any measure we can take to reduce training time and memory usage through [automatic mixed precision](https://pytorch.org/docs/stable/amp.html){.reference .external} (AMP) is highly beneficial for most use cases.
 
 See [Automatic mixed precision in PyTorch using AMD GPUs --- ROCm Blogs](https://rocm.blogs.amd.com/artificial-intelligence/automatic-mixed-precision/README.html#automatic-mixed-precision-in-pytorch-using-amd-gpus){.reference .external} for more information about running AMP on an AMD Instinct-Series GPU.
+:::
+::::::
 
+::: {#fine-tuning-your-model .section}
+[]{#rocm-for-ai-fine-tune}
 
 ## Fine-tuning your model[\#](#fine-tuning-your-model "Link to this heading"){.headerlink}
 
@@ -130,6 +189,8 @@ The following developer blogs showcase examples of fine-tuning a model on an AMD
 - Recipes for fine-tuning Llama2 and 3 with [`llama-recipes`{.docutils .literal .notranslate}]{.pre}
 
   - [meta-llama/llama-recipes: Scripts for fine-tuning Meta Llama3 with composable FSDP & PEFT methods to cover single/multi-node GPUs](https://github.com/meta-llama/llama-cookbook/tree/main/getting-started/finetuning){.reference .external}
+:::
+:::::::::::::::::
 
 ::::: prev-next-area
 [](benchmark-docker/mpt-llm-foundry.html "previous page"){.left-prev}
@@ -138,6 +199,7 @@ The following developer blogs showcase examples of fine-tuning a model on an AMD
 previous
 
 Training MPT-30B with LLM Foundry on ROCm
+:::
 
 [](../fine-tuning/index.html "next page"){.right-next}
 
@@ -145,12 +207,24 @@ Training MPT-30B with LLM Foundry on ROCm
 next
 
 Use ROCm for fine-tuning LLMs
+:::
+:::::
+::::::::::::::::::::::::::::::::::
 
+:::::: {.bd-sidebar-secondary .bd-toc}
+::::: {.sidebar-secondary-items .sidebar-secondary__inner}
 :::: sidebar-secondary-item
+::: {.page-toc .tocsection .onthispage}
 Contents
+:::
 
 - [PyTorch distributed](#pytorch-distributed){.reference .internal .nav-link}
   - [PyTorch FSDP](#pytorch-fsdp){.reference .internal .nav-link}
   - [DeepSpeed](#deepspeed){.reference .internal .nav-link}
   - [Automatic mixed precision (AMP)](#automatic-mixed-precision-amp){.reference .internal .nav-link}
 - [Fine-tuning your model](#fine-tuning-your-model){.reference .internal .nav-link}
+::::
+:::::
+::::::
+:::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::

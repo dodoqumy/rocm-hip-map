@@ -6,25 +6,46 @@ source_org: "amd"
 original_lang: "en"
 credibility: 5
 lifecycle: "latest"
-synced_date: 2026-04-28
+synced_date: 2026-05-01
 ---
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#main-content .bd-main role="main"}
+::: sbt-scroll-pixel-helper
+:::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: bd-content
+:::::::::::::::::::::::::::::::::::::::::::::::::::: bd-article-container
+:::::::::: {.bd-header-article .d-print-none}
+::::::::: {.header-article-items .header-article__inner}
 ::::: header-article-items__start
 ::: header-article-item
 []{.fa-solid .fa-angle-right}
+:::
 
 ::: header-article-item
 - [](../index.html){.nav-link aria-label="Home"}
 - ROCm\...
+:::
+:::::
 
 ::::: header-article-items__end
 :::: header-article-item
 ::: article-header-buttons
 []{.fa-solid .fa-list}
+:::
+::::
+:::::
+:::::::::
+::::::::::
 
+:::::: {#jb-print-docs-body .onlyprint}
 # ROCm environment variables
 
+::::: {#print-main-content}
+:::: {#jb-print-toc}
+::: {}
 ## Contents
+:::
 
 - [HIP environment variables](#hip-environment-variables){.reference .internal .nav-link}
   - [GPU isolation variables](#gpu-isolation-variables){.reference .internal .nav-link}
@@ -38,26 +59,53 @@ synced_date: 2026-04-28
 - [Environment variables in ROCm libraries](#environment-variables-in-rocm-libraries){.reference .internal .nav-link}
 - [Key single-variable details](#key-single-variable-details){.reference .internal .nav-link}
   - [rocALUTION](#rocalution){.reference .internal .nav-link}
+::::
+:::::
+::::::
 
+::: {#searchbox}
+:::
 
+::::::::::::::::::::::::::::::::::: {#rocm-environment-variables .section}
+[]{#env-variables-reference}
 
 # ROCm environment variables[\#](#rocm-environment-variables "Link to this heading"){.headerlink}
 
+::::::::::: {#rocm-docs-core-article-info .sd-container-fluid .sd-sphinx-override .sd-p-0 .sd-mt-2 .sd-mb-4 .sd-p-2 .sd-rounded-1 .docutils}
+:::::::::: {.sd-row .sd-row-cols-2 .sd-gx-2 .sd-gy-1 .docutils}
+::::::::: {.sd-col .sd-d-flex-row .sd-align-minor-center .docutils}
+:::::::: {.sd-container-fluid .sd-sphinx-override .docutils}
+::::::: {.sd-row .sd-row-cols-2 .sd-row-cols-xs-2 .sd-row-cols-sm-3 .sd-row-cols-md-3 .sd-row-cols-lg-3 .sd-gx-3 .sd-gy-1 .docutils}
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==){.sd-octicon .sd-octicon-calendar} ]{.sd-pr-2 .article-info-date-svg} 2026-03-31
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=){.sd-octicon .sd-octicon-clock} ]{.sd-pr-2 .article-info-read-time-svg} 15 min read time
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils style="color:gray;"}
 Applies to Linux and Windows
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+:::
+:::::::
+::::::::
+:::::::::
+::::::::::
+:::::::::::
 
 ROCm provides a set of environment variables that allow users to configure and optimize their development and runtime experience. These variables define key settings such as installation paths, platform selection, and runtime behavior for applications running on AMD accelerators and GPUs.
 
 This page outlines commonly used environment variables across different components of the ROCm software stack, including HIP and ROCR-Runtime. Understanding these variables can help streamline software development and execution in ROCm-based environments.
 
+:::::::::::::: {#hip-environment-variables .section}
 ## HIP environment variables[\#](#hip-environment-variables "Link to this heading"){.headerlink}
 
 The following tables list the HIP environment variables.
 
+::::: {#gpu-isolation-variables .section}
 ### GPU isolation variables[\#](#gpu-isolation-variables "Link to this heading"){.headerlink}
 
 Restricting the access of applications to a subset of GPUs, also known as GPU isolation, allows users to hide GPU resources from programs. The GPU isolation environment variables in HIP are collected in the following table.
@@ -90,7 +138,9 @@ Restricting the access of applications to a subset of GPUs, also known as GPU is
 | Device indices exposed to HIP applications.                                                                                       |                                                                                                                                                                                                                                                                                                                                                    |                                                                                                |
 | :::                                                                                                                               |                                                                                                                                                                                                                                                                                                                                                    |                                                                                                |
 +-----------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+:::
 
+::: {.admonition-recommendation .admonition}
 Recommendation
 
 - On Linux, use [`ROCR_VISIBLE_DEVICES`{.docutils .literal .notranslate}]{.pre}.
@@ -98,7 +148,10 @@ Recommendation
 - On Windows, use [`HIP_VISIBLE_DEVICES`{.docutils .literal .notranslate}]{.pre}.
 
 - For portability across different vendors, use [`CUDA_VISIBLE_DEVICES`{.docutils .literal .notranslate}]{.pre}.
+:::
+:::::
 
+:::: {#profiling-variables .section}
 ### Profiling variables[\#](#profiling-variables "Link to this heading"){.headerlink}
 
 The profiling environment variables in HIP are collected in the following table. For more information, check [[setting the number of CUs page]{.xref .std .std-doc}](https://rocm.docs.amd.com/en/latest/how-to/setting-cus.html "(in ROCm Documentation v7.2.2)"){.reference .external}.
@@ -131,7 +184,10 @@ The profiling environment variables in HIP are collected in the following table.
 | Used to run the app as if it were run in rocprof. Forces command queue profiling on by default.                          | 1: Enable                                                                   |
 | :::                                                                                                                      | :::                                                                         |
 +--------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
+:::
+::::
 
+:::: {#debug-variables .section}
 ### Debug variables[\#](#debug-variables "Link to this heading"){.headerlink}
 
 The debugging environment variables in HIP are collected in the following table. For more information, check [Logging HIP activity](https://rocm.docs.amd.com/projects/HIP/en/latest/how-to/logging.html "(in HIP Documentation v7.2.53211)"){.reference .external}, [Debugging with HIP](https://rocm.docs.amd.com/projects/HIP/en/latest/how-to/debugging.html "(in HIP Documentation v7.2.53211)"){.reference .external} and [[GPU isolation]{.xref .std .std-doc}](https://rocm.docs.amd.com/en/latest/conceptual/gpu-isolation.html "(in ROCm Documentation v7.2.2)"){.reference .external}.
@@ -336,7 +392,10 @@ The debugging environment variables in HIP are collected in the following table.
 | The maximum number of hardware queues allocated per device.                                                                                                                           |                                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | :::                                                                                                                                                                                   |                                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+:::
+::::
 
+:::: {#memory-management-related-variables .section}
 ### Memory management related variables[\#](#memory-management-related-variables "Link to this heading"){.headerlink}
 
 The memory management related environment variables in HIP are collected in the following table. The [`HIP_HOST_COHERENT`{.docutils .literal .notranslate}]{.pre} variable linked at the following pages:
@@ -481,7 +540,10 @@ The memory management related environment variables in HIP are collected in the 
 | Use remote memory for the global heap allocation.                                                                         |                                                        | 1: Enable                                                                                                                                                                                                                                                                                                 |
 | :::                                                                                                                       |                                                        | :::                                                                                                                                                                                                                                                                                                       |
 +---------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+:::
+::::
 
+:::: {#other-useful-variables .section}
 ### Other useful variables[\#](#other-useful-variables "Link to this heading"){.headerlink}
 
 The following table lists environment variables that are useful but relate to different features in HIP.
@@ -522,7 +584,11 @@ The following table lists environment variables that are useful but relate to di
 | Controls redirect logs of Comgr.                                                                                                                                                                                 |                   | stderr: Redirected to the error stream.                                                                                                   |
 | :::                                                                                                                                                                                                              |                   | :::                                                                                                                                       |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+:::
+::::
+::::::::::::::
 
+:::::: {#rocr-runtime-environment-variables .section}
 ## ROCR-Runtime environment variables[\#](#rocr-runtime-environment-variables "Link to this heading"){.headerlink}
 
 The following table lists the [[ROCR-Runtime]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/ROCR-Runtime/en/latest/index.html "(in ROCR Documentation v1.18.0)"){.reference .external} environment variables:
@@ -687,7 +753,9 @@ The following table lists the [[ROCR-Runtime]{.xref .std .std-doc}](https://rocm
 | Enables additional debug information and validation in the runtime.                                                                                                                                                                                                                                                                                                                                               |                                                             | 1: Enable debug mode with additional validation and logging.                                                                                                                                                                                                                                           |
 | :::                                                                                                                                                                                                                                                                                                                                                                                                               |                                                             | :::                                                                                                                                                                                                                                                                                                    |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+:::
 
+:::: {#hardware-debugging-environment-variables .section}
 ### Hardware Debugging Environment Variables[\#](#hardware-debugging-environment-variables "Link to this heading"){.headerlink}
 
 The following environment variables are intended for experienced users who are debugging hardware-specific issues. These settings may impact performance and stability and should only be used when troubleshooting specific hardware problems.
@@ -748,7 +816,11 @@ The following environment variables are intended for experienced users who are d
 | Controls GPU L2 cache utilization for all memory regions.                                                                     |                                              | 1: Disables L2 cache entirely. Sets all memory regions as uncacheable (MTYPE=UC) in the GPU, bypassing the L2 cache. Useful for diagnosing cache-related performance or correctness issues.                   |
 | :::                                                                                                                           |                                              | :::                                                                                                                                                                                                           |
 +-------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+:::
+::::
+::::::
 
+:::: {#hipcc-environment-variables .section}
 ## HIPCC environment variables[\#](#hipcc-environment-variables "Link to this heading"){.headerlink}
 
 This topic provides descriptions of the HIPCC environment variables.
@@ -853,7 +925,10 @@ This topic provides descriptions of the HIPCC environment variables.
 |                                                                                                                                                                                                                                                                                                                                                                                         | 7: Displays all of the above: [`hipcc-cmd`{.docutils .literal .notranslate}]{.pre}, [`hipcc-args`{.docutils .literal .notranslate}]{.pre}, and environment variables.                                                                                                                                                  |
 |                                                                                                                                                                                                                                                                                                                                                                                         | :::                                                                                                                                                                                                                                                                                                                    |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+:::
+::::
 
+:::: {#environment-variables-in-rocm-libraries .section}
 ## Environment variables in ROCm libraries[\#](#environment-variables-in-rocm-libraries "Link to this heading"){.headerlink}
 
 Many ROCm libraries define environment variables for specific tuning, debugging, or behavioral control. The table below provides an overview and links to further documentation.
@@ -886,11 +961,16 @@ Many ROCm libraries define environment variables for specific tuning, debugging,
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | [Tensile](https://rocm.docs.amd.com/projects/Tensile/en/latest/src/reference/environment-variables.html){.reference .external}                                                                | Enable testing, debugging, and experimental features for Tensile clients and applications                                                                                            |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+:::
+::::
 
+::::: {#key-single-variable-details .section}
 ## Key single-variable details[\#](#key-single-variable-details "Link to this heading"){.headerlink}
 
 This section provides detailed descriptions, in the standard format, for ROCm libraries that feature a single, key environment variable (or a very minimal set) which is documented directly on this page for convenience.
 
+:::: {#rocalution .section}
+[]{#rocalution-vars-detail}
 
 ### rocALUTION[\#](#rocalution "Link to this heading"){.headerlink}
 
@@ -906,6 +986,10 @@ This section provides detailed descriptions, in the standard format, for ROCm li
 | If set to [`1`{.docutils .literal .notranslate}]{.pre}, enable file logging. Logs each rocALUTION function call including object constructor/destructor, address of the object, memory allocation, data transfers, all function calls for matrices, vectors, solvers, and preconditioners. The log file is placed in the working directory. | Default: Not set.                                                        |
 | :::                                                                                                                                                                                                                                                                                                                                         | :::                                                                      |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
+:::
+::::
+:::::
+:::::::::::::::::::::::::::::::::::
 
 ::::: prev-next-area
 [](gpu-atomics-operation.html "previous page"){.left-prev}
@@ -914,6 +998,7 @@ This section provides detailed descriptions, in the standard format, for ROCm li
 previous
 
 Hardware atomics operation support
+:::
 
 [](precision-support.html "next page"){.right-next}
 
@@ -921,9 +1006,16 @@ Hardware atomics operation support
 next
 
 Data types and precision support
+:::
+:::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::: {.bd-sidebar-secondary .bd-toc}
+::::: {.sidebar-secondary-items .sidebar-secondary__inner}
 :::: sidebar-secondary-item
+::: {.page-toc .tocsection .onthispage}
 Contents
+:::
 
 - [HIP environment variables](#hip-environment-variables){.reference .internal .nav-link}
   - [GPU isolation variables](#gpu-isolation-variables){.reference .internal .nav-link}
@@ -937,3 +1029,8 @@ Contents
 - [Environment variables in ROCm libraries](#environment-variables-in-rocm-libraries){.reference .internal .nav-link}
 - [Key single-variable details](#key-single-variable-details){.reference .internal .nav-link}
   - [rocALUTION](#rocalution){.reference .internal .nav-link}
+::::
+:::::
+::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

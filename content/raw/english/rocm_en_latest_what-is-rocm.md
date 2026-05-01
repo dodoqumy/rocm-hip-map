@@ -6,25 +6,46 @@ source_org: "amd"
 original_lang: "en"
 credibility: 5
 lifecycle: "latest"
-synced_date: 2026-04-28
+synced_date: 2026-05-01
 ---
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#main-content .bd-main role="main"}
+::: sbt-scroll-pixel-helper
+:::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::: bd-content
+:::::::::::::::::::::::::::::::::::::::::::::::::::: bd-article-container
+:::::::::: {.bd-header-article .d-print-none}
+::::::::: {.header-article-items .header-article__inner}
 ::::: header-article-items__start
 ::: header-article-item
 []{.fa-solid .fa-angle-right}
+:::
 
 ::: header-article-item
 - [](index.html){.nav-link aria-label="Home"}
 - What is ROCm?
+:::
+:::::
 
 ::::: header-article-items__end
 :::: header-article-item
 ::: article-header-buttons
 []{.fa-solid .fa-list}
+:::
+::::
+:::::
+:::::::::
+::::::::::
 
+:::::: {#jb-print-docs-body .onlyprint}
 # What is ROCm?
 
+::::: {#print-main-content}
+:::: {#jb-print-toc}
+::: {}
 ## Contents
+:::
 
 - [ROCm components](#rocm-components){.reference .internal .nav-link}
   - [Libraries](#libraries){.reference .internal .nav-link}
@@ -38,16 +59,40 @@ synced_date: 2026-04-28
     - [Development](#development){.reference .internal .nav-link}
   - [Compilers](#compilers){.reference .internal .nav-link}
   - [Runtime API](#runtime-api){.reference .internal .nav-link}
+::::
+:::::
+::::::
 
+::: {#searchbox}
+:::
 
+::::::::::::::::::::::::::::::::::: {#what-is-rocm .section}
 # What is ROCm?[\#](#what-is-rocm "Link to this heading"){.headerlink}
 
+::::::::::: {#rocm-docs-core-article-info .sd-container-fluid .sd-sphinx-override .sd-p-0 .sd-mt-2 .sd-mb-4 .sd-p-2 .sd-rounded-1 .docutils}
+:::::::::: {.sd-row .sd-row-cols-2 .sd-gx-2 .sd-gy-1 .docutils}
+::::::::: {.sd-col .sd-d-flex-row .sd-align-minor-center .docutils}
+:::::::: {.sd-container-fluid .sd-sphinx-override .docutils}
+::::::: {.sd-row .sd-row-cols-2 .sd-row-cols-xs-2 .sd-row-cols-sm-3 .sd-row-cols-md-3 .sd-row-cols-lg-3 .sd-gx-3 .sd-gy-1 .docutils}
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==){.sd-octicon .sd-octicon-calendar} ]{.sd-pr-2 .article-info-date-svg} 2026-03-10
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=){.sd-octicon .sd-octicon-clock} ]{.sd-pr-2 .article-info-read-time-svg} 7 min read time
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils style="color:gray;"}
 Applies to Linux and Windows
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+:::
+:::::::
+::::::::
+:::::::::
+::::::::::
+:::::::::::
 
 ROCm is a software stack, composed primarily of open-source software, that provides the tools for programming AMD Graphics Processing Units (GPUs), from low-level kernels to high-level end-user applications.
 
@@ -55,12 +100,15 @@ ROCm is a software stack, composed primarily of open-source software, that provi
 
 Specifically, ROCm provides the tools for [[HIP]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/HIP/en/latest/index.html "(in HIP Documentation v7.2.53211)"){.reference .external}, OpenCL and OpenMP. These include compilers, libraries for high-level functions, debuggers, profilers and runtimes.
 
+::::::::::::::::::::::::: {#rocm-components .section}
 ## ROCm components[\#](#rocm-components "Link to this heading"){.headerlink}
 
 ROCm consists of the following components. For information on the license associated with each component, see [[ROCm licensing]{.doc}](about/license.html){.reference .internal}.
 
+:::::::::::: {#libraries .section}
 ### Libraries[\#](#libraries "Link to this heading"){.headerlink}
 
+::::: {#machine-learning-computer-vision .section}
 #### Machine Learning & Computer Vision[\#](#machine-learning-computer-vision "Link to this heading"){.headerlink}
 
 ::: pst-scrollable-table-container
@@ -75,11 +123,16 @@ ROCm consists of the following components. For information on the license associ
   [[rocDecode]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/rocDecode/en/latest/index.html "(in rocDecode documentation v1.7.0)"){.reference .external}                           High-performance SDK for access to video decoding features on AMD GPUs
   [[rocJPEG]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/rocJPEG/en/latest/index.html "(in rocJPEG Documentation v1.4.0)"){.reference .external}                                 Library for decoding JPG images on AMD GPUs
   [[rocPyDecode]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/rocPyDecode/en/latest/index.html "(in rocPyDecode v0.8.0)"){.reference .external}                                   Provides access to rocDecode APIs in both Python and C/C++ languages
+:::
 
+::: {.admonition .note}
 Note
 
 [rocCV](https://rocm.docs.amd.com/projects/rocCV/en/latest/index.html){.reference .external} is an efficient GPU-accelerated library for image pre- and post-processing. rocCV is in an early access state. Using it on production workloads is not recommended.
+:::
+:::::
 
+:::: {#communication .section}
 #### Communication[\#](#communication "Link to this heading"){.headerlink}
 
 ::: pst-scrollable-table-container
@@ -87,7 +140,10 @@ Note
   ----------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------
   [[RCCL]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/rccl/en/latest/index.html "(in RCCL Documentation v2.27.7)"){.reference .external}   Standalone library that provides multi-GPU and multi-node collective communication primitives
   [[rocSHMEM]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/rocSHMEM/en/latest/index.html "(in rocSHMEM v3.2.0)"){.reference .external}      An intra-kernel networking library that provides GPU-centric networking through an OpenSHMEM-like interface
+:::
+::::
 
+:::: {#math .section}
 #### Math[\#](#math "Link to this heading"){.headerlink}
 
 ::: pst-scrollable-table-container
@@ -110,7 +166,10 @@ Note
   [[rocSPARSE]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/rocSPARSE/en/latest/index.html "(in rocSPARSE Documentation v4.2.0)"){.reference .external}         Exposes a common interface that provides BLAS for sparse computation implemented on ROCm runtime and toolchains (in the HIP programming language)
   [[rocWMMA]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/rocWMMA/en/latest/index.html "(in rocWMMA Documentation v2.2.0)"){.reference .external}               C++ library for accelerating mixed-precision matrix multiply-accumulate (MMA) operations
   [[Tensile]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/Tensile/en/latest/src/index.html "(in Tensile Documentation v4.45.0)"){.reference .external}          Creates benchmark-driven backend libraries for GEMMs, GEMM-like problems, and general N-dimensional tensor contractions
+:::
+::::
 
+:::: {#primitives .section}
 #### Primitives[\#](#primitives "Link to this heading"){.headerlink}
 
 ::: pst-scrollable-table-container
@@ -120,9 +179,14 @@ Note
   [[hipTensor]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/hipTensor/en/latest/index.html "(in hipTensor Documentation v2.2.0)"){.reference .external}   AMD's C++ library for accelerating tensor primitives based on the composable kernel library
   [[rocPRIM]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/rocPRIM/en/latest/index.html "(in rocPRIM Documentation v4.2.0)"){.reference .external}         Header-only library for HIP parallel primitives
   [[rocThrust]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/rocThrust/en/latest/index.html "(in rocThrust Documentation v4.2.0)"){.reference .external}   Parallel algorithm library
+:::
+::::
+::::::::::::
 
+:::::::::: {#tools .section}
 ### Tools[\#](#tools "Link to this heading"){.headerlink}
 
+:::: {#system-management .section}
 #### System Management[\#](#system-management "Link to this heading"){.headerlink}
 
 ::: pst-scrollable-table-container
@@ -133,7 +197,10 @@ Note
   [[rocminfo]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/rocminfo/en/latest/index.html "(in rocminfo v1.0.0)"){.reference .external}                                    Reports system information
   [[ROCm SMI]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/rocm_smi_lib/en/latest/index.html "(in ROCm SMI LIB Documentation v7.8.0)"){.reference .external}              C library for Linux that provides a user space interface for applications to monitor and control GPU applications
   [[ROCm Validation Suite]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/ROCmValidationSuite/en/latest/index.html "(in RVS Documentation v1.3.0)"){.reference .external}   Detects and troubleshoots common problems affecting AMD GPUs running in a high-performance computing environment
+:::
+::::
 
+::::: {#performance .section}
 #### Performance[\#](#performance "Link to this heading"){.headerlink}
 
 ::: pst-scrollable-table-container
@@ -145,11 +212,16 @@ Note
   [[ROCProfiler]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/rocprofiler/en/latest/index.html "(in rocprofiler Documentation v2.0.0)"){.reference .external}                 Profiling tool for HIP applications
   [[ROCprofiler-SDK]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/rocprofiler-sdk/en/latest/index.html "(in Rocprofiler SDK v1.1.0)"){.reference .external}                   Toolkit for developing analysis tools for profiling and tracing GPU compute applications. This toolkit is in beta and subject to change
   [[ROCTracer]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/roctracer/en/latest/index.html "(in ROCTracer Documentation v4.1.0)"){.reference .external}                       Intercepts runtime API calls and traces asynchronous activity
+:::
 
+::: {.admonition .note}
 Note
 
 [ROCprof Compute Viewer](https://rocm.docs.amd.com/projects/rocprof-compute-viewer/en/amd-mainline/){.reference .external} is a tool for visualizing and analyzing GPU thread trace data collected using [[rocprofv3]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/rocprofiler-sdk/en/latest/index.html "(in Rocprofiler SDK v1.1.0)"){.reference .external}. Note that [ROCprof Compute Viewer](https://rocm.docs.amd.com/projects/rocprof-compute-viewer/en/amd-mainline/){.reference .external} is in an early access state. Running production workloads is not recommended.
+:::
+:::::
 
+:::: {#development .section}
 #### Development[\#](#development "Link to this heading"){.headerlink}
 
 ::: pst-scrollable-table-container
@@ -160,7 +232,11 @@ Note
   [[ROCdbgapi]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/ROCdbgapi/en/latest/index.html "(in ROCdbgapi Documentation v0.77.4)"){.reference .external}             ROCm debugger API library
   [[ROCm Debugger (ROCgdb)]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/ROCgdb/en/latest/index.html "(in ROCgdb Documentation v16.3)"){.reference .external}        Source-level debugger for Linux, based on the GNU Debugger (GDB)
   [[ROCr Debug Agent]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/rocr_debug_agent/en/latest/index.html "(in rocr_debug_agent v2.1.0)"){.reference .external}       Prints the state of all AMD GPU wavefronts that caused a queue error by sending a SIGQUIT signal to the process while the program is running
+:::
+::::
+::::::::::
 
+:::: {#compilers .section}
 ### Compilers[\#](#compilers "Link to this heading"){.headerlink}
 
 ::: pst-scrollable-table-container
@@ -169,13 +245,20 @@ Note
   [[HIPCC]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/HIPCC/en/latest/index.html "(in HIPCC Documentation v1.1.1)"){.reference .external}                           Compiler driver utility that calls Clang and passes the appropriate include and library options for the target compiler and HIP infrastructure
   [[ROCm compilers]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/llvm-project/en/latest/index.html "(in llvm-project Documentation v22.0.0)"){.reference .external}   ROCm LLVM compiler infrastructure
   [FLANG](https://github.com/ROCm/flang/){.reference .external}                                                                                                                   An out-of-tree Fortran compiler targeting LLVM
+:::
+::::
 
+:::: {#runtime-api .section}
 ### Runtime API[\#](#runtime-api "Link to this heading"){.headerlink}
 
 ::: pst-scrollable-table-container
   Component                                                                                                                                             Description
   ----------------------------------------------------------------------------------------------------------------------------------------------------- -----------------------------------------------------------
   [[HIP]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/HIP/en/latest/index.html "(in HIP Documentation v7.2.53211)"){.reference .external}   HIP is a C++ runtime API and kernel language for AMD GPUs
+:::
+::::
+:::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::
 
 ::::: prev-next-area
 [](index.html "previous page"){.left-prev}
@@ -184,6 +267,7 @@ Note
 previous
 
 AMD ROCm documentation
+:::
 
 [](about/release-notes.html "next page"){.right-next}
 
@@ -191,9 +275,16 @@ AMD ROCm documentation
 next
 
 ROCm 7.2.2 release notes
+:::
+:::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::: {.bd-sidebar-secondary .bd-toc}
+::::: {.sidebar-secondary-items .sidebar-secondary__inner}
 :::: sidebar-secondary-item
+::: {.page-toc .tocsection .onthispage}
 Contents
+:::
 
 - [ROCm components](#rocm-components){.reference .internal .nav-link}
   - [Libraries](#libraries){.reference .internal .nav-link}
@@ -207,3 +298,8 @@ Contents
     - [Development](#development){.reference .internal .nav-link}
   - [Compilers](#compilers){.reference .internal .nav-link}
   - [Runtime API](#runtime-api){.reference .internal .nav-link}
+::::
+:::::
+::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

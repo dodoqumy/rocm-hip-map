@@ -1,131 +1,95 @@
 """
-rocm-hip-map/crawlers/dedup.py
-Phase 2.1.1 — 去重模块
-
-提供 URL 规范化、内容 hash 双重去重。
+URL 去重与规范化 (Phase 2.1)
 """
-from __future__ import annotations
 
 import re
 import hashlib
-from urllib.parse import urlparse, urlencode, parse_qs
-
-
-# ── URL 规范化 ────────────────────────────────────────────────────────────────
-
-# 追踪参数黑名单
-_TRACKING_PARAMS = {
-    # UTM 系列
-    "utm_source", "utm_medium", "utm_campaign", "utm_content",
-    "utm_term", "utm_id", "utm_source_platform", "utm_creative_format",
-    "utm_marketing_tactic",
-    # 广告追踪
-    "fbclid", "gclid", "gclsrc", "dclid", "msclkid",
-    # 社交追踪
-    "mc_cid", "mc_eid", "ref", "ref_src", "ref_url",
-    # 电商追踪
-    "affiliate", "aff_id", "campaign_id", "zanpid",
-    # 通用追踪
-    "trk", "trkInfo", "yclid", "rb_clickid",
-    # HubSpot / Marketo
-    "mkt_tok", "_hsenc", "_hsmi", "hsCtaTracking",
-    # 锚点（通常不影响内容）
-    "ref_", "source", "via",
-}
-
-# 可移除的路径模式
-_PATH_PATTERNS_TO_REMOVE = re.compile(
-    r"(\btrack|click|redirect|out|go\b)", re.IGNORECASE
-)
+from urllib.parse import urlparse, urljoin
+from typing import Set, Optional
 
 
 def normalize_url(url: str) -> str:
-    """
-    URL 规范化，用于去重。
-
-    步骤：
-    1. scheme + netloc 小写
-    2. 移除追踪参数（utm_*, fbclid, ...）
-    3. 移除空 query / fragment
-    4. 移除末尾斜杠（homepage）
-    """
-    if not url or not isinstance(url, str):
-        return url or ""
-
-    url = url.strip()
-
-    # 移除 #fragment
-    if "#" in url:
-        url = url.split("#", 1)[0]
-
-    try:
-        parsed = urlparse(url)
-    except Exception:
-        return url
-
-    # scheme + netloc 小写
-    scheme = parsed.scheme.lower() if parsed.scheme else "https"
-    netloc = parsed.netloc.lower()
-
-    # 移除默认端口
-    if netloc.endswith(":80") and scheme == "http":
-        netloc = netloc[:-3]
-    elif netloc.endswith(":443") and scheme == "https":
-        netloc = netloc[:-4]
-
-    # 去除追踪参数
-    qs = parse_qs(parsed.query, keep_blank_values=True)
-    qs = {k: v for k, v in qs.items() if k not in _TRACKING_PARAMS}
-
-    # 空 query → 去掉 ?
-    if not qs:
-        query = ""
-    else:
-        query = urlencode(qs, doseq=True)
-
-    result = f"{scheme}://{netloc}{parsed.path}"
-
-    # 移除末尾斜杠（仅 homepage / 避免 / vs 空 差异）
-    if result.endswith("/") and len(parsed.path) > 1:
-        result = result[:-1]
-
-    if query:
-        result += "?" + query
-
-    return result
+    """URL 基本规范化"""
+    # 移除 utm 参数
+    url = re.sub(r"utm_[^=]+=[^&]+&?", "", url)
+    url = re.sub(r"fbclid=[^&]+&?", "", url)
+    url = re.sub(r"ref[^=]+=[^&]+&?", "", url)
+    
+    # 移除尾随 &
+    url = url.rstrip("&")
+    
+    # 移除空参数
+    url = re.sub(r"\?$", "", url)
+    
+    return url
 
 
-def url_hash(url: str) -> str:
-    """规范化 URL 的 sha256 前 16 位。"""
-    return hashlib.sha256(normalize_url(url).encode()).hexdigest()[:16]
+def url_to_filename(url: str) -> str:
+    """URL 转文件名"""
+    # https://rocm.docs.amd.com/en/latest/about/license.html
+    # → about_license
+    parsed = urlparse(url)
+    path = parsed.path
+    
+    # 移除版本前缀
+    path = re.sub(r"/en/(?:latest|docs-[\d.]+)/", "/", path)
+    path = re.sub(r"/projects/[\w-]+/en/latest/", "/", path)
+    
+    # 移除扩展名和目录
+    path = path.strip("/")
+    path = re.sub(r"\.html?$", "", path)
+    path = re.sub(r"index$", "", path)
+    
+    # 转义
+    path = path.replace("/", "_")
+    path = path.replace("-", "_")
+    path = path.replace(".", "_")
+    
+    return path
 
 
-def content_hash(content: str) -> str:
-    """文本内容的 sha256 前 16 位。"""
-    normalized = re.sub(r"\s+", " ", content or "").strip()
-    return hashlib.sha256(normalized.encode()).hexdigest()[:16]
+def compute_url_hash(url: str) -> str:
+    """URL hash (去重)"""
+    normalized = normalize_url(url)
+    return hashlib.md5(normalized.encode()).hexdigest()[:16]
 
 
-def is_tracking_url(url: str) -> bool:
-    """判断 URL 是否为纯追踪跳转页（无实质内容）。"""
-    if not url:
-        return True
-    url_lower = url.lower()
-    # 已知追踪域名
-    tracking_domains = {
-        "redirect", "click", "link", "out", "goto",
-        "ads.", "ad.", "tracking.", "clk.", "trk.",
-    }
-    try:
-        netloc = urlparse(url).netloc.lower()
-        for t in tracking_domains:
-            if netloc.startswith(t) or f".{t}" in netloc:
-                return True
-    except Exception:
-        pass
-    return False
+def compute_content_hash(content: str) -> str:
+    """Content hash (增量)"""
+    return hashlib.sha256(content.encode()).hexdigest()[:16]
 
 
-def strip_utm(url: str) -> str:
-    """简化别名。"""
-    return normalize_url(url)
+class Deduplicator:
+    """去重器"""
+    
+    def __init__(self):
+        self._seen_urls: Set[str] = set()
+        self._seen_content: Set[str] = set()
+    
+    def is_seen(self, url: str) -> bool:
+        """URL 已存在"""
+        url_hash = compute_url_hash(url)
+        if url_hash in self._seen_urls:
+            return True
+        self._seen_urls.add(url_hash)
+        return False
+    
+    def is_content_unchanged(self, content: str) -> bool:
+        """内容未变"""
+        content_hash = compute_content_hash(content)
+        if content_hash in self._seen_content:
+            return True
+        self._seen_content.add(content_hash)
+        return False
+    
+    def load_state(self, state: dict):
+        """加载状态"""
+        self._seen_urls = set(state.get("urls", []))
+        self._seen_content = set(state.get("content", []))
+    
+    def save_state(self) -> dict:
+        """保存状态"""
+        return {
+            "urls": list(self._seen_urls),
+            "content": list(self._seen_content),
+        }

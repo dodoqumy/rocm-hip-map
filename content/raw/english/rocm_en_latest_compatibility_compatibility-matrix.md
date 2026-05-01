@@ -6,38 +6,83 @@ source_org: "amd"
 original_lang: "en"
 credibility: 5
 lifecycle: "latest"
-synced_date: 2026-04-28
+synced_date: 2026-05-01
 ---
 
+:::::::::::::::::::::::::::::::::::::::::::: {#main-content .bd-main role="main"}
+::: sbt-scroll-pixel-helper
+:::
+
+:::::::::::::::::::::::::::::::::::::::::: bd-content
+::::::::::::::::::::::::::::::::::::: bd-article-container
+:::::::::: {.bd-header-article .d-print-none}
+::::::::: {.header-article-items .header-article__inner}
 ::::: header-article-items__start
 ::: header-article-item
 []{.fa-solid .fa-angle-right}
+:::
 
 ::: header-article-item
 - [](../index.html){.nav-link aria-label="Home"}
 - Compatibility matrix
+:::
+:::::
 
 ::::: header-article-items__end
 :::: header-article-item
 ::: article-header-buttons
 []{.fa-solid .fa-list}
+:::
+::::
+:::::
+:::::::::
+::::::::::
 
+:::::: {#jb-print-docs-body .onlyprint}
 # Compatibility matrix
 
+::::: {#print-main-content}
+:::: {#jb-print-toc}
+::: {}
 ## Contents
+:::
 
 - [Operating systems, kernel and Glibc versions](#operating-systems-kernel-and-glibc-versions){.reference .internal .nav-link}
 - [Past versions of ROCm compatibility matrix](#past-versions-of-rocm-compatibility-matrix){.reference .internal .nav-link}
+::::
+:::::
+::::::
 
+::: {#searchbox}
+:::
 
+:::::::::::::::::::: {#compatibility-matrix .section}
 # Compatibility matrix[\#](#compatibility-matrix "Link to this heading"){.headerlink}
 
+::::::::::: {#rocm-docs-core-article-info .sd-container-fluid .sd-sphinx-override .sd-p-0 .sd-mt-2 .sd-mb-4 .sd-p-2 .sd-rounded-1 .docutils}
+:::::::::: {.sd-row .sd-row-cols-2 .sd-gx-2 .sd-gy-1 .docutils}
+::::::::: {.sd-col .sd-d-flex-row .sd-align-minor-center .docutils}
+:::::::: {.sd-container-fluid .sd-sphinx-override .docutils}
+::::::: {.sd-row .sd-row-cols-2 .sd-row-cols-xs-2 .sd-row-cols-sm-3 .sd-row-cols-md-3 .sd-row-cols-lg-3 .sd-gx-3 .sd-gy-1 .docutils}
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==){.sd-octicon .sd-octicon-calendar} ]{.sd-pr-2 .article-info-date-svg} 2026-04-23
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=){.sd-octicon .sd-octicon-clock} ]{.sd-pr-2 .article-info-read-time-svg} 46 min read time
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils style="color:gray;"}
 Applies to Linux
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+:::
+:::::::
+::::::::
+:::::::::
+::::::::::
+:::::::::::
 
 Use this matrix to view the ROCm compatibility and system requirements across successive major and minor releases.
 
@@ -45,6 +90,7 @@ You can also refer to the [[past versions of ROCm compatibility matrix]{.std .st
 
 GPUs listed in the following table support compute workloads (no display information or graphics). If you're using ROCm with AMD Radeon GPUs or Ryzen APUs for graphics workloads, see the [[Use ROCm on Radeon and Ryzen]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/index.html "(in Use ROCm™ on Radeon™ and Ryzen™ Documentation)"){.reference .external} to verify compatibility and system requirements.
 
+:::: {.format-big-table .docutils .container}
 ::: pst-scrollable-table-container
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------------------------+----------------------------+
 | ROCm Version                                                                                                                                                                                                         | 7.2.2/7.2.1                      | 7.2.0                            | 6.4.0                      |
@@ -304,6 +350,8 @@ GPUs listed in the following table support compute workloads (no display informa
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------------------------+----------------------------+
 | [[ROCr Runtime]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/ROCR-Runtime/en/latest/index.html "(in ROCR Documentation v1.18.0)"){.reference .external}                                                  | 1.18.0                           | 1.18.0                           | 1.15.0                     |
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------------------------+----------------------------+
+:::
+::::
 
 Footnotes
 
@@ -335,17 +383,24 @@ As of ROCm 6.4.0, forward and backward compatibility between the AMD GPU Driver 
 
 Starting from ROCm 6.3.0, the ROCT Thunk Interface is included as part of the ROCr runtime package.
 
+:::: {#operating-systems-kernel-and-glibc-versions .section}
+[]{#os-kernel-versions}
 
 ## Operating systems, kernel and Glibc versions[\#](#operating-systems-kernel-and-glibc-versions "Link to this heading"){.headerlink}
 
 For detailed information on operating system supported on ROCm 7.2.2/7.2.1 and associated Kernel and Glibc version, see the latest [Supported operating systems](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html#supported-distributions "(in ROCm installation on Linux v7.2.2)"){.reference .external}. For version specific information, see [ROCm 7.2.0](https://rocm.docs.amd.com/projects/install-on-linux/en/docs-7.2.0/reference/system-requirements.html#supported-operating-systems){.reference .external}, and [ROCm 6.4.0](https://rocm.docs.amd.com/projects/install-on-linux/en/docs-6.4.0/reference/system-requirements.html#supported-operating-systems){.reference .external}.
 
+::: {.admonition .note}
 Note
 
 - See [Red Hat Enterprise Linux Release Dates](https://access.redhat.com/articles/3078){.reference .external} to learn about the specific kernel versions supported on Red Hat Enterprise Linux (RHEL).
 
 - See [List of SUSE Linux Enterprise Server kernel](https://www.suse.com/support/kb/doc/?id=000019587){.reference .external} to learn about the specific kernel version supported on SUSE Linux Enterprise Server (SLES).
+:::
+::::
 
+::::: {#past-versions-of-rocm-compatibility-matrix .section}
+[]{#past-rocm-compatibility-matrix}
 
 ## Past versions of ROCm compatibility matrix[\#](#past-versions-of-rocm-compatibility-matrix "Link to this heading"){.headerlink}
 
@@ -353,6 +408,7 @@ Expand for full historical view of:
 
 [ROCm 6.0 - Present]{.sd-summary-text}[![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jaGV2cm9uLXJpZ2h0IiBoZWlnaHQ9IjEuNWVtIiB2ZXJzaW9uPSIxLjEiIHZpZXdib3g9IjAgMCAyNCAyNCIgd2lkdGg9IjEuNWVtIj48cGF0aCBkPSJNOC43MiAxOC43OGEuNzUuNzUgMCAwIDEgMC0xLjA2TDE0LjQ0IDEyIDguNzIgNi4yOGEuNzUxLjc1MSAwIDAgMSAuMDE4LTEuMDQyLjc1MS43NTEgMCAwIDEgMS4wNDItLjAxOGw2LjI1IDYuMjVhLjc1Ljc1IDAgMCAxIDAgMS4wNmwtNi4yNSA2LjI1YS43NS43NSAwIDAgMS0xLjA2IDBaIiAvPjwvc3ZnPg==){.sd-octicon .sd-octicon-chevron-right}]{.sd-summary-state-marker .sd-summary-chevron-right}
 
+:::: {.sd-summary-content .sd-card-body .docutils}
 You can [download the entire .csv](../downloads/compatibility-matrix-historical-6.0.csv){.reference .external} for offline reference.
 
 ::: pst-scrollable-table-container
@@ -487,6 +543,7 @@ You can [download the entire .csv](../downloads/compatibility-matrix-historical-
   [[HIP]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/HIP/en/latest/index.html "(in HIP Documentation v7.2.53211)"){.reference .external}                                                                    7.2.53211                                                                                 7.2.26015                                                               7.1.52802                                                      7.1.25424                                             7.0.51831                                     7.0.51830                                   6.4.43484                    6.4.43484                    6.4.43483                    6.4.43482                    6.3.42134                    6.3.42134                    6.3.42133                    6.3.42131                       6.2.41134                           6.2.41134                           6.2.41134                           6.2.41133                           6.1.40093                                  6.1.40093                                  6.1.40092                                  6.1.40091                                  6.1.32831                           6.1.32830
   [OpenCL Runtime](https://github.com/ROCm/clr/tree/develop/opencl){.reference .external}                                                                                                                                2.0.0                                                                                     2.0.0                                                                   2.0.0                                                          2.0.0                                                 2.0.0                                         2.0.0                                       2.0.0                        2.0.0                        2.0.0                        2.0.0                        2.0.0                        2.0.0                        2.0.0                        2.0.0                           2.0.0                               2.0.0                               2.0.0                               2.0.0                               2.0.0                                      2.0.0                                      2.0.0                                      2.0.0                                      2.0.0                               2.0.0
   [[ROCr Runtime]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/ROCR-Runtime/en/latest/index.html "(in ROCR Documentation v1.18.0)"){.reference .external}                                                    1.18.0                                                                                    1.18.0                                                                  1.18.0                                                         1.18.0                                                1.18.0                                        1.18.0                                      1.15.0                       1.15.0                       1.15.0                       1.15.0                       1.14.0                       1.14.0                       1.14.0                       1.14.0                          1.14.0                              1.14.0                              1.14.0                              1.13.0                              1.13.0                                     1.13.0                                     1.13.0                                     1.13.0                                     1.12.0                              1.12.0
+:::
 
 Footnotes
 
@@ -521,7 +578,12 @@ As of ROCm 6.4.0, forward and backward compatibility between the AMD GPU Driver 
 [[\[]{.fn-bracket}15[\]]{.fn-bracket}]{.label} [([1](#id35){role="doc-backlink"},[2](#id36){role="doc-backlink"},[3](#id37){role="doc-backlink"},[4](#id38){role="doc-backlink"},[5](#id39){role="doc-backlink"},[6](#id40){role="doc-backlink"},[7](#id41){role="doc-backlink"},[8](#id42){role="doc-backlink"},[9](#id43){role="doc-backlink"},[10](#id44){role="doc-backlink"},[11](#id45){role="doc-backlink"},[12](#id46){role="doc-backlink"},[13](#id47){role="doc-backlink"},[14](#id48){role="doc-backlink"})]{.backrefs}
 
 Starting from ROCm 6.3.0, the ROCT Thunk Interface is included as part of the ROCr runtime package.
+::::
+:::::
 
+::: {.toctree-wrapper .compound}
+:::
+::::::::::::::::::::
 
 ::::: prev-next-area
 [](../about/release-notes.html "previous page"){.left-prev}
@@ -530,6 +592,7 @@ Starting from ROCm 6.3.0, the ROCT Thunk Interface is included as part of the RO
 previous
 
 ROCm 7.2.2 release notes
+:::
 
 [](../how-to/deep-learning-rocm.html "next page"){.right-next}
 
@@ -537,12 +600,24 @@ ROCm 7.2.2 release notes
 next
 
 Deep learning frameworks for ROCm
+:::
+:::::
+:::::::::::::::::::::::::::::::::::::
 
+:::::: {.bd-sidebar-secondary .bd-toc}
+::::: {.sidebar-secondary-items .sidebar-secondary__inner}
 :::: sidebar-secondary-item
+::: {.page-toc .tocsection .onthispage}
 Contents
+:::
 
 - [Operating systems, kernel and Glibc versions](#operating-systems-kernel-and-glibc-versions){.reference .internal .nav-link}
 - [Past versions of ROCm compatibility matrix](#past-versions-of-rocm-compatibility-matrix){.reference .internal .nav-link}
+::::
+:::::
+::::::
+::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::
 
 [^1]:
 

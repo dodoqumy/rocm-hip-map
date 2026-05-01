@@ -6,25 +6,46 @@ source_org: "amd"
 original_lang: "en"
 credibility: 5
 lifecycle: "latest"
-synced_date: 2026-04-28
+synced_date: 2026-05-01
 ---
 
+::::::::::::::::::::::::::::::::::::::::::::::::: {#main-content .bd-main role="main"}
+::: sbt-scroll-pixel-helper
+:::
+
+::::::::::::::::::::::::::::::::::::::::::::::: bd-content
+:::::::::::::::::::::::::::::::::::::::::: bd-article-container
+:::::::::: {.bd-header-article .d-print-none}
+::::::::: {.header-article-items .header-article__inner}
 ::::: header-article-items__start
 ::: header-article-item
 []{.fa-solid .fa-angle-right}
+:::
 
 ::: header-article-item
 - [](../index.html){.nav-link aria-label="Home"}
 - Deep\...
+:::
+:::::
 
 ::::: header-article-items__end
 :::: header-article-item
 ::: article-header-buttons
 []{.fa-solid .fa-list}
+:::
+::::
+:::::
+:::::::::
+::::::::::
 
+:::::: {#jb-print-docs-body .onlyprint}
 # Deep learning: Inception V3 with PyTorch
 
+::::: {#print-main-content}
+:::: {#jb-print-toc}
+::: {}
 ## Contents
+:::
 
 - [Deep learning training](#deep-learning-training){.reference .internal .nav-link}
 - [Training phases](#training-phases){.reference .internal .nav-link}
@@ -35,17 +56,42 @@ synced_date: 2026-04-28
   - [Custom model with CIFAR-10 on PyTorch](#custom-model-with-cifar-10-on-pytorch){.reference .internal .nav-link}
   - [Case study: TensorFlow with Fashion-MNIST](#case-study-tensorflow-with-fashion-mnist){.reference .internal .nav-link}
   - [Case study: TensorFlow with text classification](#case-study-tensorflow-with-text-classification){.reference .internal .nav-link}
+::::
+:::::
+::::::
 
+::: {#searchbox}
+:::
 
+::::::::::::::::::::::::: {#deep-learning-inception-v3-with-pytorch .section .tex2jax_ignore .mathjax_ignore}
 # Deep learning: Inception V3 with PyTorch[\#](#deep-learning-inception-v3-with-pytorch "Link to this heading"){.headerlink}
 
+::::::::::: {#rocm-docs-core-article-info .sd-container-fluid .sd-sphinx-override .sd-p-0 .sd-mt-2 .sd-mb-4 .sd-p-2 .sd-rounded-1 .docutils}
+:::::::::: {.sd-row .sd-row-cols-2 .sd-gx-2 .sd-gy-1 .docutils}
+::::::::: {.sd-col .sd-d-flex-row .sd-align-minor-center .docutils}
+:::::::: {.sd-container-fluid .sd-sphinx-override .docutils}
+::::::: {.sd-row .sd-row-cols-2 .sd-row-cols-xs-2 .sd-row-cols-sm-3 .sd-row-cols-md-3 .sd-row-cols-lg-3 .sd-gx-3 .sd-gy-1 .docutils}
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==){.sd-octicon .sd-octicon-calendar} ]{.sd-pr-2 .article-info-date-svg} 2026-01-23
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=){.sd-octicon .sd-octicon-clock} ]{.sd-pr-2 .article-info-read-time-svg} 31 min read time
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils style="color:gray;"}
 Applies to Linux and Windows
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+:::
+:::::::
+::::::::
+:::::::::
+::::::::::
+:::::::::::
 
+::: {#deep-learning-training .section}
 ## Deep learning training[\#](#deep-learning-training "Link to this heading"){.headerlink}
 
 Deep-learning models are designed to capture the complexity of the problem and the underlying data. These models are "deep," comprising multiple component layers. Training is finding the best parameters for each model layer to achieve a well-defined objective.
@@ -53,7 +99,9 @@ Deep-learning models are designed to capture the complexity of the problem and t
 The training data consists of input features in supervised learning, similar to what the learned model is expected to see during the evaluation or inference phase. The target output is also included, which serves to teach the model. A loss metric is defined as part of training that evaluates the model's performance during the training process.
 
 Training also includes the choice of an optimization algorithm that reduces the loss by adjusting the model's parameters. Training is an iterative process where training data is fed in, usually split into different batches, with the entirety of the training data passed during one training epoch. Training usually is run for multiple epochs.
+:::
 
+::::: {#training-phases .section}
 ## Training phases[\#](#training-phases "Link to this heading"){.headerlink}
 
 Training occurs in multiple phases for every batch of training data. the following table provides an explanation of the types of training phases.
@@ -66,6 +114,8 @@ Training occurs in multiple phases for every batch of training data. the followi
   Backward Pass       The loss is propagated backward, and the model's error gradients are computed and stored for each trainable parameter.
   Optimization Pass   The optimization algorithm updates the model parameters using the stored error gradients.
 
+  : [Types of Training Phases]{.caption-text}[\#](#id1 "Link to this table"){.headerlink} {#id1 .table}
+:::
 
 Training is different from inference, particularly from the hardware perspective. The following table shows the contrast between training and inference.
 
@@ -77,19 +127,25 @@ Training is different from inference, particularly from the hardware perspective
   The memory requirements for training are higher than inference due to storing intermediate data, such as activations and error gradients.                                                  The memory requirements are lower for inference than training.
   Data for training is available on the disk before the training process and is generally significant. The training performance is measured by how fast the data batches can be processed.   Inference data usually arrive stochastically, which may be batched to improve performance. Inference performance is generally measured in throughput speed to process the batch of data and the delay in responding to the input (latency).
 
+  : [Training vs. Inference]{.caption-text}[\#](#training-inference "Link to this table"){.headerlink} {#training-inference .table}
+:::
 
 Different quantization data types are typically chosen between training (FP32, BF16) and inference (FP16, INT8). The computation hardware has different specializations from other data types, leading to improvement in performance if a faster datatype can be selected for the corresponding task.
+:::::
 
+::::::::::: {#case-studies .section}
 ## Case studies[\#](#case-studies "Link to this heading"){.headerlink}
 
 The following sections contain case studies for the Inception V3 model.
 
+::::::: {#inception-v3-with-pytorch .section}
 ### Inception V3 with PyTorch[\#](#inception-v3-with-pytorch "Link to this heading"){.headerlink}
 
 Convolution Neural Networks are forms of artificial neural networks commonly used for image processing. One of the core layers of such a network is the convolutional layer, which convolves the input with a weight tensor and passes the result to the next layer. Inception V3 is an architectural development over the ImageNet competition-winning entry, AlexNet, using more profound and broader networks while attempting to meet computational and memory budgets.
 
 The implementation uses PyTorch as a framework. This case study utilizes [TorchVision](https://pytorch.org/vision/stable/index.html){.reference .external}, a repository of popular datasets and model architectures, for obtaining the model. TorchVision also provides pre-trained weights as a starting point to develop new models or fine-tune the model for a new task.
 
+::: {#evaluating-a-pre-trained-model .section}
 #### Evaluating a pre-trained model[\#](#evaluating-a-pre-trained-model "Link to this heading"){.headerlink}
 
 The Inception V3 model introduces a simple image classification task with the pre-trained model. This does not involve training but utilizes an already pre-trained model from TorchVision.
@@ -100,38 +156,54 @@ Follow these steps:
 
 1.  Run the PyTorch ROCm-based Docker image or refer to the section [[Installing PyTorch]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html "(in ROCm installation on Linux v7.2.2)"){.reference .external} for setting up a PyTorch environment on ROCm.
 
+    :::: {.highlight-dockerfile .notranslate}
     ::: highlight
         docker run -it -v $HOME:/data --cap-add=SYS_PTRACE --security-opt seccomp=unconfined --device=/dev/kfd --device=/dev/dri --group-add video --ipc=host --shm-size 8G rocm/pytorch:latest
+    :::
+    ::::
 
 2.  Run the Python shell and import packages and libraries for model creation.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         import torch
         import torchvision
+    :::
+    ::::
 
 3.  Set the model in evaluation mode. Evaluation mode directs PyTorch not to store intermediate data, which would have been used in training.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         model = torch.hub.load('pytorch/vision:v0.10.0', 'inception_v3', pretrained=True)
         model.eval()
+    :::
+    ::::
 
 4.  Download a sample image for inference.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         import urllib
         url, filename = ("https://github.com/pytorch/hub/raw/master/images/dog.jpg", "dog.jpg")
         try: urllib.URLopener().retrieve(url, filename)
         except: urllib.request.urlretrieve(url, filename)
+    :::
+    ::::
 
 5.  Import torchvision and PILImage support libraries.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         from PIL import Image
         from torchvision import transforms
         input_image = Image.open(filename)
+    :::
+    ::::
 
 6.  Apply preprocessing and normalization.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         preprocess = transforms.Compose([
             transforms.Resize(299),
@@ -139,39 +211,55 @@ Follow these steps:
             transforms.ToTensor(),
             transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
         ])
+    :::
+    ::::
 
 7.  Use input tensors and unsqueeze them later.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         input_tensor = preprocess(input_image)
         input_batch = input_tensor.unsqueeze(0)
         if torch.cuda.is_available():
             input_batch = input_batch.to('cuda')
             model.to('cuda')
+    :::
+    ::::
 
 8.  Find out probabilities.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         with torch.no_grad():
             output = model(input_batch)
         print(output[0])
         probabilities = torch.nn.functional.softmax(output[0], dim=0)
         print(probabilities)
+    :::
+    ::::
 
 9.  To understand the probabilities, download and examine the ImageNet labels.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         wget https://raw.githubusercontent.com/pytorch/hub/master/imagenet_classes.txt
+    :::
+    ::::
 
 10. Read the categories and show the top categories for the image.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         with open("imagenet_classes.txt", "r") as f:
             categories = [s.strip() for s in f.readlines()]
         top5_prob, top5_catid = torch.topk(probabilities, 5)
         for i in range(top5_prob.size(0)):
             print(categories[top5_catid[i]], top5_prob[i].item())
+    :::
+    ::::
+:::
 
+::::: {#training-inception-v3 .section}
 #### Training Inception V3[\#](#training-inception-v3 "Link to this heading"){.headerlink}
 
 The previous section focused on downloading and using the Inception V3 model for a simple image classification task. This section walks through training the model on a new dataset.
@@ -180,19 +268,26 @@ Follow these steps:
 
 1.  Run the PyTorch ROCm Docker image or refer to the section [[Installing PyTorch]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html "(in ROCm installation on Linux v7.2.2)"){.reference .external} for setting up a PyTorch environment on ROCm.
 
+    :::: {.highlight-dockerfile .notranslate}
     ::: highlight
         docker pull rocm/pytorch:latest
         docker run -it --cap-add=SYS_PTRACE --security-opt seccomp=unconfined --device=/dev/kfd --device=/dev/dri --group-add video --ipc=host --shm-size 8G rocm/pytorch:latest
+    :::
+    ::::
 
 2.  Download an ImageNet database. For this example, the [`tiny-imagenet-200`{.docutils .literal .notranslate}]{.pre}, a smaller ImageNet variant with 200 image classes and a training dataset with 100,000 images, was downsized to 64x64 color images.
 
+    :::: {.highlight-bash .notranslate}
     ::: highlight
         wget http://cs231n.stanford.edu/tiny-imagenet-200.zip
+    :::
+    ::::
 
 3.  Process the database to set the validation directory to the format expected by PyTorch's [`DataLoader`{.docutils .literal .notranslate}]{.pre}.
 
 4.  Run the following script:
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         import io
         import glob
@@ -222,88 +317,131 @@ Follow these steps:
             move(path, dest)
 
         rmdir('./tiny-imagenet-200/val/images')
+    :::
+    ::::
 
 5.  Open a Python shell.
 
 6.  Import dependencies, including Torch, OS, and [TorchVision](https://github.com/pytorch/vision){.reference .external}.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         import torch
         import os
         import torchvision
         from torchvision import transforms
         from torchvision.transforms.functional import InterpolationMode
+    :::
+    ::::
 
 7.  Set parameters to guide the training process.
 
+    ::: {.admonition .note}
     Note
 
     The device is set to [`"cuda"`{.docutils .literal .notranslate}]{.pre}. In PyTorch, [`"cuda"`{.docutils .literal .notranslate}]{.pre} is a generic keyword to denote a GPU.
+    :::
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         device = "cuda"
+    :::
+    ::::
 
 8.  Set the data_path to the location of the training and validation data. In this case, the [`tiny-imagenet-200`{.docutils .literal .notranslate}]{.pre} is present as a subdirectory to the current directory.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         data_path = "tiny-imagenet-200"
+    :::
+    ::::
 
     The training image size is cropped for input into Inception V3.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         train_crop_size = 299
+    :::
+    ::::
 
 9.  To smooth the image, use bilinear interpolation, a resampling method that uses the distance weighted average of the four nearest pixel values to estimate a new pixel value.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         interpolation = "bilinear"
+    :::
+    ::::
 
     The next parameters control the size to which the validation image is cropped and resized.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         val_crop_size = 299
         val_resize_size = 342
+    :::
+    ::::
 
     The pre-trained Inception V3 model is chosen to be downloaded from torchvision.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         model_name = "inception_v3"
         pretrained = True
+    :::
+    ::::
 
     During each training step, a batch of images is processed to compute the loss gradient and perform the optimization. In the following setting, the size of the batch is determined.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         batch_size = 32
+    :::
+    ::::
 
     This refers to the number of CPU threads the data loader uses to perform efficient multi-process data loading.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         num_workers = 16
+    :::
+    ::::
 
     The [`torch.optim`{.docutils .literal .notranslate}]{.pre} package provides methods to adjust the learning rate as the training progresses. This example uses the [`StepLR`{.docutils .literal .notranslate}]{.pre} scheduler, which decays the learning rate by [`lr_gamma`{.docutils .literal .notranslate}]{.pre} at every [`lr_step_size`{.docutils .literal .notranslate}]{.pre} number of epochs.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         learning_rate = 0.1
         momentum = 0.9
         weight_decay = 1e-4
         lr_step_size = 30
         lr_gamma = 0.1
+    :::
+    ::::
 
+    ::: {.admonition .note}
     Note
 
     One training epoch is when the neural network passes an entire dataset forward and backward.
+    :::
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         epochs = 90
+    :::
+    ::::
 
     The train and validation directories are determined.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         train_dir = os.path.join(data_path, "train")
         val_dir = os.path.join(data_path, "val")
+    :::
+    ::::
 
 10. Set up the training and testing data loaders.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         interpolation = InterpolationMode(interpolation)
 
@@ -348,35 +486,52 @@ Follow these steps:
         data_loader_test = torch.utils.data.DataLoader(
             dataset_test, batch_size=batch_size, sampler=test_sampler, num_workers=num_workers, pin_memory=True
         )
+    :::
+    ::::
 
+    ::: {.admonition .note}
     Note
 
     Use torchvision to obtain the Inception V3 model. Use the pre-trained model weights to speed up training.
+    :::
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         print("Creating model")
         print("Num classes = ", len(dataset.classes))
         model = torchvision.models.__dict__[model_name](pretrained=pretrained)
+    :::
+    ::::
 
 11. Adapt Inception V3 for the current dataset. [`tiny-imagenet-200`{.docutils .literal .notranslate}]{.pre} contains only 200 classes, whereas Inception V3 is designed for 1,000-class output. The last layer of Inception V3 is replaced to match the output features required.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         model.fc = torch.nn.Linear(model.fc.in_features, len(dataset.classes))
         model.aux_logits = False
         model.AuxLogits = None
+    :::
+    ::::
 
 12. Move the model to the GPU device.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         model.to(device)
+    :::
+    ::::
 
 13. Set the loss criteria. For this example, Cross Entropy Loss is used.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         criterion = torch.nn.CrossEntropyLoss()
+    :::
+    ::::
 
 14. Set the optimizer to Stochastic Gradient Descent.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         optimizer = torch.optim.SGD(
             model.parameters(),
@@ -384,30 +539,44 @@ Follow these steps:
             momentum=momentum,
             weight_decay=weight_decay
         )
+    :::
+    ::::
 
 15. Set the learning rate scheduler.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=lr_step_size, gamma=lr_gamma)
+    :::
+    ::::
 
 16. Iterate over epochs. Each epoch is a complete pass through the training data.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         print("Start training")
         for epoch in range(epochs):
             model.train()
             epoch_loss = 0
             len_dataset = 0
+    :::
+    ::::
 
 17. Iterate over steps. The data is processed in batches, and each step passes through a full batch.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         for step, (image, target) in enumerate(data_loader):
+    :::
+    ::::
 
 18. Pass the image and target to the GPU device.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         image, target = image.to(device), target.to(device)
+    :::
+    ::::
 
     The following is the core training logic:
 
@@ -419,15 +588,19 @@ Follow these steps:
 
     d\. The optimizer updates the parameters based on the selected optimization algorithm.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
                 output = model(image)
                 loss = criterion(output, target)
                 optimizer.zero_grad()
                 loss.backward()
                 optimizer.step()
+    :::
+    ::::
 
     The epoch loss is updated, and the step loss prints.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
                 epoch_loss += output.shape[0] * loss.item()
                 len_dataset += output.shape[0];
@@ -435,14 +608,20 @@ Follow these steps:
                     print('Epoch: ', epoch, '| step : %d' % step, '| train loss : %0.4f' % loss.item() )
             epoch_loss = epoch_loss / len_dataset
             print('Epoch: ', epoch, '| train loss :  %0.4f' % epoch_loss )
+    :::
+    ::::
 
     The learning rate is updated at the end of each epoch.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         lr_scheduler.step()
+    :::
+    ::::
 
     After training for the epoch, the model evaluates against the validation dataset.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         model.eval()
             with torch.inference_mode():
@@ -456,17 +635,25 @@ Follow these steps:
                     running_loss += loss.item()
             running_loss = running_loss / len(data_loader_test)
             print('Epoch: ', epoch, '| test loss : %0.4f' % running_loss )
+    :::
+    ::::
 
 19. Save the model for use in inferencing tasks.
 
+:::: {.highlight-py .notranslate}
 ::: highlight
     # save model
     torch.save(model.state_dict(), "trained_inception_v3.pt")
+:::
+::::
 
 Plotting the train and test loss shows both metrics reducing over training epochs. This is demonstrated in the following image.
 
 ![Inception V3 train and loss graph](../_images/inception-v3.png)
+:::::
+:::::::
 
+::: {#custom-model-with-cifar-10-on-pytorch .section}
 ### Custom model with CIFAR-10 on PyTorch[\#](#custom-model-with-cifar-10-on-pytorch "Link to this heading"){.headerlink}
 
 The Canadian Institute for Advanced Research (CIFAR)-10 dataset is a subset of the Tiny Images dataset (which contains 80 million images of 32x32 collected from the Internet) and consists of 60,000 32x32 color images. The images are labeled with one of 10 mutually exclusive classes: airplane, motor car, bird, cat, deer, dog, frog, cruise ship, stallion, and truck (but not pickup truck). There are 6,000 images per class, with 5,000 training and 1,000 testing images per class. Let us prepare a custom model for classifying these images using the PyTorch framework and go step-by-step as illustrated below.
@@ -475,46 +662,65 @@ Follow these steps:
 
 1.  Import dependencies, including Torch, OS, and [TorchVision](https://github.com/pytorch/vision){.reference .external}.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         import torch
         import torchvision
         import torchvision.transforms as transforms
         import matplotlib.pyplot as plot
         import numpy as np
+    :::
+    ::::
 
 2.  The output of torchvision datasets is [`PILImage`{.docutils .literal .notranslate}]{.pre} images of range \[0, 1\]. Transform them to Tensors of normalized range \[-1, 1\].
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         transform = transforms.Compose(
                 [transforms.ToTensor(),
                     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
+    :::
+    ::::
 
     During each training step, a batch of images is processed to compute the loss gradient and perform the optimization. In the following setting, the size of the batch is determined.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         batch_size = 4
+    :::
+    ::::
 
 3.  Download the dataset train and test datasets as follows. Specify the batch size, shuffle the dataset once, and specify the number of workers to the number of CPU threads used by the data loader to perform efficient multi-process data loading.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         train_set = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform)
         train_loader = torch.utils.data.DataLoader(train_set, batch_size=batch_size, shuffle=True, num_workers=2)
+    :::
+    ::::
 
 4.  Follow the same procedure for the testing set.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         test_set = TorchVision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform)
         test_loader = torch.utils.data.DataLoader(test_set, batch_size=batch_size, shuffle=False, num_workers=2)
         print ("teast set and test loader")
+    :::
+    ::::
 
 5.  Specify the defined classes of images belonging to this dataset.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         classes = ('Aeroplane', 'motorcar', 'bird', 'cat', 'deer', 'puppy', 'frog', 'stallion', 'cruise', 'truck')
         print("defined classes")
+    :::
+    ::::
 
 6.  Denormalize the images and then iterate over them.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         global image_number
         image_number = 0
@@ -532,15 +738,21 @@ Follow these steps:
         show_image(torchvision.utils.make_grid(images))
         print(' '.join('%5s' % classes[labels[j]] for j in range(batch_size)))
         print("image created and saved ")
+    :::
+    ::::
 
 7.  Import the [`torch.nn`{.docutils .literal .notranslate}]{.pre} for constructing neural networks and [`torch.nn.functional`{.docutils .literal .notranslate}]{.pre} to use the convolution functions.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         import torch.nn as nn
         import torch.nn.functional as F
+    :::
+    ::::
 
 8.  Define the CNN (Convolution Neural Networks) and relevant activation functions.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         class Net(nn.Module):
             def __init__(self):
@@ -563,20 +775,29 @@ Follow these steps:
                 return x
         net = Net()
         print("created Net() ")
+    :::
+    ::::
 
 9.  Set the optimizer to Stochastic Gradient Descent.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         import torch.optim as optim
+    :::
+    ::::
 
 10. Set the loss criteria. For this example, Cross Entropy Loss is used.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         criterion = nn.CrossEntropyLoss()
         optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
+    :::
+    ::::
 
 11. Iterate over epochs. Each epoch is a complete pass through the training data.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         for epoch in range(2):  # loop over the dataset multiple times
 
@@ -600,7 +821,10 @@ Follow these steps:
                     print('[%d, %5d] loss: %.3f' % (epoch + 1, i + 1, running_loss / 2000))
                     running_loss = 0.0
         print('Finished Training')
+    :::
+    ::::
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         PATH = './cifar_net.pth'
         torch.save(net.state_dict(), PATH)
@@ -613,9 +837,12 @@ Follow these steps:
         print('Predicted: ', ' '.join('%5s' % classes[predicted[j]] for j in range(4)))
         correct = 0
         total = 0
+    :::
+    ::::
 
     As this is not training, calculating the gradients for outputs is not required.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         # calculate outputs by running images through the network
         with torch.no_grad():
@@ -631,7 +858,10 @@ Follow these steps:
         # prepare to count predictions for each class
         correct_pred = {classname: 0 for classname in classes}
         total_pred = {classname: 0 for classname in classes}
+    :::
+    ::::
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         # again no gradients needed
         with torch.no_grad():
@@ -648,7 +878,11 @@ Follow these steps:
         for classname, correct_count in correct_pred.items():
             accuracy = 100 * float(correct_count) / total_pred[classname]
             print("Accuracy for class {:5s} is: {:.1f} %".format(classname,accuracy))
+    :::
+    ::::
+:::
 
+::: {#case-study-tensorflow-with-fashion-mnist .section}
 ### Case study: TensorFlow with Fashion-MNIST[\#](#case-study-tensorflow-with-fashion-mnist "Link to this heading"){.headerlink}
 
 Fashion-MNIST is a dataset that contains 70,000 grayscale images in 10 categories.
@@ -665,66 +899,94 @@ To understand the code step by step, follow these steps:
 
 1.  Import libraries like TensorFlow, NumPy, and Matplotlib to train the neural network and calculate and plot graphs.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         import tensorflow as tf
         import numpy as np
         import matplotlib.pyplot as plt
+    :::
+    ::::
 
 2.  To verify that TensorFlow is installed, print the version of TensorFlow by using the below print statement:
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         print(tf._version__) r
+    :::
+    ::::
 
 3.  Load the dataset from the available internal libraries to analyze and train a neural network upon the Fashion-MNIST dataset. Loading the dataset returns four NumPy arrays. The model uses the training set arrays, train_images and train_labels, to learn.
 
 4.  The model is tested against the test set, test_images, and test_labels arrays.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         fashion_mnist = tf.keras.datasets.fashion_mnist
         (train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
+    :::
+    ::::
 
     Since you have 10 types of images in the dataset, assign labels from zero to nine. Each image is assigned one label. The images are 28x28 NumPy arrays, with pixel values ranging from zero to 255.
 
 5.  Each image is mapped to a single label. Since the class names are not included with the dataset, store them, and later use them when plotting the images:
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat','Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
+    :::
+    ::::
 
 6.  Use this code to explore the dataset by knowing its dimensions:
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         train_images.shape
+    :::
+    ::::
 
 7.  Use this code to print the size of this training set:
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         print(len(train_labels))
+    :::
+    ::::
 
 8.  Use this code to print the labels of this training set:
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         print(train_labels)
+    :::
+    ::::
 
 9.  Preprocess the data before training the network, and you can start inspecting the first image, as its pixels will fall in the range of zero to 255.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         plt.figure()
         plt.imshow(train_images[0])
         plt.colorbar()
         plt.grid(False)
         plt.show()
+    :::
+    ::::
 
     ![ ](../_images/mnist-1.png)
 
 10. From the above picture, you can see that values are from zero to 255. Before training this on the neural network, you must bring them in the range of zero to one. Hence, divide the values by 255.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         train_images = train_images / 255.0
 
         test_images = test_images / 255.0
+    :::
+    ::::
 
 11. To ensure the data is in the correct format and ready to build and train the network, display the first 25 images from the training set and the class name below each image.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         plt.figure(figsize=(10,10))
         for i in range(25):
@@ -735,17 +997,22 @@ To understand the code step by step, follow these steps:
             plt.imshow(train_images[i], cmap=plt.cm.binary)
             plt.xlabel(class_names[train_labels[i]])
         plt.show()
+    :::
+    ::::
 
     ![ ](../_images/mnist-2.png)
 
     The basic building block of a neural network is the layer. Layers extract representations from the data fed into them. Deep learning consists of chaining together simple layers. Most layers, such as [`tf.keras.layers.Dense`{.docutils .literal .notranslate}]{.pre}, have parameters that are learned during training.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         model = tf.keras.Sequential([
             tf.keras.layers.Flatten(input_shape=(28, 28)),
             tf.keras.layers.Dense(128, activation='relu'),
             tf.keras.layers.Dense(10)
         ])
+    :::
+    ::::
 
     - The first layer in this network [`tf.keras.layers.Flatten`{.docutils .literal .notranslate}]{.pre} transforms the format of the images from a two-dimensional array (of 28 x 28 pixels) to a one-dimensional array (of 28 \* 28 = 784 pixels). Think of this layer as unstacking rows of pixels in the image and lining them up. This layer has no parameters to learn; it only reformats the data.
 
@@ -753,10 +1020,13 @@ To understand the code step by step, follow these steps:
 
 12. You must add the Loss function, Metrics, and Optimizer at the time of model compilation.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         model.compile(optimizer='adam',
                     loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
                     metrics=['accuracy'])
+    :::
+    ::::
 
     - Loss function ---This measures how accurate the model is during training when you are looking to minimize this function to "steer" the model in the right direction.
 
@@ -776,36 +1046,52 @@ To understand the code step by step, follow these steps:
 
     4.  To start training, call the model.fit method because it "fits" the model to the training data.
 
+        :::: {.highlight-py .notranslate}
         ::: highlight
             model.fit(train_images, train_labels, epochs=10)
+        :::
+        ::::
 
     5.  Compare how the model will perform on the test dataset.
 
+        :::: {.highlight-py .notranslate}
         ::: highlight
             test_loss, test_acc = model.evaluate(test_images,  test_labels, verbose=2)
 
             print('\nTest accuracy:', test_acc)
+        :::
+        ::::
 
     6.  With the model trained, you can use it to make predictions about some images: the model's linear outputs and logits. Attach a softmax layer to convert the logits to probabilities, making it easier to interpret.
 
+        :::: {.highlight-py .notranslate}
         ::: highlight
             probability_model = tf.keras.Sequential([model,
                                                     tf.keras.layers.Softmax()])
 
             predictions = probability_model.predict(test_images)
+        :::
+        ::::
 
     7.  The model has predicted the label for each image in the testing set. Look at the first prediction:
 
+        :::: {.highlight-py .notranslate}
         ::: highlight
             predictions[0]
+        :::
+        ::::
 
         A prediction is an array of 10 numbers. They represent the model's "confidence" that the image corresponds to each of the 10 different articles of clothing. You can see which label has the highest confidence value:
 
+        :::: {.highlight-py .notranslate}
         ::: highlight
             np.argmax(predictions[0])
+        :::
+        ::::
 
     8.  Plot a graph to look at the complete set of 10 class predictions.
 
+        :::: {.highlight-py .notranslate}
         ::: highlight
             def plot_image(i, predictions_array, true_label, img):
             true_label, img = true_label[i], img[i]
@@ -837,9 +1123,12 @@ To understand the code step by step, follow these steps:
 
             thisplot[predicted_label].set_color('red')
             thisplot[true_label].set_color('blue')
+        :::
+        ::::
 
     9.  With the model trained, you can use it to make predictions about some images. Review the 0^th^ image predictions and the prediction array. Correct prediction labels are blue, and incorrect prediction labels are red. The number gives the percentage (out of 100) for the predicted label.
 
+        :::: {.highlight-py .notranslate}
         ::: highlight
             i = 0
             plt.figure(figsize=(6,3))
@@ -848,9 +1137,12 @@ To understand the code step by step, follow these steps:
             plt.subplot(1,2,2)
             plot_value_array(i, predictions[i],  test_labels)
             plt.show()
+        :::
+        ::::
 
         ![ ](../_images/mnist-3.png)
 
+        :::: {.highlight-py .notranslate}
         ::: highlight
             i = 12
             plt.figure(figsize=(6,3))
@@ -859,26 +1151,35 @@ To understand the code step by step, follow these steps:
             plt.subplot(1,2,2)
             plot_value_array(i, predictions[i],  test_labels)
             plt.show()
+        :::
+        ::::
 
         ![ ](../_images/mnist-4.png)
 
     10. Use the trained model to predict a single image.
 
+        :::: {.highlight-py .notranslate}
         ::: highlight
             # Grab an image from the test dataset.
             img = test_images[1]
             print(img.shape)
+        :::
+        ::::
 
     11. [`tf.keras`{.docutils .literal .notranslate}]{.pre} models are optimized to make predictions on a batch, or collection, of examples at once. Accordingly, even though you are using a single image, you must add it to a list.
 
+        :::: {.highlight-py .notranslate}
         ::: highlight
             # Add the image to a batch where it's the only member.
             img = (np.expand_dims(img,0))
 
             print(img.shape)
+        :::
+        ::::
 
     12. Predict the correct label for this image.
 
+        :::: {.highlight-py .notranslate}
         ::: highlight
             predictions_single = probability_model.predict(img)
 
@@ -887,14 +1188,21 @@ To understand the code step by step, follow these steps:
             plot_value_array(1, predictions_single[0], test_labels)
             _ = plt.xticks(range(10), class_names, rotation=45)
             plt.show()
+        :::
+        ::::
 
         ![ ](../_images/mnist-5.png)
 
     13. [`tf.keras.Model.predict`{.docutils .literal .notranslate}]{.pre} returns a list of lists---one for each image in the batch of data. Grab the predictions for our (only) image in the batch.
 
+        :::: {.highlight-py .notranslate}
         ::: highlight
             np.argmax(predictions_single[0])
+        :::
+        ::::
+:::
 
+::: {#case-study-tensorflow-with-text-classification .section}
 ### Case study: TensorFlow with text classification[\#](#case-study-tensorflow-with-text-classification "Link to this heading"){.headerlink}
 
 This procedure demonstrates text classification starting from plain text files stored on disk. You will train a binary classifier to perform sentiment analysis on an IMDB dataset. At the end of the notebook, there is an exercise for you to try in which you will train a multi-class classifier to predict the tag for a programming question on Stack Overflow.
@@ -903,6 +1211,7 @@ Follow these steps:
 
 1.  Import the necessary libraries.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         import matplotlib.pyplot as plt
         import os
@@ -913,33 +1222,48 @@ Follow these steps:
 
         from tensorflow.keras import layers
         from tensorflow.keras import losses
+    :::
+    ::::
 
 2.  Get the data for the text classification, and extract the database from the given link of IMDB.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         url = "https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz"
 
         dataset = tf.keras.utils.get_file("aclImdb_v1", url,
                                             untar=True, cache_dir='.',
                                             cache_subdir='')
+    :::
+    ::::
 
+    :::: {.highlight-bash .notranslate}
     ::: highlight
         Downloading data from https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz
         84131840/84125825 [==============================] – 1s 0us/step
         84149932/84125825 [==============================] – 1s 0us/step
+    :::
+    ::::
 
 3.  Fetch the data from the directory.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         dataset_dir = os.path.join(os.path.dirname(dataset), 'aclImdb')
         print(os.listdir(dataset_dir))
+    :::
+    ::::
 
 4.  Load the data for training purposes.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         train_dir = os.path.join(dataset_dir, 'train')
         os.listdir(train_dir)
+    :::
+    ::::
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         ['labeledBow.feat',
         'urls_pos.txt',
@@ -949,43 +1273,61 @@ Follow these steps:
         'unsupBow.feat',
         'urls_neg.txt',
         'neg']
+    :::
+    ::::
 
 5.  The directories contain many text files, each of which is a single movie review. To look at one of them, use the following:
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         sample_file = os.path.join(train_dir, 'pos/1181_9.txt')
         with open(sample_file) as f:
         print(f.read())
+    :::
+    ::::
 
 6.  As the IMDB dataset contains additional folders, remove them before using this utility.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         remove_dir = os.path.join(train_dir, 'unsup')
         shutil.rmtree(remove_dir)
         batch_size = 32
         seed = 42
+    :::
+    ::::
 
 7.  The IMDB dataset has already been divided into train and test but lacks a validation set. Create a validation set using an 80:20 split of the training data by using the validation_split argument below:
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         raw_train_ds=tf.keras.utils.text_dataset_from_directory('aclImdb/train',batch_size=batch_size, validation_split=0.2,subset='training', seed=seed)
+    :::
+    ::::
 
 8.  As you will see in a moment, you can train a model by passing a dataset directly to [`model.fit`{.docutils .literal .notranslate}]{.pre}. If you are new to [`tf.data`{.docutils .literal .notranslate}]{.pre}, you can also iterate over the dataset and print a few examples as follows:
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         for text_batch, label_batch in raw_train_ds.take(1):
         for i in range(3):
             print("Review", text_batch.numpy()[i])
             print("Label", label_batch.numpy()[i])
+    :::
+    ::::
 
 9.  The labels are zero or one. To see which of these correspond to positive and negative movie reviews, check the class_names property on the dataset.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         print("Label 0 corresponds to", raw_train_ds.class_names[0])
         print("Label 1 corresponds to", raw_train_ds.class_names[1])
+    :::
+    ::::
 
 10. Next, create validation and test the dataset. Use the remaining 5,000 reviews from the training set for validation into two classes of 2,500 reviews each.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         raw_val_ds = tf.keras.utils.text_dataset_from_directory('aclImdb/train',
         batch_size=batch_size,validation_split=0.2,subset='validation', seed=seed)
@@ -994,19 +1336,25 @@ Follow these steps:
         tf.keras.utils.text_dataset_from_directory(
             'aclImdb/test',
             batch_size=batch_size)
+    :::
+    ::::
 
 To prepare the data for training, follow these steps:
 
 1.  Standardize, tokenize, and vectorize the data using the helpful [`tf.keras.layers.TextVectorization`{.docutils .literal .notranslate}]{.pre} layer.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         def custom_standardization(input_data):
         lowercase = tf.strings.lower(input_data)
         stripped_html = tf.strings.regex_replace(lowercase, '<br/>', ' ')
         return tf.strings.regex_replace(stripped_html,                                 '[%s]' % re.escape(string.punctuation),'')
+    :::
+    ::::
 
 2.  Create a [`TextVectorization`{.docutils .literal .notranslate}]{.pre} layer. Use this layer to standardize, tokenize, and vectorize our data. Set the output_mode to int to create unique integer indices for each token. Note that we are using the default split function and the custom standardization function you defined above. You will also define some constants for the model, like an explicit maximum sequence_length, which will cause the layer to pad or truncate sequences to exactly sequence_length values.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         max_features = 10000
         sequence_length = 250
@@ -1015,16 +1363,22 @@ To prepare the data for training, follow these steps:
             max_tokens=max_features,
             output_mode='int',
             output_sequence_length=sequence_length)
+    :::
+    ::::
 
 3.  Call adapt to fit the state of the preprocessing layer to the dataset. This causes the model to build an index of strings to integers.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         # Make a text-only dataset (without labels), then call adapt
         train_text = raw_train_ds.map(lambda x, y: x)
         vectorize_layer.adapt(train_text)
+    :::
+    ::::
 
 4.  Create a function to see the result of using this layer to preprocess some data.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         def vectorize_text(text, label):
         text = tf.expand_dims(text, -1)
@@ -1035,76 +1389,105 @@ To prepare the data for training, follow these steps:
         print("Review", first_review)
         print("Label", raw_train_ds.class_names[first_label])
         print("Vectorized review", vectorize_text(first_review, first_label))
+    :::
+    ::::
 
     ![ ](../_images/TextClassification-3.png)
 
 5.  As you can see above, each token has been replaced by an integer. Look up the token (string) that each integer corresponds to by calling get_vocabulary() on the layer.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         print("1287 ---> ",vectorize_layer.get_vocabulary()[1287])
         print(" 313 ---> ",vectorize_layer.get_vocabulary()[313])
         print('Vocabulary size: {}'.format(len(vectorize_layer.get_vocabulary())))
+    :::
+    ::::
 
 6.  You are nearly ready to train your model. As a final preprocessing step, apply the [`TextVectorization`{.docutils .literal .notranslate}]{.pre} layer we created earlier to train, validate, and test the dataset.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         train_ds = raw_train_ds.map(vectorize_text)
         val_ds = raw_val_ds.map(vectorize_text)
         test_ds = raw_test_ds.map(vectorize_text)
+    :::
+    ::::
 
     The [`cache()`{.docutils .literal .notranslate}]{.pre} function keeps data in memory after it is loaded off disk. This ensures the dataset does not become a bottleneck while training your model. If your dataset is too large to fit into memory, you can also use this method to create a performant on-disk cache, which is more efficient to read than many small files.
 
     The [`prefetch()`{.docutils .literal .notranslate}]{.pre} function overlaps data preprocessing and model execution while training.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         AUTOTUNE = tf.data.AUTOTUNE
 
         train_ds = train_ds.cache().prefetch(buffer_size=AUTOTUNE)
         val_ds = val_ds.cache().prefetch(buffer_size=AUTOTUNE)
         test_ds = test_ds.cache().prefetch(buffer_size=AUTOTUNE)
+    :::
+    ::::
 
 7.  Create your neural network.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         embedding_dim = 16
         model = tf.keras.Sequential([layers.Embedding(max_features + 1, embedding_dim),layers.Dropout(0.2),layers.GlobalAveragePooling1D(),
         layers.Dropout(0.2),layers.Dense(1)])
         model.summary()
+    :::
+    ::::
 
     ![ ](../_images/TextClassification-4.png)
 
 8.  A model needs a loss function and an optimizer for training. Since this is a binary classification problem and the model outputs a probability (a single-unit layer with a sigmoid activation), use [[`losses.BinaryCrossentropy`{.docutils .literal .notranslate}]{.pre}](https://www.tensorflow.org/api_docs/python/tf/keras/losses/BinaryCrossentropy){.reference .external} loss function.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         model.compile(loss=losses.BinaryCrossentropy(from_logits=True),
         optimizer='adam',metrics=tf.metrics.BinaryAccuracy(threshold=0.0))
+    :::
+    ::::
 
 9.  Train the model by passing the dataset object to the fit method.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         epochs = 10
         history = model.fit(train_ds,validation_data=val_ds,epochs=epochs)
+    :::
+    ::::
 
     ![ ](../_images/TextClassification-5.png)
 
 10. See how the model performs. Two values are returned: loss (a number representing our error; lower values are better) and accuracy.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         loss, accuracy = model.evaluate(test_ds)
 
         print("Loss: ", loss)
         print("Accuracy: ", accuracy)
+    :::
+    ::::
 
+    ::: {.admonition .note}
     Note
 
     [`model.fit()`{.docutils .literal .notranslate}]{.pre} returns a History object that contains a dictionary with everything that happened during training.
+    :::
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         history_dict = history.history
         history_dict.keys()
+    :::
+    ::::
 
 11. Four entries are for each monitored metric during training and validation. Use these to plot the training and validation loss for comparison, as well as the training and validation accuracy:
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         acc = history_dict['binary_accuracy']
         val_acc = history_dict['val_binary_accuracy']
@@ -1123,6 +1506,8 @@ To prepare the data for training, follow these steps:
         plt.legend()
 
         plt.show()
+    :::
+    ::::
 
     The following images illustrate the training and validation loss and the training and validation accuracy.
 
@@ -1132,6 +1517,7 @@ To prepare the data for training, follow these steps:
 
 12. Export the model.
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         export_model = tf.keras.Sequential([
         vectorize_layer,
@@ -1146,9 +1532,12 @@ To prepare the data for training, follow these steps:
         # Test it with `raw_test_ds`, which yields raw strings
         loss, accuracy = export_model.evaluate(raw_test_ds)
         print(accuracy)
+    :::
+    ::::
 
 13. To get predictions for new examples, call model.predict().
 
+    :::: {.highlight-py .notranslate}
     ::: highlight
         examples = [
         "The movie was great!",
@@ -1157,6 +1546,11 @@ To prepare the data for training, follow these steps:
         ]
 
         export_model.predict(examples)
+    :::
+    ::::
+:::
+:::::::::::
+:::::::::::::::::::::::::
 
 ::::: prev-next-area
 [](cmake-packages.html "previous page"){.left-prev}
@@ -1165,6 +1559,7 @@ To prepare the data for training, follow these steps:
 previous
 
 Using CMake
+:::
 
 [](../reference/api-libraries.html "next page"){.right-next}
 
@@ -1172,9 +1567,16 @@ Using CMake
 next
 
 ROCm libraries
+:::
+:::::
+::::::::::::::::::::::::::::::::::::::::::
 
+:::::: {.bd-sidebar-secondary .bd-toc}
+::::: {.sidebar-secondary-items .sidebar-secondary__inner}
 :::: sidebar-secondary-item
+::: {.page-toc .tocsection .onthispage}
 Contents
+:::
 
 - [Deep learning training](#deep-learning-training){.reference .internal .nav-link}
 - [Training phases](#training-phases){.reference .internal .nav-link}
@@ -1185,3 +1587,8 @@ Contents
   - [Custom model with CIFAR-10 on PyTorch](#custom-model-with-cifar-10-on-pytorch){.reference .internal .nav-link}
   - [Case study: TensorFlow with Fashion-MNIST](#case-study-tensorflow-with-fashion-mnist){.reference .internal .nav-link}
   - [Case study: TensorFlow with text classification](#case-study-tensorflow-with-text-classification){.reference .internal .nav-link}
+::::
+:::::
+::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::
