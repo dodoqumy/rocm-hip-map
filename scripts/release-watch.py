@@ -1,20 +1,19 @@
 #!/usr/bin/env python3
-"""release-watch.py — 监控 ROCm/HIP/PyTorch 版本更新。
+"""release-watch.py — 监控 ROCm/HIP/PyTorch 版本更新 (v1.5)。
 
 监控目标：
   - ROCm 版本历史页 → 检测新版本
   - HIP GitHub releases
+  - ROCm 核心库 releases (MIOpen, RCCL, rocBLAS, etc.)
   - PyTorch ROCm 版本
-  - amdgpu 驱动版本
 
 检测到新版本时：
   1. 输出到 stdout
   2. 写入 data/versions.json
-  3. 如果在 GitHub Actions 中运行 → 创建 Issue
 
 用法：
   python3 scripts/release-watch.py            # 检查更新
-  python3 scripts/release-watch.py --notify    # 发现新版本时通知
+  python3 scripts/release-watch.py --verbose   # 详细输出
 """
 import argparse
 import json
@@ -28,6 +27,18 @@ from typing import Optional
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
 VERSIONS_JSON = DATA_DIR / "versions.json"
+
+# ── 扩展的版本源列表 ──────────────────────────────────────
+VERSION_REPOS = [
+    {"org": "ROCm", "repo": "ROCm", "product": "ROCm"},
+    {"org": "ROCm", "repo": "HIP", "product": "HIP"},
+    {"org": "ROCm", "repo": "MIOpen", "product": "MIOpen"},
+    {"org": "ROCm", "repo": "RCCL", "product": "RCCL"},
+    {"org": "ROCm", "repo": "rocBLAS", "product": "rocBLAS"},
+    {"org": "ROCm", "repo": "rocFFT", "product": "rocFFT"},
+    {"org": "ROCm", "repo": "rocSOLVER", "product": "rocSOLVER"},
+    {"org": "ROCm", "repo": "rocSparse", "product": "rocSparse"},
+]
 
 
 def fetch_url(url: str) -> Optional[str]:
@@ -80,6 +91,21 @@ def check_hip_releases() -> list:
     return results
 
 
+def check_github_releases(org: str, repo: str, product: str) -> list:
+    """检查任意 GitHub 仓库的 releases。"""
+    releases = gh_api(f"repos/{org}/{repo}/releases", per_page=10)
+    results = []
+    for rel in (releases or []):
+        tag = rel.get("tag_name", "")
+        results.append({
+            "product": product,
+            "version": tag.lstrip("rocm-").lstrip("v").lstrip(product.lower() + "-") if tag else "",
+            "release_date": rel.get("published_at", "")[:10],
+            "source": rel.get("html_url", ""),
+        })
+    return results
+
+
 def gh_api(path: str, per_page: int = 5) -> Optional[list]:
     """调用 GitHub API。"""
     url = f"https://api.github.com/{path}?per_page={per_page}"
@@ -105,7 +131,11 @@ def load_known_versions() -> dict:
     """加载已知版本。"""
     if VERSIONS_JSON.exists():
         with open(VERSIONS_JSON) as f:
-            return json.load(f)
+            data = json.load(f)
+            # Ensure products key exists
+            if "products" not in data:
+                data["products"] = {}
+            return data
     return {"products": {}, "last_check": None}
 
 
@@ -119,15 +149,15 @@ def save_versions(data: dict):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--notify", action="store_true", help="Create GitHub Issue for new versions")
+    parser.add_argument("--verbose", "-v", action="store_true", help="详细输出")
     args = parser.parse_args()
 
-    print("🔔 rocm-hip-map release-watch.py")
+    print("🔔 rocm-hip-map release-watch.py (v1.5)")
     known = load_known_versions()
 
     new_versions = []
 
-    # Check ROCm
+    # Check ROCm docs versions
     rocm_versions = check_rocm_versions()
     known_rocm = known.get("products", {}).get("ROCm", [])
     known_rocm_strs = {v for v in known_rocm}
@@ -137,21 +167,29 @@ def main():
         if ver not in known_rocm_strs:
             print(f"  🆕 ROCm {ver} ({v['release_date']})")
             new_versions.append(v)
+        elif args.verbose:
+            print(f"  ⏭ ROCm {ver}")
 
-    # Check HIP
-    hip_releases = check_hip_releases()
-    known_hip = known.get("products", {}).get("HIP", [])
-    known_hip_strs = {v for v in known_hip}
+    # Check all GitHub repos
+    for repo_info in VERSION_REPOS:
+        org, repo, product = repo_info["org"], repo_info["repo"], repo_info["product"]
+        releases = check_github_releases(org, repo, product)
+        known_prod = known.get("products", {}).get(product, [])
+        known_strs = {v for v in known_prod}
 
-    for v in hip_releases:
-        ver = v["version"]
-        if ver and ver not in known_hip_strs:
-            print(f"  🆕 HIP {ver} ({v['release_date']})")
-            new_versions.append(v)
+        for v in releases:
+            ver = v["version"]
+            if ver and ver not in known_strs:
+                print(f"  🆕 {product} {ver} ({v['release_date']})")
+                new_versions.append(v)
+            elif args.verbose and ver:
+                print(f"  ⏭ {product} {ver}")
 
-    # Update known versions
+        # Update known
+        known["products"][product] = [v["version"] for v in releases if v["version"]]
+
+    # Update ROCm docs versions separately
     known["products"]["ROCm"] = [v["version"] for v in rocm_versions]
-    known["products"]["HIP"] = [v["version"] for v in hip_releases]
     save_versions(known)
 
     if not new_versions:

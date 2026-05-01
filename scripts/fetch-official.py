@@ -13,11 +13,13 @@
   - content/raw/english/*.md     原始英文文章
   - content/raw/chinese/*.md    原始中文文章
   - data/articles.json          文章索引（增量更新）
+  - data/fetch-state.json      抓取状态（增量更新）
 
 用法：
   python3 scripts/fetch-official.py              # 全量同步
   python3 scripts/fetch-official.py --dry-run     # 预览
   python3 scripts/fetch-official.py --source rocm # 仅指定源
+  python3 scripts/fetch-official.py --auto-discover  # 从 sitemap 自动发现
 """
 import argparse
 import hashlib
@@ -29,8 +31,9 @@ import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Set
 from urllib.parse import urljoin, urlparse
+import xml.etree.ElementTree as ET
 
 # ── 项目根目录 ──────────────────────────────────────
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -38,6 +41,39 @@ CONTENT_RAW_EN = PROJECT_ROOT / "content" / "raw" / "english"
 CONTENT_RAW_ZH = PROJECT_ROOT / "content" / "raw" / "chinese"
 DATA_DIR = PROJECT_ROOT / "data"
 ARTICLES_JSON = DATA_DIR / "articles.json"
+FETCH_STATE_JSON = DATA_DIR / "fetch-state.json"
+
+# ── 增量更新状态管理 ──────────────────────────────────────
+def load_fetch_state() -> dict:
+    """加载抓取状态。"""
+    if FETCH_STATE_JSON.exists():
+        with open(FETCH_STATE_JSON) as f:
+            return json.load(f)
+    return {}
+
+
+def save_fetch_state(state: dict):
+    """保存抓取状态。"""
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    with open(FETCH_STATE_JSON, "w") as f:
+        json.dump(state, f, indent=2)
+
+
+def get_content_hash(content: str) -> str:
+    """计算内容 SHA256 哈希。"""
+    return hashlib.sha256(content.encode("utf-8", errors="ignore")).hexdigest()[:16]
+
+
+def url_to_filename(url: str) -> str:
+    """URL 转合法文件名。"""
+    parsed = urlparse(url)
+    path = parsed.path.rstrip("/")
+    if path.endswith(".html"):
+        path = path[:-5]
+    if path.endswith("/index"):
+        path = path[:-6]
+    parts = [p for p in path.split("/") if p and p != "en" and p != "latest"]
+    return "_".join(parts) if parts else "index"
 
 # ── 源配置 ──────────────────────────────────────────
 SOURCES = {
@@ -200,6 +236,86 @@ def save_index(index: dict):
         json.dump(index, f, indent=2, ensure_ascii=False)
 
 
+# ── Sitemap 自动发现 ──────────────────────────────────────
+SITEMAP_URLS = {
+    "rocm": "https://rocm.docs.amd.com/sitemap.xml",
+    "hip": "https://rocmdocs.readthedocs.io/en/latest/sitemap.xml",  # fallback
+}
+
+
+def discover_urls_from_sitemap(sitemap_url: str, max_urls: int = 500) -> Set[str]:
+    """从 sitemap.xml 自动发现所有文档 URL。"""
+    print(f"  🗺️ Discovering from sitemap...")
+    html = fetch_page(sitemap_url)
+    if not html:
+        print(f"  ⚠ Failed to fetch sitemap: {sitemap_url}")
+        return set()
+
+    try:
+        root = ET.fromstring(html)
+    except ET.ParseError:
+        print(f"  ⚠ Failed to parse sitemap XML")
+        return set()
+
+    NS = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+    urls = set()
+
+    # Handle sitemap index (multiple sitemaps)
+    if root.tag == f"{NS}sitemapindex" or root.tag == "sitemapindex":
+        for sub in root.findall(f"{NS}sitemap") or root.findall("sitemap"):
+            loc = sub.find(f"{NS}loc") or sub.find("loc")
+            if loc is None or not loc.text:
+                continue
+            sub_url = loc.text.strip()
+            if "python" in sub_url or "json" in sub_url:
+                continue  # skip non-doc sitemaps
+
+            sub_html = fetch_page(sub_url)
+            if not sub_html:
+                continue
+            try:
+                sub_root = ET.fromstring(sub_html)
+            except ET.ParseError:
+                continue
+
+            for url_el in sub_root.findall(f"{NS}url") or sub_root.findall("url"):
+                loc_el = url_el.find(f"{NS}loc") or url_el.find("loc")
+                if loc_el is None or not loc_el.text:
+                    continue
+                url = loc_el.text.strip()
+                # Only keep valid HTML docs
+                if url.endswith(".html") or url.endswith("/"):
+                    if "/pdf/" not in url and ".pdf" not in url:
+                        urls.add(url)
+
+                if len(urls) >= max_urls:
+                    break
+            if len(urls) >= max_urls:
+                break
+    else:
+        # Single sitemap (urlset directly)
+        # Use namespace aware parsing
+        for url_el in root.findall(f"{NS}url"):
+            loc_el = url_el.find(f"{NS}loc")
+            if loc_el is None or not loc_el.text:
+                continue
+            url = loc_el.text.strip()
+            if (url.endswith(".html") or url.endswith("/")) and "/pdf/" not in url:
+                urls.add(url)
+        # Fallback for non-namespaced XML
+        if not urls:
+            for url_el in root.findall("url"):
+                loc_el = url_el.find("loc")
+                if loc_el is None or not loc_el.text:
+                    continue
+                url = loc_el.text.strip()
+                if (url.endswith(".html") or url.endswith("/")) and "/pdf/" not in url:
+                    urls.add(url)
+
+    print(f"  🔍 Discovered {len(urls)} document URLs")
+    return urls
+
+
 def fetch_page(url: str, timeout: int = 30) -> Optional[str]:
     """抓取单个页面，返回 HTML 文本。"""
     try:
@@ -262,30 +378,72 @@ def generate_frontmatter(meta: dict) -> str:
     return "\n".join(lines)
 
 
-def process_source(source_key: str, config: dict, dry_run: bool = False) -> int:
-    """处理单个来源，返回新增文章数。"""
+def process_source(source_key: str, config: dict, dry_run: bool = False,
+                 auto_discover: bool = False, verbose: bool = False,
+                 known_urls: dict = None) -> dict:
+    """处理单个来源，返回处理结果统计。
+
+    Returns: {"processed": int, "new": int, "updated": int, "unchanged": int}
+    """
+    if known_urls is None:
+        known_urls = {}
+
     print(f"\n📥 {config['name']} ({source_key})")
-    count = 0
+    stats = {"processed": 0, "new": 0, "updated": 0, "unchanged": 0}
     base = config["base_url"]
 
-    for page in config.get("pages", []):
-        url = urljoin(base, page)
+    # 自动发现：从 sitemap 获取 URLs
+    urls_to_fetch = []
+    if auto_discover:
+        sitemap_url = SITEMAP_URLS.get(source_key, "")
+        if sitemap_url:
+            discovered = discover_urls_from_sitemap(sitemap_url)
+            urls_to_fetch = sorted(discovered)
+            if verbose:
+                print(f"   Discovered {len(urls_to_fetch)} URLs from sitemap")
+        else:
+            urls_to_fetch = [urljoin(base, p) for p in config.get("pages", [])]
+    else:
+        urls_to_fetch = [urljoin(base, p) for p in config.get("pages", [])]
+
+    for url in urls_to_fetch:
         fname = f"{source_key}_{url_to_filename(url)}.md"
         out_path = CONTENT_RAW_EN / fname
 
+        # 增量更新检查
+        url_state = known_urls.get(url, {})
+        last_hash = url_state.get("hash", "")
+
         if dry_run:
             print(f"  [DRY] {url} → {fname}")
-            count += 1
+            stats["processed"] += 1
             continue
 
-        # 检查是否已存在
-        if out_path.exists():
-            print(f"  ⏭ skip (exists): {fname}")
-            continue
-
+        # 抓取内容
         html = fetch_page(url)
         if not html:
             continue
+
+        content_hash = get_content_hash(html)
+
+        if out_path.exists():
+            # 文件已存在：检查是否需要更新
+            if last_hash and last_hash == content_hash:
+                # 内容未变化
+                if verbose:
+                    print(f"  ⏭ unchanged: {fname}")
+                stats["unchanged"] += 1
+                stats["processed"] += 1
+                continue
+            else:
+                # 内容已变化，需要重新抓取
+                if verbose:
+                    print(f"  🔄 updated: {fname}")
+                stats["updated"] += 1
+        else:
+            # 新文件
+            print(f"  🆕 new: {fname}")
+            stats["new"] += 1
 
         md = html_to_markdown(html, url)
         if not md:
@@ -293,7 +451,6 @@ def process_source(source_key: str, config: dict, dry_run: bool = False) -> int:
             continue
 
         # 生成 frontmatter
-        # 智能提取标题：跳过 pandoc artifact 行
         title = ""
         for line in md.split("\n"):
             stripped = line.strip()
@@ -304,7 +461,10 @@ def process_source(source_key: str, config: dict, dry_run: bool = False) -> int:
                         title = candidate
                         break
         if not title:
-            title = page.replace(".html", "").replace("index", "Overview")
+            from urllib.parse import urlparse
+            path = urlparse(url).path
+            title = path.split("/")[-1].replace(".html", "").replace("-", " ").title()
+
         meta = {
             "title": title,
             "source_url": url,
@@ -321,11 +481,18 @@ def process_source(source_key: str, config: dict, dry_run: bool = False) -> int:
         with open(out_path, "w") as f:
             f.write(full_content)
 
-        print(f"  ✅ {fname} ({len(md)} chars)")
-        count += 1
-        time.sleep(1)  # 礼貌间隔
+        # 记录 URL 状态（更新 known_urls dict）
+        known_urls[url] = {
+            "hash": content_hash,
+            "last_fetch": datetime.now(timezone.utc).isoformat(),
+            "file": fname,
+        }
 
-    return count
+        print(f"  ✅ {fname} ({len(md)} chars)")
+        stats["processed"] += 1
+        time.sleep(0.5)  # 礼貌间隔
+
+    return stats
 
 
 def _run_cache_images():
@@ -351,18 +518,46 @@ def main():
     parser = argparse.ArgumentParser(description="Fetch ROCm/HIP official docs")
     parser.add_argument("--dry-run", action="store_true", help="Preview only")
     parser.add_argument("--source", choices=list(SOURCES.keys()), help="Single source")
+    parser.add_argument("--auto-discover", action="store_true", help="自动从 sitemap 发现 URL")
+    parser.add_argument("--verbose", "-v", action="store_true", help="详细输出")
     args = parser.parse_args()
 
-    print("🔍 rocm-hip-map fetch-official.py")
+    print("🔍 rocm-hip-map fetch-official.py (v1.5)")
     print(f"   {'DRY RUN' if args.dry_run else 'LIVE MODE'}")
+    if args.auto_discover:
+        print("   AUTO-DISCOVER: enabled")
+
+    # 加载抓取状态
+    fetch_state = load_fetch_state()
+    known_urls = fetch_state.get("urls", {})
+    total_urls = len(known_urls)
+    stats = {"known": total_urls, "updated": 0, "new": 0, "unchanged": 0}
 
     sources = {args.source: SOURCES[args.source]} if args.source else SOURCES
     total = 0
 
     for key, config in sources.items():
-        total += process_source(key, config, dry_run=args.dry_run)
+        result = process_source(key, config, dry_run=args.dry_run,
+                           auto_discover=args.auto_discover, verbose=args.verbose,
+                           known_urls=known_urls)
+        total += result["processed"]
+        stats["updated"] += result["updated"]
+        stats["new"] += result["new"]
+        stats["unchanged"] += result["unchanged"]
 
-    print(f"\n📊 Total articles: {total} {'(preview)' if args.dry_run else 'fetched'}")
+    # 保存抓取状态
+    if not args.dry_run and (stats["new"] > 0 or stats["updated"] > 0):
+        fetch_state["urls"] = known_urls
+        fetch_state["last_fetch"] = datetime.now(timezone.utc).isoformat()
+        save_fetch_state(fetch_state)
+
+    print(f"\n📊 Stats:")
+    print(f"   {stats['known']} known urls")
+    print(f"   {stats['new']} new")
+    print(f"   {stats['updated']} updated")
+    print(f"   {stats['unchanged']} unchanged")
+    print(f"\n   Total: {total} {'(preview)' if args.dry_run else 'fetched'}")
+
     if not args.dry_run and total > 0:
         print(f"   Raw files → {CONTENT_RAW_EN}")
         print("   Run 'python3 scripts/classify.py' to classify & tag.")
