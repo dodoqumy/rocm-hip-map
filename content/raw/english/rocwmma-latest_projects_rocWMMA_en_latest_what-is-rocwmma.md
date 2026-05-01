@@ -1,0 +1,24 @@
+---
+title: "What is rocWMMA? &#8212; rocWMMA 2.2.0 Documentation"
+source_url: "https://rocm.docs.amd.com/projects/rocWMMA/en/latest/what-is-rocwmma.html"
+source_type: official
+source_org: amd
+credibility: 5
+lifecycle: latest
+fetched_at: 2026-05-01T09:18:57.679822+00:00
+content_hash: "45028b57f7808e71"
+---
+
+# What is rocWMMA?[#](#what-is-rocwmma)
+
+rocWMMA is a C++ header library for accelerating mixed-precision matrix multiply-accumulate operations that leverage specialized GPU matrix cores on the latest AMD discrete GPUs. “roc” indicates rocWMMA is an AMD-specific component belonging to the ROCm ecosystem, while WMMA stands for Wavefront Mixed precision Multiply Accumulate.
+
+rocWMMA leverages modern C++ techniques, is templated for modularity, and uses meta-programming paradigms to provide opportunities for customization and compile-time inferences and optimizations. The API is seamless across the supported CDNA and RDNA architectures. The API also offers a high degree of compatibility with common CUDA WMMA library interfaces, simplifying the migration of existing code to the AMD platform.
+
+The API is implemented as GPU device code which empowers you to directly use GPU matrix cores right from your kernel code. Major benefits include kernel-level control, which allows authoring flexibility and accessibility, and compiler optimization passes in-situ with other device code. You can decide when and where kernel run-time launches are required, which is not dictated by the API.
+
+The rocWMMA API facilitates the decomposition of matrix multiply-accumulate problems into discretized blocks (also known as fragments) and enables parallelization of block-wise operations across multiple GPU wavefronts. Programmers only have to manage the wavefront handling of fragments, while individual threads are handled internally. This can lead to faster development times and a more seamless experience across multiple architectures. API functions include data loading and storing, matrix multiply-accumulate, and helper transforms that operate on data fragment abstractions. Data movement between global and local memory can be handled cooperatively amongst the wavefronts in a thread block to enable data sharing and re-use. Matrix multiply-accumulate functionality supports mixed-precision inputs and outputs with native fixed-precision accumulation.
+
+Supporting code is required for GPU device management and kernel invocation.
+The kernel code samples and tests provided are built and launched using
+[HIP](https://rocm.docs.amd.com/projects/HIP/en/latest/index.html) as part of the ROCm ecosystem.
