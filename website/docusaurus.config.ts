@@ -78,6 +78,16 @@ const config: Config = {
         searchResultContextMaxLength: 80,
       }),
     ],
+    [
+      require.resolve('@docusaurus/plugin-sitemap'),
+      {
+        id: 'sitemap-custom',
+        changefreq: 'weekly',
+        priority: 0.7,
+        // 忽略标签/归档等低价值页面
+        ignorePatterns: ['**/tags/**', '**/category/**'],
+      },
+    ],
   ],
 
   themeConfig: {

@@ -286,6 +286,9 @@ def discover_urls_from_sitemap(sitemap_url: str, max_urls: int = 500) -> Set[str
                 # Only keep valid HTML docs
                 if url.endswith(".html") or url.endswith("/"):
                     if "/pdf/" not in url and ".pdf" not in url:
+                        # 跳过 404 页面和搜索页
+                        if "/404." in url or "/search.html" in url or "/genindex." in url:
+                            continue
                         urls.add(url)
 
                 if len(urls) >= max_urls:
@@ -301,6 +304,9 @@ def discover_urls_from_sitemap(sitemap_url: str, max_urls: int = 500) -> Set[str
                 continue
             url = loc_el.text.strip()
             if (url.endswith(".html") or url.endswith("/")) and "/pdf/" not in url:
+                # 跳过 404/search/genindex 页面
+                if "/404." in url or "/search.html" in url or "/genindex." in url:
+                    continue
                 urls.add(url)
         # Fallback for non-namespaced XML
         if not urls:
@@ -310,6 +316,8 @@ def discover_urls_from_sitemap(sitemap_url: str, max_urls: int = 500) -> Set[str
                     continue
                 url = loc_el.text.strip()
                 if (url.endswith(".html") or url.endswith("/")) and "/pdf/" not in url:
+                    if "/404." in url or "/search.html" in url or "/genindex." in url:
+                        continue
                     urls.add(url)
 
     print(f"  🔍 Discovered {len(urls)} document URLs")
@@ -398,9 +406,13 @@ def process_source(source_key: str, config: dict, dry_run: bool = False,
         sitemap_url = SITEMAP_URLS.get(source_key, "")
         if sitemap_url:
             discovered = discover_urls_from_sitemap(sitemap_url)
-            urls_to_fetch = sorted(discovered)
+            # 修复 sitemap URL 格式：/en/latest/en/7.2.2/xxx → /en/latest/xxx
+            urls_to_fetch = []
+            for url in sorted(discovered):
+                fixed = re.sub(r'(/en/latest)/en/\d+\.\d+\.\d+(/)', r'\1\2', url)
+                urls_to_fetch.append(fixed)
             if verbose:
-                print(f"   Discovered {len(urls_to_fetch)} URLs from sitemap")
+                print(f"   Discovered {len(urls_to_fetch)} URLs from sitemap (URLs fixed)")
         else:
             urls_to_fetch = [urljoin(base, p) for p in config.get("pages", [])]
     else:
@@ -410,44 +422,43 @@ def process_source(source_key: str, config: dict, dry_run: bool = False,
         fname = f"{source_key}_{url_to_filename(url)}.md"
         out_path = CONTENT_RAW_EN / fname
 
+        # 使用固定后的 URL 作为 key
+        fixed_url = re.sub(r'(/en/latest)/en/\d+\.\d+\.\d+(/)', r'\1\2', url) if url.startswith("https://rocm.docs.amd.com") else url
+
         # 增量更新检查
-        url_state = known_urls.get(url, {})
+        url_state = known_urls.get(fixed_url, {})
         last_hash = url_state.get("hash", "")
 
         if dry_run:
-            print(f"  [DRY] {url} → {fname}")
+            print(f"  [DRY] {fixed_url}")
             stats["processed"] += 1
             continue
 
         # 抓取内容
-        html = fetch_page(url)
+        html = fetch_page(fixed_url)
         if not html:
             continue
 
         content_hash = get_content_hash(html)
 
         if out_path.exists():
-            # 文件已存在：检查是否需要更新
             if last_hash and last_hash == content_hash:
-                # 内容未变化
                 if verbose:
                     print(f"  ⏭ unchanged: {fname}")
                 stats["unchanged"] += 1
                 stats["processed"] += 1
                 continue
             else:
-                # 内容已变化，需要重新抓取
                 if verbose:
                     print(f"  🔄 updated: {fname}")
                 stats["updated"] += 1
         else:
-            # 新文件
             print(f"  🆕 new: {fname}")
             stats["new"] += 1
 
-        md = html_to_markdown(html, url)
+        md = html_to_markdown(html, fixed_url)
         if not md:
-            print(f"  ⚠ conversion failed: {url}")
+            print(f"  ⚠ conversion failed: {fixed_url}")
             continue
 
         # 生成 frontmatter
@@ -461,13 +472,13 @@ def process_source(source_key: str, config: dict, dry_run: bool = False,
                         title = candidate
                         break
         if not title:
-            from urllib.parse import urlparse
-            path = urlparse(url).path
+            from urllib.parse import urlparse as _urlparse
+            path = _urlparse(fixed_url).path
             title = path.split("/")[-1].replace(".html", "").replace("-", " ").title()
 
         meta = {
             "title": title,
-            "source_url": url,
+            "source_url": fixed_url,
             "source_type": config["source_type"],
             "source_org": config["source_org"],
             "credibility": config["credibility"],
@@ -481,8 +492,8 @@ def process_source(source_key: str, config: dict, dry_run: bool = False,
         with open(out_path, "w") as f:
             f.write(full_content)
 
-        # 记录 URL 状态（更新 known_urls dict）
-        known_urls[url] = {
+        # 记录 URL 状态（使用 fixed_url 作为 key）
+        known_urls[fixed_url] = {
             "hash": content_hash,
             "last_fetch": datetime.now(timezone.utc).isoformat(),
             "file": fname,

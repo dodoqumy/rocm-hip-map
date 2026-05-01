@@ -352,6 +352,36 @@ sources:
     crawler: sphinx_nav
     credibility: 5
     interval_hours: 168
+  - slug: rocm-agent-lib-latest
+    name: "ROCm Agent Library"
+    base_url: "https://docs.amd.com/rocm-agent-lib/en/latest/"
+    sitemap: "https://docs.amd.com/rocm-agent-lib/en/latest/sitemap.xml"
+    crawler: sitemap
+    credibility: 5
+    interval_hours: 24
+
+  - slug: hipfort-latest
+    name: "HIP Fortran"
+    base_url: "https://rocm.docs.amd.com/projects/hipfort/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+
+  - slug: rocdecode-latest
+    name: "ROCm Decode"
+    base_url: "https://docs.amd.com/rocdecode/en/latest/"
+    sitemap: "https://docs.amd.com/rocdecode/en/latest/sitemap.xml"
+    crawler: sitemap
+    credibility: 5
+    interval_hours: 24
+
+  - slug: rocprofiler-latest
+    name: "ROCm Profiler"
+    base_url: "https://rocm.docs.amd.com/projects/rocprofiler/en/latest/"
+    crawler: sphinx_nav
+    credibility: 5
+    interval_hours: 24
+
 
 # === 全局配置 ===
 settings:
