@@ -1,0 +1,29 @@
+{
+  "updated": "2026-05-02T00:00:00Z",
+  "weeks": {
+    "2026-W16": {
+      "entries": [
+        {"gpu_id": "AMD_Instinct_MI210", "gpu_name": "AMD Instinct MI210", "median_usd": 3350, "min_usd": 3200, "max_usd": 3500, "sample_size": 2},
+        {"gpu_id": "AMD_Radeon_RX_7900_XTX", "gpu_name": "AMD Radeon RX 7900 XTX", "median_usd": 910, "min_usd": 890, "max_usd": 940, "sample_size": 3},
+        {"gpu_id": "AMD_Radeon_RX_6800", "gpu_name": "AMD Radeon RX 6800", "median_usd": 430, "min_usd": 410, "max_usd": 450, "sample_size": 3}
+      ],
+      "updated": "2026-04-18T00:00:00Z"
+    },
+    "2026-W17": {
+      "entries": [
+        {"gpu_id": "AMD_Instinct_MI210", "gpu_name": "AMD Instinct MI210", "median_usd": 3280, "min_usd": 3100, "max_usd": 3450, "sample_size": 3},
+        {"gpu_id": "AMD_Radeon_RX_7900_XTX", "gpu_name": "AMD Radeon RX 7900 XTX", "median_usd": 880, "min_usd": 840, "max_usd": 920, "sample_size": 4},
+        {"gpu_id": "AMD_Radeon_RX_6800", "gpu_name": "AMD Radeon RX 6800", "median_usd": 420, "min_usd": 400, "max_usd": 445, "sample_size": 4}
+      ],
+      "updated": "2026-04-25T00:00:00Z"
+    },
+    "2026-W18": {
+      "entries": [
+        {"gpu_id": "AMD_Instinct_MI210", "gpu_name": "AMD Instinct MI210", "median_usd": 3200, "min_usd": 3000, "max_usd": 3400, "sample_size": 3},
+        {"gpu_id": "AMD_Radeon_RX_7900_XTX", "gpu_name": "AMD Radeon RX 7900 XTX", "median_usd": 850, "min_usd": 800, "max_usd": 900, "sample_size": 5},
+        {"gpu_id": "AMD_Radeon_RX_6800", "gpu_name": "AMD Radeon RX 6800", "median_usd": 410, "min_usd": 390, "max_usd": 440, "sample_size": 4}
+      ],
+      "updated": "2026-05-02T00:00:00Z"
+    }
+  }
+}

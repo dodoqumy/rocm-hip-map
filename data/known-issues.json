@@ -1,13 +1,112 @@
 [
   {
-    "title": "",
-    "component": "install / driver / pytorch / hip / performance",
-    "status": "open / fixed / workaround",
+    "title": "[Issue]: [HIP] Peer device memory access not available on dual GPU system",
+    "component": "hip",
+    "status": "open",
+    "rocm_version": "7.13.0a20260414",
+    "gpu": "Radeon RX 9070 XT",
+    "os": "Windows 11",
+    "source_url": "https://github.com/ROCm/rocm-systems/issues/5030",
+    "summary": "On dual Radeon RX 9070 XT systems, hipDeviceCanAccessPeer reports no peer access even with Resizeable BAR enabled.",
+    "workaround": "No confirmed workaround in issue; monitor upstream HIP peer-memory fixes and validate BIOS/ReBAR settings."
+  },
+  {
+    "title": "[CK] Smart-build CTest invocation can run more tests than were built, causing spurious \"Not Run\" CI failures",
+    "component": "composable-kernel/ci",
+    "status": "open",
     "rocm_version": "",
     "gpu": "",
     "os": "",
-    "source_url": "",
-    "summary": "",
-    "workaround": ""
+    "source_url": "https://github.com/ROCm/rocm-libraries/issues/6956",
+    "summary": "Composable Kernel smart-build CI can schedule tests that were never built, producing false CI failures.",
+    "workaround": "Use exact-match test selection and keep build/test sets aligned until upstream CI logic is corrected."
+  },
+  {
+    "title": "[Issue]: MIOpen tests fails on therock gfx1151 Windows CI Test runners",
+    "component": "miopen",
+    "status": "open",
+    "rocm_version": "7.11 prebuilds",
+    "gpu": "gfx1151",
+    "os": "Windows 11",
+    "source_url": "https://github.com/ROCm/rocm-libraries/issues/3956",
+    "summary": "MIOpen test shards on gfx1151 Windows runners fail with output mismatches, timeouts, and unspecified launch failures.",
+    "workaround": "Rerun affected shards in CI; issue is currently tracked as an upstream test reliability problem."
+  },
+  {
+    "title": "[Issue]: CI - Jenkins - rocDecode error resilience test failure",
+    "component": "rocdecode",
+    "status": "open",
+    "rocm_version": "TOT",
+    "gpu": "AMD Radeon Graphics[gfx950]",
+    "os": "All",
+    "source_url": "https://github.com/ROCm/rocm-systems/issues/2996",
+    "summary": "rocDecode Jenkins resilience tests can hang the GPU and abort with decoder failures during CI.",
+    "workaround": "No issue-specific workaround documented; treat as CI instability and inspect migrated rocDecode tracker context."
+  },
+  {
+    "title": "[Bug] CI Tests failing on multiple PR's",
+    "component": "aiter/ci",
+    "status": "open",
+    "rocm_version": "",
+    "gpu": "",
+    "os": "",
+    "source_url": "https://github.com/ROCm/aiter/issues/2832",
+    "summary": "AITer CI reports failures across multiple unrelated PRs, indicating a shared upstream CI instability rather than branch-local regressions.",
+    "workaround": "Retry failing CI shards and isolate framework-devops failures from PR-local signal where possible."
+  },
+  {
+    "title": "[TRITON][CI] Fix `test_pa_decode.py` flakiness in `gfx942`",
+    "component": "triton/ci",
+    "status": "open",
+    "rocm_version": "",
+    "gpu": "MI325 / gfx942",
+    "os": "",
+    "source_url": "https://github.com/ROCm/aiter/issues/2882",
+    "summary": "A Triton paged-attention test shows flaky abort/fail behavior on MI325 gfx942 CI runners without code changes.",
+    "workaround": "Rerun the affected Triton shard; upstream discussion suggests dedicated MI325 validation is needed for a durable fix."
+  },
+  {
+    "title": "Plugins not being loaded properly in gpu_triton in \"community\" docker images",
+    "component": "jax",
+    "status": "open",
+    "rocm_version": "",
+    "gpu": "MI300X",
+    "os": "Linux",
+    "source_url": "https://github.com/ROCm/jax/issues/339",
+    "summary": "ROCm JAX community Docker images fail to load the GPU Triton plugin, making gpu_triton appear unavailable on MI300X systems.",
+    "workaround": "Use the non-community ROCm JAX image or verify plugin packaging before relying on community tags."
+  },
+  {
+    "title": "test_amdsmi_query_helpers_do_not_manage_lifecycle fails in multi-rank CI",
+    "component": "iris/test",
+    "status": "open",
+    "rocm_version": "",
+    "gpu": "",
+    "os": "",
+    "source_url": "https://github.com/ROCm/iris/issues/517",
+    "summary": "An Iris vendor-library lifecycle unit test passes standalone but fails under the multi-rank distributed CI harness.",
+    "workaround": "Run the test standalone for local validation; distributed CI behavior remains under upstream investigation."
+  },
+  {
+    "title": "[TheRock CI] upstream component testing run and failures blocks even though unrelated",
+    "component": "therock/ci",
+    "status": "open",
+    "rocm_version": "",
+    "gpu": "",
+    "os": "",
+    "source_url": "https://github.com/ROCm/TheRock/issues/3491",
+    "summary": "TheRock CI can be blocked by upstream component test failures that are unrelated to the downstream PR under review.",
+    "workaround": "Treat unrelated upstream component failures as infrastructure issues and rerun or scope CI more narrowly where possible."
+  },
+  {
+    "title": "[hipother][Windows][BUG][Blocker] `HIP SDK` targeting `nvcc` is `ULTIMATELY` broken",
+    "component": "hipother",
+    "status": "open",
+    "rocm_version": "HIP SDK 7.2",
+    "gpu": "",
+    "os": "Windows",
+    "source_url": "https://github.com/ROCm/rocm-systems/issues/4643",
+    "summary": "HIP SDK 7.2 on Windows shows widespread failures when targeting nvcc, with thousands of HIP-VS CI unit test failures reported.",
+    "workaround": "Upstream notes local fixes in nvidia_hip_runtime_api.h, but no official packaged workaround is published yet."
   }
 ]

@@ -1,0 +1,52 @@
+{
+  "updated": "2026-05-02T00:00:00Z",
+  "week": "2026-W18",
+  "rates": {"USD": 1, "EUR": 0.92, "GBP": 0.79},
+  "entries": [
+    {
+      "gpu_id": "AMD_Instinct_MI210",
+      "gpu_name": "AMD Instinct MI210",
+      "country": "US",
+      "platform": "eBay",
+      "condition": "used",
+      "currency_original": "USD",
+      "median_usd": 3200,
+      "min_usd": 3000,
+      "max_usd": 3400,
+      "sample_size": 3,
+      "original_sample_size": 3,
+      "source_url": "https://example.com/mi210",
+      "collected_at": "2026-05-02T00:00:00Z"
+    },
+    {
+      "gpu_id": "AMD_Radeon_RX_7900_XTX",
+      "gpu_name": "AMD Radeon RX 7900 XTX",
+      "country": "DE",
+      "platform": "eBay",
+      "condition": "used",
+      "currency_original": "EUR",
+      "median_usd": 850,
+      "min_usd": 800,
+      "max_usd": 900,
+      "sample_size": 5,
+      "original_sample_size": 5,
+      "source_url": "https://example.com/7900xtx",
+      "collected_at": "2026-05-02T00:00:00Z"
+    },
+    {
+      "gpu_id": "AMD_Radeon_RX_6800",
+      "gpu_name": "AMD Radeon RX 6800",
+      "country": "GB",
+      "platform": "eBay",
+      "condition": "used",
+      "currency_original": "GBP",
+      "median_usd": 410,
+      "min_usd": 390,
+      "max_usd": 440,
+      "sample_size": 4,
+      "original_sample_size": 4,
+      "source_url": "https://example.com/rx6800",
+      "collected_at": "2026-05-02T00:00:00Z"
+    }
+  ]
+}
