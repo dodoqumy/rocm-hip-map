@@ -16,12 +16,10 @@ jobs:
           python-version: "3.11"
 
       - name: Install Python deps
-        run: pip install requests pyyaml
+        run: pip install -r requirements.txt
 
-      # ──────────────────────────────────────────────
-      # 1. 检查引用链接格式（不检查外网可达性 — AMD 文档站会 403 GitHub Actions）
-      # ──────────────────────────────────────────────
       - name: Validate external links (format only)
+        continue-on-error: true
         run: |
           echo "🔗 Checking link format in data/articles.json..."
           if [ -f data/articles.json ]; then
@@ -46,11 +44,7 @@ jobs:
           else
             echo "  ⏭ No data/articles.json — skipping format check"
           fi
-        continue-on-error: true
 
-      # ──────────────────────────────────────────────
-      # 2. 检查缓存图片文件是否存在
-      # ──────────────────────────────────────────────
       - name: Validate cached images
         run: |
           echo "🖼️ Checking cached images..."
@@ -64,7 +58,6 @@ jobs:
               local = mapping.get('local', '')
               if not local:
                   continue
-              # /img/cached/rocm/foo/bar.png → website/static/img/cached/rocm/foo/bar.png
               rel = local.replace('/img/cached/', '')
               filepath = os.path.join('website', 'static', 'img', 'cached', rel)
               if not os.path.isfile(filepath):
@@ -79,46 +72,40 @@ jobs:
             echo "  ⏭ No data/image-cache.json — skipping cache check"
           fi
 
-      # ──────────────────────────────────────────────
-      # 3. 检查未缓存的远程图片是否可达
-      # ──────────────────────────────────────────────
       - name: Validate remote images
+        continue-on-error: true
         run: |
           echo "🌐 Checking remote image URLs..."
           python3 -c "
-          import os, re, json, requests, sys
+          import os, re, json, requests
           from urllib.parse import urljoin
 
-          # 加载已缓存的映射（这些不用检查）
           cached = set()
           if os.path.exists('data/image-cache.json'):
               with open('data/image-cache.json') as f:
                   cache = json.load(f)
-              for m in cache.get('mappings', {}).values():
-                  cached.add(m.get('source_url', ''))
+              for mapping in cache.get('mappings', {}).values():
+                  cached.add(mapping.get('source_url', ''))
 
-          # 扫描 raw markdown 中的图片引用
           broken = []
           seen = set()
           for root, dirs, files in os.walk('content/raw'):
-              for f in files:
-                  if not f.endswith('.md'):
+              for filename in files:
+                  if not filename.endswith('.md'):
                       continue
-                  path = os.path.join(root, f)
-                  with open(path) as fh:
+                  filepath = os.path.join(root, filename)
+                  with open(filepath) as fh:
                       text = fh.read()
 
-                  # 提取 source_url
                   page_url = None
                   fm = re.match(r'^---\s*\n(.*?)\n---', text, re.DOTALL)
                   if fm:
-                      m2 = re.search(r'source_url:\s*\"?(.+?)\"?\s*$', fm.group(1), re.MULTILINE)
-                      if m2:
-                          page_url = m2.group(1).strip().strip('\"').strip(\"'\")
+                      match = re.search(r'source_url:\s*\"?(.+?)\"?\s*$', fm.group(1), re.MULTILINE)
+                      if match:
+                          page_url = match.group(1).strip().strip('\"').strip(\"'\")
 
-                  # 扫描图片
-                  for m in re.finditer(r'!\[[^\]]*\]\(([^)]+)\)', text):
-                      raw_url = m.group(1)
+                  for image_match in re.finditer(r'!\[[^\]]*\]\(([^)]+)\)', text):
+                      raw_url = image_match.group(1)
                       if raw_url.startswith('data:') or raw_url.startswith('/img/cached/'):
                           continue
                       if raw_url.startswith('http'):
@@ -133,28 +120,23 @@ jobs:
                       seen.add(abs_url)
 
                       try:
-                          r = requests.head(abs_url, timeout=10, allow_redirects=True, headers={'User-Agent': 'rocm-hip-map-validator/1.0'})
-                          if r.status_code >= 400:
-                              broken.append((abs_url, r.status_code, path))
-                      except Exception as e:
-                          broken.append((abs_url, str(e), path))
+                          resp = requests.head(abs_url, timeout=10, allow_redirects=True, headers={'User-Agent': 'rocm-hip-map-validator/1.0'})
+                          if resp.status_code >= 400:
+                              broken.append((abs_url, resp.status_code, filepath))
+                      except Exception as exc:
+                          broken.append((abs_url, str(exc), filepath))
 
-          # 输出结果
           total = len(seen)
           if broken:
               for url, err, src in broken[:20]:
                   print(f'  ❌ {url} → {err} (in {src})')
               print(f'\\n  {len(broken)}/{total} remote images unreachable')
-              # 不阻塞：允许部分远程图片失效（有缓存兜底）
           else:
               print(f'  ✅ All {total} remote images reachable')
           "
-      continue-on-error: true
 
-      # ──────────────────────────────────────────────
-      # 4. 检查 frontmatter 规范合规
-      # ──────────────────────────────────────────────
       - name: Validate frontmatter
+        continue-on-error: true
         run: |
           echo "📋 Checking frontmatter in content/raw/..."
           python3 -c "
@@ -162,38 +144,34 @@ jobs:
           errors = []
           required = ['title', 'source_url', 'source_type', 'credibility', 'lifecycle']
           for root, dirs, files in os.walk('content/raw'):
-              for f in files:
-                  if not f.endswith('.md'):
+              for filename in files:
+                  if not filename.endswith('.md'):
                       continue
-                  path = os.path.join(root, f)
-                  with open(path) as fh:
+                  filepath = os.path.join(root, filename)
+                  with open(filepath) as fh:
                       text = fh.read()
-                  m = re.match(r'^---\s*\n(.*?)\n---', text, re.DOTALL)
-                  if not m:
-                      errors.append(f'{path}: missing frontmatter')
+                  match = re.match(r'^---\s*\n(.*?)\n---', text, re.DOTALL)
+                  if not match:
+                      errors.append(f'{filepath}: missing frontmatter')
                       continue
                   try:
-                      fm = yaml.safe_load(m.group(1))
-                  except yaml.YAMLError as e:
-                      errors.append(f'{path}: YAML parse error: {e}')
+                      fm = yaml.safe_load(match.group(1))
+                  except yaml.YAMLError as exc:
+                      errors.append(f'{filepath}: YAML parse error: {exc}')
                       continue
                   if not isinstance(fm, dict):
-                      errors.append(f'{path}: frontmatter not a dict')
+                      errors.append(f'{filepath}: frontmatter not a dict')
                       continue
                   for field in required:
                       if field not in fm:
-                          errors.append(f'{path}: missing required field \"{field}\"')
+                          errors.append(f'{filepath}: missing required field \"{field}\"')
           if errors:
-              for e in errors:
-                  print(f'  ❌ {e}')
+              for err in errors:
+                  print(f'  ❌ {err}')
               sys.exit(1)
           print('  ✅ All frontmatter valid')
           "
-        continue-on-error: true
 
-      # ──────────────────────────────────────────────
-      # 3. 检查 Docusaurus 构建
-      # ──────────────────────────────────────────────
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
@@ -204,6 +182,29 @@ jobs:
         working-directory: website
         run: npm ci
 
+      - name: Typecheck website
+        working-directory: website
+        run: npm run typecheck
+
+      - name: Run frontend tests
+        working-directory: website
+        run: npm run test:run
+
       - name: Build website
         working-directory: website
         run: npm run build
+
+  test-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python deps
+        run: pip install -r requirements.txt
+
+      - name: Run pytest
+        run: pytest tests/ -v --tb=short

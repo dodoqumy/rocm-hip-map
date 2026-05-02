@@ -49,7 +49,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install deps
-        run: pip install pyyaml requests
+        run: pip install -r requirements.txt
 
       - name: Incremental translate
         env:

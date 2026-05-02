@@ -21,9 +21,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install deps
-        run: |
-          pip install requests pyyaml
-          pip install PyMuPDF  # for extract-pdf.py
+        run: pip install -r requirements.txt
 
       # ──────────────────────────────────────────────
       # 1. 抓取新论文元数据
