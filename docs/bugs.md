@@ -311,3 +311,75 @@ f"...{_val}..."  # ✅
 ### 预防
 
 Python 3.11 及以下不允许 f-string 表达式含 `\`。用 pylint/flake8 静态检查。
+
+---
+
+## BUG-013: `ArticleHeader` 错误回退到 `metadata.source` (2026-05-02)
+
+**严重程度：** 🟡 Medium  
+**分类：** Docusaurus / Frontmatter / 外链  
+**状态：** ✅ 已修复
+
+### 症状
+
+当文档缺少 `source_url` 时，页面“查看原文”链接会回退到站内 Markdown 源文件路径，而不是外部原文地址。
+
+### 根因
+
+`metadata.source` 是 Docusaurus 的源码路径，不是原始文章 URL。
+
+### 修改点
+
+`website/src/components/ArticleHeader.tsx` 不再使用 `metadata.source` 作为外链回退；测试同步修正。
+
+### 预防
+
+Docusaurus `metadata.*` 字段必须先确认语义，不能把源码路径误当业务 URL。
+
+---
+
+## BUG-014: `db/dao.py` 读取行对象时重复 `fetchone()` (2026-05-02)
+
+**严重程度：** 🔴 Critical  
+**分类：** Python / SQLite DAO  
+**状态：** ✅ 已修复
+
+### 症状
+
+`article_get_by_id()` / `article_get_by_hash()` 在已有记录时仍返回 `None`，导致读取文章记录失败。
+
+### 根因
+
+同一查询里调用了两次 `fetchone()`，第一次已消耗结果，第二次返回 `None`。
+
+### 修改点
+
+统一先保存 `row = cur.fetchone()`，再做 `dict(row) if row else None`。
+
+### 预防
+
+DAO 查询返回单行时，禁止在同一分支里多次调用 `fetchone()`。
+
+---
+
+## BUG-015: URL 规范化未正确保留非追踪查询参数 (2026-05-02)
+
+**严重程度：** 🔴 Critical  
+**分类：** Python / 去重 / 数据一致性  
+**状态：** ✅ 已修复
+
+### 症状
+
+例如 `https://example.com/post?utm_source=test&a=1` 被错误规范化为 `https://example.com/post&a=1`，导致 URL 哈希错误。
+
+### 根因
+
+去除首个追踪参数后，没有把后续 `&` 恢复成合法的 `?` 查询串起始符。
+
+### 修改点
+
+`db/dao.py` 的 `normalize_url()` 改为先删除追踪参数，再清理 `?&`、重复 `&` 和尾部残留分隔符。
+
+### 预防
+
+URL 规范化测试必须覆盖“追踪参数 + 正常参数混合”场景，而不只是纯追踪参数场景。

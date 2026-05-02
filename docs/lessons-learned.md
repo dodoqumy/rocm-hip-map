@@ -84,3 +84,52 @@ if [ -f "$OUT" ]; then ...
 1. `docs/templates/page-template.md` — 模板规范
 2. `scripts/generate-docs.py` — 生成器（如涉及 MDX）
 3. `docs/PROGRESS.md` — 进度文档
+
+---
+
+## 5. Docusaurus `metadata.source` 不是业务外链
+
+**教训来源：** BUG-013  
+**日期：** 2026-05-02
+
+### 问题
+
+`useDoc().metadata.source` 指向仓库中的文档源文件，不是 frontmatter 中的原文 URL。
+
+### 规则
+
+- 原文链接只能来自显式业务字段（如 `source_url`）
+- 框架 metadata 只能在确认语义后再参与 UI 映射
+
+---
+
+## 6. 测试生成物必须排除出 TypeScript 工程
+
+**教训来源：** 本次 remediation 过程中的 `coverage/` 污染 `tsc`  
+**日期：** 2026-05-02
+
+### 问题
+
+Vitest coverage 产物进入 `tsc` 默认 include 范围后，会触发无关的 TS6053 文件错误。
+
+### 规则
+
+- `tsconfig.json` 必须显式排除 `coverage`
+- 测试工具输出目录要视为构建产物，不参与类型检查
+
+---
+
+## 7. 全局 stub 需要和测试生命周期绑定
+
+**教训来源：** TypeScript reviewer + 前端测试回归  
+**日期：** 2026-05-02
+
+### 问题
+
+`vi.stubGlobal()` 在测试文件顶层执行时，容易造成跨文件污染；启用 `unstubGlobals` 后又会暴露顶层 stub 丢失问题。
+
+### 规则
+
+- 全局 stub 放进 `beforeEach`
+- Vitest 配置启用 `unstubGlobals: true`
+- 让隔离成为默认，而不是依赖测试执行顺序
