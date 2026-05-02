@@ -5,7 +5,7 @@ source_type: official
 source_org: amd
 credibility: 5
 lifecycle: latest
-fetched_at: 2026-05-01T12:05:09.990895+00:00
+fetched_at: 2026-05-02T18:01:52.002073+00:00
 content_hash: "e615805df1f821f5"
 ---
 
