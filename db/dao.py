@@ -20,8 +20,10 @@ from . import get_connection, transaction, cursor
 
 def normalize_url(url: str) -> str:
     """去除 utm_*/fbclid/ref 等追踪参数，用于去重。"""
-    url = re.sub(r"[?&](utm_|fbclid|ref|mc_cid|mc_eid|ref_src|ref_url)=[^&]+", "", url)
-    url = url.rstrip("?")
+    url = re.sub(r"([?&])(utm_[^=]+|fbclid|ref|mc_cid|mc_eid|ref_src|ref_url)=[^&]+(&)?", r"\1", url)
+    url = re.sub(r"\?&", "?", url)
+    url = re.sub(r"&&+", "&", url)
+    url = re.sub(r"[?&]$", "", url)
     return url
 
 
@@ -140,7 +142,8 @@ def article_get_by_hash(url_hash: str) -> dict | None:
     """通过 url_hash 查单篇。"""
     with cursor() as cur:
         cur.execute("SELECT * FROM articles WHERE url_hash = ?", (url_hash,))
-        return dict(cur.fetchone()) if cur.fetchone() else None
+        row = cur.fetchone()
+        return dict(row) if row else None
 
 
 def article_find_stale(days: int = 7, limit: int = 100) -> list[dict]:
@@ -173,7 +176,8 @@ def article_get_by_id(article_id: int) -> dict | None:
     """查单篇。"""
     with cursor() as cur:
         cur.execute("SELECT * FROM articles WHERE id = ?", (article_id,))
-        return dict(cur.fetchone()) if cur.fetchone() else None
+        row = cur.fetchone()
+        return dict(row) if row else None
 
 
 def article_count(status: str | None = None) -> int:

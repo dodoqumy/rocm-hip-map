@@ -23,6 +23,8 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
 PAPERS_JSON = DATA_DIR / "papers.json"
+CONTENT_RAW_PAPERS = PROJECT_ROOT / "content" / "raw" / "papers"
+CONTENT_TRANSLATED_ZH_PAPERS = PROJECT_ROOT / "content" / "translated" / "zh" / "papers"
 
 # ── 6 组定期查询（按相关性 + 覆盖面设计）────────────
 QUERIES = [
@@ -85,6 +87,14 @@ def search_arxiv(query: str, max_results: int = 30) -> list[dict]:
             papers.append(paper)
 
     return papers
+
+
+def paper_status_fields(arxiv_id: str) -> dict:
+    """根据本地内容状态补齐提取/翻译标记。"""
+    return {
+        "extracted": (CONTENT_RAW_PAPERS / f"{arxiv_id}.md").exists(),
+        "translated": (CONTENT_TRANSLATED_ZH_PAPERS / f"{arxiv_id}_zh.md").exists(),
+    }
 
 
 def _parse_entry(entry: ET.Element) -> dict | None:
@@ -150,6 +160,7 @@ def _parse_entry(entry: ET.Element) -> dict | None:
         "tags": tags,
         "lifecycle": "latest",
         "fetched_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        **paper_status_fields(arxiv_id),
     }
 
 
@@ -233,6 +244,10 @@ def fetch_all(max_per_query: int = 30, dry_run: bool = False) -> int:
 
     # 合并已有 + 新增
     all_papers = list(existing.values()) + list(new_papers.values())
+    for paper in all_papers:
+        arxiv_id = paper.get("arxiv_id", "")
+        if arxiv_id:
+            paper.update(paper_status_fields(arxiv_id))
     # 按发布日期降序
     all_papers.sort(key=lambda x: x.get("published", ""), reverse=True)
 
