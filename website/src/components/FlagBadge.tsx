@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {type ReactNode} from 'react';
 
 // ISO 3166-1 alpha-2 → flag emoji + country name
 const COUNTRY_FLAGS: Record<string, { flag: string; name: string }> = {
@@ -18,7 +18,7 @@ interface FlagBadgeProps {
   country?: string;
 }
 
-export default function FlagBadge({ country }: FlagBadgeProps): JSX.Element | null {
+export default function FlagBadge({ country }: FlagBadgeProps): ReactNode {
   if (!country) return null;
   const info = COUNTRY_FLAGS[country.toLowerCase()];
   if (!info) return null;

@@ -7,7 +7,7 @@ import styles from './styles.module.css';
 export interface ArticleMetaProps {
   // Required fields from v2 frontmatter
   source_url: string;
-  source_type: 'official' | 'github-issue' | 'github-pr' | 'blog' | 'paper' | 'community';
+  source_type: 'official' | 'github-issue' | 'github-pr' | 'blog' | 'paper' | 'community' | 'bilingual' | 'multilingual' | 'tool';
   source_org: string;
   published_date?: string;
   synced_date?: string;
@@ -31,6 +31,9 @@ const sourceTypeLabels: Record<string, string> = {
   blog: '📝 官方博客',
   paper: '📜 学术论文',
   community: '💬 社区讨论',
+  bilingual: '🌐 双语对照',
+  multilingual: '🌍 多语内容',
+  tool: '🛠️ 工具页面',
 };
 
 const sourceOrgLabels: Record<string, string> = {

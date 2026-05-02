@@ -1,4 +1,4 @@
-import React from "react";
+import React, {type ReactNode} from "react";
 import { useDoc } from "@docusaurus/plugin-content-docs/client";
 
 /**
@@ -7,9 +7,20 @@ import { useDoc } from "@docusaurus/plugin-content-docs/client";
  * 专用于 source_type="paper" 的 arXiv 论文页面。
  * 显示：arXiv ID、作者、分类标签、可信度、原文链接。
  */
-export default function PaperArticleHeader(): JSX.Element | null {
+type PaperFrontMatter = {
+  source_type?: string;
+  arxiv_id?: string;
+  source_url?: string;
+  authors?: string[];
+  categories?: string[];
+  published_date?: string;
+  published?: string;
+  credibility?: number;
+};
+
+export default function PaperArticleHeader(): ReactNode {
   const { frontMatter } = useDoc();
-  const fm = frontMatter as any;
+  const fm = frontMatter as PaperFrontMatter;
 
   if (!fm.source_type || fm.source_type !== "paper") {
     return null;

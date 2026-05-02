@@ -1,30 +1,28 @@
-import React from 'react';
+import React, {type ReactNode} from 'react';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
-import ArticleMeta from './ArticleMeta';
+import ArticleMeta, {type ArticleMetaProps} from './ArticleMeta';
 
 /**
  * 文章头部元信息组件。
  * 在每篇文档的 MDX 中通过 `<ArticleHeader />` 使用，
  * 自动读取 frontmatter 并渲染 ArticleMeta。
  */
-export default function ArticleHeader(): JSX.Element | null {
+type ArticleHeaderFrontMatter = Partial<ArticleMetaProps> & {
+  source_type?: ArticleMetaProps['source_type'];
+};
+
+export default function ArticleHeader(): ReactNode {
   const { metadata, frontMatter } = useDoc();
+  const fm = frontMatter as ArticleHeaderFrontMatter;
 
   // Only render if v2 frontmatter is present (has credibility field)
-  if (!frontMatter.credibility) {
+  if (typeof fm.credibility !== 'number') {
     return null;
   }
 
-  // Map Docusaurus frontMatter to ArticleMeta props
-  // Docusaurus uses snake_case (as written in YAML)
-  const props: Record<string, any> = {};
-
-  // Copy all frontMatter fields, handling Docusaurus's camelCase conversion
-  const fm = frontMatter as any;
-
   return (
     <ArticleMeta
-      source_url={fm.source_url || metadata.source}
+      source_url={fm.source_url || ''}
       source_type={fm.source_type || 'official'}
       source_org={fm.source_org || 'unknown'}
       published_date={fm.published_date}
