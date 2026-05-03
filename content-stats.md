@@ -1,10 +1,10 @@
 # ROCm 文档抓取统计
 
-> 更新时间: 2026-05-03 15:31 UTC
+> 更新时间: 2026-05-03 09:11 UTC
 
 ## 总计
 
-- **总文件数**: 1228 篇 (+38 本次增量)
+- **总文件数**: 1234 篇 (+6 本次增量)
 - **子项目数**: 38 个
 
 ## 各子项目详情
@@ -12,11 +12,11 @@
 | 子项目 | 文件数 | 状态 |
 |--------|--------|------|
 | github | 215 | ⚠️ |
-| rocm-docs-latest | 206 | ✅ |
+| rocm-docs-latest | 207 | ✅ |
 | hip-latest | 89 | ✅ |
-| rocm-docs-7.2.0 | 75 | ✅ |
-| rocm-docs-7.0.0 | 66 | ✅ |
-| amdsmi-latest | 48 | ✅ |
+| rocm-docs-7.2.0 | 76 | ✅ |
+| rocm-docs-7.0.0 | 68 | ✅ |
+| amdsmi-latest | 50 | ✅ |
 | rocprofiler-sdk-latest | 44 | ✅ |
 | composable-kernel-latest | 41 | ✅ |
 | hipify-latest | 31 | ✅ |
@@ -24,8 +24,8 @@
 | rocprofiler-latest | 27 | ✅ |
 | rocsparse-latest | 26 | ✅ |
 | hipsolver-latest | 25 | ✅ |
-| rocblas-latest | 24 | ✅ |
 | install-linux-latest | 24 | ✅ |
+| rocblas-latest | 24 | ✅ |
 | rocrand-latest | 22 | ✅ |
 | hipfort-latest | 22 | ⚠️ |
 | miopen-latest | 21 | ⚠️ |
@@ -81,15 +81,16 @@
 - llvm-project-latest (doxygen 页面大量 404，rate limit)
 ```
 
-## 本次运行详情 (2026-05-03 15:00 UTC)
+## 本次运行详情 (2026-05-03 09:10 UTC)
 
-- 运行时间: ~17 分钟（46 个源完整跑完）
-- 抓取源: 46 个子项目
-- Git commit: `b3e9ad8`
-- 本次新增: amdsmi-latest(+16), rocprofiler-sdk-latest(+7),
-  rocprim-latest(+6), rocm-docs-latest(+5), install-linux-latest(+3),
-  hipfort-latest(+3), rocrand-latest(+1), llvm-project-latest(+1),
-  rocm-docs-7.2.0(+1), rocm-docs-7.0.0(+4)
-- 新增文件: 38 篇
-- 更新文件: 13 篇
-- 总计: 1228 篇
+- 运行时间: ~10 分钟（46 个源运行中超时，30 个URL/轮次完成）
+- 抓取源: 46 个子项目（增量模式）
+- Git commit: `12632f0`
+- 新增文件: amdsmi-latest(+2 conceptual/ras + doxygen functions_m),
+  rocm-docs-latest(+3: workload + jax-maxtext-v25.7 + glossary device-hardware),
+  rocm-docs-7.2.0(+2: file-reorg + sglang benchmark),
+  rocm-docs-7.0.0(+3: pytorch-inception + model-acceleration-libraries + ai index),
+  composable-kernel-latest(+1: tile_distribution)
+- 新增文件: 6 篇
+- 更新文件: 5 篇
+- 总计: 1234 篇
