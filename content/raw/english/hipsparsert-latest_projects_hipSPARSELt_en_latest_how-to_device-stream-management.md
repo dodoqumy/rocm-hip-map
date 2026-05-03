@@ -1,12 +1,12 @@
 ---
-title: "Build MIOpen using Docker &#8212; MIOpen 3.5.1 Documentation"
-source_url: "https://rocm.docs.amd.com/projects/MIOpen/en/latest/install/docker-build.html"
+title: "HIP device and stream management &#8212; hipSPARSELt 0.2.6 Documentation"
+source_url: "https://rocm.docs.amd.com/projects/hipSPARSELt/en/latest/how-to/device-stream-management.html"
 source_type: official
 source_org: amd
 credibility: 5
 lifecycle: latest
-fetched_at: 2026-05-03T03:08:53.934756+00:00
-content_hash: "530e32f55f1f3ce8"
+fetched_at: 2026-05-03T03:07:30.083224+00:00
+content_hash: "2c1d4b283f3d4709"
 ---
 
 
@@ -18,10 +18,10 @@ content_hash: "530e32f55f1f3ce8"
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="Build MIOpen using Docker" name="description" />
-<meta content="MIOpen, ROCm, API, documentation, Docker" name="keywords" />
+<meta content="HIP device and stream management with hipSPARSELt" name="description" />
+<meta content="hipSPARSELt, ROCm, API library, API reference, stream management, device management" name="keywords" />
 
-    <title>Build MIOpen using Docker &#8212; MIOpen 3.5.1 Documentation</title>
+    <title>HIP device and stream management &#8212; hipSPARSELt 0.2.6 Documentation</title>
   
   
   
@@ -43,15 +43,15 @@ content_hash: "530e32f55f1f3ce8"
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=643846e8" />
     <link rel="stylesheet" type="text/css" href="../_static/rocm_header.css?v=9557e3d1" />
     <link rel="stylesheet" type="text/css" href="../_static/rocm_footer.css?v=7095035a" />
     <link rel="stylesheet" type="text/css" href="../_static/fonts.css?v=fcff5274" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -59,8 +59,8 @@ content_hash: "530e32f55f1f3ce8"
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=68edac4e"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/documentation_options.js?v=519527b2"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=91c4cb68"></script>
@@ -69,18 +69,18 @@ content_hash: "530e32f55f1f3ce8"
     <script async="async" src="../_static/rdcMisc.js?v=01f88d96"></script>
     <script async="async" src="../_static/theme_mode_captions.js?v=15f4ec5d"></script>
     <script defer="defer" src="../_static/search.js?v=90a4452c"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'install/docker-build';</script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'how-to/device-stream-management';</script>
     <script async="async" src="https://download.amd.com/js/analytics/analyticsinit.js"></script>
     <link rel="icon" href="https://www.amd.com/content/dam/code/images/favicon/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Using the find database" href="../conceptual/finddb.html" />
-    <link rel="prev" title="Build MIOpen for embedded systems" href="embed.html" />
+    <link rel="next" title="Porting from NVIDIA CUDA to hipSPARSELt" href="porting.html" />
+    <link rel="prev" title="hipSPARSELt features for the Instinct MI300 series" href="../conceptual/mi300-features.html" />
     <meta name="google-site-verification" content="vo35SZt_GASsTHAEmdww7AYKPCvZyzLvOXBl8guBME4" />
 
-  <script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="advanced-micro-devices-miopen" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/install/docker-build.html" /><meta name="readthedocs-http-status" content="200" /></head>
+  <script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="advanced-micro-devices-hipsparselt" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/how-to/device-stream-management.html" /><meta name="readthedocs-http-status" content="200" /></head>
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -245,7 +245,7 @@ content_hash: "530e32f55f1f3ce8"
   
   
   
-    <p class="title logo__title">MIOpen 3.5.1 Documentation</p>
+    <p class="title logo__title">hipSPARSELt 0.2.6 Documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -257,40 +257,57 @@ content_hash: "530e32f55f1f3ce8"
 </button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Install</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">MIOpen prerequisites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Install MIOpen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="build-source.html">Build MIOpen from source</a></li>
-<li class="toctree-l1"><a class="reference internal" href="embed.html">Build MIOpen for embedded systems</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Build MIOpen using Docker</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../what-is-hipsparselt.html">What is hipSPARSELt?</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Install</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../install/quick-start-install.html">Quick start installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install/install-hipsparselt.html">Detailed installation guide</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Conceptual</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../conceptual/finddb.html">Find database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../conceptual/cache.html">Kernel cache</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../conceptual/perfdb.html">Performance database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../conceptual/tuningdb.html">Manual tuning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../conceptual/MI200-alt-implementation.html">MI200 alternate implementation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../conceptual/porting-guide.html">Porting to MIOpen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conceptual/storage-format.html">Storage formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conceptual/mi300-features.html">Features for the Instinct MI300 series</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">How to</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../how-to/use-fusion-api.html">Use the fusion API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../how-to/debug-log.html">Log and debug</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../how-to/find-and-immediate.html">Use the find APIs and immediate mode</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../how-to/use-nhwc-batchnorm-in-pytorch.html">Use NHWC Batch Normalization with PyTorch</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Manage devices and streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="porting.html">Port from NVIDIA CUDA</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Samples</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://github.com/ROCm/rocm-libraries/tree/develop/projects/miopen/samples">MIOpen samples</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/ROCm/rocm-libraries/tree/develop/projects/hipsparselt/clients/samples">Client samples</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../reference/index.html">API library</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/supported-functions.html">Supported functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/data-type-support.html">Data type support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/env-variables.html">Environment variables</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../doxygen/html/index.html">API library</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../doxygen/html/modules.html">Modules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/datatypes.html">Datatypes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/env_variables.html">Environment variables</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../doxygen/html/annotated_data_structures.html">Data Structures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doxygen/html/annotated.html">Data Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doxygen/html/classes.html">Data Structure Index</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../doxygen/html/functions_data_fields.html">Data Fields</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../doxygen/html/functions.html">All</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../doxygen/html/functions_vars.html">Variables</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../doxygen/html/files_files.html">Files</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doxygen/html/files.html">File List</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../doxygen/html/globals_globals.html">Globals</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../doxygen/html/globals.html">All</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../doxygen/html/globals_func.html">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../doxygen/html/globals_enum.html">Enumerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../doxygen/html/globals_eval.html">Enumerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../doxygen/html/globals_defs.html">Macros</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
 </ul>
 </details></li>
 </ul>
@@ -345,7 +362,7 @@ content_hash: "530e32f55f1f3ce8"
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Build MIOpen using Docker</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">HIP device and stream management</span></li>
   </ul>
 </nav>
 </div>
@@ -370,7 +387,9 @@ content_hash: "530e32f55f1f3ce8"
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -381,11 +400,21 @@ content_hash: "530e32f55f1f3ce8"
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Build MIOpen using Docker</h1>
+    <h1>HIP device and stream management</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#device-management">Device management</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stream-management">Stream management</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-streams-and-devices">Multiple streams and devices</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -395,36 +424,42 @@ content_hash: "530e32f55f1f3ce8"
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="build-miopen-using-docker">
-<h1>Build MIOpen using Docker<a class="headerlink" href="#build-miopen-using-docker" title="Link to this heading">#</a></h1>
-<p>You can build MIOpen using Docker by either downloading a prebuilt image or creating your own.</p>
+  <section id="hip-device-and-stream-management">
+<span id="device-stream-manage"></span><h1>HIP device and stream management<a class="headerlink" href="#hip-device-and-stream-management" title="Link to this heading">#</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">hipSetDevice</span></code> and <code class="docutils literal notranslate"><span class="pre">hipGetDevice</span></code> are HIP device management APIs. They are not part of the
+hipSPARSELt API.</p>
+<section id="device-management">
+<h2>Device management<a class="headerlink" href="#device-management" title="Link to this heading">#</a></h2>
+<p>hipSPARSELt assumes that you’ve already set the device before making a hipSPARSELt call.</p>
+<p>To set a device, use <code class="docutils literal notranslate"><span class="pre">hipSetDevice</span></code> before making a HIP kernel invocation. If you don’t
+explicitly set a device, the system uses <code class="docutils literal notranslate"><span class="pre">device</span> <span class="pre">0</span></code> as the default. HIP kernels are launched on <code class="docutils literal notranslate"><span class="pre">device</span> <span class="pre">0</span></code> by
+default.</p>
+<p>After setting a device, you can create a handle using <code class="docutils literal notranslate"><span class="pre">hipsparselt_init</span></code>. Subsequent hipSPARSELt
+routines take this handle as an input parameter. hipSPARSELt only queries the
+device  (using <code class="docutils literal notranslate"><span class="pre">hipGetDevice</span></code>). It doesn’t set the device. If hipSPARSELt doesn’t recognize a valid device,
+it returns an error message.
+To ensure device safety, it’s your responsibility to provide hipSPARSELt with a valid device.</p>
+<p>You can’t switch devices between <code class="docutils literal notranslate"><span class="pre">hipsparselt_init</span></code> and <code class="docutils literal notranslate"><span class="pre">hipsparselt_destroy</span></code>. If you want to change
+devices, you must first destroy the current handle and then create a new one.</p>
+</section>
+<section id="stream-management">
+<h2>Stream management<a class="headerlink" href="#stream-management" title="Link to this heading">#</a></h2>
+<p>HIP kernels are always launched in a queue (also known as a stream).</p>
+<p>If you don’t explicitly specify a stream, the system provides a default stream that is maintained by the
+system. You can’t create or destroy the default stream. However, you can create new streams
+using <code class="docutils literal notranslate"><span class="pre">hipStreamCreate</span></code> and bind them to hipSPARSELt operations, such as <code class="docutils literal notranslate"><span class="pre">hipsparselt_spmma_prune</span></code>
+and <code class="docutils literal notranslate"><span class="pre">hipsparselt_matmul</span></code>. HIP kernels are invoked in hipSPARSELt routines</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For ease of use, the prebuilt Docker image is recommended.</p>
+<p>If you create a stream, you’re also responsible for destroying it.</p>
 </div>
-<ul>
-<li><p>Downloading a prebuilt image</p>
-<p>You can find prebuilt Docker images at <a class="reference external" href="https://hub.docker.com/r/rocm/miopen/tags">ROCm Docker Hub</a>.</p>
-</li>
-<li><p>Building your own image</p>
-<ol class="arabic">
-<li><p>To build the Docker image, use <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>miopen-image<span class="w"> </span>.
-</pre></div>
-</div>
-</li>
-<li><p>To enter the development environment, use <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code>, for example:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>-v<span class="w"> </span><span class="nv">$HOME</span>:/data<span class="w"> </span>--privileged<span class="w"> </span>--rm<span class="w"> </span>--device<span class="o">=</span>/dev/kfd<span class="w"> </span>--device<span class="w"> </span>/dev/dri:/dev/dri:rw
---volume<span class="w"> </span>/dev/dri:/dev/dri:rw<span class="w"> </span>-v<span class="w"> </span>/var/lib/docker/:/var/lib/docker<span class="w"> </span>--group-add<span class="w"> </span>video
---cap-add<span class="o">=</span>SYS_PTRACE<span class="w"> </span>--security-opt<span class="w"> </span><span class="nv">seccomp</span><span class="o">=</span>unconfined<span class="w"> </span>miopen-image
-</pre></div>
-</div>
-</li>
-<li><p>Enter the Docker environment and run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">MIOpen</span></code>. You can now build MIOpen using
-CMake. For instructions on how to build MIOpen from source, see <a class="reference internal" href="build-source.html"><span class="doc">building MIOpen</span></a>.</p></li>
-</ol>
-</li>
-</ul>
+</section>
+<section id="multiple-streams-and-devices">
+<h2>Multiple streams and devices<a class="headerlink" href="#multiple-streams-and-devices" title="Link to this heading">#</a></h2>
+<p>If the system under test has multiple HIP devices, you can run multiple hipSPARSELt handles
+concurrently. Each handle is associated with a specific device, so a new handle must be created
+for each additional device. You can’t run a single hipSPARSELt handle on different discrete devices.</p>
+</section>
 </section>
 
 
@@ -439,20 +474,20 @@ CMake. For instructions on how to build MIOpen from source, see <a class="refere
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="embed.html"
+       href="../conceptual/mi300-features.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Build MIOpen for embedded systems</p>
+        <p class="prev-next-title">hipSPARSELt features for the Instinct MI300 series</p>
       </div>
     </a>
     <a class="right-next"
-       href="../conceptual/finddb.html"
+       href="porting.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Using the find database</p>
+        <p class="prev-next-title">Porting from NVIDIA CUDA to hipSPARSELt</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -462,6 +497,24 @@ CMake. For instructions on how to build MIOpen from source, see <a class="refere
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#device-management">Device management</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stream-management">Stream management</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-streams-and-devices">Multiple streams and devices</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

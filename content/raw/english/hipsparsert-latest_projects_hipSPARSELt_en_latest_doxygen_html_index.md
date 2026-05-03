@@ -1,27 +1,25 @@
 ---
-title: "Build MIOpen using Docker &#8212; MIOpen 3.5.1 Documentation"
-source_url: "https://rocm.docs.amd.com/projects/MIOpen/en/latest/install/docker-build.html"
+title: "hipSPARSELt: Main Page &#8212; hipSPARSELt 0.2.6 Documentation"
+source_url: "https://rocm.docs.amd.com/projects/hipSPARSELt/en/latest/doxygen/html/index.html"
 source_type: official
 source_org: amd
 credibility: 5
 lifecycle: latest
-fetched_at: 2026-05-03T03:08:53.934756+00:00
-content_hash: "530e32f55f1f3ce8"
+fetched_at: 2026-05-03T03:07:41.937122+00:00
+content_hash: "41f829b9f3fa6337"
 ---
 
 
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="Build MIOpen using Docker" name="description" />
-<meta content="MIOpen, ROCm, API, documentation, Docker" name="keywords" />
 
-    <title>Build MIOpen using Docker &#8212; MIOpen 3.5.1 Documentation</title>
+    <title>hipSPARSELt: Main Page &#8212; hipSPARSELt 0.2.6 Documentation</title>
   
   
   
@@ -40,47 +38,47 @@ content_hash: "530e32f55f1f3ce8"
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=643846e8" />
-    <link rel="stylesheet" type="text/css" href="../_static/rocm_header.css?v=9557e3d1" />
-    <link rel="stylesheet" type="text/css" href="../_static/rocm_footer.css?v=7095035a" />
-    <link rel="stylesheet" type="text/css" href="../_static/fonts.css?v=fcff5274" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=643846e8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/rocm_header.css?v=9557e3d1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/rocm_footer.css?v=7095035a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/fonts.css?v=fcff5274" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=68edac4e"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=91c4cb68"></script>
-    <script async="async" src="../_static/code_word_breaks.js?v=327952c4"></script>
-    <script async="async" src="../_static/renameVersionLinks.js?v=929fe5e4"></script>
-    <script async="async" src="../_static/rdcMisc.js?v=01f88d96"></script>
-    <script async="async" src="../_static/theme_mode_captions.js?v=15f4ec5d"></script>
-    <script defer="defer" src="../_static/search.js?v=90a4452c"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'install/docker-build';</script>
+    <script src="../../_static/documentation_options.js?v=519527b2"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=91c4cb68"></script>
+    <script async="async" src="../../_static/code_word_breaks.js?v=327952c4"></script>
+    <script async="async" src="../../_static/renameVersionLinks.js?v=929fe5e4"></script>
+    <script async="async" src="../../_static/rdcMisc.js?v=01f88d96"></script>
+    <script async="async" src="../../_static/theme_mode_captions.js?v=15f4ec5d"></script>
+    <script defer="defer" src="../../_static/search.js?v=90a4452c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'doxygen/html/index';</script>
     <script async="async" src="https://download.amd.com/js/analytics/analyticsinit.js"></script>
     <link rel="icon" href="https://www.amd.com/content/dam/code/images/favicon/favicon.ico"/>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Using the find database" href="../conceptual/finddb.html" />
-    <link rel="prev" title="Build MIOpen for embedded systems" href="embed.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Modules" href="modules.html" />
+    <link rel="prev" title="Environment variables" href="../../reference/env-variables.html" />
     <meta name="google-site-verification" content="vo35SZt_GASsTHAEmdww7AYKPCvZyzLvOXBl8guBME4" />
 
-  <script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="advanced-micro-devices-miopen" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/install/docker-build.html" /><meta name="readthedocs-http-status" content="200" /></head>
+  <script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="advanced-micro-devices-hipsparselt" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/doxygen/html/index.html" /><meta name="readthedocs-http-status" content="200" /></head>
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -98,7 +96,7 @@ content_hash: "530e32f55f1f3ce8"
   <dialog id="pst-search-dialog">
     
 <form class="bd-search d-flex align-items-center"
-      action="../search.html"
+      action="../../search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -132,7 +130,7 @@ content_hash: "530e32f55f1f3ce8"
             
             <div class="header-logo">
                 <a class="navbar-brand" href="https://www.amd.com/">
-                    <img src="../_static/images/amd-header-logo.svg" alt="AMD Logo" title="AMD Logo" width="90" class="d-inline-block align-text-top hover-opacity"/>
+                    <img src="../../_static/images/amd-header-logo.svg" alt="AMD Logo" title="AMD Logo" width="90" class="d-inline-block align-text-top hover-opacity"/>
                 </a>
                 <div class="vr vr mx-40 my-25"></div>
                 
@@ -238,14 +236,14 @@ content_hash: "530e32f55f1f3ce8"
     
   
 
-<a class="navbar-brand logo" href="../index.html">
+<a class="navbar-brand logo" href="../../index.html">
   
   
   
   
   
   
-    <p class="title logo__title">MIOpen 3.5.1 Documentation</p>
+    <p class="title logo__title">hipSPARSELt 0.2.6 Documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -257,46 +255,63 @@ content_hash: "530e32f55f1f3ce8"
 </button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Install</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">MIOpen prerequisites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Install MIOpen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="build-source.html">Build MIOpen from source</a></li>
-<li class="toctree-l1"><a class="reference internal" href="embed.html">Build MIOpen for embedded systems</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Build MIOpen using Docker</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-hipsparselt.html">What is hipSPARSELt?</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Install</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../install/quick-start-install.html">Quick start installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install/install-hipsparselt.html">Detailed installation guide</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Conceptual</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../conceptual/finddb.html">Find database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../conceptual/cache.html">Kernel cache</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../conceptual/perfdb.html">Performance database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../conceptual/tuningdb.html">Manual tuning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../conceptual/MI200-alt-implementation.html">MI200 alternate implementation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../conceptual/porting-guide.html">Porting to MIOpen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../conceptual/storage-format.html">Storage formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../conceptual/mi300-features.html">Features for the Instinct MI300 series</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">How to</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../how-to/use-fusion-api.html">Use the fusion API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../how-to/debug-log.html">Log and debug</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../how-to/find-and-immediate.html">Use the find APIs and immediate mode</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../how-to/use-nhwc-batchnorm-in-pytorch.html">Use NHWC Batch Normalization with PyTorch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../how-to/device-stream-management.html">Manage devices and streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../how-to/porting.html">Port from NVIDIA CUDA</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Samples</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://github.com/ROCm/rocm-libraries/tree/develop/projects/miopen/samples">MIOpen samples</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/ROCm/rocm-libraries/tree/develop/projects/hipsparselt/clients/samples">Client samples</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../reference/index.html">API library</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../doxygen/html/modules.html">Modules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/datatypes.html">Datatypes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/env_variables.html">Environment variables</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../reference/supported-functions.html">Supported functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/data-type-support.html">Data type support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/env-variables.html">Environment variables</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">API library</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="annotated_data_structures.html">Data Structures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="annotated.html">Data Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classes.html">Data Structure Index</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="functions_data_fields.html">Data Fields</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="functions.html">All</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functions_vars.html">Variables</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="files_files.html">Files</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="files.html">File List</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="globals_globals.html">Globals</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="globals.html">All</a></li>
+<li class="toctree-l4"><a class="reference internal" href="globals_func.html">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="globals_enum.html">Enumerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="globals_eval.html">Enumerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="globals_defs.html">Macros</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
 </ul>
 
     </div>
@@ -341,11 +356,11 @@ content_hash: "530e32f55f1f3ce8"
   <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
-      <a href="../index.html" class="nav-link" aria-label="Home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Build MIOpen using Docker</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">hipSPARSELt: Main Page</span></li>
   </ul>
 </nav>
 </div>
@@ -381,7 +396,7 @@ content_hash: "530e32f55f1f3ce8"
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Build MIOpen using Docker</h1>
+    <h1>hipSPARSELt</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -395,36 +410,71 @@ content_hash: "530e32f55f1f3ce8"
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="build-miopen-using-docker">
-<h1>Build MIOpen using Docker<a class="headerlink" href="#build-miopen-using-docker" title="Link to this heading">#</a></h1>
-<p>You can build MIOpen using Docker by either downloading a prebuilt image or creating your own.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For ease of use, the prebuilt Docker image is recommended.</p>
+  <section id="hipsparselt">
+<h1>hipSPARSELt<a class="headerlink" href="#hipsparselt" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
 </div>
+<div class="doxygen-content docutils container">
+<!-- HTML header for doxygen 1.9.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$langISO">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>hipSPARSELt: Main Page</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="stylesheet.css" rel="stylesheet" type="text/css" />
+<link href="extra_stylesheet.css" rel="stylesheet" type="text/css"/>
+<script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="advanced-micro-devices-hipsparselt" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/doxygen/html/index.html" /><meta name="readthedocs-http-status" content="200" /></head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- Generated by Doxygen 1.9.1 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Search');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">hipSPARSELt Documentation</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__home_docs_checkouts_readthedocs_org_user_builds_advanced_micro_devices_hipsparselt_checkouts_latest_projects_hipsparselt_docs_reference_api_library"></a> The hipSPARSELt library is organized as follows:</p>
 <ul>
-<li><p>Downloading a prebuilt image</p>
-<p>You can find prebuilt Docker images at <a class="reference external" href="https://hub.docker.com/r/rocm/miopen/tags">ROCm Docker Hub</a>.</p>
-</li>
-<li><p>Building your own image</p>
-<ol class="arabic">
-<li><p>To build the Docker image, use <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>miopen-image<span class="w"> </span>.
-</pre></div>
-</div>
-</li>
-<li><p>To enter the development environment, use <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code>, for example:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>-v<span class="w"> </span><span class="nv">$HOME</span>:/data<span class="w"> </span>--privileged<span class="w"> </span>--rm<span class="w"> </span>--device<span class="o">=</span>/dev/kfd<span class="w"> </span>--device<span class="w"> </span>/dev/dri:/dev/dri:rw
---volume<span class="w"> </span>/dev/dri:/dev/dri:rw<span class="w"> </span>-v<span class="w"> </span>/var/lib/docker/:/var/lib/docker<span class="w"> </span>--group-add<span class="w"> </span>video
---cap-add<span class="o">=</span>SYS_PTRACE<span class="w"> </span>--security-opt<span class="w"> </span><span class="nv">seccomp</span><span class="o">=</span>unconfined<span class="w"> </span>miopen-image
-</pre></div>
-</div>
-</li>
-<li><p>Enter the Docker environment and run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">MIOpen</span></code>. You can now build MIOpen using
-CMake. For instructions on how to build MIOpen from source, see <a class="reference internal" href="build-source.html"><span class="doc">building MIOpen</span></a>.</p></li>
-</ol>
-</li>
+<li><a class="el" href="group__types__module.html">Data types</a></li>
+<li><a class="el" href="group__library__module.html">Library management functions</a></li>
+<li><a class="el" href="group__matrix__desc__module.html">Matrix descriptor functions</a></li>
+<li><a class="el" href="group__matmul__module.html">Matrix multiply (matmul) functions</a></li>
+<li><a class="el" href="group__matmul__desc__module.html">Matmul descriptor functions</a></li>
+<li><a class="el" href="group__matmul__algo__module.html">Matmul algorithm functions</a></li>
+<li><a class="el" href="group__helper__module.html">Helper functions</a></li>
+<li><a class="el" href="group__aux__module.html">Auxilary functions</a></li>
 </ul>
+<p><b>Note:</b> Unless otherwise stated, all hipSPARSELt library functions are non-blocking and run asynchronously with respect to the host. They might return before the actual computation has finished. To force synchronization, use <code>hipDeviceSynchronize</code> or <code>hipStreamSynchronize</code>. </p>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.6-->
+<!-- start footer part -->
+<!--BEGIN GENERATE_TREEVIEW-->
+</body>
+</html>
+</div>
 </section>
 
 
@@ -439,20 +489,20 @@ CMake. For instructions on how to build MIOpen from source, see <a class="refere
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="embed.html"
+       href="../../reference/env-variables.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Build MIOpen for embedded systems</p>
+        <p class="prev-next-title">Environment variables</p>
       </div>
     </a>
     <a class="right-next"
-       href="../conceptual/finddb.html"
+       href="modules.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Using the find database</p>
+        <p class="prev-next-title">Modules</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -476,8 +526,8 @@ CMake. For instructions on how to build MIOpen from source, see <a class="refere
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
 <footer class="rocm-footer">
     <div class="container-lg">
@@ -511,7 +561,7 @@ CMake. For instructions on how to build MIOpen from source, see <a class="refere
 </footer>
 
 <!-- <div id="rdc-watermark-container">
-    <img id="rdc-watermark" src="../_static/images/alpha-watermark.svg" alt="DRAFT watermark"/>
+    <img id="rdc-watermark" src="../../_static/images/alpha-watermark.svg" alt="DRAFT watermark"/>
 </div> -->
   </body>
 </html>

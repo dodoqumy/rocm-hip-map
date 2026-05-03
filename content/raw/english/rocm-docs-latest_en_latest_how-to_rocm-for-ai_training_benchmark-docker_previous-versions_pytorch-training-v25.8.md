@@ -1,61 +1,53 @@
 ---
 title: "Training a model with PyTorch on ROCm"
-source_url: "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/training/benchmark-docker/previous-versions/pytorch-training-v25.10.html"
+source_url: "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/training/benchmark-docker/previous-versions/pytorch-training-v25.8.html"
 source_type: official
 source_org: amd
 credibility: 5
 lifecycle: latest
-fetched_at: 2026-05-03T03:01:45.172496+00:00
-content_hash: "1c70cd2f59e4bee4"
+fetched_at: 2026-05-03T03:01:52.208120+00:00
+content_hash: "4b1b96b84fcde998"
 ---
 
 # Training a model with PyTorch on ROCm[#](#training-a-model-with-pytorch-on-rocm)
 
 2026-04-21
 
-43 min read time
+41 min read time
 
 Caution
 
 This documentation does not reflect the latest version of ROCm PyTorch training
 performance benchmark documentation. See [Training a model with PyTorch on ROCm](../pytorch-training.html) for the latest version.
 
-Note
+PyTorch is an open-source machine learning framework that is widely used for model training with GPU-optimized components for transformer-based models.
 
-For a unified training solution on AMD GPUs with ROCm, the [rocm/pytorch-training](https://hub.docker.com/r/rocm/pytorch-training/) Docker Hub registry will be
-deprecated soon in favor of [rocm/primus](https://hub.docker.com/r/rocm/primus).
-The `rocm/primus`
+The [PyTorch for ROCm training Docker](https://hub.docker.com/layers/rocm/pytorch-training/v25.8/images/sha256-5082ae01d73fec6972b0d84e5dad78c0926820dcf3c19f301d6c8eb892e573c5)
+(`rocm/pytorch-training:v25.8`
 
-Docker containers will cover PyTorch training ecosystem frameworks,
-including torchtitan and [Megatron-LM](../primus-megatron.html).
-
-See [Training a model with Primus and PyTorch](../primus-pytorch.html) for details.
-
-PyTorch is an open-source machine learning framework that is widely used for model training with GPU-optimized components for transformer-based models. The PyTorch for ROCm training Docker image provides a prebuilt optimized environment for fine-tuning and pretraining a model on AMD Instinct MI325X and MI300X GPUs. It includes the following software components to accelerate training workloads:
+) image provides a prebuilt optimized environment for fine-tuning and pretraining a
+model on AMD Instinct MI325X and MI300X GPUs. It includes the following software components to accelerate
+training workloads:
 
 Software component |
 Version |
 |---|---|
 ROCm |
-7.1.0 |
-Primus |
-0.3.0 |
-Primus Turbo |
-0.1.1 |
+6.4.3 |
 PyTorch |
-2.10.0.dev20251112+rocm7.1 |
+2.8.0a0+gitd06a406 |
 Python |
-3.10 |
+3.10.18 |
 Transformer Engine |
-2.4.0.dev0+32e2d1d4 |
+2.2.0.dev0+a1e66aae |
 Flash Attention |
-2.8.3 |
+3.0.0.post1 |
 hipBLASLt |
-1.2.0-09ab7153e2 |
+1.1.0-d1b517fc7a |
 
 ## Supported models[#](#supported-models)
 
-The following models are pre-optimized for performance on the AMD Instinct MI355X, MI350X, MI325X, and MI300X GPUs. Some instructions, commands, and training recommendations in this documentation might vary by model – select one to get started.
+The following models are pre-optimized for performance on the AMD Instinct MI325X and MI300X GPUs. Some instructions, commands, and training recommendations in this documentation might vary by model – select one to get started.
 
 The following table lists supported training modes per model.
 
@@ -96,8 +88,6 @@ GPT OSS 20B |
 |
 GPT OSS 120B |
 |
-DeepSeek V2 16B |
-|
 Qwen 3 8B |
 |
 Qwen 3 32B |
@@ -113,8 +103,6 @@ Qwen 2 7B |
 Stable Diffusion XL |
 |
 FLUX.1-dev |
-|
-DLRM v2 |
 |
 
 Note
@@ -154,7 +142,7 @@ This Docker image is optimized for specific model configurations outlined below.
 Once the setup is complete, choose between two options to start benchmarking training:
 
 The following run command is tailored to Llama 4 Scout 17B-16E.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -173,7 +161,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Llama 3.3 70B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -192,7 +180,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Llama 3.2 1B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -211,7 +199,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Llama 3.2 3B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -230,7 +218,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Llama 3.2 Vision 11B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -249,7 +237,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Llama 3.2 Vision 90B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -268,7 +256,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Llama 3.1 8B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -287,7 +275,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Llama 3.1 70B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -306,7 +294,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Llama 3.1 405B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -325,7 +313,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Llama 3 8B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -344,7 +332,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Llama 3 70B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -363,7 +351,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Llama 2 7B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -382,7 +370,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Llama 2 13B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -401,7 +389,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Llama 2 70B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -420,7 +408,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to GPT OSS 20B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -439,7 +427,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to GPT OSS 120B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -457,27 +445,8 @@ MAD launches a Docker container with the name
 
 .
 
-The following run command is tailored to DeepSeek V2 16B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
-
-Clone the ROCm Model Automation and Dashboarding (
-
-[ROCm/MAD](https://github.com/ROCm/MAD)) repository to a local directory and install the required packages on the host machine.clone https://github.com/ROCm/MAD cd MAD pip install -r requirements.txt
-
-For example, use this command to run the performance benchmark test on the DeepSeek V2 16B model using one node with the BF16 data type on the host machine.
-
-export MAD_SECRETS_HFTOKEN="your personal Hugging Face token to access gated models" madengine run \ --tags primus_pyt_train_deepseek-v2 \ --keep-model-dir \ --live-output \ --timeout 28800
-
-MAD launches a Docker container with the name
-
-`container_ci-primus_pyt_train_deepseek-v2`
-
-. The latency and throughput reports of the model are collected in`~/MAD/perf.csv`
-
-.
-
 The following run command is tailored to Qwen 3 8B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -496,7 +465,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Qwen 3 32B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -515,7 +484,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Qwen 2.5 32B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -534,7 +503,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Qwen 2.5 72B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -553,7 +522,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Qwen 2 1.5B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -572,7 +541,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Qwen 2 7B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -591,7 +560,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to Stable Diffusion XL.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -610,7 +579,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to FLUX.1-dev.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -629,7 +598,7 @@ MAD launches a Docker container with the name
 .
 
 The following run command is tailored to NCF.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Clone the ROCm Model Automation and Dashboarding (
 
@@ -647,115 +616,90 @@ MAD launches a Docker container with the name
 
 .
 
-The following run command is tailored to DLRM v2.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
-
-Clone the ROCm Model Automation and Dashboarding (
-
-[ROCm/MAD](https://github.com/ROCm/MAD)) repository to a local directory and install the required packages on the host machine.clone https://github.com/ROCm/MAD cd MAD pip install -r requirements.txt
-
-For example, use this command to run the performance benchmark test on the DLRM v2 model using one node with the data type on the host machine.
-
-export MAD_SECRETS_HFTOKEN="your personal Hugging Face token to access gated models" madengine run \ --tags pyt_train_dlrm \ --keep-model-dir \ --live-output \ --timeout 28800
-
-MAD launches a Docker container with the name
-
-`container_ci-pyt_train_dlrm`
-
-. The latency and throughput reports of the model are collected in`~/MAD/perf.csv`
-
-.
-
 The following commands are tailored to Llama 4 Scout 17B-16E.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Llama 3.3 70B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Llama 3.2 1B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Llama 3.2 3B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Llama 3.2 Vision 11B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Llama 3.2 Vision 90B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Llama 3.1 8B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Llama 3.1 70B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Llama 3.1 405B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Llama 3 8B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Llama 3 70B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Llama 2 7B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Llama 2 13B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Llama 2 70B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to GPT OSS 20B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to GPT OSS 120B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
-
-The following commands are tailored to DeepSeek V2 16B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Qwen 3 8B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Qwen 3 32B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Qwen 2.5 32B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Qwen 2.5 72B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Qwen 2 1.5B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Qwen 2 7B.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to Stable Diffusion XL.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to FLUX.1-dev.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 The following commands are tailored to NCF.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
-
-The following commands are tailored to DLRM v2.
-See [Supported models](#amd-pytorch-training-model-support-v2510) to switch to another available model.
+See [Supported models](#amd-pytorch-training-model-support) to switch to another available model.
 
 Download the Docker image and required packages
 
 Use the following command to pull the Docker image from Docker Hub.
 
-pull rocm/primus:v25.10
+pull rocm/pytorch-training:v25.8
 
-Launch the Docker container.
+Run the Docker container.
 
-run -it \ --device /dev/dri \ --device /dev/kfd \ --network host \ --ipc host \ --group-add video \ --cap-add SYS_PTRACE \ --security-opt seccomp=unconfined \ --privileged \ -v $HOME:$HOME \ -v $HOME/.ssh:/root/.ssh \ --shm-size 64G \ --name training_env \ rocm/primus:v25.10
+run -it \ --device /dev/dri \ --device /dev/kfd \ --network host \ --ipc host \ --group-add video \ --cap-add SYS_PTRACE \ --security-opt seccomp=unconfined \ --privileged \ -v $HOME:$HOME \ -v $HOME/.ssh:/root/.ssh \ --shm-size 64G \ --name training_env \ rocm/pytorch-training:v25.8
 
 Use these commands if you exit the
 
@@ -828,7 +772,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -858,7 +802,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -891,7 +835,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -921,7 +865,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -951,7 +895,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -978,7 +922,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -1009,7 +953,7 @@ For LoRA and QLoRA support with vision models (Llama 3.2 11B and 90B), use the f
 checkout 48192e23188b1fc524dd6d127725ceb2348e7f0e
 ```
 
-Pretraining
+Pre-training
 
 To start the pre-training benchmark, use the following command with the appropriate options. See the following list of options and their descriptions.
 
@@ -1041,7 +985,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -1067,7 +1011,7 @@ All models support BF16. FP8 is only available for full weight fine-tuning. |
 Between 2048 and 16384. |
 Sequence length for the language model. |
 
-Pretraining
+Pre-training
 
 To start the pre-training benchmark, use the following command with the appropriate options. See the following list of options and their descriptions.
 
@@ -1096,7 +1040,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -1126,7 +1070,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -1153,7 +1097,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -1183,7 +1127,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -1213,7 +1157,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -1269,7 +1213,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -1322,7 +1266,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -1375,7 +1319,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -1402,7 +1346,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -1425,36 +1369,11 @@ All models support BF16. |
 Between 2048 and 16384. |
 Sequence length for the language model. |
 
-Pretraining
-
-To start the pre-training benchmark, use the following command with the appropriate options. See the following list of options and their descriptions.
-
-```
--t pretrain \
--m DeepSeek-V2 \
--p $datatype \
--s $sequence_length
-```
-
-Name |
-Options |
-Description |
-|---|---|---|
-|
-|
-Benchmark pre-training. |
-|
-|
-Only Llama 3.1 8B supports FP8 precision. |
-|
-Sequence length for the language model. |
-Between 2048 and 8192. 8192 by default. |
-
 Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -1484,7 +1403,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -1511,7 +1430,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -1538,7 +1457,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -1565,7 +1484,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -1595,7 +1514,7 @@ Fine-tuning
 
 To start the fine-tuning benchmark, use the following command with the
 appropriate options. See the following list of options and their descriptions.
-See [supported training modes](#amd-pytorch-training-supported-training-modes-v2510).
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
 -t $training_mode \
@@ -1621,12 +1540,14 @@ All models support BF16. FP8 is only available for full weight fine-tuning. |
 Between 2048 and 16384. |
 Sequence length for the language model. |
 
-Post-training
+Fine-tuning
 
-To start the post-training benchmark, use the following command with the appropriate options. See the following list of options and their descriptions.
+To start the fine-tuning benchmark, use the following command with the
+appropriate options. See the following list of options and their descriptions.
+See [supported training modes](#amd-pytorch-training-supported-training-modes).
 
 ```
--t posttrain \
+-t $training_mode \
 -m SDXL \
 -p $datatype \
 -s $sequence_length
@@ -1638,24 +1559,37 @@ Description |
 |---|---|---|
 |
 |
-Benchmark post-training. |
+LoRA fine-tuning (BF16 supported). |
 |
 |
-Only Llama 3.1 8B supports FP8 precision. |
+All models support BF16. |
 |
+Between 2048 and 16384. |
 Sequence length for the language model. |
-Between 2048 and 8192. 8192 by default. |
 
-Post-training
+Pre-training
 
-To start the post-training benchmark, use the following command with the appropriate options. See the following list of options and their descriptions.
+To start the pre-training benchmark, use the following command with the appropriate options. See the following list of options and their descriptions.
 
 ```
--t posttrain \
+-t pretrain \
 -m Flux \
 -p $datatype \
 -s $sequence_length
 ```
+
+Note
+
+Currently, FLUX models are not supported out-of-the-box on rocm/pytorch-training:v25.8.
+To use FLUX, refer to `rocm/pytorch-training`
+
+Docker: [Training a model with PyTorch for ROCm](pytorch-training-v25.6.html)
+
+Occasionally, downloading the Flux dataset might fail. In the event of this
+error, manually download it from Hugging Face at
+[black-forest-labs/FLUX.1-dev](https://huggingface.co/black-forest-labs/FLUX.1-dev)
+and save it to /workspace/FluxBenchmark. This ensures that the test script can access
+the required dataset.
 
 Name |
 Options |
@@ -1663,28 +1597,13 @@ Description |
 |---|---|---|
 |
 |
-Benchmark post-training. |
+Benchmark pre-training. |
 |
 |
 Only Llama 3.1 8B supports FP8 precision. |
 |
 Sequence length for the language model. |
 Between 2048 and 8192. 8192 by default. |
-
-Pretraining
-
-To start the pre-training benchmark, use the following command with the appropriate options. See the following list of options and their descriptions.
-
-Go to the DLRM directory.
-
-cd /workspace/DLRMBenchmark
-
-To run the single node training benchmark for DLRM-v2 with TF32 precision, run the following script.
-
-To run with MAD within the Docker container, use the following command.
-
--t pretrain -m DLRM
-
 
 Benchmarking examples
 
@@ -1751,7 +1670,7 @@ To learn more about MAD and the
 
 `madengine`
 
-CLI, see the[MAD usage guide](https://github.com/ROCm/MAD?tab=readme-ov-file#usage-guide).To learn more about system settings and management practices to configure your system for AMD Instinct MI300X Series GPUs, see
+CLI, see the[MAD usage guide](https://github.com/ROCm/MAD?tab=readme-ov-file#usage-guide).To learn more about system settings and management practices to configure your system for AMD Instinct MI300X series GPUs, see
 
 [AMD Instinct MI300X system optimization](https://instinct.docs.amd.com/projects/amdgpu-docs/en/latest/system-optimization/mi300x.html).For a list of other ready-made Docker images for AI with ROCm, see
 
