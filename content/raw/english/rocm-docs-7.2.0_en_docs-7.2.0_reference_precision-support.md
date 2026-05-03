@@ -1,22 +1,22 @@
 ---
 title: "Data types and precision support"
-source_url: "https://rocm.docs.amd.com/en/latest/reference/precision-support.html"
+source_url: "https://rocm.docs.amd.com/en/docs-7.2.0/reference/precision-support.html"
 source_type: official
 source_org: amd
 credibility: 5
 lifecycle: latest
-fetched_at: 2026-05-03T00:02:16.539902+00:00
-content_hash: "75040c7f10e903ba"
+fetched_at: 2026-05-03T00:02:36.837224+00:00
+content_hash: "8eaa0287b029a262"
 ---
 
 # Data types and precision support[#](#data-types-and-precision-support)
 
-2026-01-23
+2025-12-12
 
 12 min read time
 
 This topic summarizes the data types supported on AMD GPUs and
-ROCm libraries, along with corresponding [HIP](https://rocm.docs.amd.com/projects/HIP/en/latest/index.html) data types.
+ROCm libraries, along with corresponding [HIP](https://rocm.docs.amd.com/projects/HIP/en/docs-7.2.0/index.html) data types.
 
 ## Integral types[#](#integral-types)
 
@@ -88,7 +88,7 @@ CDNA3 natively supports FP8 FNUZ (E4M3 and E5M2), which differs from the customi
 
 The
 
-[low precision floating point types page](https://rocm.docs.amd.com/projects/HIP/en/latest/reference/low_fp_types.html)describes how to use these types in HIP with examples.
+[low precision floating point types page](https://rocm.docs.amd.com/projects/HIP/en/docs-7.2.0/reference/low_fp_types.html)describes how to use these types in HIP with examples.
 
 ## Level of support definitions[#](#level-of-support-definitions)
 
@@ -717,7 +717,7 @@ ROCm library support for int8, float8 (E4M3), float8 (E5M2), int16, float16, bfl
 
 The following tables list ROCm library support for specific input and output data types. Select a library from the below table to view the supported data types.
 
-For more information, please visit [Composable Kernel](https://rocm.docs.amd.com/projects/composable_kernel/en/latest/reference/Composable_Kernel_supported_scalar_types.html).
+For more information, please visit [Composable Kernel](https://rocm.docs.amd.com/projects/composable_kernel/en/docs-7.2.0/reference/Composable_Kernel_supported_scalar_types.html).
 
 Data Type |
 Support |
@@ -745,7 +745,7 @@ float32 |
 float64 |
 ✅ |
 
-For more information, please visit [MIGraphX](https://rocm.docs.amd.com/projects/AMDMIGraphX/en/latest/reference/MIGraphX-cpp.html).
+For more information, please visit [MIGraphX](https://rocm.docs.amd.com/projects/AMDMIGraphX/en/docs-7.2.0/reference/MIGraphX-cpp.html).
 
 Data Type |
 Support |
@@ -771,7 +771,7 @@ float32 |
 float64 |
 ✅ |
 
-For more information, please visit [MIOpen](https://rocm.docs.amd.com/projects/MIOpen/en/latest/reference/datatypes.html).
+For more information, please visit [MIOpen](https://rocm.docs.amd.com/projects/MIOpen/en/docs-7.2.0/reference/datatypes.html).
 
 Data Type |
 Support |
@@ -793,7 +793,7 @@ float32 |
 float64 |
 ⚠️ |
 
-For more information, please visit [RCCL](https://rocm.docs.amd.com/projects/rccl/en/latest/api-reference/library-specification.html).
+For more information, please visit [RCCL](https://rocm.docs.amd.com/projects/rccl/en/docs-7.2.0/api-reference/library-specification.html).
 
 Data Type |
 Support |
@@ -817,7 +817,7 @@ float32 |
 float64 |
 ✅ |
 
-For more information, please visit [hipBLAS](https://rocm.docs.amd.com/projects/hipBLAS/en/latest/reference/data-type-support.html).
+For more information, please visit [hipBLAS](https://rocm.docs.amd.com/projects/hipBLAS/en/docs-7.2.0/reference/data-type-support.html).
 
 Data Type |
 Support |
@@ -831,7 +831,7 @@ float32 |
 float64 |
 ✅ |
 
-For more information, please visit [hipBLASLt](https://rocm.docs.amd.com/projects/hipBLASLt/en/latest/reference/data-type-support.html).
+For more information, please visit [hipBLASLt](https://rocm.docs.amd.com/projects/hipBLASLt/en/docs-7.2.0/reference/data-type-support.html).
 
 Data Type |
 Support |
@@ -865,7 +865,7 @@ float32 |
 float64 |
 ✅ |
 
-For more information, please visit [hipRAND](https://rocm.docs.amd.com/projects/hipRAND/en/latest/api-reference/data-type-support.html).
+For more information, please visit [hipRAND](https://rocm.docs.amd.com/projects/hipRAND/en/docs-7.2.0/api-reference/data-type-support.html).
 
 Data Type |
 Support |
@@ -885,7 +885,7 @@ Output only |
 float64 |
 Output only |
 
-For more information, please visit [hipSPARSELt](https://rocm.docs.amd.com/projects/hipSPARSELt/en/latest/reference/data-type-support.html).
+For more information, please visit [hipSPARSELt](https://rocm.docs.amd.com/projects/hipSPARSELt/en/docs-7.2.0/reference/data-type-support.html).
 
 Data Type |
 Support |
@@ -903,7 +903,7 @@ bfloat16 |
 float32 |
 ✅ |
 
-For more information, please visit [rocBLAS](https://rocm.docs.amd.com/projects/rocBLAS/en/latest/reference/data-type-support.html).
+For more information, please visit [rocBLAS](https://rocm.docs.amd.com/projects/rocBLAS/en/docs-7.2.0/reference/data-type-support.html).
 
 Data Type |
 Support |
@@ -917,7 +917,7 @@ float32 |
 float64 |
 ✅ |
 
-For more information, please visit [rocRAND](https://rocm.docs.amd.com/projects/rocRAND/en/latest/api-reference/data-type-support.html).
+For more information, please visit [rocRAND](https://rocm.docs.amd.com/projects/rocRAND/en/docs-7.2.0/api-reference/data-type-support.html).
 
 Data Type |
 Support |
@@ -937,7 +937,7 @@ Output only |
 float64 |
 Output only |
 
-For more information, please visit [rocWMMA](https://rocm.docs.amd.com/projects/rocWMMA/en/latest/api-reference/api-reference-guide.html).
+For more information, please visit [rocWMMA](https://rocm.docs.amd.com/projects/rocWMMA/en/docs-7.2.0/api-reference/api-reference-guide.html).
 
 Data Type |
 Support |
@@ -961,7 +961,7 @@ float32 |
 float64 |
 ✅ |
 
-For more information, please visit [Tensile](https://rocm.docs.amd.com/projects/Tensile/en/latest/src/reference/precision-support.html).
+For more information, please visit [Tensile](https://rocm.docs.amd.com/projects/Tensile/en/docs-7.2.0/src/reference/precision-support.html).
 
 Data Type |
 Support |
@@ -1007,7 +1007,7 @@ float32 |
 float64 |
 ✅ |
 
-For more information, please visit [hipTensor](https://rocm.docs.amd.com/projects/hipTensor/en/latest/api-reference/api-reference.html).
+For more information, please visit [hipTensor](https://rocm.docs.amd.com/projects/hipTensor/en/docs-7.2.0/api-reference/api-reference.html).
 
 Data Type |
 Support |
@@ -1021,7 +1021,7 @@ float32 |
 float64 |
 ✅ |
 
-For more information, please visit [rocPRIM](https://rocm.docs.amd.com/projects/rocPRIM/en/latest/reference/data-type-support.html).
+For more information, please visit [rocPRIM](https://rocm.docs.amd.com/projects/rocPRIM/en/docs-7.2.0/reference/data-type-support.html).
 
 Data Type |
 Support |
@@ -1079,7 +1079,7 @@ hipBLASLt supports additional data types as internal compute types, which may
 differ from the supported input/output types shown in the tables above. While
 TensorFloat32 is not supported as an input or output type in this library, it
 is available as an internal compute type. For complete details on supported
-compute types, refer to the [hipBLASLt](https://rocm.docs.amd.com/projects/hipBLASLt/en/latest/reference/data-type-support.html)
+compute types, refer to the [hipBLASLt](https://rocm.docs.amd.com/projects/hipBLASLt/en/docs-7.2.0/reference/data-type-support.html)
 documentation.
 
 ### hipDataType enumeration[#](#hipdatatype-enumeration)

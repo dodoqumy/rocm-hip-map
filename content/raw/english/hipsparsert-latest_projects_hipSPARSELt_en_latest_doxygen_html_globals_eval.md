@@ -1,12 +1,12 @@
 ---
-title: "API library: Modules &#8212; rocRAND 4.2.0 Documentation"
-source_url: "https://rocm.docs.amd.com/projects/rocRAND/en/latest/doxygen/html/modules.html"
+title: "hipSPARSELt: Globals &#8212; hipSPARSELt 0.2.6 Documentation"
+source_url: "https://rocm.docs.amd.com/projects/hipSPARSELt/en/latest/doxygen/html/globals_eval.html"
 source_type: official
 source_org: amd
 credibility: 5
 lifecycle: latest
-fetched_at: 2026-05-03T00:08:55.618932+00:00
-content_hash: "1b6cdba9c90edadf"
+fetched_at: 2026-05-03T00:07:34.804449+00:00
+content_hash: "d3b2afdb3954d818"
 ---
 
 
@@ -19,7 +19,7 @@ content_hash: "1b6cdba9c90edadf"
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>API library: Modules &#8212; rocRAND 4.2.0 Documentation</title>
+    <title>hipSPARSELt: Globals &#8212; hipSPARSELt 0.2.6 Documentation</title>
   
   
   
@@ -41,15 +41,15 @@ content_hash: "1b6cdba9c90edadf"
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=643846e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/rocm_header.css?v=9557e3d1" />
     <link rel="stylesheet" type="text/css" href="../../_static/rocm_footer.css?v=7095035a" />
     <link rel="stylesheet" type="text/css" href="../../_static/fonts.css?v=fcff5274" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -57,8 +57,8 @@ content_hash: "1b6cdba9c90edadf"
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=830d3dd9"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/documentation_options.js?v=519527b2"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=91c4cb68"></script>
@@ -67,18 +67,18 @@ content_hash: "1b6cdba9c90edadf"
     <script async="async" src="../../_static/rdcMisc.js?v=01f88d96"></script>
     <script async="async" src="../../_static/theme_mode_captions.js?v=15f4ec5d"></script>
     <script defer="defer" src="../../_static/search.js?v=90a4452c"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'doxygen/html/modules';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'doxygen/html/globals_eval';</script>
     <script async="async" src="https://download.amd.com/js/analytics/analyticsinit.js"></script>
     <link rel="icon" href="https://www.amd.com/content/dam/code/images/favicon/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Classes" href="annotated_classes.html" />
-    <link rel="prev" title="API library" href="index.html" />
+    <link rel="next" title="Globals" href="globals_defs.html" />
+    <link rel="prev" title="Globals" href="globals_enum.html" />
     <meta name="google-site-verification" content="vo35SZt_GASsTHAEmdww7AYKPCvZyzLvOXBl8guBME4" />
 
-  <script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="advanced-micro-devices-rocrand" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/doxygen/html/modules.html" /><meta name="readthedocs-http-status" content="200" /></head>
+  <script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="advanced-micro-devices-hipsparselt" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/doxygen/html/globals_eval.html" /><meta name="readthedocs-http-status" content="200" /></head>
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -243,7 +243,7 @@ content_hash: "1b6cdba9c90edadf"
   
   
   
-    <p class="title logo__title">rocRAND 4.2.0 Documentation</p>
+    <p class="title logo__title">hipSPARSELt 0.2.6 Documentation</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -255,43 +255,57 @@ content_hash: "1b6cdba9c90edadf"
 </button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Install</span></p>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-hipsparselt.html">What is hipSPARSELt?</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Install</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../install/installing.html">Installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install/quick-start-install.html">Quick start installation guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install/install-hipsparselt.html">Detailed installation guide</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Conceptual</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../conceptual/programmers-guide.html">Programming guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../conceptual/curand-compatibility.html">cuRAND compatibility</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../conceptual/dynamic_ordering_configuration.html">Kernel configurations for dynamic ordering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../conceptual/generator-types.html">Random number generators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../conceptual/storage-format.html">Storage formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../conceptual/mi300-features.html">Features for the Instinct MI300 series</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">How to</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../how-to/device-stream-management.html">Manage devices and streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../how-to/porting.html">Port from NVIDIA CUDA</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://github.com/ROCm/rocm-libraries/tree/develop/projects/rocrand/python/rocrand/examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/ROCm/rocm-libraries/tree/develop/projects/hipsparselt/clients/samples">Client samples</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">API reference</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../api-reference/data-type-support.html">rocRAND data type support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api-reference/cpp-api.html">C/C++ API reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api-reference/python-api.html">Python API reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../fortran-api-reference.html">Fortran API reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/supported-functions.html">Supported functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/data-type-support.html">Data type support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/env-variables.html">Environment variables</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">API library</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Modules</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="annotated_classes.html">Classes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="annotated.html">Class List</a></li>
-<li class="toctree-l3"><a class="reference internal" href="hierarchy.html">Class Hierarchy</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="functions_class_members.html">Class Members</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="functions_all.html">All</a></li>
-<li class="toctree-l4"><a class="reference internal" href="functions_func_functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="annotated_data_structures.html">Data Structures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="annotated.html">Data Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classes.html">Data Structure Index</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="functions_data_fields.html">Data Fields</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="functions.html">All</a></li>
 <li class="toctree-l4"><a class="reference internal" href="functions_vars.html">Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="functions_type.html">Typedefs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="functions_rela.html">Related Functions</a></li>
 </ul>
 </details></li>
 </ul>
 </details></li>
-<li class="toctree-l2"><a class="reference internal" href="files.html">Files</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="files_files.html">Files</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="files.html">File List</a></li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="globals_globals.html">Globals</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="globals.html">All</a></li>
+<li class="toctree-l4"><a class="reference internal" href="globals_func.html">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="globals_enum.html">Enumerations</a></li>
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">Enumerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="globals_defs.html">Macros</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
 </ul>
 </details></li>
 </ul>
@@ -347,9 +361,15 @@ content_hash: "1b6cdba9c90edadf"
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="index.html" class="nav-link">API library</a></li>
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">hipSPARSELt</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">API library: Modules</span></li>
+    
+    <li class="breadcrumb-item"><a href="files_files.html" class="nav-link">Files</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="globals_globals.html" class="nav-link">Globals</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">hipSPARSELt: Globals</span></li>
   </ul>
 </nav>
 </div>
@@ -385,7 +405,7 @@ content_hash: "1b6cdba9c90edadf"
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Modules</h1>
+    <h1>Globals</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -399,8 +419,8 @@ content_hash: "1b6cdba9c90edadf"
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="modules">
-<h1>Modules<a class="headerlink" href="#modules" title="Link to this heading">#</a></h1>
+  <section id="globals">
+<h1>Globals<a class="headerlink" href="#globals" title="Link to this heading">#</a></h1>
 <div class="doxygen-content docutils container">
 <!-- HTML header for doxygen 1.9.6-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -410,13 +430,20 @@ content_hash: "1b6cdba9c90edadf"
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>API library: Modules</title>
+<title>hipSPARSELt: Globals</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="stylesheet.css" rel="stylesheet" type="text/css" />
 <link href="extra_stylesheet.css" rel="stylesheet" type="text/css"/>
-<script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="advanced-micro-devices-rocrand" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/doxygen/html/modules.html" /><meta name="readthedocs-http-status" content="200" /></head>
+<script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="advanced-micro-devices-hipsparselt" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/doxygen/html/globals_eval.html" /><meta name="readthedocs-http-status" content="200" /></head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <!-- Generated by Doxygen 1.9.1 -->
@@ -430,18 +457,122 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div class="header">
-  <div class="headertitle">
-<div class="title">Modules</div>  </div>
-</div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all modules:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__rocrandhost.html" target="_self">rocRAND host API</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__rocranddevice.html" target="_self">rocRAND device functions</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__rocrandhostcpp.html" target="_self">rocRAND host API C++ Wrapper</a></td><td class="desc"></td></tr>
-</table>
-</div><!-- directory -->
+&#160;
+
+<h3><a id="index_h"></a>- h -</h3><ul>
+<li>HIPSPARSELT_COMPUTE_16F
+: <a class="el" href="group__types__module.html#gga799f01caed605aea534e9b601df5cc6fadf0fa31abfbe6211b00f704dc4bcff5a">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_COMPUTE_32F
+: <a class="el" href="group__types__module.html#gga799f01caed605aea534e9b601df5cc6fa2954b605b8355c6c4218ee3f68fb2ed2">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_COMPUTE_32I
+: <a class="el" href="group__types__module.html#gga799f01caed605aea534e9b601df5cc6fad032a860bbcb08d7e22c00dfc8c85d04">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_COMPUTE_TF32
+: <a class="el" href="group__types__module.html#gga799f01caed605aea534e9b601df5cc6fac603bef5dffe1e852409f6d9b32a00b0">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_COMPUTE_TF32_FAST
+: <a class="el" href="group__types__module.html#gga799f01caed605aea534e9b601df5cc6fa3a65c2c5594a4473f3adc530c6c52fe2">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MAT_BATCH_STRIDE
+: <a class="el" href="group__types__module.html#ggad7518adae6ff2568bd611aa33415b21aa7b37b150a2827c14dcb73a9caf67caa8">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MAT_NUM_BATCHES
+: <a class="el" href="group__types__module.html#ggad7518adae6ff2568bd611aa33415b21aae14141a4d218e2fdbc91987d36eca885">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_ACTIVATION_ABS
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6ad7b893e809171ca491b8e038ac6be9f6">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_ACTIVATION_GELU
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6ad5c9949d291160baf4eeda5f4969985a">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_ACTIVATION_GELU_SCALING
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6a59a9c7efb70869510f922a4d6076090a">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_ACTIVATION_LEAKYRELU
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6a2b98b9c1954518a8d44de1c014b172d6">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_ACTIVATION_LEAKYRELU_ALPHA
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6a4aeec9efd6ba13890931252e54b11d5a">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_ACTIVATION_RELU
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6ad081d412bc74df4c3cd3af88e07df5a3">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_ACTIVATION_RELU_THRESHOLD
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6ae09b63e1212e13fd3253fc16dad60a77">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_ACTIVATION_RELU_UPPERBOUND
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6a160c85e175b33639b174fe4af319a876">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_ACTIVATION_SIGMOID
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6abb643d36cbdeec9ef32d7e76d50997a2">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_ACTIVATION_TANH
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6a915b50638f90082087baefe5091014d8">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_ACTIVATION_TANH_ALPHA
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6aca83467a7d487ea16de64e0e0f34eefa">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_ACTIVATION_TANH_BETA
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6a597aee79b9a2c999eabed2d6779deed5">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_ALG_CONFIG_ID
+: <a class="el" href="group__types__module.html#gga4ad639909160f12aa0f72aac70e4aecbab13be181949ecf972dd29540180d2ecf">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_ALG_CONFIG_MAX_ID
+: <a class="el" href="group__types__module.html#gga4ad639909160f12aa0f72aac70e4aecbaf7c217902fdc88935f428aeeee436fc4">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_ALG_DEFAULT
+: <a class="el" href="group__types__module.html#gga3623439a847b90ec55394320a6c559ffad828ad2948c0fdb1fa1c4a34a9d1977d">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_ALPHA_VECTOR_SCALING
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6a8b7b649ab310b7f65772b78b495c557e">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_BETA_VECTOR_SCALING
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6ad07bdd33e71899318e11724ec57073d5">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_BIAS_POINTER
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6a289dbee5f6a2cd5ea6384209c4167317">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_BIAS_STRIDE
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6a27d427fcdb37e3a8f653d84bbc2c351a">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_BIAS_TYPE
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6a2dd720ee5014168c978a3a13c8d677e8">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_SEARCH_ITERATIONS
+: <a class="el" href="group__types__module.html#gga4ad639909160f12aa0f72aac70e4aecbaadabc07e66f50838879f63ac44f61ed8">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_SPARSE_MAT_POINTER
+: <a class="el" href="group__types__module.html#ggaab48de8d7e9a0777eebda8e27db196b6afe04256c87b8992d20818d0a6edf6cbb">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_SPLIT_K
+: <a class="el" href="group__types__module.html#gga4ad639909160f12aa0f72aac70e4aecba3777c7eb20bd4147a42809cbcfd0f0f9">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_SPLIT_K_BUFFERS
+: <a class="el" href="group__types__module.html#gga4ad639909160f12aa0f72aac70e4aecba45ffbf81302644f8716931238589365f">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_MATMUL_SPLIT_K_MODE
+: <a class="el" href="group__types__module.html#gga4ad639909160f12aa0f72aac70e4aecbaadee35a575a37281914f227da1437581">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_PRUNE_SPMMA_STRIP
+: <a class="el" href="group__types__module.html#ggacbdbf2fd179cd61f918dc6f7eb2eca5da754defd6bed1f0fffc1769ca60e1e762">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_PRUNE_SPMMA_TILE
+: <a class="el" href="group__types__module.html#ggacbdbf2fd179cd61f918dc6f7eb2eca5da584d549812d4d7d4b3d598c8845c38af">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_SPARSITY_50_PERCENT
+: <a class="el" href="group__types__module.html#gga1a34328c8f8454db5da99f841b140274a7f552df2611e829ee63a153feaaaef81">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_SPLIT_K_MODE_ONE_KERNEL
+: <a class="el" href="group__types__module.html#gga97a3db1aa6b2f60fbad1f2843bf39574a59fbabc247e563b949b580bb008c1bfb">hipsparselt.h</a>
+</li>
+<li>HIPSPARSELT_SPLIT_K_MODE_TWO_KERNELS
+: <a class="el" href="group__types__module.html#gga97a3db1aa6b2f60fbad1f2843bf39574a2dbd6565aab74a7b82bcd85c6a0088fd">hipsparselt.h</a>
+</li>
+</ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.6-->
 <!-- start footer part -->
@@ -463,20 +594,20 @@ $(function() {
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="index.html"
+       href="globals_enum.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">API library</p>
+        <p class="prev-next-title">Globals</p>
       </div>
     </a>
     <a class="right-next"
-       href="annotated_classes.html"
+       href="globals_defs.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Classes</p>
+        <p class="prev-next-title">Globals</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
