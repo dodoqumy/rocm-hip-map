@@ -1,10 +1,10 @@
 # ROCm 文档抓取统计
 
-> 更新时间: 2026-05-03 13:10 UTC
+> 更新时间: 2026-05-04 00:10 UTC
 
 ## 总计
 
-- **总文件数**: 1238 篇 (+4 本次增量)
+- **总文件数**: 1238 篇 (+0 本次增量，+6 更新)
 - **子项目数**: 38 个
 
 ## 各子项目详情
@@ -81,14 +81,10 @@
 - llvm-project-latest (doxygen 页面大量 404，rate limit)
 ```
 
-## 本次运行详情 (2026-05-03 13:10 UTC)
+## 本次运行详情 (2026-05-04 00:10 UTC)
 
 - 运行时间: ~10 分钟（超时退出，约 46 个源在增量模式下运行）
 - 抓取源: 46 个子项目（增量模式，已抓取的 URL 跳过）
-- 新增文件:
-  - `amdsmi-latest` (+1): how-to/setup-docker-container
-  - `rocm-docs-7.2.0` (+2): how-to/build-rocm, compatibility/pytorch-compatibility
-  - `rocm-docs-latest` (+1): how-to/rocm-for-ai/training/benchmark-docker/megatron-lm-v25.6
-- 更新文件: 3 篇（rocm-docs-latest: about/license, inference benchmark sglang, ai training megatron）
-- 新增文件: 4 篇
+- 更新文件: 6 篇（rocm-docs-latest: compatibility-matrix, deep-learning-rocm, vllm-0.6.6, vllm-mori-distributed, inference/index, performance-glossary）
+- 新增文件: 0 篇
 - 总计: 1238 篇
