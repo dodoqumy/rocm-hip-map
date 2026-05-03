@@ -1,75 +1,77 @@
 ---
-title: "Oracle Linux multi-version installation"
-source_url: "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/install-methods/multi-version-install/multi-version-install-ol.html"
+title: "Ubuntu multi-version installation"
+source_url: "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/install-methods/multi-version-install/multi-version-install-ubuntu.html"
 source_type: official
 source_org: amd
 credibility: 5
 lifecycle: latest
-fetched_at: 2026-05-02T21:14:16.421157+00:00
-content_hash: "39ad1cd570549e2b"
+fetched_at: 2026-05-03T06:25:56.464223+00:00
+content_hash: "d3cb0dcf28343b4d"
 ---
 
-# Oracle Linux multi-version installation[#](#oracle-linux-multi-version-installation)
+# Ubuntu multi-version installation[#](#ubuntu-multi-version-installation)
 
 2026-04-22
 
-5 min read time
+4 min read time
 
-## Register ROCm repositories[#](#register-rocm-repositories)
+## Registering ROCm repositories[#](#registering-rocm-repositories)
 
-```
-# Note: There is NO trailing .0 in the patch version for repositories
-for ver in 7.2.2 7.2.1; do
-sudo tee --append /etc/yum.repos.d/rocm.repo <<EOF
-[rocm-$ver]
-name=ROCm $ver repository
-baseurl=https://repo.radeon.com/rocm/el10/$ver/main
-enabled=1
-priority=50
-gpgcheck=1
-gpgkey=https://repo.radeon.com/rocm/rocm.gpg.key
-EOF
-done
-sudo dnf clean all
-```
+### Package signing key[#](#package-signing-key)
+
+Download and convert the package signing key.
 
 ```
-# Note: There is NO trailing .0 in the patch version for repositories
-for ver in 7.2.2 7.2.1; do
-sudo tee --append /etc/yum.repos.d/rocm.repo <<EOF
-[rocm-$ver]
-name=ROCm $ver repository
-baseurl=https://repo.radeon.com/rocm/el9/$ver/main
-enabled=1
-priority=50
-gpgcheck=1
-gpgkey=https://repo.radeon.com/rocm/rocm.gpg.key
-EOF
-done
-sudo dnf clean all
+# Make the directory if it doesn't exist yet.
+# This location is recommended by the distribution maintainers.
+sudo mkdir --parents --mode=0755 /etc/apt/keyrings
+# Download the key, convert the signing-key to a full
+# keyring required by apt and store in the keyring directory
+wget https://repo.radeon.com/rocm/rocm.gpg.key -O - | \
+gpg --dearmor | sudo tee /etc/apt/keyrings/rocm.gpg > /dev/null
 ```
+
+Note
+
+The GPG key may change; ensure it is updated when installing a new release. If the key signature verification fails while updating, re-add the key from the ROCm to the apt repository as mentioned above.
+
+### Register packages[#](#register-packages)
 
 ```
 # Note: There is NO trailing .0 in the patch version for repositories
 for ver in 7.2.2 7.2.1; do
-sudo tee --append /etc/yum.repos.d/rocm.repo <<EOF
-[rocm-$ver]
-name=ROCm $ver repository
-baseurl=https://repo.radeon.com/rocm/el8/$ver/main
-enabled=1
-priority=50
-gpgcheck=1
-gpgkey=https://repo.radeon.com/rocm/rocm.gpg.key
+sudo tee --append /etc/apt/sources.list.d/rocm.list << EOF
+deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/rocm/apt/$ver noble main
 EOF
 done
-sudo dnf clean all
+sudo tee /etc/apt/preferences.d/rocm-pin-600 << EOF
+Package: *
+Pin: release o=repo.radeon.com
+Pin-Priority: 600
+EOF
+sudo apt update
+```
+
+```
+# Note: There is NO trailing .0 in the patch version for repositories
+for ver in 7.2.2 7.2.1; do
+sudo tee --append /etc/apt/sources.list.d/rocm.list << EOF
+deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/rocm/apt/$ver jammy main
+EOF
+done
+sudo tee /etc/apt/preferences.d/rocm-pin-600 << EOF
+Package: *
+Pin: release o=repo.radeon.com
+Pin-Priority: 600
+EOF
+sudo apt update
 ```
 
 ## Installing[#](#installing)
 
 ### Install kernel driver[#](#install-kernel-driver)
 
-For information about the AMDGPU driver installation, see the [Oracle Linux native installation](https://instinct.docs.amd.com/projects/amdgpu-docs/en/latest/install/detailed-install/package-manager/package-manager-ol.html) in the AMD Instinct Data Center GPU Documentation.
+For information about the AMDGPU driver installation, see the [Ubuntu native installation](https://instinct.docs.amd.com/projects/amdgpu-docs/en/latest/install/detailed-install/package-manager/package-manager-ubuntu.html) in the AMD Instinct Data Center GPU Documentation.
 
 For information about driver compatibility, see [User and AMD GPU Driver (amdgpu) support matrix](../../../reference/user-kernel-space-compat-matrix.html).
 
@@ -80,21 +82,7 @@ Before proceeding with a multi-version ROCm installation, you must remove ROCm p
 ```
 # Note: There IS a trailing .0 in the patch version for packages
 for ver in 7.2.2 7.2.1; do
-sudo dnf install rocm$ver
-done
-```
-
-```
-# Note: There IS a trailing .0 in the patch version for packages
-for ver in 7.2.2 7.2.1; do
-sudo dnf install rocm$ver
-done
-```
-
-```
-# Note: There IS a trailing .0 in the patch version for packages
-for ver in 7.2.2 7.2.1; do
-sudo dnf install rocm$ver
+sudo apt install rocm$ver
 done
 ```
 
@@ -119,21 +107,7 @@ Complete the [Post-installation instructions](../../post-install.html).
 ```
 # Note: There IS a trailing .0 in the patch version for packages
 for ver in 7.2.2 7.2.1; do
-sudo dnf remove rocm$ver
-done
-```
-
-```
-# Note: There IS a trailing .0 in the patch version for packages
-for ver in 7.2.2 7.2.1; do
-sudo dnf remove rocm$ver
-done
-```
-
-```
-# Note: There IS a trailing .0 in the patch version for packages
-for ver in 7.2.2 7.2.1; do
-sudo dnf remove rocm$ver
+sudo apt autoremove rocm$ver
 done
 ```
 
@@ -142,21 +116,7 @@ done
 ```
 # Note: There IS a trailing .0 in the patch version for packages
 for ver in 7.2.2 7.2.1; do
-sudo dnf remove rocm-core$ver amdgpu-core$ver
-done
-```
-
-```
-# Note: There IS a trailing .0 in the patch version for packages
-for ver in 7.2.2 7.2.1; do
-sudo dnf remove rocm-core$ver amdgpu-core$ver
-done
-```
-
-```
-# Note: There IS a trailing .0 in the patch version for packages
-for ver in 7.2.2 7.2.1; do
-sudo dnf remove rocm-core$ver amdgpu-core$ver
+sudo apt autoremove rocm-core$ver
 done
 ```
 
@@ -164,10 +124,11 @@ done
 
 ```
 # Remove ROCm repositories
-sudo rm /etc/yum.repos.d/rocm.repo*
+sudo rm /etc/apt/sources.list.d/rocm.list
 # Clear the cache and clean the system
-sudo rm -rf /var/cache/dnf
-sudo dnf clean all
+sudo rm -rf /var/cache/apt/*
+sudo apt clean all
+sudo apt update
 ```
 
 Important
