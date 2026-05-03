@@ -1,10 +1,10 @@
 # ROCm 文档抓取统计
 
-> 更新时间: 2026-05-04 00:10 UTC
+> 更新时间: 2026-05-04 03:10 UTC
 
 ## 总计
 
-- **总文件数**: 1238 篇 (+0 本次增量，+6 更新)
+- **总文件数**: 1240 篇 (+2 新增，+1 更新)
 - **子项目数**: 38 个
 
 ## 各子项目详情
@@ -12,11 +12,11 @@
 | 子项目 | 文件数 | 状态 |
 |--------|--------|------|
 | github | 215 | ⚠️ |
-| rocm-docs-latest | 207 | ✅ |
+| rocm-docs-latest | 209 | ✅ |
 | hip-latest | 89 | ✅ |
 | rocm-docs-7.2.0 | 76 | ✅ |
 | rocm-docs-7.0.0 | 68 | ✅ |
-| amdsmi-latest | 51 | ✅ |
+| amdsmi-latest | 52 | ✅ |
 | rocprofiler-sdk-latest | 44 | ✅ |
 | composable-kernel-latest | 41 | ✅ |
 | hipify-latest | 31 | ✅ |
@@ -81,10 +81,10 @@
 - llvm-project-latest (doxygen 页面大量 404，rate limit)
 ```
 
-## 本次运行详情 (2026-05-04 00:10 UTC)
+## 本次运行详情 (2026-05-04 03:10 UTC)
 
 - 运行时间: ~10 分钟（超时退出，约 46 个源在增量模式下运行）
 - 抓取源: 46 个子项目（增量模式，已抓取的 URL 跳过）
-- 更新文件: 6 篇（rocm-docs-latest: compatibility-matrix, deep-learning-rocm, vllm-0.6.6, vllm-mori-distributed, inference/index, performance-glossary）
-- 新增文件: 0 篇
-- 总计: 1238 篇
+- 更新文件: 1 篇（amdsmi-latest doxygen functions_g 页面内容更新）
+- 新增文件: 2 篇（rocm-docs-latest megatron-lm-v25.7 训练文档 + amdsmi-latest doxygen functions_t）
+- 总计: 1240 篇（content/raw/english/ 下 .md 文件）
