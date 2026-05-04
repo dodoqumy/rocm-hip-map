@@ -1,10 +1,10 @@
 # ROCm 文档抓取统计
 
-> 更新时间: 2026-05-05 03:27 UTC
+> 更新时间: 2026-05-05 06:00 UTC
 
 ## 总计
 
-- **总文件数**: 1502 篇
+- **总文件数**: 1517 篇
 - **子项目数**: 47 个
 
 ## 各子项目详情
@@ -16,12 +16,12 @@
 | hip-latest | 89 | ✅ |
 | rocm-docs-7.2.0 | 78 | ✅ |
 | rocm-docs-7.0.0 | 68 | ✅ |
-| amdsmi-latest | 63 | ✅ |
-| rocm-docs-6.4.0 | 59 | ✅ |
-| rocm-docs-6.2.0 | 55 | ✅ |
-| rocprofiler-sdk-latest | 47 | ✅ |
+| amdsmi-latest | 65 | ✅ |
+| rocm-docs-6.4.0 | 61 | ✅ |
+| rocm-docs-6.2.0 | 58 | ✅ |
+| rocprofiler-sdk-latest | 50 | ✅ |
 | composable-kernel-latest | 41 | ✅ |
-| ai-developer-hub-latest | 35 | ✅ |
+| ai-developer-hub-latest | 39 | ✅ |
 | hipify-latest | 31 | ✅ |
 | rocm-docs-6.0.0 | 31 | ✅ |
 | hipsparsert-latest | 27 | ✅ |
@@ -57,4 +57,4 @@
 | hipify | 4 | ✅ |
 | rocm-ls-latest | 4 | ✅ |
 | rocm-validation-suite-latest | 4 | ✅ |
-| llvm-project-latest | 2 | ✅ |
+| llvm-project-latest | 3 | ✅ |
