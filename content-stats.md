@@ -1,6 +1,6 @@
 # ROCm 文档抓取统计
 
-> 更新时间: 2026-05-04 18:10 UTC
+> 更新时间: 2026-05-04 21:12 UTC
 
 ## 总计
 
@@ -128,3 +128,12 @@
 - 更新文件: 1 篇（amdsmi-latest doxygen functions_g 页面内容更新）
 - 新增文件: 2 篇（rocm-docs-latest megatron-lm-v25.7 训练文档 + amdsmi-latest doxygen functions_t）
 - 总计: 1240 篇（content/raw/english/ 下 .md 文件）
+## 本次运行 (2026-05-04 21:12 UTC)
+
+- 运行时间: ~10 分钟（600 秒超时退出，46 个源在增量模式下运行）
+- 抓取源: 46 个子项目（增量模式，3 个 Doxygen 页面 re-fetch）
+- 更新文件: 3 篇（amdsmi-latest functions_m, functions_t, setup-docker-container）
+- 新增文件: 0 篇
+- 总计: 1246 篇
+- 未抓取源: 14 个（仍为 0 URL — rocm-docs-6.4.0/6.2.0/6.0.0, rocgdb, rocdecode, migraphx, rccl, ai-developer-hub, hipfft-ext, rocm-blog, rocm-ds, rocm-ls, rocm-validation-suite, rocm-agent-lib — URL 发现依然失败）
+
