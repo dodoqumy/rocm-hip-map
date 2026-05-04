@@ -16,7 +16,7 @@
 | hip-latest | 89 | ✅ |
 | rocm-docs-7.2.0 | 76 | ✅ |
 | rocm-docs-7.0.0 | 68 | ✅ |
-| amdsmi-latest | 56 | ✅ |
+| amdsmi-latest | 57 | ✅ |
 | rocprofiler-sdk-latest | 44 | ✅ |
 | composable-kernel-latest | 41 | ✅ |
 | hipify-latest | 31 | ✅ |
