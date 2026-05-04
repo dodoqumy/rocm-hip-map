@@ -38,7 +38,7 @@ sources:
 
   - slug: rocm-docs-6.4.0
     name: "ROCm 6.4.0"
-    base_url: "https://rocm.docs.amd.com/en_docs-6.4.0/"
+    base_url: "https://rocm.docs.amd.com/en/docs-6.4.0/"
     crawler: sphinx_nav
     credibility: 4
     interval_hours: 720
@@ -46,7 +46,7 @@ sources:
 
   - slug: rocm-docs-6.2.0
     name: "ROCm 6.2.0"
-    base_url: "https://rocm.docs.amd.com/en_docs-6.2.0/"
+    base_url: "https://rocm.docs.amd.com/en/docs-6.2.0/"
     crawler: sphinx_nav
     credibility: 4
     interval_hours: 720
@@ -54,7 +54,7 @@ sources:
 
   - slug: rocm-docs-6.0.0
     name: "ROCm 6.0.0"
-    base_url: "https://rocm.docs.amd.com/en_docs-6.0.0/"
+    base_url: "https://rocm.docs.amd.com/en/docs-6.0.0/"
     crawler: sphinx_nav
     credibility: 4
     interval_hours: 720
@@ -191,7 +191,7 @@ sources:
   # === MIGraphX (~110 页) ===
   - slug: migraphx-latest
     name: "MIGraphX"
-    base_url: "https://rocm.docs.amd.com/projects/MIGraphX/en/latest/"
+    base_url: "https://rocm.docs.amd.com/projects/AMDMIGraphX/en/latest/"
     crawler: sphinx_nav
     credibility: 5
     interval_hours: 24
@@ -199,7 +199,7 @@ sources:
   # === RCCL (~50 页) ===
   - slug: rccl-latest
     name: "RCCL"
-    base_url: "https://rocm.docs.amd.com/projects/RCCL/en/latest/"
+    base_url: "https://rocm.docs.amd.com/projects/rccl/en/latest/"
     crawler: sphinx_nav
     credibility: 5
     interval_hours: 24
@@ -261,22 +261,28 @@ sources:
 
   - slug: rocgdb-latest
     name: "rocgdb"
-    base_url: "https://rocm.docs.amd.com/projects/rocgdb/en/latest/"
+    base_url: "https://rocm.docs.amd.com/projects/ROCgdb/en/latest/"
     crawler: sphinx_nav
     credibility: 5
     interval_hours: 24
+    skip_patterns:
+      - "/ROCgdb/gdb/"
+      - "/ROCgdb/readline/"
+      - "/projects/HIP/"
+      - "/projects/ROCdbgapi/"
+    skip_reason: "Nav tree contains 590 upstream GDB manual pages; 5 ROCgdb pages fetched manually"
 
   # === ROCm 新 SDK (2025) ===
   - slug: rocm-ds-latest
     name: "ROCm-DS (数据科学)"
-    base_url: "https://rocm.docs.amd.com/projects/ROCm-DS/en/latest/"
+    base_url: "https://rocm.docs.amd.com/projects/rocm-ds/en/latest/"
     crawler: sphinx_nav
     credibility: 5
     interval_hours: 24
 
   - slug: rocm-ls-latest
     name: "ROCm-LS (生命科学)"
-    base_url: "https://rocm.docs.amd.com/projects/ROCm-LS/en/latest/"
+    base_url: "https://rocm.docs.amd.com/projects/rocm-ls/en/latest/"
     crawler: sphinx_nav
     credibility: 5
     interval_hours: 24
@@ -284,7 +290,7 @@ sources:
   # === AI Developer Hub (2025 新增, ~150 页 notebooks) ===
   - slug: ai-developer-hub-latest
     name: "AI Developer Hub"
-    base_url: "https://rocm.docs.amd.com/projects/AI-Developer-Hub/en/latest/"
+    base_url: "https://rocm.docs.amd.com/projects/ai-developer-hub/en/latest/"
     crawler: sphinx_nav
     credibility: 5
     rate_limit: 0.5
@@ -345,10 +351,11 @@ sources:
     credibility: 5
     interval_hours: 24
     extract_api: true
+    skip_reason: "Not found on rocm.docs.amd.com or docs.amd.com (Content not found)"
 
   - slug: rocm-validation-suite-latest
     name: "ROCm Validation Suite"
-    base_url: "https://rocm.docs.amd.com/projects/ROCm-Validation-Suite/en/latest/"
+    base_url: "https://rocm.docs.amd.com/projects/ROCmValidationSuite/en/latest/"
     crawler: sphinx_nav
     credibility: 5
     interval_hours: 168
@@ -374,6 +381,7 @@ sources:
     crawler: sitemap
     credibility: 5
     interval_hours: 24
+    skip_reason: "Not found on docs.amd.com (Content not found)"
 
   - slug: rocprofiler-latest
     name: "ROCm Profiler"

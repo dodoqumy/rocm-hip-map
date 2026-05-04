@@ -131,6 +131,10 @@ def load_sources(config_path: str = "config/amd-sources.yaml") -> List[CrawlerCo
     
     sources = []
     for item in data.get("sources", []):
+        # Skip sources marked with skip_reason (no public docs)
+        if item.get("skip_reason"):
+            logger.info(f"  ⏭ Skipping {item.get('slug', '?')}: {item['skip_reason']}")
+            continue
         sources.append(CrawlerConfig(
             slug=item["slug"],
             name=item["name"],

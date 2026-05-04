@@ -17,7 +17,7 @@ class RSSCrawler(BaseCrawler):
     """RSS/Atom 爬虫"""
     
     def discover(self, max_urls: int = 50) -> List[str]:
-        """发现 RSS feed"""
+        """发现 RSS/Atom feed"""
         base = self.config.base_url
         
         # 尝试常见 feed 位置
@@ -30,7 +30,7 @@ class RSSCrawler(BaseCrawler):
         
         for url in feed_urls:
             html = self.http.get(url)
-            if html and "<rss" in html.lower():
+            if html and ("<rss" in html.lower() or "<feed" in html.lower()):
                 return self._parse_rss(html)
         
         # 尝试从首页发现
@@ -38,14 +38,25 @@ class RSSCrawler(BaseCrawler):
         if not html:
             return []
         
-        # 查找 link rel="alternate" type="application/rss+xml"
+        # 查找 link rel="alternate" type="application/rss+xml" or atom
         feeds = re.findall(r'href="([^"]*feed[^"]*)"', html, re.IGNORECASE)
-        feeds += re.findall(r'href="([^"]*\.xml)"', html)
+        feeds += re.findall(r'href="([^"]*\\.(?:xml|rss|atom))"', html, re.IGNORECASE)
+        # Also check for link tags with type attribute
+        feeds += re.findall(r'<link[^>]*href="([^"]*)"[^>]*type="application/(?:rss|atom)\+xml"', html, re.IGNORECASE)
+        feeds += re.findall(r'type="application/(?:rss|atom)\+xml"[^>]*href="([^"]*)"', html, re.IGNORECASE)
+        
+        # Remove duplicates while preserving order
+        seen = set()
+        unique_feeds = []
+        for f in feeds:
+            if f not in seen:
+                seen.add(f)
+                unique_feeds.append(f)
         
         urls = []
-        for feed in feeds[:5]:
+        for feed in unique_feeds[:5]:
             if not feed.startswith("http"):
-                feed = base.strip("/") + "/" + feed
+                feed = base.rstrip("/") + "/" + feed.lstrip("/")
             
             html = self.http.get(feed)
             if html:
@@ -54,15 +65,21 @@ class RSSCrawler(BaseCrawler):
         return urls[:max_urls]
     
     def _parse_rss(self, html: str) -> List[str]:
-        """解析 RSS"""
+        """解析 RSS/Atom feed"""
         urls = []
         
-        # item > link
-        for match in re.findall(r"<link>([^<]+)</link>", html):
-            if match:
+        # RSS 2.0: <item><link>url</link>
+        for match in re.findall(r"<link>([^<]+)</link>", html, re.IGNORECASE):
+            if match and match not in urls:
                 urls.append(match)
         
-        for match in re.findall(r"<link>([^<]+)</link>", html, re.IGNORECASE):
+        # Atom: <entry><link href="url"/> or <link href="url" />
+        for match in re.findall(r'<entry[^>]*>.*?<link\s+href="([^"]+)"', html, re.IGNORECASE | re.DOTALL):
+            if match and match not in urls:
+                urls.append(match)
+        
+        # Atom (alternate format): <link href="url" rel="alternate"> in entry context
+        for match in re.findall(r'<entry[^>]*>.*?<link[^>]*href="([^"]+)"[^>]*rel="alternate"', html, re.IGNORECASE | re.DOTALL):
             if match and match not in urls:
                 urls.append(match)
         
