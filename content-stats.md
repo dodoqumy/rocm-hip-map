@@ -1,10 +1,10 @@
 # ROCm 文档抓取统计
 
-> 更新时间: 2026-05-04 06:02 UTC
+> 更新时间: 2026-05-04 09:02 UTC
 
 ## 总计
 
-- **总文件数**: 1240 篇 (+2 新增，+1 更新)
+- **总文件数**: 1244 篇 (+4 新增，+2 更新)
 - **子项目数**: 38 个
 
 ## 各子项目详情
@@ -16,7 +16,7 @@
 | hip-latest | 89 | ✅ |
 | rocm-docs-7.2.0 | 76 | ✅ |
 | rocm-docs-7.0.0 | 68 | ✅ |
-| amdsmi-latest | 52 | ✅ |
+| amdsmi-latest | 56 | ✅ |
 | rocprofiler-sdk-latest | 44 | ✅ |
 | composable-kernel-latest | 41 | ✅ |
 | hipify-latest | 31 | ✅ |
@@ -81,7 +81,15 @@
 - llvm-project-latest (doxygen 页面大量 404，rate limit)
 ```
 
-## 本次运行详情 (2026-05-04 06:02 UTC)
+## 本次运行详情 (2026-05-04 09:02 UTC)
+
+- 运行时间: ~10 分钟（超时退出，46 个源在增量模式下运行）
+- 抓取源: 46 个子项目（增量模式，已抓取的 URL 跳过）
+- 更新文件: 2 篇（amdsmi-latest doxygen functions_g + install-linux-latest multi-version-install-debian）
+- 新增文件: 4 篇（amdsmi-latest doxygen: files, functions_o, functions_v, functions_vars_o）
+- 总计: 1244 篇（content/raw/english/ 下 .md 文件）
+
+## 历史运行 (2026-05-04 06:02 UTC)
 
 - 运行时间: ~5 分钟（超时退出，约 46 个源在增量模式下运行）
 - 抓取源: 46 个子项目（增量模式，已抓取的 URL 跳过）
