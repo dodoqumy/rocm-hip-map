@@ -5,8 +5,8 @@ source_type: official
 source_org: amd
 credibility: 5
 lifecycle: latest
-fetched_at: 2026-05-03T03:11:05.952854+00:00
-content_hash: "0ec1ed60abffa8aa"
+fetched_at: 2026-05-04T18:20:18.380320+00:00
+content_hash: "4df59abc7f3e1eec"
 ---
 
 
@@ -136,7 +136,7 @@ content_hash: "0ec1ed60abffa8aa"
                 
         
     
-    <a class="klavika-font hover-opacity" href="https://rocm.docs.amd.com/en/latest">ROCm&#8482; Software 7.2.2</a>
+    <a class="klavika-font hover-opacity" href="https://rocm.docs.amd.com/en/latest">ROCm&#8482; Software 7.2.3</a>
                 <a class="header-all-versions" href="https://rocm.docs.amd.com/en/latest/release/versions.html">Version List</a>
             </div>
             <div class="icon-nav text-center d-flex ms-auto">
