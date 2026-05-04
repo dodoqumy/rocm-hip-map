@@ -1,12 +1,12 @@
 ---
 title: "AMD SMI: Data Fields &#8212; AMD SMI 26.2.2 documentation"
-source_url: "https://rocm.docs.amd.com/projects/amdsmi/en/latest/doxygen/docBin/html/functions_g.html"
+source_url: "https://rocm.docs.amd.com/projects/amdsmi/en/latest/doxygen/docBin/html/functions_o.html"
 source_type: official
 source_org: amd
 credibility: 5
 lifecycle: latest
-fetched_at: 2026-05-04T00:10:32.221193+00:00
-content_hash: "686609887aad0109"
+fetched_at: 2026-05-04T00:10:37.814228+00:00
+content_hash: "70f406b4cffe84f8"
 ---
 
 
@@ -69,16 +69,16 @@ content_hash: "686609887aad0109"
     <script defer="defer" src="../../../_static/search.js?v=90a4452c"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'doxygen/docBin/html/functions_g';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'doxygen/docBin/html/functions_o';</script>
     <script async="async" src="https://download.amd.com/js/analytics/analyticsinit.js"></script>
     <link rel="icon" href="https://www.amd.com/content/dam/code/images/favicon/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Data Fields" href="functions_h.html" />
-    <link rel="prev" title="Data Fields" href="functions_f.html" />
+    <link rel="next" title="Data Fields" href="functions_p.html" />
+    <link rel="prev" title="Data Fields" href="functions_n.html" />
     <meta name="google-site-verification" content="vo35SZt_GASsTHAEmdww7AYKPCvZyzLvOXBl8guBME4" />
 
-  <script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="advanced-micro-devices-amdsmi" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/doxygen/docBin/html/functions_g.html" /><meta name="readthedocs-http-status" content="200" /></head>
+  <script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="advanced-micro-devices-amdsmi" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/doxygen/docBin/html/functions_o.html" /><meta name="readthedocs-http-status" content="200" /></head>
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -283,7 +283,7 @@ content_hash: "686609887aad0109"
 <li class="toctree-l4"><a class="reference internal" href="functions_d.html">d</a></li>
 <li class="toctree-l4"><a class="reference internal" href="functions_e.html">e</a></li>
 <li class="toctree-l4"><a class="reference internal" href="functions_f.html">f</a></li>
-<li class="toctree-l4 current active"><a class="current reference internal" href="#">g</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functions_g.html">g</a></li>
 <li class="toctree-l4"><a class="reference internal" href="functions_h.html">h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="functions_i.html">i</a></li>
 <li class="toctree-l4"><a class="reference internal" href="functions_j.html">j</a></li>
@@ -291,7 +291,7 @@ content_hash: "686609887aad0109"
 <li class="toctree-l4"><a class="reference internal" href="functions_l.html">l</a></li>
 <li class="toctree-l4"><a class="reference internal" href="functions_m.html">m</a></li>
 <li class="toctree-l4"><a class="reference internal" href="functions_n.html">n</a></li>
-<li class="toctree-l4"><a class="reference internal" href="functions_o.html">o</a></li>
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">o</a></li>
 <li class="toctree-l4"><a class="reference internal" href="functions_p.html">p</a></li>
 <li class="toctree-l4"><a class="reference internal" href="functions_r.html">r</a></li>
 <li class="toctree-l4"><a class="reference internal" href="functions_s.html">s</a></li>
@@ -472,7 +472,7 @@ content_hash: "686609887aad0109"
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="stylesheet.css" rel="stylesheet" type="text/css" />
 <link href="extra_stylesheet.css" rel="stylesheet" type="text/css"/>
-<script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="advanced-micro-devices-amdsmi" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/doxygen/docBin/html/functions_g.html" /><meta name="readthedocs-http-status" content="200" /></head>
+<script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="advanced-micro-devices-amdsmi" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/doxygen/docBin/html/functions_o.html" /><meta name="readthedocs-http-status" content="200" /></head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <!-- Generated by Doxygen 1.9.8 -->
@@ -490,20 +490,8 @@ $(function() {
 <div class="contents">
 <div class="textblock">Here is a list of all documented struct and union fields with links to the struct/union documentation for each field:</div>
 
-<h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
-<li>gfx&#160;:&#160;<a class="el" href="structamdsmi__proc__info__t_1_1engine__usage__.html#a1c6772f83c2ebd5b416f936517781fb1">amdsmi_proc_info_t::engine_usage_</a></li>
-<li>gfx_activity&#160;:&#160;<a class="el" href="structamdsmi__engine__usage__t.html#a61413a433b90bc44080c038724d9e242">amdsmi_engine_usage_t</a></li>
-<li>gfx_activity_acc&#160;:&#160;<a class="el" href="structamdsmi__gpu__metrics__t.html#a132aaa28fa8731d3710bf2f125e05cb7">amdsmi_gpu_metrics_t</a></li>
-<li>gfx_below_host_limit_acc&#160;:&#160;<a class="el" href="structamdsmi__gpu__xcp__metrics__t.html#ab8958184200f2aec260878dceb678e2c">amdsmi_gpu_xcp_metrics_t</a></li>
-<li>gfx_below_host_limit_ppt_acc&#160;:&#160;<a class="el" href="structamdsmi__gpu__xcp__metrics__t.html#af2151c9418647c8b6f21d598757b8351">amdsmi_gpu_xcp_metrics_t</a></li>
-<li>gfx_busy_acc&#160;:&#160;<a class="el" href="structamdsmi__gpu__xcp__metrics__t.html#a7ae0e9f465dabb0d408e34c53bd0993d">amdsmi_gpu_xcp_metrics_t</a></li>
-<li>gfx_busy_inst&#160;:&#160;<a class="el" href="structamdsmi__gpu__xcp__metrics__t.html#a3ad313e1a56504a89b3e189871795390">amdsmi_gpu_xcp_metrics_t</a></li>
-<li>gfx_voltage&#160;:&#160;<a class="el" href="structamdsmi__power__info__t.html#acca1a7680092c4b9c73ccdac8f016e3f">amdsmi_power_info_t</a></li>
-<li>gfxclk_frequency&#160;:&#160;<a class="el" href="structamdsmi__hsmp__metrics__table__t.html#ac370d6716ea7288990a7aaf40333b275">amdsmi_hsmp_metrics_table_t</a></li>
-<li>gfxclk_frequency_acc&#160;:&#160;<a class="el" href="structamdsmi__hsmp__metrics__table__t.html#aaf46f949dea48b7e64d1a80470bb53d8">amdsmi_hsmp_metrics_table_t</a></li>
-<li>gfxclk_frequency_limit&#160;:&#160;<a class="el" href="structamdsmi__hsmp__metrics__table__t.html#a207c8b8eaa366e7330333c6c508b9b2d">amdsmi_hsmp_metrics_table_t</a></li>
-<li>gfxclk_lock_status&#160;:&#160;<a class="el" href="structamdsmi__gpu__metrics__t.html#a2898c382f025f3df02f803d697068b0f">amdsmi_gpu_metrics_t</a></li>
-<li>gtt_mem&#160;:&#160;<a class="el" href="structamdsmi__proc__info__t_1_1memory__usage__.html#afb377aaa07f0a931098366476c85f3a7">amdsmi_proc_info_t::memory_usage_</a></li>
+<h3><a id="index_o" name="index_o"></a>- o -</h3><ul>
+<li>oam_id&#160;:&#160;<a class="el" href="structamdsmi__asic__info__t.html#a6d35fe7207ff6a00947eabc2bcda7faf">amdsmi_asic_info_t</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.6-->
@@ -523,7 +511,7 @@ $(function() {
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="functions_f.html"
+       href="functions_n.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
@@ -532,7 +520,7 @@ $(function() {
       </div>
     </a>
     <a class="right-next"
-       href="functions_h.html"
+       href="functions_p.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>

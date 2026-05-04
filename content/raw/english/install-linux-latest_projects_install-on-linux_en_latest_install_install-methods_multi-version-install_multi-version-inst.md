@@ -1,15 +1,15 @@
 ---
-title: "Ubuntu multi-version installation"
-source_url: "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/install-methods/multi-version-install/multi-version-install-ubuntu.html"
+title: "Debian multi-version installation"
+source_url: "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/install-methods/multi-version-install/multi-version-install-debian.html"
 source_type: official
 source_org: amd
 credibility: 5
 lifecycle: latest
-fetched_at: 2026-05-03T06:25:56.464223+00:00
-content_hash: "d3cb0dcf28343b4d"
+fetched_at: 2026-05-04T00:11:05.457603+00:00
+content_hash: "bfea28bff31b31a9"
 ---
 
-# Ubuntu multi-version installation[#](#ubuntu-multi-version-installation)
+# Debian multi-version installation[#](#debian-multi-version-installation)
 
 2026-04-22
 
@@ -71,7 +71,7 @@ sudo apt update
 
 ### Install kernel driver[#](#install-kernel-driver)
 
-For information about the AMDGPU driver installation, see the [Ubuntu native installation](https://instinct.docs.amd.com/projects/amdgpu-docs/en/latest/install/detailed-install/package-manager/package-manager-ubuntu.html) in the AMD Instinct Data Center GPU Documentation.
+For information about the AMDGPU driver installation, see the [Debian native installation](https://instinct.docs.amd.com/projects/amdgpu-docs/en/latest/install/detailed-install/package-manager/package-manager-debian.html) in the AMD Instinct Data Center GPU Documentation.
 
 For information about driver compatibility, see [User and AMD GPU Driver (amdgpu) support matrix](../../../reference/user-kernel-space-compat-matrix.html).
 

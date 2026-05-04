@@ -1353,7 +1353,7 @@
         "fetched_at": "2026-05-03T21:01:29.336890+00:00"
       }
     },
-    "last_fetch": "2026-05-03T21:01:43.711241+00:00"
+    "last_fetch": "2026-05-04T00:02:29.006187+00:00"
   },
   "hip-latest": {
     "urls": {
@@ -1714,11 +1714,11 @@
         "fetched_at": "2026-05-01T09:08:00.455444+00:00"
       }
     },
-    "last_fetch": "2026-05-03T21:03:18.490681+00:00"
+    "last_fetch": "2026-05-04T00:03:59.192203+00:00"
   },
   "rccl-latest": {
     "urls": {},
-    "last_fetch": "2026-05-03T18:09:21.411666+00:00"
+    "last_fetch": "2026-05-04T00:09:14.826905+00:00"
   },
   "rocsolver-latest": {
     "urls": {
@@ -1908,7 +1908,7 @@
         "fetched_at": "2026-05-02T15:09:10.970888+00:00"
       }
     },
-    "last_fetch": "2026-05-03T18:06:19.807941+00:00"
+    "last_fetch": "2026-05-04T00:06:32.033925+00:00"
   },
   "hipblas-latest": {
     "urls": {
@@ -1953,11 +1953,11 @@
         "fetched_at": "2026-05-01T09:19:20.016319+00:00"
       }
     },
-    "last_fetch": "2026-05-03T21:03:54.525172+00:00"
+    "last_fetch": "2026-05-04T00:04:36.093804+00:00"
   },
   "migraphx-latest": {
     "urls": {},
-    "last_fetch": "2026-05-03T18:09:20.794122+00:00"
+    "last_fetch": "2026-05-04T00:09:14.202494+00:00"
   },
   "hipsolver-latest": {
     "urls": {
@@ -2062,7 +2062,7 @@
         "fetched_at": "2026-05-02T21:06:00.948400+00:00"
       }
     },
-    "last_fetch": "2026-05-03T21:05:46.753853+00:00"
+    "last_fetch": "2026-05-04T00:06:08.599011+00:00"
   },
   "rocal-latest": {
     "urls": {
@@ -2131,7 +2131,7 @@
         "fetched_at": "2026-05-01T09:23:03.427881+00:00"
       }
     },
-    "last_fetch": "2026-05-03T18:09:53.557813+00:00"
+    "last_fetch": "2026-05-04T00:09:47.626899+00:00"
   },
   "rocprofiler-sdk-latest": {
     "urls": {
@@ -2754,7 +2754,7 @@
         "fetched_at": "2026-05-03T12:02:03.937181+00:00"
       }
     },
-    "last_fetch": "2026-05-03T21:02:14.968203+00:00"
+    "last_fetch": "2026-05-04T00:03:00.158161+00:00"
   },
   "rocm-docs-7.0.0": {
     "urls": {
@@ -3031,19 +3031,19 @@
         "fetched_at": "2026-05-03T09:02:21.461210+00:00"
       }
     },
-    "last_fetch": "2026-05-03T21:02:45.208795+00:00"
+    "last_fetch": "2026-05-04T00:03:30.329456+00:00"
   },
   "rocm-docs-6.4.0": {
     "urls": {},
-    "last_fetch": "2026-05-03T21:02:45.817280+00:00"
+    "last_fetch": "2026-05-04T00:03:30.883903+00:00"
   },
   "rocm-docs-6.2.0": {
     "urls": {},
-    "last_fetch": "2026-05-03T21:02:46.411250+00:00"
+    "last_fetch": "2026-05-04T00:03:31.505894+00:00"
   },
   "rocm-docs-6.0.0": {
     "urls": {},
-    "last_fetch": "2026-05-03T21:02:48.822410+00:00"
+    "last_fetch": "2026-05-04T00:03:32.028823+00:00"
   },
   "rocblas-latest": {
     "urls": {
@@ -3144,7 +3144,7 @@
         "fetched_at": "2026-05-02T15:05:47.799271+00:00"
       }
     },
-    "last_fetch": "2026-05-03T21:03:43.316095+00:00"
+    "last_fetch": "2026-05-04T00:04:23.392301+00:00"
   },
   "hipblaslt-latest": {
     "urls": {
@@ -3225,7 +3225,7 @@
         "fetched_at": "2026-05-02T15:06:41.534192+00:00"
       }
     },
-    "last_fetch": "2026-05-03T21:04:13.564050+00:00"
+    "last_fetch": "2026-05-04T00:04:53.061723+00:00"
   },
   "rocfft-latest": {
     "urls": {
@@ -3282,7 +3282,7 @@
         "fetched_at": "2026-05-02T15:07:09.795526+00:00"
       }
     },
-    "last_fetch": "2026-05-03T21:04:27.432351+00:00"
+    "last_fetch": "2026-05-04T00:05:08.866751+00:00"
   },
   "hipfft-latest": {
     "urls": {
@@ -3307,7 +3307,7 @@
         "fetched_at": "2026-05-02T15:07:23.518640+00:00"
       }
     },
-    "last_fetch": "2026-05-03T21:04:35.371474+00:00"
+    "last_fetch": "2026-05-04T00:05:14.860957+00:00"
   },
   "hipsparse-latest": {
     "urls": {
@@ -3384,7 +3384,7 @@
         "fetched_at": "2026-05-02T15:10:01.307468+00:00"
       }
     },
-    "last_fetch": "2026-05-03T18:06:43.633325+00:00"
+    "last_fetch": "2026-05-04T00:06:53.614972+00:00"
   },
   "hipsparsert-latest": {
     "urls": {
@@ -3590,7 +3590,7 @@
         "fetched_at": "2026-05-03T06:22:30.741637+00:00"
       }
     },
-    "last_fetch": "2026-05-03T18:07:57.446175+00:00"
+    "last_fetch": "2026-05-04T00:07:47.896906+00:00"
   },
   "hiprand-latest": {
     "urls": {
@@ -3619,7 +3619,7 @@
         "fetched_at": "2026-05-02T18:09:34.233710+00:00"
       }
     },
-    "last_fetch": "2026-05-03T18:08:01.554306+00:00"
+    "last_fetch": "2026-05-04T00:07:53.901655+00:00"
   },
   "miopen-latest": {
     "urls": {
@@ -3704,7 +3704,7 @@
         "fetched_at": "2026-05-03T03:09:10.978789+00:00"
       }
     },
-    "last_fetch": "2026-05-03T18:08:52.050255+00:00"
+    "last_fetch": "2026-05-04T00:08:45.003842+00:00"
   },
   "composable-kernel-latest": {
     "urls": {
@@ -3873,7 +3873,7 @@
         "fetched_at": "2026-05-03T09:08:50.638000+00:00"
       }
     },
-    "last_fetch": "2026-05-03T18:09:20.180624+00:00"
+    "last_fetch": "2026-05-04T00:09:15.706183+00:00"
   },
   "rocvisionx-latest": {
     "urls": {
@@ -3950,7 +3950,7 @@
         "fetched_at": "2026-05-02T21:11:16.467279+00:00"
       }
     },
-    "last_fetch": "2026-05-03T18:09:37.530977+00:00"
+    "last_fetch": "2026-05-04T00:09:33.721739+00:00"
   },
   "hipify-latest": {
     "urls": {
@@ -4079,7 +4079,7 @@
         "fetched_at": "2026-05-03T03:10:35.395579+00:00"
       }
     },
-    "last_fetch": "2026-05-03T18:10:21.738389+00:00"
+    "last_fetch": "2026-05-04T00:10:15.585824+00:00"
   },
   "amdsmi-latest": {
     "urls": {
@@ -4266,9 +4266,29 @@
       "https://rocm.docs.amd.com/projects/amdsmi/en/latest/how-to/amdsmi-cli-tool.html": {
         "content_hash": "a1f6c3e8ce30f744",
         "fetched_at": "2026-05-03T06:25:35.553661+00:00"
+      },
+      "https://rocm.docs.amd.com/projects/amdsmi/en/latest/doxygen/docBin/html/functions_vars_o.html": {
+        "content_hash": "0556e14380d7b708",
+        "fetched_at": "2026-05-04T00:10:28.298275+00:00"
+      },
+      "https://rocm.docs.amd.com/projects/amdsmi/en/latest/doxygen/docBin/html/functions_g.html": {
+        "content_hash": "686609887aad0109",
+        "fetched_at": "2026-05-04T00:10:32.221446+00:00"
+      },
+      "https://rocm.docs.amd.com/projects/amdsmi/en/latest/doxygen/docBin/html/functions_o.html": {
+        "content_hash": "70f406b4cffe84f8",
+        "fetched_at": "2026-05-04T00:10:37.814558+00:00"
+      },
+      "https://rocm.docs.amd.com/projects/amdsmi/en/latest/doxygen/docBin/html/functions_v.html": {
+        "content_hash": "0c68220a06d551a0",
+        "fetched_at": "2026-05-04T00:10:40.382003+00:00"
+      },
+      "https://rocm.docs.amd.com/projects/amdsmi/en/latest/doxygen/docBin/html/files.html": {
+        "content_hash": "93f317f12359a24f",
+        "fetched_at": "2026-05-04T00:10:46.903673+00:00"
       }
     },
-    "last_fetch": "2026-05-03T06:25:35.899055+00:00"
+    "last_fetch": "2026-05-04T00:10:48.906262+00:00"
   },
   "install-linux-latest": {
     "urls": {
