@@ -1,0 +1,32 @@
+{
+  "article_id": "github_ROCm_rocm-libraries_6956",
+  "title": "[CK] Smart-build CTest invocation can run more tests than were built, causing spurious \"Not Run\" CI failures",
+  "source_url": "https://github.com/ROCm/rocm-libraries/issues/6956",
+  "verified_at": "2026-05-03T16:40:44.995304+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "warn",
+      "score": 0.802,
+      "notes": "可能有更新 (相似度 80%)，建议重新抓取"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "pass",
+      "score": 0.8,
+      "notes": "信息完整 (4/5)",
+      "dimensions": {
+        "has_description": true,
+        "has_environment": true,
+        "has_error_log": true,
+        "has_resolution_status": false,
+        "has_solution": true
+      }
+    }
+  },
+  "overall": "warn"
+}

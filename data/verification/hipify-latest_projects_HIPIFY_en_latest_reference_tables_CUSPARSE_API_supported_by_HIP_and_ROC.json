@@ -1,0 +1,26 @@
+{
+  "article_id": "hipify-latest_projects_HIPIFY_en_latest_reference_tables_CUSPARSE_API_supported_by_HIP_and_ROC",
+  "title": "CUSPARSE API supported by HIP and ROC &#8212; HIPIFY Documentation",
+  "source_url": "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/reference/tables/CUSPARSE_API_supported_by_HIP_and_ROC.html",
+  "verified_at": "2026-05-03T16:50:12.017363+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.579,
+      "notes": "内容差异大 (相似度 58%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "fail"
+}

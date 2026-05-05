@@ -1,0 +1,26 @@
+{
+  "article_id": "hip-latest_projects_HIP_en_latest_tutorial_programming-patterns_multikernel_bfs",
+  "title": "Multi-kernel programming: breadth-first search tutorial &#8212; HIP 7.2.53211 Documentation",
+  "source_url": "https://rocm.docs.amd.com/projects/HIP/en/latest/tutorial/programming-patterns/multikernel_bfs.html",
+  "verified_at": "2026-05-03T16:44:56.595944+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "warn",
+      "score": 0.778,
+      "notes": "可能有更新 (相似度 78%)，建议重新抓取"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "warn"
+}

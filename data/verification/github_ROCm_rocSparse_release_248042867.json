@@ -1,0 +1,26 @@
+{
+  "article_id": "github_ROCm_rocSparse_release_248042867",
+  "title": "rocsparse 4.0.2 for ROCm 7.0.1",
+  "source_url": "https://github.com/ROCm/rocSPARSE/releases/tag/rocm-7.0.1",
+  "verified_at": "2026-05-03T16:40:23.034197+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.191,
+      "notes": "内容差异大 (相似度 19%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "fail"
+}

@@ -1,0 +1,26 @@
+{
+  "article_id": "composable-kernel-latest_projects_composable_kernel_en_latest_tutorial_Composable-Kernel-examples",
+  "title": "Composable Kernel examples and tests &#8212; Composable Kernel 1.2.0 Documentation",
+  "source_url": "https://rocm.docs.amd.com/projects/composable_kernel/en/latest/tutorial/Composable-Kernel-examples.html",
+  "verified_at": "2026-05-03T16:30:45.162985+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "warn",
+      "score": 0.727,
+      "notes": "可能有更新 (相似度 73%)，建议重新抓取"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "warn"
+}

@@ -1,0 +1,26 @@
+{
+  "article_id": "github_ROCm_ROCm_release_189075480",
+  "title": "ROCm 6.3.0 Release",
+  "source_url": "https://github.com/ROCm/ROCm/releases/tag/rocm-6.3.0",
+  "verified_at": "2026-05-03T16:34:47.392650+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "warn",
+      "score": 0.791,
+      "notes": "可能有更新 (相似度 79%)，建议重新抓取"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "warn"
+}

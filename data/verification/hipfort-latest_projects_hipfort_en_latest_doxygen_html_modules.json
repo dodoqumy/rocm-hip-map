@@ -1,0 +1,26 @@
+{
+  "article_id": "hipfort-latest_projects_hipfort_en_latest_doxygen_html_modules",
+  "title": "HIPFORT API Reference: Modules &#8212; hipfort 0.7.1 Documentation",
+  "source_url": "https://rocm.docs.amd.com/projects/hipfort/en/latest/doxygen/html/modules.html",
+  "verified_at": "2026-05-03T16:48:02.780248+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.03,
+      "notes": "内容差异大 (相似度 3%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "fail"
+}

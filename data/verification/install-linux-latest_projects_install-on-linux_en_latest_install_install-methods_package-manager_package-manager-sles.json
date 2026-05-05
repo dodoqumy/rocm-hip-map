@@ -1,0 +1,26 @@
+{
+  "article_id": "install-linux-latest_projects_install-on-linux_en_latest_install_install-methods_package-manager_package-manager-sles",
+  "title": "SUSE Linux Enterprise Server native installation",
+  "source_url": "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/install-methods/package-manager/package-manager-sles.html",
+  "verified_at": "2026-05-03T16:54:34.880376+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.522,
+      "notes": "内容差异大 (相似度 52%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "fail"
+}

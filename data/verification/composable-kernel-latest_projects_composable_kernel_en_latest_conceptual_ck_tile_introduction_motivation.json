@@ -1,0 +1,26 @@
+{
+  "article_id": "composable-kernel-latest_projects_composable_kernel_en_latest_conceptual_ck_tile_introduction_motivation",
+  "title": "Introduction and Motivation - Why Tile Distribution Matters &#8212; Composable Kernel 1.2.0 Documentation",
+  "source_url": "https://rocm.docs.amd.com/projects/composable_kernel/en/latest/conceptual/ck_tile/introduction_motivation.html",
+  "verified_at": "2026-05-03T16:29:54.944515+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "warn",
+      "score": 0.807,
+      "notes": "可能有更新 (相似度 81%)，建议重新抓取"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "warn"
+}

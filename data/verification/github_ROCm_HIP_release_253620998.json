@@ -1,0 +1,26 @@
+{
+  "article_id": "github_ROCm_HIP_release_253620998",
+  "title": "None",
+  "source_url": "https://github.com/ROCm/hip/releases/tag/rocm-7.0.2",
+  "verified_at": "2026-05-03T16:32:24.615735+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.083,
+      "notes": "内容差异大 (相似度 8%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "fail"
+}

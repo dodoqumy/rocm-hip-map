@@ -1,0 +1,26 @@
+{
+  "article_id": "hip_projects_HIP_en_latest_how-to_hip_debugging",
+  "title": "404 - Page Not Found",
+  "source_url": "https://rocm.docs.amd.com/projects/HIP/en/latest/how-to/hip_debugging.html",
+  "verified_at": "2026-05-03T16:45:22.141911+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.146,
+      "notes": "内容差异大 (相似度 15%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "fail"
+}

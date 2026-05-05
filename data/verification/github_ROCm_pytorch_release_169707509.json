@@ -1,0 +1,32 @@
+{
+  "article_id": "github_ROCm_pytorch_release_169707509",
+  "title": "pytorch release 2.2.1v + few ROCm related changes ",
+  "source_url": "https://github.com/ROCm/pytorch/releases/tag/v2.2.1",
+  "verified_at": "2026-05-03T16:36:44.485980+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.283,
+      "notes": "内容差异大 (相似度 28%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "warn",
+      "score": 0.4,
+      "notes": "缺少: environment, error_log, resolution_status",
+      "dimensions": {
+        "has_description": true,
+        "has_environment": false,
+        "has_error_log": false,
+        "has_resolution_status": false,
+        "has_solution": true
+      }
+    }
+  },
+  "overall": "fail"
+}

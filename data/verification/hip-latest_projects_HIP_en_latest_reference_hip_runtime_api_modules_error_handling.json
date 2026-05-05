@@ -1,0 +1,32 @@
+{
+  "article_id": "hip-latest_projects_HIP_en_latest_reference_hip_runtime_api_modules_error_handling",
+  "title": "Error handling &#8212; HIP 7.2.53211 Documentation",
+  "source_url": "https://rocm.docs.amd.com/projects/HIP/en/latest/reference/hip_runtime_api/modules/error_handling.html",
+  "verified_at": "2026-05-03T16:43:27.668349+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.055,
+      "notes": "内容差异大 (相似度 6%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "warn",
+      "score": 0.4,
+      "notes": "缺少: environment, error_log, resolution_status",
+      "dimensions": {
+        "has_description": true,
+        "has_environment": false,
+        "has_error_log": false,
+        "has_resolution_status": false,
+        "has_solution": true
+      }
+    }
+  },
+  "overall": "fail"
+}

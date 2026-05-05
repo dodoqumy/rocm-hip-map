@@ -1,0 +1,26 @@
+{
+  "article_id": "hipsparse-latest_projects_hipSPARSE_en_latest_reference_level1",
+  "title": "Sparse level 1 functions &#8212; hipSPARSE 4.2.0 Documentation",
+  "source_url": "https://rocm.docs.amd.com/projects/hipSPARSE/en/latest/reference/level1.html",
+  "verified_at": "2026-05-03T16:52:29.055428+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "pass",
+      "score": 0.866,
+      "notes": "内容一致 (相似度 87%)"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "pending"
+}

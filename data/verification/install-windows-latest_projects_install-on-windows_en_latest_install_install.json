@@ -1,0 +1,26 @@
+{
+  "article_id": "install-windows-latest_projects_install-on-windows_en_latest_install_install",
+  "title": "Install HIP SDK",
+  "source_url": "https://rocm.docs.amd.com/projects/install-on-windows/en/latest/install/install.html",
+  "verified_at": "2026-05-03T16:55:13.829662+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "warn",
+      "score": 0.659,
+      "notes": "可能有更新 (相似度 66%)，建议重新抓取"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "warn"
+}

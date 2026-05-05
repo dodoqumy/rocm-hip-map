@@ -1,0 +1,26 @@
+{
+  "article_id": "hipify-latest_projects_HIPIFY_en_latest_how-to_hipify-perl",
+  "title": "Using hipify-perl &#8212; HIPIFY Documentation",
+  "source_url": "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/how-to/hipify-perl.html",
+  "verified_at": "2026-05-03T16:48:53.679390+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "pass",
+      "score": 0.918,
+      "notes": "内容一致 (相似度 92%)"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "pending"
+}

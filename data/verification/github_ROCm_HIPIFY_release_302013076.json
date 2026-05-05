@@ -1,0 +1,26 @@
+{
+  "article_id": "github_ROCm_HIPIFY_release_302013076",
+  "title": "HIPIFY tools for the ROC 7.12.0 Pre-release",
+  "source_url": "https://github.com/ROCm/HIPIFY/releases/tag/therock-7.12",
+  "verified_at": "2026-05-03T16:31:39.103912+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.123,
+      "notes": "内容差异大 (相似度 12%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "fail"
+}

@@ -1,0 +1,26 @@
+{
+  "article_id": "hip-latest_projects_HIP_en_latest_tutorial_programming-patterns_cpu_gpu_kmeans",
+  "title": "CPU-GPU cooperative computing: K-means clustering tutorial &#8212; HIP 7.2.53211 Documentation",
+  "source_url": "https://rocm.docs.amd.com/projects/HIP/en/latest/tutorial/programming-patterns/cpu_gpu_kmeans.html",
+  "verified_at": "2026-05-03T16:44:50.987356+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.097,
+      "notes": "内容差异大 (相似度 10%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "fail"
+}

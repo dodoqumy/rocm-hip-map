@@ -1,0 +1,26 @@
+{
+  "article_id": "github_ROCm_HIPIFY_release_205313630",
+  "title": "HIPIFY tools for ROCm 6.1.5",
+  "source_url": "https://github.com/ROCm/HIPIFY/releases/tag/rocm-6.1.5",
+  "verified_at": "2026-05-03T16:30:54.346068+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.149,
+      "notes": "内容差异大 (相似度 15%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "fail"
+}

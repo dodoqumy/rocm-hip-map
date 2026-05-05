@@ -1,0 +1,26 @@
+{
+  "article_id": "github_ROCm_RCCL_release_184014003",
+  "title": "rccl 2.20.5 for ROCm 6.2.4",
+  "source_url": "https://github.com/ROCm/rccl/releases/tag/rocm-6.2.4",
+  "verified_at": "2026-05-03T16:33:40.493423+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.172,
+      "notes": "内容差异大 (相似度 17%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "fail"
+}

@@ -1,0 +1,26 @@
+{
+  "article_id": "hip-latest_projects_HIP_en_latest_how-to_hip_runtime_api_initialization",
+  "title": "Initialization &#8212; HIP 7.2.53211 Documentation",
+  "source_url": "https://rocm.docs.amd.com/projects/HIP/en/latest/how-to/hip_runtime_api/initialization.html",
+  "verified_at": "2026-05-03T16:42:02.835075+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "warn",
+      "score": 0.736,
+      "notes": "可能有更新 (相似度 74%)，建议重新抓取"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "warn"
+}

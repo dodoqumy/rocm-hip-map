@@ -1,0 +1,26 @@
+{
+  "article_id": "install-linux-latest_projects_install-on-linux_en_latest_reference_user-kernel-space-compat-matrix",
+  "title": "User and AMD GPU Driver (amdgpu) support matrix",
+  "source_url": "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/user-kernel-space-compat-matrix.html",
+  "verified_at": "2026-05-03T16:54:58.399316+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "warn",
+      "score": 0.686,
+      "notes": "可能有更新 (相似度 69%)，建议重新抓取"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "warn"
+}

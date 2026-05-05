@@ -1,0 +1,26 @@
+{
+  "article_id": "github_ROCm_HIP_release_211840848",
+  "title": "None",
+  "source_url": "https://github.com/ROCm/hip/releases/tag/rocm-6.4.0",
+  "verified_at": "2026-05-03T16:31:56.183454+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.083,
+      "notes": "内容差异大 (相似度 8%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "fail"
+}

@@ -1,0 +1,26 @@
+{
+  "article_id": "hipsolver-latest_projects_hipSOLVER_en_latest_reference_refactor-api_types",
+  "title": "Refactorization data types &#8212; hipSOLVER 3.2.0 Documentation",
+  "source_url": "https://rocm.docs.amd.com/projects/hipSOLVER/en/latest/reference/refactor-api/types.html",
+  "verified_at": "2026-05-03T16:51:44.430629+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "warn",
+      "score": 0.645,
+      "notes": "可能有更新 (相似度 65%)，建议重新抓取"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "warn"
+}

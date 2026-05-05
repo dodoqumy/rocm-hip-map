@@ -1,0 +1,26 @@
+{
+  "article_id": "hipsolver-latest_projects_hipSOLVER_en_latest_reference_api_lapack",
+  "title": "hipSOLVER LAPACK functions &#8212; hipSOLVER 3.2.0 Documentation",
+  "source_url": "https://rocm.docs.amd.com/projects/hipSOLVER/en/latest/reference/api/lapack.html",
+  "verified_at": "2026-05-03T16:51:06.858865+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.529,
+      "notes": "内容差异大 (相似度 53%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "fail"
+}

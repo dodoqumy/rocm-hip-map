@@ -1,0 +1,26 @@
+{
+  "article_id": "hipsparsert-latest_projects_hipSPARSELt_en_latest_doxygen_html_globals_defs",
+  "title": "hipSPARSELt: Globals &#8212; hipSPARSELt 0.2.6 Documentation",
+  "source_url": "https://rocm.docs.amd.com/projects/hipSPARSELt/en/latest/doxygen/html/globals_defs.html",
+  "verified_at": "2026-05-03T16:53:22.224945+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.015,
+      "notes": "内容差异大 (相似度 1%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "fail"
+}

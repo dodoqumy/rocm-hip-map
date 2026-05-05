@@ -1,0 +1,36 @@
+{
+  "article_id": "amdsmi-latest_projects_amdsmi_en_latest_conceptual_ras",
+  "title": "Reliability, availability, serviceability (RAS) &#8212; AMD SMI 26.2.2 documentation",
+  "source_url": "https://rocm.docs.amd.com/projects/amdsmi/en/latest/conceptual/ras.html",
+  "verified_at": "2026-05-03T16:27:18.738819+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "warn",
+      "score": 0.831,
+      "notes": "可能有更新 (相似度 83%)，建议重新抓取"
+    },
+    "translation_quality": {
+      "status": "pass",
+      "score": 0.9,
+      "notes": "翻译总体质量良好，术语准确，语义忠实，但存在一处重复字符错误和个别表达可优化，整体通顺。",
+      "issues": [
+        "amdgpu（amdgpu（AMD GPU 内核驱动））中多了一个重复的'amdgpu（'",
+        "链接文本中重复了'amdgpu（'，应为单一括号注释",
+        "标题和正文中'可服务性'与对Linux内核文档的翻译'可维护性'不一致（但后者是引用链接文字，可接受略有差异）",
+        "'核心上'可改为'本质上'或'其核心是'更自然"
+      ],
+      "details": {
+        "terminology": 95,
+        "fidelity": 95,
+        "fluency": 90
+      }
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "warn"
+}

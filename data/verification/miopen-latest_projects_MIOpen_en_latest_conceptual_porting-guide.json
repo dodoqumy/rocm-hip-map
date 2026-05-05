@@ -1,0 +1,26 @@
+{
+  "article_id": "miopen-latest_projects_MIOpen_en_latest_conceptual_porting-guide",
+  "title": "Porting to MIOpen &#8212; MIOpen 3.5.1 Documentation",
+  "source_url": "https://rocm.docs.amd.com/projects/MIOpen/en/latest/conceptual/porting-guide.html",
+  "verified_at": "2026-05-03T16:55:32.677862+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.18,
+      "notes": "内容差异大 (相似度 18%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "fail"
+}

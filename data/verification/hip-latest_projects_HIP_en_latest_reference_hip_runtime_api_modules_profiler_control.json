@@ -1,0 +1,26 @@
+{
+  "article_id": "hip-latest_projects_HIP_en_latest_reference_hip_runtime_api_modules_profiler_control",
+  "title": "Profiler control &#8212; HIP 7.2.53211 Documentation",
+  "source_url": "https://rocm.docs.amd.com/projects/HIP/en/latest/reference/hip_runtime_api/modules/profiler_control.html",
+  "verified_at": "2026-05-03T16:44:21.608487+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.031,
+      "notes": "内容差异大 (相似度 3%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "fail"
+}

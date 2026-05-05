@@ -1,0 +1,26 @@
+{
+  "article_id": "amdsmi-latest_projects_amdsmi_en_latest_doxygen_docBin_html_functions_vars_i",
+  "title": "AMD SMI: Data Fields - Variables &#8212; AMD SMI 26.2.2 documentation",
+  "source_url": "https://rocm.docs.amd.com/projects/amdsmi/en/latest/doxygen/docBin/html/functions_vars_i.html",
+  "verified_at": "2026-05-03T16:28:23.435818+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "fail",
+      "score": 0.041,
+      "notes": "内容差异大 (相似度 4%)，可能原文已大幅改版"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "翻译暂未完成",
+      "issues": []
+    },
+    "issue_completeness": {
+      "status": "skip",
+      "score": 1,
+      "notes": "非 Issue 类文章",
+      "dimensions": {}
+    }
+  },
+  "overall": "fail"
+}
