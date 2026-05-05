@@ -1,9 +1,10 @@
 # 📋 rocm-hip-map 开发进度跟踪
 
-**最后更新：** 2026-05-02 03:15 JST
-**当前分支：** `improvement-review-remediation`
-**最新提交：** `afe4d28` — feat(classify): Phase 2.3 v2 智能分类 - 739 篇
+**最后更新：** 2026-05-02 12:00 CST
+**当前分支：** `main`
+**最新提交：** `f85bdd4` — feat(seo): Phase 2.5 sitemap 增强 + 落地页
 **网站预览：** https://dodoqumy.github.io/rocm-hip-map/
+**后续计划：** [docs/plans/2026-05-02-phase-2.0-follow-up.md](docs/plans/2026-05-02-phase-2.0-follow-up.md) 📋
 **定时任务：** [docs/cron-jobs.md](docs/cron-jobs.md) ⏰
 **Bug 记录：** [docs/bugs.md](docs/bugs.md) 🐛
 **经验教训：** [docs/lessons-learned.md](docs/lessons-learned.md) 📖

@@ -1,185 +1,44 @@
 ---
 title: "Installing ROCm and deep learning frameworks"
 source_url: "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/install.html"
-source_type: "official"
-source_org: "amd"
-original_lang: "en"
+source_type: official
+source_org: amd
 credibility: 5
-lifecycle: "latest"
-synced_date: 2026-05-01
+lifecycle: latest
+fetched_at: 2026-05-02T18:01:10.507287+00:00
+content_hash: "79862b898bb34c20"
 ---
 
-:::::::::::::::::::::::::::::::::::::::::::::::::: {#main-content .bd-main role="main"}
-::: sbt-scroll-pixel-helper
-:::
+# Installing ROCm and deep learning frameworks[#](#installing-rocm-and-deep-learning-frameworks)
 
-:::::::::::::::::::::::::::::::::::::::::::::::: bd-content
-::::::::::::::::::::::::::::::::::::::::::: bd-article-container
-:::::::::: {.bd-header-article .d-print-none}
-::::::::: {.header-article-items .header-article__inner}
-::::: header-article-items__start
-::: header-article-item
-[]{.fa-solid .fa-angle-right}
-:::
+2026-01-23
 
-::: header-article-item
-- [](../../index.html){.nav-link aria-label="Home"}
-- [Use ROCm for AI](index.html){.nav-link}
-- Installing\...
-:::
-:::::
-
-::::: header-article-items__end
-:::: header-article-item
-::: article-header-buttons
-[]{.fa-solid .fa-list}
-:::
-::::
-:::::
-:::::::::
-::::::::::
-
-:::::: {#jb-print-docs-body .onlyprint}
-# Installing ROCm and deep learning frameworks
-
-::::: {#print-main-content}
-:::: {#jb-print-toc}
-::: {}
-## Contents
-:::
-
-- [Deep learning frameworks](#deep-learning-frameworks){.reference .internal .nav-link}
-- [Next steps](#next-steps){.reference .internal .nav-link}
-::::
-:::::
-::::::
-
-::: {#searchbox}
-:::
-
-:::::::::::::::::::::::::: {#installing-rocm-and-deep-learning-frameworks .section}
-[]{#rocm-for-ai-install}
-
-# Installing ROCm and deep learning frameworks[\#](#installing-rocm-and-deep-learning-frameworks "Link to this heading"){.headerlink}
-
-::::::::::: {#rocm-docs-core-article-info .sd-container-fluid .sd-sphinx-override .sd-p-0 .sd-mt-2 .sd-mb-4 .sd-p-2 .sd-rounded-1 .docutils}
-:::::::::: {.sd-row .sd-row-cols-2 .sd-gx-2 .sd-gy-1 .docutils}
-::::::::: {.sd-col .sd-d-flex-row .sd-align-minor-center .docutils}
-:::::::: {.sd-container-fluid .sd-sphinx-override .docutils}
-::::::: {.sd-row .sd-row-cols-2 .sd-row-cols-xs-2 .sd-row-cols-sm-3 .sd-row-cols-md-3 .sd-row-cols-lg-3 .sd-gx-3 .sd-gy-1 .docutils}
-::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
-[ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==){.sd-octicon .sd-octicon-calendar} ]{.sd-pr-2 .article-info-date-svg} 2026-01-23
-:::
-
-::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
-[ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=){.sd-octicon .sd-octicon-clock} ]{.sd-pr-2 .article-info-read-time-svg} 3 min read time
-:::
-
-::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils style="color:gray;"}
-Applies to Linux
-:::
-
-::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
-:::
-:::::::
-::::::::
-:::::::::
-::::::::::
-:::::::::::
+3 min read time
 
 Before getting started, install ROCm and supported deep learning frameworks.
 
-:::::::: {.sd-container-fluid .sd-sphinx-override .sd-mb-4 .docutils}
-::::::: {.sd-row .sd-row-cols-1 .sd-row-cols-xs-1 .sd-row-cols-sm-1 .sd-row-cols-md-1 .sd-row-cols-lg-1 .docutils}
-:::::: {.sd-col .sd-d-flex-row .docutils}
-::::: {.sd-card .sd-sphinx-override .sd-w-100 .sd-shadow-sm .docutils}
-:::: {.sd-card-body .docutils}
-::: {.sd-card-title .sd-font-weight-bold .docutils}
-Pre-install
-:::
+If you’re new to ROCm, refer to the [ROCm quick start install guide for Linux](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html).
 
-Each release of ROCm supports specific hardware and software configurations. Before installing, consult the [[System requirements]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html "(in ROCm installation on Linux v7.2.2)"){.reference .external} and [[Installation prerequisites]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/prerequisites.html "(in ROCm installation on Linux v7.2.2)"){.reference .external} guides.
-::::
-:::::
-::::::
-:::::::
-::::::::
+If you’re using a Radeon GPU for graphics-accelerated applications, refer to the
+[Radeon installation instructions](https://rocm.docs.amd.com/projects/radeon/en/latest/docs/install/native_linux/howto_native_linux.html).
 
-If you're new to ROCm, refer to the [[ROCm quick start install guide for Linux]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html "(in ROCm installation on Linux v7.2.2)"){.reference .external}.
+You can install ROCm on [compatible systems](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html) via your Linux
+distribution’s package manager. See the following documentation resources to get started:
 
-If you're using a Radeon GPU for graphics-accelerated applications, refer to the [Radeon installation instructions](https://rocm.docs.amd.com/projects/radeon/en/latest/docs/install/native_linux/howto_native_linux.html){.reference .external}.
+Follow the [post-installation instructions](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/post-install.html) to
+configure your system linker, PATH, and verify the installation.
 
-You can install ROCm on [[compatible systems]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html "(in ROCm installation on Linux v7.2.2)"){.reference .external} via your Linux distribution's package manager. See the following documentation resources to get started:
+If you encounter any issues during installation, refer to the
+[Installation troubleshooting](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/install-faq.html) guide.
 
-- [[ROCm installation overview]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/install-overview.html "(in ROCm installation on Linux v7.2.2)"){.reference .external}
+## Deep learning frameworks[#](#deep-learning-frameworks)
 
-- [[Using your Linux distribution's package manager]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/install-methods/package-manager-index.html "(in ROCm installation on Linux v7.2.2)"){.reference .external}
+ROCm supports deep learning frameworks and libraries including [PyTorch](https://pytorch.org), [TensorFlow](https://tensorflow.org), [JAX](https://jax.readthedocs.io/en/latest), and more.
 
-- [[Multi-version installation]{.xref .std .std-ref}](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/install-methods/multi-version-install-index.html#installation-types "(in ROCm installation on Linux v7.2.2)"){.reference .external}
+Review the [framework installation documentation](../deep-learning-rocm.html). For ease-of-use, it’s recommended to use official ROCm prebuilt Docker
+images with the framework pre-installed.
 
-:::::::: {.sd-container-fluid .sd-sphinx-override .sd-mb-4 .docutils}
-::::::: {.sd-row .sd-row-cols-1 .sd-row-cols-xs-1 .sd-row-cols-sm-1 .sd-row-cols-md-1 .sd-row-cols-lg-1 .docutils}
-:::::: {.sd-col .sd-d-flex-row .docutils}
-::::: {.sd-card .sd-sphinx-override .sd-w-100 .sd-shadow-sm .docutils}
-:::: {.sd-card-body .docutils}
-::: {.sd-card-title .sd-font-weight-bold .docutils}
-Post-install
-:::
+## Next steps[#](#next-steps)
 
-Follow the [[post-installation instructions]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/post-install.html "(in ROCm installation on Linux v7.2.2)"){.reference .external} to configure your system linker, PATH, and verify the installation.
-
-If you encounter any issues during installation, refer to the [[Installation troubleshooting]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/install-faq.html "(in ROCm installation on Linux v7.2.2)"){.reference .external} guide.
-::::
-:::::
-::::::
-:::::::
-::::::::
-
-::: {#deep-learning-frameworks .section}
-## Deep learning frameworks[\#](#deep-learning-frameworks "Link to this heading"){.headerlink}
-
-ROCm supports deep learning frameworks and libraries including [PyTorch](https://pytorch.org){.reference .external}, [TensorFlow](https://tensorflow.org){.reference .external}, [JAX](https://jax.readthedocs.io/en/latest){.reference .external}, and more.
-
-Review the [[framework installation documentation]{.doc}](../deep-learning-rocm.html){.reference .internal}. For ease-of-use, it's recommended to use official ROCm prebuilt Docker images with the framework pre-installed.
-:::
-
-::: {#next-steps .section}
-## Next steps[\#](#next-steps "Link to this heading"){.headerlink}
-
-After installing ROCm and your desired ML libraries -- and before running AI workloads -- conduct system health benchmarks to test the optimal performance of your AMD hardware. See [[System setup for AI workloads on ROCm]{.doc}](system-setup/index.html){.reference .internal} to get started.
-:::
-::::::::::::::::::::::::::
-
-::::: prev-next-area
-[](index.html "previous page"){.left-prev}
-
-::: prev-next-info
-previous
-
-Use ROCm for AI
-:::
-
-[](system-setup/index.html "next page"){.right-next}
-
-::: prev-next-info
-next
-
-System setup for AI workloads on ROCm
-:::
-:::::
-:::::::::::::::::::::::::::::::::::::::::::
-
-:::::: {.bd-sidebar-secondary .bd-toc}
-::::: {.sidebar-secondary-items .sidebar-secondary__inner}
-:::: sidebar-secondary-item
-::: {.page-toc .tocsection .onthispage}
-Contents
-:::
-
-- [Deep learning frameworks](#deep-learning-frameworks){.reference .internal .nav-link}
-- [Next steps](#next-steps){.reference .internal .nav-link}
-::::
-:::::
-::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::::
+After installing ROCm and your desired ML libraries – and before running AI workloads – conduct system health benchmarks
+to test the optimal performance of your AMD hardware. See [System setup for AI workloads on ROCm](system-setup/index.html) to get started.

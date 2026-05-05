@@ -1,0 +1,56 @@
+---
+title: "ROCm documentation toolchain"
+source_url: "https://rocm.docs.amd.com/en/docs-7.2.0/contribute/toolchain.html"
+source_type: official
+source_org: amd
+credibility: 5
+lifecycle: latest
+fetched_at: 2026-05-03T03:02:12.451431+00:00
+content_hash: "7acd30783bc8d269"
+---
+
+# ROCm documentation toolchain[#](#rocm-documentation-toolchain)
+
+2025-12-12
+
+3 min read time
+
+The ROCm documentation relies on several open source toolchains and sites.
+
+## rocm-docs-core[#](#rocm-docs-core)
+
+[rocm-docs-core](https://github.com/ROCm/rocm-docs-core) is an AMD-maintained
+project that applies customizations for the ROCm documentation. This project is the tool most ROCm repositories use as part of their documentation build pipeline. It is available as a [pip package on PyPI](https://pypi.org/project/rocm-docs-core/).
+
+See the user and developer guides for rocm-docs-core at rocm-docs-core documentation.
+
+## Sphinx[#](#sphinx)
+
+[Sphinx](https://www.sphinx-doc.org/en/master/) is a documentation generator originally used for Python. It is now widely used in the open source community.
+
+### Sphinx External ToC[#](#sphinx-external-toc)
+
+[Sphinx External ToC](https://sphinx-external-toc.readthedocs.io/en/latest/intro.html) is a Sphinx extension used for ROCm documentation navigation. This tool generates a navigation menu on the left
+based on a YAML file (`_toc.yml.in`
+
+) that contains the table of contents.
+
+### Sphinx-book-theme[#](#sphinx-book-theme)
+
+[Sphinx-book-theme](https://sphinx-book-theme.readthedocs.io/en/latest/) is a Sphinx theme that defines the base appearance for ROCm documentation. ROCm documentation applies some customization, such as a custom header and footer, on top of the Sphinx Book Theme.
+
+### Sphinx Design[#](#sphinx-design)
+
+[Sphinx design](https://sphinx-design.readthedocs.io/en/latest/index.html) is a Sphinx extension that adds design functionality. ROCm documentation uses Sphinx Design for grids, cards, and synchronized tabs.
+
+## Doxygen[#](#doxygen)
+
+[Doxygen](https://www.doxygen.nl/) is a documentation generator that extracts information from in-code comments. It is used for API documentation.
+
+## Breathe[#](#breathe)
+
+[Breathe](https://www.breathe-doc.org/) is a Sphinx plugin for integrating Doxygen content.
+
+## Read the Docs[#](#read-the-docs)
+
+[Read the Docs](https://docs.readthedocs.io/en/stable/) is the service that builds and hosts the HTML version of the ROCm documentation.
