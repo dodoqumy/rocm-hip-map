@@ -17,7 +17,7 @@ on:
       max_files:
         description: '每次翻译篇数（0=不设限）'
         required: false
-        default: '0'
+        default: '20'
       model:
         description: '翻译模型'
         required: false
