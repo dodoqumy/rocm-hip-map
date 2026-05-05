@@ -6,25 +6,50 @@ source_org: "amd"
 original_lang: "en"
 credibility: 5
 lifecycle: "latest"
-synced_date: 2026-04-28
+synced_date: 2026-05-03
 ---
 
+::::::::::::::::::::::: {#main-content .bd-main role="main"}
+::: sbt-scroll-pixel-helper
+:::
+
+::::::::::::::::::::: bd-content
+:::::::::::::::::::: bd-article-container
+:::::::::: {.bd-header-article .d-print-none}
+::::::::: {.header-article-items .header-article__inner}
 ::::: header-article-items__start
 ::: header-article-item
 []{.fa-solid .fa-angle-right}
+:::
 
 ::: header-article-item
 - [](../index.html){.nav-link aria-label="Home"}
 - [Supported CUDA APIs]{.ellipsis}
+:::
+:::::
 
 ::::: header-article-items__end
 :::: header-article-item
 ::: article-header-buttons
+:::
+::::
+:::::
+:::::::::
+::::::::::
 
+::::: {#jb-print-docs-body .onlyprint}
 # Supported CUDA APIs
 
+:::: {#print-main-content}
+::: {#jb-print-toc}
+:::
+::::
+:::::
 
+::: {#searchbox}
+:::
 
+:::: {#supported-cuda-apis .section .tex2jax_ignore .mathjax_ignore}
 # Supported CUDA APIs[\#](#supported-cuda-apis "Link to this heading"){.headerlink}
 
 ::: pst-scrollable-table-container
@@ -43,8 +68,10 @@ synced_date: 2026-04-28
   CUDNN API                                                                                                                      [[MIOPEN API]{.std .std-doc}](tables/CUDNN_API_supported_by_MIOPEN.html){.reference .internal}       
   CUTENSOR API       [[HIP TENSOR API]{.std .std-doc}](tables/CUTENSOR_API_supported_by_HIP.html){.reference .internal}                                                                                                               
   CUB API            [[HIP CUB API]{.std .std-doc}](tables/CUB_API_supported_by_HIP.html){.reference .internal}                                                                                                                       
+:::
 
 To generate the above documentation with the information about all supported CUDA APIs in Markdown format, run [`hipify-clang`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--md`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--doc-format=full`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--doc-roc=joint`{.docutils .literal .notranslate}]{.pre} with or without specifying the output directory ([`-o`{.docutils .literal .notranslate}]{.pre}). By running [`hipify-clang`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--csv`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--doc-format=full`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`--doc-roc=joint`{.docutils .literal .notranslate}]{.pre}, the documentation will be generated in CSV format.
+::::
 
 ::::: prev-next-area
 [](hipify-perl-cmd.html "previous page"){.left-prev}
@@ -53,6 +80,7 @@ To generate the above documentation with the information about all supported CUD
 previous
 
 hipify-perl commands
+:::
 
 [](hip_supported_apis.html "next page"){.right-next}
 
@@ -60,3 +88,8 @@ hipify-perl commands
 next
 
 CUDA APIs supported by HIP
+:::
+:::::
+::::::::::::::::::::
+:::::::::::::::::::::
+:::::::::::::::::::::::

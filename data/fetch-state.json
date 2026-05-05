@@ -2,17 +2,17 @@
   "urls": {
     "https://rocm.docs.amd.com/en/latest/about/license.html": {
       "hash": "90083c438e07e17c",
-      "last_fetch": "2026-05-01T05:32:03.355913+00:00",
+      "last_fetch": "2026-05-03T12:13:52.275086+00:00",
       "file": "rocm_en_latest_about_license.md"
     },
     "https://rocm.docs.amd.com/en/latest/about/release-notes.html": {
       "hash": "6e1293195bd5df15",
-      "last_fetch": "2026-05-01T05:32:04.070007+00:00",
+      "last_fetch": "2026-05-03T12:13:51.325909+00:00",
       "file": "rocm_en_latest_about_release-notes.md"
     },
     "https://rocm.docs.amd.com/en/latest/compatibility/compatibility-matrix.html": {
       "hash": "2fe564d168f5d5b9",
-      "last_fetch": "2026-05-01T05:32:05.702534+00:00",
+      "last_fetch": "2026-05-03T12:13:53.989067+00:00",
       "file": "rocm_en_latest_compatibility_compatibility-matrix.md"
     },
     "https://rocm.docs.amd.com/en/latest/compatibility/ml-compatibility/dgl-compatibility.html": {
@@ -37,37 +37,37 @@
     },
     "https://rocm.docs.amd.com/en/latest/conceptual/ai-pytorch-inception.html": {
       "hash": "9a0a41191c4f3f76",
-      "last_fetch": "2026-05-01T05:32:09.413756+00:00",
+      "last_fetch": "2026-05-03T12:14:09.052817+00:00",
       "file": "rocm_en_latest_conceptual_ai-pytorch-inception.md"
     },
     "https://rocm.docs.amd.com/en/latest/conceptual/cmake-packages.html": {
       "hash": "76853217068b5fe6",
-      "last_fetch": "2026-05-01T05:32:10.144437+00:00",
+      "last_fetch": "2026-05-03T12:14:07.366773+00:00",
       "file": "rocm_en_latest_conceptual_cmake-packages.md"
     },
     "https://rocm.docs.amd.com/en/latest/conceptual/compiler-topics.html": {
       "hash": "a89052a8384d30f5",
-      "last_fetch": "2026-05-01T05:32:10.795561+00:00",
+      "last_fetch": "2026-05-03T12:14:10.258383+00:00",
       "file": "rocm_en_latest_conceptual_compiler-topics.md"
     },
     "https://rocm.docs.amd.com/en/latest/conceptual/file-reorg.html": {
       "hash": "7483928703f112be",
-      "last_fetch": "2026-05-01T05:32:11.506771+00:00",
+      "last_fetch": "2026-05-03T12:14:04.802003+00:00",
       "file": "rocm_en_latest_conceptual_file-reorg.md"
     },
     "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch.html": {
       "hash": "f0e427348f67ff4d",
-      "last_fetch": "2026-05-01T05:32:12.189936+00:00",
+      "last_fetch": "2026-05-03T12:14:00.102293+00:00",
       "file": "rocm_en_latest_conceptual_gpu-arch.md"
     },
     "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi100.html": {
       "hash": "345c382d263fea92",
-      "last_fetch": "2026-05-01T05:32:12.883637+00:00",
+      "last_fetch": "2026-05-03T12:14:01.342271+00:00",
       "file": "rocm_en_latest_conceptual_gpu-arch_mi100.md"
     },
     "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi250.html": {
       "hash": "a8a83e2354218922",
-      "last_fetch": "2026-05-01T05:32:13.577774+00:00",
+      "last_fetch": "2026-05-03T12:14:02.408466+00:00",
       "file": "rocm_en_latest_conceptual_gpu-arch_mi250.md"
     },
     "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi300-mi200-performance-counters.html": {
@@ -77,7 +77,7 @@
     },
     "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi300.html": {
       "hash": "7b2789d9a582e5cd",
-      "last_fetch": "2026-05-01T05:32:15.111564+00:00",
+      "last_fetch": "2026-05-03T12:14:03.636719+00:00",
       "file": "rocm_en_latest_conceptual_gpu-arch_mi300.md"
     },
     "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi350-performance-counters.html": {
@@ -87,17 +87,17 @@
     },
     "https://rocm.docs.amd.com/en/latest/conceptual/gpu-isolation.html": {
       "hash": "6aaf3c6a15ba21d0",
-      "last_fetch": "2026-05-01T05:32:16.505908+00:00",
+      "last_fetch": "2026-05-03T12:14:05.965871+00:00",
       "file": "rocm_en_latest_conceptual_gpu-isolation.md"
     },
     "https://rocm.docs.amd.com/en/latest/contribute/building.html": {
       "hash": "4f63f59f0be94b01",
-      "last_fetch": "2026-05-01T05:32:17.182000+00:00",
+      "last_fetch": "2026-05-03T12:15:01.295760+00:00",
       "file": "rocm_en_latest_contribute_building.md"
     },
     "https://rocm.docs.amd.com/en/latest/contribute/contributing.html": {
       "hash": "4ed8330d97b72403",
-      "last_fetch": "2026-05-01T05:32:17.872036+00:00",
+      "last_fetch": "2026-05-03T12:14:59.736411+00:00",
       "file": "rocm_en_latest_contribute_contributing.md"
     },
     "https://rocm.docs.amd.com/en/latest/contribute/feedback.html": {
@@ -107,32 +107,32 @@
     },
     "https://rocm.docs.amd.com/en/latest/contribute/toolchain.html": {
       "hash": "1021290c4c6ff0f2",
-      "last_fetch": "2026-05-01T05:32:19.235854+00:00",
+      "last_fetch": "2026-05-03T12:15:02.788829+00:00",
       "file": "rocm_en_latest_contribute_toolchain.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/Bar-Memory.html": {
       "hash": "784d8ca8dbbdb98a",
-      "last_fetch": "2026-05-01T05:32:19.949264+00:00",
+      "last_fetch": "2026-05-03T12:14:16.234882+00:00",
       "file": "rocm_en_latest_how-to_Bar-Memory.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/build-rocm.html": {
       "hash": "0b48cb0b185dba29",
-      "last_fetch": "2026-05-01T05:32:20.610260+00:00",
+      "last_fetch": "2026-05-03T12:14:14.064301+00:00",
       "file": "rocm_en_latest_how-to_build-rocm.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/deep-learning-rocm.html": {
       "hash": "8b375e98eda20ba8",
-      "last_fetch": "2026-05-01T05:32:21.236568+00:00",
+      "last_fetch": "2026-05-03T12:14:11.467187+00:00",
       "file": "rocm_en_latest_how-to_deep-learning-rocm.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/gpu-performance/mi300x.html": {
       "hash": "7b40eb8ad1d04811",
-      "last_fetch": "2026-05-01T05:32:21.879551+00:00",
+      "last_fetch": "2026-05-03T12:14:17.560837+00:00",
       "file": "rocm_en_latest_how-to_gpu-performance_mi300x.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/programming_guide.html": {
       "hash": "c45fbaf524c1b7ae",
-      "last_fetch": "2026-05-01T05:32:22.518327+00:00",
+      "last_fetch": "2026-05-03T12:14:12.786013+00:00",
       "file": "rocm_en_latest_how-to_programming_guide.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/fine-tuning/fine-tuning-and-inference.html": {
@@ -142,7 +142,7 @@
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/fine-tuning/index.html": {
       "hash": "1fe9b91bca50bbc4",
-      "last_fetch": "2026-05-01T05:32:23.797644+00:00",
+      "last_fetch": "2026-05-03T12:14:34.734725+00:00",
       "file": "rocm_en_latest_how-to_rocm-for-ai_fine-tuning_index.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/fine-tuning/multi-gpu-fine-tuning-and-inference.html": {
@@ -162,12 +162,12 @@
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/index.html": {
       "hash": "e4d56b7abdefc33e",
-      "last_fetch": "2026-05-01T05:32:26.492791+00:00",
+      "last_fetch": "2026-05-03T12:14:22.966124+00:00",
       "file": "rocm_en_latest_how-to_rocm-for-ai_index.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/index.html": {
       "hash": "1fab0b0360f2878c",
-      "last_fetch": "2026-05-01T05:32:27.131834+00:00",
+      "last_fetch": "2026-05-03T12:14:36.165241+00:00",
       "file": "rocm_en_latest_how-to_rocm-for-ai_inference-optimization_index.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html": {
@@ -177,7 +177,7 @@
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-quantization.html": {
       "hash": "14a19ab3d43fd762",
-      "last_fetch": "2026-05-01T05:32:28.584547+00:00",
+      "last_fetch": "2026-05-03T12:14:37.056447+00:00",
       "file": "rocm_en_latest_how-to_rocm-for-ai_inference-optimization_model-quantization.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/optimizing-triton-kernel.html": {
@@ -357,22 +357,22 @@
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/deploy-your-model.html": {
       "hash": "7cf5983ee435b9f3",
-      "last_fetch": "2026-05-01T05:32:58.738229+00:00",
+      "last_fetch": "2026-05-03T12:14:30.827805+00:00",
       "file": "rocm_en_latest_how-to_rocm-for-ai_inference_deploy-your-model.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/hugging-face-models.html": {
       "hash": "be2efb8f7434cd8e",
-      "last_fetch": "2026-05-01T05:32:59.416727+00:00",
+      "last_fetch": "2026-05-03T12:14:32.134417+00:00",
       "file": "rocm_en_latest_how-to_rocm-for-ai_inference_hugging-face-models.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/index.html": {
       "hash": "8fc08a1825c50aca",
-      "last_fetch": "2026-05-01T05:33:00.087010+00:00",
+      "last_fetch": "2026-05-03T12:14:29.480963+00:00",
       "file": "rocm_en_latest_how-to_rocm-for-ai_inference_index.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/llm-inference-frameworks.html": {
       "hash": "e31e3f51f88ff905",
-      "last_fetch": "2026-05-01T05:33:00.765057+00:00",
+      "last_fetch": "2026-05-03T12:14:33.437538+00:00",
       "file": "rocm_en_latest_how-to_rocm-for-ai_inference_llm-inference-frameworks.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/xdit-diffusion-inference.html": {
@@ -382,12 +382,12 @@
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/install.html": {
       "hash": "aadebd7b47ca27dc",
-      "last_fetch": "2026-05-01T05:33:02.328736+00:00",
+      "last_fetch": "2026-05-03T12:14:24.316156+00:00",
       "file": "rocm_en_latest_how-to_rocm-for-ai_install.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/system-setup/index.html": {
       "hash": "4d73202f57020c2a",
-      "last_fetch": "2026-05-01T05:33:02.988194+00:00",
+      "last_fetch": "2026-05-03T12:14:25.544384+00:00",
       "file": "rocm_en_latest_how-to_rocm-for-ai_system-setup_index.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/system-setup/multi-node-setup.html": {
@@ -637,32 +637,32 @@
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/training/index.html": {
       "hash": "cea5ce3b84c0fd4e",
-      "last_fetch": "2026-05-01T05:33:42.837024+00:00",
+      "last_fetch": "2026-05-03T12:14:26.692062+00:00",
       "file": "rocm_en_latest_how-to_rocm-for-ai_training_index.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/training/scale-model-training.html": {
       "hash": "c2c0616768e08fa3",
-      "last_fetch": "2026-05-01T05:33:43.486702+00:00",
+      "last_fetch": "2026-05-03T12:14:28.079896+00:00",
       "file": "rocm_en_latest_how-to_rocm-for-ai_training_scale-model-training.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-hpc/index.html": {
       "hash": "d44c897fba3a5c3a",
-      "last_fetch": "2026-05-01T05:33:44.173615+00:00",
+      "last_fetch": "2026-05-03T12:14:38.342708+00:00",
       "file": "rocm_en_latest_how-to_rocm-for-hpc_index.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/setting-cus.html": {
       "hash": "82cec5cf7a5cc16d",
-      "last_fetch": "2026-05-01T05:33:44.934348+00:00",
+      "last_fetch": "2026-05-03T12:14:14.795389+00:00",
       "file": "rocm_en_latest_how-to_setting-cus.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/system-debugging.html": {
       "hash": "55461b046a4573aa",
-      "last_fetch": "2026-05-01T05:33:45.634985+00:00",
+      "last_fetch": "2026-05-03T12:14:15.331393+00:00",
       "file": "rocm_en_latest_how-to_system-debugging.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/system-optimization/index.html": {
       "hash": "08b7865e2a2eab40",
-      "last_fetch": "2026-05-01T05:33:46.773080+00:00",
+      "last_fetch": "2026-05-03T12:14:19.799182+00:00",
       "file": "rocm_en_latest_how-to_system-optimization_index.md"
     },
     "https://rocm.docs.amd.com/en/latest/how-to/system-optimization/rdna3-5.html": {
@@ -677,22 +677,22 @@
     },
     "https://rocm.docs.amd.com/en/latest/how-to/tuning-guides/mi300x/index.html": {
       "hash": "1b0641d1bae19180",
-      "last_fetch": "2026-05-01T05:33:48.752209+00:00",
+      "last_fetch": "2026-05-03T12:14:18.638728+00:00",
       "file": "rocm_en_latest_how-to_tuning-guides_mi300x_index.md"
     },
     "https://rocm.docs.amd.com/en/latest/index.html": {
       "hash": "5fc464ae567d18d3",
-      "last_fetch": "2026-05-01T05:33:49.411108+00:00",
+      "last_fetch": "2026-05-03T12:13:49.924785+00:00",
       "file": "rocm_en_latest_index.md"
     },
     "https://rocm.docs.amd.com/en/latest/reference/api-libraries.html": {
       "hash": "2947d8370caa52a8",
-      "last_fetch": "2026-05-01T05:33:50.062056+00:00",
+      "last_fetch": "2026-05-03T12:14:39.492503+00:00",
       "file": "rocm_en_latest_reference_api-libraries.md"
     },
     "https://rocm.docs.amd.com/en/latest/reference/env-variables.html": {
       "hash": "4f8e0af110c0948d",
-      "last_fetch": "2026-05-01T05:33:50.846044+00:00",
+      "last_fetch": "2026-05-03T12:14:40.470835+00:00",
       "file": "rocm_en_latest_reference_env-variables.md"
     },
     "https://rocm.docs.amd.com/en/latest/reference/glossary.html": {
@@ -722,46 +722,146 @@
     },
     "https://rocm.docs.amd.com/en/latest/reference/gpu-arch-specs.html": {
       "hash": "f8c401b159b57bc5",
-      "last_fetch": "2026-05-01T05:33:54.907360+00:00",
+      "last_fetch": "2026-05-03T12:14:42.471653+00:00",
       "file": "rocm_en_latest_reference_gpu-arch-specs.md"
     },
     "https://rocm.docs.amd.com/en/latest/reference/gpu-atomics-operation.html": {
       "hash": "59fe1f471b0729b9",
-      "last_fetch": "2026-05-01T05:33:58.917973+00:00",
+      "last_fetch": "2026-05-03T12:14:54.262854+00:00",
       "file": "rocm_en_latest_reference_gpu-atomics-operation.md"
     },
     "https://rocm.docs.amd.com/en/latest/reference/graph-safe-support.html": {
       "hash": "caa2e0b62bdd1830",
-      "last_fetch": "2026-05-01T05:33:59.591013+00:00",
+      "last_fetch": "2026-05-03T12:14:57.151905+00:00",
       "file": "rocm_en_latest_reference_graph-safe-support.md"
     },
     "https://rocm.docs.amd.com/en/latest/reference/precision-support.html": {
       "hash": "ef67bc7d47eda1d2",
-      "last_fetch": "2026-05-01T05:34:00.381005+00:00",
+      "last_fetch": "2026-05-03T12:14:56.038496+00:00",
       "file": "rocm_en_latest_reference_precision-support.md"
     },
     "https://rocm.docs.amd.com/en/latest/reference/rocm-tools.html": {
       "hash": "35542fd9c92973c1",
-      "last_fetch": "2026-05-01T05:34:01.031759+00:00",
+      "last_fetch": "2026-05-03T12:14:41.592783+00:00",
       "file": "rocm_en_latest_reference_rocm-tools.md"
     },
     "https://rocm.docs.amd.com/en/latest/release/changelog.html": {
       "hash": "a7829e2c45d7ed0f",
-      "last_fetch": "2026-05-01T05:34:04.254350+00:00",
+      "last_fetch": "2026-05-03T12:15:15.617401+00:00",
       "file": "rocm_en_latest_release_changelog.md"
     },
     "https://rocm.docs.amd.com/en/latest/release/versions.html": {
       "hash": "bcdedabe1c6915a0",
-      "last_fetch": "2026-05-01T05:34:04.988290+00:00",
+      "last_fetch": "2026-05-03T12:15:04.004984+00:00",
       "file": "rocm_en_latest_release_versions.md"
     },
     "https://rocm.docs.amd.com/en/latest/what-is-rocm.html": {
       "hash": "e6e3865cd2074325",
-      "last_fetch": "2026-05-01T05:34:05.703192+00:00",
+      "last_fetch": "2026-05-03T12:13:48.698583+00:00",
       "file": "rocm_en_latest_what-is-rocm.md"
+    },
+    "https://rocm.docs.amd.com/en/latest/compatibility/ml-compatibility/pytorch.html": {
+      "hash": "b8f8fcbe254a1af1",
+      "last_fetch": "2026-05-03T12:13:55.301610+00:00",
+      "file": "rocm_en_latest_compatibility_ml-compatibility_pytorch.md"
+    },
+    "https://rocm.docs.amd.com/en/latest/compatibility/ml-compatibility/tensorflow.html": {
+      "hash": "8d463b236e30dd0f",
+      "last_fetch": "2026-05-03T12:13:56.550984+00:00",
+      "file": "rocm_en_latest_compatibility_ml-compatibility_tensorflow.md"
+    },
+    "https://rocm.docs.amd.com/en/latest/compatibility/ml-compatibility/jax.html": {
+      "hash": "b4f866acd3ad47ee",
+      "last_fetch": "2026-05-03T12:13:57.804090+00:00",
+      "file": "rocm_en_latest_compatibility_ml-compatibility_jax.md"
+    },
+    "https://rocm.docs.amd.com/en/latest/compatibility/ml-compatibility/dgl.html": {
+      "hash": "8e22d66e700243f6",
+      "last_fetch": "2026-05-03T12:13:58.942140+00:00",
+      "file": "rocm_en_latest_compatibility_ml-compatibility_dgl.md"
+    },
+    "https://rocm.docs.amd.com/en/latest/how-to/system-optimization/rdna3.5.html": {
+      "hash": "2d2a8cd2f1e95aad",
+      "last_fetch": "2026-05-03T12:14:21.752269+00:00",
+      "file": "rocm_en_latest_how-to_system-optimization_rdna3_5.md"
+    },
+    "https://rocm.docs.amd.com/en/latest/reference/glossary/index.html": {
+      "hash": "73caa91679af5dc1",
+      "last_fetch": "2026-05-03T12:14:58.487270+00:00",
+      "file": "rocm_en_latest_reference_glossary_index.md"
+    },
+    "https://rocm.docs.amd.com/projects/HIP/en/latest/index.html": {
+      "hash": "1e87949a62ccfda4",
+      "last_fetch": "2026-05-03T12:15:16.392950+00:00",
+      "file": "hip_projects_HIP_en_latest_index.md"
+    },
+    "https://rocm.docs.amd.com/projects/HIP/en/latest/how-to/hip_porting_guide.html": {
+      "hash": "9811b78c83dc3d7b",
+      "last_fetch": "2026-05-03T12:15:16.217147+00:00",
+      "file": "hip_projects_HIP_en_latest_how-to_hip_porting_guide.md"
+    },
+    "https://rocm.docs.amd.com/projects/HIP/en/latest/reference/index.html": {
+      "hash": "84d55a7c24e1474e",
+      "last_fetch": "2026-05-03T12:15:17.470429+00:00",
+      "file": "hip_projects_HIP_en_latest_reference_index.md"
+    },
+    "https://rocm.docs.amd.com/projects/HIP/en/latest/how-to/hip_install.html": {
+      "hash": "7ae99f5a5aad778a",
+      "last_fetch": "2026-05-03T12:15:18.824432+00:00",
+      "file": "hip_projects_HIP_en_latest_how-to_hip_install.md"
+    },
+    "https://rocm.docs.amd.com/projects/HIP/en/latest/how-to/hip_debugging.html": {
+      "hash": "082b17520b55230d",
+      "last_fetch": "2026-05-03T12:15:20.014817+00:00",
+      "file": "hip_projects_HIP_en_latest_how-to_hip_debugging.md"
+    },
+    "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/index.html": {
+      "hash": "0fd2957e19827393",
+      "last_fetch": "2026-05-03T12:15:20.801187+00:00",
+      "file": "rocm-install-linux_projects_install-on-linux_en_latest_index.md"
+    },
+    "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html": {
+      "hash": "c6432b9c60fb77be",
+      "last_fetch": "2026-05-03T12:15:22.007841+00:00",
+      "file": "rocm-install-linux_projects_install-on-linux_en_latest_reference_system-requirements.md"
+    },
+    "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/install-quick.html": {
+      "hash": "072834e5d123e869",
+      "last_fetch": "2026-05-03T12:15:23.428465+00:00",
+      "file": "rocm-install-linux_projects_install-on-linux_en_latest_install_install-quick.md"
+    },
+    "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/install-amdgpu.html": {
+      "hash": "e9338d9d7d0bd793",
+      "last_fetch": "2026-05-03T12:15:24.837774+00:00",
+      "file": "rocm-install-linux_projects_install-on-linux_en_latest_install_install-amdgpu.md"
+    },
+    "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/install-post.html": {
+      "hash": "f0c4e7dc7782d94d",
+      "last_fetch": "2026-05-03T12:15:26.028361+00:00",
+      "file": "rocm-install-linux_projects_install-on-linux_en_latest_install_install-post.md"
+    },
+    "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/index.html": {
+      "hash": "544b628fe37c1abe",
+      "last_fetch": "2026-05-03T12:15:27.186033+00:00",
+      "file": "hipify_projects_HIPIFY_en_latest_index.md"
+    },
+    "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/supported_apis.html": {
+      "hash": "a099971e8148edae",
+      "last_fetch": "2026-05-03T12:15:29.148258+00:00",
+      "file": "hipify_projects_HIPIFY_en_latest_supported_apis.md"
+    },
+    "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/hipify-clang.html": {
+      "hash": "8e4fbababbacddca",
+      "last_fetch": "2026-05-03T12:15:31.216957+00:00",
+      "file": "hipify_projects_HIPIFY_en_latest_hipify-clang.md"
+    },
+    "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/hipify-perl.html": {
+      "hash": "2b952e2782d7a14f",
+      "last_fetch": "2026-05-03T12:15:32.862785+00:00",
+      "file": "hipify_projects_HIPIFY_en_latest_hipify-perl.md"
     }
   },
-  "last_fetch": "2026-05-01T05:34:06.203449+00:00",
+  "last_fetch": "2026-05-03T12:15:33.363199+00:00",
   "rocm-docs-latest": {
     "urls": {
       "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/benchmark-docker/previous-versions/xdit-25.12.html": {

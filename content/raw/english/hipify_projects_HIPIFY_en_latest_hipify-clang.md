@@ -6,26 +6,47 @@ source_org: "amd"
 original_lang: "en"
 credibility: 5
 lifecycle: "latest"
-synced_date: 2026-04-28
+synced_date: 2026-05-03
 ---
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#main-content .bd-main role="main"}
+::: sbt-scroll-pixel-helper
+:::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::: bd-content
+:::::::::::::::::::::::::::::::::::::::::::::::: bd-article-container
+:::::::::: {.bd-header-article .d-print-none}
+::::::::: {.header-article-items .header-article__inner}
 ::::: header-article-items__start
 ::: header-article-item
 []{.fa-solid .fa-angle-right}
+:::
 
 ::: header-article-item
 - [](../index.html){.nav-link aria-label="Home"}
 - [Using hipify-clang]{.ellipsis}
+:::
+:::::
 
 ::::: header-article-items__end
 :::: header-article-item
 ::: article-header-buttons
 
 []{.fa-solid .fa-list}
+:::
+::::
+:::::
+:::::::::
+::::::::::
 
+:::::: {#jb-print-docs-body .onlyprint}
 # Using hipify-clang
 
+::::: {#print-main-content}
+:::: {#jb-print-toc}
+::: {}
 ## Contents
+:::
 
 - [Release Dependencies](#release-dependencies){.reference .internal .nav-link}
 - [Usage](#usage){.reference .internal .nav-link}
@@ -33,8 +54,15 @@ synced_date: 2026-04-28
 - [Hipification statistics](#hipification-statistics){.reference .internal .nav-link}
   - [Print statistics](#print-statistics){.reference .internal .nav-link}
   - [Print CSV statistics](#print-csv-statistics){.reference .internal .nav-link}
+::::
+:::::
+::::::
 
+::: {#searchbox}
+:::
 
+::::::::::::::::::::::::::::::: {#using-hipify-clang .section}
+[]{#hipify-clang}
 
 # Using hipify-clang[\#](#using-hipify-clang "Link to this heading"){.headerlink}
 
@@ -60,6 +88,7 @@ It translates CUDA source into an Abstract Syntax Tree (AST), which is traversed
 
 - You must provide all the [`includes`{.docutils .literal .notranslate}]{.pre} and [`defines`{.docutils .literal .notranslate}]{.pre} to successfully translate the code.
 
+:::: {#release-dependencies .section}
 ## Release Dependencies[\#](#release-dependencies "Link to this heading"){.headerlink}
 
 [`hipify-clang`{.docutils .literal .notranslate}]{.pre} requires:
@@ -91,6 +120,7 @@ It translates CUDA source into an Abstract Syntax Tree (AST), which is traversed
   [8.0](https://developer.nvidia.com/cuda-80-ga2-download-archive){.reference .external}                                                                                                                                                                                            [4.0.0](http://releases.llvm.org/download.html#4.0.0){.reference .external}, [4.0.1](http://releases.llvm.org/download.html#4.0.1){.reference .external}, [5.0.0](http://releases.llvm.org/download.html#5.0.0){.reference .external}, [5.0.1](http://releases.llvm.org/download.html#5.0.1){.reference .external}, [5.0.2](http://releases.llvm.org/download.html#5.0.2){.reference .external}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ✅                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ✅
   [7.5](https://developer.nvidia.com/cuda-75-downloads-archive){.reference .external}                                                                                                                                                                                               [3.8.0](http://releases.llvm.org/download.html#3.8.0){.reference .external} ^4^, [3.8.1](http://releases.llvm.org/download.html#3.8.1){.reference .external} ^4^, [3.9.0](http://releases.llvm.org/download.html#3.9.0){.reference .external} ^4^, [3.9.1](http://releases.llvm.org/download.html#3.9.1){.reference .external} ^4^                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ✅                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ✅
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+:::
 
 ^1^ Represents the latest supported and recommended configuration.
 
@@ -101,55 +131,80 @@ It translates CUDA source into an Abstract Syntax Tree (AST), which is traversed
 ^4^ [`LLVM`{.docutils .literal .notranslate}]{.pre}` `{.docutils .literal .notranslate}[`3.x`{.docutils .literal .notranslate}]{.pre} is no longer supported (but might still work).
 
 In most cases, you can get a suitable version of [`LLVM+Clang`{.docutils .literal .notranslate}]{.pre} with your package manager. However, you can also [download a release archive](http://releases.llvm.org/){.reference .external} and build or install it. In case of multiple versions of [`LLVM`{.docutils .literal .notranslate}]{.pre} installed, set [CMAKE_PREFIX_PATH](https://cmake.org/cmake/help/latest/variable/CMAKE_PREFIX_PATH.html){.reference .external} so that [`CMake`{.docutils .literal .notranslate}]{.pre} can find the desired version of [`LLVM`{.docutils .literal .notranslate}]{.pre}. For example, [`-DCMAKE_PREFIX_PATH=D:\LLVM\21.1.6\dist`{.docutils .literal .notranslate}]{.pre}.
+::::
 
+:::::::::::: {#usage .section}
 ## Usage[\#](#usage "Link to this heading"){.headerlink}
 
+::: {.admonition .note}
 Note
 
 For additional details on the following [`hipify-clang`{.docutils .literal .notranslate}]{.pre} command options, see [[hipify-clang commands]{.std .std-ref}](../reference/hipify-clang-cmd.html#hipify-clang-cmd){.reference .internal}
+:::
 
 To process a file, [`hipify-clang`{.docutils .literal .notranslate}]{.pre} needs access to the same headers that are required to compile it with [`Clang`{.docutils .literal .notranslate}]{.pre}:
 
+:::: {.highlight-shell .notranslate}
 ::: highlight
     ./hipify-clang square.cu --cuda-path=/usr/local/cuda-12.9 -I /usr/local/cuda-12.9/samples/common/inc
+:::
+::::
 
 [`hipify-clang`{.docutils .literal .notranslate}]{.pre} arguments are supplied first, followed by a separator [`--`{.docutils .literal .notranslate}]{.pre} and the arguments to be passed to Clang for compiling the input file:
 
+:::: {.highlight-shell .notranslate}
 ::: highlight
     ./hipify-clang cpp17.cu --cuda-path=/usr/local/cuda-12.9 -- -std=c++17
+:::
+::::
 
 [`hipify-clang`{.docutils .literal .notranslate}]{.pre} also supports the hipification of multiple files that can be specified in a single command with absolute or relative paths:
 
+:::: {.highlight-shell .notranslate}
 ::: highlight
     ./hipify-clang cpp17.cu ../../square.cu /home/user/cuda/intro.cu --cuda-path=/usr/local/cuda-12.9 -- -std=c++17
+:::
+::::
 
 To use a specific version of LLVM during hipification, specify the [`hipify-clang`{.docutils .literal .notranslate}]{.pre} option [`--clang-resource-directory=`{.docutils .literal .notranslate}]{.pre} to point to the Clang resource directory, which is the parent directory for the [`include`{.docutils .literal .notranslate}]{.pre} folder that contains [`__clang_cuda_runtime_wrapper.h`{.docutils .literal .notranslate}]{.pre} and other header files used during the hipification process:
 
+:::: {.highlight-shell .notranslate}
 ::: highlight
     ./hipify-clang square.cu --cuda-path=/usr/local/cuda-12.9 --clang-resource-directory=/usr/llvm/21.1.6/dist/lib/clang/21
+:::
+::::
 
 For more information, refer to the [Clang manual for compiling CUDA](https://llvm.org/docs/CompileCudaWithLLVM.html#compiling-cuda-code){.reference .external}.
+::::::::::::
 
+:::::::: {#using-json-compilation-database .section}
+[]{#hipify-json}
 
 ## Using JSON compilation database[\#](#using-json-compilation-database "Link to this heading"){.headerlink}
 
 For some hipification automation (starting from Clang 8.0.0), you can provide a [Compilation Database in JSON format](https://clang.llvm.org/docs/JSONCompilationDatabase.html){.reference .external} in the [`compile_commands.json`{.docutils .literal .notranslate}]{.pre} file:
 
+:::: {.highlight-bash .notranslate}
 ::: highlight
     -p <folder containing compile_commands.json>
     - or -
     -p=<folder containing compile_commands.json>
+:::
+::::
 
 You can provide the compilation database in the [`compile_commands.json`{.docutils .literal .notranslate}]{.pre} file or generate using Clang based on CMake. You can specify multiple source files as well.
 
 To provide Clang options, use [`compile_commands.json`{.docutils .literal .notranslate}]{.pre} file, whereas to provide [`hipify-clang`{.docutils .literal .notranslate}]{.pre} options, use the [`hipify-clang`{.docutils .literal .notranslate}]{.pre} command line.
 
+::: {.admonition .note}
 Note
 
 Don't use the options separator [`--`{.docutils .literal .notranslate}]{.pre} to avoid compilation error caused due to the [`hipify-clang`{.docutils .literal .notranslate}]{.pre} options being provided before the separator.
+:::
 
 Here's an [example](https://github.com/ROCm/HIPIFY/blob/amd-staging/tests/unit_tests/compilation_database/compilation_database_before_13000/compile_commands.json.in){.reference .external} demonstrating the [`compile_commands.json`{.docutils .literal .notranslate}]{.pre} usage:
 
+:::: {.highlight-json .notranslate}
 ::: highlight
     [
       {
@@ -158,21 +213,33 @@ Here's an [example](https://github.com/ROCm/HIPIFY/blob/amd-staging/tests/unit_t
         "file": "cd_intro.cu"
       }
     ]
+:::
+::::
+::::::::
 
+:::::::::::: {#hipification-statistics .section}
+[]{#hipify-stats}
 
 ## Hipification statistics[\#](#hipification-statistics "Link to this heading"){.headerlink}
 
 The options [`--print-stats`{.docutils .literal .notranslate}]{.pre} and [`--print-stats-csv`{.docutils .literal .notranslate}]{.pre} provide an overview of what is hipified and what is not, as well as the hipification statistics. Use the [`--print-stats`{.docutils .literal .notranslate}]{.pre} command to return the statistics as text to the terminal, or the [`--print-stats-csv`{.docutils .literal .notranslate}]{.pre} command to create a CSV file to open in a spreadsheet.
 
+::: {.admonition .note}
 Note
 
 When multiple source files are specified on the command-line, the statistics are provided per file and in total.
+:::
 
+::::::: {#print-statistics .section}
 ### Print statistics[\#](#print-statistics "Link to this heading"){.headerlink}
 
+:::: {.highlight-cpp .notranslate}
 ::: highlight
     hipify-clang intro.cu -cuda-path="C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9" --print-stats
+:::
+::::
 
+:::: {.highlight-cpp .notranslate}
 ::: highlight
     [HIPIFY] info: file 'intro.cu' statistics:
     CONVERTED refs count: 40
@@ -222,15 +289,25 @@ When multiple source files are specified on the command-line, the statistics are
       cudaMemcpyHostToDevice: 3
       cudaSuccess: 1
       cudaThreadSynchronize: 1
+:::
+::::
+:::::::
 
+::::: {#print-csv-statistics .section}
 ### Print CSV statistics[\#](#print-csv-statistics "Link to this heading"){.headerlink}
 
+:::: {.highlight-cpp .notranslate}
 ::: highlight
     hipify-clang intro.cu -cuda-path="C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9" --print-stats-csv
+:::
+::::
 
 This generates [`intro.cu.csv`{.docutils .literal .notranslate}]{.pre} file with statistics:
 
 ![list of stats](../_images/csv_statistics.png)
+:::::
+::::::::::::
+:::::::::::::::::::::::::::::::
 
 ::::: prev-next-area
 [](../building/build-hipify-perl.html "previous page"){.left-prev}
@@ -239,6 +316,7 @@ This generates [`intro.cu.csv`{.docutils .literal .notranslate}]{.pre} file with
 previous
 
 Building hipify-perl
+:::
 
 [](hipify-perl.html "next page"){.right-next}
 
@@ -246,9 +324,16 @@ Building hipify-perl
 next
 
 Using hipify-perl
+:::
+:::::
+::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::: {#pst-secondary-sidebar .bd-sidebar-secondary .bd-toc}
+::::: {.sidebar-secondary-items .sidebar-secondary__inner}
 :::: sidebar-secondary-item
+::: {.page-toc .tocsection .onthispage}
 Contents
+:::
 
 - [Release Dependencies](#release-dependencies){.reference .internal .nav-link}
 - [Usage](#usage){.reference .internal .nav-link}
@@ -256,3 +341,8 @@ Contents
 - [Hipification statistics](#hipification-statistics){.reference .internal .nav-link}
   - [Print statistics](#print-statistics){.reference .internal .nav-link}
   - [Print CSV statistics](#print-csv-statistics){.reference .internal .nav-link}
+::::
+:::::
+::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::

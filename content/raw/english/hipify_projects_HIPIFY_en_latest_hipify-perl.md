@@ -6,30 +6,58 @@ source_org: "amd"
 original_lang: "en"
 credibility: 5
 lifecycle: "latest"
-synced_date: 2026-04-28
+synced_date: 2026-05-03
 ---
 
+:::::::::::::::::::::::::::::: {#main-content .bd-main role="main"}
+::: sbt-scroll-pixel-helper
+:::
+
+:::::::::::::::::::::::::::: bd-content
+::::::::::::::::::::::: bd-article-container
+:::::::::: {.bd-header-article .d-print-none}
+::::::::: {.header-article-items .header-article__inner}
 ::::: header-article-items__start
 ::: header-article-item
 []{.fa-solid .fa-angle-right}
+:::
 
 ::: header-article-item
 - [](../index.html){.nav-link aria-label="Home"}
 - [Using hipify-perl]{.ellipsis}
+:::
+:::::
 
 ::::: header-article-items__end
 :::: header-article-item
 ::: article-header-buttons
 
 []{.fa-solid .fa-list}
+:::
+::::
+:::::
+:::::::::
+::::::::::
 
+:::::: {#jb-print-docs-body .onlyprint}
 # Using hipify-perl
 
+::::: {#print-main-content}
+:::: {#jb-print-toc}
+::: {}
 ## Contents
+:::
 
 - [Example](#example){.reference .internal .nav-link}
+::::
+:::::
+::::::
 
+::: {#searchbox}
+:::
 
+:::::: {#using-hipify-perl .section}
+[]{#hipify-perl}
 
 # Using hipify-perl[\#](#using-hipify-perl "Link to this heading"){.headerlink}
 
@@ -63,16 +91,22 @@ synced_date: 2026-04-28
 
   - Parsing complicated argument lists
 
+::::: {#example .section}
 ## Example[\#](#example "Link to this heading"){.headerlink}
 
 For additional details on the following [`hipify-perl`{.docutils .literal .notranslate}]{.pre} command options, see [[hipify-perl commands]{.std .std-ref}](../reference/hipify-perl-cmd.html#hipify-perl-cmd){.reference .internal}. For more advanced translation needs use [`hipify-clang`{.docutils .literal .notranslate}]{.pre} as it is more comprehensive and accurate.
 
 Convert a simple CUDA file ([`square.cu`{.docutils .literal .notranslate}]{.pre}) to HIP using [`hipify-perl`{.docutils .literal .notranslate}]{.pre}:
 
+:::: {.highlight-shell .notranslate}
 ::: highlight
     hipify-perl square.cu -o square.cu.hip
+:::
+::::
 
 This command translates the input file and writes the result to [`square.cu.hip`{.docutils .literal .notranslate}]{.pre}.
+:::::
+::::::
 
 ::::: prev-next-area
 [](hipify-clang.html "previous page"){.left-prev}
@@ -81,6 +115,7 @@ This command translates the input file and writes the result to [`square.cu.hip`
 previous
 
 Using hipify-clang
+:::
 
 [](../reference/hipify-clang-cmd.html "next page"){.right-next}
 
@@ -88,8 +123,20 @@ Using hipify-clang
 next
 
 hipify-clang commands
+:::
+:::::
+:::::::::::::::::::::::
 
+:::::: {#pst-secondary-sidebar .bd-sidebar-secondary .bd-toc}
+::::: {.sidebar-secondary-items .sidebar-secondary__inner}
 :::: sidebar-secondary-item
+::: {.page-toc .tocsection .onthispage}
 Contents
+:::
 
 - [Example](#example){.reference .internal .nav-link}
+::::
+:::::
+::::::
+::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::

@@ -1,0 +1,343 @@
+---
+title: "Running models from Hugging Face"
+source_url: "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/hugging-face-models.html"
+source_type: "official"
+source_org: "amd"
+original_lang: "en"
+credibility: 5
+lifecycle: "latest"
+synced_date: 2026-05-03
+---
+
+:::::::::::::::::::::::::::::::::::::::::::::::::: {#main-content .bd-main role="main"}
+::: sbt-scroll-pixel-helper
+:::
+
+:::::::::::::::::::::::::::::::::::::::::::::::: bd-content
+::::::::::::::::::::::::::::::::::::::::::: bd-article-container
+:::::::::: {.bd-header-article .d-print-none}
+::::::::: {.header-article-items .header-article__inner}
+::::: header-article-items__start
+::: header-article-item
+[]{.fa-solid .fa-angle-right}
+:::
+
+::: header-article-item
+- [](../../../index.html){.nav-link aria-label="Home"}
+- [Use ROCm for AI](../index.html){.nav-link}
+- [Use ROCm for AI inference](index.html){.nav-link}
+- Running\...
+:::
+:::::
+
+::::: header-article-items__end
+:::: header-article-item
+::: article-header-buttons
+[]{.fa-solid .fa-list}
+:::
+::::
+:::::
+:::::::::
+::::::::::
+
+:::::: {#jb-print-docs-body .onlyprint}
+# Running models from Hugging Face
+
+::::: {#print-main-content}
+:::: {#jb-print-toc}
+::: {}
+## Contents
+:::
+
+- [Using Hugging Face Transformers](#using-hugging-face-transformers){.reference .internal .nav-link}
+- [Using Hugging Face with Optimum-AMD](#using-hugging-face-with-optimum-amd){.reference .internal .nav-link}
+  - [Installation](#installation){.reference .internal .nav-link}
+- [Flash Attention](#flash-attention){.reference .internal .nav-link}
+- [GPTQ](#gptq){.reference .internal .nav-link}
+- [ONNX](#onnx){.reference .internal .nav-link}
+::::
+:::::
+::::::
+
+::: {#searchbox}
+:::
+
+:::::::::::::::::::::::::: {#running-models-from-hugging-face .section}
+# Running models from Hugging Face[\#](#running-models-from-hugging-face "Link to this heading"){.headerlink}
+
+::::::::::: {#rocm-docs-core-article-info .sd-container-fluid .sd-sphinx-override .sd-p-0 .sd-mt-2 .sd-mb-4 .sd-p-2 .sd-rounded-1 .docutils}
+:::::::::: {.sd-row .sd-row-cols-2 .sd-gx-2 .sd-gy-1 .docutils}
+::::::::: {.sd-col .sd-d-flex-row .sd-align-minor-center .docutils}
+:::::::: {.sd-container-fluid .sd-sphinx-override .docutils}
+::::::: {.sd-row .sd-row-cols-2 .sd-row-cols-xs-2 .sd-row-cols-sm-3 .sd-row-cols-md-3 .sd-row-cols-lg-3 .sd-gx-3 .sd-gy-1 .docutils}
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+[ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==){.sd-octicon .sd-octicon-calendar} ]{.sd-pr-2 .article-info-date-svg} 2026-01-23
+:::
+
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+[ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=){.sd-octicon .sd-octicon-clock} ]{.sd-pr-2 .article-info-read-time-svg} 5 min read time
+:::
+
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils style="color:gray;"}
+Applies to Linux
+:::
+
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+:::
+:::::::
+::::::::
+:::::::::
+::::::::::
+:::::::::::
+
+[Hugging Face](https://huggingface.co){.reference .external} hosts the world's largest AI model repository for developers to obtain transformer models. Hugging Face models and tools significantly enhance productivity, performance, and accessibility in developing and deploying AI solutions.
+
+This section describes how to run popular community transformer models from Hugging Face on AMD GPUs.
+
+::::::: {#using-hugging-face-transformers .section}
+[]{#rocm-for-ai-hugging-face-transformers}
+
+## Using Hugging Face Transformers[\#](#using-hugging-face-transformers "Link to this heading"){.headerlink}
+
+First, [install the Hugging Face Transformers library](https://huggingface.co/docs/transformers/en/installation){.reference .external}, which lets you easily import any of the transformer models into your Python application.
+
+:::: {.highlight-shell .notranslate}
+::: highlight
+    pip install transformers
+:::
+::::
+
+Here is an example of running [GPT2](https://huggingface.co/openai-community/gpt2){.reference .external}:
+
+:::: {.highlight-python .notranslate}
+::: highlight
+    from transformers import GPT2Tokenizer, GPT2Model
+
+    tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+
+    model = GPT2Model.from_pretrained('gpt2')
+
+    text = "Replace me with any text you'd like."
+
+    encoded_input = tokenizer(text, return_tensors='pt')
+
+    output = model(**encoded_input)
+:::
+::::
+
+Mainstream transformer models are regularly tested on supported hardware platforms. Models derived from those core models should also function correctly.
+
+Here are some mainstream models to get you started:
+
+- [BERT](https://huggingface.co/bert-base-uncased){.reference .external}
+
+- [BLOOM](https://huggingface.co/bigscience/bloom){.reference .external}
+
+- [Llama](https://huggingface.co/huggyllama/llama-7b){.reference .external}
+
+- [OPT](https://huggingface.co/facebook/opt-66b){.reference .external}
+
+- [T5](https://huggingface.co/t5-base){.reference .external}
+:::::::
+
+:::::::: {#using-hugging-face-with-optimum-amd .section}
+[]{#rocm-for-ai-hugging-face-optimum}
+
+## Using Hugging Face with Optimum-AMD[\#](#using-hugging-face-with-optimum-amd "Link to this heading"){.headerlink}
+
+Optimum-AMD is the interface between Hugging Face libraries and the ROCm software stack.
+
+For a deeper dive into using Hugging Face libraries on AMD GPUs, refer to the [Optimum-AMD](https://huggingface.co/docs/optimum/main/en/amd/amdgpu/overview){.reference .external} page on Hugging Face for guidance on using Flash Attention 2, GPTQ quantization and the ONNX Runtime integration.
+
+Hugging Face libraries natively support AMD Instinct GPUs. For other [[ROCm-capable hardware]{.xref .std .std-doc}](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html "(in ROCm installation on Linux v7.2.2)"){.reference .external}, support is currently not validated, but most features are expected to work without issues.
+
+::::::: {#installation .section}
+[]{#rocm-for-ai-install-optimum-amd}
+
+### Installation[\#](#installation "Link to this heading"){.headerlink}
+
+Install Optimum-AMD using pip.
+
+:::: {.highlight-shell .notranslate}
+::: highlight
+    pip install --upgrade --upgrade-strategy eager optimum[amd]
+:::
+::::
+
+Or, install from source.
+
+:::: {.highlight-shell .notranslate}
+::: highlight
+    git clone https://github.com/huggingface/optimum-amd.git
+    cd optimum-amd
+    pip install -e .
+:::
+::::
+:::::::
+::::::::
+
+::: {#flash-attention .section}
+[]{#rocm-for-ai-flash-attention}
+
+## Flash Attention[\#](#flash-attention "Link to this heading"){.headerlink}
+
+1.  Use [the Hugging Face team's example Dockerfile](https://github.com/huggingface/optimum-amd/blob/main/docker/transformers-pytorch-amd-gpu-flash/Dockerfile){.reference .external} to use Flash Attention with ROCm.
+
+    :::: {.highlight-shell .notranslate}
+    ::: highlight
+        docker build -f Dockerfile -t transformers_pytorch_amd_gpu_flash .
+        volume=$PWD
+        docker run -it --network=host --device=/dev/kfd --device=/dev/dri --group-add=video --ipc=host --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -v $volume:/workspace --name transformer_amd
+        transformers_pytorch_amd_gpu_flash:latest
+    :::
+    ::::
+
+2.  Use Flash Attention 2 with [Transformers](https://huggingface.co/docs/transformers/perf_infer_gpu_one#flashattention-2){.reference .external} by adding the [`use_flash_attention_2`{.docutils .literal .notranslate}]{.pre} parameter to [`from_pretrained()`{.docutils .literal .notranslate}]{.pre}:
+
+    :::: {.highlight-python .notranslate}
+    ::: highlight
+        import torch
+        from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaForCausalLM
+
+        tokenizer = AutoTokenizer.from_pretrained("tiiuae/falcon-7b")
+
+        with torch.device("cuda"):
+          model = AutoModelForCausalLM.from_pretrained(
+          "tiiuae/falcon-7b",
+          torch_dtype=torch.float16,
+          use_flash_attention_2=True,
+          )
+    :::
+    ::::
+:::
+
+::: {#gptq .section}
+[]{#rocm-for-ai-gptq}
+
+## GPTQ[\#](#gptq "Link to this heading"){.headerlink}
+
+To enable [GPTQ](https://arxiv.org/abs/2210.17323){.reference .external}, hosted wheels are available for ROCm.
+
+1.  First, [[install Optimum-AMD]{.std .std-ref}](#rocm-for-ai-install-optimum-amd){.reference .internal}.
+
+2.  Install AutoGPTQ using pip. Refer to [AutoGPTQ Installation](https://github.com/AutoGPTQ/AutoGPTQ#Installation){.reference .external} for in-depth guidance.
+
+    :::: {.highlight-shell .notranslate}
+    ::: highlight
+        pip install auto-gptq --no-build-isolation --extra-index-url https://huggingface.github.io/autogptq-index/whl/rocm573/
+    :::
+    ::::
+
+    Or, to install from source for AMD GPUs supporting ROCm, specify the [`ROCM_VERSION`{.docutils .literal .notranslate}]{.pre} environment variable.
+
+    :::: {.highlight-shell .notranslate}
+    ::: highlight
+        ROCM_VERSION=6.1 pip install -vvv --no-build-isolation -e .
+    :::
+    ::::
+
+3.  Load GPTQ-quantized models in Transformers using the backend [AutoGPTQ library](https://github.com/PanQiWei/AutoGPTQ){.reference .external}:
+
+    :::: {.highlight-python .notranslate}
+    ::: highlight
+        import torch
+        from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaForCausalLM
+
+        tokenizer = AutoTokenizer.from_pretrained("TheBloke/Llama-2-7B-Chat-GPTQ")
+
+        with torch.device("cuda"):
+          model = AutoModelForCausalLM.from_pretrained(
+          "TheBloke/Llama-2-7B-Chat-GPTQ",
+          torch_dtype=torch.float16,
+          )
+    :::
+    ::::
+:::
+
+::: {#onnx .section}
+[]{#rocm-for-ai-onnx}
+
+## ONNX[\#](#onnx "Link to this heading"){.headerlink}
+
+Hugging Face Optimum also supports the [ONNX Runtime](https://onnxruntime.ai){.reference .external} integration. For ONNX models, usage is straightforward.
+
+1.  Specify the provider argument in the [`ORTModel.from_pretrained()`{.docutils .literal .notranslate}]{.pre} method:
+
+    :::: {.highlight-python .notranslate}
+    ::: highlight
+        from optimum.onnxruntime import ORTModelForSequenceClassification
+        ..
+        ort_model = ORTModelForSequenceClassification.from_pretrained(
+        ..
+        provider="ROCMExecutionProvider"
+        )
+    :::
+    ::::
+
+2.  Try running a [BERT text classification](https://huggingface.co/distilbert/distilbert-base-uncased-finetuned-sst-2-english){.reference .external} ONNX model with ROCm:
+
+    :::: {.highlight-python .notranslate}
+    ::: highlight
+        from optimum.onnxruntime import ORTModelForSequenceClassification
+        from optimum.pipelines import pipeline
+        from transformers import AutoTokenizer
+        import onnxruntime as ort
+
+        session_options = ort.SessionOptions()
+
+        session_options.log_severity_level = 0
+
+        ort_model = ORTModelForSequenceClassification.from_pretrained(
+           "distilbert-base-uncased-finetuned-sst-2-english",
+           export=True,
+           provider="ROCMExecutionProvider",
+           session_options=session_options
+           )
+
+        tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased-finetuned-sst-2-english")
+
+        pipe = pipeline(task="text-classification", model=ort_model, tokenizer=tokenizer, device="cuda:0")
+
+        result = pipe("Both the music and visual were astounding, not to mention the actors performance.")
+    :::
+    ::::
+:::
+::::::::::::::::::::::::::
+
+::::: prev-next-area
+[](index.html "previous page"){.left-prev}
+
+::: prev-next-info
+previous
+
+Use ROCm for AI inference
+:::
+
+[](llm-inference-frameworks.html "next page"){.right-next}
+
+::: prev-next-info
+next
+
+LLM inference frameworks
+:::
+:::::
+:::::::::::::::::::::::::::::::::::::::::::
+
+:::::: {.bd-sidebar-secondary .bd-toc}
+::::: {.sidebar-secondary-items .sidebar-secondary__inner}
+:::: sidebar-secondary-item
+::: {.page-toc .tocsection .onthispage}
+Contents
+:::
+
+- [Using Hugging Face Transformers](#using-hugging-face-transformers){.reference .internal .nav-link}
+- [Using Hugging Face with Optimum-AMD](#using-hugging-face-with-optimum-amd){.reference .internal .nav-link}
+  - [Installation](#installation){.reference .internal .nav-link}
+- [Flash Attention](#flash-attention){.reference .internal .nav-link}
+- [GPTQ](#gptq){.reference .internal .nav-link}
+- [ONNX](#onnx){.reference .internal .nav-link}
+::::
+:::::
+::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::

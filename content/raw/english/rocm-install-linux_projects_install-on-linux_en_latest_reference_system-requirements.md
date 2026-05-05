@@ -6,42 +6,90 @@ source_org: "amd"
 original_lang: "en"
 credibility: 5
 lifecycle: "latest"
-synced_date: 2026-04-28
+synced_date: 2026-05-03
 ---
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::: {#main-content .bd-main role="main"}
+::: sbt-scroll-pixel-helper
+:::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::: bd-content
+:::::::::::::::::::::::::::::::::::::::::::::::: bd-article-container
+:::::::::: {.bd-header-article .d-print-none}
+::::::::: {.header-article-items .header-article__inner}
 ::::: header-article-items__start
 ::: header-article-item
 []{.fa-solid .fa-angle-right}
+:::
 
 ::: header-article-item
 - [](../index.html){.nav-link aria-label="Home"}
 - System\...
+:::
+:::::
 
 ::::: header-article-items__end
 :::: header-article-item
 ::: article-header-buttons
 []{.fa-solid .fa-list}
+:::
+::::
+:::::
+:::::::::
+::::::::::
 
+:::::: {#jb-print-docs-body .onlyprint}
 # System requirements (Linux)
 
+::::: {#print-main-content}
+:::: {#jb-print-toc}
+::: {}
 ## Contents
+:::
 
 - [Supported GPUs](#supported-gpus){.reference .internal .nav-link}
 - [Supported operating systems](#supported-operating-systems){.reference .internal .nav-link}
 - [Virtualization support](#virtualization-support){.reference .internal .nav-link}
 - [CPU support](#cpu-support){.reference .internal .nav-link}
+::::
+:::::
+::::::
 
+::: {#searchbox}
+:::
 
+::::::::::::::::::::::::::::::: {#system-requirements-linux .section}
+[]{#system-requirements}
 
 # System requirements (Linux)[\#](#system-requirements-linux "Link to this heading"){.headerlink}
 
+::::::::::: {#rocm-docs-core-article-info .sd-container-fluid .sd-sphinx-override .sd-p-0 .sd-mt-2 .sd-mb-4 .sd-p-2 .sd-rounded-1 .docutils}
+:::::::::: {.sd-row .sd-row-cols-2 .sd-gx-2 .sd-gy-1 .docutils}
+::::::::: {.sd-col .sd-d-flex-row .sd-align-minor-center .docutils}
+:::::::: {.sd-container-fluid .sd-sphinx-override .docutils}
+::::::: {.sd-row .sd-row-cols-2 .sd-row-cols-xs-2 .sd-row-cols-sm-3 .sd-row-cols-md-3 .sd-row-cols-lg-3 .sd-gx-3 .sd-gy-1 .docutils}
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jYWxlbmRhciIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTQuNzUgMGEuNzUuNzUgMCAwMS43NS43NVYyaDVWLjc1YS43NS43NSAwIDAxMS41IDBWMmgxLjI1Yy45NjYgMCAxLjc1Ljc4NCAxLjc1IDEuNzV2MTAuNUExLjc1IDEuNzUgMCAwMTEzLjI1IDE2SDIuNzVBMS43NSAxLjc1IDAgMDExIDE0LjI1VjMuNzVDMSAyLjc4NCAxLjc4NCAyIDIuNzUgMkg0Vi43NUEuNzUuNzUgMCAwMTQuNzUgMHptMCAzLjVoOC41YS4yNS4yNSAwIDAxLjI1LjI1VjZoLTExVjMuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDJ6bS0yLjI1IDR2Ni43NWMwIC4xMzguMTEyLjI1LjI1LjI1aDEwLjVhLjI1LjI1IDAgMDAuMjUtLjI1VjcuNWgtMTF6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==){.sd-octicon .sd-octicon-calendar} ]{.sd-pr-2 .article-info-date-svg} 2026-04-17
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
 [ ![](data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9InNkLW9jdGljb24gc2Qtb2N0aWNvbi1jbG9jayIgaGVpZ2h0PSIxNi4wcHgiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYuMHB4Ij4KPHBhdGggZD0iTTEuNSA4YTYuNSA2LjUgMCAxMTEzIDAgNi41IDYuNSAwIDAxLTEzIDB6TTggMGE4IDggMCAxMDAgMTZBOCA4IDAgMDA4IDB6bS41IDQuNzVhLjc1Ljc1IDAgMDAtMS41IDB2My41YS43NS43NSAwIDAwLjQ3MS42OTZsMi41IDFhLjc1Ljc1IDAgMDAuNTU3LTEuMzkyTDguNSA3Ljc0MlY0Ljc1eiIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=){.sd-octicon .sd-octicon-clock} ]{.sd-pr-2 .article-info-read-time-svg} 9 min read time
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils style="color:gray;"}
 Applies to Linux
+:::
 
+::: {.sd-col .sd-col-auto .sd-d-flex-row .sd-align-minor-center .docutils}
+:::
+:::::::
+::::::::
+:::::::::
+::::::::::
+:::::::::::
 
+::::::::::::: {#supported-gpus .section}
+[]{#id1}
 
 ## Supported GPUs[\#](#supported-gpus "Link to this heading"){.headerlink}
 
@@ -49,12 +97,16 @@ The following table shows the supported AMD Instinct™ GPUs, and Radeon™ PRO 
 
 GPUs listed in the following table support compute workloads (no display information or graphics). If you're using ROCm with AMD Radeon™ GPUs or Ryzen™ APUs for graphics workloads, see the [Use ROCm on Radeon and Ryzen](https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/index.html){.reference .external} documentation to verify compatibility and system requirements.
 
+::: {.admonition .note}
 Note
 
 If your GPU is not listed, it might be community-enabled through [TheRock](https://github.com/ROCm/TheRock?tab=readme-ov-file#therock){.reference .external} nightly builds. For more information, see [TheRock supported GPUs](https://github.com/ROCm/TheRock/blob/main/SUPPORTED_GPUS.md){.reference .external}. For installation guidance, see [TheRock releases](https://github.com/ROCm/TheRock/blob/main/RELEASES.md){.reference .external}.
+:::
 
+::::::::: {.sd-tab-set .docutils}
 AMD Instinct
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------------+------------+--------------+-------------+---------+
 | GPU                     | Series     | Architecture | LLVM target | Support |
@@ -81,9 +133,12 @@ AMD Instinct
 +-------------------------+------------+--------------+-------------+---------+
 | AMD Instinct MI25       | N/A        | GCN5.0       | gfx900      | ❌      |
 +-------------------------+------------+--------------+-------------+---------+
+:::
+::::
 
 AMD Radeon PRO
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +--------------------------------+---------------+---------------+----------+
 | GPU                            | Architecture  | LLVM target   | Support  |
@@ -110,9 +165,12 @@ AMD Radeon PRO
 +--------------------------------+---------------+---------------+----------+
 | AMD Radeon PRO VII             | GCN5.1        | gfx906        | ❌       |
 +--------------------------------+---------------+---------------+----------+
+:::
+::::
 
 AMD Radeon
 
+:::: {.sd-tab-content .docutils}
 ::: pst-scrollable-table-container
 +-------------------------------+---------------+---------------+----------+
 | GPU                           | Architecture  | LLVM target   | Support  |
@@ -143,6 +201,9 @@ AMD Radeon
 +-------------------------------+---------------+---------------+----------+
 | AMD Radeon VII                | GCN5.1        | gfx906        | ❌       |
 +-------------------------------+---------------+---------------+----------+
+:::
+::::
+:::::::::
 
 ✅: **Supported** - Official software distributions of the current ROCm release fully support this hardware.
 
@@ -150,13 +211,17 @@ AMD Radeon
 
 ❌: **Unsupported** - The current ROCm release does not support this hardware. The HIP runtime might continue to run applications for an unsupported GPU, but prebuilt ROCm libraries are not officially supported and will cause runtime errors.
 
+::: {.admonition .important}
 Important
 
 Systems with multiple GPUs may require [`iommu=pt`{.docutils .literal .notranslate}]{.pre} to be set at boot time to prevent application hangs, as described in [[Issue #5: Application hangs on Multi-GPU systems]{.std .std-ref}](install-faq.html#multi-gpu){.reference .internal}.
+:::
 
+::: {.admonition .note}
 Note
 
 See the [[Compatibility matrix]{.xref .std .std-ref}](https://rocm.docs.amd.com/en/latest/compatibility/compatibility-matrix.html#architecture-support-compatibility-matrix "(in ROCm Documentation v7.2.2)"){.reference .external} for an overview of supported GPU architectures across ROCm releases.
+:::
 
 Footnotes
 
@@ -191,7 +256,10 @@ AMD Radeon PRO (AI PRO R9700, AI PRO R9600D, PRO V710, PRO W7900 Dual Slot, PRO 
 [[\[]{.fn-bracket}[8](#id20){role="doc-backlink"}[\]]{.fn-bracket}]{.label}
 
 AMD Radeon PRO V620 only supports Ubuntu 24.04.4 and Ubuntu 22.04.5.
+:::::::::::::
 
+::::: {#supported-operating-systems .section}
+[]{#supported-distributions}
 
 ## Supported operating systems[\#](#supported-operating-systems "Link to this heading"){.headerlink}
 
@@ -231,7 +299,9 @@ AMD ROCm software supports the following Linux distributions.
 +----------------------+--------------------------+-----------+-----------+
 | Oracle Linux 8       | 5.15.0 (UEK)             | 2.28      | ✅ [^44]  |
 +----------------------+--------------------------+-----------+-----------+
+:::
 
+::: {.admonition .note}
 Note
 
 - See [Red Hat Enterprise Linux Release Dates](https://access.redhat.com/articles/3078){.reference .external} to learn about the specific kernel versions supported on Red Hat Enterprise Linux (RHEL).
@@ -239,6 +309,7 @@ Note
 - See [List of SUSE Linux Enterprise Server kernel](https://www.suse.com/support/kb/doc/?id=000019587){.reference .external} to learn about the specific kernel version supported on SUSE Linux Enterprise Server (SLES).
 
 - See the [Compatibility matrix](https://rocm.docs.amd.com/en/latest/compatibility/compatibility-matrix.html "(in ROCm Documentation v7.2.2)"){.reference .external} for an overview of OS support across ROCm releases.
+:::
 
 Footnotes
 
@@ -277,14 +348,18 @@ Oracle Linux 10 and 9 are supported only on AMD Instinct MI355X, MI350X, MI325X,
 [[\[]{.fn-bracket}[17](#id45){role="doc-backlink"}[\]]{.fn-bracket}]{.label}
 
 Oracle Linux 8 is supported only on AMD Instinct MI300X GPUs.
+:::::
 
+:::::: {#virtualization-support .section}
 ## Virtualization support[\#](#virtualization-support "Link to this heading"){.headerlink}
 
 ROCm supports virtualization for the Instinct GPUs and Radeon PRO GPUs listed in the following table.
 
+::: {.admonition .important}
 Important
 
 GPU virtualization with KVM-based SR-IOV requires AMD GPU Virtualization Driver (GIM) driver. Refer to [GIM Release note](https://github.com/amd/MxGPU-Virtualization/releases){.reference .external}.
+:::
 
 ::: pst-scrollable-table-container
 `<style>
@@ -341,7 +416,9 @@ GPU virtualization with KVM-based SR-IOV requires AMD GPU Virtualization Driver 
 +-----------------+-------------+---------------------------+-------------------+----------------+
 | Radeon PRO V710 | KVM         | SR-IOV                    | Ubuntu 24.04      | Ubuntu 24.04   |
 +-----------------+-------------+---------------------------+-------------------+----------------+
+:::
 
+::: {.admonition .note}
 Note
 
 AMD Virtualization supports the following:
@@ -349,10 +426,15 @@ AMD Virtualization supports the following:
 - Passthrough: All 8 GPUs are assigned directly to a single virtual machine (VM).
 
 - SR-IOV: Provides 1 Virtual Function (VF) per GPU (8 VFs in total), which can be flexibly assigned among multiple VMs (for example, 8 VMs with 1 VF each, 4 VMs with 2 VFs each, or 2 VMs with 4 VFs each)
+:::
+::::::
 
+::: {#cpu-support .section}
 ## CPU support[\#](#cpu-support "Link to this heading"){.headerlink}
 
 ROCm requires CPUs that support PCIe™ atomics. Modern CPUs after the release of 1st generation AMD Zen CPU and Intel™ Haswell support PCIe atomics.
+:::
+:::::::::::::::::::::::::::::::
 
 ::::: prev-next-area
 [](../index.html "previous page"){.left-prev}
@@ -361,6 +443,7 @@ ROCm requires CPUs that support PCIe™ atomics. Modern CPUs after the release o
 previous
 
 ROCm installation for Linux
+:::
 
 [](user-kernel-space-compat-matrix.html "next page"){.right-next}
 
@@ -368,14 +451,26 @@ ROCm installation for Linux
 next
 
 User and AMD GPU Driver (amdgpu) support matrix
+:::
+:::::
+::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::: {.bd-sidebar-secondary .bd-toc}
+::::: {.sidebar-secondary-items .sidebar-secondary__inner}
 :::: sidebar-secondary-item
+::: {.page-toc .tocsection .onthispage}
 Contents
+:::
 
 - [Supported GPUs](#supported-gpus){.reference .internal .nav-link}
 - [Supported operating systems](#supported-operating-systems){.reference .internal .nav-link}
 - [Virtualization support](#virtualization-support){.reference .internal .nav-link}
 - [CPU support](#cpu-support){.reference .internal .nav-link}
+::::
+:::::
+::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 [^1]:
 

@@ -6,30 +6,56 @@ source_org: "amd"
 original_lang: "en"
 credibility: 5
 lifecycle: "latest"
-synced_date: 2026-04-28
+synced_date: 2026-05-03
 ---
 
+::::::::::::::::::::::::::::::::::::::::: {#main-content .bd-main role="main"}
+::: sbt-scroll-pixel-helper
+:::
+
+::::::::::::::::::::::::::::::::::::::: bd-content
+:::::::::::::::::::::::::::::::::::::: bd-article-container
+::::::::: {.bd-header-article .d-print-none}
+:::::::: {.header-article-items .header-article__inner}
 :::: header-article-items__start
 ::: header-article-item
 []{.fa-solid .fa-angle-right}
+:::
+::::
 
 ::::: header-article-items__end
 :::: header-article-item
 ::: article-header-buttons
+:::
+::::
+:::::
+::::::::
+:::::::::
 
+::::: {#jb-print-docs-body .onlyprint}
 # HIP documentation
 
+:::: {#print-main-content}
+::: {#jb-print-toc}
+:::
+::::
+:::::
 
+::: {#searchbox}
+:::
 
+:::::::::::::::::::::::: {#hip-documentation .section .tex2jax_ignore .mathjax_ignore}
 # HIP documentation[\#](#hip-documentation "Link to this heading"){.headerlink}
 
 HIP is a C++ runtime API and kernel programming language designed for AMD GPUs. By providing an interface closely aligned with NVIDIA CUDA, HIP allows developers to write portable applications and efficiently migrate existing CUDA code to AMD platforms. Additional information is available in [[What is HIP?]{.doc .std .std-doc}](what_is_hip.html){.reference .internal}
 
 Developers who require a unified, book‑style reference for ROCm and HIP can consult the AMD ROCm Programming Guide. It aggregates documentation from the ROCm portal and organizes it into a structured format optimized for in‑depth study and offline access in both PDF and HTML. Additional details are available in the [AMD ROCm Programming Guide](https://rocm-handbook.amd.com/projects/amd-rocm-programming-guide/en/latest/){.reference .external}.
 
+::: {.admonition .note}
 Note
 
 HIP API 7.0 introduces changes to make it align more closely with NVIDIA CUDA. These changes are incompatible with prior releases, and might require recompiling existing HIP applications for use with the ROCm 7.0 release. For more information, see [[HIP API 7.0 changes]{.doc .std .std-doc}](hip-7-changes.html){.reference .internal}.
+:::
 
 Installation instructions are available from:
 
@@ -39,7 +65,14 @@ Installation instructions are available from:
 
 The HIP documentation is organized into the following categories:
 
+:::::::::::::::: {.sd-container-fluid .sd-sphinx-override .sd-mb-4 .docutils}
+::::::::::::::: {.sd-row .sd-row-cols-1 .sd-row-cols-xs-1 .sd-row-cols-sm-2 .sd-row-cols-md-2 .sd-row-cols-lg-2 .sd-g-3 .sd-g-xs-3 .sd-g-sm-3 .sd-g-md-3 .sd-g-lg-3 .docutils}
+:::::: {.sd-col .sd-d-flex-row .docutils}
+::::: {.sd-card .sd-sphinx-override .sd-w-100 .sd-shadow-sm .docutils}
+:::: {.sd-card-body .docutils}
+::: {.sd-card-title .sd-font-weight-bold .docutils}
 Programming guide
+:::
 
 - [[Introduction to the HIP programming model]{.doc}](understand/programming_model.html){.reference .internal}
 
@@ -66,8 +99,16 @@ Programming guide
 - [[Programming for HIP runtime compiler (RTC)]{.doc}](how-to/hip_rtc.html){.reference .internal}
 
 - [[AMD compute language runtimes (CLR)]{.doc}](understand/amd_clr.html){.reference .internal}
+::::
+:::::
+::::::
 
+:::::: {.sd-col .sd-d-flex-row .docutils}
+::::: {.sd-card .sd-sphinx-override .sd-w-100 .sd-shadow-sm .docutils}
+:::: {.sd-card-body .docutils}
+::: {.sd-card-title .sd-font-weight-bold .docutils}
 Reference
+:::
 
 - [[HIP runtime API]{.doc .std .std-doc}](reference/hip_runtime_api_reference.html){.reference .internal}
 
@@ -86,8 +127,16 @@ Reference
 - [[Low Precision Floating Point Types]{.doc .std .std-doc}](reference/low_fp_types.html){.reference .internal}
 
 - [[Hardware features]{.doc}](reference/hardware_features.html){.reference .internal}
+::::
+:::::
+::::::
 
+:::::: {.sd-col .sd-d-flex-row .docutils}
+::::: {.sd-card .sd-sphinx-override .sd-w-100 .sd-shadow-sm .docutils}
+:::: {.sd-card-body .docutils}
+::: {.sd-card-title .sd-font-weight-bold .docutils}
 Tutorial
+:::
 
 - [HIP basic examples](https://github.com/ROCm/rocm-examples/tree/develop/HIP-Basic){.reference .external}
 
@@ -102,6 +151,11 @@ Tutorial
 - [[Cooperative groups tutorial]{.doc .std .std-doc}](tutorial/cooperative_groups_tutorial.html){.reference .internal}
 
 - [[HIP Graph API tutorial]{.doc .std .std-doc}](tutorial/graph_api.html){.reference .internal}
+::::
+:::::
+::::::
+:::::::::::::::
+::::::::::::::::
 
 Known issues are listed on the [HIP GitHub repository](https://github.com/ROCm/HIP/issues){.reference .external}.
 
@@ -109,11 +163,24 @@ To contribute features or functions to the HIP project, refer to [Contributing t
 
 You can find licensing information on the [Licensing](https://rocm.docs.amd.com/en/latest/about/license.html){.reference .external} page.
 
+::: {.toctree-wrapper .compound}
+:::
 
+::: {.toctree-wrapper .compound}
+:::
 
+::: {.toctree-wrapper .compound}
+:::
 
+::: {.toctree-wrapper .compound}
+:::
 
+::: {.toctree-wrapper .compound}
+:::
 
+::: {.toctree-wrapper .compound}
+:::
+::::::::::::::::::::::::
 
 :::: prev-next-area
 [](what_is_hip.html "next page"){.right-next}
@@ -122,3 +189,8 @@ You can find licensing information on the [Licensing](https://rocm.docs.amd.com/
 next
 
 What is HIP?
+:::
+::::
+::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::
