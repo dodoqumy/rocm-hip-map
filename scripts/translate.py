@@ -690,9 +690,10 @@ def main():
                         ["git", "commit", "-m", f"translate: {md_file.name}"],
                         capture_output=True, text=True)
                     if g_commit.returncode == 0:
-                        # push 前先 rebase 避免非快进拒绝
+                        # rebase 前自动 stash 脏修改（续传 failed 文件留下的）
+                        # 避免 "cannot pull with rebase: You have unstaged changes"
                         g_pull = subprocess.run(
-                            ["git", "pull", "--rebase", "origin", "main"],
+                            ["git", "pull", "--rebase", "--autostash", "origin", "main"],
                             capture_output=True, text=True)
                         if g_pull.returncode != 0:
                             print(f"     ⚠ git pull --rebase failed: {g_pull.stderr.strip()[:120]}")
