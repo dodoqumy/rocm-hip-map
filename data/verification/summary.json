@@ -1,0 +1,346 @@
+{
+  "generated_at": "2026-05-06T05:24:25.153996+00:00",
+  "total": 56,
+  "pass": 0,
+  "warn": 56,
+  "fail": 0,
+  "pending": 0,
+  "articles": [
+    {
+      "article_id": "d1c818ba0a6bbc4d",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "61efeb69318d0b1e",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "6b32168ef7086dda",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "d0c502ec94271f4a",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "a7f14d8cfd9297f5",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "a7417a67a3e2d520",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "ffdfd8c70b76e147",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "d52ddac5c18a8ba0",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "bb4fa383c9d97927",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "9d119b90099e6d60",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "ab6ae450eb644755",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "1755abdf37815659",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "f6163a63a2a0f0b8",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "206c1997033508ce",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "63181706fe23316c",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "9b8e22f53f78d360",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "ddefaa24a2496956",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "878db0871c2390ad",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "6fdecdf724e7ed5f",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "8d67ec99e52580ab",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "3cfe6cbb902c340e",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "a91b4f2edb230b8c",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "83b4d1369263607e",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "27ef0131bb8569d9",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "3589201866de3309",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "da0df28eaae6c676",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "2f4996dde59bf6b3",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "b3ff6f443fa7e58d",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "4a0895c573cb0ac0",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "aa4c0a4b8fba4b4d",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "0d574faecbc15d10",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "f84f37264455896c",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "2955f36314977d25",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "8da35dd10c106430",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "6a9e2e77e04dee75",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "ca637dc460b05654",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "66f47489ac14e638",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "8e60fee2835f699e",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "7e1abecddb106a39",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "79098aa9291947c9",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "2b5b393044121d02",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "64ec837ebb52b473",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "49ce523fae4ad671",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "a0c2f97e7835a15a",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "aa50a1295cde2935",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "73eb6a67974c1794",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "5617e8b9f4682798",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "79d59a12ff9a6fe3",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "1253f1355327b577",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "f864d5eb192f1bdf",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "41e3848ec3fd4253",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "89c32522df7551d4",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "e0c5ca570e853958",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "a880ea370ea0fe01",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "1924b759af2fd4d0",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    },
+    {
+      "article_id": "eac0bbaf4a771626",
+      "overall": "warn",
+      "content_score": 0,
+      "translation_score": 0
+    }
+  ]
+}

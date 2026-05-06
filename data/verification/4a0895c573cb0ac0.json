@@ -1,0 +1,20 @@
+{
+  "article_id": "4a0895c573cb0ac0",
+  "title": "Programming guide",
+  "source_url": "https://rocm.docs.amd.com/en/latest/how-to/programming_guide.html",
+  "verified_at": "2026-05-06T05:23:29.140409+00:00",
+  "checks": {
+    "content_consistency": {
+      "status": "warn",
+      "score": 0,
+      "notes": "本地存档不存在"
+    },
+    "translation_quality": {
+      "status": "skip",
+      "score": 0,
+      "notes": "无原文文件",
+      "issues": []
+    }
+  },
+  "overall": "warn"
+}
