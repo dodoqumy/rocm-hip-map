@@ -55,15 +55,15 @@ jobs:
         env:
           TRANSLATE_PROVIDER: opencode
           TRANSLATE_API_KEY: ${{ secrets.TRANSLATE_API_KEY }}
-          TRANSLATE_MODEL: ${{ inputs.model }}
-          TRANSLATE_BASE_URL: ${{ inputs.base_url }}
+          TRANSLATE_MODEL: ${{ inputs.model || 'deepseek-v4-flash' }}
+          TRANSLATE_BASE_URL: ${{ inputs.base_url || 'https://api.deepseek.com' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           python3 scripts/translate.py \
             --incremental \
-            --max-files "${{ inputs.max_files }}" \
-            --mode "${{ inputs.mode }}" \
+            --max-files "${{ inputs.max_files || '5' }}" \
+            --mode "${{ inputs.mode || 'doc' }}" \
             --commit-per-file
 
       - name: Audit translations
