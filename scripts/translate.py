@@ -27,6 +27,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 import yaml
 from pathlib import Path
 from typing import Optional
@@ -293,11 +294,28 @@ def split_markdown(content: str) -> list:
 
 
 def translate_markdown_file(filepath: Path, glossary: dict, dry_run: bool = False,
-                           mode: str = "doc") -> bool:
+                           mode: str = "doc", verbose: bool = False) -> dict:
     """翻译单个 Markdown 文件。
 
     mode: "doc" = 技术文档, "paper" = 学术论文
+    verbose: True = 打印每段翻译进度
+
+    Returns: dict with keys:
+        success (bool): 函数正常执行
+        skipped (bool): 文件被跳过
+        skip_reason (str): 跳过原因
+        failed_count (int): 翻译失败的段落数
+        total_paragraphs (int): 可翻译段落总数
+        out_path (Path): 输出文件路径，跳过时为 None
     """
+    ret = {
+        "success": True,
+        "skipped": False,
+        "skip_reason": "",
+        "failed_count": 0,
+        "total_paragraphs": 0,
+        "out_path": None,
+    }
     # 跳过不适合翻译的文件
     SKIP_PATTERNS = [
         "changelog",       # 版本日志，纯列表无翻译价值
@@ -309,37 +327,68 @@ def translate_markdown_file(filepath: Path, glossary: dict, dry_run: bool = Fals
     for pat in SKIP_PATTERNS:
         if pat in fname_lower:
             print(f"  ⏭ Skipped (SKIP_PATTERNS: {pat}): {filepath.name}")
-            return True
+            ret["skipped"] = True
+            ret["skip_reason"] = f"SKIP_PATTERNS: {pat}"
+            return ret
 
     # 跳过超大文件（>500KB）—— 内容太多，翻译耗时数小时
     MAX_SIZE = 500 * 1024
     if filepath.stat().st_size > MAX_SIZE:
         print(f"  ⏭ Skipped (too large: {filepath.stat().st_size // 1024}KB): {filepath.name}")
-        return True
+        ret["skipped"] = True
+        ret["skip_reason"] = f"too large: {filepath.stat().st_size // 1024}KB"
+        return ret
+
     with open(filepath) as f:
         content = f.read()
 
     segments = split_markdown(content)
 
+    # 先统计可翻译段落总数（用于进度显示）
+    total_paras = 0
+    for seg in segments:
+        if seg["type"] == "paragraph":
+            text = seg["content"].strip()
+            if text and not (text.startswith(">") and len(text) < 60):
+                total_paras += 1
+
+    ret["total_paragraphs"] = total_paras
+    if verbose and total_paras > 0:
+        print(f"     📑 Translating {total_paras} paragraph(s)…")
+
     translated_parts = []
     failed_count = 0  # 跟踪翻译失败次数
+    para_idx = 0
     for seg in segments:
         if seg["type"] in ("frontmatter", "code"):
             translated_parts.append(seg["content"])
         elif seg["type"] == "paragraph":
             text = seg["content"].strip()
-            if not text or text.startswith(">") and len(text) < 60:
+            if not text or (text.startswith(">") and len(text) < 60):
                 # 短引用不翻译
                 translated_parts.append(seg["content"])
                 continue
+            para_idx += 1
+            if verbose:
+                char_len = len(text)
+                pct = para_idx / total_paras * 100
+                print(f"     📝 Paragraph {para_idx}/{total_paras} ({char_len:,} chars, {pct:.0f}%)")
             if dry_run:
                 translated_parts.append(f"[ZH-TRANSLATED] {text[:80]}...")
+                if verbose:
+                    print(f"     ✅ [DRY RUN]")
             else:
+                start = time.time()
                 translated = translate(text, glossary, mode=mode)
+                elapsed = time.time() - start
                 if translated:
                     translated_parts.append(translated)
+                    if verbose:
+                        print(f"     ✅ Paragraph {para_idx}/{total_paras} ({elapsed:.1f}s, {char_len:,} → {len(translated):,} chars)")
                 else:
                     failed_count += 1
+                    if verbose:
+                        print(f"     ⚠ Paragraph {para_idx}/{total_paras} FAILED")
                     # 翻译失败不写入原文，保持空白让 is_valid_translation 检测出问题
         else:
             translated_parts.append(seg["content"])
@@ -375,7 +424,16 @@ def translate_markdown_file(filepath: Path, glossary: dict, dry_run: bool = Fals
         with open(out_path, "w") as f:
             f.write(result)
 
-    return True
+    # 更新 ret
+    ret["failed_count"] = failed_count
+    ret["out_path"] = out_path
+    if failed_count > 0:
+        if verbose:
+            print(f"     ⚠ {failed_count}/{total_paras} paragraphs failed — marked INCOMPLETE")
+    elif verbose:
+        print(f"     ✅ File done: {total_paras}/{total_paras} paragraphs translated")
+
+    return ret
 
 
 def is_translatable_paragraph(line: str) -> bool:
@@ -511,6 +569,8 @@ def main():
                        help="Incremental: only translate files without _zh.md or with failed output")
     parser.add_argument("--max-files", type=int, default=5,
                        help="Max files per run in incremental mode (0=unlimited, default: 5)")
+    parser.add_argument("--commit-per-file", action="store_true",
+                       help="Git add+commit+push each file after successful translation (CI use)")
     args = parser.parse_args()
 
     print("🌐 rocm-hip-map translate.py")
@@ -518,6 +578,8 @@ def main():
     print(f"   Mode: {args.mode}")
     print(f"   {'DRY RUN' if args.dry_run else 'LIVE MODE'}")
     print(f"   {'INCREMENTAL' if args.incremental else 'FULL'}")
+    if args.commit_per_file:
+        print(f"   COMMIT-PER-FILE: yes")
 
     glossary = load_glossary()
     print(f"   Glossary: {len(glossary.get('terms',[]))} terms")
@@ -532,7 +594,8 @@ def main():
         count = 0
         for md_file in md_files:
             print(f"  📜 {md_file.name}")
-            translate_markdown_file(md_file, glossary, dry_run=args.dry_run, mode="paper")
+            translate_markdown_file(md_file, glossary, dry_run=args.dry_run, mode="paper",
+                                     verbose=True)
             count += 1
         print(f"\n📊 {count} papers translated")
     elif args.file:
@@ -544,14 +607,22 @@ def main():
             print(f"   ❌ Input file not found: {path}")
             sys.exit(1)
 
-        ok = translate_markdown_file(path, glossary, dry_run=args.dry_run, mode=args.mode)
-        if not ok:
+        r = translate_markdown_file(path, glossary, dry_run=args.dry_run, mode=args.mode,
+                                     verbose=True)
+        if r.get("skipped", False):
+            print(f"   ⏭ Skipped: {r['skip_reason']}")
+        elif r.get("failed_count", 0) > 0:
+            print(f"   ⚠ Translated with {r['failed_count']} failed paragraphs: {path.name}")
+            if not args.dry_run:
+                print(f"   💾 Saved to: {r['out_path']}")
             sys.exit(1)
-
-        print(f"   ✅ Translated: {path.name}")
+        else:
+            print(f"   ✅ Translated: {path.name}")
+            if not args.dry_run and r.get("out_path"):
+                print(f"   💾 Saved to: {r['out_path']}")
     elif args.incremental:
         # 增量模式：只翻译未完成/失败的文件
-        # 断点续传逻辑：_zh.md 存在且 > MIN_VALID_SIZE 则跳过
+        # 断点续传逻辑：_zh.md 存在且 is_valid_translation 返回 True 则跳过
         MIN_VALID_SIZE = 200  # bytes — 低于此值视为失败断点，重新翻译
 
         if not CONTENT_RAW_EN.exists():
@@ -562,6 +633,7 @@ def main():
         skipped = 0
         failed_resume = 0
         count = 0
+        max_files = args.max_files
 
         for md_file in all_files:
             zh_file = CONTENT_TRANSLATED_ZH / (md_file.stem + "_zh.md")
@@ -571,22 +643,79 @@ def main():
                 skipped += 1
                 continue  # ✅ 已完成，跳过
 
-            if zh_file.exists():
-                # 存在但无效，视为失败断点
-                print(f"  🔄 Resume (invalid translation, {zh_file.stat().st_size}B): {md_file.name}")
-                failed_resume += 1
-            else:
-                print(f"  📝 {md_file.name}")
-
-            translate_markdown_file(md_file, glossary, dry_run=args.dry_run, mode=args.mode)
-            count += 1
-
-            if args.max_files > 0 and count >= args.max_files:
+            # ── 达到上限后不再处理更多文件 ──
+            if max_files > 0 and count >= max_files:
                 remaining = len(all_files) - skipped - failed_resume - count
-                print(f"\n  ⏸ Reached --max-files={args.max_files}")
+                if count > 0:
+                    print(f"  ⏸ Reached --max-files={max_files}")
                 if remaining > 0:
                     print(f"     {remaining} file(s) remain for next run")
                 break
+
+            # ── 文件头日志（CI 可见的工作状态）──
+            fsize = md_file.stat().st_size
+            with open(md_file) as fh:
+                raw = fh.read()
+            fchars = len(raw)
+            fwords = len(raw.split())
+
+            print(f"\n{'═'*60}")
+            print(f"  📄 [{count + 1}/{max_files or '∞'}] {md_file.name}")
+            print(f"     📏 {fsize/1024:.1f} KB | {fchars:,} chars | {fwords:,} words")
+            if zh_file.exists():
+                print(f"     🔄 Resume (prev: {zh_file.stat().st_size}B)")
+            print(f"{'─'*60}")
+
+            r = translate_markdown_file(md_file, glossary, dry_run=args.dry_run,
+                                         mode=args.mode, verbose=True)
+
+            if r.get("skipped", False):
+                # 文件被 translate_markdown_file 内部跳过（SKIP_PATTERNS/超大）
+                # 不消耗 max-files 配额，不计入 count
+                continue
+
+            if zh_file.exists():
+                failed_resume += 1
+
+            # ── 提交（--commit-per-file）──
+            # 只有完全成功的文件才 commit（无 failed_count）
+            if args.commit_per_file and not args.dry_run and r.get("out_path") \
+                    and r.get("failed_count", 0) == 0:
+                zh_out = r["out_path"]
+                committed = False
+                if zh_out.exists():
+                    g_add = subprocess.run(["git", "add", str(zh_out)],
+                                           capture_output=True, text=True)
+                    g_commit = subprocess.run(
+                        ["git", "commit", "-m", f"translate: {md_file.name}"],
+                        capture_output=True, text=True)
+                    if g_commit.returncode == 0:
+                        # push 前先 rebase 避免非快进拒绝
+                        g_pull = subprocess.run(
+                            ["git", "pull", "--rebase", "origin", "main"],
+                            capture_output=True, text=True)
+                        if g_pull.returncode != 0:
+                            print(f"     ⚠ git pull --rebase failed: {g_pull.stderr.strip()[:120]}")
+                            # rebase 冲突时 abort 并跳过 push
+                            subprocess.run(["git", "rebase", "--abort"],
+                                           capture_output=True)
+                        else:
+                            g_push = subprocess.run(["git", "push"],
+                                                    capture_output=True, text=True)
+                            if g_push.returncode == 0:
+                                print(f"     ✅ Committed & pushed: translate: {md_file.name}")
+                                committed = True
+                            else:
+                                print(f"     ⚠ git push failed: {g_push.stderr.strip()[:120]}")
+                    elif "nothing to commit" in (g_commit.stdout + g_commit.stderr).lower():
+                        print(f"     ℹ  Nothing to commit (no changes)")
+                        committed = True  # not an error
+                    else:
+                        print(f"     ⚠ git commit error ({g_commit.returncode}): {g_commit.stderr.strip()[:120]}")
+                if committed:
+                    print(f"     💾 {zh_out.name}")
+
+            count += 1
 
         print(f"\n📊 Success: {count}, Failed: {failed_resume}, Skipped(valid): {skipped}, "
               f"Remaining: {len(all_files) - skipped - failed_resume - count}")
@@ -597,7 +726,10 @@ def main():
         count = 0
         for md_file in sorted(CONTENT_RAW_EN.glob("*.md")):
             print(f"  📝 {md_file.name}")
-            translate_markdown_file(md_file, glossary, dry_run=args.dry_run, mode=args.mode)
+            r = translate_markdown_file(md_file, glossary, dry_run=args.dry_run,
+                                         mode=args.mode, verbose=True)
+            if not args.dry_run and r.get("out_path"):
+                print(f"     💾 {r['out_path'].name}")
             count += 1
         print(f"\n📊 {count} files translated")
 

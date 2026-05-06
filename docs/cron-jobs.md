@@ -63,10 +63,15 @@
 **断点续传机制：**
 ```
 检查 content/translated/zh/{stem}_zh.md：
-  → 不存在      → 📝 翻译
-  → 存在且 >200B → ✅ 跳过（已完成）
-  → 存在但 ≤200B → 🔄 续传（上次失败，重新翻译）
+  → 不存在          → 📝 翻译
+  → is_valid=True   → ✅ 跳过（已完成）
+  → is_valid=False  → 🔄 续传（上次失败，重新翻译）
 ```
+
+**提交策略：** 每翻译完一篇文档立即独立 commit + push，而非批量提交。
+- commit message: `translate: {文件名}`
+- 中断时已完成的文件不丢失
+- git history 可见每篇翻译的精确时间
 
 **手动触发选项：**
 - `max_files`: 每次最多翻译篇数（默认 5）

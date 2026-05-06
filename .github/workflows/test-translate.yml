@@ -34,7 +34,7 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt
 
-      - name: Translate batch
+      - name: Translate batch + commit per file
         env:
           TRANSLATE_PROVIDER: opencode
           TRANSLATE_API_KEY: ${{ secrets.TRANSLATE_API_KEY }}
@@ -46,6 +46,13 @@ jobs:
           TOTAL=0
           OK=0
 
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # 创建测试分支
+          BRANCH="test/translate-${{ github.run_number }}"
+          git checkout -b "$BRANCH"
+
           for f in "${FILES[@]}"; do
             f=$(echo "$f" | xargs)  # trim whitespace
             echo ""
@@ -54,57 +61,16 @@ jobs:
             echo "═══════════════════════════════════════"
             python3 scripts/translate.py \
               --file "content/raw/english/$f" \
-              --mode "${{ inputs.mode }}" && OK=$((OK+1)) || echo "⚠ Failed: $f"
+              --mode "${{ inputs.mode }}" \
+              --commit-per-file && OK=$((OK+1)) || echo "⚠ Failed: $f"
             TOTAL=$((TOTAL+1))
           done
+
+          # 推送整条分支（包括 translate.py 已作的逐篇 commit）
+          git push origin "$BRANCH"
+          echo "📌 Pushed to branch: $BRANCH"
 
           echo ""
           echo "═══════════════════════════════════════"
           echo "📊 Batch result: $OK/$TOTAL succeeded"
           echo "═══════════════════════════════════════"
-
-      - name: Show translation results
-        run: |
-          echo "=== All translated files ==="
-          find content/translated/zh -type f -not -name '.gitkeep' -maxdepth 10 -print -exec wc -c {} \;
-
-          IFS=',' read -ra FILES <<< "${{ inputs.files }}"
-          FAIL=0
-          PASS=0
-
-          for f in "${FILES[@]}"; do
-            f=$(echo "$f" | xargs)
-            STEM=$(basename "$f" .md)
-            OUT="content/translated/zh/${STEM}_zh.md"
-            if [ -f "$OUT" ]; then
-              echo ""
-              echo "✅ $OUT ($(wc -c < "$OUT") bytes)"
-              echo "--- First 10 lines ---"
-              head -20 "$OUT"
-              PASS=$((PASS+1))
-            else
-              echo ""
-              echo "❌ Missing: $OUT"
-              FAIL=$((FAIL+1))
-            fi
-          done
-
-          echo ""
-          echo "📊 Verification: $PASS found, $FAIL missing"
-          if [ "$FAIL" -gt 0 ]; then
-            echo "⚠ Some files were not translated. Check logs above."
-            exit 1
-          fi
-
-      - name: Commit translations to test branch
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          BRANCH="test/translate-${{ github.run_number }}"
-          git checkout -b "$BRANCH"
-          git add content/translated/
-          git commit -m "test: translate batch ${{ inputs.files }} (#${{ github.run_number }})" || echo "No changes"
-          git push origin "$BRANCH"
-
-          echo "📌 Translation pushed to branch: $BRANCH"

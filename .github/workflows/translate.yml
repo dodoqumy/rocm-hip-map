@@ -58,24 +58,13 @@ jobs:
           TRANSLATE_MODEL: ${{ inputs.model }}
           TRANSLATE_BASE_URL: ${{ inputs.base_url }}
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           python3 scripts/translate.py \
             --incremental \
             --max-files "${{ inputs.max_files }}" \
-            --mode "${{ inputs.mode }}"
-
-      - name: Commit translations
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add content/translated/ || true
-
-          if git diff --cached --quiet; then
-            echo "No new translations to commit"
-          else
-            git commit -m "auto: incremental translate $(date +%Y-%m-%d)"
-            git push
-          fi
+            --mode "${{ inputs.mode }}" \
+            --commit-per-file
 
       - name: Audit translations
         run: python3 scripts/audit_translations.py
