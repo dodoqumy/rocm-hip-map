@@ -1,1 +1,1 @@
-# Resume file with partial changes
+# Updated content - translation failed
