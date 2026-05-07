@@ -2,7 +2,7 @@
   "article_id": "f6163a63a2a0f0b8",
   "title": "System optimization",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/system-optimization/index.html",
-  "verified_at": "2026-05-06T05:22:57.132965+00:00",
+  "verified_at": "2026-05-07T05:25:50.202553+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
