@@ -2,7 +2,7 @@
   "article_id": "61efeb69318d0b1e",
   "title": "ROCm release history",
   "source_url": "https://rocm.docs.amd.com/en/latest/release/versions.html",
-  "verified_at": "2026-05-07T05:25:28.195179+00:00",
+  "verified_at": "2026-05-08T04:48:49.594674+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",

@@ -2,7 +2,7 @@
   "article_id": "206c1997033508ce",
   "title": "System debugging",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/system-debugging.html",
-  "verified_at": "2026-05-07T05:25:52.203156+00:00",
+  "verified_at": "2026-05-08T04:49:13.602473+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
