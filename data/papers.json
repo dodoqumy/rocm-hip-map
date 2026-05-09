@@ -1,8 +1,187 @@
 {
   "version": 1,
-  "updated": "2026-05-02T07:41:39Z",
-  "total": 120,
+  "updated": "2026-05-09T07:54:05Z",
+  "total": 125,
   "papers": [
+    {
+      "id": "2605.06485v1",
+      "arxiv_id": "2605.06485v1",
+      "title": "Litespark Inference on Consumer CPUs: Custom SIMD Kernels for Ternary Neural Networks",
+      "authors": [
+        "Nii Osae Osae Dade",
+        "Tony Morri",
+        "Moinul Hossain Rahat",
+        "Sayandip Pal"
+      ],
+      "abstract": "Large language models (LLMs) have transformed artificial intelligence, but their computational requirements remain prohibitive for most users. Standard inference demands expensive datacenter GPUs or cloud API access, leaving over one billion personal computers underutilized for AI workloads. Ternary models offer a path forward: their weights are constrained to {-1, 0, +1}, theoretically eliminating the need for floating-point multiplication. However, existing frameworks fail to exploit this structure, treating ternary models as dense floating-point networks. We address this gap with custom SIMD kernels that replace matrix multiplication with simple addition and subtraction operations, targeting the integer dot product instructions available on modern CPUs. Our implementation, Litespark-Inference, is pip-installable and integrates directly with Hugging-Face, achieving 9.2x faster time-to-first-token, 52x higher throughput, and 14x memory reduction compared to standard PyTorch inference on Apple Silicon, with similar speedups on Intel and AMD processors.",
+      "arxiv_url": "https://arxiv.org/abs/2605.06485v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.06485v1",
+      "published": "2026-05-07",
+      "updated": "2026-05-07",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "inference",
+        "kernel",
+        "llm",
+        "machine-learning",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-05-09T07:54:05Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2605.03208v2",
+      "arxiv_id": "2605.03208v2",
+      "title": "Kerncap: Automated Kernel Extraction and Isolation for AMD GPUs",
+      "authors": [
+        "Cole Ramos",
+        "Keith Lowery"
+      ],
+      "abstract": "Iterative GPU kernel tuning is bottlenecked by the scale of the applications that host the kernels. Rapid iteration requires isolating the kernel so it can be edited, recompiled, and validated without rebuilding the full application -- but manual isolation requires reconstructing build flags, dispatch configuration, and runtime inputs by hand, so developers usually settle for slow in-place edits. We present Kerncap, an automated kernel extraction tool that intercepts dispatches at the HSA runtime for both HIP and Triton, bridging Triton's JIT-only metadata into HSA-level capture via a lightweight Python compile-hook shim. Kerncap performs an address-space closure of all device memory -- a virtual-address-faithful snapshot that preserves embedded device pointers without DWARF metadata or pointer chasing -- locates kernel sources, and emits self-contained reproducer projects. HIP reproducers use a Clang VFS overlay for source-level recompilation without modifying the original build system; Triton reproducers are tuning-pinned, binding the captured autotuner configuration into the artifact to preserve the JIT kernel's numerical contract. Across six real-world HIP and Triton workloads spanning traditional HPC and ML domains on three AMD GPU architectures (CDNA2, CDNA3, RDNA3), Kerncap extracts and validates kernels from snapshots ranging from 152~MB to 30~GB -- including a VA-faithful capture of vLLM's Mixture-of-Experts weight pool reached through pointer indirection. On our llama-cpp case study, Kerncap's edit-recompile-validate loop achieves a 13.6x speedup over the traditional workflow, reducing kernel isolation from a multi-hour process to a single command. The resulting reproducers also serve as a substrate for autotuning agents and LLM-driven kernel generators that need rapid, isolated evaluation of candidates.",
+      "arxiv_url": "https://arxiv.org/abs/2605.03208v2",
+      "pdf_url": "https://arxiv.org/pdf/2605.03208v2",
+      "published": "2026-05-04",
+      "updated": "2026-05-06",
+      "categories": [
+        "cs.SE"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna",
+        "hip",
+        "hpc",
+        "kernel",
+        "llm",
+        "optimization",
+        "rdna",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-05-09T07:53:51Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2605.03213v2",
+      "arxiv_id": "2605.03213v2",
+      "title": "When Agents Handle Secrets: A Survey of Confidential Computing for Agentic AI",
+      "authors": [
+        "Javad Forough",
+        "Marios Kogias",
+        "Hamed Haddadi"
+      ],
+      "abstract": "Agentic AI systems, specifically LLM-driven agents that plan, invoke tools, maintain persistent memory, and delegate tasks to peer agents via protocols such as MCP and A2A, introduce a threat surface that differs materially from standalone model inference. Agents accumulate sensitive context, hold credentials, and operate across pipelines no single party fully controls, enabling prompt injection, context exfiltration, credential theft, and inter-agent message poisoning. Current defenses operate entirely within the software stack and can be silently bypassed by a sufficiently privileged adversary such as a compromised cloud operator. Confidential computing (CC) offers a hardware-rooted alternative: Trusted Execution Environments (TEEs) isolate agent code and data from privileged system software, while remote attestation enables verifiable trust across distributed deployments. This survey synthesizes the design space in four parts: (i) a unified taxonomy of six TEE platforms (Intel SGX, Intel TDX, AMD SEV-SNP, ARM TrustZone, ARM CCA, and NVIDIA H100 CC) covering deployment roles and performance tradeoffs; (ii) an agent-centric threat model spanning perception, planning, memory, action, and coordination layers mapped to nine security goals; (iii) a comparative survey of CC-based defenses distinguishing findings that transfer from single-call inference versus what requires new agentic designs; and (iv) six open challenges including compound attestation for multi-hop agent chains and GPU-TEE performance at LLM scale. While several hardware trust primitives appear mature enough for targeted deployments, no broadly established end-to-end framework yet binds them into a coherent security substrate for production agentic AI.",
+      "arxiv_url": "https://arxiv.org/abs/2605.03213v2",
+      "pdf_url": "https://arxiv.org/pdf/2605.03213v2",
+      "published": "2026-05-04",
+      "updated": "2026-05-07",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "inference",
+        "llm",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-05-09T07:54:05Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2605.02953v1",
+      "arxiv_id": "2605.02953v1",
+      "title": "DITRON: Distributed Multi-level Tiling Compiler for Parallel Tensor Programs",
+      "authors": [
+        "Size Zheng",
+        "Xuegui Zheng",
+        "Hanshi Sun",
+        "Qi Hou",
+        "Wenlei Bao",
+        "Shiyu Li",
+        "Haojie Duanmu",
+        "Jin Fang",
+        "Chenli Xue",
+        "Chenhui Huang",
+        "Yuanqiang Liu",
+        "Renze Chen",
+        "Ningxin Zheng",
+        "Dongyang Wang",
+        "Li-Wen Chang",
+        "Liqiang Lu",
+        "Yun Liang",
+        "Jidong Zhai",
+        "Xin Liu"
+      ],
+      "abstract": "The scaling of large language models (LLMs) is currently bottlenecked by the rigidity of distributed programming. While high-performance libraries like CuBLAS and NCCL provide optimized primitives, they lack the flexibility required for rapidly evolving model architectures. Conversely, existing tensor compilers fail to address the complex memory hierarchy of distributed clusters effectively. To bridge this gap, we propose DITRON, a scalable tile-level compiler that democratizes high-performance distributed kernel development. DITRON introduces a novel hierarchical programming abstraction spanning Core, Device, and Task levels to map tensor programs efficiently onto heterogeneous distributed hardware. This abstraction allows DITRON to support diverse parallelism strategies while abstracting away the complexity of inter-node and intra-node communication. Evaluated across large-scale clusters, DITRON achieves performance parity with or exceeding expert-tuned CUDA libraries, delivering speedups of $6\\%-30\\%$ on isolated kernels and $5\\%-30\\%$ on end-to-end inference in vLLM. Furthermore, DITRON demonstrates strong portability, achieving significant speedups on both NVIDIA and AMD platforms. \\ours{} has been deployed at the enterprise level for both training and inference. It achieves an MFU improvement of over 10\\% in training tasks, saving approximately 500,000 GPU hours of training cost per month. For inference tasks, it delivers an end-to-end gain of over 20\\% and has been applied to cloud service inference and edge inference scenarios.",
+      "arxiv_url": "https://arxiv.org/abs/2605.02953v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02953v1",
+      "published": "2026-05-02",
+      "updated": "2026-05-02",
+      "categories": [
+        "cs.PL"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "inference",
+        "kernel",
+        "llm",
+        "optimization",
+        "performance",
+        "porting",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-05-09T07:54:02Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2605.01062v1",
+      "arxiv_id": "2605.01062v1",
+      "title": "Single Change-Point Detection via Energy Distance with Application to Genomic Data",
+      "authors": [
+        "Suthakaran Ratnasingam"
+      ],
+      "abstract": "In this paper, we develop and analyze a nonparametric procedure for detecting a single change point in sequences of independent observations using energy distance. The asymptotic properties of the test statistic are derived under both null and alternative hypotheses. Under the null hypothesis, for any fixed candidate split point, the standardized statistic $\\mathcal{Z}_{n,k}$ converges to a standard normal limit. For global detection, we use the scan statistic $T_n=\\max_{k\\in K_η}|\\mathcal{Z}_{n,k}|$ and calibrate critical values using a permutation test, which yields valid type I error control under exchangeability. The simulation study shows that the proposed method demonstrates much better robustness across various error distributions. To handle multiple change points in practical applications, the method is combined with a binary segmentation approach. The breast cancer cell line (MDA157) from cDNA microarray CGH data is used to illustrate the detection and estimation capabilities of the proposed method for genomic sequences.",
+      "arxiv_url": "https://arxiv.org/abs/2605.01062v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.01062v1",
+      "published": "2026-05-01",
+      "updated": "2026-05-01",
+      "categories": [
+        "stat.ME",
+        "math.ST"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-05-09T07:53:58Z",
+      "extracted": false,
+      "translated": false
+    },
     {
       "id": "2604.24169v1",
       "arxiv_id": "2604.24169v1",
@@ -67,7 +246,9 @@
         "training"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:21Z"
+      "fetched_at": "2026-05-02T07:41:21Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2604.18616v1",
@@ -1140,7 +1321,9 @@
         "training"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:39Z"
+      "fetched_at": "2026-05-02T07:41:39Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2511.11621v1",
@@ -1176,7 +1359,9 @@
         "performance"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:39Z"
+      "fetched_at": "2026-05-02T07:41:39Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2510.27583v1",
@@ -1205,7 +1390,9 @@
         "performance"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:39Z"
+      "fetched_at": "2026-05-02T07:41:39Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2511.11581v1",
@@ -1245,7 +1432,9 @@
         "rocm"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:39Z"
+      "fetched_at": "2026-05-02T07:41:39Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2509.23202v3",
@@ -1286,7 +1475,9 @@
         "training"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:39Z"
+      "fetched_at": "2026-05-02T07:41:39Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2509.21039v1",
@@ -1378,7 +1569,9 @@
         "training"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:39Z"
+      "fetched_at": "2026-05-02T07:41:39Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2509.16328v2",
@@ -1450,7 +1643,9 @@
         "training"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:39Z"
+      "fetched_at": "2026-05-02T07:41:39Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2508.16806v1",
@@ -1632,7 +1827,9 @@
         "rocm"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:39Z"
+      "fetched_at": "2026-05-02T07:41:39Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2508.00904v1",
@@ -1667,7 +1864,9 @@
         "performance"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:39Z"
+      "fetched_at": "2026-05-02T07:41:39Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2507.20719v1",
@@ -3037,7 +3236,9 @@
         "porting"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:35Z"
+      "fetched_at": "2026-05-02T07:41:35Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2210.11122v1",
@@ -3074,7 +3275,9 @@
         "porting"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:35Z"
+      "fetched_at": "2026-05-02T07:41:35Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2207.04584v1",
@@ -3145,7 +3348,9 @@
         "performance"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:28Z"
+      "fetched_at": "2026-05-02T07:41:28Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2205.07976v1",
@@ -3183,7 +3388,9 @@
         "porting"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:35Z"
+      "fetched_at": "2026-05-02T07:41:35Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2203.06777v1",
@@ -3253,7 +3460,9 @@
         "rocm"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:25Z"
+      "fetched_at": "2026-05-02T07:41:25Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2202.12674v3",
@@ -3287,7 +3496,9 @@
         "training"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:35Z"
+      "fetched_at": "2026-05-02T07:41:35Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2110.08221v2",
@@ -3321,7 +3532,9 @@
         "rocm"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:25Z"
+      "fetched_at": "2026-05-02T07:41:25Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2107.07809v1",
@@ -3384,7 +3597,9 @@
         "rocm"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:25Z"
+      "fetched_at": "2026-05-02T07:41:25Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2104.08178v1",
@@ -3448,7 +3663,9 @@
         "performance"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:35Z"
+      "fetched_at": "2026-05-02T07:41:35Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2006.14290v1",
@@ -3480,7 +3697,9 @@
         "rocm"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:25Z"
+      "fetched_at": "2026-05-02T07:41:25Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2001.05706v2",
@@ -3513,7 +3732,9 @@
         "rocm"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:25Z"
+      "fetched_at": "2026-05-02T07:41:25Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "2001.03092v1",
@@ -3704,7 +3925,9 @@
         "distributed-computing"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:35Z"
+      "fetched_at": "2026-05-02T07:41:35Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "1708.01492v5",
@@ -3854,7 +4077,9 @@
         "rocm"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:35Z"
+      "fetched_at": "2026-05-02T07:41:35Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "1610.02895v1",
@@ -3935,7 +4160,9 @@
         "cdna"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:32Z"
+      "fetched_at": "2026-05-02T07:41:32Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "1510.04041v2",
@@ -3962,7 +4189,9 @@
         "cdna"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:32Z"
+      "fetched_at": "2026-05-02T07:41:32Z",
+      "extracted": false,
+      "translated": false
     },
     {
       "id": "1411.0107v1",
@@ -3989,7 +4218,9 @@
         "cdna"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:32Z"
+      "fetched_at": "2026-05-02T07:41:32Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "1410.2381v1",
@@ -4018,7 +4249,9 @@
         "performance"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:32Z"
+      "fetched_at": "2026-05-02T07:41:32Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "1405.7316v1",
@@ -4048,7 +4281,9 @@
         "performance"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:32Z"
+      "fetched_at": "2026-05-02T07:41:32Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "1309.5211v1",
@@ -4081,7 +4316,9 @@
         "performance"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:32Z"
+      "fetched_at": "2026-05-02T07:41:32Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "1207.6817v1",
@@ -4106,7 +4343,9 @@
         "cdna"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:32Z"
+      "fetched_at": "2026-05-02T07:41:32Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "1002.2506v1",
@@ -4131,7 +4370,9 @@
         "cdna"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:32Z"
+      "fetched_at": "2026-05-02T07:41:32Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "0909.0878v2",
@@ -4164,7 +4405,9 @@
         "cdna"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:32Z"
+      "fetched_at": "2026-05-02T07:41:32Z",
+      "extracted": true,
+      "translated": false
     },
     {
       "id": "0811.1263v1",
@@ -4193,7 +4436,9 @@
         "hip"
       ],
       "lifecycle": "latest",
-      "fetched_at": "2026-05-02T07:41:32Z"
+      "fetched_at": "2026-05-02T07:41:32Z",
+      "extracted": true,
+      "translated": false
     }
   ]
 }
