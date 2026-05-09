@@ -2,7 +2,7 @@
   "article_id": "83b4d1369263607e",
   "title": "Running models from Hugging Face",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/hugging-face-models.html",
-  "verified_at": "2026-05-08T04:49:31.609435+00:00",
+  "verified_at": "2026-05-09T05:16:41.297489+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
