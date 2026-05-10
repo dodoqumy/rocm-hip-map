@@ -2,7 +2,7 @@
   "article_id": "ca637dc460b05654",
   "title": "Building documentation",
   "source_url": "https://rocm.docs.amd.com/en/latest/contribute/building.html",
-  "verified_at": "2026-05-09T05:17:07.305910+00:00",
+  "verified_at": "2026-05-10T05:32:23.733993+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",

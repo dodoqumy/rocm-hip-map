@@ -2,7 +2,7 @@
   "article_id": "73eb6a67974c1794",
   "title": "Compatibility matrix",
   "source_url": "https://rocm.docs.amd.com/en/latest/compatibility/compatibility-matrix.html",
-  "verified_at": "2026-05-09T05:17:27.312416+00:00",
+  "verified_at": "2026-05-10T05:32:43.740242+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
