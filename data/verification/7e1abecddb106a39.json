@@ -2,7 +2,7 @@
   "article_id": "7e1abecddb106a39",
   "title": "AMD Instinct™ MI250 microarchitecture",
   "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi250.html",
-  "verified_at": "2026-05-12T05:33:55.984574+00:00",
+  "verified_at": "2026-05-13T05:43:25.296380+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",

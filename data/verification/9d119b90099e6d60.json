@@ -2,7 +2,7 @@
   "article_id": "9d119b90099e6d60",
   "title": "ROCm libraries",
   "source_url": "https://rocm.docs.amd.com/en/latest/reference/api-libraries.html",
-  "verified_at": "2026-05-12T05:32:57.965716+00:00",
+  "verified_at": "2026-05-13T05:42:27.279768+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
