@@ -2,7 +2,7 @@
   "article_id": "bb4fa383c9d97927",
   "title": "ROCm environment variables",
   "source_url": "https://rocm.docs.amd.com/en/latest/reference/env-variables.html",
-  "verified_at": "2026-05-14T05:41:40.326928+00:00",
+  "verified_at": "2026-05-15T05:48:22.156287+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
