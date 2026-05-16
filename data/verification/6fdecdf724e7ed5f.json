@@ -2,7 +2,7 @@
   "article_id": "6fdecdf724e7ed5f",
   "title": "System setup for AI workloads on ROCm",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/system-setup/index.html",
-  "verified_at": "2026-05-15T05:48:42.281758+00:00",
+  "verified_at": "2026-05-16T05:21:35.098959+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
