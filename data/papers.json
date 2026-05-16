@@ -1,8 +1,79 @@
 {
   "version": 1,
-  "updated": "2026-05-09T07:54:05Z",
-  "total": 125,
+  "updated": "2026-05-16T08:02:19Z",
+  "total": 129,
   "papers": [
+    {
+      "id": "2605.09825v3",
+      "arxiv_id": "2605.09825v3",
+      "title": "Pretraining large language models with MXFP4 on Native FP4 Hardware",
+      "authors": [
+        "Musa Cim",
+        "Poovaiah Palangappa",
+        "Miro Hodak",
+        "Ravi Dwivedula",
+        "Meena Arunachalam",
+        "Mahmut Taylan Kandemir"
+      ],
+      "abstract": "Why does full-pipeline FP4 training of large language models often diverge, even when forward activations and activation gradients remain stable? We address this question through a controlled study of MXFP4 quantization in transformer training, progressively enabling FP4 across forward propagation (Fprop), activation gradients (Dgrad), and weight gradients (Wgrad) while holding all other factors fixed. In full pretraining of Llama 3.1-8B on the C4 dataset, we observe that quantizing Wgrad is the primary driver of convergence degradation, whereas FP4 in Fprop and Dgrad alone introduces only modest additional token requirements. To interpret this behavior, we evaluate both structured and stochastic interventions under a controlled experimental setting. We find that stochastic rounding and randomized Hadamard rotations fail to stabilize training once Wgrad is quantized, whereas deterministic Hadamard rotations consistently restore stable optimization. These results suggest that FP4 training instability is driven by structured micro-scaling errors along sensitive gradient paths, rather than by insufficient stochasticity. We run experiments with native MXFP4 support on AMD Instinct MI355X GPUs, enabling controlled investigation of these effects without reliance on software emulation.",
+      "arxiv_url": "https://arxiv.org/abs/2605.09825v3",
+      "pdf_url": "https://arxiv.org/pdf/2605.09825v3",
+      "published": "2026-05-11",
+      "updated": "2026-05-14",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "llm",
+        "machine-learning",
+        "optimization",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-05-16T08:02:01Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2605.10678v1",
+      "arxiv_id": "2605.10678v1",
+      "title": "A Performance-Portable, Massively Parallel Distributed Nonuniform FFT",
+      "authors": [
+        "Paul Fischill",
+        "Andreas Adelmann",
+        "Sriramkrishnan Muralikrishnan"
+      ],
+      "abstract": "The nonuniform fast Fourier transform (NUFFT) enables spectral methods for problems with irregularly spaced samples, with applications in medical imaging, molecular dynamics, and kinetic plasma simulations. Existing implementations are limited to shared-memory execution, restricting problem sizes to what fits on a single node. We present the first distributed, performance-portable NUFFT for heterogeneous supercomputers. Our Kokkos-based implementation runs without modification on NVIDIA and AMD GPUs. We develop multiple spreading and interpolation kernels optimized for different accuracy requirements and architectures. Our spreading kernels match or exceed the single-GPU throughput of the state-of-the-art CUDA-based NUFFT library cuFINUFFT at production particle densities, while our Kokkos-based implementation additionally supports AMD GPUs. Strong scaling experiments on Alps (NVIDIA GH200), JUWELS Booster (NVIDIA A100), and LUMI (AMD MI250X) demonstrate scaling up to 1024 GPUs. At scale, the distributed FFT is a significant part of the total runtime, making higher NUFFT accuracy less expensive. We apply the method to massively parallel Particle-in-Fourier simulations of Landau damping with up to $1024^3$ Fourier modes and 8.6 billion particles on Alps, JUWELS, and LUMI, demonstrating that distributed NUFFTs enable kinetic plasma simulations at resolutions previously inaccessible to spectral particle methods.",
+      "arxiv_url": "https://arxiv.org/abs/2605.10678v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.10678v1",
+      "published": "2026-05-11",
+      "updated": "2026-05-11",
+      "categories": [
+        "cs.CE",
+        "cs.MS"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "kernel",
+        "mi300",
+        "modeling-simulation",
+        "optimization",
+        "performance",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-05-16T08:02:11Z",
+      "extracted": false,
+      "translated": false
+    },
     {
       "id": "2605.06485v1",
       "arxiv_id": "2605.06485v1",
@@ -35,7 +106,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-05-09T07:54:05Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -69,7 +140,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-05-09T07:53:51Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -101,7 +172,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-05-09T07:54:05Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -152,7 +223,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-05-09T07:54:02Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -179,7 +250,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-05-09T07:53:58Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -518,6 +589,41 @@
       "lifecycle": "latest",
       "fetched_at": "2026-04-28T08:39:25Z",
       "extracted": true,
+      "translated": false
+    },
+    {
+      "id": "2603.29002v2",
+      "arxiv_id": "2603.29002v2",
+      "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference",
+      "authors": [
+        "Zifan He",
+        "Rui Ma",
+        "Yizhou Sun",
+        "Jason Cong"
+      ],
+      "abstract": "Modern large language models (LLMs) increasingly depends on efficient long-context processing and generation mechanisms, including sparse attention, retrieval-augmented generation (RAG), and compressed contextual memory, to support complex reasoning. We show that these optimizations can be unified into a four-step memory processing pipeline: Prepare Memory, Compute Relevancy, Retrieval, and Apply to Inference. Through systematic profiling, we identify a 22%-97% memory processing overhead in LLM inference and strong heterogeneity in its computational characteristics. Motivated by this insight, we argue that \\textbf{heterogeneous systems} are well-suited to accelerate memory processing and thus end-to-end inference. We demonstrate this approach on a GPU-FPGA system by offloading sparse, irregular, and memory-bounded operations to FPGAs while retaining compute-intensive operations on GPUs. Evaluated on an AMD MI210 GPU and an Alveo U55C FPGA, our system is up to $2.2\\times$ faster and achieves up to $4.7\\times$ less energy across multiple LLM inference optimizations than the GPU baseline (similar results hold on NVIDIA A100). These results establish heterogeneous systems as a practical direction for efficient LLM memory processing and inform future heterogeneous hardware design.",
+      "arxiv_url": "https://arxiv.org/abs/2603.29002v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.29002v2",
+      "published": "2026-03-30",
+      "updated": "2026-05-11",
+      "categories": [
+        "cs.DC",
+        "cs.AI"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "distributed-computing",
+        "inference",
+        "llm",
+        "mi300",
+        "optimization"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-05-16T08:02:19Z",
+      "extracted": false,
       "translated": false
     },
     {
@@ -1246,6 +1352,42 @@
       "lifecycle": "latest",
       "fetched_at": "2026-04-28T08:39:25Z",
       "extracted": true,
+      "translated": false
+    },
+    {
+      "id": "2511.09861v3",
+      "arxiv_id": "2511.09861v3",
+      "title": "Lit Silicon: A Case Where Thermal Imbalance Couples Concurrent Execution in Multiple GPUs",
+      "authors": [
+        "Marco Kurzynski",
+        "Shaizeen Aga",
+        "Di Wu"
+      ],
+      "abstract": "GPU systems are increasingly powering modern datacenters at scale. Despite being highly performant, GPU systems can exhibit performance variation at the node and cluster levels. Such performance variation can significantly impact both high-performance computing and artificial intelligence workloads, such as cutting-edge large language models (LLMs). In this work, we analyze the performance of a single-node multi-GPU system running LLM training, and observe that the kernel-level performance variation is highly correlated with concurrent computation and communication (C3), a technique to overlap computation and communication across GPUs for performance gains. We then take a further step to reason that thermally induced straggling coupled with C3 impacts performance variation, which we coin the Lit Silicon effect. More specifically, Lit Silicon describes that in a multi-GPU node, thermal imbalance across GPUs can introduce node-level straggler GPUs (hotter and slower), which in turn slow down the leader GPUs (cooler and faster). Lit Silicon can lead to node-level performance variation and inefficiency, potentially impacting the entire datacenter. We propose analytical performance and power models for Lit Silicon, to understand the potential system-level gains. We further design simple detection and mitigation techniques to effectively address the Lit Silicon problem, and evaluate three different power management solutions, including (1) power optimization under GPU thermal design power, (2) performance optimization under node-level GPU power capping, and (3) performance optimization under node-level CPU power sloshing. We conduct experiments on two workloads on two AMD InstinctTM MI300X GPU systems under two LLM training frameworks, and observe up to 6% performance and 4% power improvements, potentially saving several tens of millions of dollars in electricity costs in datacenters.",
+      "arxiv_url": "https://arxiv.org/abs/2511.09861v3",
+      "pdf_url": "https://arxiv.org/pdf/2511.09861v3",
+      "published": "2025-11-13",
+      "updated": "2026-05-12",
+      "categories": [
+        "cs.DC",
+        "cs.AR"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "architecture",
+        "distributed-computing",
+        "kernel",
+        "llm",
+        "mi300",
+        "optimization",
+        "performance",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-05-16T08:02:19Z",
+      "extracted": false,
       "translated": false
     },
     {
