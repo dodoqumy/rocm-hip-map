@@ -2,7 +2,7 @@
   "article_id": "89c32522df7551d4",
   "title": "HIPIFY documentation",
   "source_url": "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/index.html",
-  "verified_at": "2026-05-17T05:44:01.979815+00:00",
+  "verified_at": "2026-05-18T06:07:00.663307+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",

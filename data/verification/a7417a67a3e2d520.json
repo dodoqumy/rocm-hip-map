@@ -2,7 +2,7 @@
   "article_id": "a7417a67a3e2d520",
   "title": "Graph-safe support for ROCm libraries",
   "source_url": "https://rocm.docs.amd.com/en/latest/reference/graph-safe-support.html",
-  "verified_at": "2026-05-17T05:42:29.948473+00:00",
+  "verified_at": "2026-05-18T06:05:28.632651+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",

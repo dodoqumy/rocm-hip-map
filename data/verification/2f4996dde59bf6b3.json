@@ -2,7 +2,7 @@
   "article_id": "2f4996dde59bf6b3",
   "title": "Use ROCm for AI",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/index.html",
-  "verified_at": "2026-05-17T05:43:11.963144+00:00",
+  "verified_at": "2026-05-18T06:06:10.646876+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
