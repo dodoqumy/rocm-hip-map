@@ -2,7 +2,7 @@
   "article_id": "3589201866de3309",
   "title": "Model quantization techniques",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-quantization.html",
-  "verified_at": "2026-05-19T06:00:49.217741+00:00",
+  "verified_at": "2026-05-20T06:00:01.557284+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
