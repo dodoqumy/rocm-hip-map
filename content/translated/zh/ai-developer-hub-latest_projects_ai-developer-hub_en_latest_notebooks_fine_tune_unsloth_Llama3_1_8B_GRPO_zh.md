@@ -11,65 +11,74 @@ content_hash: "3e79e76e08141f28"
 
 # 使用Unsloth训练你自己的R1推理模型[#](#train-your-own-r1-reasoning-model-with-unsloth)
 
-**作者**：[Unsloth](https://unsloth.ai) 并由 [AMD](https://www.amd.com) 修改以在 AMD GPU 上运行。
+作者：[Unsloth](https://unsloth.ai)，并由 [AMD](https://www.amd.com) 修改，以在 AMD GPU 上运行。
 
-**知识水平**：Intermediate
+**知识水平：中级**
 
-本教程演示了如何利用 [Unsloth](https://unsloth.ai) 在 AMD ROCm（Radeon 开放计算平台） GPU 上对 Llama-3.1 8B 大型语言模型（LLM）进行微调。DeepSeek 的 R1 研究揭示了一个“顿悟时刻”：R1-Zero 通过使用组相对策略优化（GRPO）在无需人工反馈的情况下自主学会了分配更多思考时间。Unsloth 团队对整个 GRPO 过程进行了增强，使其 VRAM 使用量比 Hugging Face 和 Flash Attention 2（FA2）减少 80%。这让您能够仅用 7GB VRAM 即可重现 R1-Zero 的成果（使用 Qwen2.5 1.5B 模型）。
+本教程演示了如何利用[Unsloth](https://unsloth.ai)在AMD ROCm（ROCm（Radeon 开放计算平台）） GPU上微调Llama-3.1 8B大语言模型（LLM）。DeepSeek的R1研究揭示了一个“顿悟时刻”：R1-Zero通过使用分组相对策略优化（GRPO），在没有人类反馈的情况下自主学会了分配更多思考时间。Unsloth团队增强了整个GRPO过程，使其相比Hugging Face和Flash Attention 2（FA2）减少80%的VRAM使用量。这使得您可以使用Qwen2.5（1.5B）在仅7GB的VRAM上复现R1-Zero的成就。
 
 ## 前提条件[#](#prerequisites)
 
-本教程是在以下设置下开发和测试的。
+本教程使用以下环境开发和测试。
 
 ### 操作系统[#](#operating-system)
 
-**Ubuntu 22.04**：确保你的系统正在运行 Ubuntu 22.04 版本。
+**Ubuntu 22.04**：确保你的系统运行的是 Ubuntu 22.04 版本。
 
 ### 硬件[#](#hardware)
 
-**AMD Instinct（Instinct（AMD 数据中心 GPU 系列））™ GPUs**: 本教程已在 AMD Instinct（Instinct（AMD 数据中心 GPU 系列）） MI300X GPU 上测试通过。请确保您使用的是支持 ROCm（ROCm（Radeon 开放计算平台））的 AMD Instinct（Instinct（AMD 数据中心 GPU 系列）） GPU 或兼容硬件，并且您的系统满足[官方要求](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html)。
+**AMD Instinct（Instinct（AMD 数据中心 GPU 系列））™ GPUs**：本教程已在 AMD Instinct（Instinct（AMD 数据中心 GPU 系列）） MI300X GPU 上测试。请确保您使用的是支持 ROCm（ROCm（Radeon 开放计算平台））的 AMD Instinct GPU 或兼容硬件，并且您的系统满足[官方要求](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html)。
 
 ### 软件[#](#software)
 
-**ROCm（ROCm（Radeon 开放计算平台）） 6.3**：请按照 [ROCm（ROCm（Radeon 开放计算平台）） 安装指南](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html) 安装并验证 ROCm（ROCm（Radeon 开放计算平台））。安装完成后，使用以下命令确认配置：该命令将列出您的 AMD GPU 及其相关信息。
+**ROCm（ROCm（Radeon 开放计算平台）） 6.3**：按照[ROCm（ROCm（Radeon 开放计算平台））安装指南](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html)进行安装并验证。安装完成后，使用以下命令确认配置：该命令将列出你的AMD GPU及其相关信息。
 
-**注意**：对于 ROCm（ROCm（Radeon 开放计算平台）） 6.4 及更早版本，请使用`rocm-smi`。
+**注意**：对于 ROCm（ROCm（Radeon 开放计算平台））6.4 及更早版本，请使用 `rocm-smi`
 
-命令来代替。**Docker**：确保Docker已正确安装和配置。请遵循适用于您操作系统的Docker安装指南。**注意**：确保正确配置Docker权限。要配置权限以允许非root用户访问，请运行以下命令：usermod -aG docker $USER newgrp docker
+command instead.
 
-验证Docker是否正常工作：
+**Docker**：确保 Docker 已正确安装并配置。请按照适用于您操作系统的 Docker 安装指南进行操作。
 
-运行hello-world
+**注意**：确保 Docker 权限已正确配置。要配置允许非 root 用户访问的权限，请运行以下命令：
 
-### Hugging Face API 访问[#](#hugging-face-api-access)
+usermod -aG docker $USER
+newgrp docker
 
-从...获取 API token
+验证 Docker 是否正常工作：
 
-使用 [Hugging Face](https://huggingface.co) 下载模型。确保 Hugging Face API token 拥有必要的权限和批准才能访问该。
+运行 hello-world
+
+### Hugging Face API访问[#](#hugging-face-api-access)
+
+从...获取API令牌
+
+[Hugging Face](https://huggingface.co)用于下载模型。确保 Hugging Face API 令牌具有必要的权限和批准以访问
 
 [Meta Llama 检查点](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct).
 
 ### 数据准备[#](#data-preparation)
 
-本教程使用了Hugging Face提供的示例数据集，该数据集已在设置步骤中准备就绪。
+本教程使用来自 Hugging Face 的示例数据集，该数据集在设置步骤中准备。
 
 ## 准备训练环境[#](#prepare-the-training-environment)
 
-### 1. 拉取 Docker 镜像[#](#pull-the-docker-image)
+### 1. 拉取Docker镜像[#](#pull-the-docker-image)
 
 确保您的系统满足[系统要求](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html)。
 
 拉取本教程所需的Docker镜像：
 
-```pull rocm/vllm-dev:main```
+```
+pull rocm/vllm-dev:main
+```
 
 ```
 
 ### 2. 启动 Docker 容器[#](#launch-the-docker-container)
 
-启动Docker容器并映射必要的目录。替换`/path/to/notebooks`
+启动 Docker 容器并映射必要的目录。替换 `/path/to/notebooks`。
 
-使用您主机上存储这些笔记本的目录的完整路径。
+使用主机上存储这些笔记本的目录的完整路径。
 
 ```
 run -it --rm \
@@ -88,16 +97,16 @@ rocm/vllm-dev:main
 
 ```
 
-**Note**: 该命令将当前目录挂载到 `/workspace`
+**注意**：此命令将当前目录挂载到 `/workspace`
 
-容器中的目录。确保在运行 Docker 命令之前将 notebook 文件复制到此目录，或在启动后上传到 Jupyter Notebook 环境中。保存终端输出中提供的 token 或 URL，以便从网页浏览器访问该 notebook。您可以从此链接下载该 notebook：[AI Developer Hub GitHub repository](https://github.com/ROCm（ROCm（Radeon 开放计算平台））/gpuaidev)。
+将目录放入容器中。确保在运行 Docker 命令之前将笔记本文件复制到此目录，或在容器启动后将其上传到 Jupyter Notebook 环境中。保存终端输出中提供的令牌或 URL，以便从 Web 浏览器访问笔记本。您可以从 [AI Developer Hub GitHub 仓库](https://github.com/ROCm（ROCm（Radeon 开放计算平台））/gpuaidev) 下载此笔记本。
 
-### 3. 安装并启动Jupyter[#](#install-and-launch-jupyter)
+### 3. 安装并启动 Jupyter[#](#install-and-launch-jupyter)
 
-在 Docker 容器内，使用以下命令安装 Jupyter：
+在Docker容器内，使用以下命令安装Jupyter：
 
 ```
-install jupyter
+安装 jupyter
 ```
 
 ```
@@ -110,25 +119,25 @@ install jupyter
 
 ```
 
-**注意**: 确保端口 `8888`
+**注意**：确保端口 `8888`
 
-在运行上述命令之前，请确保该端口尚未被系统占用。如果已被占用，可以通过替换 `--port=8888` 来指定其他端口。
+在运行上述命令之前，请确保该端口在你的系统上未被使用。如果已被占用，可以通过替换 `--port=8888` 来指定一个不同的端口。
 
-使用另一个端口号，例如，`--port=8890`
+使用另一个端口号，例如 `--port=8890`
 
 。
 
 ### 4. 安装所需的库[#](#install-the-required-libraries)
 
-安装本教程所需的库。在Docker容器内运行的Jupyter notebook中运行以下命令：
+安装本教程所需的库。在 Docker 容器内运行的 Jupyter notebook 中执行以下命令：
 
 ```
-# 从源代码安装 Unsloth
+# 从源码安装Unsloth
 !git clone https://github.com/billishyahao/unsloth.git && cd unsloth && git checkout billhe/rocm && pip install .
 !pip install unsloth_zoo==2025.3.17
-# 从源代码安装 ROCm（ROCm（Radeon 开放计算平台）） Bitsandbytes
+# 从源码安装ROCm（ROCm（Radeon 开放计算平台）） Bitsandbytes
 !git clone --recurse https://github.com/ROCm（ROCm（Radeon 开放计算平台））/bitsandbytes && cd bitsandbytes && git checkout rocm_enabled_multi_backend && pip install -r requirements-dev.txt && cmake -DCOMPUTE_BACKEND=hip -S . && make -j && pip install .
-# 本笔记本在以下版本下已验证：unsloth==2025.3.19 unsloth_zoo==2025.3.17 bitsandbytes==0.43.3.dev0
+# 此笔记本已在 unsloth==2025.3.19 unsloth_zoo==2025.3.17 bitsandbytes==0.43.3.dev0 下验证通过
 ```
 
 ```
@@ -136,7 +145,7 @@ install jupyter
 验证安装：
 
 ```
-# 验证所需库的安装及版本
+# 验证所需库的安装和版本
 !pip list | grep unsloth
 ```
 
@@ -151,9 +160,9 @@ unsloth_zoo 2025.3.17
 
 ```
 
-**⚠️ 重要**: 确保选择了正确的内核
+**⚠️ 重要**: 确保选择了正确的核函数。
 
-如果验证过程失败，请确保为您的笔记本选择了正确的 Jupyter kernel。要更改 kernel，请按照以下步骤操作：
+如果验证过程失败，请确保为您的笔记本选择了正确的Jupyter内核。要更改内核，请按照以下步骤操作：
 
 转到
 
@@ -163,17 +172,17 @@ unsloth_zoo 2025.3.17
 
 Python 3 (ipykernel)
 
-从列表中。
+从列表中
 
-**重要提示：如果未选择正确的内核，运行笔记本时可能会导致意外问题。**
+**重要**：如果未选择正确的内核，在运行笔记本时可能导致意外问题。
 
-### 5. 提供您的 Hugging Face 令牌[#](#provide-your-hugging-face-token)
+### 5. 提供你的 Hugging Face token[#](#provide-your-hugging-face-token)
 
-您需要一个 Hugging Face API token 来访问 Llama-3.1。在 [Hugging Face Tokens](https://huggingface.co/settings/tokens) 生成您的 token，并为 [Llama-3.1 8B](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct) 申请访问权限。Token 通常以 “hf_” 开头。
+你需要一个 Hugging Face API token 来访问 Llama-3.1。在 [Hugging Face Tokens](https://huggingface.co/settings/tokens) 生成你的 token，并为 [Llama-3.1 8B](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct) 请求访问权限。Token 通常以 “hf_” 开头。
 
-在你的 Jupyter notebook 中运行以下交互块来设置 token：
+在您的Jupyter notebook中运行以下交互代码块来设置 token：
 
-**注意**：取消选中“将令牌作为 Git 凭据添加”选项。
+**注意**：取消选中“Add token as Git credential”选项。
 
 ```
 from huggingface_hub import notebook_login, HfApi
@@ -183,21 +192,21 @@ notebook_login()
 
 ```
 
-```
+```python
 from huggingface_hub import HfApi
 try:
-api = HfApi()
-user_info = api.whoami()
-print(f"令牌验证成功！已登录为：{user_info['name']}")
+    api = HfApi()
+    user_info = api.whoami()
+    print(f"Token 验证成功！已登录为: {user_info['name']}")
 except Exception as e:
-print(f"令牌验证失败。错误：{e}")
+    print(f"Token 验证失败。错误: {e}")
 ```
 
 ```
 
-## 运行GRPO[#](#running-grpo)
+## 运行 GRPO[#](#running-grpo)
 
-按照以下步骤准备数据、训练模型和执行推理。
+按照以下步骤准备数据、训练模型并执行推理。
 
 ### 设置参数[#](#set-the-parameters)
 
@@ -205,29 +214,29 @@ print(f"令牌验证失败。错误：{e}")
 
 并设置参数：
 
-```
+```python
 from unsloth import FastLanguageModel
 import torch
-max_seq_length = 1024 # 可增加以获得更长的推理轨迹
-lora_rank = 32 # 更大的秩 = 更智能，但更慢
+max_seq_length = 1024  # 可增大以容纳更长的推理跟踪
+lora_rank = 32  # 更高的秩 = 更智能但更慢
 model, tokenizer = FastLanguageModel.from_pretrained(
-model_name = "meta-llama/meta-Llama-3.1-8B-Instruct",
-max_seq_length = max_seq_length,
-load_in_4bit = False, # 设置为True以启用LoRA 4bit
-fast_inference = True, # 启用vLLM快速推理
-max_lora_rank = lora_rank,
-gpu_memory_utilization = 0.6, # 若内存不足则减小此值
+    model_name = "meta-llama/meta-Llama-3.1-8B-Instruct",
+    max_seq_length = max_seq_length,
+    load_in_4bit = False,  # True表示使用LoRA 4位
+    fast_inference = True,  # 启用vLLM快速推理
+    max_lora_rank = lora_rank,
+    gpu_memory_utilization = 0.6,  # 如果内存不足，请减少此值
 )
 model = FastLanguageModel.get_peft_model(
-model,
-r = lora_rank, # 选择任意大于0的数！建议8、16、32、64、128
-target_modules = [
-"q_proj", "k_proj", "v_proj", "o_proj",
-"gate_proj", "up_proj", "down_proj",
-], # 若内存不足，移除QKVO
-lora_alpha = lora_rank,
-use_gradient_checkpointing = "unsloth", # 启用长上下文微调
-random_state = 3407,
+    model,
+    r = lora_rank,  # 选择任何大于0的值！建议8、16、32、64、128
+    target_modules = [
+        "q_proj", "k_proj", "v_proj", "o_proj",
+        "gate_proj", "up_proj", "down_proj",
+    ],  # 如果内存不足，请移除QKVO
+    lora_alpha = lora_rank,
+    use_gradient_checkpointing = "unsloth",  # 启用长上下文微调
+    random_state = 3407,
 )
 ```
 
@@ -235,14 +244,14 @@ random_state = 3407,
 
 ### 数据准备[#](#id1)
 
-本教程直接复用 [willccbb](https://gist.github.com/willccbb/4676755236bb08cab5f4e54a0475d6fb) 的数据准备流程及所有奖励函数。你也可以自由创建自己的方法。
+本教程直接引用了[willccbb](https://gist.github.com/willccbb/4676755236bb08cab5f4e54a0475d6fb)用于数据准备和所有的奖励函数。你可以自由创建自己的方法。
 
-```python
+```
 import re
 from datasets import load_dataset, Dataset
 # 加载和准备数据集
 SYSTEM_PROMPT = """
-请按以下格式回复：
+按以下格式回复：
 <reasoning>
 ...
 </reasoning>
@@ -266,7 +275,7 @@ def extract_hash_answer(text: str) -> str | None:
 if "####" not in text:
 return None
 return text.split("####")[1].strip()
-# 取消注释中间消息以实现1-shot提示
+# 取消注释中间消息以进行 1-shot 提示
 def get_gsm8k_questions(split = "train") -> Dataset:
 data = load_dataset('openai/gsm8k', 'main')[split] # type: ignore
 data = data.map(lambda x: { # type: ignore
@@ -283,7 +292,7 @@ def correctness_reward_func(prompts, completions, answer, **kwargs) -> list[floa
 responses = [completion[0]['content'] for completion in completions]
 q = prompts[0][-1]['content']
 extracted_responses = [extract_xml_answer(r) for r in responses]
-print('-'*20, f"问题：\n{q}", f"\n答案：\n{answer[0]}", f"\n响应：\n{responses[0]}", f"\n提取：\n{extracted_responses[0]}")
+print('-'*20, f"问题：\n{q}", f"\n答案：\n{answer[0]}", f"\n回复：\n{responses[0]}", f"\n提取：\n{extracted_responses[0]}")
 return [2.0 if r == a else 0.0 for r, a in zip(extracted_responses, answer)]
 def int_reward_func(completions, **kwargs) -> list[float]:
 responses = [completion[0]['content'] for completion in completions]
@@ -323,9 +332,9 @@ return [count_xml(c) for c in contents]
 
 ### 训练模型[#](#train-the-model)
 
-现在设置 GRPO Trainer 和所有配置:
+现在设置GRPO Trainer和所有配置：
 
-```python
+```
 max_prompt_length = 256
 from trl import GRPOConfig, GRPOTrainer
 training_args = GRPOConfig(
@@ -338,17 +347,18 @@ lr_scheduler_type = "cosine",
 optim = "paged_adamw_8bit",
 logging_steps = 1,
 per_device_train_batch_size = 1,
-gradient_accumulation_steps = 1, # 可加大至4以获得更平滑的训练
-num_generations = 6, # 如果内存不足则减少
+gradient_accumulation_steps = 1, # 增大至4以获得更平滑的训练
+num_generations = 6, # 若内存不足则减小
 max_prompt_length = max_prompt_length,
 max_completion_length = max_seq_length - max_prompt_length,
-# num_train_epochs = 1, # 设为1可进行完整训练
+# num_train_epochs = 1, # 设为1以进行完整训练
 max_steps = 250,
 save_steps = 250,
 max_grad_norm = 0.1,
 report_to = "none", # 可使用Weights & Biases
 output_dir = "outputs",
 )
+```
 
 ```
 
@@ -356,9 +366,14 @@ output_dir = "outputs",
 
 列增加！
 
-可能需要等待150到200步才能看到任何动作。前100步很可能不会获得任何奖励。请耐心等待！
+你可能需要等待150到200步才能看到任何动作。前100步很可能不会获得任何奖励，请耐心等待！
 
-步骤 | 训练损失 | 奖励 | 奖励标准差 | 完成长度 | kl
+步骤 |
+训练损失 |
+奖励 |
+奖励标准差 |
+完成长度 |
+KL散度 |
 |---|---|---|---|---|---|
 1 |
 0.000000 |
@@ -400,7 +415,7 @@ trainer.train()
 
 ### 推理[#](#inference)
 
-现在试试你刚刚训练的模型。首先尝试没有经过任何GRPO训练的模型：
+现在尝试你刚刚训练的模型。首先尝试没有任何GRPO训练的模型：
 
 ```
 text = tokenizer.apply_chat_template([
@@ -417,11 +432,11 @@ output = model.fast_generate(
 sampling_params = sampling_params,
 lora_request = None,
 )[0].outputs[0].text
-output```
+output
 
 ```
 
-现在用你刚刚用GRPO训练好的LoRA试试，但先保存LoRA。
+现在用您刚刚用GRPO训练好的LoRA尝试一下，但请先保存该LoRA。
 
 ```
 model.save_lora("grpo_saved_lora")
@@ -429,7 +444,7 @@ model.save_lora("grpo_saved_lora")
 
 ```
 
-现在您可以加载LoRA并进行测试：
+现在你可以加载LoRA并进行测试：
 
 ```
 text = tokenizer.apply_chat_template([
@@ -452,25 +467,25 @@ output
 
 ```
 
-推理模型要好得多。它并非总是正确，因为你只训练了大约一个小时。如果延长序列长度并训练更长时间，效果会更好。
+推理模型要好得多。它并非总是正确，因为你只训练了大约一个小时。如果你延长序列长度并训练更长时间，效果会更好。
 
 ### 为VLLM保存为float16[#](#saving-to-float16-for-vllm)
 
-Unsloth 也支持保存到 `float16`
+Unsloth 也支持保存为 `float16`
 
-直接地。选择 `merged_16bit`
+直接。选择`merged_16bit`
 
 对于 `float16`
 
-或 `merged_4bit`
+或者 `merged_4bit`
 
 对于 `int4`
 
-。它还允许 `lora`
+它也允许 `lora`。
 
-使用适配器作为后备方案。使用 `push_to_hub_merged`
+适配器作为后备方案。使用 `push_to_hub_merged`
 
-上传到您的Hugging Face账号。请访问[Hugging Face token设置](https://huggingface.co/settings/tokens)获取您的个人token。
+用于上传到您的 Hugging Face 账户。请访问 [Hugging Face 令牌设置](https://huggingface.co/settings/tokens) 获取您的个人令牌。
 
 ```
 # 合并为16位
@@ -486,4 +501,4 @@ if False: model.push_to_hub_merged("hf/model", tokenizer, save_method = "lora", 
 
 ```
 
-现在你完成了！如果你对 Unsloth 有任何疑问、需要帮助或想保持最新动态，他们有一个 [Discord](https://discord.gg/unsloth) 频道和一个 [GitHub](https://github.com/unslothai/unsloth)。你也可以查阅他们的 [文档](https://docs.unsloth.ai/) 获取更多信息。
+现在您已完成！如果您对Unsloth有任何疑问、需要帮助或想获取最新更新，他们提供了[Discord](https://discord.gg/unsloth)频道和[GitHub](https://github.com/unslothai/unsloth)。您也可以查阅他们的[文档](https://docs.unsloth.ai/)以获取更多信息。
