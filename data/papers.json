@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-05-16T08:02:19Z",
+  "updated": "2026-05-23T08:16:21Z",
   "total": 129,
   "papers": [
     {
@@ -36,7 +36,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-05-16T08:02:01Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -71,7 +71,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-05-16T08:02:11Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -623,7 +623,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-05-16T08:02:19Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -1387,7 +1387,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-05-16T08:02:19Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
