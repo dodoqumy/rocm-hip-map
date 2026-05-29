@@ -9,41 +9,43 @@ fetched_at: 2026-05-04T15:25:42.948150+00:00
 content_hash: "a2f77a3913602f0b"
 ---
 
-# 使用 DiffSynth-Studio 自定义 Qwen-Image[#](#customize-qwen-image-with-diffsynth-studio)
+# 使用DiffSynth-Studio定制Qwen-Image[#](#customize-qwen-image-with-diffsynth-studio)
 
-**作者**：ModelScope 和 [通义实验室](https://www.linkedin.com/company/alibaba-tongyi-lab/)（阿里巴巴集团）
+**作者**: ModelScope 和 [通义实验室](https://www.linkedin.com/company/alibaba-tongyi-lab/) (Alibaba Group)
 
 **知识水平**：中级
 
-本教程探讨了 [Qwen-Image](https://qwen-image.org/) 系列——一个拥有 860 亿参数的庞大模型集合——的能力，并解释了如何使用 [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio) 在 AMD 硬件上高效地对其进行微调。教程展示了 AMD Instinct（Instinct（AMD 数据中心 GPU 系列））™ MI300X GPU 的高内存容量如何支持同时加载多个大型模型，以完成涉及推理、编辑和训练的复杂工作流程。
+本教程探索了 [Qwen-Image](https://qwen-image.org/) 系列——一个拥有860亿参数的庞大模型集合——的功能，并解释了如何使用 [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio) 在 AMD 硬件上高效地微调该模型。它展示了 AMD Instinct（Instinct（AMD 数据中心 GPU 系列））™ MI300X GPU 的高内存容量如何支持同时加载多个大型模型，以处理涉及推理、编辑和训练等复杂工作流。
 
-**注意**：本教程由 ModelScope 和 [Tongyi Lab](https://www.linkedin.com/company/alibaba-tongyi-lab/)（阿里巴巴集团）共同开发。
+**注**：本教程由 ModelScope 和 [通义实验室](https://www.linkedin.com/company/alibaba-tongyi-lab/)（阿里巴巴集团）共同开发。
 
 ## 关键组件[#](#key-components)
 
-**硬件**: AMD Instinct（Instinct（AMD 数据中心 GPU 系列）） MI300X GPU**软件**:[DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio)和[ROCm（ROCm（Radeon 开放计算平台））](https://rocm.docs.amd.com/en/latest/index.html)**模型**:[Qwen-Image](https://qwen-image.org/),[Qwen-Image-Edit](https://www.modelscope.cn/models/Qwen/Qwen-Image-Edit), 以及自定义 LoRA 适配器
+**硬件**：AMD Instinct（Instinct（AMD 数据中心 GPU 系列）） MI300X GPU  
+**软件**：[DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio) 和 [ROCm（ROCm（Radeon 开放计算平台））](https://rocm.docs.amd.com/en/latest/index.html)  
+**模型**：[Qwen-Image](https://qwen-image.org/)、[Qwen-Image-Edit](https://www.modelscope.cn/models/Qwen/Qwen-Image-Edit) 以及自定义 LoRA 适配器
 
 ## 先决条件[#](#prerequisites)
 
 在开始之前，请确保您的环境满足以下要求：
 
-**操作系统**: Linux（推荐 Ubuntu 22.04）。请参阅[官方要求](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html)了解支持的操作系统。  
-**硬件**: AMD Instinct（Instinct（AMD 数据中心 GPU 系列）） MI300X GPU  
-**软件**: ROCm（ROCm（Radeon 开放计算平台）） 6.0 或更高版本，Docker 和 Python 3.10 或更高版本
+**操作系统**：Linux（建议使用 Ubuntu 22.04）。支持的操作系统请参见[官方要求](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html)。  
+**硬件**：AMD Instinct（AMD 数据中心 GPU 系列）MI300X GPU  
+**软件**：ROCm（Radeon 开放计算平台）6.0 或更高版本，Docker 和 Python 3.10 或更高版本。
 
-**注意**：按照 [ROCm（ROCm（Radeon 开放计算平台）） 安装指南](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html) 安装并验证 ROCm（ROCm（Radeon 开放计算平台））。
+**注意**：请按照 [ROCm（ROCm（Radeon 开放计算平台）） 安装指南](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html) 安装并验证 ROCm（ROCm（Radeon 开放计算平台））。
 
 ## 步骤 1：环境设置[#](#step-1-environment-setup)
 
 按照以下步骤为教程设置您的环境。
 
-### 验证硬件可用性[#](#verify-the-hardware-availability)
+### 验证硬件可用性[#](#verifythehardware-availability)
 
-AMD Instinct（AMD 数据中心 GPU 系列）MI300X GPU 专为生成式 AI 工作负载提供峰值性能而设计。开始前，请确认您的 GPU 已被正确检测并可正常使用。
+AMD Instinct（Instinct（AMD 数据中心 GPU 系列））MI300X GPU 专为生成式 AI 工作负载提供峰值性能而设计。开始之前，请确认您的 GPU 已被正确检测并可供使用。
 
 ```
 !amd-smi
-#对于 ROCm（ROCm（Radeon 开放计算平台））6.4 及更早版本，请运行 rocm-smi。
+#对于ROCm（ROCm（Radeon开放计算平台））6.4及更早版本，请改用rocm-smi。
 ```
 
 ```
@@ -52,7 +54,7 @@ AMD Instinct（AMD 数据中心 GPU 系列）MI300X GPU 专为生成式 AI 工�
 
 为确保与 AMD ROCm（ROCm（Radeon 开放计算平台））完全兼容，请直接从源代码安装 [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio)。
 
-**注意：** 安装后，请手动更新系统路径，以确保 notebook 能立即导入库，无需重启内核。
+**注意：** 安装后，请手动更新系统路径，以确保 notebook 能够立即导入该库，而无需重启内核。
 
 ```python
 import os
@@ -61,42 +63,42 @@ import sys
 !git clone https://github.com/modelscope/DiffSynth-Studio.git
 # 2. 进入目录
 os.chdir("DiffSynth-Studio")
-# 3. 切换到特定提交以确保可重现性
+# 3. 切换到指定提交版本以确保可重现性
 !git checkout afd101f3452c9ecae0c87b79adfa2e22d65ffdc3
-# 4. 创建针对AMD的requirements文件
+# 4. 创建AMD专属的requirements文件
 requirements_content = """
-# 针对 AMD ROCm（ROCm（Radeon 开放计算平台））6.4 wheels 的索引（优先考虑）
+# PyTorch的AMD ROCm（ROCm（Radeon 开放计算平台）） 6.4 wheel 索引（优先使用）
 --index-url https://download.pytorch.org/whl/rocm6.4
-# 其他库回退到标准 PyPI
+# 其他库回退到标准PyPI
 --extra-index-url https://pypi.org/simple
-# 核心 PyTorch 库
+# 核心PyTorch库
 torch>=2.0.0
 torchvision
-# 安装 DiffSynth-Studio 项目及其其他依赖
+# 安装DiffSynth-Studio项目及其其他依赖
 -e .
 """.strip()
 with open("requirements-amd.txt", "w") as f:
     f.write(requirements_content)
-# 5. 使用自定义 requirements 文件安装
+# 5. 使用自定义requirements文件安装
 !pip install -r requirements-amd.txt
-# 6. 强制当前 notebook 识别已安装的包
+# 6. 强制当前notebook识别已安装的包
 sys.path.append(os.getcwd())
-print(f"Added {os.getcwd()} to system path to enable immediate import.")
+print(f"已将 {os.getcwd()} 添加到系统路径，以便立即导入。")
 # 7. 返回根目录
 os.chdir("..")
 ```
 
 ```
 
-## 步骤2：基本模型推理[#](#step-2-basic-model-inference)
+## 步骤 2：基础模型推理[#](#step-2-basic-model-inference)
 
-本节演示如何使用模型进行推理。
+本节演示了如何使用该模型进行推理。
 
 ### 加载 Qwen-Image[#](#load-qwen-image)
 
-[Qwen-Image](https://www.modelscope.ai/models/Qwen/Qwen-Image) 是一个大规模图像生成模型。配置流水线并将模型组件（Transformer、文本编码器和VAE）加载到GPU上。
+[Qwen-Image](https://www.modelscope.ai/models/Qwen/Qwen-Image) 是一个大规模图像生成模型。配置 pipeline 并将模型组件（Transformer、Text Encoder 和 VAE）加载到 GPU 上。
 
-**注意**：配置环境以使用ModelScope作为下载权重的域名。
+**注意**：配置环境以使用 ModelScope 作为下载权重的域名。
 
 ```
 import warnings
@@ -130,7 +132,7 @@ qwen_image.enable_lora_magic()
 
 ### 生成基准图像[#](#generate-a-baseline-image)
 
-使用简单的提示生成您的第一张图像：*“一位美丽亚洲女性的肖像”*
+使用简单提示词生成你的第一张图像：*“一位美丽亚洲女性的肖像”*。
 
 ```
 prompt = "a portrait of a beautiful Asian woman"
@@ -141,25 +143,25 @@ image.resize((512, 512))
 
 ```
 
-## 步骤3：使用LoRA提升质量[#](#step-3-enhancing-quality-with-lora)
+## 步骤 3：使用 LoRA 提升质量[#](#step-3-enhancing-quality-with-lora)
 
 你可能会注意到基准图像缺乏精细细节。
 
-为了改善图像，加载 [Qwen-Image-LoRA-ArtAug-v1](https://www.modelscope.ai/models/DiffSynth-Studio/Qwen-Image-LoRA-ArtAug-v1) 可以显著提升生成图像的视觉保真度和艺术细节。
+为了改善图像，加载 [Qwen-Image-LoRA-ArtAug-v1](https://www.modelscope.ai/models/DiffSynth-Studio/Qwen-Image-LoRA-ArtAug-v1) 以显著提升生成图像的视觉保真度和艺术细节。
 
 ```
 qwen_image.load_lora(
 qwen_image.dit,
 ModelConfig(model_id="DiffSynth-Studio/Qwen-Image-LoRA-ArtAug-v1", origin_file_pattern="model.safetensors"),
 hotload=True,
-)
+)```
 
 ```
 
 重新运行相同的提示以查看改进。
 
 ```
-prompt = "一位美丽亚洲女性的肖像"
+prompt = "一个美丽亚洲女性的肖像"
 image = qwen_image(prompt, seed=0, num_inference_steps=40)
 image.save("image_face.jpg")
 image.resize((512, 512))
@@ -167,45 +169,45 @@ image.resize((512, 512))
 
 ```
 
-## 步骤4: 高级图像编辑[#](#step-4-advanced-image-editing)
+## 步骤 4：高级图像编辑[#](#step-4-advanced-image-editing)
 
-本节介绍一些用于生成更复杂图像的高级技巧。
+本节介绍一些用于生成更复杂图像的先进技术。
 
 ### 加载编辑流水线[#](#load-the-editing-pipeline)
 
-Qwen-Image 系列包含针对不同任务的专用模型。接下来，加载 [Qwen-Image-Edit](https://www.modelscope.cn/models/Qwen/Qwen-Image-Edit) 模型，该模型专为图像编辑和修补任务设计。
+Qwen-Image系列包含针对不同任务的专用模型。接下来，加载[Qwen-Image-Edit](https://www.modelscope.cn/models/Qwen/Qwen-Image-Edit)，这是一个专为图像编辑和内绘（in-painting）任务设计的模型。
 
-```python
+```
 qwen_image_edit = QwenImagePipeline.from_pretrained(
-    torch_dtype=torch.bfloat16,
-    device="cuda",
-    model_configs=[
-        ModelConfig(model_id="Qwen/Qwen-Image-Edit", origin_file_pattern="transformer/diffusion_pytorch_model*.safetensors"),
-        ModelConfig(model_id="Qwen/Qwen-Image", origin_file_pattern="text_encoder/model*.safetensors"),
-        ModelConfig(model_id="Qwen/Qwen-Image", origin_file_pattern="vae/diffusion_pytorch_model.safetensors"),
-    ],
-    tokenizer_config=ModelConfig(model_id="Qwen/Qwen-Image", origin_file_pattern="tokenizer/"),
-    processor_config=ModelConfig(model_id="Qwen/Qwen-Image-Edit", origin_file_pattern="processor/"),
+torch_dtype=torch.bfloat16,
+device="cuda",
+model_configs=[
+ModelConfig(model_id="Qwen/Qwen-Image-Edit", origin_file_pattern="transformer/diffusion_pytorch_model*.safetensors"),
+ModelConfig(model_id="Qwen/Qwen-Image", origin_file_pattern="text_encoder/model*.safetensors"),
+ModelConfig(model_id="Qwen/Qwen-Image", origin_file_pattern="vae/diffusion_pytorch_model.safetensors"),
+],
+tokenizer_config=ModelConfig(model_id="Qwen/Qwen-Image", origin_file_pattern="tokenizer/"),
+processor_config=ModelConfig(model_id="Qwen/Qwen-Image-Edit", origin_file_pattern="processor/"),
 )
 qwen_image_edit.enable_lora_magic()
 ```
 
 ```
 
-一致性外绘 [#](#outpainting-with-consistency)
+### 一致性扩展绘画[#](#outpainting-with-consistency)
 
-你可以通过使用刚刚生成的肖像，将其扩展为带有森林背景的远景图像，从而执行一个outpainting任务。
+你可以通过将刚刚生成的肖像扩展为带有森林背景的长镜头图像，来完成外绘（outpainting）任务。
 
-```  
-prompt = "一位穿着长裙的美丽女性的写实摄影。背景是森林。"  
-negative_prompt = "使角色的手指残缺扭曲，放大头部以营造不自然的头身比，将人物变成矮胖的大头娃娃。生成刺眼、耀眼的阳光，用过度饱和的色彩渲染整个场景。将腿部扭曲成X型或O型畸形。"  
-image = qwen_image_edit(prompt, negative_prompt=negative_prompt, edit_image=Image.open("image_face.jpg"), seed=1, num_inference_steps=40)  
-image.resize((512, 512))  
+```
+prompt = "一位身穿长裙的美丽女性的真实摄影。背景是一片森林。"
+negative_prompt = "使角色的手指残缺扭曲，放大头部以产生不自然的头身比例，将人物变成矮小的大头娃娃。产生刺眼、耀眼的阳光，用过度饱和的颜色渲染整个场景。将双腿扭曲成X形或O形畸形。"
+image = qwen_image_edit(prompt, negative_prompt=negative_prompt, edit_image=Image.open("image_face.jpg"), seed=1, num_inference_steps=40)
+image.resize((512, 512))
 ```
 
 ```
 
-这张照片中的面部看起来不一致。加载专门的LoRA模型[DiffSynth-Studio/Qwen-Image-Edit-F2P](https://www.modelscope.ai/models/DiffSynth-Studio/Qwen-Image-Edit-F2P)，该模型可以根据面部参考生成一致的图像。
+照片中的面部看起来不一致。加载专门的LoRA模型[DiffSynth-Studio/Qwen-Image-Edit-F2P](https://www.modelscope.ai/models/DiffSynth-Studio/Qwen-Image-Edit-F2P)，该模型能够基于面部参考生成一致的图像。
 
 ```
 qwen_image_edit.load_lora(
@@ -213,8 +215,8 @@ qwen_image_edit.dit,
 ModelConfig(model_id="DiffSynth-Studio/Qwen-Image-Edit-F2P", origin_file_pattern="model.safetensors"),
 hotload=True,
 )
-prompt = "一位身穿长裙的美丽女性的写实摄影。背景是森林。"
-negative_prompt = "使角色的手指残缺和扭曲，放大头部以产生不自然的头身比，将人物变成矮胖的大头娃娃。产生刺眼、刺目的阳光，并用过度饱和的色彩渲染整个场景。将腿扭曲成X形或O形畸形。"
+prompt = "一位美丽女士穿着长裙的写实摄影。背景是一片森林。"
+negative_prompt = "让角色的手指残缺扭曲，放大头部造成不自然的头身比，将人物变成矮小的大头娃娃。产生刺眼、耀眼的阳光，并用过度饱和的色彩渲染整个场景。将腿部扭成X形或O形畸形。"
 image = qwen_image_edit(prompt, negative_prompt=negative_prompt, edit_image=Image.open("image_face.jpg"), seed=1, num_inference_steps=40)
 image.save("image_fullbody.jpg")
 image.resize((512, 512))
@@ -222,9 +224,9 @@ image.resize((512, 512))
 
 ```
 
-## 第5步：多语言和多图像编辑[#](#step-5-multilingual-and-multi-image-editing)
+## 步骤 5：多语言和多图像编辑[#](#step-5-multilingual-and-multi-image-editing)
 
-Qwen-Image 文本编码器足够鲁棒，能够理解它未经明确训练的语言中的提示。为了试试这一点，请使用韩语提示生成一个角色。首先，使用英文生成一张图像。
+Qwen-Image 文本编码器足够健壮，能够理解它未经明确训练的语言中的提示。要尝试这一点，请使用韩语提示生成一个角色。首先，使用英语生成一个图像。
 
 ```
 qwen_image.clear_lora()
@@ -235,7 +237,7 @@ image.resize((512, 512))
 
 ```
 
-모델은 이미지 콘텐츠를 직접 이해할 수 없습니다. 현재 저는 텍스트 기반 AI로, 시각적 입력을 처리하지 않습니다. 이미지 내용을 이해하려면 이미지에 대한 설명이나 데이터를 텍스트로 제공해야 합니다.
+然后使用韩语来确定模型是否能够理解图像内容。
 
 ```
 qwen_image.clear_lora()
@@ -247,11 +249,11 @@ image.resize((512, 512))
 
 ```
 
-尽管Qwen-Image没有在韩文文本上训练，但其文本编码器的基础能力仍然提供了多语言理解。
+尽管Qwen-Image没有在韩文文本上训练过，但其文本编码器的基本能力仍然提供了多语言理解。
 
-### 使用 Qwen-Image-Edit-2509 合并主体[#](#merging-subjects-with-qwen-image-edit-2509)
+### 使用Qwen-Image-Edit-2509合并主体[#](#merging-subjects-with-qwen-image-edit-2509)
 
-你现在有两张图片：森林中的女人和拿着花的男人。使用[Qwen-Image-Edit-2509](https://www.modelscope.cn/models/Qwen/Qwen-Image-Edit-2509)，它支持多图像编辑，你可以将这两个独立的图像合并成一个连贯的场景，其中的角色正在互动。
+你现在有两张图片：森林中的女人和拿着花的男人。使用支持多图像编辑的[Qwen-Image-Edit-2509](https://www.modelscope.cn/models/Qwen/Qwen-Image-Edit-2509)，你可以将这两张独立的图片合并成一个连贯的场景，让其中的角色产生互动。
 
 ```
 qwen_image_edit_2509 = QwenImagePipeline.from_pretrained(
@@ -272,8 +274,7 @@ qwen_image_edit_2509.enable_lora_magic()
 
 现在，生成一张这两个人在一起的照片。
 
-```
-prompt = "이 사랑 넘치는 부부의 포옹하는 모습을 찍은 사진을 생성해 줘."
+```prompt = "请生成一张充满爱意的夫妇拥抱的照片。"
 image = qwen_image_edit_2509(prompt, edit_image=[Image.open("image_fullbody.jpg"), Image.open("image_man.jpg")], seed=3, num_inference_steps=40)
 image.save("image_merged.jpg")
 image.resize((512, 512))
@@ -281,9 +282,9 @@ image.resize((512, 512))
 
 ```
 
-## 步骤 6：Instinct（Instinct（AMD 数据中心 GPU 系列）） MI300X 的力量[#](#step-6-the-power-of-the-instinct-mi300x)
+## 步骤 6：Instinct（Instinct（AMD 数据中心 GPU 系列）） MI300X 的强大性能[#](#step-6-the-power-of-the-instinct-mi300x)
 
-您当前已将三个大型模型同时加载到内存中。计算总参数量以了解此工作负载的规模。
+您目前同时将三个大规模模型加载到了内存中。请计算总参数量，以了解此工作负载的规模。
 
 ```
 def count_parameters(model):
@@ -293,24 +294,24 @@ print(count_parameters(qwen_image) + count_parameters(qwen_image_edit) + count_p
 
 ```
 
-**总参数数量**：约860亿。
+**总参数**: ~86 Billion.
 
-在标准 GPU 上处理这一任务是不可能的。然而，AMD Instinct（Instinct（AMD 数据中心 GPU 系列））MI300X GPU 拥有 192 GB 的显存，因此可以将所有这些模型常驻于内存中，从而实现推理、编辑和训练任务间的无缝切换。
+在标准 GPU 上处理这一任务是不可能的。然而，AMD Instinct（Instinct（AMD 数据中心 GPU 系列）） MI300X GPU 拥有 192 GB 的 VRAM，因此它可以将所有这些模型保留在内存中，以便在推理、编辑和训练任务之间无缝切换。
 
 ```
 !amd-smi
-#对于 ROCm（Radeon 开放计算平台） 6.4 及更早版本，请改用 rocm-smi。
+#对于 ROCm（ROCm（Radeon 开放计算平台）） 6.4 及更早版本，请改用 rocm-smi。
 ```
 
 ```
 
-## 第7步：训练自定义LoRA[#](#step-7-training-a-custom-lora)
+## 步骤 7：训练自定义LoRA[#](#step-7-training-a-custom-lora)
 
-最后，是时候从推理转向训练了。训练一个自定义的 LoRA 适配器，让模型学会特定概念——这里以某只具体的狗为例。
+最后，是时候从推理转向训练了。训练一个自定义的LoRA适配器，让模型学习一个特定概念，在本例中是一只特定的狗。
 
 ### 准备数据集[#](#prepare-the-dataset)
 
-下载一个包含五张狗图片及相关元数据的小型数据集。
+下载一个包含五张狗图片及相关元数据的小数据集。
 
 ```
 !pip install datasets
@@ -321,7 +322,7 @@ Image.fromarray(np.concatenate([np.array(image.resize((256, 256))) for image in 
 
 ```
 
-这是该数据集的元数据，包括带有注释的图像描述。
+这是该数据集的元数据，包括带注释的图像描述。
 
 ```
 pd.read_csv("dataset/metadata.csv")
@@ -329,13 +330,13 @@ pd.read_csv("dataset/metadata.csv")
 
 ```
 
-在训练之前，验证基础模型对提示词 `"a dog"` 的输出。
+在训练之前，验证基础模型对于提示词 `"a dog"` 的输出。
 
-正如预期的那样，它生成了一只普通的狗，而不是你的特定主体。
+正如预期，它生成了一只普通的狗，而不是你的特定主体。
 
 ```
 qwen_image.clear_lora()
-prompt = "一只狗"
+prompt = "a dog"
 image = qwen_image(prompt, seed=3, num_inference_steps=40)
 image.resize((512, 512))
 ```
@@ -344,7 +345,7 @@ image.resize((512, 512))
 
 ### 运行训练脚本[#](#run-the-training-script)
 
-首先，清理一些GPU内存，为训练过程腾出空间。然后下载官方训练脚本，并使用`accelerate`启动它。
+首先，清理一些 GPU 显存以为训练过程腾出空间。然后下载官方训练脚本并使用 `accelerate` 启动它。
 
 命令。
 
@@ -388,11 +389,11 @@ os.system(cmd)```
 
 ```
 
-## Step 8: 使用自定义LoRA进行推理[#](#step-8-inference-with-the-custom-lora)
+## 第8步：使用自定义LoRA进行推理[#](#step-8-inference-with-the-custom-lora)
 
-现在训练已完成，重新加载模型，注入新训练的 `lora_dog`
+现在训练已完成，再次加载模型，注入新训练的`lora_dog`
 
-，并验证模型能识别你的特定狗。
+，并验证模型能够识别你的特定狗。
 
 ```
 qwen_image = QwenImagePipeline.from_pretrained(
@@ -410,7 +411,7 @@ qwen_image.enable_lora_magic()
 
 ```
 
-接下来，重新加载模型并为狗生成照片。
+接下来，重新加载模型并为这只狗生成照片。
 
 ```
 qwen_image.load_lora(
@@ -425,7 +426,7 @@ image.resize((512, 512))
 
 ```
 
-生成另一张狗的图片。
+生成另一张狗的图像。
 
 ```
 prompt = "a dog is jumping."
@@ -437,4 +438,4 @@ image.resize((512, 512))
 
 ## 结论[#](#conclusion)
 
-本教程展示了 AMD Instinct（Instinct（AMD 数据中心 GPU 系列））MI300X 的端到端能力。您成功在单张 GPU 上使用总参数量达 860 亿的模型完成了推理、以高一致性编辑图像，并训练了自定义适配器。
+本教程演示了 AMD Instinct（Instinct（AMD 数据中心 GPU 系列）） MI300X 的端到端能力。您已成功在单个 GPU 上完成以下操作：使用总计 860 亿参数的模型进行推理、以高一致性编辑图像，以及训练自定义适配器。
