@@ -2,7 +2,7 @@
   "article_id": "e0c5ca570e853958",
   "title": "Using hipify-perl",
   "source_url": "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/hipify-perl.html",
-  "verified_at": "2026-05-30T05:43:17.361770+00:00",
+  "verified_at": "2026-05-31T06:11:35.142789+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
