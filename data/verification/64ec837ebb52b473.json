@@ -2,7 +2,7 @@
   "article_id": "64ec837ebb52b473",
   "title": "ROCm Linux Filesystem Hierarchy Standard reorganization",
   "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/file-reorg.html",
-  "verified_at": "2026-06-04T06:30:26.940643+00:00",
+  "verified_at": "2026-06-05T06:15:38.450548+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
