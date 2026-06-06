@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updated": "2026-05-30T08:25:47Z",
-  "total": 133,
+  "updated": "2026-06-06T08:31:22Z",
+  "total": 135,
   "papers": [
     {
       "id": "2605.30313v1",
@@ -80,7 +80,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-05-30T08:25:30Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -111,6 +111,86 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-05-30T08:25:37Z",
+      "extracted": true,
+      "translated": false
+    },
+    {
+      "id": "2605.30313v3",
+      "arxiv_id": "2605.30313v3",
+      "title": "UniLab: A Heterogeneous Architecture for Robot RL Beyond GPU-Dominant Paradigms",
+      "authors": [
+        "Yufei Jia",
+        "Zhanxiang Cao",
+        "Mingrui Yu",
+        "Heng Zhang",
+        "Shenyu Chen",
+        "Dixuan Jiang",
+        "Meng Li",
+        "Xiaofan Li",
+        "Yiyang Liu",
+        "Junzhe Wu",
+        "Zheng Li",
+        "XiLin Fang",
+        "Ting-Yu Tsui",
+        "Shengcheng Fu",
+        "Haoyang Li",
+        "Anqi Wang",
+        "Zifan Wang",
+        "Dongjie Zhu",
+        "Chenyu Cao",
+        "Zhenbiao Huang",
+        "Ziang Zheng",
+        "Jie Lu",
+        "Xin Ma",
+        "Zhengyang Wei",
+        "Xiang Zhao",
+        "Tianyue Zhan",
+        "Ye He",
+        "Yuxiang Chen",
+        "Yizhou Jiang",
+        "Yue Li",
+        "Haizhou Ge",
+        "Yuhang Dong",
+        "Fan Jia",
+        "Ziheng Zhang",
+        "Meng Zhang",
+        "Xiwa Deng",
+        "Zhixing Chen",
+        "Hanyang Shao",
+        "Chenxin Dong",
+        "Yixuan Li",
+        "Yizhi Chen",
+        "Bokui Chen",
+        "Kaifeng Zhang",
+        "Hanqing Cui",
+        "Yusen Qin",
+        "Ruqi Huang",
+        "Lei Han",
+        "Tiancai Wang",
+        "Xiang Li",
+        "Yue Gao",
+        "Guyue Zhou"
+      ],
+      "abstract": "Simulation-based RL for contemporary robot control is increasingly organized around GPU-resident simulation: physics, rollout collection, and learning are placed on a single GPU-centric execution path. This paradigm has greatly improved training speed, but it has also encouraged a default assumption that efficient training requires physics to reside on the GPU. We revisit this assumption. Our view is that, in simulation-dominated robot control, the essential question is not which processor runs physics, but whether simulation throughput, policy learning, and runtime synchronization form an efficient end-to-end loop. We present UniLab, a heterogeneous CPU-simulation / GPU-learning architecture that decouples CPU-parallel simulation from GPU policy updates through a unified runtime for data movement, buffering, and synchronization. UniLab is implemented as a complete and extensible training system using MuJoCoUni and MotrixSim CPU-batched physics backends, supporting PPO, FastSAC, FlashSAC, and APPO. On representative simulation-based robot control tasks, UniLab improves end-to-end training efficiency by 3--10$\\times$ under the same hardware configuration, while reducing dependence on the NVIDIA CUDA-based software stack and supporting cross-platform execution on the Apple macOS platform and the AMD ROCm and Intel XPU accelerator backends. These results show that GPU simulation is an effective path to efficient training, but not a necessary one, broadening the practical system choices available for robot RL training. Project page: https://unilabsim.github.io.",
+      "arxiv_url": "https://arxiv.org/abs/2605.30313v3",
+      "pdf_url": "https://arxiv.org/pdf/2605.30313v3",
+      "published": "2026-05-28",
+      "updated": "2026-06-02",
+      "categories": [
+        "cs.RO"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "performance",
+        "porting",
+        "rocm",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-06-06T08:31:05Z",
       "extracted": false,
       "translated": false
     },
@@ -148,7 +228,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-05-30T08:25:33Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -737,7 +817,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-05-30T08:25:44Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -808,6 +888,41 @@
       "lifecycle": "latest",
       "fetched_at": "2026-05-16T08:02:19Z",
       "extracted": true,
+      "translated": false
+    },
+    {
+      "id": "2603.29002v3",
+      "arxiv_id": "2603.29002v3",
+      "title": "Understand and Accelerate Memory Processing Pipeline for Large Language Model Inference",
+      "authors": [
+        "Zifan He",
+        "Rui Ma",
+        "Yizhou Sun",
+        "Jason Cong"
+      ],
+      "abstract": "Modern large language models (LLMs) increasingly depends on efficient long-context processing and generation mechanisms, including sparse attention, retrieval-augmented generation (RAG), and compressed contextual memory, to support complex reasoning. We show that these optimizations can be unified into a four-step memory processing pipeline: Prepare Memory, Compute Relevancy, Retrieval, and Apply to Inference. Through systematic profiling, we identify a 22%-97% memory processing overhead in LLM inference and strong heterogeneity in its computational characteristics. Motivated by this insight, we argue that \\textbf{heterogeneous systems} are well-suited to accelerate memory processing and thus end-to-end inference. We demonstrate this approach on a GPU-FPGA system by offloading sparse, irregular, and memory-bounded operations to FPGAs while retaining compute-intensive operations on GPUs. Evaluated on an AMD MI210 GPU and an Alveo U55C FPGA, our system is up to $2.2\\times$ faster and achieves up to $4.7\\times$ less energy across multiple LLM inference optimizations than the GPU baseline (similar results hold on NVIDIA A100). These results establish heterogeneous systems as a practical direction for efficient LLM memory processing and inform future heterogeneous hardware design.",
+      "arxiv_url": "https://arxiv.org/abs/2603.29002v3",
+      "pdf_url": "https://arxiv.org/pdf/2603.29002v3",
+      "published": "2026-03-30",
+      "updated": "2026-05-30",
+      "categories": [
+        "cs.DC",
+        "cs.AI"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "distributed-computing",
+        "inference",
+        "llm",
+        "mi300",
+        "optimization"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-06-06T08:31:22Z",
+      "extracted": false,
       "translated": false
     },
     {
