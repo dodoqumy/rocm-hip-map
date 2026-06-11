@@ -2,7 +2,7 @@
   "article_id": "8d67ec99e52580ab",
   "title": "Installing ROCm and deep learning frameworks",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/install.html",
-  "verified_at": "2026-06-10T06:15:52.977902+00:00",
+  "verified_at": "2026-06-11T06:41:57.212665+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
