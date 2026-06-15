@@ -2,7 +2,7 @@
   "article_id": "f84f37264455896c",
   "title": "Build ROCm from source",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/build-rocm.html",
-  "verified_at": "2026-06-14T06:27:39.554805+00:00",
+  "verified_at": "2026-06-15T07:10:35.410761+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
