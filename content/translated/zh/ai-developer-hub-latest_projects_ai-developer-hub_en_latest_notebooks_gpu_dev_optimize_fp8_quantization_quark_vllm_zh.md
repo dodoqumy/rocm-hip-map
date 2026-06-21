@@ -9,41 +9,41 @@ fetched_at: 2026-05-04T18:22:29.657341+00:00
 content_hash: "0c9374a9dcd9f5bf"
 ---
 
-# 使用 AMD Quark 进行 FP8 量化以支持 vLLM[#](#fp8-quantization-with-amd-quark-for-vllm)
+# 使用AMD Quark对vLLM进行FP8量化[#](#fp8-quantization-with-amd-quark-for-vllm)
 
 **作者**：Charles Yang
 
-**知识水平**：中级
+**Knowledge level**: 中级
 
-量化可以有效降低内存和带宽占用，加速计算，并通过最小化精度损失提升吞吐量。
+量化可以有效减少内存和带宽使用，加速计算，并在最小化精度损失的情况下提高吞吐量。
 
-[vLLM](https://docs.vllm.ai/en/latest/) 是一个开源库，旨在为大型语言模型（LLM）推理提供高吞吐量和低延迟。它通过高效地批量处理请求并充分利用GPU资源来优化文本生成工作负载，使开发者能够处理代码生成和大规模对话式AI等复杂任务。
+[vLLM](https://docs.vllm.ai/en/latest/) 是一个开源库，旨在为大型语言模型（LLM）推理提供高吞吐量和低延迟。它通过高效批处理请求并充分利用GPU资源来优化文本生成工作负载，使开发者能够处理代码生成和大规模对话式AI等复杂任务。
 
-vLLM 可以利用 [Quark](https://quark.docs.amd.com/latest/index.html)（一个灵活且强大的量化工具包）来生成高性能的量化模型，并在 AMD GPU 上运行。Quark 针对大型语言模型提供了专门的量化支持，包括权重、激活和 KV 缓存的量化，以及 AWQ、GPTQ、Rotation 和 SmoothQuant 等前沿量化算法。
+vLLM 可以借助 [Quark](https://quark.docs.amd.com/latest/index.html)（一个灵活且强大的量化工具包）来生成高性能的量化模型，并在 AMD GPU 上运行。Quark 专门支持对大型语言模型进行量化，涵盖权重、激活和 KV 缓存的量化，同时集成了 AWQ、GPTQ、Rotation 和 SmoothQuant 等前沿量化算法。
 
-本教程将指导您设置 Quark 并将 LLM 模型量化为 FP8，然后使用 [ROCm](https://rocm.docs.amd.com/en/latest/index.html) 软件栈在 AMD Instinct™ GPU 上运行 FP8 模型。了解如何配置 Quark 参数、实现不同的模型精度，并比较不同量化算法的性能。
+本教程将指导您设置 Quark 并将 LLM 模型量化至 FP8，然后使用 [ROCm](https://rocm.docs.amd.com/en/latest/index.html) 软件栈在 AMD Instinct（AMD 数据中心 GPU 系列）™ GPU 上运行 FP8 模型。了解如何配置 Quark 参数，实现不同的模型精度，并比较不同量化算法的性能。
 
 ## 支持的模型[#](#supported-models)
 
-**图1：** AMD Quark工具中支持的模型。
+**图 1：** AMD Quark 工具中支持的模型。
 
-### 备注[#](#notes)
+### 注释[#](#notes)
 
-(1) FP8: 指 OCP`fp8_e4m3`
+**(1) FP8**: 指的是 OCP`fp8_e4m3`
 
 数据类型量化。**(2) INT**：包括`INT8`
 
-`,UINT8`
+UINT8
 
 ,`INT4`
 
-, 和 `UINT4`
+, and`UINT4`
 
-量化类型。**(3) MX**： 包含自定义OCP数据类型，例如：`MXINT8`
+量化类型.**(3) MX**: 包括自定义OCP数据类型，例如：`MXINT8`
 
 MXFP8E4M3
 
-MXFP8E5M2
+`MXFP8E5M2`
 
 MXFP4
 
@@ -51,25 +51,25 @@ MXFP4
 
 `MXFP6E2M3`
 
-(4) GPTQ:`QuantScheme`
+(4) GPTQ：`QuantScheme`
 
-仅支持`PerGroup`
+仅支持 `PerGroup`
 
-和`PerChannel`
+`PerChannel`
 
-值.**(5)**:`*`
+值。**(5)**:`*`
 
 表示不同的模型大小（例如，`7B`）
 
-或者`13B`
+或`13B`
 
 ).**(6)**: 对于`meta-llama/Llama-3.2-*B-Vision`
 
-模型中，仅语言组件被量化，视觉模块被排除在外。
+模型仅对语言组件进行量化，视觉模块被排除在外。
 
 ## 先决条件[#](#prerequisites)
 
-本教程采用以下环境进行开发和测试。
+本教程是在以下设置下开发和测试的。
 
 ### 操作系统[#](#operating-system)
 
@@ -77,41 +77,43 @@ MXFP4
 
 ### 软件[#](#software)
 
-**ROCm（ROCm（Radeon 开放计算平台）） 6.2 或 6.3**：按照 [ROCm（ROCm（Radeon 开放计算平台））安装指南](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html) 进行安装和验证。安装完成后，使用以下命令确认你的配置：该命令将列出你的 AMD GPU 及其相关信息。
+**ROCm（ROCm（Radeon 开放计算平台）） 6.2 或 6.3**：按照[ROCm（ROCm（Radeon 开放计算平台））安装指南](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html)安装并验证ROCm（ROCm（Radeon 开放计算平台））。安装完成后，使用以下命令确认你的设置：该命令会列出你的AMD GPU及其相关信息。
 
-**注意**：对于 ROCm（ROCm（Radeon 开放计算平台）） 6.4 及更早版本，请使用 `rocm-smi`
+**注意**：对于 ROCm（ROCm（Radeon 开放计算平台）） 6.4 及更早版本，请使用 `rocm-smi`。
 
-改用命令。**Docker**：确保 Docker 已正确安装和配置。请按照您操作系统的 Docker 安装指南进行操作。**注意**：确保 Docker 权限已正确配置。要配置权限以允许非 root 用户访问，请运行以下命令：usermod -aG docker $USER newgrp docker
+改用命令。**Docker**：确保正确安装和配置 Docker。按照适用于您操作系统的 Docker 安装指南进行操作。**注意**：确保正确配置 Docker 权限。要配置允许非 root 用户访问的权限，请运行以下命令：usermod -aG docker $USER newgrp docker
 
-验证Docker是否正常运行：
+验证 Docker 是否正常工作，使用：
 
 运行 hello-world
 
 ### Hugging Face API 访问[#](#hugging-face-api-access)
 
-从...获取API token
+从...获取 API token
 
-[Hugging Face](https://huggingface.co)用于下载模型。确保 Hugging Face API 令牌拥有必要的权限和批准以访问
+使用 [Hugging Face](https://huggingface.co) 下载模型。确保 Hugging Face API 令牌具有必要的权限和批准来访问
 
-[Meta Llama checkpoints](https://huggingface.co/meta-llama/Llama-3.1-8B)
+[Meta Llama 检查点](https://huggingface.co/meta-llama/Llama-3.1-8B)
 
-## 使用Docker和ROCm进行环境设置（ROCm（Radeon 开放计算平台））[#](#environment-setup-with-docker-and-rocm)
+## 使用 Docker 和 ROCm（ROCm（Radeon 开放计算平台））进行环境设置[#](#environment-setup-with-docker-and-rocm)
 
 按照以下步骤配置您的教程环境：
 
-### 1. 拉取 Docker 镜像[#](#pull-the-docker-image)
+### 1. 拉取Docker映像[#](#pull-the-docker-image)
 
-确保您的系统满足[系统要求](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html)。
+确保你的系统满足[系统要求](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html)。
 
-拉取本教程所需的Docker镜像:
+拉取本教程所需的Docker镜像：
 
+```
 pull rocm/vllm:latest
+```
 
 ```
 
 ### 2. 启动 Docker 容器[#](#launch-the-docker-container)
 
-启动 Docker 容器并映射必要的目录。在您的主机上，运行以下命令：
+启动Docker容器并映射必要的目录。在主机上运行以下命令：
 
 ```
 run -it --rm \
@@ -132,27 +134,29 @@ rocm/vllm:latest
 
 **注意**：该命令将当前目录挂载到 `/workspace`
 
-容器中的目录。请确保在运行 Docker 命令之前，将笔记本文件复制到此目录，或在 Jupyter Notebook 环境启动后将其上传。保存终端输出中提供的令牌或 URL，以便从 Web 浏览器访问笔记本。您可以从 [AI Developer Hub GitHub 仓库](https://github.com/ROCm（ROCm（Radeon 开放计算平台））/gpuaidev) 下载此笔记本。
+容器中的目录。确保在运行 Docker 命令前已将笔记本文件复制到此目录，或在 Jupyter Notebook 环境启动后将其上传。保存终端输出中提供的 token 或 URL，以便从 Web 浏览器访问该笔记本。你可以从 [AI Developer Hub GitHub 仓库](https://github.com/ROCm（ROCm（Radeon 开放计算平台））/gpuaidev) 下载此笔记本。
 
-### 3. 在容器中启动 Jupyter Notebooks[#](#launch-jupyter-notebooks-in-the-container)
+### 3. 在容器中启动 Jupyter Notebook[#](#launch-jupyter-notebooks-in-the-container)
 
-在Docker容器内部，使用以下命令安装Jupyter：
+在Docker容器内，使用以下命令安装Jupyter：
 
 ```
-安装 jupyter
+安装 Jupyter
 ```
 
 ```
 
 启动Jupyter服务器：
 
+```
 --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+```
 
 ```
 
-**注意**: 确保端口 `8888`
+注意：确保端口 `8888`
 
-在运行上述命令之前，请确保该端口未在您的系统上被占用。如果已被占用，您可以通过替换 `--port=8888` 来指定不同的端口。
+在运行上述命令之前，请确保该端口尚未在您的系统上被占用。如果已被占用，您可以通过替换 `--port=8888` 来指定其他端口。
 
 使用另一个端口号，例如 `--port=8890`
 
@@ -160,9 +164,9 @@ rocm/vllm:latest
 
 ### 4. 安装依赖项[#](#installing-dependencies)
 
-接下来，安装CMake和Quark。选择PyTorch的CPU版本，这样Quark可以在没有GPU的笔记本电脑上运行。这样速度较慢，但用于尝试Quark是可行的。从PyPI安装Quark，这会自动拉取所需的依赖项。
+接下来，安装 CMake 和 Quark。选择 PyTorch 的 CPU 版本，这样 Quark 就可以在没有 GPU 的笔记本电脑上运行。这种方式虽然较慢，但足以试用 Quark。从 PyPI 安装 Quark，它会自动拉取所需的依赖项。
 
-在 Docker 容器内运行的 Jupyter notebook 中执行以下命令：
+在 Docker 容器中运行的 Jupyter notebook 内执行以下命令：
 
 ```
 !pip install cmake amd-quark==0.8.1
@@ -174,11 +178,11 @@ rocm/vllm:latest
 
 ```
 
-### 5. 提供你的 Hugging Face token[#](#provide-your-hugging-face-token)
+### 5. 提供您的 Hugging Face token[#](#provide-your-hugging-face-token)
 
-您需要Hugging Face API令牌才能访问Llama-3.1-8B。请在 [Hugging Face Tokens](https://huggingface.co/settings/tokens) 生成您的令牌，并为 [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) 申请访问权限。令牌通常以“hf_”开头。
+你需要一个 Hugging Face API token 才能访问 Llama-3.1-8B。请在 [Hugging Face Tokens](https://huggingface.co/settings/tokens) 生成你的 token，并向 [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) 申请访问权限。Token 通常以 "hf_" 开头。
 
-在Jupyter notebook中运行以下交互式块来设置token：
+在Jupyter notebook中运行以下交互块以设置令牌：
 
 ```
 from huggingface_hub import notebook_login, HfApi
@@ -188,23 +192,23 @@ notebook_login()
 
 ```
 
-确认您的令牌已被正确接受：
+验证您的令牌已被正确接受：
 
 ```
 # 验证令牌
 try:
-    api = HfApi()
-    user_info = api.whoami()
-    print(f"令牌验证成功！登录用户为：{user_info['name']}")
+api = HfApi()
+user_info = api.whoami()
+print(f"令牌验证成功！登录为：{user_info['name']}")
 except Exception as e:
-    print(f"令牌验证失败。错误：{e}")
+print(f"令牌验证失败。错误：{e}")
 ```
 
 ```
 
 ## 量化过程[#](#quantization-process)
 
-安装 Quark 后，请按照以下步骤学习如何使用它。Quark 量化过程包括以下步骤：
+安装Quark后，请按照以下步骤学习如何使用它。Quark量化过程包括以下步骤：
 
 加载模型
 
@@ -220,7 +224,7 @@ vLLM 中的评估
 
 ### 1. 加载模型[#](#load-the-model)
 
-Quark 使用 transformers 来获取模型和 tokenizer。
+Quark 使用 transformers 来获取模型和分词器。
 
 ```
 from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -238,7 +242,7 @@ tokenizer.pad_token = tokenizer.eos_token
 
 ### 2. 准备校准数据加载器[#](#prepare-the-calibration-dataloader)
 
-Quark使用PyTorch dataloader加载校准数据。有关如何高效使用校准数据集的更多详情，请参阅[添加校准数据集](https://quark.docs.amd.com/latest/pytorch/calibration_datasets.html)。
+Quark 使用 PyTorch 的 dataloader 来加载校准数据。有关如何高效使用校准数据集的更多细节，请参阅 [添加校准数据集](https://quark.docs.amd.com/latest/pytorch/calibration_datasets.html)。
 
 ```
 from datasets import load_dataset
@@ -258,9 +262,9 @@ batch_size=BATCH_SIZE, drop_last=True)
 
 ### 3. 设置量化配置[#](#set-the-quantization-configuration)
 
-首先下载并解压示例配置文件及必要的软件包。
+首先下载并解压示例配置文件和必要的软件包。
 
-```
+```bash
 %%bash
 # 安装 unzip 和 wget
 apt-get update
@@ -274,19 +278,19 @@ unzip -o amd_quark-0.8.1.zip
 
 设置量化配置。本教程使用 `FP8`
 
-对权重、激活和KV缓存进行每张量量化，量化算法为AutoSmoothQuant。更多详情请参阅[Quark配置指南](https://quark.docs.amd.com/latest/pytorch/user_guide_config_description.html)。
+对权重、激活和KV缓存进行逐张量量化，量化算法为AutoSmoothQuant。更多细节请参阅[Quark配置指南](https://quark.docs.amd.com/latest/pytorch/user_guide_config_description.html)。
 
 ```python
 from quark.torch.quantization import (Config, QuantizationConfig,
 FP8E4M3PerTensorSpec,
 load_quant_algo_config_from_file)
-# 定义 fp8/逐张量/静态 规范。
+# 定义 fp8/per-tensor/static 规格。
 FP8_PER_TENSOR_SPEC = FP8E4M3PerTensorSpec(observer_method="min_max",
 is_dynamic=False).to_quantization_spec()
 # 定义全局量化配置，输入张量和权重应用 FP8_PER_TENSOR_SPEC。
 global_quant_config = QuantizationConfig(input_tensors=FP8_PER_TENSOR_SPEC,
 weight=FP8_PER_TENSOR_SPEC)
-# 为 KV 缓存层定义量化配置，输出张量应用 FP8_PER_TENSOR_SPEC。
+# 定义 kv-cache 层的量化配置，输出张量应用 FP8_PER_TENSOR_SPEC。
 KV_CACHE_SPEC = FP8_PER_TENSOR_SPEC
 kv_cache_layer_names_for_llama = ["*k_proj", "*v_proj"]
 kv_cache_quant_config = {name :
@@ -311,7 +315,7 @@ algo_config=algo_config)
 
 ### 4. 量化模型[#](#quantize-the-model)
 
-应用量化。量化后，在导出之前先冻结量化模型。
+应用量化。量化后，先冻结量化模型再导出。
 
 ```
 import torch
@@ -320,7 +324,7 @@ from quark.torch.export import JsonExporterConfig
 # 应用量化。
 quantizer = ModelQuantizer(quant_config)
 quant_model = quantizer.quantize_model(model, calib_dataloader)
-# 冻结量化后的模型以进行导出。
+# 冻结量化模型以导出。
 freezed_model = quantizer.freeze(model)
 ```
 
@@ -328,7 +332,7 @@ freezed_model = quantizer.freeze(model)
 
 ### 5. 导出模型[#](#export-the-model)
 
-使用 HuggingFace safetensors 格式导出模型。更多详情，请参见 [HuggingFace safetensors](https://huggingface.co/docs/safetensors/en/index)。
+使用 HuggingFace safetensors 格式导出模型。更多详情，请参阅 [HuggingFace safetensors](https://huggingface.co/docs/safetensors/en/index)。
 
 ```
 from quark.torch.quantization.config.config import Config
@@ -344,7 +348,7 @@ import json
 import sys
 import os
 logger = ScreenLogger(__name__)
-# Define export config.
+# 定义导出配置。
 LLAMA_KV_CACHE_GROUP = ["*k_proj", "*v_proj"]
 export_config = ExporterConfig(json_export_config=JsonExporterConfig())
 export_config.json_export_config.kv_cache_group = LLAMA_KV_CACHE_GROUP
@@ -359,9 +363,9 @@ use_fast = True if model_type in ["grok", "cohere", "olmo"] else False
 tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, trust_remote_code=True, use_fast=use_fast)
 tokenizer.save_pretrained(export_path)
 except Exception as e:
-logger.error(f"An error occurred when saving tokenizer: {e}. You can try to save the tokenizer manually")
+logger.error(f"保存tokenizer时发生错误: {e}。您可以尝试手动保存tokenizer")
 exporter.reset_model(model=model)
-logger.info(f"hf_format quantized model exported to {export_path} successfully.")
+logger.info(f"hf格式量化模型已成功导出到 {export_path}。")
 ```
 
 ```
@@ -370,48 +374,56 @@ logger.info(f"hf_format quantized model exported to {export_path} successfully."
 
 现在您可以直接通过LLM入口点加载并运行Quark量化模型：
 
-```
+```python
 from vllm import LLM, SamplingParams
-# 示例提示词。
+
+# 示例提示文本
 prompts = [
-"你好，我的名字是",
-"美国总统是",
-"法国的首都是",
-"人工智能的未来是",
+    "Hello, my name is",
+    "The president of the United States is",
+    "The capital of France is",
+    "The future of AI is",
 ]
-# 创建采样参数对象。
+
+# 创建采样参数对象
 sampling_params = SamplingParams(temperature=0.8, top_p=0.95)
-# 创建 LLM 实例。
+
+# 创建 LLM 实例
 llm = LLM(model="Llama-3.1-8B-Instruct-FP8",
-kv_cache_dtype='fp8',quantization='quark')
-# 根据提示词生成文本。输出为 RequestOutput 对象列表，
-# 包含提示词、生成文本及其他信息。
+          kv_cache_dtype='fp8', quantization='quark')
+
+# 根据提示生成文本。输出为 RequestOutput 对象列表，
+# 包含提示、生成文本及其他信息。
 outputs = llm.generate(prompts, sampling_params)
-# 打印输出结果。
-print("\n生成输出:\n" + "-" * 60)
+
+# 打印输出结果
+print("\n生成的输出：\n" + "-" * 60)
 for output in outputs:
-prompt = output.prompt
-generated_text = output.outputs[0].text
-print(f"提示词: {prompt!r}")
-print(f"输出: {generated_text!r}")
-print("-" * 60)
+    prompt = output.prompt
+    generated_text = output.outputs[0].text
+    print(f"提示：{prompt!r}")
+    print(f"输出：{generated_text!r}")
+    print("-" * 60)
+
 # 清理并释放 GPU
 del llm
+
 # 第 2 步：调用垃圾回收器
 import gc
 gc.collect()
-# 第 3 步：如果使用 PyTorch 后端，清除 CUDA（CUDA（统一计算设备架构）） (可选但有助于释放显存)
+
+# 第 3 步：如果使用 PyTorch 后端，清理 CUDA（CUDA（统一计算设备架构））缓存（可选但推荐）
 import torch
 if torch.cuda.is_available():
-torch.cuda.empty_cache()
-torch.cuda.ipc_collect()
+    torch.cuda.empty_cache()
+    torch.cuda.ipc_collect()
 ```
 
 ```
 
-您也可以使用 `lm_eval`
+你也可以使用 `lm_eval`
 
-评估精度
+评估准确性
 
 ```
 !lm_eval --model vllm \
@@ -423,9 +435,9 @@ torch.cuda.ipc_collect()
 
 ## Quark 量化脚本[#](#quark-quantization-script)
 
-除了上述Python API示例外，Quark还提供量化脚本，以便更方便地对大型语言模型进行量化。它支持使用多种不同的量化方案和优化算法对模型进行量化，并可导出量化模型并在过程中执行评估任务。
+除了上述Python API示例外，Quark还提供了一个量化脚本，以便更方便地量化大型语言模型。它支持使用多种不同的量化方案和优化算法来量化模型，并能够在进行过程中导出量化模型并运行评估任务。
 
-**注意：** 你可以使用 `--output_dir` 来更改脚本的输出目录。
+**注意：**您可以通过 `--output_dir` 更改脚本的输出目录。
 
 选项。
 
@@ -444,19 +456,19 @@ os.chdir("./amd_quark-0.8.1/examples/torch/language_modeling/llm_ptq/")
 
 ```
 
-## 后训练量化（PTQ）的最佳实践[#](#best-practices-for-post-training-quantization-ptq)
+## 训练后量化(PTQ)的最佳实践[#](#best-practices-for-post-training-quantization-ptq)
 
-本部分概述了使用 AMD Quark PyTorch 进行 PTQ（训练后量化）的最佳实践。它提供了微调量化策略以解决精度下降问题的指导。以下示例使用 `meta-llama/Llama-3.1-8B-Instruct`。
+本部分概述了使用 AMD Quark PyTorch 进行 PTQ 的最佳实践，为微调量化策略以解决精度下降问题提供指导。以下示例使用了 `meta-llama/Llama-3.1-8B-Instruct`。
 
-来自 `quark/examples/torch/language_modeling/llm_ptq` 的模型和代码文件
+`quark/examples/torch/language_modeling/llm_ptq` 中的模型和代码文件
 
 以演示该方法。
 
-**图2：** AMD Quark PyTorch 量化的最佳实践
+**图2：** AMD Quark PyTorch 量化最佳实践
 
-确认你当前的工作目录是 `./amd_quark-0.8.1/examples/torch/language_modeling/llm_ptq/`
+确认您当前的工作目录是 `./amd_quark-0.8.1/examples/torch/language_modeling/llm_ptq/`
 
-, 然后运行下面的代码。
+，然后运行下面的代码。
 
 ```
 exclude_layers="*lm_head *layers.0.mlp.down_proj"
@@ -469,13 +481,13 @@ exclude_layers="*lm_head *layers.0.mlp.down_proj"
 
 ## 应用各种量化算法[#](#applying-various-quantization-algorithms)
 
-AMD Quark 支持多种专门为LLMs设计的量化算法。您可以尝试以下算法以提高准确性。
+AMD Quark 支持多种专为 LLM 设计的量化算法。你可以尝试以下算法以提高准确性。
 
-**注意：** 本部分中模型精度不限于 FP8。
+**注意：** 在本节中，模型精度不仅限于FP8。
 
-### AWQ（Activation-aware Weight Quantization）[#](#awq-activation-aware-weight-quantization)
+### AWQ（激活感知权重量化）[#](#awq-activation-aware-weight-quantization)
 
-AWQ 通过平滑网格搜索确定最优缩放因子，并广泛用于低位权值仅量化（例如，组大小为128的W4量化）。该算法可通过以下命令应用。
+AWQ通过平滑网格搜索确定最优缩放因子，广泛用于低比特权重量化（例如，组大小为128的W4量化）。可通过以下命令应用该算法。
 
 ```
 !python3 quantize_quark.py --model_dir meta-llama/Llama-3.1-8B-Instruct \
@@ -489,7 +501,7 @@ AWQ 通过平滑网格搜索确定最优缩放因子，并广泛用于低位权�
 
 ### AutoSmoothQuant[#](#autosmoothquant)
 
-AutoSmoothQuant通过在每个块上以均方误差（MSE）损失为指导，自动为每一层选择最优值，从而增强SmoothQuant。
+AutoSmoothQuant 通过均方误差（MSE）损失指导，自动为每一层选择最优值，从而增强了SmoothQuant。
 
 ```
 !python3 quantize_quark.py --model_dir meta-llama/Llama-3.1-8B-Instruct \
@@ -502,7 +514,7 @@ AutoSmoothQuant通过在每个块上以均方误差（MSE）损失为指导，�
 
 ### QuaRot[#](#quarot)
 
-QuaRot 使用一种名为 Hadamard 变换的旋转技术消除激活异常值。AMD Quark 支持 QuaRot 算法，可以按如下方式使用。
+QuaRot通过一种名为Hadamard变换的旋转技术消除激活异常值。AMD Quark支持QuaRot算法，其使用方式如下。
 
 ```
 !python3 quantize_quark.py --model_dir meta-llama/Llama-3.1-8B-Instruct \
@@ -514,7 +526,7 @@ QuaRot 使用一种名为 Hadamard 变换的旋转技术消除激活异常值。
 
 ### 旋转[#](#rotation)
 
-QuaRot在其算法中使用了在线Hadamard变换，这需要硬件部署时的内核支持。受QuaRot和QServer启发，AMD Quark引入了Rotation方法，该方法无需修改内核即可提升精度。
+QuaRot 在其算法中采用在线 Hadamard 变换，这需要内核支持来进行硬件部署。受 QuaRot 和 QServer 启发，AMD Quark 引入了 Rotation 方法，无需修改内核即可提升准确性。
 
 ```
 !python3 quantize_quark.py --model_dir meta-llama/Llama-3.1-8B-Instruct \
@@ -524,41 +536,40 @@ QuaRot在其算法中使用了在线Hadamard变换，这需要硬件部署时的
 
 ```
 
-成功评估的结果如下所示：
+以下显示了成功的评估结果：
 
 ## 尝试不同的量化方案[#](#trying-different-quantization-schemes)
 
-尝试各种量化方案有助于提高精度。但请记住，选择合适的方案取决于您的具体需求和硬件限制。
+尝试不同的量化方案有助于提高精度。但请记住，选择合适的方案取决于你的具体需求和硬件限制。
 
 ### 关键量化方案[#](#key-quantization-schemes)
 
-权重量化 vs. 权值-激活量化：激活量化可能导致显著的精度下降，而使用极低位宽的权重量化则能获得更好的结果。
+仅权重量化与权重-激活量化：激活量化可能导致显著的精度下降，而采用极低位宽的仅权重量化可以产生更好的结果。
 
 量化粒度
 
-权重量化：选项包括逐张量（per-tensor）、逐通道（per-channel）或逐组（per-group）量化。
+权重量化：选项包括逐张量、逐通道或逐组量化。
 
-激活量化：选项包括逐张量或逐令牌量化。
+激活量化：选项包括逐张量或逐标记量化。
 
-动态量化与静态量化：对于激活量化，动态量化通常比静态量化带来更好的精度。
+动态量化与静态量化：对于激活量化，动态量化通常比静态量化产生更好的精度。
 
-对称与不对称量化：根据模型对有符号或无符号值的敏感程度，尝试使用对称或不对称量化。
+对称与非对称：根据模型对有符号值或无符号值的敏感程度，尝试使用对称量化或非对称量化进行实验。
 
-数据类型（Dtypes）：AMD Quark 支持多种数据类型，包括
+数据类型 (Dtypes): AMD Quark 支持多种数据类型，包括
 
-`INT4`
+INT4
 
-,`INT8`
+，`INT8`
 
 FP8
 
-`MX-FPX`
+,`MX-FPX`
 
-`FP16`
+，`FP16`
 
-，和`BFloat16`
+，以及`BFloat16`
 
-. 选择最能平衡模型准确性和效率的数据类型。
-KV cache量化：跳过KV cache量化通常可以获得更好的性能。将这种方法应用于整个KV cache或其特定部分可能会提高准确性。
+。选择最能平衡模型精度和效率的数据类型。KV缓存量化：跳过KV缓存量化通常会带来更好的性能。对整个KV缓存或其特定部分应用此方法可能会带来更好的精度。
 
-如果在应用上述方法后精度问题仍然存在，可以考虑尝试 AMD Quark 调试工具来识别异常层并将其排除在量化之外。
+如果应用上述方法后精度问题仍然存在，考虑尝试使用 AMD Quark 调试工具来识别异常层并将其从量化中排除。
