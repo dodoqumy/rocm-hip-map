@@ -2,7 +2,7 @@
   "article_id": "66f47489ac14e638",
   "title": "GPU isolation techniques",
   "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/gpu-isolation.html",
-  "verified_at": "2026-06-20T06:13:11.550574+00:00",
+  "verified_at": "2026-06-21T06:45:07.282759+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
