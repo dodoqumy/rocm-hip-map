@@ -2,7 +2,7 @@
   "article_id": "9b8e22f53f78d360",
   "title": "Using ROCm for HPC",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-hpc/index.html",
-  "verified_at": "2026-06-24T06:00:10.685137+00:00",
+  "verified_at": "2026-06-25T05:58:53.908272+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",

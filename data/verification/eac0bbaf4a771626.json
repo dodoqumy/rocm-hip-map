@@ -2,7 +2,7 @@
   "article_id": "eac0bbaf4a771626",
   "title": "Porting CUDA code to HIP",
   "source_url": "https://rocm.docs.amd.com/projects/HIP/en/latest/how-to/hip_porting_guide.html",
-  "verified_at": "2026-06-24T06:01:30.714144+00:00",
+  "verified_at": "2026-06-25T06:00:13.934230+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",

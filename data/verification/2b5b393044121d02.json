@@ -2,7 +2,7 @@
   "article_id": "2b5b393044121d02",
   "title": "GPU architecture documentation",
   "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch.html",
-  "verified_at": "2026-06-24T06:01:00.703838+00:00",
+  "verified_at": "2026-06-25T05:59:43.924384+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
