@@ -2,7 +2,7 @@
   "article_id": "a7f14d8cfd9297f5",
   "title": "Data types and precision support",
   "source_url": "https://rocm.docs.amd.com/en/latest/reference/precision-support.html",
-  "verified_at": "2026-06-25T05:58:31.901299+00:00",
+  "verified_at": "2026-06-26T06:02:10.028490+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
