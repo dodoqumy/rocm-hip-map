@@ -2,7 +2,7 @@
   "article_id": "5617e8b9f4682798",
   "title": "ROCm 7.2.2 release notes",
   "source_url": "https://rocm.docs.amd.com/en/latest/about/release-notes.html",
-  "verified_at": "2026-06-29T06:30:49.669445+00:00",
+  "verified_at": "2026-06-30T06:04:20.058483+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",

@@ -2,7 +2,7 @@
   "article_id": "3cfe6cbb902c340e",
   "title": "LLM inference frameworks",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/llm-inference-frameworks.html",
-  "verified_at": "2026-06-29T06:29:57.650976+00:00",
+  "verified_at": "2026-06-30T06:03:28.040574+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
