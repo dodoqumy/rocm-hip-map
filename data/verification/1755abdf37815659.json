@@ -2,7 +2,7 @@
   "article_id": "1755abdf37815659",
   "title": "AMD MI300X tuning guides",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/tuning-guides/mi300x/index.html",
-  "verified_at": "2026-07-03T05:45:08.243837+00:00",
+  "verified_at": "2026-07-04T05:38:34.533125+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
