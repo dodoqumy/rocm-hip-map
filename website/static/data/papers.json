@@ -1,8 +1,42 @@
 {
   "version": 1,
-  "updated": "2026-06-27T08:33:30Z",
-  "total": 137,
+  "updated": "2026-07-04T08:33:44Z",
+  "total": 139,
   "papers": [
+    {
+      "id": "2606.31408v1",
+      "arxiv_id": "2606.31408v1",
+      "title": "EnclaveX: End-to-End Confidential AI with CPU/GPU TEEs",
+      "authors": [
+        "Robert Schambach",
+        "Quoc Do Le",
+        "Sergei Arnautov",
+        "Christof Fetzer"
+      ],
+      "abstract": "Large Language Models (LLMs) have rapidly proliferated, driving widespread adoption of AI applications. Most deployments rely on centralized infrastructures such as Microsoft Azure, Google Cloud, or AWS, requiring users to share sensitive data and training or fine-tuning code. This dependence raises significant security and privacy concerns, as cloud providers must be trusted to ensure confidentiality and integrity. Trusted Execution Environments (TEEs) e.g., Intel SGX/TDX, AMD SEV-SNP, and ARM CCA have been introduced to mitigate these risks. More recently, NVIDIA has developed GPU TEEs (e.g., H100/H200), yet comprehensive evaluations of end-to-end workflows that integrate CPU and GPU TEEs remain limited. Critical aspects, including performance overhead, remote attestation, and security guarantees for AI/LLM applications, have not been sufficiently studied. This paper addresses this gap by presenting an end-to-end workflow that combines CPU and GPU TEEs. We propose mechanisms to ensure confidentiality and integrity at both the VM level (via Intel TDX and AMD SEV-SNP) and the application level, highlighting vulnerabilities such as Kubernetes administrators' ability to access confidential VM contents. Finally, we evaluate the performance overhead of our system using industry benchmarks, focusing on configurations that integrate Intel TDX with NVIDIA H200 GPUs.",
+      "arxiv_url": "https://arxiv.org/abs/2606.31408v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.31408v1",
+      "published": "2026-06-30",
+      "updated": "2026-06-30",
+      "categories": [
+        "cs.CR",
+        "cs.OS"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "inference",
+        "llm",
+        "optimization",
+        "performance",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-07-04T08:33:44Z",
+      "extracted": false,
+      "translated": false
+    },
     {
       "id": "2606.20381v1",
       "arxiv_id": "2606.20381v1",
@@ -1067,6 +1101,42 @@
       "lifecycle": "latest",
       "fetched_at": "2026-04-28T08:39:25Z",
       "extracted": true,
+      "translated": false
+    },
+    {
+      "id": "2603.16428v2",
+      "arxiv_id": "2603.16428v2",
+      "title": "An Efficient Heterogeneous Co-Design for Fine-Tuning on a Single GPU",
+      "authors": [
+        "Ruijia Yang",
+        "Zeyi Wen"
+      ],
+      "abstract": "Fine-tuning Large Language Models (LLMs) has become essential for domain adaptation, but its memory-intensive property exceeds the capabilities of most GPUs. To address this challenge and democratize LLM fine-tuning, we present SlideFormer, a novel system designed for single-GPU environments. Our innovations are: (1) A lightweight asynchronous engine that treats the GPU as a sliding window and overlaps GPU computation with CPU updates and multi-tier I/O. (2) A highly efficient heterogeneous memory management scheme significantly reduces peak memory usage. (3) Optimized Triton kernels to solve key bottlenecks and integrated advanced I/O. This collaborative design enables fine-tuning of the latest 123B+ models on a single RTX 4090, supporting up to 8x larger batch sizes and 6x larger models. In evaluations, SlideFormer achieves 1.40x to 6.27x higher throughput while roughly halving CPU/GPU memory usage compared to baselines, sustaining >95% peak performance on both NVIDIA and AMD GPUs.The code is available at https://github.com/RegiaYoung/SlideFormer.",
+      "arxiv_url": "https://arxiv.org/abs/2603.16428v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.16428v2",
+      "published": "2026-03-17",
+      "updated": "2026-06-30",
+      "categories": [
+        "cs.DC",
+        "cs.AI"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "distributed-computing",
+        "kernel",
+        "llm",
+        "optimization",
+        "performance",
+        "porting",
+        "rocm",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-07-04T08:33:44Z",
+      "extracted": false,
       "translated": false
     },
     {
