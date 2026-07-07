@@ -2,7 +2,7 @@
   "article_id": "ab6ae450eb644755",
   "title": "AMD ROCm documentation",
   "source_url": "https://rocm.docs.amd.com/en/latest/index.html",
-  "verified_at": "2026-07-06T06:20:05.251418+00:00",
+  "verified_at": "2026-07-07T06:00:16.134344+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
