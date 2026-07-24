@@ -2,7 +2,7 @@
   "article_id": "8e60fee2835f699e",
   "title": "AMD Instinct™ MI300 Series microarchitecture",
   "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch/mi300.html",
-  "verified_at": "2026-07-23T05:18:28.245030+00:00",
+  "verified_at": "2026-07-24T05:13:52.660750+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
