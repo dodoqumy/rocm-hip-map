@@ -1,8 +1,111 @@
 {
   "version": 1,
-  "updated": "2026-07-25T08:05:36Z",
-  "total": 141,
+  "updated": "2026-08-01T08:16:17Z",
+  "total": 147,
   "papers": [
+    {
+      "id": "2607.26506v1",
+      "arxiv_id": "2607.26506v1",
+      "title": "Global Pass Barriers Without Per-Resource RHI Tracking: A Cross-Vendor Study with Blade",
+      "authors": [
+        "Dzmitry Malyshau"
+      ],
+      "abstract": "Explicit graphics APIs expose memory dependencies, per-resource accesses, and image layouts. wgpu reconstructs and validates this state; Blade keeps Vulkan images in GENERAL, tracks no per-resource state, and issues global pass-boundary barriers. We isolate barrier placement and stage/access scope within Blade, compare matched wgpu programs end-to-end, and measure six GPUs from four vendors, including exploratory Apple/Metal results. Removing fifteen redundant barriers from sixteen independent compute passes reduces GPU span by 29.3% on an RTX 5070 and 32.3% on an RX 7900 XT. It reduces independent-render span by 32.4% and 7.3% on the same discrete parts, but increases Radeon 780M span by 42.4% at 32 passes, beyond a 12.3% count-specific stability floor. No dependent-chain placement effect clears the study's cell-specific stability criterion. Deriving global barrier scope from the pass kinds around each boundary, without tracking any resource, saves 5.0% on an NVIDIA graphics chain and 6.7% on an AMD compute chain; no AMD render-involving scope cell resolves. wgpu's record-and-submit cost is higher in every measured cell, but this end-to-end difference cannot be attributed to tracking alone. RADV source shows why command counts do not predict these costs: broad global dependencies expand to several flush and invalidate requests that the driver may partly elide. It also shows that persistent GENERAL retains DCC under the measured RDNA conditions but disables FMASK. The resulting Blade direction is lightweight aggregate pass-kind state in a tracking-free RHI: an upstream render graph selects global dependency cuts, while aliasing, cross-queue use, exceptional layouts, and arbitrary per-resource DAG edges remain resource-aware engine responsibilities.",
+      "arxiv_url": "https://arxiv.org/abs/2607.26506v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.26506v1",
+      "published": "2026-07-29",
+      "updated": "2026-07-29",
+      "categories": [
+        "cs.GR",
+        "cs.PF"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "performance",
+        "rdna"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-08-01T08:16:10Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2607.22997v1",
+      "arxiv_id": "2607.22997v1",
+      "title": "Real2Sim2Real for Vision-Language-Action Manipulation: An AMD ROCm-Based Pipeline",
+      "authors": [
+        "Qing Yang",
+        "Xun Wang",
+        "Ziguan Wang",
+        "Zhenjiang Li",
+        "Hongqiang Wang",
+        "Dongdong Weng"
+      ],
+      "abstract": "Physical AI -- the integration of large vision-language-action (VLA) models with embodied agents that act in the real world -- has emerged as the next major frontier for AI, echoed by industry leaders such as Jensen Huang (``the next big thing is Physical AI, AI with a body,'' GTC Paris, June 2025) and Dr. Lisa Su (`we're entering the world of Physical AI ... this is where AI enters the real world,' CES 2026). This paper presents an end-to-end, fully AMD-accelerated technology stack for embodied manipulation, spanning data-center training silicon, Radeon PRO simulation/rendering GPUs, and Ryzen AI edge compute, unified by the open ROCm software stack. We demonstrate that training and deploying VLA-based manipulation policies does not require a CUDA-locked ecosystem. Four progressive demonstrations are presented: (1) a Sim-to-Real manipulation pipeline trained with SmolVLA and deployed on a physical Franka arm; (2) a semantic, language-grounded object-selection task (`one-of-three'); (3) a Real2Sim synthetic-data generation pipeline that fuses 3D Gaussian Splatting (3DGS) reconstructions of real scenes with the Genesis physics engine; and (4) large-scale reinforcement learning for quadruped and humanoid locomotion benchmarked across multiple hardware platforms. All pipelines run natively on ROCm + PyTorch on RDNA4 (Radeon AI PRO R9700) and RDNA3.5 (Radeon PRO W7900) hardware and are reproducible on the free Radeon Cloud Platform.",
+      "arxiv_url": "https://arxiv.org/abs/2607.22997v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.22997v1",
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "cuda",
+        "machine-learning",
+        "performance",
+        "rdna",
+        "rocm",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-08-01T08:16:00Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2607.18171v1",
+      "arxiv_id": "2607.18171v1",
+      "title": "FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications",
+      "authors": [
+        "Krish Agarwal",
+        "Zhuoming Chen",
+        "Yanyuan Qin",
+        "Zhenyu Gu",
+        "Atri Rudra",
+        "Beidi Chen"
+      ],
+      "abstract": "Real-time multimodal applications, including voice agents and interactive video generation, compose heterogeneous models into pipelines whose efficient deployment requires application-specific decisions about placement, streaming, and intra-model parallelism. Existing serving systems and auto-parallelism compilers commit to limited transformations and fixed workload assumptions, so achieving high performance on a new application requires hand-crafting an efficient implementation. We present FlashRT, an agent harness that guides coding agents to lift simple developer-written reference implementations into optimized multi-GPU deployments that flexibly weigh target metrics like latency and throughput. Using a new chain-of-program paradigm, FlashRT directs a generic coding agent through a multi-pass transformation process where an agent transforms the reference into an intermediate representation (IR) to capture data dependencies and persistent-state scopes, validates this IR via a sequential interpreter, and performs static analyses to identify candidate transformations. Then, the agent iteratively implements, verifies, and benchmarks each candidate under a measurement-gated optimization loop to produce effective deployments that span different hardware budgets. Across various applications, including video world models and multimodal LLMs, FlashRT converts reference implementations into highly efficient deployments, delivering up to ~70x latency reduction and 2.8x throughput improvement on NVIDIA B200 GPUs. On AMD MI355X GPUs, FlashRT matches the peak latency reduction while increasing peak throughput improvement to 3.6x, demonstrating that agent-driven optimization can be more scalable on platforms with less mature expert optimization. In fact, for Qwen3-Omni text-to-audio inference, FlashRT reduces response latency by 65% compared to the expert vLLM-Omni implementation on AMD MI355X.",
+      "arxiv_url": "https://arxiv.org/abs/2607.18171v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.18171v1",
+      "published": "2026-07-20",
+      "updated": "2026-07-20",
+      "categories": [
+        "cs.LG"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "inference",
+        "llm",
+        "machine-learning",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-08-01T08:16:17Z",
+      "extracted": false,
+      "translated": false
+    },
     {
       "id": "2607.12839v3",
       "arxiv_id": "2607.12839v3",
@@ -43,6 +146,45 @@
       "translated": false
     },
     {
+      "id": "2607.12839v4",
+      "arxiv_id": "2607.12839v4",
+      "title": "HeteroMosaic: Exposing and Exploiting Heterogeneous Execution Opportunities for Energy-Efficient Edge LLM Inference",
+      "authors": [
+        "Gregory Hyegang Jun",
+        "Wesley Pang",
+        "Eddie Richter",
+        "Mehdi Saeedi",
+        "Aporva Amarnath",
+        "Pallavi Ferrao",
+        "Deming Chen"
+      ],
+      "abstract": "Modern edge system-on-chips (SoCs) combine CPUs, integrated GPUs (iGPUs), and neural processing units (NPUs), yet existing LLM runtimes typically make coarse device-level decisions or optimize operators in isolation. As a result, they underutilize heterogeneous resources, particularly on unified-memory platforms where performance depends on both device placement and task-graph coordination. We present HeteroMosaic, a heterogeneity-first scheduling framework for edge LLM inference. HeteroMosaic first uses a heterogeneous roofline model to identify when combining iGPU and NPU execution is beneficial. It then decomposes inference into dependency-preserving micro-batches that expose cross-accelerator overlap and applies trace-guided co-optimization of scheduling and device allocation under practical effects such as memory contention, DVFS, device variation, and NPU runtime overheads. We implement HeteroMosaic in PyTorch C++ and evaluate it on three AMD Ryzen AI platforms spanning NPU-heavy, balanced, and iGPU-heavy designs. On the balanced platform, HeteroMosaic achieves up to 1.73X speedup over an iGPU baseline, 1.78X over an NPU baseline, and 2.05X over frameworks such as llama dot cpp, while reducing energy by up to 45.3%. It also improves performance over prior heterogeneous edge AI solutions by up to 2.35X.",
+      "arxiv_url": "https://arxiv.org/abs/2607.12839v4",
+      "pdf_url": "https://arxiv.org/pdf/2607.12839v4",
+      "published": "2026-07-14",
+      "updated": "2026-07-25",
+      "categories": [
+        "cs.DC",
+        "cs.AR"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "architecture",
+        "distributed-computing",
+        "hip",
+        "inference",
+        "llm",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-08-01T08:16:17Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
       "id": "2607.09541v1",
       "arxiv_id": "2607.09541v1",
       "title": "Portable Acceleration of Learning With Errors KEMs for Post-Quantum Cryptography",
@@ -78,6 +220,44 @@
       "lifecycle": "latest",
       "fetched_at": "2026-07-18T07:45:25Z",
       "extracted": true,
+      "translated": false
+    },
+    {
+      "id": "2607.09541v2",
+      "arxiv_id": "2607.09541v2",
+      "title": "Portable Acceleration of Learning With Errors KEMs for Post-Quantum Cryptography",
+      "authors": [
+        "Tiziana Liberati",
+        "Nitin Shukla",
+        "Simone Rizzo",
+        "Elisabetta Boella",
+        "Matteo Barbieri",
+        "Gabriella Bettonte",
+        "Daniele Gregori",
+        "Marco Pedicini"
+      ],
+      "abstract": "The transition to post-quantum cryptography (PQC) is driving demand for implementations that can meet the computational requirements of real-world applications. Among the proposed PQC constructions, Learning With Errors (LWE) based key encapsulation mechanisms (KEMs) are particularly attractive due to their strong security foundations, but they incur substantial computational costs from matrix operations and large-scale cryptographically secure random number generation. These characteristics position GPU acceleration as an effective approach for lowering the computational overhead of lattice based cryptographic schemes. In this work, we present a portable GPU implementation of a plain LWE based KEM using OpenMP Target offloading. Unlike most existing GPU implementations, which rely on CUDA specific optimizations, our approach uses a single source code base that executes on both NVIDIA and AMD accelerators. We evaluate the proposed implementation on different accelerator architectures, analyzing performance benchmarking, runtime profiling, scalability analysis, and energy to solution measurements. Experimental results show that OpenMP Target offloading delivers substantial acceleration over a multicore CPU baseline while preserving source level portability across heterogeneous GPU ecosystems. Cross platform analysis identifies NVIDIA GH200 and AMD MI300X as the most effective platforms for this memory bound workload, while profiling indicates that memory system organization and CPU GPU interaction play a more critical role than peak compute capability alone. These findings demonstrate that portable GPU acceleration can significantly reduce the computational overhead of PQC while avoiding vendor lock in, thereby facilitating the deployment of quantum resistant cryptographic infrastructures.",
+      "arxiv_url": "https://arxiv.org/abs/2607.09541v2",
+      "pdf_url": "https://arxiv.org/pdf/2607.09541v2",
+      "published": "2026-07-10",
+      "updated": "2026-07-28",
+      "categories": [
+        "cs.CR"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "inference",
+        "mi300",
+        "optimization",
+        "performance",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-08-01T08:16:14Z",
+      "extracted": false,
       "translated": false
     },
     {
@@ -1249,6 +1429,41 @@
       "lifecycle": "latest",
       "fetched_at": "2026-04-28T08:39:25Z",
       "extracted": true,
+      "translated": false
+    },
+    {
+      "id": "2603.14785v2",
+      "arxiv_id": "2603.14785v2",
+      "title": "SkipOPU: An FPGA-based Overlay Processor for Large Language Models with Dynamically Allocated Computation",
+      "authors": [
+        "Zicheng He",
+        "Anhao Zhao",
+        "Xiaoyu Shen",
+        "Chen Wu",
+        "Lei He"
+      ],
+      "abstract": "Large language models (LLMs) have achieved remarkable performance across a wide range of tasks, but their inference efficiency remains a critical bottleneck due to rapidly growing parameters. Recent advances in dynamic computation allocation address this challenge by exploiting the highly uneven contributions of different tokens and layers, enabling selective execution that significantly reduces redundant computation while preserving model accuracy. However, existing hardware platforms and accelerators are primarily optimized for uniform, static execution, limiting their ability to efficiently support such dynamic inference patterns. In this work, we propose SkipOPU, an FPGA-based overlay processor that dynamically allocates computation across tokens and layers with high flexibility through a lightweight routing mechanism. First, we decouple reduction operations from element-wise computation in nonlinear modules and perform reductions incrementally, which enables both stages to be fused with adjacent linear operations (router or matrix multiplication) for effective latency hiding. Second, motivated by asymmetric sensitivity to numerical precision between activation and weight, we design a PE array that efficiently supports float-fixed hybrid execution. A novel DSP overpacking technique is introduced to maximize hardware utilization while minimizing resource overhead. Finally, we develop a proactive on-chip KV history buffer that exploits cross-layer KV invariance of pruned tokens, eliminating irregular HBM accesses during decoding and supplementing off-chip bandwidth through high-locality on-chip reuse. Experimental results demonstrate that SkipOPU on an AMD U280 FPGA outperforms GPU and other FPGA-based accelerators by 1.23x-3.83x in bandwidth efficiency for LLMs inference with dynamic computation allocation and can reduce up to 25.4% KV storage overhead across varying sequence lengths.",
+      "arxiv_url": "https://arxiv.org/abs/2603.14785v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.14785v2",
+      "published": "2026-03-16",
+      "updated": "2026-07-26",
+      "categories": [
+        "cs.AR"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "architecture",
+        "hip",
+        "inference",
+        "llm",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-08-01T08:16:17Z",
+      "extracted": false,
       "translated": false
     },
     {
