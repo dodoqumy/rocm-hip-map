@@ -2,7 +2,7 @@
   "article_id": "1924b759af2fd4d0",
   "title": "HIP documentation",
   "source_url": "https://rocm.docs.amd.com/projects/HIP/en/latest/index.html",
-  "verified_at": "2026-07-31T05:28:57.460235+00:00",
+  "verified_at": "2026-08-01T05:21:28.640809+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",

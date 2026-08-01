@@ -2,7 +2,7 @@
   "article_id": "1253f1355327b577",
   "title": "System requirements (Linux)",
   "source_url": "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html",
-  "verified_at": "2026-07-31T05:28:45.456247+00:00",
+  "verified_at": "2026-08-01T05:21:16.637315+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
