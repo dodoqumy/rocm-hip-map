@@ -2,7 +2,7 @@
   "article_id": "da0df28eaae6c676",
   "title": "Use ROCm for AI inference optimization",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/index.html",
-  "verified_at": "2026-08-02T05:19:29.965765+00:00",
+  "verified_at": "2026-08-03T05:34:05.207976+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
