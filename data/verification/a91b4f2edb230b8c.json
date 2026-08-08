@@ -2,7 +2,7 @@
   "article_id": "a91b4f2edb230b8c",
   "title": "Use ROCm for AI inference",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/index.html",
-  "verified_at": "2026-08-07T04:20:00.795888+00:00",
+  "verified_at": "2026-08-08T03:17:41.428559+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",

@@ -2,7 +2,7 @@
   "article_id": "ddefaa24a2496956",
   "title": "Scaling model training",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/training/scale-model-training.html",
-  "verified_at": "2026-08-07T04:19:50.792716+00:00",
+  "verified_at": "2026-08-08T03:17:31.425218+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
