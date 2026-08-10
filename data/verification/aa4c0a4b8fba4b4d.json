@@ -2,7 +2,7 @@
   "article_id": "aa4c0a4b8fba4b4d",
   "title": "AMD Instinct MI300X performance guides",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/gpu-performance/mi300x.html",
-  "verified_at": "2026-08-09T03:25:45.336175+00:00",
+  "verified_at": "2026-08-10T03:44:40.034389+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
