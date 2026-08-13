@@ -2,7 +2,7 @@
   "article_id": "2955f36314977d25",
   "title": "Troubleshoot BAR access limitation",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/Bar-Memory.html",
-  "verified_at": "2026-08-12T03:56:37.972122+00:00",
+  "verified_at": "2026-08-13T04:01:58.341886+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
