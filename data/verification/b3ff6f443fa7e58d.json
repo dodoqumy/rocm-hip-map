@@ -2,7 +2,7 @@
   "article_id": "b3ff6f443fa7e58d",
   "title": "Use ROCm for fine-tuning LLMs",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/fine-tuning/index.html",
-  "verified_at": "2026-08-13T04:01:48.337916+00:00",
+  "verified_at": "2026-08-14T03:57:16.191414+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
