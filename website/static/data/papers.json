@@ -1,8 +1,37 @@
 {
   "version": 1,
-  "updated": "2026-08-08T06:47:21Z",
-  "total": 148,
+  "updated": "2026-08-15T06:33:04Z",
+  "total": 151,
   "papers": [
+    {
+      "id": "2608.11882v1",
+      "arxiv_id": "2608.11882v1",
+      "title": "Evaluating OpenMP Offloading for Intra-node Multi-GPU Programming across NVIDIA, AMD, and Intel Architectures: A 3D Heat Transfer Case Study",
+      "authors": [
+        "Ezhilmathi Krishnasamy"
+      ],
+      "abstract": "Currently, most supercomputers are equipped with GPUs from manufacturers such as NVIDIA, AMD, or Intel, which provide substantial parallelism and high throughput. It is common for a single compute node (intra-node) to host multiple GPUs, typically four or more. Therefore, effectively leveraging all these GPUs within a single compute node is essential for applications in scientific and engineering domains. However, several factors must be considered before utilizing these GPUs for scientific computing, including the implementation of data communication, the programming models available for use across these GPUs, and the level of performance that can be achieved with a single codebase across different GPU architectures and configurations within a single compute node. OpenMP Offloading is a prominent directive-based programming model that can be executed on all three GPU types: NVIDIA, AMD, and Intel. In this research, we present an analysis of the benefits and performance challenges of using OpenMP Offloading to address the 3D heat equations, which involve both primary computation, as well as halo computation and communication. We investigate how performance varies in relation to native GPU programming models--CUDA for NVIDIA, HIP for AMD, and SYCL for Intel. Furthermore, we demonstrate that OpenMP Offloading can achieve performance improvements of approximately 2x for 2 GPUs and around 4x for 4 GPUs when compared to single-GPU OpenMP Offloading implementations across all three GPU types. This analysis is conducted systematically through various OpenMP Offloading implementations that utilize different low-level APIs for memory allocation, memory transfer options (synchronous, asynchronous, and peer-to-peer), and other native GPU programming models such as CUDA (NVIDIA), HIP (AMD), and SYCL (Intel)",
+      "arxiv_url": "https://arxiv.org/abs/2608.11882v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.11882v1",
+      "published": "2026-08-12",
+      "updated": "2026-08-12",
+      "categories": [
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "hip",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-08-15T06:32:49Z",
+      "extracted": false,
+      "translated": false
+    },
     {
       "id": "2608.01563v1",
       "arxiv_id": "2608.01563v1",
@@ -35,7 +64,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-08-08T06:47:04Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -139,6 +168,41 @@
       "lifecycle": "latest",
       "fetched_at": "2026-08-01T08:16:17Z",
       "extracted": true,
+      "translated": false
+    },
+    {
+      "id": "2607.18171v2",
+      "arxiv_id": "2607.18171v2",
+      "title": "FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications",
+      "authors": [
+        "Krish Agarwal",
+        "Zhuoming Chen",
+        "Yanyuan Qin",
+        "Zhenyu Gu",
+        "Atri Rudra",
+        "Beidi Chen"
+      ],
+      "abstract": "Real-time multimodal applications, including voice agents and interactive video generation, compose heterogeneous models into pipelines whose efficient deployment requires application-specific decisions about placement, streaming, and intra-model parallelism. Existing serving systems and auto-parallelism compilers commit to limited transformations and fixed workload assumptions, so achieving high performance on a new application requires hand-crafting an efficient implementation. We present FlashRT, an agent harness that guides coding agents to lift simple developer-written reference implementations into optimized multi-GPU deployments that flexibly weigh target metrics like latency and throughput. Using a new chain-of-program paradigm, FlashRT directs a generic coding agent through a multi-pass transformation process where an agent transforms the reference into an intermediate representation (IR) to capture data dependencies and persistent-state scopes, validates this IR via a sequential interpreter, and performs static analyses to identify candidate transformations. Then, the agent iteratively implements, verifies, and benchmarks each candidate under a measurement-gated optimization loop to produce effective deployments that span different hardware budgets. Across various applications, including video world models and multimodal LLMs, FlashRT converts reference implementations into highly efficient deployments, delivering up to ~70x latency reduction and 2.8x throughput improvement on NVIDIA B200 GPUs. On AMD MI355X GPUs, FlashRT matches the peak latency reduction while increasing peak throughput improvement to 3.6x, demonstrating that agent-driven optimization can be more scalable on platforms with less mature expert optimization. In fact, for Qwen3-Omni text-to-audio inference, FlashRT reduces response latency by 65% compared to the expert vLLM-Omni implementation on AMD MI355X.",
+      "arxiv_url": "https://arxiv.org/abs/2607.18171v2",
+      "pdf_url": "https://arxiv.org/pdf/2607.18171v2",
+      "published": "2026-07-20",
+      "updated": "2026-08-10",
+      "categories": [
+        "cs.LG"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "inference",
+        "llm",
+        "machine-learning",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-08-15T06:33:04Z",
+      "extracted": false,
       "translated": false
     },
     {
@@ -665,6 +729,43 @@
       "lifecycle": "latest",
       "fetched_at": "2026-05-16T08:02:11Z",
       "extracted": true,
+      "translated": false
+    },
+    {
+      "id": "2605.09825v4",
+      "arxiv_id": "2605.09825v4",
+      "title": "Pretraining large language models with MXFP4 on Native FP4 Hardware",
+      "authors": [
+        "Musa Cim",
+        "Sarthak Arora",
+        "Poovaiah Palangappa",
+        "Miro Hodak",
+        "Ravi Dwivedula",
+        "Meena Arunachalam",
+        "Mahmut Taylan Kandemir"
+      ],
+      "abstract": "Why does full-pipeline FP4 training of large language models often diverge, even when forward activations and activation gradients remain stable? We address this question through a controlled study of MXFP4 quantization in transformer training, progressively enabling FP4 across forward propagation (Fprop), activation gradients (Dgrad), and weight gradients (Wgrad) while holding all other factors fixed. In full pretraining of Llama 3.1-8B on the C4 dataset, we observe that quantizing Wgrad is the primary driver of convergence degradation, whereas FP4 in Fprop and Dgrad alone introduces only modest additional token requirements. To interpret this behavior, we evaluate both structured and stochastic interventions under a controlled experimental setting. We find that stochastic rounding and randomized Hadamard rotations fail to stabilize training once Wgrad is quantized, whereas deterministic Hadamard rotations consistently restore stable optimization. These results suggest that FP4 training instability is driven by structured micro-scaling errors along sensitive gradient paths, rather than by insufficient stochasticity. We run experiments with native MXFP4 support on AMD Instinct MI355X GPUs, enabling controlled investigation of these effects without reliance on software emulation.",
+      "arxiv_url": "https://arxiv.org/abs/2605.09825v4",
+      "pdf_url": "https://arxiv.org/pdf/2605.09825v4",
+      "published": "2026-05-11",
+      "updated": "2026-08-12",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "llm",
+        "machine-learning",
+        "optimization",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-08-15T06:32:53Z",
+      "extracted": false,
       "translated": false
     },
     {
