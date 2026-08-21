@@ -2,7 +2,7 @@
   "article_id": "49ce523fae4ad671",
   "title": "Using compiler features",
   "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/compiler-topics.html",
-  "verified_at": "2026-08-20T02:50:08.853885+00:00",
+  "verified_at": "2026-08-21T02:56:21.977581+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
