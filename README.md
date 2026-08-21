@@ -1,12 +1,18 @@
-# rocm-hip-map 
+# ROCm HIP Map
 
-> 定位：  
-> 建设一个 **ROCm + HIP 一手情报中外文对照阅读网站**  
-> 面向开发者、工程师、研究者。  
-> 核心价值：官方优先、原文可追溯、双语对照、结构化检索。
+> Continuously maintained bilingual knowledge infrastructure for the ROCm/HIP ecosystem.
+>
+> 面向开发者、工程师和研究者的一手 ROCm/HIP 技术资料聚合、追踪与双语知识库。
 
-🌐 **预览：** https://dodoqumy.github.io/rocm-hip-map/  
-📋 **开发进度：** [PROGRESS.md](docs/PROGRESS.md) — 实时更新的 Phase 完成情况 & Tasklist
+🌐 **Live site:** https://dodoqumy.github.io/rocm-hip-map/
+
+### Project at a glance
+
+- 📚 **1,600+** first-party technical documents
+- 🔗 **40+** actively tracked ROCm/AMD documentation sources
+- ⚙️ **8** automated GitHub workflows
+- 🔄 Automated upstream synchronization, validation and translation
+- 🌏 Bilingual English ↔ Chinese publishing pipeline
 
 ---
 
