@@ -1,8 +1,62 @@
 {
   "version": 1,
-  "updated": "2026-08-22T06:35:02Z",
-  "total": 152,
+  "updated": "2026-08-29T12:16:51Z",
+  "total": 153,
   "papers": [
+    {
+      "id": "2608.20711v1",
+      "arxiv_id": "2608.20711v1",
+      "title": "AsmEvo: Agentic Assembly-Level Optimization of AMD GPU Kernels with Functional Equivalence Verification",
+      "authors": [
+        "Ji Liu",
+        "Puyuan Yang",
+        "Rongzhang Zheng",
+        "Fan Wang",
+        "Jinglin Wang",
+        "Muhammad A. Awad",
+        "Mortis Huang",
+        "Andy Chang",
+        "Zekai Li",
+        "Zeping Li",
+        "Zihao An",
+        "Yue Liu",
+        "Yuchen Yang",
+        "Jianghui Wang",
+        "Chushi Chen",
+        "Ziqiong Liu",
+        "Fuwei Yang",
+        "Dong Li",
+        "Wen Heng Chung",
+        "Shengcai Liu",
+        "Emad Barsoum"
+      ],
+      "abstract": "High-performance ML systems increasingly rely on GPU kernels whose editable source is unavailable, generated, or too distant from final machine code to expose remaining optimizations. Existing LLM kernel optimizers and autotuners mainly operate on CUDA, Triton, HIP, or tensor-program source and validate against reference implementations. We study a stricter setting: optimizing an already compiled AMDGPU code object, where the deployed binary is the only behavioral oracle. We present AsmEvo, an agentic assembly-level optimizer for AMD GPU kernels. Given an AMDGPU code object K0, AsmEvo reconstructs a reassemblable representation, proposes low-level edits with a long-horizon agent, rebuilds an ABI-preserving optimized object, and accepts candidates only after differential verification against K0 under identical launches. AsmEvo combines code-object recovery, metadata-aware rebuilding, profiling-guided hot-window editing, correctness-gated timing, and conservative in-place patch fallback. We conduct extensive experiments with AsmEvo on various AMD GPU kernels. On MI308X, AsmEvo improves 29 of 30 selected KernelBench kernels, reaching 1.35x geometric-mean and 3.88x maximum speedup. On MI300X production workloads, it improves all evaluated AITer binaries and vLLM/SGLang Triton assembly kernels, reaching 1.09x/1.31x and 1.18x/1.34x geometric-mean/maximum speedups, respectively, while preserving functional equivalence.",
+      "arxiv_url": "https://arxiv.org/abs/2608.20711v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.20711v1",
+      "published": "2026-08-21",
+      "updated": "2026-08-21",
+      "categories": [
+        "cs.CL"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "hip",
+        "inference",
+        "kernel",
+        "llm",
+        "mi300",
+        "optimization",
+        "performance",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-08-29T12:16:38Z",
+      "extracted": false,
+      "translated": false
+    },
     {
       "id": "2608.11882v1",
       "arxiv_id": "2608.11882v1",
@@ -66,7 +120,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-08-22T06:34:47Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
