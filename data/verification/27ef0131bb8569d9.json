@@ -2,7 +2,7 @@
   "article_id": "27ef0131bb8569d9",
   "title": "Deploying your model",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/deploy-your-model.html",
-  "verified_at": "2026-08-29T08:26:55.172977+00:00",
+  "verified_at": "2026-08-30T07:41:15.174065+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
