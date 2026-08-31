@@ -2,7 +2,7 @@
   "article_id": "4a0895c573cb0ac0",
   "title": "Programming guide",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/programming_guide.html",
-  "verified_at": "2026-08-30T07:41:25.177288+00:00",
+  "verified_at": "2026-08-31T07:55:18.017682+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
