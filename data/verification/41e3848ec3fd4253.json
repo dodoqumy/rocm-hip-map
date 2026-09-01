@@ -2,7 +2,7 @@
   "article_id": "41e3848ec3fd4253",
   "title": "Supported CUDA APIs",
   "source_url": "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/supported_apis.html",
-  "verified_at": "2026-08-31T07:56:02.032282+00:00",
+  "verified_at": "2026-09-01T07:02:07.736452+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
