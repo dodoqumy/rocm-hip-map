@@ -2,7 +2,7 @@
   "article_id": "6a9e2e77e04dee75",
   "title": "Contributing to the ROCm documentation",
   "source_url": "https://rocm.docs.amd.com/en/latest/contribute/contributing.html",
-  "verified_at": "2026-09-02T06:39:24.534538+00:00",
+  "verified_at": "2026-09-03T06:41:49.267805+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",

@@ -2,7 +2,7 @@
   "article_id": "79d59a12ff9a6fe3",
   "title": "ROCm license",
   "source_url": "https://rocm.docs.amd.com/en/latest/about/license.html",
-  "verified_at": "2026-09-02T06:39:50.542352+00:00",
+  "verified_at": "2026-09-03T06:42:15.275841+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
