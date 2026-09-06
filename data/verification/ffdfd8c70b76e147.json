@@ -2,7 +2,7 @@
   "article_id": "ffdfd8c70b76e147",
   "title": "Hardware atomics operation support",
   "source_url": "https://rocm.docs.amd.com/en/latest/reference/gpu-atomics-operation.html",
-  "verified_at": "2026-09-05T06:31:37.119458+00:00",
+  "verified_at": "2026-09-06T06:40:21.602739+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
