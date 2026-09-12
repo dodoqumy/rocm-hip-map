@@ -1,8 +1,87 @@
 {
   "version": 1,
-  "updated": "2026-09-05T09:57:49Z",
-  "total": 154,
+  "updated": "2026-09-12T10:05:05Z",
+  "total": 156,
   "papers": [
+    {
+      "id": "2609.11356v1",
+      "arxiv_id": "2609.11356v1",
+      "title": "Taming Bitwise Behavior in GPU Kernels with Tensor Core: Black-Box Reconstruction, Compiler Enforcement, and Static Verification",
+      "authors": [
+        "Ziteng Yang",
+        "Nicholas J. Riasanovsky",
+        "Warren Deng",
+        "Vivek Sarkar"
+      ],
+      "abstract": "Determinism and numerical reproducibility are increasingly required of GPU kernels in machine learning systems, yet deterministic implementations of the same kernel can still differ bit for bit. Floating-point reduction order is the primary cause, alongside partial-sum precision, fused multiply-add operations, and rounding placement. These choices may be hand-coded, selected by a block-level language such as Triton, or hidden inside a closed-source library such as cuBLAS or rocBLAS. A tile shape chosen for performance therefore also determines the arithmetic, potentially breaking batch invariance. Preserving a fixed order can cost up to 20 percent, while an autotuner cannot identify which configurations are bitwise equivalent. We characterize the factors determining the bitwise behavior of reductions and general matrix multiplication (GEMM). First, we introduce a descriptor of GEMM reduction order, including the partitioning of K in split-K GEMM. Using it, we perform the first black-box reconstruction of a closed-source library's arithmetic for bit-level correctness. Our family of Triton GEMMs matches NVIDIA cuBLAS in all tested cases on Blackwell and Hopper. For realistic LLM shapes with fused epilogues, it matches or exceeds torch.compile performance. Second, we enforce balanced-tree reduction during Triton lowering and introduce a data-layout optimization that brings 19 of 27 kernels on GB300 and H100 within 10 percent of free-order performance. Third, we develop sound static checkers for bitwise equivalence between compiled GPU kernels, including the first checker spanning NVIDIA PTX and AMD GCN. Integrated into Triton's autotuner, the checker restricts search to a single bit-equivalence class.",
+      "arxiv_url": "https://arxiv.org/abs/2609.11356v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11356v1",
+      "published": "2026-09-10",
+      "updated": "2026-09-10",
+      "categories": [
+        "cs.DC",
+        "cs.PF",
+        "cs.PL"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "distributed-computing",
+        "inference",
+        "kernel",
+        "llm",
+        "machine-learning",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-09-12T10:05:05Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2609.09270v1",
+      "arxiv_id": "2609.09270v1",
+      "title": "Python in the front, party in the Backline: compiling quantum workloads across CPUs, GPUs, and FPGAs",
+      "authors": [
+        "Joseph K. L. Lee",
+        "Mehrdad Malekmohammadi",
+        "Hong-Sheng Zheng",
+        "Shuli Shu",
+        "Cheick Doumbia",
+        "Kalman Szenes",
+        "Mehran Zamani Abnili",
+        "Thomas Ainsworth",
+        "Matthew Seymour",
+        "Thomas Germain",
+        "Leonhard Neuhaus",
+        "Josh Izaac",
+        "Lee J. O'Riordan"
+      ],
+      "abstract": "Moving from quantum research and development to production-grade, fault-tolerant quantum workload execution remains one of the most significant challenges facing quantum platform builders. While Python frameworks have enabled an easy entry point for quantum algorithm design, the low-latency requirements for real-time quantum error correction (QEC) demand performance that traditional interpreted environments cannot provide. FPGAs and ASICs play a central role at these layers, but their specialized programming models make development rigid and time-consuming. CPUs, GPUs, and other accelerators introduce a different challenge: as infrastructure becomes increasingly heterogeneous, programming across different devices and their associated abstractions becomes more complex. Allowing researchers to write workloads in high-level languages that map to low-latency execution across diverse distributed target platforms will enable the development of key infrastructure for utility-scale quantum systems. For this, we introduce $\\textit{Backline}$, a heterogeneous compilation and runtime framework built within PennyLane and Catalyst. Backline allows us to design and build quantum-classical workloads for high-performance and low-latency devices, with compilation directly from a Python interface through MLIR. We demonstrate the compilation and execution of several quantum workloads with low-latency data movement across a mix of CPUs, GPUs, and FPGAs, for both local and distributed remote hardware targets, all from a vendor-agnostic Python frontend. With an AMD VPK120 FPGA board as the controller, issuing each round from its hardware-handshake engine, we measured median steady-state round-trip latencies over RoCE v2 of $2.305~μ$s to an AMD Ryzen Threadripper PRO CPU and $4.5~μ$s to an AMD Instinct MI210 GPU across $10^6-1$ rounds per path, demonstrating microsecond-scale synchronous co-processing.",
+      "arxiv_url": "https://arxiv.org/abs/2609.09270v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.09270v1",
+      "published": "2026-09-08",
+      "updated": "2026-09-08",
+      "categories": [
+        "quant-ph",
+        "cs.DC",
+        "cs.PL"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "distributed-computing",
+        "mi300",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-09-12T10:04:45Z",
+      "extracted": false,
+      "translated": false
+    },
     {
       "id": "2609.00791v1",
       "arxiv_id": "2609.00791v1",
@@ -45,7 +124,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-09-05T09:57:32Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
