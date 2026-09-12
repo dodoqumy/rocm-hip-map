@@ -2,7 +2,7 @@
   "article_id": "d0c502ec94271f4a",
   "title": "ROCm tools, compilers, and runtime API",
   "source_url": "https://rocm.docs.amd.com/en/latest/reference/rocm-tools.html",
-  "verified_at": "2026-09-11T06:50:15.420938+00:00",
+  "verified_at": "2026-09-12T06:42:07.784274+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
