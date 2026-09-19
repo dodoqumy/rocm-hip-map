@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-12T10:05:05Z",
+  "updated": "2026-09-19T10:17:45Z",
   "total": 156,
   "papers": [
     {
@@ -37,7 +37,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-09-12T10:05:05Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -79,7 +79,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-09-12T10:04:45Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
