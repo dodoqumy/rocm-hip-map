@@ -2,7 +2,7 @@
   "article_id": "a880ea370ea0fe01",
   "title": "Using hipify-clang",
   "source_url": "https://rocm.docs.amd.com/projects/HIPIFY/en/latest/hipify-clang.html",
-  "verified_at": "2026-09-25T06:53:20.030354+00:00",
+  "verified_at": "2026-09-26T06:54:21.803532+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
