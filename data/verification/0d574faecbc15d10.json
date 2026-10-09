@@ -2,7 +2,7 @@
   "article_id": "0d574faecbc15d10",
   "title": "Deep learning frameworks for ROCm",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/deep-learning-rocm.html",
-  "verified_at": "2026-10-08T08:12:07.706003+00:00",
+  "verified_at": "2026-10-09T08:14:35.551340+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
