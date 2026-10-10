@@ -1,8 +1,107 @@
 {
   "version": 1,
-  "updated": "2026-10-03T11:05:21Z",
-  "total": 171,
+  "updated": "2026-10-10T11:53:57Z",
+  "total": 174,
   "papers": [
+    {
+      "id": "2610.09372v1",
+      "arxiv_id": "2610.09372v1",
+      "title": "Expert Coupling in MoE Pretraining: Reducing All-to-All Overhead with Correlated Placement and Token Shuffling",
+      "authors": [
+        "Radha Gulhane",
+        "Quentin Anthony",
+        "Beren Millidge"
+      ],
+      "abstract": "Mixture-of-Experts (MoE) layers replace the feed-forward block of a Transformer with E expert networks, and each token is routed to k of these experts. Under expert parallelism (EP) the experts are distributed across GPUs, and every MoE layer runs all-to-all collectives in the forward and backward passes to dispatch tokens to their experts and then combine the results. On a cluster with 8 AMD Instinct MI300X GPUs per node, these collectives can take 45% of the training step at EP32 with top-2 routing and 60% with top-6 routing. We find that early in pretraining routers have already learned to assign tokens to experts in correlated patterns, both within a layer and across layers. At top-2, 0.8% of the expert pairs in a layer are selected together by 42% of tokens, and the experts a token selects at one layer predict the experts it selects at the next layer. We use these correlations to keep more token--expert assignments on the token's own GPU, which reduces communication across GPUs and across nodes. Correlated expert placement puts experts that are often selected together on the same GPU. Combined with a dispatcher that sends each token to each GPU once, it removes up to 58% of dispatched rows. Token shuffling applies when sequence parallelism shards tokens across the EP group. It moves each token to the GPU predicted to hold its next-layer experts during the reduce-scatter that follows attention. On one node this raises the share of token--expert assignments served on the token's GPU from 12.5% to 59%. In Megatron-LM, across EP degrees from 8 to 64 with top-2 and top-6 routing, the two methods reduce all-to-all time by 1.16-2.63X and end-to-end step time by up to 1.41X. Neither method changes the models' underlying routing decisions or expert parameters.",
+      "arxiv_url": "https://arxiv.org/abs/2610.09372v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.09372v1",
+      "published": "2026-10-07",
+      "updated": "2026-10-07",
+      "categories": [
+        "cs.CL",
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "distributed-computing",
+        "llm",
+        "mi300",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-10-10T11:53:47Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2610.04037v1",
+      "arxiv_id": "2610.04037v1",
+      "title": "BitIR: Cross-Architecture Fault Injection for Resilience Analysis of Heterogeneous GPU Applications",
+      "authors": [
+        "Maisy Dunlavy",
+        "Michael Papka",
+        "Zhiling Lan"
+      ],
+      "abstract": "Modern GPU-based HPC systems rely on heterogeneous vendor stacks, yet resilience studies are largely limited to single architectures, leaving it unclear how faults behave across different GPU backends. We present \\emph{BitIR}, a cross-architecture fault injection framework that injects deterministic single-bit faults at the LLVM IR level, ensuring semantically equivalent perturbations prior to backend lowering and enabling direct cross-vendor comparison across NVIDIA, Intel, and AMD GPUs. We evaluate BitIR on three production supercomputers -- Polaris (ALCF, NVIDIA A100), Aurora (ALCF, Intel GPU Max 1550), and Frontier (OLCF, AMD Instinct MI250X) -- representing the full spectrum of current leadership-class GPU architectures. Using representative heterogeneous benchmarks, we conduct large-scale injection campaigns across all three systems and classify outcomes into masked results, silent data corruptions (SDCs), and failures. Our results show that identical faults produce markedly different behaviors across vendors: Intel most often masks faults but exhibits more hangs when faults escape masking, NVIDIA exposes more detectable hard failures, and AMD alternates between SDC-dominant and failure-dominant behavior depending on the benchmark and fault site. These findings demonstrate that resilience is not backend-invariant, underscoring the need for backend-aware and workload-aware fault mitigation.",
+      "arxiv_url": "https://arxiv.org/abs/2610.04037v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.04037v1",
+      "published": "2026-10-02",
+      "updated": "2026-10-02",
+      "categories": [
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "distributed-computing",
+        "hip",
+        "hpc",
+        "mi300",
+        "performance",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-10-10T11:53:47Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2610.02745v1",
+      "arxiv_id": "2610.02745v1",
+      "title": "AI-Assisted GPU optimization of the Stochastic Variational Method for Few-Body Boson System",
+      "authors": [
+        "Noritaka Shimizu",
+        "Shigeyoshi Aoyama",
+        "Yusuke Tsunoda",
+        "Akira Nukada"
+      ],
+      "abstract": "The stochastic variational method (SVM) is one of the most powerful methods to solve quantum few-body systems precisely in various fields, such as nuclear and atomic physics. To the best of our knowledge, no SVM code optimized for GPUs has been reported. We developed a parallel SVM code for few-body clusters of $^4$He atoms and optimized it for two GPU architectures, NVIDIA GH200 and AMD Instinct MI300A, with the entire code written by an AI coding agent. On the algorithmic side, we introduce the secular-equation method with the Gu--Eisenstat prescription for solving the generalized eigenvalue problem within the SVM framework. The main part of the code tuning is to batch the many small matrices so that the GPUs are used efficiently, together with an array layout in memory optimized for coalesced addressing. For the five-body system with 4800 SVM basis states, the tuned SVM code runs 16.2 (14.7) times faster on the NVIDIA GH200 (AMD MI300A) than the same tuned code on the Intel Xeon Max CPU system, and 168 (153) times faster than the first working CPU implementation. The achieved performance brings 6-body and larger cluster systems within reach.",
+      "arxiv_url": "https://arxiv.org/abs/2610.02745v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.02745v1",
+      "published": "2026-10-02",
+      "updated": "2026-10-02",
+      "categories": [
+        "physics.comp-ph",
+        "cs.DC",
+        "nucl-th"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "distributed-computing",
+        "mi300",
+        "optimization",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-10-10T11:53:47Z",
+      "extracted": false,
+      "translated": false
+    },
     {
       "id": "2609.37916v1",
       "arxiv_id": "2609.37916v1",
@@ -36,7 +135,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-10-03T11:05:04Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -66,7 +165,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-10-03T11:05:04Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -105,7 +204,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-10-03T11:05:10Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -145,7 +244,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-10-03T11:05:17Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -189,7 +288,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-10-03T11:05:21Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -223,7 +322,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-10-03T11:05:14Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -262,7 +361,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-10-03T11:05:21Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -300,7 +399,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-10-03T11:05:04Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -338,7 +437,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-10-03T11:05:21Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -374,7 +473,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-10-03T11:05:07Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -407,7 +506,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-10-03T11:05:14Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -457,7 +556,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-10-03T11:05:04Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -693,7 +792,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-10-03T11:05:07Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -1837,7 +1936,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-10-03T11:05:21Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -3081,7 +3180,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-10-03T11:05:10Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
