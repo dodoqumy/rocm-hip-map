@@ -2,7 +2,7 @@
   "article_id": "f864d5eb192f1bdf",
   "title": "ROCm installation for Linux",
   "source_url": "https://rocm.docs.amd.com/projects/install-on-linux/en/latest/index.html",
-  "verified_at": "2026-10-14T06:56:11.493577+00:00",
+  "verified_at": "2026-10-15T06:45:41.745133+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",

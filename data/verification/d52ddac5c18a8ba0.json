@@ -2,7 +2,7 @@
   "article_id": "d52ddac5c18a8ba0",
   "title": "GPU hardware specifications",
   "source_url": "https://rocm.docs.amd.com/en/latest/reference/gpu-arch-specs.html",
-  "verified_at": "2026-10-14T06:54:47.410008+00:00",
+  "verified_at": "2026-10-15T06:44:17.711627+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
