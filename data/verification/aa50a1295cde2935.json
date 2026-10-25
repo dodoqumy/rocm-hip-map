@@ -2,7 +2,7 @@
   "article_id": "aa50a1295cde2935",
   "title": "Deep learning: Inception V3 with PyTorch",
   "source_url": "https://rocm.docs.amd.com/en/latest/conceptual/ai-pytorch-inception.html",
-  "verified_at": "2026-10-24T06:42:25.871046+00:00",
+  "verified_at": "2026-10-25T07:08:10.844365+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
