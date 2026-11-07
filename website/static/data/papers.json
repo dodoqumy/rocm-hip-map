@@ -1,8 +1,361 @@
 {
   "version": 1,
-  "updated": "2026-10-31T11:40:30Z",
-  "total": 180,
+  "updated": "2026-11-07T12:26:38Z",
+  "total": 189,
   "papers": [
+    {
+      "id": "2611.07496v1",
+      "arxiv_id": "2611.07496v1",
+      "title": "ZYFA: Speed and Accuracy of FP8 FlashAttention on AMD CDNA4",
+      "authors": [
+        "Quentin Anthony",
+        "Ganesh Bikshandi",
+        "Praneeth Medepalli",
+        "Stephen Ebert"
+      ],
+      "abstract": "Attention is a core building block of frontier models and often dominates compute-bound prefill at long context. FP8 matrix instructions offer twice the peak throughput of BF16, but they accelerate only matrix multiplication, and the softmax between the two matrix multiplications of attention runs on vector units that FP8 does not accelerate. On the AMD Instinct MI355X, the vendor's AITER kernels reach 39% of peak FP8 matrix throughput at 32K tokens, compared with 49% in BF16. Attention is also more numerically sensitive to quantization than feed-forward layers, and unlike NVIDIA's Hopper and Blackwell GPUs, the MI355X does not track the completion of matrix instructions in hardware, so overlapping the softmax with the matrix multiplications depends on instruction order. We present ZYFA, prefill kernels for the MI355X built on three techniques: (1) computing each FP8 probability directly from its score with a multiply-add and an integer conversion instead of an exponential; (2) a ping-pong schedule in which one group of threads computes its softmax while another executes its matrix multiplications; and (3) scaling each block of probabilities up by a power of two before rounding, and normalizing by the sum of the rounded probabilities. On attention inputs captured from three models and timed at sustained clock speeds, ZYFA achieves 1.16-1.76x the throughput of AITER. On the Gaussian inputs of kernel benchmarks at 32K tokens, it achieves 1.26-1.37x at head dimension 128 and 1.99x for DeepSeek-style multi-head latent attention. The sustained clock of the MI355X depends on operand values, so throughput on random inputs does not reliably predict throughput on real model activations. At head dimension 128, ZYFA's numerical error is within a few percent of that of Composable Kernel and Triton and 62-78% lower than that of AITER's. The source code is available at https://github.com/Zyphra/zyfa.",
+      "arxiv_url": "https://arxiv.org/abs/2611.07496v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.07496v1",
+      "published": "2026-11-05",
+      "updated": "2026-11-05",
+      "categories": [
+        "cs.DC",
+        "cs.LG"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna",
+        "distributed-computing",
+        "kernel",
+        "machine-learning",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-11-07T12:26:27Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2611.07477v1",
+      "arxiv_id": "2611.07477v1",
+      "title": "KOSMOS: Self-scheduling Persistent Kernels for Communication-Compute Overlap",
+      "authors": [
+        "Alexander Magro",
+        "Aristotle Martin",
+        "Ye Wang",
+        "Wen Chen"
+      ],
+      "abstract": "Tensor and sequence parallelism (TP+SP) and expert parallelism (EP) put collectives on the critical path of transformer layers. State-of-the-art fused kernels mitigate this with fixed roles or schedules, but this rigidity leaves large idle windows. Predicting a communication-computation split does not remove them either; a predetermined split cannot follow data readiness. We present KOSMOS, a library for self-scheduling persistent kernels whose workgroups use queues ordered by consumer demand to switch between communication and computation roles as data become ready, with no scheduler, per-call cost model, or tuned split. KOSMOS fuses every TP+SP collective of a transformer layer with its GEMM, and runs an entire expert layer, from router to fold, in one launch per direction. Evaluated on AMD Instinct MI350X and AMD Instinct MI355X GPUs, KOSMOS speeds up TP+SP end-to-end training in Megatron-LM by 1.10-1.28x in BF16 and 1.10-1.25x in MXFP8. KOSMOS accelerates end-to-end training of DeepSeek-V3 and Qwen3-235B proxies by 1.29-1.83x over DeepEP.",
+      "arxiv_url": "https://arxiv.org/abs/2611.07477v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.07477v1",
+      "published": "2026-11-05",
+      "updated": "2026-11-05",
+      "categories": [
+        "cs.DC",
+        "cs.AI",
+        "cs.LG",
+        "cs.PF"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "distributed-computing",
+        "kernel",
+        "llm",
+        "machine-learning",
+        "performance",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-11-07T12:26:27Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2611.06207v1",
+      "arxiv_id": "2611.06207v1",
+      "title": "Performance Portability of Out-of-Kernel Optimizations on GPUs: A Molecular Docking Case Study",
+      "authors": [
+        "Gianmarco Accordi",
+        "Leonardo Beltrame",
+        "Theresa Pollinger",
+        "Jens Domke",
+        "Davide Gadioli",
+        "Gianluca Palermo"
+      ],
+      "abstract": "Achieving performance portability is challenging for irregular scientific applications built as repeated multi-kernel GPU pipelines, because throughput depends on out-of-kernel decisions as much as on kernel efficiency. Using molecular docking as a representative case study, we propose an out-of-kernel tuning methodology that treats batching policy, worker concurrency, and per-worker memory allocation as explicit optimization parameters, replacing backend-dependent occupancy-driven choices with a more portable execution strategy based on explicit resource bounds. We implement this methodology in the muDock mini-app under a manager/worker execution model where multiple host workers share a GPU through independent streams. We then evaluate the methodology on NVIDIA, AMD, and Intel GPUs across CUDA, HIP, and SYCL implementations. Across all evaluated platform/backend pairs, the memory-bounded formulation exceeds the peak throughput of the occupancy-guided baseline. The fully tuned methodology improves the end-to-end throughput on all tested configurations, achieving an average speedup of 1.53x over the baseline.",
+      "arxiv_url": "https://arxiv.org/abs/2611.06207v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.06207v1",
+      "published": "2026-11-04",
+      "updated": "2026-11-04",
+      "categories": [
+        "cs.DC",
+        "cs.PF"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "hip",
+        "kernel",
+        "optimization",
+        "performance",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-11-07T12:26:24Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2611.07198v1",
+      "arxiv_id": "2611.07198v1",
+      "title": "Capability Gain from ISA to Shared Execution on AMD MI300A and MI250X",
+      "authors": [
+        "Aaron Jarmusch",
+        "Sunita Chandrasekaran"
+      ],
+      "abstract": "Each new GPU generation is showcased by its peak instruction rates, yet users hardly ever run instructions directly: they reach the hardware's performance through vendor libraries, applications and devices shared with other jobs. How much of a theoretical speedup survives these layers is rarely measured, so a team deciding whether to move to a new generation, or to adopt FP8 or 2:4 sparsity, lacks adequate guidance. AMD's MI300A (CDNA3) adds new FP8 matrix instructions and 2:4 structured-sparse instructions that the predecessor, the MI250X (CDNA2), does not have. We analyze this theoretical speedup gap on AMD's MI300A (CDNA3) against the MI250X (CDNA2) by defining a new metric, capability gain. Capability gain is the fraction of a feature's instruction-level speedup that it keeps at a higher level, such as a library, an application or a shared device. We trace it from ISA microbenchmarks through hipBLASLt and hipSPARSELt to LLM inference and mixed-precision HPL, and onto a device shared by up to eight concurrent streams. FP8 keeps most of its speedup through the library, completing an $8192^3$ GEMM \\genCapPkgEndToEndGainEightK{} faster than the MI250X with FP16, but unfused quantization turns it into a per-layer slowdown in an LLM, and 2:4 sparsity keeps at most about half of its speedup in hipSPARSELt. Under queue sharing, FP8's GEMM capability gain rises above 1. How fairly streams share the device depends on the number of hardware queues, not on the numeric precision, yet shared LLM serving gains nothing from FP8.",
+      "arxiv_url": "https://arxiv.org/abs/2611.07198v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.07198v1",
+      "published": "2026-11-04",
+      "updated": "2026-11-04",
+      "categories": [
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cdna",
+        "distributed-computing",
+        "hip",
+        "inference",
+        "llm",
+        "mi300",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-11-07T12:26:38Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2611.05751v1",
+      "arxiv_id": "2611.05751v1",
+      "title": "Scheduling Data to Compute: Hierarchical Data Pipelining for LLM Training on AMD GPUs",
+      "authors": [
+        "Gengyu Rao",
+        "Ghadeer Ahmed H Alabandi",
+        "Su Ann Chong",
+        "Thomas Huber",
+        "Kailash Gogineni",
+        "Subhajit Dutta Chowdhury",
+        "Saleel Kudchadker",
+        "Suchita Pati",
+        "Zirui Zhang",
+        "Zhen Huang",
+        "Yanyuan Qin",
+        "Xiaoming Peng",
+        "Lihuan Zhang",
+        "Botao Hu",
+        "Wei Huang",
+        "Yang Bo",
+        "Wen Xie",
+        "Xiangyu Zhao",
+        "Ruibin Zhang",
+        "Xiaobo Chen",
+        "Vidushi Goyal",
+        "Anshu Raina",
+        "Claire Songhyun Lee",
+        "Jiakun Yan",
+        "Yao Fu",
+        "Nusrat Islam",
+        "Ravi Dwivedula",
+        "Jie Zhang",
+        "Maria Garzaran",
+        "Zhenyu Gu",
+        "Emad Barsoum"
+      ],
+      "abstract": "Large language models (LLM) have been the key focus of recent machine learning breakthroughs. As the model size grows exponentially, the computation needed for training is astronomical. A GPU can do a huge amount of arithmetic. However, the data its compute units need is not always available when they are ready. This data may still be in slow memory or on another GPU. While the chip waits, expensive compute sits idle, and at scale even a small drop in utilization translates into substantial cost. In this paper, we treat this waiting time as the primary bottleneck. We focus on hardware features designed for explicit data movement. These features load data from off-chip memory onto the chip, rearrange it into the layout the computation requires as it is loaded, and transfer it between GPUs. By orchestrating them, we keep a steady pipeline of data flowing to the compute units so that they remain busy. We present kernel and framework implementations that address this bottleneck using three key data-movement instructions and hardware features. The Tensor Data Mover (TDM) moves tensor data from high-bandwidth memory (HBM) into on-chip memory. Transpose-load instructions transpose tensor data into the layout that LLM computations require as it is loaded on-chip. Finally, System DMA (SDMA) and Remote DMA (RDMA) move data between GPUs over the scale-up and scale-out networks, respectively. Our results show that TDM and transpose-load provide on average 1.88x and 1.19x speedup at the kernel level, respectively. The SDMA and RDMA lead to on average 1.16x and 1.33x speedup for computation overlapped with communication. This is the first AMD LLM training system to utilize all the GPU data pipelining features. Our implementation has been integrated into open source framework and library for AMD GPUs. https://github.com/AMD-AGI/Primus-Turbo https://github.com/AMD-AGI/Primus",
+      "arxiv_url": "https://arxiv.org/abs/2611.05751v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.05751v1",
+      "published": "2026-11-03",
+      "updated": "2026-11-03",
+      "categories": [
+        "cs.AR",
+        "cs.AI"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "architecture",
+        "hip",
+        "kernel",
+        "llm",
+        "machine-learning",
+        "rocm",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-11-07T12:26:38Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2611.04380v1",
+      "arxiv_id": "2611.04380v1",
+      "title": "Twice as Fast, Until It Isn't: Quantized Serving of Mid-Size Open LLMs",
+      "authors": [
+        "Smit Kadvani",
+        "Kriti Faujdar",
+        "Spurthi Tallam"
+      ],
+      "abstract": "A team serving a 9B-20B open-weight language model on vLLM or SGLang must choose a quantization recipe, and needs two numbers: the speedup over BF16 and the accuracy given up. We assemble every public measurement of these numbers that we could verify and find that the record supplies them only in pieces. Only two checkpoints, both INT4 builds of Gemma 3 12B, have both a vLLM timing and an accuracy score, and that score covers a single MMLU subject, one that the AWQ build was calibrated on. The batch-1 timings predate current engine releases, AMD and Intel Gaudi have no timing in this band at all, and FP4 has none against BF16. The timings that do exist follow one rule. Decoding a small batch is limited by memory bandwidth, so 4-bit weights roughly double speed (2.12x for Qwen2.5-14B on an A100), but the gain vanishes once a large batch makes the GPU compute-bound (1.02x for Gemma 3 12B at batch size 256), where FP8 is the recipe that can still help. Many published accuracy deltas, including every HumanEval delta, lie within benchmark sampling noise. We close with a seven-item reporting checklist for future measurements.",
+      "arxiv_url": "https://arxiv.org/abs/2611.04380v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.04380v1",
+      "published": "2026-11-03",
+      "updated": "2026-11-03",
+      "categories": [
+        "cs.AI"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "inference",
+        "llm",
+        "performance",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-11-07T12:26:38Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2611.04253v2",
+      "arxiv_id": "2611.04253v2",
+      "title": "UMLoad: Fast On-Demand Model Loading on Unified Memory Architecture",
+      "authors": [
+        "Zimeng Wang",
+        "Jinrong Yang",
+        "Rong Chen"
+      ],
+      "abstract": "On-demand model loading dominates response latency for interactive on-device AI, yet unified memory architectures (UMAs), now common on edge devices, should make it cheap by placing weights in memory the GPU already sees. However, frameworks still use the loading flow built for discrete GPUs, leaving significant inefficiencies. This paper presents UMLoad, a system-level model-loading accelerator that decouples a framework's logical allocations from their physical page backing. UMLoad uses on-demand reconstruction to eliminate the weight copy while preserving copy independence, and GPU-assisted page zeroing to accelerate runtime allocation while preserving its security guarantee. Implemented on Intel, AMD, and NVIDIA UMA platforms and evaluated with llama$.$cpp, PyTorch, and vLLM across six models, UMLoad reduces average loading time by 36.6%-71.9% over vanilla and 19.9%-62.7% over pipelined loaders, and cuts mean LLM-routing time to first token (TTFT) by 51.3%-59.3% and model-backed tool completion latency by 10.2%-31.6%.",
+      "arxiv_url": "https://arxiv.org/abs/2611.04253v2",
+      "pdf_url": "https://arxiv.org/pdf/2611.04253v2",
+      "published": "2026-11-03",
+      "updated": "2026-11-04",
+      "categories": [
+        "cs.OS",
+        "cs.AR"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "architecture",
+        "inference",
+        "llm",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-11-07T12:26:38Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2611.04032v1",
+      "arxiv_id": "2611.04032v1",
+      "title": "ROCm InferaSim: Cut LLM Serving Trial Costs and Deploy the Best Configuration",
+      "authors": [
+        "Anshu Raina",
+        "Yao Fu",
+        "Zhang Jiejing",
+        "Peyman Razaghi",
+        "Shiksha Patel",
+        "Ravi Gupta",
+        "Deval Shah",
+        "Adeem Jassani",
+        "Subhajit Dutta Chowdhury",
+        "Lorri Rao",
+        "Kailash Gogineni",
+        "Zhenyu Gu",
+        "Onil Gunawardana",
+        "Emad Barsoum"
+      ],
+      "abstract": "Serving an LLM efficiently depends on the engine, how the model is split across GPUs, precision, scheduler settings, speculative decoding, KV-cache management, and prefill-decode disaggregation. The best configuration depends on the model, hardware, workload, and objective. Operators usually find it by trial and error. Exhaustively measuring the candidates in our study would take about 25,000 GPU-hours. ROCm InferaSim predicts serving performance from a few short measurements. Choices such as batch size, prompt length, and GPU count change the amount of work per GPU without changing the kernels. ROCm InferaSim benchmarks each distinct set of kernels once, on at most one node. We call this measurement an anchor. Analytical laws carry that anchor to other deployments that run the same kernels. For multi-node deployments, ROCm InferaSim reduces the configuration to a single-node equivalent, measures it, and scales the result analytically. A simulator replays multi-turn traffic, and a tuning agent searches configurations using the predictions. On AMD Instinct MI355X GPUs with vLLM, SGLang, and ATOM, 11 anchors took 9.1 GPU-hours, against 204 GPU-hours to measure the 226 fixed-length configurations they cover. On 172 configurations, time per output token has 8.1% median error. On a multi-turn coding workload, throughput is within 8%. For 159 disaggregated deployments, none used as an anchor, throughput is within 5.5%. A five-candidate short list contains a deployment within 12% of the best feasible pairing of model and latency target.",
+      "arxiv_url": "https://arxiv.org/abs/2611.04032v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.04032v1",
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "categories": [
+        "cs.AI",
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "distributed-computing",
+        "inference",
+        "kernel",
+        "llm",
+        "optimization",
+        "performance",
+        "rocm"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-11-07T12:26:20Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2610.41313v1",
+      "arxiv_id": "2610.41313v1",
+      "title": "Migrating a Legacy Scientific Application with an AI Coding Agent: NICAM from Fortran to Kokkos",
+      "authors": [
+        "Xuanzhengbo Ren",
+        "Takashi Shimokawabe",
+        "Hisashi Yashiro"
+      ],
+      "abstract": "Migrating from Fortran to C++/Kokkos broadens access to hardware accelerators through backends such as CUDA and HIP while offering greater flexibility in software design. However, legacy Fortran applications often have large codebases, making manual porting time-consuming and costly. Recent advances in large language models (LLMs) and AI coding agents have made large-scale code migration increasingly feasible. In this study, we ported NICAM (Nonhydrostatic ICosahedral Atmospheric Model), a legacy Fortran climate model accelerated with OpenACC, to C++/Kokkos with the assistance of Claude Code. The agent translated the code directly from Fortran to C++/Kokkos under human review. Approximately 140,000 lines of Fortran were analyzed and ported into 35,000 lines of C++/Kokkos, covering the dynamical core and seven physics packages. A 100-member ensemble comparison with the original Fortran model showed that the port is statistically consistent with the original. Performance was evaluated on Miyabi-G, an NVIDIA GH200 cluster, and Sirius, an AMD MI300A cluster. Compared with the Fortran/OpenACC baseline on GH200, the port achieved application speedups of $1.71\\times$ on GH200 and $1.54\\times$ on MI300A. The CUDA build achieved a GPU kernel-time speedup of $1.38\\times$ on GH200. After normalization by peak memory bandwidth, the HIP build on MI300A achieved $0.96\\times$ the kernel performance of the Fortran/OpenACC baseline.",
+      "arxiv_url": "https://arxiv.org/abs/2610.41313v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.41313v1",
+      "published": "2026-10-30",
+      "updated": "2026-10-30",
+      "categories": [
+        "cs.DC"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "distributed-computing",
+        "hip",
+        "kernel",
+        "llm",
+        "mi300",
+        "performance",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-11-07T12:26:24Z",
+      "extracted": false,
+      "translated": false
+    },
     {
       "id": "2610.30868v1",
       "arxiv_id": "2610.30868v1",
@@ -110,7 +463,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-10-31T11:40:16Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
