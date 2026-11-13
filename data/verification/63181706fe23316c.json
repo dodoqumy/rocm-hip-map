@@ -2,7 +2,7 @@
   "article_id": "63181706fe23316c",
   "title": "Setting the number of compute units",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/setting-cus.html",
-  "verified_at": "2026-11-12T08:59:12.026633+00:00",
+  "verified_at": "2026-11-13T08:55:19.413113+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",

@@ -2,7 +2,7 @@
   "article_id": "d1c818ba0a6bbc4d",
   "title": "What is ROCm?",
   "source_url": "https://rocm.docs.amd.com/en/latest/what-is-rocm.html",
-  "verified_at": "2026-11-12T08:58:44.015684+00:00",
+  "verified_at": "2026-11-13T08:54:51.300201+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
