@@ -2,7 +2,7 @@
   "article_id": "878db0871c2390ad",
   "title": "Use ROCm for training",
   "source_url": "https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/training/index.html",
-  "verified_at": "2026-11-13T08:55:25.415279+00:00",
+  "verified_at": "2026-11-14T08:20:05.214415+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
