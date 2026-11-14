@@ -1,8 +1,191 @@
 {
   "version": 1,
-  "updated": "2026-11-07T12:26:38Z",
-  "total": 189,
+  "updated": "2026-11-14T12:57:22Z",
+  "total": 194,
   "papers": [
+    {
+      "id": "2611.16285v1",
+      "arxiv_id": "2611.16285v1",
+      "title": "Scaling Pêlagos: Multi-GPU Orchestration for Relay Belief-Propagation Decoding",
+      "authors": [
+        "Xulong Tang",
+        "Dionysios Diamantopoulos",
+        "Tristan Müller",
+        "Apo Kayi",
+        "Nelson Mimura Gonzalez",
+        "Muhammad Osama",
+        "Seetharami Seelam",
+        "Haralampos Pozidis",
+        "Blake R. Johnson",
+        "Yasuko Eckert"
+      ],
+      "abstract": "Fault-tolerant quantum computing requires quantum error-correction (QEC) decoders that achieve low logical error rates under real-time operating constraints. These constraints motivate heuristic decoding algorithms whose error-correction performance must be evaluated through large-scale simulation. High-throughput decoding accelerates this evaluation and the exploration of decoder parameters. Using multiple graphics processing units (GPUs) is a natural way to scale these simulations, but naively distributing syndrome batches introduces host-side preprocessing and output-collection overheads that limit scaling. To address these limitations, we extend the Pêlagos relay belief-propagation (Relay-BP) decoder with process-isolated orchestration, parallel host preprocessing, and shared-memory output. We evaluate both one-gross ($[[144,12,12]]$) and two-gross ($[[288,12,18]]$) codes in a multi-GPU environment. Specifically, for the one-gross circuit at $R=50$, eight AMD Instinct MI300X GPUs and eight AMD Instinct MI355X GPUs achieve optimized end-to-end speedups of $5.68\\times$ and $6.23\\times$, respectively. For the two-gross circuit, the corresponding speedups are $6.92\\times$ and $7.01\\times$. When throughput is calculated using GPU decoding time, the corresponding two-gross speedups are $7.58\\times$ and $7.45\\times$, indicating near-linear GPU scaling. We deploy Pêlagos on Lux, Oak Ridge National Laboratory's AMD Instinct MI355X-based supercomputer, as a pathfinding application for high-throughput QEC simulation. This deployment provides a concrete quantum-computing use case for the AI + HPC infrastructure supporting the Genesis Mission's scientific-discovery goals. These end-to-end measurements demonstrate a practical path to accelerating large-scale QEC simulation through efficient multi-GPU decoding.",
+      "arxiv_url": "https://arxiv.org/abs/2611.16285v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.16285v1",
+      "published": "2026-11-12",
+      "updated": "2026-11-12",
+      "categories": [
+        "quant-ph",
+        "cs.ET"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "hpc",
+        "inference",
+        "mi300",
+        "optimization",
+        "performance",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-11-14T12:57:12Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2611.17108v1",
+      "arxiv_id": "2611.17108v1",
+      "title": "LazyWeights: Decode-on-Demand Edge LLMs",
+      "authors": [
+        "Arnab Sanyal",
+        "Gourav Datta",
+        "Sandeep P. Chinchali"
+      ],
+      "abstract": "Memory decides which LLMs an edge device runs, and how fast: capacity on a $4$ GB Jetson Nano, bandwidth on an $8$ GB Jetson Orin Nano Super. Deployed formats (GPTQ, AWQ, $\\texttt{llama.cpp}$'s K- and I-quants) spend equal bits on every integer code of a matrix, although the codes are far from uniform. $\\texttt{LazyWeights}$ keeps these formats but tunes GPTQ so the codes compress, Huffman-codes them losslessly in interleaved lanes, and decodes them on demand in a small unit between DRAM and L2, so GPU kernels run unchanged and DRAM moves only coded bytes. At $1\\%$ and $3.5\\%$ perplexity budgets, coded Phi-3-mini, Mistral-7B and SmolLM-1.7B are $5.7-31.4\\%$ smaller than the best $\\texttt{llama.cpp}$ format. A bit-exact $0.21$ mm$^2$ ASIC decoder unit ($1$ GHz, $7$ nm) cuts Orin latency and energy per token by up to $36\\%$ and $38\\%$ ($54\\%$ and $44\\%$ with prompt-lookup speculation). On the Nano, $\\texttt{LazyWeights}$ needs $58-64\\%$ less time and $53-57\\%$ less energy per token than CPU $\\texttt{llama.cpp}$, and runs a streamed Mistral-7B 6.6$\\times$ faster at $3.89$ bits per weight. A Huffman decoder beats an rANS decoder in rate and area at equal throughput; the ASIC decoder unit runs bit-exact on a Zynq UltraScale+ FPGA (AMD ZCU102).",
+      "arxiv_url": "https://arxiv.org/abs/2611.17108v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.17108v1",
+      "published": "2026-11-12",
+      "updated": "2026-11-12",
+      "categories": [
+        "cs.LG",
+        "cs.AR",
+        "cs.CL",
+        "cs.IT"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "architecture",
+        "kernel",
+        "llm",
+        "machine-learning",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-11-14T12:57:22Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2611.15951v1",
+      "arxiv_id": "2611.15951v1",
+      "title": "Starscream: Reimagining LLM Sharding on AMD Instinct GPUs with GPU Partitioning",
+      "authors": [
+        "Sumanth Gudaparthi",
+        "Smeet Chheda",
+        "Ganesh Dasika"
+      ],
+      "abstract": "As GPU accelerators grow larger to meet rising compute demands, they exhibit increasingly pronounced non-uniform memory access (NUMA) characteristics that challenge existing LLM frameworks. Chiplet-based architectures provide a practical path to larger GPUs while mitigating manufacturing yield constraints. Modern GPUs such as AMD Instinct MI300X employs such a multi-die design, and further offer GPU partitioning capabilities, partitioning a single physical GPU into multiple logical devices with NUMA-aware memory domains, promising faster kernel launches, and reduced memory access latencies with improved locality. However, current parallelization strategies, designed for homogeneous GPU topologies, when applied under partitioning, extend its unidimensional sharding causing significant performance degradation. Three bottlenecks emerge: (1) memory redundancy; (2) arithmetic intensity collapse; (3) communication overhead from flat collectives. We present Starscream, a rethinking of LLM sharding for the chiplet era. Rather than stretching inter-GPU sharding thinner, Starscream adds intra-GPU sharding along an orthogonal dimension, grounded in three foundational principles: kernel shape preservation, memory redundancy elimination, and communication overhead minimization. These principles form the basis for extending any sharding strategy into the partitioning regime. We demonstrate their effectiveness using tensor parallelism as a case study. On AMD MI300X and MI355X, exploiting partitioning capabilities yields up to 4x speedup for attention and 1.43x for fused GEMMs compared to chiplet-oblivious baselines, demonstrating the effectiveness of chiplet-aware designs. Starscream's principles generalize across sharding strategies and future architectures.",
+      "arxiv_url": "https://arxiv.org/abs/2611.15951v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.15951v1",
+      "published": "2026-11-11",
+      "updated": "2026-11-11",
+      "categories": [
+        "cs.DC",
+        "cs.AR",
+        "cs.LG"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "architecture",
+        "distributed-computing",
+        "hip",
+        "kernel",
+        "llm",
+        "machine-learning",
+        "mi300",
+        "performance"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-11-14T12:57:12Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2611.14041v2",
+      "arxiv_id": "2611.14041v2",
+      "title": "Accelerating matrix-free fast diagonalization and preconditioned linear solvers for high-order finite element discretized elliptic problems on distributed GPUs",
+      "authors": [
+        "Gourab Panigrahi",
+        "Phani Motamarri"
+      ],
+      "abstract": "The time to solution of an iterative solver depends on the number of iterations and the cost per iteration. This paper develops algorithms that reduce both for elliptic problems discretized with high-order continuous finite elements on distributed GPUs, implemented in a unified matrix-free code supporting CUDA, HIP and SYCL. A distributed direct fast-diagonalization (FD) Poisson solver provides exact solutions on tensor-product meshes with direction-wise grading and coefficients varying along one coordinate direction. Its tensor data remain distributed, moved between slab layouts using collective transposes or kept in place by a Schur-complement approach. A two-level hybrid Schwarz preconditioner with FD cell solves (HS-FD) is extended to 2:1 hanging-node octrees with exact local cell inverses, while a p-multigrid preconditioner with Chebyshev--Jacobi smoothing (CJ-pMG) resolves hanging-node constraints at every level within fused kernels. Both approaches exploit FP32, where cell shapes and coefficients allow, within an FP64 conjugate-gradient iteration, adaptively select replicated or distributed coarse levels, support block solves for multiple right-hand sides and determine all parameters from the operator without case-specific tuning. Comparisons with Jacobi-preconditioned conjugate gradients (Jacobi PCG), MFEM, nekRS and deal.II span uniform, graded and octree meshes, layered coefficients, and four applications across NVIDIA, AMD and Intel GPUs. The direct solver is two to three orders of magnitude faster than Jacobi PCG on uniform meshes. HS-FD converges in 11 iterations for the generalised Poisson problem on octree meshes across 8 to 1024 MI250X graphics compute dies. These results provide practical guidelines for solver selection based on mesh structure and coefficient characteristics.",
+      "arxiv_url": "https://arxiv.org/abs/2611.14041v2",
+      "pdf_url": "https://arxiv.org/pdf/2611.14041v2",
+      "published": "2026-11-10",
+      "updated": "2026-11-11",
+      "categories": [
+        "math.NA",
+        "physics.comp-ph"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "cuda",
+        "hip",
+        "kernel",
+        "mi300",
+        "optimization",
+        "porting"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-11-14T12:57:08Z",
+      "extracted": false,
+      "translated": false
+    },
+    {
+      "id": "2611.09225v1",
+      "arxiv_id": "2611.09225v1",
+      "title": "Fused-Softmax for efficient quantized attention",
+      "authors": [
+        "Tianxing Wu",
+        "Juuso Korhonen",
+        "Jesus Carabano Bravo"
+      ],
+      "abstract": "Low-precision matrix throughput on modern GPUs is growing far faster than vector-arithmetic throughput. Attention therefore cannot realize the available GEMM performance because softmax has become the pipeline bottleneck. We introduce Fused-Softmax Attention, a training-free algorithm that reformulates and approximates softmax to fold its dominant operations into the attention GEMMs, moving work from vector units to matrix cores. Implemented for the AMD CDNA 4 architecture, our MXFP8, MXFP6 and MXFP4 kernels reach approximately 3.0, 4.0 and 4.6 PFLOP/s on an AMD Instinct MI355X GPU, yielding speedups of $2.1\\times$, $2.8\\times$ and $3.2\\times$ over the BF16 attention. Importantly, the additional error introduced by Fused-Softmax remains below the error floor set by quantizing the GEMM operands. On Wan2.2-T2V-A14B, a hybrid MXFP6/4 schedule delivers up to $2.05\\times$ end-to-end speedup while preserving the visual quality of the outputs. The kernels ship in AMD's open-source AITER library, and they powered AMD's MLPerf Inference v6.1 Wan2.2 submission, which ran $1.7\\times$ faster than AMD's previous-round result on the same hardware. Our results show that redesigning softmax to utilize the matrix pipeline enables attention to capitalize on continued growth in low-precision matrix throughput.",
+      "arxiv_url": "https://arxiv.org/abs/2611.09225v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.09225v1",
+      "published": "2026-11-06",
+      "updated": "2026-11-06",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.PF"
+      ],
+      "source_type": "paper",
+      "source_org": "arxiv",
+      "credibility": 4,
+      "tags": [
+        "ai",
+        "cdna",
+        "hip",
+        "inference",
+        "kernel",
+        "machine-learning",
+        "performance",
+        "training"
+      ],
+      "lifecycle": "latest",
+      "fetched_at": "2026-11-14T12:57:12Z",
+      "extracted": false,
+      "translated": false
+    },
     {
       "id": "2611.07496v1",
       "arxiv_id": "2611.07496v1",
@@ -34,7 +217,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-11-07T12:26:27Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -72,7 +255,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-11-07T12:26:27Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -110,7 +293,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-11-07T12:26:24Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -143,7 +326,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-11-07T12:26:38Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -207,7 +390,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-11-07T12:26:38Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -239,7 +422,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-11-07T12:26:38Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -271,7 +454,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-11-07T12:26:38Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -318,7 +501,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-11-07T12:26:20Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -353,7 +536,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-11-07T12:26:24Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
