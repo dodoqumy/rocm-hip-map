@@ -2,7 +2,7 @@
   "article_id": "6b32168ef7086dda",
   "title": "ROCm consolidated changelog",
   "source_url": "https://rocm.docs.amd.com/en/latest/release/changelog.html",
-  "verified_at": "2026-11-16T08:47:00.443367+00:00",
+  "verified_at": "2026-11-17T09:54:25.541285+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
