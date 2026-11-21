@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-14T12:57:22Z",
+  "updated": "2026-11-21T14:14:02Z",
   "total": 194,
   "papers": [
     {
@@ -41,7 +41,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-11-14T12:57:12Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -76,7 +76,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-11-14T12:57:22Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -113,7 +113,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-11-14T12:57:12Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -146,7 +146,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-11-14T12:57:08Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
@@ -183,7 +183,7 @@
       ],
       "lifecycle": "latest",
       "fetched_at": "2026-11-14T12:57:12Z",
-      "extracted": false,
+      "extracted": true,
       "translated": false
     },
     {
