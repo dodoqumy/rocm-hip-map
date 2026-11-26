@@ -2,7 +2,7 @@
   "article_id": "8da35dd10c106430",
   "title": "ROCm documentation toolchain",
   "source_url": "https://rocm.docs.amd.com/en/latest/contribute/toolchain.html",
-  "verified_at": "2026-11-25T10:43:31.230154+00:00",
+  "verified_at": "2026-11-26T10:14:21.352458+00:00",
   "checks": {
     "content_consistency": {
       "status": "warn",
